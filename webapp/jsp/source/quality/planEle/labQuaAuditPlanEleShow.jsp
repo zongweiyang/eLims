@@ -50,7 +50,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/auditRecord/showLabQuaAuditRecord.action?labQuaAuditRecordVo.id='+id,
-					title:'<s:text name="record.info"/>：详情',
+					title:'<s:property value="getText('reclistinfo')"/>',
 					opacity:0.4,
 					width:1100, 
 					height:500,

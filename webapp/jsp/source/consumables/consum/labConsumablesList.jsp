@@ -76,7 +76,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'耗材类型列表',
+				title:'<s:property value="getText('acontypelist')"/>',
 				opacity:0.4,
 				width:600,
 				height:400,
@@ -91,7 +91,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'耗材类型列表',
+				title:'<s:property value="getText('acontypelist')"/>',
 				opacity:0.4,
 				width:400,
 				height:300,
@@ -183,7 +183,7 @@ html {
 											<h2>
 												${funName}：
 												<span>[<font color="blue">${labConsumablesVo.consumablesTypeName}</font>]
-													>首页</span>
+													><s:text name="top.index"/></span>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->

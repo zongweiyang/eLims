@@ -40,7 +40,7 @@ border-right: #C0C0C0 1px solid;
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件夹新增',
+			title:'<s:property value="getText('folderadded')"/>',
 			opacity:0.4,
 			width:600,
 			height:400,

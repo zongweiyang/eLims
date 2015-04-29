@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!--功能管理-->
+	<package name="i18n" extends="globalpackage">
+		<action name="lang" class="langAction">
+			<result name="success">/theme/${themeType}/main.jsp</result>
+		</action>
+		<action name="langAdmin" class="langAdminAction" >
+			<result name="success">/admin/main.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,171 @@
+<?xml version='1.0' standalone='no'?>
+<tools>
+   <t id="tnew">
+     <imgurl>image/tnew.gif</imgurl>
+     <action>doNew()</action>
+     <tooltip>New</tooltip>
+   </t>
+   <t id="topen">
+     <imgurl>image/topen.gif</imgurl>
+     <action>doOpen()</action>
+     <tooltip>Open</tooltip>
+   </t>
+   <t id="tsave">
+     <imgurl>image/tsave.gif</imgurl>
+     <action>doSave()</action>
+     <tooltip>Save</tooltip>
+   </t>
+   <t id="treturnmainwindow">
+     <imgurl>image/treturnmainwindow.gif</imgurl>
+     <action>doReturn()</action>
+     <tooltip>Return</tooltip>
+   </t>
+   <t id="tcut">
+     <imgurl>image/tcut.gif</imgurl>
+     <action>doCut()</action>
+     <tooltip>Cut</tooltip>
+   </t>
+   <t id="tcopy">
+     <imgurl>image/tcopy.gif</imgurl>
+     <action>doCopy()</action>
+     <tooltip>Copy</tooltip>
+   </t>
+   <t id="tpaste">
+     <imgurl>image/tpaste.gif</imgurl>
+     <action>doPaste()</action>
+     <tooltip>Paste</tooltip>
+   </t>
+   <t id="tundo">
+     <imgurl>image/tundo.gif</imgurl>
+     <action>undo()</action>
+     <tooltip>Undo</tooltip>
+   </t>
+   <t id="tredo">
+     <imgurl>image/tredo.gif</imgurl>
+     <action>redo()</action>
+     <tooltip>Redo</tooltip>
+   </t>
+   <t id="tgif">
+     <imgurl>image/tgif.gif</imgurl>
+     <action>latexts('1')</action>
+     <tooltip>GIF</tooltip>
+   </t>
+   <t id="tpng">
+     <imgurl>image/tpng.gif</imgurl>
+     <action>latexts('2')</action>
+     <tooltip>PNG</tooltip>
+   </t>
+   <t id="tdvi">
+     <imgurl>image/tdvi.gif</imgurl>
+     <action>latexts('3')</action>
+     <tooltip>DVI</tooltip>
+   </t>
+   <t id="tps">
+     <imgurl>image/tps.gif</imgurl>
+     <action>latexts('4')</action>
+     <tooltip>PS</tooltip>
+   </t>
+    <t id="tpdf">
+     <imgurl>image/tpdf.gif</imgurl>
+     <action>latexts('5')</action>
+     <tooltip>PDF</tooltip>
+   </t>
+   
+   <t id="tfont">
+   	 <f>Font</f>
+     <f>Times New Roman</f>
+     <f>Courier</f>
+     <f>Garamond</f>
+     <f>Serif</f>
+     <action>doStyle('fa',this.value)</action>
+     <tooltip>Change Font</tooltip>
+   </t>
+   <t id="tfontsize">
+     <f>Size</f>
+     <f>8</f>
+     <f>10</f>
+     <f>12</f>
+     <f>16</f>
+     <f>20</f>
+     <f>24</f>
+     <f>28</f>
+     <f>32</f>
+     <f>40</f>
+     <action>doStyle('si',this.value)</action>
+     <tooltip>Change Font Size</tooltip>
+   </t>
+   <t id="tbold">
+     <imgurl>image/tbold.gif</imgurl>
+     <action>doStyle('va','bold')</action>
+     <tooltip>Bold</tooltip>
+   </t>
+   <t id="titalic">
+     <imgurl>image/titalic.gif</imgurl>
+     <action>doStyle('va','italic')</action>
+     <tooltip>Italic</tooltip>
+   </t>
+   <t id="tforecolor">
+     <imgurl>image/tforecolor.gif</imgurl>
+     <action>doStyle('co','f')</action>
+     <tooltip>ForeColor</tooltip>
+   </t>
+   <t id="tbackcolor">
+     <imgurl>image/tbackcolor.gif</imgurl>
+     <action>doStyle('co','b')</action>
+     <tooltip>BackColor</tooltip>
+   </t>
+   <t id="selectedmathml">
+     <imgurl>image/tc.gif</imgurl>
+     <action>selectedMathml()</action>
+     <tooltip>SelectedMathML</tooltip>
+   </t>
+   <t id="close">
+     <imgurl>image/close.png</imgurl>
+     <action>closeitem()</action>
+     <tooltip>Close</tooltip>
+   </t>
+   <t id="tdragdrop">
+     <imgurl>image/tdragdrop.gif</imgurl>
+     <action>isdragdrop()</action>
+     <tooltip>DragDrop</tooltip>
+   </t>
+   <si id="selectedinfix">
+     <imgurl>image/ti.gif</imgurl>
+     <action evt="onfocus">infixfocus()</action>
+     <action evt="onblur">infixblur()</action>
+     <action evt="onclick">selectedInfixChange()</action>
+     <tooltip>SelectedInfix</tooltip>
+   </si>
+    <si id="wholeinfix">
+     <imgurl>image/ti.gif</imgurl>
+     <action evt="onfocus">infixfocus()</action>
+     <action evt="onblur">infixblur()</action>
+     <action evt="onclick">disInfixChange()</action>
+     <tooltip>WholeInfix</tooltip>
+   </si>
+   <m id="design">
+     <text>Design</text>
+     <action>doDesign()</action>
+     <tooltip>Design</tooltip>
+   </m>
+   <m id="mml-Content">
+     <text>MML-Content</text>
+     <action>doContent()</action>
+     <tooltip>Content</tooltip>
+   </m>
+    <m id="mml-Presentation">
+     <text>MML-Presentation</text>
+     <action>doPresentation()</action>
+     <tooltip>Presentation</tooltip>
+   </m>
+    <m id="infix">
+     <text>Infix</text>
+     <action>doInfix()</action>
+     <tooltip>Infix</tooltip>
+   </m>
+   <m id="preview">
+     <text>Preview</text>
+     <action>doPreview()</action>
+     <tooltip>Preview</tooltip>
+   </m>
+</tools>

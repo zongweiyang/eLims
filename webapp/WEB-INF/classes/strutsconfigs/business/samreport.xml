@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="samreport.labSamReport" namespace="/samreport/labSamReport" extends="globalpackage">
+			<action name="listLabSamReport" method="listLabSamReport" class="labSamReportAction">
+				<result name="list">
+					/jsp/business/samreport/make/labSamReportList.jsp
+				</result>
+			</action>
+			<action name="showLabSamReport" method="showLabSamReport" class="labSamReportAction">
+				<result name="show">
+					/jsp/business/samreport/make/labSamReportShow.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamReport" method="preUpdateLabSamReport" class="labSamReportAction">
+				<result name="preUpdate">
+					/jsp/business/samreport/make/labSamReportUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabSamReport" method="updateLabSamReport" class="labSamReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSamReport.action</param>
+				</result>
+				<result name="save" type="redirectAction">
+					<param name="actionName">preUpdateLabSamReport.action</param>
+					<param name="labSamReportVo.id">${labSamReportVo.id}</param>
+				</result>
+			</action>
+			<action name="deleteLabSamReport" method="deleteLabSamReport" class="labSamReportAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSamReport.action</param>
+				</result>
+			</action>
+			<action name="updateLabSamReport4Del" method="updateLabSamReport4Del" class="labSamReportAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSamReport.action</param>
+				</result>
+			</action>
+			<action name="addLabReport4Bus" method="addLabReport4Bus" class="labSamReportAction">
+			   	<result name="add" >
+						/jsp/common/report/labReportShow4Bus.jsp
+				</result>
+			</action>
+			<action name="showLabReport4Bus" method="showLabReport4Bus" class="labSamReportAction">
+			   	<result name="show" >
+						/jsp/common/report/labReportShow4Bus.jsp
+				</result>
+			</action>
+			<action name="listLabSamReport4Audit" method="listLabSamReport4Audit" class="labSamReportAction">
+				<result name="list">
+					/jsp/business/samreport/audit/labSamReportList4Audit.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamReport4Audit" method="preUpdateLabSamReport4Audit" class="labSamReportAction">
+				<result name="preUpdate">
+					/jsp/business/samreport/audit/labSamReport4Audit.jsp
+				</result>
+			</action>
+			<action name="updateLabSamReport4Audit" method="updateLabSamReport4Audit" class="labSamReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSamReport4Audit.action</param>
+				</result>
+			</action>
+			<action name="listLabSamReport4Approve" method="listLabSamReport4Approve" class="labSamReportAction">
+				<result name="list">
+					/jsp/business/samreport/approve/labSamReportList4Approve.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamReport4Approve" method="preUpdateLabSamReport4Approve" class="labSamReportAction">
+				<result name="preUpdate">
+					/jsp/business/samreport/approve/labSamReport4Approve.jsp
+				</result>
+			</action>
+			<action name="updateLabSamReport4Approve" method="updateLabSamReport4Approve" class="labSamReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSamReport4Approve.action</param>
+				</result>
+			</action>
+			<action name="listLabSamReport4Sign" method="listLabSamReport4Sign" class="labSamReportAction">
+				<result name="list">
+					/jsp/business/samreport/sign/labSamReportList4Sign.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamReport4Sign" method="preUpdateLabSamReport4Sign" class="labSamReportAction">
+				<result name="preUpdate">
+					/jsp/business/samreport/sign/labSamReport4Sign.jsp
+				</result>
+			</action>
+			<action name="updateLabSamReport4Sign" method="updateLabSamReport4Sign" class="labSamReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSamReport4Sign.action</param>
+				</result>
+			</action>
+			<action name="listLabSamReport4Send" method="listLabSamReport4Send" class="labSamReportAction">
+				<result name="list">
+					/jsp/business/samreport/send/labSamReportList4Send.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamReport4Send" method="preUpdateLabSamReport4Send" class="labSamReportAction">
+				<result name="preUpdate">
+					/jsp/business/samreport/send/labSamReport4Send.jsp
+				</result>
+			</action>
+			<action name="updateLabSamReport4Send" method="updateLabSamReport4Send" class="labSamReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSamReport4Send.action</param>
+				</result>
+				<result name="save" type="redirectAction">
+					<param name="actionName">preUpdateLabSamReport4Send.action</param>
+					<param name="labSamReportVo.id">${labSamReportVo.id}</param>
+				</result>
+			</action>
+		</package>
+</struts>

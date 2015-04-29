@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="attendance.labAttendance" namespace="/attendance/labAttendance" extends="globalpackage">
+			<action name="listLabAttendance" method="listLabAttendance" class="labAttendanceAction">
+				<result name="list">
+					/jsp/source/attendance/labAttendanceList.jsp
+				</result>
+			</action>
+			<action name="listLabAttendance4All" method="listLabAttendance4All" class="labAttendanceAction">
+				<result name="list">
+					/jsp/source/attendance/labAttendanceList4All.jsp
+				</result>
+			</action>
+			<action name="showLabAttendance" method="showLabAttendance" class="labAttendanceAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendanceShow.jsp
+				</result>
+			</action>
+			<action name="addLabAttendance" method="addLabAttendance" class="labAttendanceAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendanceShow4AM.jsp
+				</result>
+			</action>
+			<action name="updateLabAttendance" method="updateLabAttendance" class="labAttendanceAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendanceShow4PM.jsp
+				</result>
+			</action>
+			<action name="preAddLabAttendance4History" method="preAddLabAttendance4History" class="labAttendanceAction">
+				<result name="preAdd">
+					/jsp/source/attendance/labAttendanceAdd.jsp
+				</result>
+			</action>
+			<action name="addLabAttendance4History" method="addLabAttendance4History" class="labAttendanceAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendanceAdd.jsp
+				</result>
+			</action>
+			<action name="showLabAttendance4User" method="showLabAttendance4User" class="labAttendanceAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendanceShow.jsp
+				</result>
+			</action>
+		</package>
+		<package name="attendance.labAttendConfig" namespace="/attendance/labAttendConfig" extends="globalpackage">
+			<action name="listLabAttendConfig" method="listLabAttendConfig" class="labAttendConfigAction">
+				<result name="list">
+					/jsp/source/attendance/labAttendConfigList.jsp
+				</result>
+			</action>
+			<action name="showLabAttendConfig" method="showLabAttendConfig" class="labAttendConfigAction">
+				<result name="show">
+					/jsp/source/attendance/labAttendConfigShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabAttendConfig" method="preAddLabAttendConfig" class="labAttendConfigAction">
+				<result name="preAdd">
+					/jsp/source/attendance/labAttendConfigAdd.jsp
+				</result>
+			</action>
+			<action name="addLabAttendConfig" method="addLabAttendConfig" class="labAttendConfigAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabAttendConfig.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabAttendConfig" method="preUpdateLabAttendConfig" class="labAttendConfigAction">
+				<result name="preUpdate">
+					/jsp/source/attendance/labAttendConfigUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabAttendConfig" method="updateLabAttendConfig" class="labAttendConfigAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabAttendConfig.action</param>
+				</result>
+			</action>
+			<action name="deleteLabAttendConfig" method="deleteLabAttendConfig" class="labAttendConfigAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabAttendConfig.action</param>
+				</result>
+			</action>
+			<action name="updateLabAttendConfig4Del" method="updateLabAttendConfig4Del" class="labAttendConfigAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabAttendConfig.action</param>
+				</result>
+			</action>
+		</package>
+</struts>

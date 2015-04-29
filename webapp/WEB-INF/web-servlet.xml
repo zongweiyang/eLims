@@ -1,0 +1,41 @@
+<servlet>
+		<servlet-name>labUploadServlet</servlet-name>
+		<servlet-class>cn.labsoft.labos.constants.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>labUploadServlet</servlet-name>
+		<url-pattern>/LabUploadServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- 项目联想输入 -->
+	<servlet>
+		<servlet-name>labItemSuggest</servlet-name>
+		<servlet-class>cn.labsoft.labos.constants.DelegatingServletProxy</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>labItemSuggest</servlet-name>
+		<url-pattern>/LabItemSuggest</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<!-- BarCode4j start-->
+		<servlet-name>BarcodeServlet</servlet-name>
+		<servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<url-pattern>/gensvg</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>BarcodeServlet</servlet-name>
+		<url-pattern>/genbc</url-pattern>
+	</servlet-mapping>
+	<!-- BarCode4j end-->
+	<servlet>
+		<servlet-name>OfficeServer</servlet-name>
+		<servlet-class>DBstep.OfficeServer</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>OfficeServer</servlet-name>
+		<url-pattern>/servlet/OfficeServer</url-pattern>
+	</servlet-mapping>
+	<distributable />

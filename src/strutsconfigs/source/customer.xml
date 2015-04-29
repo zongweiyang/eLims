@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="customer.labCustomer" namespace="/customer/labCustomer" extends="globalpackage">
+			<action name="listLabCustomer" method="listLabCustomer" class="labCustomerAction">
+				<result name="list">
+					/jsp/source/customer/labCustomerList.jsp
+				</result>
+			</action>
+			<action name="showLabCustomer" method="showLabCustomer" class="labCustomerAction">
+				<result name="show">
+					/jsp/source/customer/labCustomerShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabCustomer" method="preAddLabCustomer" class="labCustomerAction">
+				<result name="preAdd">
+					/jsp/source/customer/labCustomerAdd.jsp
+				</result>
+			</action>
+			<action name="addLabCustomer" method="addLabCustomer" class="labCustomerAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabCustomer.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabCustomer" method="preUpdateLabCustomer" class="labCustomerAction">
+				<result name="preUpdate">
+					/jsp/source/customer/labCustomerUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabCustomer" method="updateLabCustomer" class="labCustomerAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabCustomer.action</param>
+				</result>
+			</action>
+			<action name="deleteLabCustomer" method="deleteLabCustomer" class="labCustomerAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabCustomer.action</param>
+				</result>
+			</action>
+			<action name="updateLabCustomer4Del" method="updateLabCustomer4Del" class="labCustomerAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabCustomer.action</param>
+				</result>
+			</action>
+			<action name="exportLabCustomer" method="exportLabCustomer" class="labCustomerAction">
+			  <result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	  </result>
+		    </action>
+		</package>
+</struts>

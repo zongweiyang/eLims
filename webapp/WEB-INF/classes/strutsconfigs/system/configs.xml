@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+
+	<package name="configs.LabConfig" namespace="/configs/labConfig" extends="globalpackage">
+		<action name="addLabConfig" class="labConfigAction" method="addLabConfig">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabConfig</param>
+			</result>
+		</action>
+		<action name="updateLabConfig" class="labConfigAction" method="updateLabConfig">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabConfig</param>
+			</result>
+		</action>
+		<action name="delLabConfig" class="labConfigAction" method="delLabConfig">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabConfig</param>
+			</result>
+		</action>
+		<action name="listLabConfig" class="labConfigAction" method="listLabConfig">
+			<result name="list">/jsp/base/configs/configList.jsp</result>
+		</action>
+		<action name="addLabConfig4InitSystem" class="labConfigAction" method="addLabConfig4InitSystem">
+		</action>
+		<action name="ajaxLabConfig4Code" class="labConfigAction" method="ajaxLabConfig4Code">
+		</action>
+		<action name="initLabConfig4Value" class="labConfigAction" method="initLabConfig4Value">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabConfig</param>
+			</result>
+		</action>
+	</package>
+	
+</struts>

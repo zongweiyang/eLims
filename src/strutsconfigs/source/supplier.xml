@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="supplier.labSupplier"
+		namespace="/supplier/labSupplier" extends="globalpackage">
+		<action name="listLabSupplier" method="listLabSupplier"
+			class="labSupplierAction">
+			<result name="list">
+				/jsp/source/supplier/supplier/labSupplierList.jsp
+			</result>
+		</action>
+		<action name="showLabSupplier" method="showLabSupplier"
+			class="labSupplierAction">
+			<result name="show">
+				/jsp/source/supplier/supplier/labSupplierShow.jsp
+			</result>
+		</action>
+		<action name="preAddLabSupplier" method="preAddLabSupplier"
+			class="labSupplierAction">
+			<result name="preAdd">
+				/jsp/source/supplier/supplier/labSupplierAdd.jsp
+			</result>
+		</action>
+		<action name="addLabSupplier" method="addLabSupplier"
+			class="labSupplierAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSupplier.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabSupplier"
+			method="preUpdateLabSupplier" class="labSupplierAction">
+			<result name="preUpdate">
+				/jsp/source/supplier/supplier/labSupplierUpdate.jsp
+			</result>
+		</action>
+		<action name="updateLabSupplier" method="updateLabSupplier"
+			class="labSupplierAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSupplier.action</param>
+			</result>
+		</action>
+		<action name="deleteLabSupplier" method="deleteLabSupplier"
+			class="labSupplierAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabSupplier.action</param>
+			</result>
+		</action>
+		<action name="updateLabSupplier4Del"
+			method="updateLabSupplier4Del" class="labSupplierAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabSupplier.action</param>
+			</result>
+		</action>
+	</package>
+	<package name="supplier.labSupEvaluate"
+		namespace="/supplier/labSupEvaluate" extends="globalpackage">
+		<action name="listLabSupEvaluate" method="listLabSupEvaluate"
+			class="labSupEvaluateAction">
+			<result name="list">
+				/jsp/source/supplier/evaluate/labSupEvaluateList.jsp
+			</result>
+		</action>
+		<action name="showLabSupEvaluate" method="showLabSupEvaluate"
+			class="labSupEvaluateAction">
+			<result name="show">
+				/jsp/source/supplier/evaluate/labSupEvaluateShow.jsp
+			</result>
+		</action>
+		<action name="preAddLabSupEvaluate"
+			method="preAddLabSupEvaluate" class="labSupEvaluateAction">
+			<result name="preAdd">
+				/jsp/source/supplier/evaluate/labSupEvaluateAdd.jsp
+			</result>
+		</action>
+		<action name="addLabSupEvaluate" method="addLabSupEvaluate"
+			class="labSupEvaluateAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">
+					listLabSupEvaluate?labSupEvaluateVo.labSupplierId=${labSupEvaluateVo.labSupplierId}
+				</param>
+			</result>
+		</action>
+		<action name="preUpdateLabSupEvaluate"
+			method="preUpdateLabSupEvaluate" class="labSupEvaluateAction">
+			<result name="preUpdate">
+				/jsp/source/supplier/evaluate/labSupEvaluateUpdate.jsp
+			</result>
+		</action>
+		<action name="updateLabSupEvaluate"
+			method="updateLabSupEvaluate" class="labSupEvaluateAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">
+					listLabSupEvaluate?labSupEvaluateVo.labSupplierId=${labSupEvaluateVo.labSupplierId}
+				</param>
+			</result>
+		</action>
+		<action name="deleteLabSupEvaluate"
+			method="deleteLabSupEvaluate" class="labSupEvaluateAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">
+					listLabSupEvaluate?labSupEvaluateVo.labSupplierId=${labSupEvaluateVo.labSupplierId}
+				</param>
+			</result>
+		</action>
+		<action name="updateLabSupEvaluate4Del"
+			method="updateLabSupEvaluate4Del" class="labSupEvaluateAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">
+					listLabSupEvaluate?labSupEvaluateVo.labSupplierId=${labSupEvaluateVo.labSupplierId}
+				</param>
+			</result>
+		</action>
+	</package>
+</struts>

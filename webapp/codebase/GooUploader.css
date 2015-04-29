@@ -1,0 +1,63 @@
+@charset "utf-8";
+html,body{font-size:12px;color:#333333;margin:0px;padding:0px;}
+.Uploader{
+	font: 12px Arial, Helvetica, sans-serif;overflow:hidden;margin:0px;position:relative;
+	-moz-border-radius:4px;-webkit-border-radius:4px; border:#99BBE8 1px solid;background:#F0F4F9;padding:1px;
+}
+.Uploader .total_bg{width:100%;height:100%; background-color:#CADAEE;-moz-border-radius:2px;-webkit-border-radius:2px;}
+.Uploader .oper{
+	height:20px;margin:0px auto;padding-top:5px;overflow:hidden;
+}
+.Uploader .oper .upload_btn{float:left;height:20px; width:68px; cursor:pointer; position:relative;}
+.Uploader .oper .upload_btn object{ position:absolute;left:0px;top:0px;}
+.Uploader .oper .upload_btn div{ background:url(img/bg_upload_btn.gif) repeat-x 0px -20px; height:20px;width:60px; float:left;}
+.Uploader .oper .upload_btn .left{ background:url(img/bg_upload_btn.gif) repeat-x 0px 0px;width:4px;}
+.Uploader .oper .upload_btn .right{ background:url(img/bg_upload_btn.gif) repeat-x 0px -40px;width:4px; float:right;}
+.Uploader .oper .upload_btn div b{
+	display:block; font-weight:normal; text-align:center; text-indent:16px;clear:both; 
+	line-height:20px;@line-height:21px;height:20px;width:100%;overflow:hidden;
+}
+.Uploader .oper .add{ background:url(img/icon_upload_btn.gif) no-repeat 0px 3px;}
+.Uploader .oper .upload{background:url(img/icon_upload_btn.gif) no-repeat 0px -18px;}
+.Uploader .oper .clean{background:url(img/icon_upload_btn.gif) no-repeat 0px -36px;}
+.Uploader .oper .cancel{background:url(img/icon_upload_btn.gif) no-repeat 0px -159px;}
+
+.Uploader .content{
+	color:#666666; border:#99BBE8 1px solid; background-color:#ffffff; 
+	overflow:scroll;overflow-x:hidden;margin:4px auto;
+}
+.Uploader .content li{
+	list-style:none; list-style-position:outside; display:block;
+	border-bottom:#999999 1px dashed; height:30px; overflow:hidden;
+}
+.Uploader .content li b{ display:block; width:16px;height:24px;margin:3px; float:left}
+.Uploader .content li .book{background:url(img/icon_upload_btn.gif) no-repeat 0px -336px;}
+.Uploader .content li .zip{background:url(img/icon_upload_btn.gif) no-repeat 0px -446px;}
+.Uploader .content li .swf{background:url(img/icon_upload_btn.gif) no-repeat 0px -248px;}
+.Uploader .content li .dvd{background:url(img/icon_upload_btn.gif) no-repeat 0px -313px;}
+.Uploader .content li .doc{background:url(img/icon_upload_btn.gif) no-repeat 0px -424px;}
+.Uploader .content li .ppt{background:url(img/icon_upload_btn.gif) no-repeat 0px -402px;}
+.Uploader .content li .xls{background:url(img/icon_upload_btn.gif) no-repeat 0px -291px;}
+.Uploader .content li .exe{background:url(img/icon_upload_btn.gif) no-repeat 0px -380px;}
+.Uploader .content li .scr{background:url(img/icon_upload_btn.gif) no-repeat 0px -182px;}
+.Uploader .content li .img{background:url(img/icon_upload_btn.gif) no-repeat 0px -204px;}
+.Uploader .content li .htm{background:url(img/icon_upload_btn.gif) no-repeat 0px -270px;}
+.Uploader .content li .txt{background:url(img/icon_upload_btn.gif) no-repeat 0px -226px;}
+.Uploader .content li .mp3{background:url(img/icon_upload_btn.gif) no-repeat 0px -359px;}
+.Uploader .content li .oth{background:url(img/icon_upload_btn.gif) no-repeat 0px -469px;}
+.Uploader .content li .cfg{background:url(img/icon_upload_btn.gif) no-repeat 0px -492px;}
+
+.Uploader .content li .labe{float:left; width:142px;}
+.Uploader .content li .bar{width:140px;height:6px;overflow:hidden;background:url(img/bg_upload_btn.gif) repeat-x 0px -61px; float:left; border:#A8A8B0 1px solid;}
+.Uploader .content li .bar div{ background:#ffffff;width:100%;height:100%;float:right;}
+.Uploader .content li .unbar{width:142px;height:8px; background-color:#ffffff}
+.Uploader .content li .file{height:14px;line-height:14px;margin:2px 0px;float:left;overflow:hidden}
+.Uploader .content li span{ display:block;color:#999999; float:left;height:14px;margin-top:14px;}
+
+.Uploader .content li .op_up{float:right;margin:3px 1px;background:url(img/icon_upload_btn.gif) no-repeat 0px -93px; cursor:pointer;display:none}
+.Uploader .content li .op_del{float:right;margin:3px 1px;background:url(img/icon_upload_btn.gif) no-repeat 0px -73px; cursor:pointer;display:none}
+.Uploader .content li .op_ok{float:right;margin:3px 1px;background:url(img/icon_upload_btn.gif) no-repeat 0px -113px; cursor:pointer;display:none}
+.Uploader .content li .op_no{float:right;margin:3px 1px;background:url(img/icon_upload_btn.gif) no-repeat 0px -134px; cursor:pointer;display:none}
+.Uploader .content li .op_fail{float:right;margin:3px 1px;background:url(img/icon_upload_btn.gif) no-repeat 0px -55px; cursor:pointer;display:none}
+
+

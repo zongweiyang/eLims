@@ -1,0 +1,63 @@
+
+.Wrapper {margin:0 auto;width:980px;}
+
+#Faux {margin:0 auto;width:980px;_height:760px;min-height:760px;background:url(../images/contenter_bg.gif) no-repeat left top;position:relative;}
+#Faux .Contenter {position:relative;width:980px;_height:400px;min-height:400px;}
+#Faux .Contenter .ContentNAV {position:absolute;left:82px;top:25px;}
+#Faux .Contenter .ContentNAV ul {overflow:hidden;}
+#Faux .Contenter .ContentNAV li {float:left;display:block;margin-right:84px;}
+#Faux .Contenter .ContentNAV li a {font-size:15px;font-weight:bold;color:#999;}
+
+#Faux .Contenter .adbox {position:absolute;left:22px;top:63px;width:691px;height:325px;}
+#Faux .Contenter .loginbox {width:258px;height:159px;background:url(../images/loginbox_bg.gif) no-repeat left top;position:absolute;right:3px;top:63px;}
+#Faux .Contenter .loginbox label {color:#666;}
+#Faux .Contenter .loginbox .labelunit {position:absolute;left:10px;top:10px;}
+#Faux .Contenter .loginbox .labeluser {position:absolute;left:10px;top:42px;}
+#Faux .Contenter .loginbox .labelpw {position:absolute;left:10px;top:74px;}
+#Faux .Contenter .loginbox .usercominput {position:absolute;right:25px;top:10px;top:5px\9;*top:5px;width:155px;height:25px;line-height:25px;overflow:hidden;padding:2px 5px 0 5px;margin:0;border:0;background:none;}
+#Faux .Contenter .loginbox .usernameinput {position:absolute;right:25px;top:42px;top:35px\9;*top:37px;width:155px;height:25px;line-height:25px;overflow:hidden;padding:2px 5px 0 5px;margin:0;border:0;background:none;}
+#Faux .Contenter .loginbox .userpwinput {position:absolute;right:25px;top:72px;top:65px\9;*top:67px;width:155px;height:25px;line-height:25px;overflow:hidden;padding:2px 5px 0 5px;margin:0;border:0;background:none;}
+#Faux .Contenter .loginbtn {position:absolute;right:98px;bottom:18px;width:93px;height:36px;line-height:36px;overflow:hidden;cursor:pointer;border:0;padding:0;margin:0;background:url(../images/loginbtn.jpg) no-repeat left top;}
+#Faux .Contenter .iconbox {position:absolute;right:20px;top:222px;width:225px;height:55px;}
+#Faux .Contenter .newslist {position:absolute;right:20px;top:288px;width:225px;height:55px;}
+#Faux .Contenter .newslist li {background:url(../images/line01_bg.gif) repeat-x left top;height:30px;line-height:30px;}
+#Faux .Contenter .newslist li a {color:#999;font-weight:bold;}
+#Faux .Contenter .newslist li a:hover {color:#f60;text-decoration:underline;}
+
+#Faux .cloumnbox {position:relative;background:url(../images/threecloumnbox_bg.gif) no-repeat 32px top;width:980px;height:207px;clear:both;}
+#Faux .cloumnbox .cbtitle1 {position:absolute;left:160px;top:60px;}
+#Faux .cloumnbox .cbtitle2 {position:absolute;left:480px;top:60px;}
+#Faux .cloumnbox .cbtitle3 {position:absolute;left:775px;top:60px;}
+
+#Faux .cloumnbox .cbinfo1 {position:absolute;left:68px;top:120px;width:244px;color:#808080;line-height:20px;}
+#Faux .cloumnbox .cbinfo2 {position:absolute;left:375px;top:120px;width:244px;color:#808080;line-height:20px;}
+#Faux .cloumnbox .cbinfo3 {position:absolute;left:685px;top:120px;width:244px;color:#808080;line-height:20px;}
+
+#Faux .cloumnbox .cblink1 {position:absolute;left:117px;top:170px;color:#808080;}
+#Faux .cloumnbox .cblink2 {position:absolute;left:425px;top:170px;color:#808080;}
+#Faux .cloumnbox .cblink3 {position:absolute;left:730px;top:170px;color:#808080;}
+#Faux .cloumnbox a {color:#326DB5;}
+#Faux .cloumnbox a:hover {color:#f60;text-decoration:underline;}
+
+#Faux .imgshowbox {margin-left:47px;margin-top:15px;}
+#Faux .imgshowbox .imgshowboxT {width:897px;height:36px;background:url(../images/imgshowbox_bg_t.gif) no-repeat left top;overflow:hidden;}
+#Faux .imgshowbox .imgshowboxM {width:896px;background:url(../images/imgshowbox_bg_m.gif) repeat-y left top;_height:30px;min-height:30px;padding-left:1px;padding-top:10px;}
+#Faux .imgshowbox .imgshowboxM img {width:871px;height:91px;overflow:hidden;}
+#Faux .imgshowbox .imgshowboxB {width:897px;height:26px;background:url(../images/imgshowbox_bg_b.gif) no-repeat left top;overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

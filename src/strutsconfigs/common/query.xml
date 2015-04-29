@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="query.labQuery" namespace="/query/labQuery" extends="globalpackage">
+			<action name="listLabQuery" method="listLabQuery" class="labQueryAction">
+				<result name="list">
+					/jsp/common/query/labQueryList.jsp
+				</result>
+			</action>
+			<action name="showLabQuery" method="showLabQuery" class="labQueryAction">
+				<result name="show">
+					/jsp/common/query/labQueryShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabQuery" method="preAddLabQuery" class="labQueryAction">
+				<result name="preAdd">
+					/jsp/common/query/labQueryAdd.jsp
+				</result>
+			</action>
+			<action name="addLabQuery" method="addLabQuery" class="labQueryAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabQuery.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabQuery" method="preUpdateLabQuery" class="labQueryAction">
+				<result name="preUpdate">
+					/jsp/common/query/labQueryUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabQuery" method="updateLabQuery" class="labQueryAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabQuery.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabQuery" method="deleteBatchLabQuery" class="labQueryAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabQuery.action</param>
+				</result>
+			</action>
+			<action name="deleteLabQuery" method="deleteLabQuery" class="labQueryAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabQuery.action</param>
+				</result>
+			</action>
+			<action name="ajaxColumProperty" method="ajaxColumProperty" class="labQueryAction"></action>
+			<action name="getQuery" method="getQuery" class="labQueryAction">
+				<result name="list">
+					/jsp/common/query/queryList.jsp
+				</result>
+				<result name="list1">
+					/jsp/common/query/query2List.jsp
+				</result>
+			</action>
+			<action name="showLabQueryDiaLog4Select" method="showLabQueryDiaLog4Select" class="labQueryAction">
+				<result name="show">
+					/jsp/common/query/labQueryDiaLog4Select.jsp
+				</result>
+			</action>
+			<action name="ajaxWhere" method="ajaxWhere" class="labQueryAction"></action>
+			<action name="ajaxTestDiaLog" method="ajaxTestDiaLog" class="labQueryAction"></action>
+			<action name="preDiaLog4Select" method="preDiaLog4Select" class="labQueryAction">
+				<result name="preUpdate">
+					/jsp/common/query/queryDialog4Select.jsp
+				</result>
+			</action>
+		</package>
+</struts>

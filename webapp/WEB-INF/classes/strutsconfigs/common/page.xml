@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="page.labPageEditor" namespace="/page/labPageEditor" extends="specialpackage">
+		<action name="listLabPage" class="labPageEditorAction" method="listLabPage">
+			<result name="list">/jsp/common/page/pageList.jsp</result>
+		</action>
+		<action name="preUpdateLabPage" class="labPageEditorAction" method="preUpdateLabPage">
+			<result name="preUpdate">/jsp/common/page/pageUpdate.jsp</result>
+		</action>
+		<action name="updateLabPage" class="labPageEditorAction" method="updateLabPage">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabPage</param>
+			</result>
+		</action>
+		<action name="preAddLabPage" class="labPageEditorAction" method="preAddLabPage">
+			<result name="preAdd">/jsp/common/page/pageAdd.jsp</result>
+		</action>
+		<action name="addLabPage" class="labPageEditorAction" method="addLabPage">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabPage</param>
+			</result>
+		</action>
+		<action name="preUpdateLabPage4Edit" class="labPageEditorAction" method="preUpdateLabPage4Edit">
+			<result name="preUpdate">/jsp/common/page/pageEdit.jsp</result>
+		</action>
+		<action name="preUpdatePageEdit4Formula" method="preUpdatePageEdit4Formula" class="labPageEditorAction">
+			<result name="preUpdate">/jsp/common/page/pageEdit4Formula.jsp</result>
+		</action>
+		<action name="updateLabPage4Edit" class="labPageEditorAction" method="updateLabPage4Edit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabPage</param>
+			</result>
+		</action>
+		<action name="updateLabPageEdit4Formula" class="labPageEditorAction" method="updateLabPageEdit4Formula">
+			<result name="update">/jsp/common/page/pageEdit4Close.jsp</result>
+		</action>
+		<action name="updateLabPage4Del" class="labPageEditorAction" method="updateLabPage4Del">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabPage</param>
+			</result>
+		</action>
+		<action name="ajaxIsFileExist" class="labPageEditorAction" method="ajaxIsFileExist"></action>
+		<action name="showPageFormula4Select" method="showPageFormula4Select" class="labPageEditorAction">
+			<result name="list">/jsp/common/page/pageFormulaShow4Select.jsp</result>
+		</action>
+		<action name="listFilePage" method="listFilePage" class="labPageEditorAction">
+			<result name="list">/jsp/common/page/pageFileList.jsp</result>
+		</action>
+		<action name="addLabPage4Batch" method="addLabPage4Batch" class="labPageEditorAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listFilePage</param>
+				<param name="labPageEditorVo.param">${labPageEditorVo.param}</param>
+			</result>
+		</action>
+		<action name="ajaxGetParameter" class="labPageEditorAction" method="ajaxGetParameter"></action>
+	</package>
+</struts>

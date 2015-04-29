@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!--组织管理-->
+	<package name="admin.coreextend.extend" namespace="/admin/coreextend/extend" extends="adminpackage">
+		<action name="*" class="coreExtend4AdminAction" method="{1}">
+			<result name="sigleTenant">/admin/loginPage4Aadmin.jsp</result>
+			<result name="loginSuccess">/admin/main.jsp</result>
+			<result name="input">/jsp/error/loginerror.jsp</result>
+			<result name="topframe">/admin/topframe.jsp</result>
+			<result name="leftframe">/admin/leftframe.jsp</result>
+			<result name="mainframe">/admin/homepage.jsp</result>
+			<result name="homepage">/admin/homepage.jsp</result>
+		</action>
+	</package>
+</struts>

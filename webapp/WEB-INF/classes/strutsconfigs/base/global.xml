@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd"> 
+
+<struts>     
+    <!-- 定义一个系统的全局包 -->
+    <package name="globalpackage" extends="basepackage">
+    	<default-interceptor-ref name="labInterceptorStack"/>
+	</package>
+	<package name="adminpackage" extends="basepackage">
+    	<default-interceptor-ref name="labInterceptorStack4Admin"/>
+	</package>
+</struts>

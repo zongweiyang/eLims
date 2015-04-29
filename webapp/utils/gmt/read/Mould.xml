@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="packName.mould" namespace="/packName/mould" extends="globalpackage">
+			<action name="listMould" method="listMould" class="actionSrc">
+				<result name="list">
+					/jsp/pageName/mouldList.jsp
+				</result>
+			</action>
+			<action name="showMould" method="showMould" class="actionSrc">
+				<result name="show">
+					/jsp/pageName/mouldShow.jsp
+				</result>
+			</action>
+			<action name="preAddMould" method="preAddMould" class="actionSrc">
+				<result name="preAdd">
+					/jsp/pageName/mouldAdd.jsp
+				</result>
+			</action>
+			<action name="addMould" method="addMould" class="actionSrc">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listMould.action</param>
+				</result>
+			</action>
+			<action name="preUpdateMould" method="preUpdateMould" class="actionSrc">
+				<result name="preUpdate">
+					/jsp/pageName/mouldUpdate.jsp
+				</result>
+			</action>
+			<action name="updateMould" method="updateMould" class="actionSrc">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listMould.action</param>
+				</result>
+			</action>
+			<action name="deleteMould" method="deleteMould" class="actionSrc">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listMould.action</param>
+				</result>
+			</action>
+			<action name="updateMould4Del" method="updateMould4Del" class="actionSrc">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listMould.action</param>
+				</result>
+			</action>
+		</package>
+</struts>

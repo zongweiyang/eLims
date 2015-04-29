@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!--功能管理-->
+	<package name="function.labFunction" namespace="/function/labFunction" extends="adminpackage">
+		<action name="frameLabFunction" class="labFunctionAction" method="frameLabFunction">
+			<result name="frame">/jsp/base/function/functionFrame.jsp</result>
+		</action>
+		<action name="ajaxTreeLabFunction" class="labFunctionAction" method="ajaxTreeLabFunction"></action>
+		<action name="treeLabFunction" class="labFunctionAction" method="treeLabFunction">
+			<result name="tree">/jsp/base/function/functionTree.jsp</result>
+		</action>
+		<action name="listLabFunction" class="labFunctionAction" method="listLabFunction">
+			<result name="list">/jsp/base/function/functionList.jsp</result>
+			<result name="show">/jsp/base/function/functionShow.jsp</result>
+		</action>
+		<action name="preAddLabFunction" class="labFunctionAction" method="preAddLabFunction">
+			<result name="preAdd">/jsp/base/function/functionAdd.jsp</result>
+		</action>
+		<action name="addLabFunction" class="labFunctionAction" method="addLabFunction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">frameLabFunction</param>
+				<param name="labFunctionVo.parentId">${labFunctionVo.parentId}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabFunction" class="labFunctionAction" method="preUpdateLabFunction">
+			<result name="preUpdate">/jsp/base/function/functionUpdate.jsp</result>
+		</action>
+		<action name="updateLabFunction" class="labFunctionAction" method="updateLabFunction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">frameLabFunction</param>
+				<param name="labFunctionVo.parentId">${labFunctionVo.parentId}</param>
+			</result>
+		</action>
+		<action name="updateLabFunction4Del" class="labFunctionAction" method="updateLabFunction4Del">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">frameLabFunction</param>
+				<param name="labFunctionVo.parentId">${labFunctionVo.parentId}</param>
+			</result>
+		</action>
+		<action name="showFunction4Select" class="labFunctionAction" method="showFunction4Select">
+			<result name="preUpdate">/jsp/base/function/functionShow4Select.jsp</result>
+		</action>
+		<action name="preUpdateLabFunction4Data" class="labFunctionAction" method="preUpdateLabFunction4Data">
+			<result name="preUpdate">/jsp/base/function/functionList4Data.jsp</result>
+		</action>
+		<action name="updateLabFunction4Data" class="labFunctionAction" method="updateLabFunction4Data">
+			<result name="update" type="redirectAction">
+				<param name="actionName">preUpdateLabFunction4Data</param>
+			</result>
+		</action>
+		<action name="ajaxTreeParent" class="labFunctionAction" method="ajaxTreeParent"></action>
+		<action name="updateLabFunction4Parent" class="labFunctionAction" method="updateLabFunction4Parent"></action>
+		<action name="ajaxIsSameFunName" class="labFunctionAction" method="ajaxIsSameFunName"></action>
+		<action name="ajaxIsCouldDelete" class="labFunctionAction" method="ajaxIsCouldDelete"></action>
+		<action name="ajax2IsExistFunCode" class="labFunctionAction" method="ajax2IsExistFunCode"></action>
+	</package>
+	<package name="admin.function.labFunction" namespace="/admin/function/labFunction" extends="adminpackage">
+		<action name="ajaxTreeLabFunction4Admin" class="labFunctionAction" method="ajaxTreeLabFunction4Admin"></action>
+		<action name="getLabFunctonUrl" class="labFunctionAction" method="getLabFunctonUrl">
+			<result name="show">/admin/progress_bar.jsp</result>
+		</action>
+	</package>
+</struts>

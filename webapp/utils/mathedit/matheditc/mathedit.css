@@ -1,0 +1,46 @@
+body {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	color:#333;
+	padding: 0px;
+	
+}
+h1 {
+	font-family: Georgia,"Times New Roman",Times,serif;
+	font-size:26px;
+	color:#083772;
+	letter-spacing:-1px;
+	font-weight:normal;
+}
+h2 {
+	font-size: 18px;
+	line-height:18px;
+	color:#083772;
+	margin-bottom:15px;
+	font-weight:normal;
+}
+p {
+	margin:8px 20px;
+	line-height:18px;
+}
+img {
+	vertical-align: middle;
+}
+#filebar {
+    font-size:12px;
+    background-image:url('image/filebg.gif');
+}
+
+#designarea {
+    width:100%;
+    height:100%;
+}
+.infixin{
+	font-size:20px;
+}
+button.icon_dd {
+	background-image:url('image/tdragdrop.png');
+}
+button.icon_dd1 {
+	background-image:url('image/tdragdrop1.png');
+}

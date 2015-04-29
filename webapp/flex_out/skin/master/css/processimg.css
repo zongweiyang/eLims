@@ -1,0 +1,8 @@
+@namespace "http://www.adobe.com/2006/mxml"; 
+.backgroundImage {
+	fontSize: 13;
+	fontWeight:bold;
+	color:#373838;
+	backgroundImage: Embed(source="../imgs/bg.png");
+	backgroundImageFillMode: repeat;
+}

@@ -1,0 +1,272 @@
+body {
+	font-family: "宋体", Arial, Helvetica, sans-serif;
+	font-size:12px; 
+	color: #000000;
+	text-align:center; 
+	margin:0px 0px 0px 0px;
+	overflow:inherit;
+	padding:0px 0px 0px 0px;
+	
+}
+.canvas
+{
+	float:left;
+	/*background-color: #ff0000;*/
+	background:url(../images/workflow/canvas.jpg)  repeat;
+}
+.com_off
+{
+	border:0;
+	position:absolute;
+	z-index:1;
+}
+.com_on
+{
+	border:1px dashed  #333333;
+	position:absolute;
+	z-index:5;
+}
+.node_input_on,.node_input_off
+{
+	height:15px;
+	margin:8px auto;
+	text-align:center;
+	font-size:12px;
+	
+}
+.node_input_on
+{
+	border:0;
+	background-color:#ffffff;
+	
+}
+.node_input_off
+{
+	border:0;
+	background:none;
+}
+.node_text_div
+{
+	line-height:18px; 
+	height:18px; 
+	color:#333333
+}
+
+.node_text_input
+{
+	border-right:0;
+	border-left:0;
+	border-top:0;
+	text-align:center;
+	border-bottom: 1px dashed #000000;
+}
+
+.link_point
+{
+	position:absolute;
+	border:0;
+	width:6px;
+	height:6px;
+	line-height:6px;
+	background:#000000;
+	filter:alpha(opacity=70);
+	z-index:3;
+}
+.link_text_div
+{
+	position:absolute;
+}
+.link_text_on
+{
+	border-right:0;
+	border-left:0;
+	border-top:0;
+	text-align:center;
+	border-bottom: 1px dashed #000000;
+}
+.link_text_off
+{
+	border:0;
+	text-align:center;
+	background:0;
+}
+.tool
+{
+	width:30px;
+	height:30px;
+	border:0;
+	margin:1px;
+}
+.Start
+{
+	background:url(../images/workflow/small/Start.gif) no-repeat;
+}
+.Start_over
+{
+	background:url(../images/workflow/small/Start_over.gif) no-repeat;
+}
+.Start_on
+{
+	background:url(../images/workflow/small/Start_on.gif) no-repeat;
+}
+
+.End
+{
+	background:url(../images/workflow/small/End.gif) no-repeat;
+}
+.End_over
+{
+	background:url(../images/workflow/small/End_over.gif) no-repeat;
+}
+.End_on
+{
+	background:url(../images/workflow/small/End_on.gif) no-repeat;
+}
+
+
+.Node
+{
+	background:url(../images/workflow/small/Node.gif) no-repeat;
+}
+.Node_over
+{
+	background:url(../images/workflow/small/Node_over.gif) no-repeat;
+}
+.Node_on
+{
+	background:url(../images/workflow/small/Node_on.gif) no-repeat;
+}
+
+.ChildWorkFlow
+{
+	background:url(../images/workflow/small/ChildWorkflow.gif) no-repeat;
+}
+.ChildWorkFlow_over
+{
+	background:url(../images/workflow/small/ChildWorkflow_over.gif) no-repeat;
+}
+.ChildWorkFlow_on
+{
+	background:url(../images/workflow/small/ChildWorkflow_on.gif) no-repeat;
+}
+
+.WaitingNode
+{
+	background:url(../images/workflow/small/WaitingNode.gif) no-repeat;
+}
+.WaitingNode_over
+{
+	background:url(../images/workflow/small/WaitingNode_over.gif) no-repeat;
+}
+.WaitingNode_on
+{
+	background:url(../images/workflow/small/WaitingNode_on.gif) no-repeat;
+}
+
+.OrFork
+{
+	background:url(../images/workflow/small/OrFork.gif) no-repeat;
+}
+.OrFork_over
+{
+	background:url(../images/workflow/small/OrFork_over.gif) no-repeat;
+}
+.OrFork_on
+{
+	background:url(../images/workflow/small/OrFork_on.gif) no-repeat;
+}
+
+
+.OrJoin
+{
+	background:url(../images/workflow/small/OrJoin.gif) no-repeat;
+}
+.OrJoin_over
+{
+	background:url(../images/workflow/small/OrJoin_over.gif) no-repeat;
+}
+.OrJoin_on
+{
+	background:url(../images/workflow/small/OrJoin_on.gif) no-repeat;
+}
+
+
+.AndFork
+{
+	background:url(../images/workflow/small/AndFork.gif) no-repeat;
+}
+.AndFork_over
+{
+	background:url(../images/workflow/small/AndFork_over.gif) no-repeat;
+}
+.AndFork_on
+{
+	background:url(../images/workflow/small/AndFork_on.gif) no-repeat;
+}
+
+
+.AndJoin
+{
+	background:url(../images/workflow/small/AndJoin.gif) no-repeat;
+}
+.AndJoin_over
+{
+	background:url(../images/workflow/small/AndJoin_over.gif) no-repeat;
+}
+.AndJoin_on
+{
+	background:url(../images/workflow/small/AndJoin_on.gif) no-repeat;
+}
+
+
+.XorFork
+{
+	background:url(../images/workflow/small/XorFork.gif) no-repeat;
+}
+.XorFork_over
+{
+	background:url(../images/workflow/small/XorFork_over.gif) no-repeat;
+}
+.XorFork_on
+{
+	background:url(../images/workflow/small/XorFork_on.gif) no-repeat;
+}
+
+.XorJoin
+{
+	background:url(../images/workflow/small/XorJoin.gif) no-repeat;
+}
+.XorJoin_over
+{
+	background:url(../images/workflow/small/XorJoin_over.gif) no-repeat;
+}
+.XorJoin_on
+{
+	background:url(../images/workflow/small/XorJoin_on.gif) no-repeat;
+}
+
+.move
+{
+	background:url(../images/workflow/small/move.gif) no-repeat;
+}
+.move_over
+{
+	background:url(../images/workflow/small/move_over.gif) no-repeat;
+}
+.move_on
+{
+	background:url(../images/workflow/small/move_on.gif) no-repeat;
+}
+
+.Link
+{
+	background:url(../images/workflow/small/Link.gif) no-repeat;
+}
+.Link_over
+{
+	background:url(../images/workflow/small/Link_over.gif) no-repeat;
+}
+.Link_on
+{
+	background:url(../images/workflow/small/Link_on.gif) no-repeat;
+}

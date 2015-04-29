@@ -1,0 +1,478 @@
+<?xml version='1.0' standalone='no'?>
+<signs>
+   <s id="s1plus" level="1" type="1">
+     <imgurl>image/s1plus.gif</imgurl>
+     <action>insertElement('plus',20)</action>
+     <tooltip>Plus</tooltip>
+   </s>
+   <s id="s1minus1" level="1" type="1">
+     <imgurl>image/s1minus1.gif</imgurl>
+     <action>insertElement('minus',20)</action>
+     <tooltip>Minus</tooltip>
+   </s>
+   <s id="s1minus2" level="1" type="1">                   
+     <imgurl>image/s1minus2.gif</imgurl>
+     <action>insertElement('minus',1)</action>
+     <tooltip>Minus</tooltip>
+   </s>
+   <s id="s1times" level="1" type="1">
+     <imgurl>image/s1times.gif</imgurl>
+     <action>insertElement('times',2)</action>
+     <tooltip>Times</tooltip>
+   </s>
+   <s id="s1divide" level="1" type="1">
+     <imgurl>image/s1frac.gif</imgurl>
+     <action>insertElement('divide',2)</action>
+     <tooltip>Divide</tooltip>
+   </s>
+   <s id="s1sup" level="1" type="1">
+     <imgurl>image/s1sup.gif</imgurl>
+     <action>insertElement('power',2)</action>
+     <tooltip>SuperScript</tooltip>
+   </s>
+   <s id="s1sqrt" level="1" type="1">
+     <imgurl>image/s1sqrt.gif</imgurl>
+     <action>insertElement('root',1)</action>
+     <tooltip>Square Root</tooltip>
+   </s>
+   <s id="s1root" level="1" type="1">
+     <imgurl>image/s1root.gif</imgurl>
+     <action>insertElement('root',8)</action>
+     <tooltip>Root</tooltip>
+   </s>
+    <s id="s1abs" level="1" type="1">
+     <imgurl>image/s1abs.gif</imgurl>
+     <action>insertElement('abs',1)</action>
+     <tooltip>Absolute Value</tooltip>
+   </s>
+   <s id="s1ceiling" level="1" type="1">
+     <imgurl>image/s1ceiling.gif</imgurl>
+     <action>insertElement('ceiling',1)</action>
+     <tooltip>Ceiling</tooltip>
+   </s>
+    <s id="s1floor" level="1" type="1">
+     <imgurl>image/s1floor.gif</imgurl>
+     <action>insertElement('floor',1)</action>
+     <tooltip>Floor</tooltip>
+   </s>
+   
+   
+   <s id="s2sum1" level="2" type="2">
+     <imgurl>image/s2sum1.gif</imgurl>
+     <action>insertElement('sum',1)</action>
+     <tooltip>Sum</tooltip>
+   </s>
+   <s id="s2sum2" level="2" type="2">
+     <imgurl>image/s2sum2.gif</imgurl>
+     <action>insertElement('sum',10)</action>
+     <tooltip>Sum</tooltip>
+   </s>
+   <s id="s2sum3" level="2" type="2">
+     <imgurl>image/s2sum3.gif</imgurl>
+     <action>insertElement('sum',12)</action>
+     <tooltip>Sum</tooltip>
+   </s>
+   <s id="s2log" level="2" type="2">
+     <imgurl>image/s2log.gif</imgurl>
+     <action>insertElement('log',9)</action>
+     <tooltip>Logarithm</tooltip>
+   </s>
+   <s id="s2lg" level="2" type="2">
+     <imgurl>image/s2lg.gif</imgurl>
+     <action>insertElement('log',1)</action>
+     <tooltip>Logarithm</tooltip>
+   </s>
+   <s id="s2ln" level="2" type="2">
+     <imgurl>image/s2ln.gif</imgurl>
+     <action>insertElement('ln',1)</action>
+     <tooltip>Logarithm</tooltip>
+   </s>
+   <s id="s2lim" level="3" type="2">
+     <imgurl>image/s2lim.gif</imgurl>
+     <action>insertElement('limit',12)</action>
+     <tooltip>Limit</tooltip>
+   </s>
+   <s id="s2prod" level="3" type="2">
+     <imgurl>image/s2prod.gif</imgurl>
+     <action>insertElement('product',10)</action>
+     <tooltip>Product</tooltip>
+   </s>
+   <s id="s2prod1" level="3" type="2">
+     <imgurl>image/s2prod1.gif</imgurl>
+     <action>insertElement('product',12)</action>
+     <tooltip>Product</tooltip>
+   </s>
+    <s id="s3eq" level="1" type="3">
+     <imgurl>image/s3eq.gif</imgurl>
+     <action>insertElement('eq',2)</action>
+     <tooltip>Equal</tooltip>
+   </s>   
+   <s id="s3noteq" level="1" type="3">
+     <imgurl>image/s3noteq.gif</imgurl>
+     <action>insertElement('neq',2)</action>
+     <tooltip>Not Equal</tooltip>
+   </s>   
+   <s id="s3gt" level="1" type="3">
+     <imgurl>image/s3gt.gif</imgurl>
+     <action>insertElement('gt',2)</action>
+     <tooltip>Greater Than</tooltip>
+   </s>
+   <s id="s3lt" level="1" type="3">
+     <imgurl>image/s3lt.gif</imgurl>
+     <action>insertElement('lt',2)</action>
+     <tooltip>Less Than</tooltip>
+   </s>  
+   <s id="s3geq" level="1" type="3">
+     <imgurl>image/s3geq.gif</imgurl>
+     <action>insertElement('geq',2)</action>
+     <tooltip>Greater or Equal</tooltip>
+     
+   </s>
+   <s id="s3leq" level="1" type="3">
+     <imgurl>image/s3leq.gif</imgurl>
+     <action>insertElement('leq',2)</action>
+     <tooltip>Less or Equal</tooltip>
+   </s>   
+   <s id="s3factorof" level="3" type="3">
+     <imgurl>image/s3factorof.gif</imgurl>
+     <action>insertElement('factorof',2)</action>
+     <tooltip>Factor of</tooltip>
+   </s>  
+   <s id="s3dapprox" level="3" type="3">
+     <imgurl>image/s3dapprox.gif</imgurl>
+     <action>insertElement('approx',2)</action>
+     <tooltip>Approx</tooltip>
+   </s>
+   <s id="s3equiv" level="3" type="3">
+     <imgurl>image/s3equiv.gif</imgurl>
+     <action>insertElement('equivalent',2)</action>
+     <tooltip>Equivalent</tooltip>
+   </s> 
+   <s id="s4not" level="3" type="4">
+     <imgurl>image/s4not.gif</imgurl>
+     <action>insertElement('not',1)</action>
+     <tooltip>Not</tooltip>
+   </s>  
+   <s id="s4and" level="3" type="4">
+     <imgurl>image/s4wedge.gif</imgurl>
+     <action>insertElement('and',2)</action>
+     <tooltip>And</tooltip>
+   </s>
+   <s id="s4or" level="3" type="4">
+     <imgurl>image/s4vee.gif</imgurl>
+     <action>insertElement('or',2)</action>
+     <tooltip>Or</tooltip>
+   </s>    
+   <s id="s4forall" level="3" type="4">
+     <imgurl>image/s4forall.gif</imgurl>
+     <action>insertElement('forall',7)</action>
+     <tooltip>For All</tooltip>
+   </s>  
+   <s id="s4exist" level="3" type="4">
+     <imgurl>image/s4exist.gif</imgurl>
+     <action>insertElement('exists',7)</action>
+     <tooltip>Exists</tooltip>
+   </s>
+   <s id="s4implies" level="3" type="4">
+     <imgurl>image/s4drightarrow.gif</imgurl>
+     <action>insertElement('implies',2)</action>
+     <tooltip>Implies</tooltip>
+   </s> 
+   <s id="s4xor" level="3" type="4">
+     <imgurl>image/s4xor.gif</imgurl>
+     <action>insertElement('xor',2)</action>
+     <tooltip>Xor</tooltip>
+   </s>   
+   <s id="s5in" level="2" type="5">
+     <imgurl>image/s5belong.gif</imgurl>
+     <action>insertElement('in',2)</action>
+     <tooltip>In</tooltip>
+   </s>
+   <s id="s5notin" level="2" type="5">
+     <imgurl>image/s5notbelong.gif</imgurl>
+     <action>insertElement('notin',2)</action>
+     <tooltip>NotIn</tooltip>
+   </s>
+   <s id="s5prsubset" level="2" type="5">
+     <imgurl>image/s5subset.gif</imgurl>
+     <action>insertElement('prsubset',2)</action>
+     <tooltip>Prsubset</tooltip>
+   </s>    
+   <s id="s5subset" level="2" type="5">
+     <imgurl>image/s5subseteqq.gif</imgurl>
+     <action>insertElement('subset',2)</action>
+     <tooltip>Subset</tooltip>
+   </s>
+   
+   <s id="s5notprsubset" level="2" type="5">
+     <imgurl>image/s5notsub.gif</imgurl>
+     <action>insertElement('notprsubset',2)</action>
+     <tooltip>Notprsubset</tooltip>
+   </s>  
+   <s id="s5notsubset" level="2" type="5">
+     <imgurl>image/s5notsubeq.gif</imgurl>
+     <action>insertElement('notsubset',2)</action>
+     <tooltip>Notsubset</tooltip>
+   </s>
+   
+   <s id="s5intersect" level="2" type="5">
+     <imgurl>image/s5intersection.gif</imgurl>
+     <action>insertElement('intersect',2)</action>
+     <tooltip>Intersect</tooltip>
+   </s>
+   <s id="s5union" level="2" type="5">
+     <imgurl>image/s5merge.gif</imgurl>
+     <action>insertElement('union',2)</action>
+     <tooltip>Union</tooltip>
+   </s>
+   <s id="s5emptyset" level="2" type="5">
+     <imgurl>image/s5emptyset.gif</imgurl>
+     <action>insertChar('\u2205',1)</action>
+     <tooltip>Emptyset</tooltip>
+   </s>
+   <s id="s5loro" level="1" type="5">
+     <imgurl>image/s5loro.gif</imgurl>
+     <action>insertElement('interval',19)</action>
+     <tooltip>Interval</tooltip>
+   </s> 
+   <s id="s5lcro" level="2" type="5">
+     <imgurl>image/s5lcro.gif</imgurl>
+     <action>insertElement('interval',18)</action>
+     <tooltip>Interval</tooltip>
+   </s> 
+   <s id="s5lorc" level="2" type="5">
+     <imgurl>image/s5lorc.gif</imgurl>
+     <action>insertElement('interval',17)</action>
+     <tooltip>Interval</tooltip>
+   </s> 
+   <s id="s5lcrc" level="2" type="5">
+     <imgurl>image/s5lcrc.gif</imgurl>
+     <action>insertElement('interval',16)</action>
+     <tooltip>Interval</tooltip>
+   </s>   
+    <s id="s5set" level="2" type="5">
+     <imgurl>image/s5set.gif</imgurl>
+     <action>insertElement('set',15)</action>
+     <tooltip>Set</tooltip>
+   </s>  
+    <s id="s5list" level="2" type="5">
+     <imgurl>image/s5list.gif</imgurl>
+     <action>insertElement('list',15)</action>
+     <tooltip>List</tooltip>
+   </s>  
+  <s id="s5setdiff" level="2" type="5">
+     <imgurl>image/s5setdiff.gif</imgurl>
+     <action>insertElement('setdiff',2)</action>
+     <tooltip>SetDiff</tooltip>
+   </s> 
+  <s id="s5cartesianproduct" level="2" type="5">
+     <imgurl>image/s5cartesianproduct.gif</imgurl>
+     <action>insertElement('cartesianproduct',2)</action>
+     <tooltip>Cartesianproduct</tooltip>
+   </s> 
+   
+   <s id="s5card" level="2" type="5">
+     <imgurl>image/s5card.gif</imgurl>
+     <action>insertElement('card',1)</action>
+     <tooltip>Card</tooltip>
+   </s> 
+   
+    <s id="s6sin" level="2" type="6">
+     <imgurl>image/s6sin.gif</imgurl>
+     <action>insertElement('sin',1)</action>
+     <tooltip>Sin</tooltip>
+   </s>
+   <s id="s6arcsin" level="2" type="6">
+     <imgurl>image/s6arcsin.gif</imgurl>
+     <action>insertElement('arcsin',1)</action>
+     <tooltip>Arcsin</tooltip>
+   </s>
+   <s id="s6cos" level="2" type="6">
+     <imgurl>image/s6cos.gif</imgurl>
+     <action>insertElement('cos',1)</action>
+     <tooltip>Cos</tooltip>
+   </s>
+   <s id="s6arccos" level="2" type="6">
+     <imgurl>image/s6arccos.gif</imgurl>
+     <action>insertElement('arccos',1)</action>
+     <tooltip>Arccos</tooltip>
+   </s>
+   <s id="s6tan" level="2" type="6">
+     <imgurl>image/s6tan.gif</imgurl>
+     <action>insertElement('tan',1)</action>
+     <tooltip>Tan</tooltip>
+   </s>
+    <s id="s6arctan" level="2" type="6">
+     <imgurl>image/s6arctan.gif</imgurl>
+     <action>insertElement('arctan',1)</action>
+     <tooltip>Arctan</tooltip>
+   </s>
+   <s id="s6cot" level="2" type="6">
+     <imgurl>image/s6cot.gif</imgurl>
+     <action>insertElement('cot',1)</action>
+     <tooltip>Cot</tooltip>
+   </s>
+   <s id="s6arccot" level="2" type="6">
+     <imgurl>image/s6arccot.gif</imgurl>
+     <action>insertElement('arccot',1)</action>
+     <tooltip>Arccot</tooltip>
+   </s> 
+   <s id="s6sec" level="2" type="6">
+     <imgurl>image/s6sec.gif</imgurl>
+     <action>insertElement('sec',1)</action>
+     <tooltip>Sec</tooltip>
+   </s>
+   <s id="s6arcsec" level="2" type="6">
+     <imgurl>image/s6arcsec.gif</imgurl>
+     <action>insertElement('arcsec',1)</action>
+     <tooltip>Arcsec</tooltip>
+   </s> 
+   <s id="s6csc" level="2" type="6">
+     <imgurl>image/s6csc.gif</imgurl>
+     <action>insertElement('csc',1)</action>
+     <tooltip>Csc</tooltip>
+   </s>
+   <s id="s6arccsc" level="2" type="6">
+     <imgurl>image/s6arccsc.gif</imgurl>
+     <action>insertElement('arccsc',1)</action>
+     <tooltip>Arccsc</tooltip>
+   </s>   
+   
+     <s id="s7integral" level="3" type="7">
+     <imgurl>image/s7integral.gif</imgurl>
+     <action>insertElement('int',12)</action>
+     <tooltip>Integral</tooltip>
+   </s>
+   <s id="s7int" level="3" type="7">
+     <imgurl>image/s7int.gif</imgurl>
+     <action>insertElement('int',11)</action>
+     <tooltip>Int</tooltip>
+   </s> 
+   <s id="s7diff" level="3" type="7">
+     <imgurl>image/s7diff.gif</imgurl>
+     <action>insertElement('diff',7)</action>
+     <tooltip>Diff</tooltip>
+   </s>
+   <s id="s7partdiff" level="3" type="7">
+     <imgurl>image/s7partdiff.gif</imgurl>
+     <action>insertElement('partialdiff',7)</action>
+     <tooltip>PartDiff</tooltip>
+   </s>  
+    <s id="s8pi" level="1" type="8">
+     <imgurl>image/s8pi.gif</imgurl>
+     <action>insertChar('\u03C0',1)</action>
+     <tooltip>Pi</tooltip>
+   </s>   
+   <s id="s8alpha" level="1" type="8">
+     <imgurl>image/s8alpha.gif</imgurl>
+     <action>insertChar('\u03B1',1)</action>
+     <tooltip>Alpha</tooltip>
+   </s>
+   <s id="s8beta" level="1" type="8">
+     <imgurl>image/s8beta.gif</imgurl>
+     <action>insertChar('\u03B2',1)</action>
+     <tooltip>Beta</tooltip>
+   </s>  
+   <s id="s8gamma" level="2" type="8">
+     <imgurl>image/s8gamma.gif</imgurl>
+     <action>insertChar('\u03B3',1)</action>
+     <tooltip>Gamma</tooltip>
+   </s>
+   <s id="s8delta" level="2" type="8">
+     <imgurl>image/s8delta.gif</imgurl>
+     <action>insertChar('\u03B4',1)</action>
+     <tooltip>Delta</tooltip>
+   </s>
+   <s id="s8straightepsilon" level="2" type="8">
+     <imgurl>image/s8straightepsilon.gif</imgurl>
+     <action>insertChar('\u03B5',1)</action>
+     <tooltip>Straightepsilon</tooltip>
+   </s>    
+   <s id="s8eta" level="2" type="8">
+     <imgurl>image/s8eta.gif</imgurl>
+     <action>insertChar('\u03B7',1)</action>
+     <tooltip>Eta</tooltip>
+   </s>
+   <s id="s8theta" level="2" type="8">
+     <imgurl>image/s8theta.gif</imgurl>
+     <action>insertChar('\u03B8',1)</action>
+     <tooltip>Theta</tooltip>
+   </s>
+   <s id="s8lambda" level="2" type="8">
+     <imgurl>image/s8lambda.gif</imgurl>
+     <action>insertChar('\u03BB',1)</action>
+     <tooltip>Lambda</tooltip>
+   </s> 
+   <s id="s8mu" level="2" type="8">
+     <imgurl>image/s8mu.gif</imgurl>
+     <action>insertChar('\u03BC',1)</action>
+     <tooltip>Mu</tooltip>
+   </s>
+   <s id="s8rho" level="2" type="8">
+     <imgurl>image/s8rho.gif</imgurl>
+     <action>insertChar('\u03C1',1)</action>
+     <tooltip>Rho</tooltip>
+   </s>
+   <s id="s8sigma" level="2" type="8">
+     <imgurl>image/s8sigma.gif</imgurl>
+     <action>insertChar('\u03C3',1)</action>
+     <tooltip>Sigma</tooltip>
+   </s>  
+   <s id="s8straightphi" level="2" type="8">
+     <imgurl>image/s8straightphi.gif</imgurl>
+     <action>insertChar('\u03C6',1)</action>
+     <tooltip>Straightphi</tooltip>
+   </s>
+   <s id="s8omega" level="2" type="8">
+     <imgurl>image/s8omega.gif</imgurl>
+     <action>insertChar('\u03C9',1)</action>
+     <tooltip>Omega</tooltip>
+   </s>
+   <s id="s8psi" level="2" type="8">
+     <imgurl>image/s8psi.gif</imgurl>
+     <action>insertChar('\u03C8',1)</action>
+     <tooltip>Psi</tooltip>
+   </s>  
+   <s id="s8infinity" level="3" type="8">
+     <imgurl>image/s8infinity.gif</imgurl>
+     <action>insertChar('\u221E',1)</action>
+     <tooltip>Infinity</tooltip>
+   </s>
+  
+ <s id="s9matrix1" level="2" type="9">
+     <imgurl>image/s9matrix1.gif</imgurl>
+     <action>insertElement('matrix',13)</action>
+     <tooltip>Matrix</tooltip>
+   </s>
+   <s id="s9matrix2" level="2" type="9">
+     <imgurl>image/s9matrix2.gif</imgurl>
+     <action>insertElement('matrix',14)</action>
+     <tooltip>Matrix</tooltip>
+   </s>
+   <s id="s9matrix3" level="2" type="9">
+     <imgurl>image/s9matrix3.gif</imgurl>
+     <action>insertElement('vector',15)</action>
+     <tooltip>Vector</tooltip>
+   </s>
+   <s id="s10multiscripts" level="2" type="9">
+     <imgurl>image/s10multiscripts.gif</imgurl>
+     <action>insertElement('vector',15)</action>
+     <tooltip>Vector</tooltip>
+   </s>
+   <s id="s10sub" level="2" type="9">
+     <imgurl>image/s10sub.gif</imgurl>
+     <action>insertElement('vector',15)</action>
+     <tooltip>Vector</tooltip>
+   </s>
+   <s id="s10under" level="2" type="9">
+     <imgurl>image/s10under.gif</imgurl>
+     <action>insertElement('vector',15)</action>
+     <tooltip>Vector</tooltip>
+   </s>
+   <s id="s10subsup" level="2" type="9">
+     <imgurl>image/s10subsup.gif</imgurl>
+     <action>insertElement('vector',15)</action>
+     <tooltip>Vector</tooltip>
+   </s>
+</signs>    
+  

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!-- 检验管理 -->
+<struts>
+		<!-- 任务下达，任务分配 -->
+		<package name="samtest.labSamTask" namespace="/samtest/labSamTask" extends="globalpackage">
+			<action name="listLabSamTask4Issued" method="listLabSamTask4Issued" class="labSamTaskAction">
+				<result name="list">
+					/jsp/business/samtest/task/issued/labSamTaskList4Issued.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamTask4Issued" method="preUpdateLabSamTask4Issued" class="labSamTaskAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/task/issued/labSamTaskUpdate4Issued.jsp
+				</result>
+			</action>
+			<action name="updateLabSamTask4Issued" method="updateLabSamTask4Issued" class="labSamTaskAction">
+				<result name="update" type="redirectAction">
+					listLabSamTask4Issued.action
+				</result>
+			</action>
+			<action name="preUpdateSamTask4IssuedBeach" method="preUpdateSamTask4IssuedBeach" class="labSamTaskAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/task/issued/labSamTaskUpdate4IssuedBatch.jsp
+				</result>
+			</action>
+			<action name="updateSamTask4IssuedBeach" method="updateSamTask4IssuedBeach" class="labSamTaskAction">
+				<result name="update" type="redirectAction">
+					listLabSamTask4Issued.action
+				</result>
+			</action>
+			<action name="listLabSamTask4Allot" method="listLabSamTask4Allot" class="labSamTaskAction">
+				<result name="list">
+						/jsp/business/samtest/task/allot/labSamTaskList4Allot.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamTask4Allot" method="preUpdateLabSamTask4Allot" class="labSamTaskAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/task/allot/labSamTaskUpdate4Allot.jsp
+				</result>
+				<result name="list" type="redirectAction">
+					listLabSamTask4Allot.action
+				</result>
+			</action>
+			<action name="showlabSamTaskAllot4Select" method="showlabSamTaskAllot4Select" class="labSamTaskAction">
+				<result name="show">
+						/jsp/business/samtest/task/allot/labSamTaskAllot4Select.jsp
+				</result>
+			</action>
+			<action name="updateLabSamTask4Allot" method="updateLabSamTask4Allot" class="labSamTaskAction">
+				<result name="update" >
+					/jsp/business/samtest/task/allot/labSamTaskAllot4Close.jsp
+				</result>
+			</action>
+			<action name="preUpdateSamTask4AllotBeach" method="preUpdateSamTask4AllotBeach" class="labSamTaskAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/task/allot/labSamTaskUpdate4AllotBeatch.jsp
+				</result>
+				<result name="list" type="redirectAction">
+					listLabSamTask4Allot.action
+				</result>
+			</action>
+			<action name="updateSamTask4AllotBeach" method="updateSamTask4AllotBeach" class="labSamTaskAction">
+				<result name="update">
+					/jsp/business/samtest/task/allot/labSamTaskAllot4Close.jsp
+				</result>
+			</action>
+		</package>
+		<!-- 数据录入，数据检验，数据汇总 -->
+		<package name="samtest.labSamTest" namespace="/samtest/labSamTest" extends="globalpackage">
+			<action name="listLabSamTest" method="listLabSamTest" class="labSamTestAction">
+				<result name="list">
+					/jsp/business/samtest/test/data/labSamTestList.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamTest" method="preUpdateLabSamTest" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate.jsp
+				</result>
+			</action>
+			<action name="ajaxLabSamTest4Method" method="ajaxLabSamTest4Method" class="labSamTestAction"></action>
+			<action name="updateLabSamTest" method="updateLabSamTest" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					listLabSamTest.action
+				</result>
+				<result name="save" type="redirectAction">
+					preUpdateLabSamTest.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="preUpdateSamTest4Data" method="preUpdateSamTest4Data" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate4Date.jsp
+				</result>
+				<result name="list" type="redirectAction">
+					listLabSamTest.action
+				</result>
+			</action>
+			<action name="exportLabSampTest" method="exportLabSampTest" class="labSamTestAction">
+				<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+			</action>
+			<action name="updateLabSamTest4Validate" method="updateLabSamTest4Validate" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+						<param name="actionName">preUpdateSamTest4Data.action</param>
+						<param name="labSamTestBeatchVo.id">${labSamTestBeatchVo.id}</param>
+						<param name="message">${message}</param>
+				</result>
+			</action>
+			<action name="updateLabSamTest4ImportDate" method="updateLabSamTest4ImportDate" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateSamTest4Data?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="updateLabSamTest4Date" method="updateLabSamTest4Date" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateSamTest4Data.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+				<result name="list" type="redirectAction">
+					listLabSamTest.action
+				</result>
+			</action>
+			<action name="preUpdateLabSamTest4Appara" method="preUpdateLabSamTest4Appara" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate4Appara.jsp
+				</result>
+			</action>
+			<action name="updateLabSamTest4Appara" method="updateLabSamTest4Appara" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateLabSamTest4Appara.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="preUpdateSamTest4Ambient" method="preUpdateSamTest4Ambient" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate4Ambient.jsp
+				</result>
+			</action>
+			<action name="updateSamTest4Ambient" method="updateSamTest4Ambient" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateSamTest4Ambient.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="preUpdateSamTest4Reagent" method="preUpdateSamTest4Reagent" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate4Reagent.jsp
+				</result>
+			</action>
+			<action name="updateSamTest4Reagent" method="updateSamTest4Reagent" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateSamTest4Reagent.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="preUpdateSamTest4Reference" method="preUpdateSamTest4Reference" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/data/labSamTestUpdate4Reference.jsp
+				</result>
+			</action>
+			<action name="updateSamTest4Reference" method="updateSamTest4Reference" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					preUpdateSamTest4Reference.action?labSamTestBeatchVo.id=${labSamTestBeatchVo.id}
+				</result>
+			</action>
+			<action name="showLabSamTestInfo" method="showLabSamTestInfo" class="labSamTestAction">
+				<result name="show">
+					/jsp/business/samtest/test/data/labSamTestShowInfo.jsp
+				</result>
+			</action>
+			<action name="listLabSamTest4Check" method="listLabSamTest4Check" class="labSamTestAction">
+				<result name="list">
+					/jsp/business/samtest/test/check/labSamTestList4Check.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSamTest4Check" method="preUpdateLabSamTest4Check" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/check/labSamTestUpdate4Check.jsp	
+				</result>
+			</action>
+			<action name="updateLabSamTest4Check" method="updateLabSamTest4Check" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					listLabSamTest4Check.action
+				</result>
+			</action>
+			<action name="listLabSamTest4Summary" method="listLabSamTest4Summary" class="labSamTestAction">
+				<result name="list">
+						/jsp/business/samtest/test/summary/labSamTestList.jsp	
+				</result>
+			</action>
+			<action name="preLabSamTest4Summary" method="preLabSamTest4Summary" class="labSamTestAction">
+				<result name="preUpdate">
+					/jsp/business/samtest/test/summary/labSamTestUpdate.jsp	
+				</result>
+			</action>
+			<action name="updateLabSamTest4Summary" method="updateLabSamTest4Summary" class="labSamTestAction">
+				<result name="update" type="redirectAction">
+					listLabSamTest4Summary.action
+				</result>
+			</action>
+		</package>
+</struts>

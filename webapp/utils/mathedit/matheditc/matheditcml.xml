@@ -1,0 +1,82 @@
+<?xml version='1.0' standalone='no'?>
+<MathEditCML>
+<head>
+  <title>MathEdit 2.0</title>
+  <author>Wei Su</author>
+  <email>wsu@cs.kent.edu</email>
+  <date>2009-1-21</date>
+  <comments>This is an example of MathEditCML. MathEditCML is an XML-based
+  language for MathEdit to represent and store customization configurations.
+  </comments>
+</head>
+<body>
+	<editing>content</editing>
+	<initmath type="infix">x^2+3/4</initmath>
+  <menubar>
+   	<menu name="File">
+   	 <submenu mid="tnew">New</submenu>
+   	 <submenu mid="topen">Open</submenu>
+   	 <submenu mid="tsave">Save</submenu>
+   	 <submenu mid="tnew">Close</submenu>
+   	 <submenu mid="tline">-</submenu>
+   	 <submenu mid="treturnmainwindow">Return to main window</submenu>
+   	</menu>
+   	<menu name="Edit">
+   	 <submenu mid="tundo">Undo</submenu>
+   	 <submenu mid="tredo">Redo</submenu>
+   	 <submenu mid="tline">-</submenu>
+   	 <submenu mid="tcut">Cut</submenu>
+   	 <submenu mid="tcopy">Copy</submenu>
+   	 <submenu mid="tpaste">Paste</submenu>
+   	</menu>
+   	<menu name="Format">
+			<submenu mid="tbold">Bold</submenu>
+			<submenu mid="titalic">Italic</submenu>
+			<submenu mid="tforecolor">Text Color</submenu>
+			<submenu mid="tbackcolor">BackGround Color</submenu>
+			<submenu mid="tfont">Font</submenu>
+			<submenu mid="tfontsize">Font Size</submenu>
+   	</menu>
+   	<menu name="Templates">
+   		<submenu mid="s1">Arithmetic and Algebra</submenu>
+   		<submenu mid="s2">Sequence and Series</submenu>
+   		<submenu mid="s3">Relations</submenu>
+   		<submenu mid="s4">Logic</submenu>
+   		<submenu mid="s5">Theory of Sets</submenu>
+   		<submenu mid="s6">Trigonometric Functions</submenu>
+   		<submenu mid="s7">Calculus and Vector</submenu>
+   		<submenu mid="s8">Special Characters</submenu>
+   		<submenu mid="s9">Linear Algebra</submenu>
+   	</menu>
+   	<menu name="Tools">
+   		<submenu mid="tgif">To GIF</submenu>
+   		<submenu mid="tpng">To PNG</submenu>
+   		<submenu mid="tdvi">To DVI</submenu>
+   		<submenu mid="tps">To PS</submenu>
+   		<submenu mid="tpdf">To PDF</submenu>
+   	</menu>
+   	<menu name="Help">
+   	</menu>
+  </menubar>
+  
+  <templates close="on">
+  	<template mid="s1plus"></template>
+  	<template mid="s1minus1"></template>
+  	<template mid="s1times"></template>
+  	<template mid="s1divide"></template>
+  	<template mid="s1minus2"></template>
+  	<template mid="s1sqrt"></template>
+  	<template mid="s1root"></template>
+  	<template mid="s1sup"></template>
+  	<tool mid="close"></tool>
+  </templates>
+<linearinput mid="infix"></linearinput>
+<linearinput mid="sinfix"></linearinput>
+<linearinput mid="mmlc"></linearinput>
+<linearinput mid="mmlp"></linearinput>
+<linearinput mid="openm"></linearinput>
+<linearinput mid="latex"></linearinput>
+<linearinput mid="braille"></linearinput>
+
+</body>
+</MathEditCML>

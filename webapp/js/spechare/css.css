@@ -1,0 +1,24 @@
+.insertSpeChare{
+	width:16px;height:17px;background:url(icon.png);position:relative;cursor:pointer;
+}
+.speCharePanel{
+	position:absolute;width:300px;background:#F3F8FB;left:20px;cursor:default;z-index:2000;
+}
+.speCharePanel .colse{
+	background:url(close.png);width:16px;height:16px;cursor:pointer;float:right;margin-top:4px;margin-right:4px;
+}
+.speCharePanel .content{
+	width:100%;height:30px;
+}
+.speCharePanel .head{
+	height:24px;width:100%;background:#E7F4FC;
+}
+.speCharePanel .head .font{
+	float:left;background:url(title.png);width:75px;height:24px;
+}
+.speCharePanel table{
+	width:100%;font-size:12px;margin-top:3px;
+}
+.insert-btn{
+	color:red;cursor:pointer;
+}

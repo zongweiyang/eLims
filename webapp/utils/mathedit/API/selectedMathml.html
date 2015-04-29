@@ -1,0 +1,35 @@
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head><title>selectedmathml</title>
+</head>
+<body onunload="clos()" onload="opener.setSelectedMathml(window)">
+<p><FONT style="FONT-FAMILY:Times New Roman;COLOR: #005FA9;FONT-SIZE:medium">The following show MathML Content code. You can edit them. After you finish,please click "confirm" button to return to MathEdit Main window.</font></p>
+<p align="center">
+<form name='f6'><textarea name='mathcode' cols=60 rows=20></textarea> 
+<br/>
+<input type='button' value='confirm' onclick='changedmathml()'>
+</form>
+</p>
+<script type="text/javascript" >
+function clos()
+{
+	//window.returnValue=document.f6.mathcode.value;
+}
+function changedmathml()
+{
+	var str=document.f6.mathcode.value;
+	if(str=="" ||str==null)
+	{
+  }else
+  {
+  	//opener.focus();
+    opener.returnSelectedMathml(str);
+  }
+window.close();
+}
+
+</script>
+
+</body>
+</html>
+
+

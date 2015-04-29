@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<update xmlns="http://ns.riaspace.com/air/framework/update/description/1.1">
+	<exe>
+		<version>1.0.0</version>
+		<url>http://localhost:8885/updateTray/vlims.exe</url>
+		<description>
+			<![CDATA[                 * This a Win update                 ]]>
+		</description>
+	</exe>
+</update>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!-- 检验管理 -->
+<struts>
+		<!-- 任务下达，任务分配 -->
+		<package name="sample.labSampRegister" namespace="/sample/labSampRegister" extends="globalpackage">
+			<action name="listLabSampRegister" method="listLabSampRegister" class="labSampRegisterAction">
+				<result name="list">
+					/jsp/business/sample/register/labSampRegisterList.jsp
+				</result>
+			</action>
+			<action name="showLabSampRegister" method="showLabSampRegister" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/register/labSampRegisterShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabSampRegister4Tab1" method="preAddLabSampRegister4Tab1" class="labSampRegisterAction">
+				<result name="preAdd">
+					/jsp/business/sample/register/labSampRegisterSave1.jsp
+				</result>
+			</action>
+			<action name="preAddLabSampRegister4Tab2" method="preAddLabSampRegister4Tab2" class="labSampRegisterAction">
+				<result name="preAdd">
+					/jsp/business/sample/register/labSampRegisterSave2.jsp
+				</result>
+			</action>
+			<action name="preAddLabSampRegister4Tab3" method="preAddLabSampRegister4Tab3" class="labSampRegisterAction">
+				<result name="preAdd">
+					/jsp/business/sample/register/labSampRegisterSave3.jsp
+				</result>
+			</action>
+			<action name="addLabSampRegister4Tab1" method="addLabSampRegister4Tab1" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister.action</param>
+				</result>
+				<result name="update1" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab1.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update2" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab2.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update3" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab3.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+			</action>
+			<action name="addLabSampRegister4Tab2" method="addLabSampRegister4Tab2" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister.action</param>
+				</result>
+				<result name="update1" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab1.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update2" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab2.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update3" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab3.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+			</action>
+			<action name="addLabSampRegister4Tab3" method="addLabSampRegister4Tab3" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister.action</param>
+				</result>
+				<result name="update1" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab1.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update2" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab2.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+				<result name="update3" type="redirectAction">
+					<param name="actionName">preAddLabSampRegister4Tab3.action</param>
+					<param name="labSampRegisterVo.id">${labSampRegisterVo.id}</param>
+				</result>
+			</action>
+			
+			<action name="deleteLabSampRegister" method="deleteLabSampRegister" class="labSampRegisterAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSampRegister.action</param>
+				</result>
+			</action>
+			<action name="updateLabSampRegister4Del" method="updateLabSampRegister4Del" class="labSampRegisterAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSampRegister.action</param>
+				</result>
+			</action>
+			<action name="showLabItem4Select" method="showLabItem4Select" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/register/labItemShow4Select.jsp
+				</result>
+			</action>
+			<action name="showLabCustomer4Select" method="showLabCustomer4Select" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/register/labCustomerShow4Select.jsp
+				</result>
+			</action>
+			<action name="listLabSampRegister4Audit" method="listLabSampRegister4Audit" class="labSampRegisterAction">
+				<result name="list">
+					/jsp/business/sample/audit/labSampRegisterList4Audit.jsp
+				</result>
+			</action>
+			<action name="showLabSampRegister4Audit" method="showLabSampRegister4Audit" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/audit/labSampRegister4Audit.jsp
+				</result>
+			</action>
+			<action name="updateLabSampRegister4Audit" method="updateLabSampRegister4Audit" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister4Audit.action</param>
+				</result>
+			</action>
+			<action name="listLabSampRegister4Check" method="listLabSampRegister4Check" class="labSampRegisterAction">
+				<result name="list">
+					/jsp/business/sample/audit/labSampRegisterList4Check.jsp
+				</result>
+			</action>
+			<action name="showLabSampRegister4Check" method="showLabSampRegister4Check" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/audit/labSampRegister4Check.jsp
+				</result>
+			</action>
+			<action name="updateLabSampRegister4Check" method="updateLabSampRegister4Check" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister4Check.action</param>
+				</result>
+			</action>
+			<action name="listLabSampRegister4Approve" method="listLabSampRegister4Approve" class="labSampRegisterAction">
+				<result name="list">
+					/jsp/business/sample/audit/labSampRegisterList4Approve.jsp
+				</result>
+			</action>
+			<action name="showLabSampRegister4Approve" method="showLabSampRegister4Approve" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/audit/labSampRegister4Approve.jsp
+				</result>
+			</action>
+			<action name="updateLabSampRegister4Approve" method="updateLabSampRegister4Approve" class="labSampRegisterAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampRegister4Approve.action</param>
+				</result>
+			</action>
+			<action name="showLabSampRegister4Confirm" method="showLabSampRegister" class="labSampRegisterAction">
+				<result name="show">
+					/jsp/business/sample/register/labSampRegisterShow4Confirm.jsp
+				</result>
+			</action>
+			<action name="ajaxLabSampItem4Exsit" method="ajaxLabSampItem4Exsit" class="labSampRegisterAction">
+			</action>
+			<action name="ajaxLabMethodList4Select" method="ajaxLabMethodList4Select" class="labSampRegisterAction">
+			</action>
+			<action name="labSampRegisterQuery" method="labSampRegisterQuery" class="cn.labsoft.labos.business.sample.action.LabSampRegisterAction">
+						<result name="list">
+							/jsp/business/sample/query/queryList.jsp
+						</result>
+						<result name="list1">
+							/jsp/business/sample/query/query2List.jsp
+						</result>
+			</action>
+		</package>
+</struts>

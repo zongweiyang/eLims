@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts><!-- 试剂管理 -->
+	<package name="reagent.labReagent" namespace="/reagent/labReagent" extends="globalpackage">
+		<action name="frameLabReagent" method="frameLabReagent" class="labReaTypeAction">
+			<result name="frame">/jsp/source/reagent/rea/labReagentTypeFrame.jsp</result>
+		</action>
+		<action name="preLabReagentZtree" method="preLabReagentZtree" class="labReaTypeAction">
+			<result name="preTree">/jsp/source/reagent/rea/labReagentTypeZree.jsp</result>
+		</action>
+		<action name="ajaxLabReagentZtree" method="ajaxLabReagentZtree" class="labReaTypeAction">
+		</action>
+		<action name="preUpdateLabReagent" method="preUpdateLabReagent" class="labReagentAction">
+			<result name="preUpdate">/jsp/source/reagent/rea/labReagentUpdate.jsp</result>
+		</action>
+		<action name="listLabReagent" method="listLabReagent" class="labReagentAction">
+			<result name="list">/jsp/source/reagent/rea/labReagentList.jsp</result>
+		</action>
+		<action name="preAddLabReagent" method="preAddLabReagent" class="labReagentAction">
+			<result name="preAdd">/jsp/source/reagent/rea/labReagentAdd.jsp</result>
+		</action>
+		<action name="showLabReagent" method="showLabReagent" class="labReagentAction">
+			<result name="show">/jsp/source/reagent/rea/labReagentShow.jsp</result>
+		</action>
+		<action name="preLabReaTypeTree" method="preLabReaTypeTree" class="labReagentAction">
+			<result name="preTree">/jsp/source/reagent/rea/labReaTypeShow4Select.jsp</result>
+		</action>
+		<action name="addLabReagent" method="addLabReagent" class="labReagentAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabReagent" method="updateLabReagent" class="labReagentAction">
+			<result name="update" type="redirectAction">
+					<param name="actionName">listLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabReagentList" method="updateLabReagentList" class="labReagentAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabReagentMove" method="updateLabReagentMove" class="labReagentAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">frameLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+		<action name="deleteLabReagent" method="deleteLabReagent" class="labReagentAction">
+			<result name="delete" type="redirectAction">
+					<param name="actionName">listLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+		<action name="exportLabReagent" method="exportLabReagent" class="labReagentAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+		<action name="showLabRea4Select" method="showLabRea4Select" class="labReagentAction">
+			<result name="show">/jsp/source/reagent/outstore/labReaShow4Select.jsp</result>
+		</action>
+		<action name="ajaxIsExistName" method="isRequiredStandsNo" class="labReagentAction"></action>
+		<!-- 打印二维码 -->
+		<action name="showLabReagent4printTwoCode" method="showLabReagent4printTwoCode" class="labReagentAction">
+		<result name="show">/jsp/common/encoder/labEncoder4TwoCode.jsp</result>
+		</action>
+		<!-- 打印条形码 -->
+		<action name="showLabReagent4printBarCode" method="showLabReagent4printBarCode" class="labReagentAction">
+		<result name="show">/jsp/common/encoder/labEncoder4BarCode.jsp</result>
+		</action>
+		<!-- go试剂导入页面 -->
+		<action name="preImportLabReagent" method="preImportLabReagent" class="labReagentAction">
+		   <result name="preImport">/jsp/source/reagent/rea/labReagentImport.jsp</result>
+		</action>
+		<!-- 试剂导入-->
+		<action name="importLabReagent" method="importLabReagent" class="labReagentAction">
+		   <result name="import" type="redirectAction">
+				<param name="actionName">frameLabReagent?labReagentVo.reagentTypeId=${labReagentVo.reagentTypeId}</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 试剂分类 -->
+	<package name="reagent.labReaType" namespace="/reagent/labReaType"
+		extends="globalpackage">
+		<action name="ajaxNode4Add" method="ajaxNode4Add" class="labReaTypeAction"></action>
+		<action name="ajaxNode4Delete" method="ajaxNode4Delete" class="labReaTypeAction"></action>
+		<action name="ajaxNode4Update" method="ajaxNode4Update" class="labReaTypeAction"></action>
+		<action name="ajaxLabReagentTree" method="ajaxLabReagentTree" class="labReaTypeAction"></action>
+		<action name="ajaxLabReagentZtree" method="ajaxLabReagentZtree" class="labReaTypeAction"></action>
+	</package>
+	
+	<!-- 试剂出库 -->
+	<package name="reagent.labReaOutMain" namespace="/reagent/labReaOutMain" extends="globalpackage">
+		<action name="listLabReaOutMain" method="listLabReaOutMain" class="labReaOutAction">
+			<result name="list">/jsp/source/reagent/outstore/labReaOutList.jsp</result>
+		</action>
+		<action name="preAddLabReaOutMain" method="preAddLabReaOutMain" class="labReaOutAction">
+			<result name="preAdd">/jsp/source/reagent/outstore/labReaOutAdd.jsp</result>
+		</action>
+		<action name="addLabReaOutMain" method="addLabReaOutMain" class="labReaOutAction">
+			<result name="add"  type="redirectAction">listLabReaOutMain.action</result>
+		</action>
+		<action name="showLabReaOutMain" method="showLabReaOutMain" class="labReaOutAction">
+			<result name="show">/jsp/source/reagent/outstore/labReaOutShow.jsp</result>
+		</action>
+		<action name="exportLabReaOutMain" method="exportLabReaOutMain" class="labReaOutAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+	<!-- 试剂盘点 -->
+	<package name="reagent.labReaCheckMain" namespace="/reagent/labReaCheckMain" extends="globalpackage">
+		<action name="listLabReaCheckMain" method="listLabReaCheckMain" class="labReaCheckAction">
+			<result name="list">/jsp/source/reagent/checkstore/labReaCheckList.jsp</result>
+		</action>
+		<action name="preAddLabReaCheckMain" method="preAddLabReaCheckMain" class="labReaCheckAction">
+			<result name="preAdd">/jsp/source/reagent/checkstore/labReaCheckAdd.jsp</result>
+		</action>
+		<action name="addLabReaCheckMain" method="addLabReaCheckMain" class="labReaCheckAction">
+			<result name="add"  type="redirectAction">listLabReaCheckMain.action</result>
+		</action>
+		<action name="deleteReaOutMain" method="deleteReaOutMain" class="labReaCheckAction">
+			<result name="delete"  type="redirectAction">listLabReaOutMain.action</result>
+		</action>
+		<action name="deleteLabReaOutDetail" method="deleteLabReaOutDetail" class="labReaCheckAction">
+			<result name="delete"  type="redirectAction">
+			      <param name="actionName">preAddReaOutMain?labReaInMainVo.id=${labReaOutMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabReaCheckMain" method="showLabReaCheckMain" class="labReaCheckAction">
+			<result name="show">/jsp/source/reagent/checkstore/labReaCheckShow.jsp</result>
+		</action>
+	</package>
+	<!-- 试剂采购入库 -->
+	<package name="reagent.labReaPurMain" namespace="/reagent/labReaPurMain"
+		extends="globalpackage">
+		<action name="listLabReaPurMain" method="listLabReaPurMain"
+			class="labReaPurAction">
+			<result name="list">
+				/jsp/source/reagent/purchase/labReaPurMainList.jsp
+			</result>
+		</action>
+		<action name="preAddLabReaPur" method="preAddLabReaPur" class="labReaPurAction">
+			<result name="preAdd">
+				/jsp/source/reagent/purchase/labReaPurAdd.jsp
+			</result>
+		</action>
+		<action name="addLabReaPur" method="addLabReaPur" class="labReaPurAction">
+		   <result name="add"  type="redirectAction">
+			      <param name="actionName">listLabReaPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabReaPur?labReaPurMainVo.id=${labReaPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabReaPur" method="showLabReaPur" class="labReaPurAction">
+			<result name="show">
+				/jsp/source/reagent/purchase/labReaPurShow.jsp
+			</result>
+		</action>
+		<action name="showLabRea4Select" method="showLabRea4Select" class="labReaPurAction">
+			<result name="show">/jsp/source/reagent/purchase/labReaShow4Select.jsp</result>
+		</action>
+		<action name="preUpdateLabReaPur" method="preUpdateLabReaPur" class="labReaPurAction">
+			<result name="preUpdate">/jsp/source/reagent/purchase/labReaPurUpdate.jsp</result>
+		</action>
+		<action name="listLabReaPurAudit" method="listLabReaPurAudit" class="labReaPurAction">
+		   <result name="list">
+		     /jsp/source/reagent/purchase/labReaPurMainAuditList.jsp
+		   </result>
+		</action>
+		<action name="listLabReaPurApprove" method="listLabReaPurApprove" class="labReaPurAction">
+		   <result name="list">
+		     /jsp/source/reagent/purchase/labReaPurMainApproveList.jsp
+		   </result>
+		</action>
+		<action name="deleteLabReaPurMain" method="deleteLabReaPurMain" class="labReaPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurMain</param>
+		   </result>
+		</action>
+		<action name="showLabReaPur4Audit" method="showLabReaPur4Audit" class="labReaPurAction">
+		   <result name="show" >
+		   	/jsp/source/reagent/purchase/labReaPurAudit.jsp
+		   </result>
+		</action>
+		<action name="showLabReaPur4Approve" method="showLabReaPur4Approve" class="labReaPurAction">
+		   <result name="show" >
+		   	/jsp/source/reagent/purchase/labReaPurApprove.jsp
+		   </result>
+		</action>
+		<action name="updateLabReaPur4Audit" method="updateLabReaPur4Audit" class="labReaPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurAudit</param>
+		   </result>
+		</action>
+		<action name="updateLabReaPur4Approve" method="updateLabReaPur4Approve" class="labReaPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurApprove</param>
+		   </result>
+		</action>
+		<action name="updateLabReaPurMain" method="updateLabReaPurMain" class="labReaPurAction">
+		   <result name="update"  type="redirectAction">
+			      <param name="actionName">listLabReaPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabReaPur?labReaPurMainVo.id=${labReaPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="listLabReaPurIns" method="listLabReaPurIns" class="labReaPurAction">
+		 	<result name="list">/jsp/source/reagent/purchase/labReaPurInsList.jsp</result>
+		</action>
+		<action name="preAddLabReaPurIns" method="preAddLabReaPurIns" class="labReaPurAction">
+			<result name="preAdd">/jsp/source/reagent/purchase/labReaPurInsAdd.jsp</result>
+		</action>
+		<action name="addLabReaPurIns" method="addLabReaPurIns" class="labReaPurAction">
+		   <result name="add" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurIns</param>
+		   </result>
+		</action>
+		<action name="preUpdateLabReaPurIns" method="preUpdateLabReaPurIns" class="labReaPurAction">
+		 	<result name="preUpdate">/jsp/source/reagent/purchase/labReaPurInsUpdate.jsp</result>
+		</action>
+		<action name="updateLabReaPurIns" method="updateLabReaPurIns" class="labReaPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurIns</param>
+		   </result>
+		</action>
+		<action name="showLabReaPur4Ins" method="showLabReaPur4Ins" class="labReaPurAction">
+		 	<result name="show">/jsp/source/reagent/purchase/labReaPur4Ins.jsp</result>
+		</action>
+		<action name="updateLabReaPur4Ins" method="updateLabReaPur4Ins" class="labReaPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurIns</param>
+		   </result>
+		</action>
+		<action name="deleteLabReaPurIns" method="deleteLabReaPurIns" class="labReaPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabReaPurIns</param>
+		   </result>
+		</action>
+		
+		<action name="showAllLabReaPurMainExcel" method="showAllLabReaPurMainExcel" class="labReaPurAction">
+		   	<result name="show">/jsp/source/reagent/purchase/labReaPurListPrint.jsp</result>
+		</action>
+		<action name="exportLabReaPur" method="exportLabReaPur" class="labReaPurAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+		<action name="showLabReport4Bus" method="showLabReport4Bus" class="labReaPurAction">
+		   	<result name="show" >
+					/jsp/common/report/labReportShow4Bus.jsp
+			</result>
+		</action>
+	</package>
+</struts>

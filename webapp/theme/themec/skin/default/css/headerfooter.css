@@ -1,0 +1,43 @@
+
+#Header {width:980px;height:90px;background:#fff;position:relative;}
+#Footer {width:980px;height:115px;background:#fff;position:relative;text-align:center;clear:both;margin-top:15px;}
+
+#Header .logo {position:absolute;left:0;top:10px;text-align:left;}
+#Header .headtoolbar {position:absolute;right:0;top:20px;}
+#Header .headtoolbar .fankui {background:url(../images/toolbar_icon.png) no-repeat left 2px;padding-left:15px;}
+#Header .headtoolbar .dengji {background:url(../images/toolbar_icon.png) no-repeat left 2px;padding-left:15px;margin-left:10px;}
+#Header .headtoolbar .phone {background:none;margin-left:10px;color:#333;}
+#Header .headtoolbar span a {color:#333;}
+#Header .headtoolbar span a:hover {color:#f60;text-decoration:underline;}
+.cred {color:#333;}
+#Header .searchbar {position:absolute;right:0;top:45px;background:url(../images/searchbar_bg.jpg) no-repeat left top;width:136px;height:26px;}
+#Header .searchbar .searchinput{position:absolute;left:10px;top:6px;*top:4px;background:none;border:0;padding:0;width:95px;height:19px;*height:21px;line-height:19px;*line-height:21px;color:#AFAFAF;overflow:hidden;font-size:12px;}
+#Header .searchbar .searchbtn {position:absolute;right:6px;top:2px;cursor:pointer;background:url(../images/searchbtn_bg.jpg) no-repeat left top;width:20px;height:20px;padding:0;margin:0;border:0;}
+
+#Footer .footernav {line-height:25px;color:#887E72;}
+#Footer a {color:#887E72;}
+#Footer a:hover {color:#f60;text-decoration:underline;}
+#Footer .footerinfobox {margin-left:42px;*margin-left:21px;}
+#Footer .footerinfobox .footerinfoboxT {width:907px;height:18px;background:url(../images/footerinfo_bg_t.gif) no-repeat left top;overflow:hidden;}
+#Footer .footerinfobox .footerinfoboxM {width:907px;background:url(../images/footerinfo_bg_m.gif) repeat-y left top;_height:20px;min-height:20px;text-align:center;color:#887E72;}
+#Footer .footerinfobox .footerinfoboxM p {line-height:20px;}
+#Footer .footerinfobox .footerinfoboxB {width:907px;height:22px;background:url(../images/footerinfo_bg_b.gif) no-repeat left bottom;overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

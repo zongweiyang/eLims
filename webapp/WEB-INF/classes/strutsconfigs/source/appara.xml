@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 仪器Excel模板操作 -->
+	<package name="appara.excel" namespace="/appara/excel" extends="globalpackage">
+		<!-- 获取Excel模板 -->
+		<action name="getLabAppExcel" class="labApparaAction" method="getLabAppExcel">
+			<result name="list">/jsp/source/appara/app/labApp4Excel.jsp</result>
+		</action>
+		<!-- 导入清单Excel -->
+		<action name="importLabAppExcel" class="labApparaAction" method="importLabAppExcel">
+			<result name="list" type="redirectAction">
+				<param name="nameSpace">/appara</param>
+				<param name="actionName">frameLabAppara</param>
+			</result>
+		</action>
+	</package>
+	<!-- 仪器故障 -->
+	<package name="appara.prov" namespace="/appara/prov" extends="globalpackage">
+		<!-- 故障 清单 -->
+		<action name="listApparaProv4View" class="labApparaProvAction" method="listApparaProv4View">
+			<result name="list">/jsp/source/appara/prov/labAppProvViewList.jsp</result>
+		</action>
+		<!-- 故障 列表-->
+		<action name="listApparaProv" class="labApparaProvAction" method="listApparaProv">
+			<result name="list">/jsp/source/appara/prov/labApparaProvList.jsp</result>
+		</action>
+		<!-- 查看 -->
+		<action name="showLabApparaProv" class="labApparaProvAction" method="showLabApparaProv">
+			<result name="show">/jsp/source/appara/prov/labApparaProvShow.jsp</result>
+		</action>
+		<!-- 故障 新增-->
+		<action name="preAddLabApparaProv" class="labApparaProvAction" method="preAddLabApparaProv">
+			<result name="preAdd">/jsp/source/appara/prov/labApparaProvAdd.jsp</result>
+		</action>
+		<!-- 故障 新增 保存-->
+		<action name="addLabApparaProv" class="labApparaProvAction" method="addLabApparaProv">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listApparaProv</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateAppProv?labApparaProvVo.id=${labApparaProvVo.id}</param>
+			</result>
+		</action>
+		<!-- 故障 修改-->
+		<action name="preUpdateAppProv" class="labApparaProvAction" method="preUpdateAppProv">
+			<result name="preUpdate">/jsp/source/appara/prov/labApparaProvUpdate.jsp</result>
+		</action>
+		<!-- 故障  修改 保存-->
+		<action name="updateLabApparaProv" class="labApparaProvAction" method="updateLabApparaProv">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listApparaProv</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateAppProv?labApparaProvVo.id=${labApparaProvVo.id}</param>
+			</result>
+		</action>
+		<!-- 故障 审核 列表 -->
+		<action name="listApparaProvAudit" class="labApparaProvAction" method="listApparaProvAudit">
+			<result name="list">/jsp/source/appara/prov/labAppProvAuditList.jsp</result>
+		</action>
+		<!-- 故障 审核 -->
+		<action name="preUpdateApparaProv4Audit" class="labApparaProvAction" method="preUpdateApparaProv4Audit">
+			<result name="preUpdate">/jsp/source/appara/prov/labAppProvAuditUpdate.jsp</result>
+		</action>
+		<!-- 审核 修改 -->
+		<action name="updateAppProvAudit" class="labApparaProvAction" method="updateAppProvAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listApparaProvAudit</param>
+			</result>
+		</action>
+		<!-- 故障 审批 列表 -->
+		<action name="listApparaProvPaudit" class="labApparaProvAction" method="listApparaProvPaudit">
+			<result name="list">/jsp/source/appara/prov/labAppProvPauditList.jsp</result>
+		</action>
+		<!-- 故障 审批 -->
+		<action name="preUpdateApparaProv4Paudit" class="labApparaProvAction" method="preUpdateApparaProv4Paudit">
+			<result name="preUpdate">/jsp/source/appara/prov/labAppProvPauditUpdate.jsp</result>
+		</action>
+		<!-- 审批 -->
+		<action name="updateLabAppProvPaudit" class="labApparaProvAction" method="updateLabAppProvPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listApparaProvPaudit</param>
+			</result>
+		</action>
+		<!-- 打印  -->
+		<action name="printApparaProv" class="labApparaProvAction" method="printApparaProv">
+			<result name="print">/jsp/source/appara/prov/labAppProvPrint.jsp</result>
+		</action>
+	</package>
+	<!-- 仪器核查 -->
+	<package name="appara.check" namespace="/appara/check" extends="globalpackage">
+		<!-- 核查 列表 -->
+		<action name="listLabAppCheck" class="labApparaCheckAction" method="listLabAppCheck">
+			<result name="list">/jsp/source/appara/check/labAppCheckList.jsp</result>
+		</action>
+		<!-- 核查 查看 -->
+		<action name="showLabApparaCheck" class="labApparaCheckAction" method="showLabApparaCheck">
+			<result name="show">/jsp/source/appara/check/labApparaCheckShow.jsp</result>
+		</action>
+		<!-- 核查 新增 -->
+		<action name="preAddLabApparaCheck" class="labApparaCheckAction" method="preAddLabApparaCheck">
+			<result name="preAdd">/jsp/source/appara/check/labApparaCheckAdd.jsp</result>
+		</action>
+		<!-- 核查 新增 保存-->
+		<action name="addLabApparaCheck" class="labApparaCheckAction" method="addLabApparaCheck">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabAppCheck</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaCheck?labApparaCheckVo.id=${labApparaCheckVo.id}</param>
+			</result>
+		</action>
+		<!-- 核查 修改 -->
+		<action name="preUpdateLabApparaCheck" class="labApparaCheckAction" method="preUpdateLabApparaCheck">
+			<result name="preUpdate">/jsp/source/appara/check/labApparaCheckUpdate.jsp</result>
+		</action>
+		<!-- 核查 修改 保存-->
+		<action name="updateLabApparaCheck" class="labApparaCheckAction" method="updateLabApparaCheck">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppCheck</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaCheck?labApparaCheckVo.id=${labApparaCheckVo.id}</param>
+			</result>
+		</action>
+		<!-- 核查 审核 列表 -->
+		<action name="listLabAppCheckAudit" class="labApparaCheckAction" method="listLabAppCheckAudit">
+			<result name="list">/jsp/source/appara/check/labAppCheckAuditList.jsp</result>
+		</action>
+		<!-- 核查 审核 -->
+		<action name="preUpdateLabAppCheckAudit" class="labApparaCheckAction" method="preUpdateLabAppCheckAudit">
+			<result name="preUpdate">/jsp/source/appara/check/labAppCheckAuditUpdate.jsp</result>
+		</action>
+		<!-- 核查 审核 保存 -->
+		<action name="updateLabApparaCheckAudit" class="labApparaCheckAction" method="updateLabApparaCheckAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppCheckAudit</param>
+			</result>
+		</action>
+		<!-- 核查 审批 列表 -->
+		<action name="listLabAppCheckPaudit" class="labApparaCheckAction" method="listLabAppCheckPaudit">
+			<result name="list">/jsp/source/appara/check/labAppCheckPauditList.jsp</result>
+		</action>
+		<!-- 核查 审批 -->
+		<action name="preUpdateLabAppCheckPaudit" class="labApparaCheckAction" method="preUpdateLabAppCheckPaudit">
+			<result name="preUpdate">/jsp/source/appara/check/labAppCheckPauditUpdate.jsp</result>
+		</action>
+		<!-- 核查 审批 保存 -->
+		<action name="updateLabApparaCheckPaudit" class="labApparaCheckAction" method="updateLabApparaCheckPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppCheckPaudit</param>
+			</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printLabApparaCheck" class="labApparaCheckAction" method="printLabApparaCheck">
+			<result name="print">/jsp/source/appara/check/labAppCheckPrint.jsp</result>
+		</action>
+	</package>
+	<!-- 仪器维修 -->
+	<package name="appara.edit" namespace="/appara/edit" extends="globalpackage">
+		<!-- 维修 清单 -->
+		<action name="listLabApparaEdit4View" class="labApparaEditAction" method="listLabApparaEdit4View">
+			<result name="list">/jsp/source/appara/edit/labAppEditViewList.jsp</result>
+		</action>
+		<!-- 维修 保养 列表-->
+		<action name="listLabApparaEdit" class="labApparaEditAction" method="listLabApparaEdit">
+			<result name="list">/jsp/source/appara/edit/labApparaEditList.jsp</result>
+		</action>
+		<!-- 维修 查看 -->
+		<action name="showLabApparaEdit" class="labApparaEditAction" method="showLabApparaEdit">
+			<result name="show">/jsp/source/appara/edit/labApparaEditShow.jsp</result>
+		</action>
+		<!-- 维修 保养 新增-->
+		<action name="preAddLabApparaEdit" class="labApparaEditAction" method="preAddLabApparaEdit">
+			<result name="preAdd">/jsp/source/appara/edit/labApparaEditAdd.jsp</result>
+		</action>
+		<!-- 维修 保养 新增 保存-->
+		<action name="addLabApparaEdit" class="labApparaEditAction" method="addLabApparaEdit">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaEdit</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaEdit?labApparaEditVo.id=${labApparaEditVo.id}</param>
+			</result>
+		</action>
+		<!-- 维修 保养 修改-->
+		<action name="preUpdateLabApparaEdit" class="labApparaEditAction" method="preUpdateLabApparaEdit">
+			<result name="preUpdate">/jsp/source/appara/edit/labApparaEditUpdate.jsp</result>
+		</action>
+		<!-- 维修 保养 修改 保存-->
+		<action name="updateLabApparaEdit" class="labApparaEditAction" method="updateLabApparaEdit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaEdit</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaEdit?labApparaEditVo.id=${labApparaEditVo.id}</param>
+			</result>
+		</action>
+		<!-- 维修 审核 列表 -->
+		<action name="listLabApparaEditAudit" class="labApparaEditAction" method="listLabApparaEditAudit">
+			<result name="list">/jsp/source/appara/edit/labApparaEditAuditList.jsp</result>
+		</action>
+		<!-- 维修 审核 -->
+		<action name="preUpdateLabApparaEditAudit" class="labApparaEditAction" method="preUpdateLabApparaEditAudit">
+			<result name="preUpdate">/jsp/source/appara/edit/labApparaEditAuditUpdate.jsp</result>
+		</action>
+		<!-- 维修 审核 保存 -->
+		<action name="updateLabApparaEditAudit" class="labApparaEditAction" method="updateLabApparaEditAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaEditAudit</param>
+			</result>
+		</action>
+		<!-- 维修 审批 列表 -->
+		<action name="listLabApparaEditPaudit" class="labApparaEditAction" method="listLabApparaEditPaudit">
+			<result name="list">/jsp/source/appara/edit/labApparaEditPauditList.jsp</result>
+		</action>
+		<!-- 维修 审批 -->
+		<action name="preUpdateLabApparaEditPaudit" class="labApparaEditAction" method="preUpdateLabApparaEditPaudit">
+			<result name="preUpdate">/jsp/source/appara/edit/labApparaEditPauditUpdate.jsp</result>
+		</action>
+		<!-- 维修 审批 保存 -->
+		<action name="updateLabApparaEditPaudit" class="labApparaEditAction" method="updateLabApparaEditPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaEditPaudit</param>
+			</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printLabApparaEdit" class="labApparaEditAction" method="printLabApparaEdit">
+			<result name="print">/jsp/source/appara/edit/labAppEditPrint.jsp</result>
+		</action>
+	</package>
+	<!-- 仪器记录 -->
+	<package name="appara.useing" namespace="/appara/useing" extends="globalpackage">
+		<!-- 仪器 使用 清单 -->
+		<action name="listLabAppUse4View" class="labApparaUseAction" method="listLabAppUse4View">
+			<result name="list">/jsp/source/appara/useing/labAppUseViewList.jsp</result>
+		</action>
+		<action name="listLabAppRecord" class="labApparaUseAction" method="listLabAppRecord">
+			<result name="list">/jsp/source/appara/useing/labAppRecordList.jsp</result>
+		</action>
+		<!-- 仪器使用查看 -->
+		<action name="showLabAppUse" class="labApparaUseAction" method="showLabAppUse">
+			<result name="show">/jsp/source/appara/useing/labAppUseShow.jsp</result>
+		</action>
+		<!-- 使用记录 列表-->
+		<action name="listLabAppUse" class="labApparaUseAction" method="listLabAppUse">
+			<result name="list">/jsp/source/appara/useing/labAppUseList.jsp</result>
+		</action>
+		<!-- 使用记录 新增-->
+		<action name="preAddLabAppUse" class="labApparaUseAction" method="preAddLabAppUse">
+			<result name="success">/jsp/source/appara/useing/labAppUseAdd.jsp</result>
+		</action>
+		<!-- 使用记录 新增 保存-->
+		<action name="addLabAppUse" class="labApparaUseAction" method="addLabAppUse">
+			<result name="success" type="redirectAction">
+				<param name="actionName">listLabAppUse</param>
+			</result>
+		</action>
+		<!-- 使用记录 修改-->
+		<action name="preUpdateLabAppUse" class="labApparaUseAction" method="preUpdateLabAppUse">
+			<result name="success">/jsp/source/appara/useing/labApparaUseUpdate.jsp</result>
+		</action>
+		<!-- 使用记录 修改 保存-->
+		<action name="updateLabAppUse" class="labApparaUseAction" method="updateLabAppUse">
+			<result name="success" type="redirectAction">
+				<param name="actionName">listLabAppUse</param>
+			</result>
+		</action>
+		<!-- 仪器预约使用 -->
+			<action name="listLabAppUse4Bespek" method="listLabAppUse4Bespek" class="labApparaUseAction">
+				<result name="list">
+					/jsp/source/appara/useing/labAppUsebespekList.jsp
+				</result>
+			</action>
+			<action name="preAddLabAppUse4bespek" method="preAddLabAppUse4bespek" class="labApparaUseAction">
+				<result name="preAdd">
+					/jsp/source/appara/useing/labAppUsebespekAdd.jsp
+				</result>
+			</action>
+			<action name="addLabAppUse4bespek" method="addLabAppUse4bespek" class="labApparaUseAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabAppUse4Bespek.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabAppUse4bespek" method="preUpdateLabAppUse4bespek" class="labApparaUseAction">
+				<result name="preUpdate">
+					/jsp/source/appara/useing/labAppUsebespekUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabAppUse4bespek" method="updateLabAppUse4bespek" class="labApparaUseAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabAppUse4Bespek.action</param>
+				</result>
+			</action>
+			<action name="deleteLabAppUse4bespek" method="deleteLabAppUsebespek" class="labApparaUseAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabAppUse4Bespek.action</param>
+				</result>
+			</action>
+			<action name="ajaxLabAppUsebes4update" method="ajaxLabAppUsebes4update" class="labApparaUseAction">
+			</action>
+	</package>
+
+	<!-- 仪器清单-->
+	<package name="appara.showUser" namespace="/appara/showUser" extends="globalpackage">
+		<action name="showUser4Select" method="showUser4Select" class="labApparaAction">
+			<result name="show">/jsp/source/appara/app/userShow4Select.jsp</result>
+		</action>
+	</package>
+	<package name="appara.showSupplier" namespace="/appara/showSupplier" extends="globalpackage">
+		<action name="showSupplier4Select" method="showSupplier4Select" class="labApparaAction">
+			<result name="show">/jsp/source/appara/app/supplierShow4Select.jsp</result>
+		</action>
+	</package>
+	<package name="appara" namespace="/appara" extends="globalpackage">
+		<!-- 仪器 清单 -->
+		<action name="frameLabAppara" class="labApparaAction" method="frameLabAppara">
+			<result name="frame">/jsp/source/appara/app/labApparaFrame.jsp</result>
+		</action>
+		<!-- 仪器 分类 树 -->
+		<action name="preLabApparaZtree" class="labApparaAction" method="preLabApparaZtree">
+			<result name="show">/jsp/source/appara/app/labApparaTypeZree.jsp</result>
+		</action>
+		<!-- 仪器 分类 ajax操作 -->
+		<action name="ajaxLabApparaZtree" method="ajaxLabApparaZtree" class="labApparaAction"></action>
+		<action name="ajaxLabAppType4Add" method="ajaxLabAppType4Add" class="labApparaAction"></action>
+		<action name="ajaxLabAppType4Delete" method="ajaxLabAppType4Delete" class="labApparaAction"></action>
+		<action name="ajaxLabAppType4Update" method="ajaxLabAppType4Update" class="labApparaAction"></action>
+		<!-- 列表 -->
+		<action name="listLabAppara" class="labApparaAction" method="listLabAppara">
+			<result name="list">/jsp/source/appara/app/labApparaList.jsp</result>
+		</action>
+		<action name="showLabAppara" class="labApparaAction" method="showLabAppara">
+			<result name="show">/jsp/source/appara/app/labApparaShow.jsp</result>
+		</action>
+		<!-- 新增仪器 -->
+		<action name="preAddLabAppara" class="labApparaAction" method="preAddLabAppara">
+			<result name="success">/jsp/source/appara/app/labApparaAdd.jsp</result>
+		</action>
+		<!-- 新增 保存-->
+		<action name="addLabAppara" class="labApparaAction" method="addLabAppara">
+			<result name="success" type="redirectAction">
+				<param name="actionName">listLabAppara</param>
+			</result>
+		</action>
+		<!-- 修改-->
+		<action name="preUpdateLabApp" class="labApparaAction" method="preUpdateLabApp">
+			<result name="success">/jsp/source/appara/app/labApparaUpdate.jsp</result>
+		</action>
+		<!-- 修改 保存-->
+		<action name="updateLabApp" class="labApparaAction" method="updateLabApp">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppara</param>
+			</result>
+		</action>
+		<!-- 删除附件 -->
+		<action name="delLabAppFile" class="labApparaAction" method="delLabAppFile">
+			<result name="success" type="redirectAction">
+				<param name="actionName">getLabApparaList</param>
+			</result>
+		</action>
+		<!-- 删除仪器 -->
+		<action name="delLabApp" class="labApparaAction" method="delLabApp">
+			<result name="show" type="redirectAction">
+				<param name="actionName">listLabAppara</param>
+			</result>
+		</action>
+		<!-- 打印二维码 -->
+		<action name="showLabApp4printTwoCode" method="showLabApp4printTwoCode" class="labApparaAction">
+		<result name="print">/jsp/common/encoder/labEncoder4TwoCode.jsp</result>
+		</action>
+		<!-- 打印条形码 -->
+		<action name="showLabApp4printBarCode" method="showLabApp4printBarCode" class="labApparaAction">
+		<result name="print">/jsp/common/encoder/labEncoder4BarCode.jsp</result>
+		</action>
+		<!-- 导出清单Excel -->
+		<action name="exportLabAppExcel" class="labApparaAction" method="exportLabAppExcel">
+				<result name="exportLabAppara" type="stream">
+					<param name="contentType">/application/vnd.ms-excel</param>
+					<param name="contentDisposition">attachment;filename="${filename}"</param>
+					<param name="inputName">excelStream</param>
+					<param name="bufferSize">4096</param>
+				</result>
+		</action>
+		<action name="labLabAppUserQuery" method="labLabAppUserQuery" class="labApparaAction">
+			<result name="list">
+				/jsp/source/appara/query/labLabAppUserQuery.jsp
+			</result>
+			<result name="list1">
+				/jsp/source/appara/query/labLabAppUser2Query.jsp
+			</result>
+		</action>
+		<action name="labLabAppQuery" method="labLabAppQuery" class="labApparaAction">
+			<result name="list">
+				/jsp/source/appara/query/labLabAppQuery.jsp
+			</result>
+			<result name="list1">
+				/jsp/source/appara/query/labLabApp2Query.jsp
+			</result>
+		</action>
+	</package>
+	<!-- 仪器检定 -->
+	<package name="appara.test" namespace="/appara/test" extends="globalpackage">
+		<!-- 检定 清单 -->
+		<action name="listLabApparaTest4View" class="labApparaTestAction" method="listLabApparaTest4View">
+			<result name="list">/jsp/source/appara/testRecord/labAppTestViewList.jsp</result>
+		</action>
+		<!-- 检定 列表 -->
+		<action name="listLabApparaTest" class="labApparaTestAction" method="listLabApparaTest">
+			<result name="list">/jsp/source/appara/testRecord/labApparaTestList.jsp</result>
+		</action>
+		<!-- 检定 查看 -->
+		<action name="showLabApparaTest" class="labApparaTestAction" method="showLabApparaTest">
+			<result name="show">/jsp/source/appara/testRecord/labApparaTestShow.jsp</result>
+		</action>
+		<action name="addLabApparaTest" class="labApparaTestAction" method="addLabApparaTest">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaTest</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaTest?labApparaTestVo.id=${labApparaTestVo.id}</param>
+			</result>
+		</action>
+		<!-- 检定 审核 列表 -->
+		<action name="listLabAppTestAudit" class="labApparaTestAction" method="listLabAppTestAudit">
+			<result name="list">/jsp/source/appara/testRecord/labAppTestAuditList.jsp</result>
+		</action>
+		<!-- 检定 审核 -->
+		<action name="preUpdateLabAppTestAudit" class="labApparaTestAction" method="preUpdateLabAppTestAudit">
+			<result name="preUpdate">/jsp/source/appara/testRecord/labAppTestAuditUpdate.jsp</result>
+		</action>
+		<!-- 检定 审批 列表 -->
+		<action name="listLabAppTestPaudit" class="labApparaTestAction" method="listLabAppTestPaudit">
+			<result name="list">/jsp/source/appara/testRecord/labAppTestPauditList.jsp</result>
+		</action>
+		<!-- 检定 审批 -->
+		<action name="preUpdateLabAppTestPaudit" class="labApparaTestAction" method="preUpdateLabAppTestPaudit">
+			<result name="preUpdate">/jsp/source/appara/testRecord/labAppTestPauditUpdate.jsp</result>
+		</action>
+		<action name="preAddLabAppTest" class="labApparaTestAction" method="preAddLabAppTest">
+			<result name="preAdd">/jsp/source/appara/testRecord/labApparaTestAdd.jsp</result>
+		</action>
+		<!-- 检定 修改 保存 -->
+		<action name="updateLabApparaTest" class="labApparaTestAction" method="updateLabApparaTest">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaTest</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaTest?labApparaTestVo.id=${labApparaTestVo.id}</param>
+			</result>
+		</action>
+		<!-- 检定 审核 保存 -->
+		<action name="updateLabApparaTestAudit" class="labApparaTestAction" method="updateLabApparaTestAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppTestAudit</param>
+			</result>
+		</action>
+		<!-- 检定 审批 保存 -->
+		<action name="updateLabApparaTestPaudit" class="labApparaTestAction" method="updateLabApparaTestPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppTestPaudit</param>
+			</result>
+		</action>
+		<action name="preUpdateLabApparaTest" class="labApparaTestAction" method="preUpdateLabApparaTest">
+			<result name="preUpdate">/jsp/source/appara/testRecord/labApparaTestUpdate.jsp</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printLabApparaTest" class="labApparaTestAction" method="printLabApparaTest">
+			<result name="print">/jsp/source/appara/testRecord/labAppTestPrint.jsp</result>
+		</action>
+		<!-- 导出仪器检定表 -->
+		<action name="exportLabAppTest" class="labApparaTestAction" method="exportLabAppTest">
+			<result name="exportLabAppTest" type="stream">
+				<param name="contentType">/application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">excelStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+	<!-- 仪器停用 -->
+	<package name="appara.stop" namespace="/appara/stop" extends="globalpackage">
+		<!-- 仪器 停用 清单 -->
+		<action name="listLabLabApparaStop4View" class="labApparaStopAction" method="listLabLabApparaStop4View">
+			<result name="list">/jsp/source/appara/stop/labAppStopViewList.jsp</result>
+		</action>
+		<!-- 仪器 停用 列表 -->
+		<action name="listLabApparaStop" class="labApparaStopAction" method="listLabApparaStop">
+			<result name="list">/jsp/source/appara/stop/labAppStopList.jsp</result>
+		</action>
+		<!-- 仪器 停用 查看 -->
+		<action name="showLabApparaStop" class="labApparaStopAction" method="showLabApparaStop">
+			<result name="show">/jsp/source/appara/stop/labAppStopShow.jsp</result>
+		</action>
+		<!-- 仪器 停用 -->
+		<action name="preAddLabApparaStop" class="labApparaStopAction" method="preAddLabApparaStop">
+			<result name="preAdd">/jsp/source/appara/stop/labAppStopAdd.jsp</result>
+		</action>
+		<!-- 停用 -->
+		<action name="addLabApparaStop" class="labApparaStopAction" method="addLabApparaStop">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaStop</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaStop?labApparaStopVo.id=${labApparaStopVo.id}</param>
+			</result>
+		</action>
+		<!-- 停用 修改 -->
+		<action name="preUpdateLabApparaStop" class="labApparaStopAction" method="preUpdateLabApparaStop">
+			<result name="preUpdate">/jsp/source/appara/stop/labAppStopUpdate.jsp</result>
+		</action>
+		<!-- 停用 修改 保存 -->
+		<action name="updateAppStop" class="labApparaStopAction" method="updateAppStop">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaStop</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaStop?labApparaStopVo.id=${labApparaStopVo.id}</param>
+			</result>
+		</action>
+		<!-- 停用 审核 列表 -->
+		<action name="listLabAppStopAudit" class="labApparaStopAction" method="listLabAppStopAudit">
+			<result name="list">/jsp/source/appara/stop/labAppStopAuditList.jsp</result>
+		</action>
+		<!-- 停用 审核 -->
+		<action name="preUpdateAppStopAudit" class="labApparaStopAction" method="preUpdateAppStopAudit">
+			<result name="preUpdate">/jsp/source/appara/stop/labAppStopAuditUpdate.jsp</result>
+		</action>
+		<!-- 停用 审批 列表 -->
+		<action name="listLabAppStopPaudit" class="labApparaStopAction" method="listLabAppStopPaudit">
+			<result name="list">/jsp/source/appara/stop/labAppStopPauditList.jsp</result>
+		</action>
+		<!-- 停用 审批 -->
+		<action name="preUpdateAppStopPaudit" class="labApparaStopAction" method="preUpdateAppStopPaudit">
+			<result name="preUpdate">/jsp/source/appara/stop/labAppStopPauditUpdate.jsp</result>
+		</action>
+		<!-- 审批 保存 -->
+		<action name="updateAppStopPaudit" class="labApparaStopAction" method="updateAppStopPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppStopPaudit</param>
+			</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printApparaStop" class="labApparaStopAction" method="printApparaStop">
+			<result name="print">/jsp/source/appara/stop/labAppStopPrint.jsp</result>
+		</action>
+	</package>
+	<!-- 仪器报废表 -->
+	<package name="appara.drop" namespace="/appara/drop" extends="globalpackage">
+		<!-- 仪器 报废 清单 -->
+		<action name="listLabApparaDrop4View" class="labApparaDropAction" method="listLabApparaDrop4View">
+			<result name="list">/jsp/source/appara/drop/labAppDropViewList.jsp</result>
+		</action>
+		<!-- 所有仪器列表 -->
+		<action name="showApp4Select" class="labApparaDropAction" method="showApp4Select">
+			<result name="show">/jsp/source/appara/drop/appShow4Select.jsp</result>
+		</action>
+		<!-- 报废列表 -->
+		<action name="listLabApparaDrop" class="labApparaDropAction" method="listLabApparaDrop">
+			<result name="list">/jsp/source/appara/drop/labAppDropList.jsp</result>
+		</action>
+		<action name="preAddLabApparaDrop" class="labApparaDropAction" method="preAddLabApparaDrop">
+			<result name="preAdd">/jsp/source/appara/drop/labApparaDropAdd.jsp</result>
+		</action>
+		<action name="addLabApparaDrop" class="labApparaDropAction" method="addLabApparaDrop">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaDrop</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaDrop?labApparaDropVo.id=${labApparaDropVo.id}</param>
+			</result>
+		</action>
+		<!-- 报废 查看 -->
+		<action name="showLabApparaDrop" class="labApparaDropAction" method="showLabApparaDrop">
+			<result name="show">/jsp/source/appara/drop/labApparaDropShow.jsp</result>
+		</action>
+		<!-- 报废修改 -->
+		<action name="preUpdateLabApparaDrop" class="labApparaDropAction" method="preUpdateLabApparaDrop">
+			<result name="preUpdate">/jsp/source/appara/drop/labApparaDropUpdate.jsp</result>
+		</action>
+		<!-- 报废修改 保存-->
+		<action name="upDateLabApparaDrop" class="labApparaDropAction" method="upDateLabApparaDrop">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaDrop</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaDrop?labApparaDropVo.id=${labApparaDropVo.id}</param>
+			</result>
+		</action>
+		<!-- 报废 审核 列表-->
+		<action name="listLabApparaDropAudit" class="labApparaDropAction" method="listLabApparaDropAudit">
+			<result name="list">/jsp/source/appara/drop/labAppDropAuditList.jsp</result>
+		</action>
+		<!-- 报废 审核 -->
+		<action name="preUpdateLabAppDropAudit" class="labApparaDropAction" method="preUpdateLabAppDropAudit">
+			<result name="preUpdate">/jsp/source/appara/drop/labAppDropAuditUpdate.jsp</result>
+		</action>
+		<!-- 报废 审批 列表-->
+		<action name="listLabApparaDropPaudit" class="labApparaDropAction" method="listLabApparaDropPaudit">
+			<result name="list">/jsp/source/appara/drop/labAppDropPauditList.jsp</result>
+		</action>
+		<!-- 报废 审批 -->
+		<action name="preUpdateLabAppDropPaudit" class="labApparaDropAction" method="preUpdateLabAppDropPaudit">
+			<result name="preUpdate">/jsp/source/appara/drop/labAppDropPauditUpdate.jsp</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printApparaDrop" class="labApparaDropAction" method="printApparaDrop">
+			<result name="print">/jsp/source/appara/drop/labAppDropPrint.jsp</result>
+		</action>
+		<!-- 导出仪器报废表 -->
+		<action name="exportLabAppDrop" class="labApparaDropAction" method="exportLabAppDrop">
+			<result name="exportExcel" type="stream">
+				<param name="contentType">/application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">excelStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+	<!-- 仪器启用 -->
+	<package name="appara.open" namespace="/appara/open" extends="globalpackage">
+		<!-- 仪器 启动 清单 -->
+		<action name="listLabApparaOpen4View" class="labApparaOpenAction" method="listLabApparaOpen4View">
+			<result name="list">/jsp/source/appara/open/labAppOpenViewList.jsp</result>
+		</action>
+		<!-- 启用 列表 -->
+		<action name="listLabApparaOpen" class="labApparaOpenAction" method="listLabApparaOpen">
+			<result name="list">/jsp/source/appara/open/labAppOpenList.jsp</result>
+		</action>
+		<!-- 启用 查看 -->
+		<action name="showLabAppOpen" class="labApparaOpenAction" method="showLabAppOpen">
+			<result name="show">/jsp/source/appara/open/labAppOpenShow.jsp</result>
+		</action>
+		<!-- 启用 -->
+		<action name="preAddLabApparaOpen" class="labApparaOpenAction" method="preAddLabApparaOpen">
+			<result name="preAdd">/jsp/source/appara/open/labApparaOpenAdd.jsp</result>
+		</action>
+		<action name="addLabApparaOpen" class="labApparaOpenAction" method="addLabApparaOpen">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaOpen</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateAppOpen?labApparaOpenVo.id=${labApparaOpenVo.id}</param>
+			</result>
+		</action>
+		<!-- 启用 修改 -->
+		<action name="updateApparaOpen" class="labApparaOpenAction" method="updateApparaOpen">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaOpen</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateAppOpen?labApparaOpenVo.id=${labApparaOpenVo.id}</param>
+			</result>
+		</action>
+		<!-- 启用 审核 列表 -->
+		<action name="listLabAppOpenAudit" class="labApparaOpenAction" method="listLabAppOpenAudit">
+			<result name="list">/jsp/source/appara/open/labAppOpenAuditList.jsp</result>
+		</action>
+		<!-- 审核 -->
+		<action name="preUpdateAppOpenAudit" class="labApparaOpenAction" method="preUpdateAppOpenAudit">
+			<result name="preUpdate">/jsp/source/appara/open/labAppOpenAuditUpdate.jsp</result>
+		</action>
+		<!-- 启用 审核 保存 -->
+		<action name="updateLabApparaOpenAudit" class="labApparaOpenAction" method="updateLabApparaOpenAudit">
+			<result name="list" type="redirectAction">
+				<param name="actionName">listLabAppOpenAudit</param>
+			</result>
+		</action>
+		<!-- 启用 审批 列表 -->
+		<action name="listLabAppOpenPaudit" class="labApparaOpenAction" method="listLabAppOpenPaudit">
+			<result name="list">/jsp/source/appara/open/labAppOpenPauditList.jsp</result>
+		</action>
+		<!-- 审批 -->
+		<action name="preUpdateAppOpenPaudit" class="labApparaOpenAction" method="preUpdateAppOpenPaudit">
+			<result name="preUpdate">/jsp/source/appara/open/labAppOpenPauditUpdate.jsp</result>
+		</action>
+		<!-- 审批 保存 -->
+		<action name="updateLabApparaOpenPaudit" class="labApparaOpenAction" method="updateLabApparaOpenPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppOpenPaudit</param>
+			</result>
+		</action>
+		<action name="preUpdateAppOpen" class="labApparaOpenAction" method="preUpdateAppOpen">
+			<result name="preUpdate">/jsp/source/appara/open/labAppOpenUpdate.jsp</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printLabApparaOpen" class="labApparaOpenAction" method="printLabApparaOpen">
+			<result name="print">/jsp/source/appara/open/labAppOpenPrint.jsp</result>
+		</action>
+		<!-- 导出仪器启用表 -->
+		<action name="exportLabAppOpen" class="labApparaOpenAction" method="exportLabAppOpen">
+			<result name="exportExcel" type="stream">
+				<param name="contentType">/application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">excelStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+	<!-- 仪器借用 -->
+	<package name="appara.borrow" namespace="/appara/borrow" extends="globalpackage">
+		<!-- 借用 清单 列表 -->
+		<action name="listLabApparaBor4View" class="labApparaBorAction" method="listLabApparaBor4View">
+			<result name="list">/jsp/source/appara/borrow/labApparaBorViewList.jsp</result>
+		</action>
+		<!-- 借用 列表 -->
+		<action name="listLabApparaBor" class="labApparaBorAction" method="listLabApparaBor">
+			<result name="list">/jsp/source/appara/borrow/labApparaBorList.jsp</result>
+		</action>
+		<!-- 借用 查看 -->
+		<action name="showLabApparaBor" class="labApparaBorAction" method="showLabApparaBor">
+			<result name="show">/jsp/source/appara/borrow/labApparaBorShow.jsp</result>
+		</action>
+		<!-- 借用 新增 -->
+		<action name="preAddLabApparaBor" class="labApparaBorAction" method="preAddLabApparaBor">
+			<result name="preAdd">/jsp/source/appara/borrow/labApparaBorAdd.jsp</result>
+		</action>
+		<!-- 借用 新增 保存 -->
+		<action name="addLabApparaBor" class="labApparaBorAction" method="addLabApparaBor">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabApparaBor</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaBor?labApparaBorVo.id=${labApparaBorVo.id}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabApparaBor" class="labApparaBorAction" method="preUpdateLabApparaBor">
+			<result name="preUpdate">/jsp/source/appara/borrow/labApparaBorUpdate.jsp</result>
+		</action>
+		<action name="updateLabApparaBor" class="labApparaBorAction" method="updateLabApparaBor">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaBor</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabApparaBor?labApparaBorVo.id=${labApparaBorVo.id}</param>
+			</result>
+		</action>
+		<!-- 借用 审核 列表 -->
+		<action name="listLabApparaBorAudit" class="labApparaBorAction" method="listLabApparaBorAudit">
+			<result name="list">/jsp/source/appara/borrow/labApparaBorAuditList.jsp</result>
+		</action>
+		<!-- 借用 审核 -->
+		<action name="preUpdateLabApparaBorAudit" class="labApparaBorAction" method="preUpdateLabApparaBorAudit">
+			<result name="preUpdate">/jsp/source/appara/borrow/labApparaBorAuditUpdate.jsp</result>
+		</action>
+		<!-- 审核 保存 -->
+		<action name="updateLabApparaBorAudit" class="labApparaBorAction" method="updateLabApparaBorAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaBorAudit</param>
+			</result>
+		</action>
+		<!-- 借用 审批 列表 -->
+		<action name="listLabApparaBorPaudit" class="labApparaBorAction" method="listLabApparaBorPaudit">
+			<result name="list">/jsp/source/appara/borrow/labApparaBorPauditList.jsp</result>
+		</action>
+		<!-- 借用 审批 -->
+		<action name="preUpdateLabApparaBorPaudit" class="labApparaBorAction" method="preUpdateLabApparaBorPaudit">
+			<result name="preUpdate">/jsp/source/appara/borrow/labApparaBorPauditUpdate.jsp</result>
+		</action>
+		<!-- 审批 保存 -->
+		<action name="updateLabApparaBorPaudit" class="labApparaBorAction" method="updateLabApparaBorPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabApparaBorPaudit</param>
+			</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printLabApparaBor" class="labApparaBorAction" method="printLabApparaBor">
+			<result name="print">/jsp/source/appara/borrow/labAppBorPrint.jsp</result>
+		</action>
+		<!-- 导出仪器借用表 -->
+		<action name="exportLabAppBor" class="labApparaBorAction" method="exportLabAppBor">
+			<result name="exportExcel" type="stream">
+				<param name="contentType">/application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">excelStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+	<!-- 仪器验收 -->
+	<package name="appara.accept" namespace="/appara/accept" extends="globalpackage">
+		<!-- 验收 清单 查看 -->
+		<action name="listLabAppAccept4View" class="labApparaAcceptAction" method="listLabAppAccept4View">
+			<result name="list">/jsp/source/appara/accept/labAppAcceptViewList.jsp</result>
+		</action>
+		<!-- 验收 列表 -->
+		<action name="listLabAppCheckAudit" class="labApparaAcceptAction" method="listLabAppCheckAudit">
+			<result name="list">/jsp/source/appara/accept/labAppCheckAuditList.jsp</result>
+		</action>
+		<!-- 验收 查看 -->
+		<action name="showLabAppAccept" class="labApparaAcceptAction" method="showLabAppAccept">
+			<result name="show">/jsp/source/appara/accept/labApparaAcceptShow.jsp</result>
+		</action>
+		<!-- 验收 -->
+		<action name="preUpdateApparaAccept" class="labApparaAcceptAction" method="preUpdateApparaAccept">
+			<result name="preUpdate">/jsp/source/appara/accept/labAppAcceptUpdate.jsp</result>
+		</action>
+		<!-- 验收 保存-->
+		<action name="updateLabAppAccept" class="labApparaAcceptAction" method="updateLabAppAccept">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabAppCheckAudit</param>
+			</result>
+		</action>
+		<action name="labApparaAcceptShow" class="labApparaAcceptAction" method="labApparaAcceptShow">
+			<result name="show">/jsp/source/appara/accept/labApparaAcceptShow.jsp</result>
+		</action>
+		<!-- 验收审核 列表 -->
+		<action name="listAppAcceptAudit" class="labApparaAcceptAction" method="listAppAcceptAudit">
+			<result name="list">/jsp/source/appara/accept/labAppAccpetAuditList.jsp</result>
+		</action>
+		<!-- 验收 审核 -->
+		<action name="preUpdateAppAcceptAudit" class="labApparaAcceptAction" method="preUpdateAppAcceptAudit">
+			<result name="preUpdate">/jsp/source/appara/accept/labAppAcceptAuditUpdate.jsp</result>
+		</action>
+		<!--  审核 -->
+		<action name="updateLabAppAcceptAudit" class="labApparaAcceptAction" method="updateLabAppAcceptAudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listAppAcceptAudit</param>
+			</result>
+		</action>
+		<!-- 验收 审批 列表 -->
+		<action name="listAppAcceptPaudit" class="labApparaAcceptAction" method="listAppAcceptPaudit">
+			<result name="list">/jsp/source/appara/accept/labAppAccpetPauditList.jsp</result>
+		</action>
+		<!-- 验收 审批 -->
+		<action name="preUpdateAppAcceptPaudit" class="labApparaAcceptAction" method="preUpdateAppAcceptPaudit">
+			<result name="preUpdate">/jsp/source/appara/accept/labAppAcceptPauditUpdate.jsp</result>
+		</action>
+		<!-- 审批 -->
+		<action name="updateLabAppAcceptPaudit" class="labApparaAcceptAction" method="updateLabAppAcceptPaudit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listAppAcceptPaudit</param>
+			</result>
+		</action>
+		<!-- 打印 -->
+		<action name="printApparaAccept" class="labApparaAcceptAction" method="printApparaAccept">
+			<result name="print">/jsp/source/appara/accept/labAppAcceptPrint.jsp</result>
+		</action>
+		<!-- 导出仪器审批表 -->
+		<action name="exportLabAppAccept" class="labApparaAcceptAction" method="exportLabAppAccept">
+			<result name="exportExcel" type="stream">
+				<param name="contentType">/application/vnd.ms-excel</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="inputName">excelStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+		</action>
+	</package>
+</struts>

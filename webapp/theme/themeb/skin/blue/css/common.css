@@ -1,0 +1,441 @@
+#Header {height:82px;background:url(../images/hc_header_repeat_bg.gif) repeat-x left top;}
+#Header table.Headertoolsbar {width:100%;}
+#Header .Headertoolsbar .left {width:248px;height:25px;}
+#Header .Headertoolsbar .right {position:relative;white-space:nowrap;width:100%;height:45px;}
+#Header .Headertoolsbar .right .headertool {font-weight:bold;text-align:right;}
+#Header .Headertoolsbar .right .headertool .navLinks {color:#fff;position:absolute;line-height:20px;height:20px;right:20px;top:15px;}
+
+#Header .Headertoolsbar .right .headertool .navLinks  a {float:left;display:block;color:#fff;font-size:12px;height:25px;line-height:25px;font-weight:bold;margin-right:10px;padding-top:0px;}
+#Header .Headertoolsbar .right .headertool .navLinks  a:hover {color:#FFE88B;}
+#Header .Headertoolsbar .right .headertool .navLinks a.navLinks_sc {padding-left:20px;background:url(../images/lims_shezhi_icon.gif) no-repeat left -1px;}
+#Header .Headertoolsbar .right .headertool .navLinks a.navLinks_sr {padding-left:20px;background:url(../images/lims_xitongrizhi_icon.gif) no-repeat left top;}
+#Header .Headertoolsbar .right .headertool .navLinks a.navLinks_help {padding-left:20px;background:url(../images/lims_help_icon.gif) no-repeat left 5px;}
+#Header .Headertoolsbar .right .headertool .navLinks a.navLinks_logout {padding-left:20px;background:url(../images/lims_logout_icon.gif) no-repeat left 5px;}
+
+
+#Header .Headertoolsbar .right .headertool select {position:absolute;right:15px;top:15px;width:178px;border:1px solid #ccc;}
+#Header .Headertabsbar {position:absolute;left:220px;top:38px;*top:48px;border:0;margin:0;padding:0;width:100%;padding-top:17px;height:40px;z-index:50;}
+#Header .Headertabsbar .tabNavigation {width:100%;}
+#Header .Headertabsbar .tabNavigation a {color:#666;font-size:12px;margin-left:10px;margin-right:10px;}
+#Header .Headertabsbar .tabNavigation a:hover {color:#f60;}
+#Header .Headertabsbar .tabNavigation table td {padding-top:2px;}
+#Header .Headertabsbar .tabNavigation #tabBar{}
+
+#Header .Headertabsbar .tabNavigation .current a {color:#fff;}
+#Header .Headertabsbar .tabNavigation .current a:hover {color:#fff;}
+
+#Header .sfbtn {position:absolute;left:4px;top:65px;width:41px;height:11px;border:0;padding:0;margin:0;cursor:pointer;background:url(../images/sfbtn.jpg) no-repeat left top;}
+#Header .headerbg {background:url(../images/hc_headerbg_bg.jpg) no-repeat left top;height:86px;}
+#Header .Headertabsbar .tabNavigation #Tab0 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab0.current {text-align:center;background:url(../images/quanxiantab.gif) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab1 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 3px top;}
+#Header .Headertabsbar .tabNavigation #Tab1.current {text-align:center;background:url(../images/indextab_bg.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab2 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab2.current {text-align:center;background:url(../images/quanxiantab.gif) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab3 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab3.current {text-align:center;background:url(../images/jiankongtab_bg.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab4 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab4.current {text-align:center;background:url(../images/baogaotab.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab5 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab5.current {text-align:center;background:url(../images/tongjitab.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab6 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab6.current {text-align:center;background:url(../images/chaxuntab.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab7 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab7.current {text-align:center;background:url(../images/yonghutab.jpg) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab8 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab8.current {text-align:center;background:url(../images/quanxiantab.gif) no-repeat 9px top;width:80px;height:23px;}
+#Header .Headertabsbar .tabNavigation #Tab9 {text-align:center;width:80px;height:23px;background:url(../images/normaltab_bg3.jpg) no-repeat 5px top;}
+#Header .Headertabsbar .tabNavigation #Tab9.current {text-align:center;background:url(../images/gongzuoliutab.gif) no-repeat 9px top;width:80px;height:23px;}
+
+.headerdata {position:absolute;left:15px;top:60px;color:#fff;}
+.midbarbtn {position:absolute;left:0;top:200px;}
+.midbarbtn .midbarbtnimg {width:5px;height:30px;overflow:hidden;padding:0;margin:0;background:url(../images/hc_midbar_icon_01.gif) no-repeat left top;}
+.midbarbtn .midbarbtnimg1  {width:5px;height:30px;overflow:hidden;padding:0;margin:0;background:url(../images/hc_midbar_icon.gif) no-repeat left top;}
+.st0 {background:#2ea081;}
+.st1 {background:#2EA039;}
+.st2 {background:#2ea081;}
+.st3 {background:#2e89a0;}
+.st4 {background:#5FA02E;}
+.st5 {background:#A0612E;}
+.st6 {background:#2E59A0;}
+.st7 {background:#a02e2e;}
+.st8 {background:#2ea081;}
+.st9 {background:#4ca02e;}
+
+
+ .sidebar {width:155px;padding-left:6px;padding-top:3px;height:100%;}
+ .sidebar .sidebarleft {position:absolute;left:0;top:0;background:#00ABD6;width:3px;height:100%;_zoom:1;}
+ .sidebar .sidebarbottom {position:absolute;left:3px;bottom:0;width:158px;height:8px;overflow:hidden;}
+ .sidebar .sidebarleftimg {background:url(../images/hc_sidebar_l_bg.gif) no-repeat left top;height:100%;_zoom:1;width:3px;}
+ .sidebar .sidebarbottomimg {background:url(../images/hc_sidebar_b_bg.gif) no-repeat left top;width:158px;height:8px;overflow:hidden;}
+ .sidebar .userinfo {}
+ .sidebar .userinfo .userinfotitle {width:152px;height:19px;*height:17px;color:#333;font-size:12px;overflow:hidden;font-weight:bold;padding-left:0;text-align:center;padding-top:5px;*padding-top:7px;background:url(../images/hc_sidebartitle_bg.gif) no-repeat left top;}
+ .sidebar .userinfo .userinfobox {background:#fff;padding-left:10px;padding-top:5px;border:1px solid #357D98;border-top:0;width:140px;_height:70px;min-height:70px;}
+ .sidebar .userinfo .userinfobox p {color:#333;font-size:12px;line-height:20px;}
+ .sidebar .userinfo .userinfobox .userunit {padding-left:20px;background:url(../images/lims_userunit_icon.gif) no-repeat left top;width:120px;}
+ .sidebar .userinfo .userinfobox .userjuse {padding-left:20px;background:url(../images/lims_userinfo_icon.gif) no-repeat left 4px;}
+ .sidebar .userinfo .userinfobox .username {padding-left:20px;background:url(../images/lims_user_icon.gif) no-repeat left top;}
+
+ .sidebar .lastcontrol {margin-top:5px;}
+ .sidebar .lastcontrol .lastcontroltitle {width:152px;height:19px;*height:17px;color:#333;font-size:12px;overflow:hidden;font-weight:bold;padding-left:0;text-align:center;padding-top:5px;*padding-top:7px;background:url(../images/hc_sidebartitle_bg.gif) no-repeat left top;}
+ .sidebar .lastcontrol .lastcontrolbox {background:#fff;padding-left:10px;padding-top:5px;border:1px solid #357D98;border-top:0;width:140px;_height:100px;min-height:100px;}
+ .sidebar .lastcontrol .lastcontrolbox li {height:20px;line-height:20px;padding-left:12px;background:url(../images/hc_point_icon.gif) no-repeat left 8px;}
+ .sidebar .lastcontrol .lastcontrolbox li a {text-decoration:underline;color:#333;}
+ .sidebar .lastcontrol .lastcontrolbox li a:hover {color:#f60;}
+ 
+ .sidebar .eventlist {margin-top:5px;}
+ .sidebar .eventlist .eventlisttitle {width:152px;height:19px;*height:17px;color:#333;font-size:12px;overflow:hidden;font-weight:bold;padding-left:0;text-align:center;padding-top:5px;*padding-top:7px;background:url(../images/hc_sidebartitle_bg.gif) no-repeat left top;}
+ .sidebar .eventlist .eventlistbox {background:#fff;padding-left:10px;padding-top:5px;border:1px solid #357D98;border-top:0;width:140px;_height:80px;min-height:80px;}
+ .sidebar .eventlist .eventlistbox li {width:110px;height:20px;line-height:20px;padding-left:20px;background:url(../images/lims_boardcast_icon.gif) no-repeat left 3px;}
+ .sidebar .eventlist .eventlistbox li a {color:#333;}
+ .sidebar .eventlist .eventlistbox li a:hover {color:#f60;}
+
+ .sidebar .workplan {margin-top:5px;}
+ .sidebar .workplan .workplantitle {width:152px;height:19px;*height:17px;color:#333;font-size:12px;overflow:hidden;font-weight:bold;padding-left:0;text-align:center;padding-top:5px;*padding-top:7px;background:url(../images/hc_sidebartitle_bg.gif) no-repeat left top;}
+ .sidebar .workplan .workplanbox {background:#fff;padding-left:10px;padding-top:5px;border:1px solid #357D98;border-top:0;width:140px;_height:80px;min-height:80px;}
+ .sidebar .workplan .workplanbox li {height:20px;line-height:20px;color:#430101;padding-left:12px;background:url(../images/hc_point_icon.gif) no-repeat left 8px;}
+ .sidebar .workplan .workplanbox li a {color:#333;}
+ .sidebar .workplan .workplanbox li a:hover {color:#f60;}
+
+
+ .bodytable {*height:auto;min-height:528px;} 
+ .bodytable td {vertical-align:top;}
+ .bodytable .oRight {padding-left:5px;padding-top:0px;}
+ .bodytable .oRight .workingBody { height:100%;width:99.9%;padding:0;margin:0;}
+ .myworkingbox {width:99%;background:#fff;padding-bottom:10px;margin-bottom:8px;position:relative;border:1px solid #999;margin-left:3px;margin-top:3px;}
+ .myworkingbox .myworkingboxttitle {position:relative;height:27px;background:url(../images/hc_workboxtitle_bg.gif) repeat-x left top;margin-bottom:10px;}
+ .myworkingbox .myworkingboxttitle h2 {position:absolute;left:10px;top:7px;color:#333;font-weight:bold;font-size:12px;width:95%;}
+
+.buttonbar {padding:10px;height:21px;}
+.buttonbar label {float:left;font-size:12px;}
+.buttonbar .showrnum {float:left;font-size:12px;}
+.buttonbar .showrnum select {float:left;font-size:12px;display:inline}
+.buttonbar .button01 {height:21px;line-height:21px;float:left;margin-right:10px;}
+.buttonbar .button01 .buttonm {float:left;height:21px;line-height:21px;background:url(../images/btn01_m.jpg) repeat-x left top;font-size:12px;color:#000;overflow:hidden;margin:0;padding:0}
+.buttonbar .button01 .buttonl {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn01_l.jpg) no-repeat left top;}
+.buttonbar .button01 .buttonr {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn01_r.jpg) no-repeat left top;}
+
+.buttonbar1 {padding:10px;_height:21px;min-height:21px;border-bottom:1px solid #96101D;margin-left:10px;width:96.7%;background:#efefef;}
+.buttonbar1 label {float:left;font-size:12px;}
+.buttonbar1 .showrnum {float:left;font-size:12px;}
+.buttonbar1 .showrnum select {float:left;font-size:12px;display:inline}
+.buttonbar1 .button01 {height:21px;line-height:21px;float:left;margin-right:10px;}
+.buttonbar1 .button01 .buttonm {float:left;height:21px;line-height:21px;background:url(../images/btn02_m.jpg) repeat-x left top;font-size:12px;color:#000;overflow:hidden;margin:0;padding:0}
+.buttonbar1 .button01 .buttonl {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn02_l.jpg) no-repeat left top;}
+.buttonbar1 .button01 .buttonr {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn02_r.jpg) no-repeat left top;}
+.buttonbar1 a {color:#000;}
+.buttonbar1 a:hover {color:#f60;}
+.buttonbar1 select {float:left;margin:0 10px;font-size:12px;}
+.buttonbar1 .labiconnav {display:block}
+.buttonbar1 .labiconnavdis {display:none;}
+.buttonbar1 .labiconnav ul {overflow:hidden;padding-top:10px;}
+.buttonbar1 .labiconnav ul li {height:60px;line-height:60px;padding-left:50px;display:block;float:left;margin-right:20px;}
+.buttonbar1 .labiconnav ul li a {color:#00287A;font-size:12px;}
+.buttonbar1 .labiconnav ul li a:hover {color:#f60;}
+.buttonbar1 .labiconnav ul li.lin01 {background:url(../images/labnav_icon01.gif) no-repeat left top;}
+.buttonbar1 .labiconnav ul li.lin02 {background:url(../images/labnav_icon02.gif) no-repeat left top;}
+.buttonbar1 .labiconnav ul li.lin03 {background:url(../images/labnav_icon03.gif) no-repeat left top;}
+.buttonbar1 .labiconnav ul li.lin04 {background:url(../images/labnav_icon04.gif) no-repeat left top;padding-left:70px;}
+.buttonbar1 .labiconnav ul li.lin05 {background:url(../images/labnav_icon05.gif) no-repeat left top;}
+.buttonbar1 .labiconnav ul li.lin06 {background:url(../images/labnav_icon06.gif) no-repeat left top;}
+
+
+.buttonbar2 {padding:10px 20px;_padding-bottom:0;height:21px;width:90%}
+.buttonbar2 label {float:left;font-size:12px;color:#333;line-height:21px;}
+.buttonbar2 span {float:right;font-size:12px;color:#333;line-height:21px;}
+.buttonbar2 .showrnum {float:left;font-size:12px;}
+.buttonbar2 .showrnum select {float:left;font-size:12px;display:inline}
+.buttonbar2 .button01 {height:21px;line-height:21px;float:left;margin-right:10px;}
+.buttonbar2 .button01 .buttonm {float:left;height:21px;line-height:21px;background:url(../images/btn01_m.jpg) repeat-x left top;font-size:12px;color:#000;overflow:hidden;margin:0;padding:0}
+.buttonbar2 .button01 .buttonl {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn01_l.jpg) no-repeat left top;}
+.buttonbar2 .button01 .buttonr {float:left;height:21px;width:10px;overflow:hidden;background:url(../images/btn01_r.jpg) no-repeat left top;}
+.buttonbar2 a {color:#000;}
+.buttonbar2 a:hover {color:#861500;}
+.buttonbar2 select {float:right;margin:0 10px;}
+
+._myworkingboxttable {width:98%;border:1px solid #CFCFCF;margin:0 10px;border-collapse: collapse;}
+
+
+.myworkingboxttable_ {width:98%;border:1px solid #CFCFCF;margin:0 10px;border-collapse: collapse;}
+.myworkingboxttable_ th {background:url(../images/hc_indexworktable_bg.gif) repeat-x left top;height:24px;font-weight:normal;font-size:12px;}
+.myworkingboxttable_ td {border:1px solid #ccc;height:24px;font-size:12px;padding:0 5px;vertical-align:middle;} 
+.myworkingboxttable_ table {border-collapse: collapse;}
+.myworkingboxttable_ .T9_black {padding:0;}
+.myworkingboxttable_ .T9_black td {border:0;}
+.myworkingboxttable_ .T9_black .T9_blackB {background:#efefef;color:#333;font-weight:bold;border-bottom:1px solid #2EA039;padding:5px; }
+.myworkingboxttable_ .T9_black .shitutable1 {padding:5px;}
+.myworkingboxttable_ .T9_black .shitutable2 {padding:0 5px 5px;}
+.myworkingboxttable_ .T9_black .shitutable1 li {background:url(../images/toolbar_icon.gif) no-repeat left 4px;padding-left:15px;*padding-left:0;}
+.myworkingboxttable_ .td_cb {text-align:center;width:50px;}
+#Faux .bodytable .myworkingboxttable_ td {vertical-align:middle;padding:0 5px;}
+
+
+
+._myworkingboxttable1 {width:98%;border:1px solid #CFCFCF;margin:0 10px;border-collapse: collapse;}
+
+
+.myworkingboxttable {width:98%;border:1px solid #CFCFCF;margin:0 10px;border-collapse: collapse;}
+.myworkingboxttable th {background:url(../images/hc_indexworktable_bg.gif) repeat-x left top;height:24px;font-weight:normal;font-size:12px;}
+.myworkingboxttable td {border:1px solid #ccc;height:24px;font-size:12px;padding:0 5px;vertical-align:middle;} 
+.myworkingboxttable table {border-collapse: collapse;}
+
+.tttb {width:98%;border:1px solid #CFCFCF;margin:10px;border-collapse: collapse;}
+.tttb th {background:url(../images/hc_indexworktable_bg.gif) repeat-x left top;height:24px;font-weight:normal;font-size:12px;}
+.tttb td {border:1px solid #ccc;height:24px;font-size:12px;padding:0 5px;vertical-align:middle;} 
+.tttb table {border-collapse: collapse;}
+
+.tabtbGrid {width:100%;background:#CFCFCF;border:#fff;border-right:#CFCFCF;}
+.tabtbGrid .tgh td {border:#fff;padding:0 2px;background:url(../images/hc_tabt_bg.gif) repeat-x left top;overflow:hidden;height:20px;*height:23px;line-height:20px;*line-height:23px;font-weight:normal;font-size:12px;}
+.tabtbGrid td {vertical-align:middle;border:#fff;color:#333;background:#fff;height:23px;*height:23px;line-height:23px;*line-height:23px;font-weight:normal;font-size:12px;padding:0 2px;}
+.tGbox {overflow:auto;overflow-x:hidden;margin:0;padding:0;margin-bottom:10px;}
+.tabtbGrid .unedit {background:#efefef;}
+.tabtbGrid td input {border:0;background:#fff;height:21px;*height:19px;line-height:21px;*line-height:19px;font-size:12px;padding-top:3px;*padding-top:0px;width:100%}
+
+.tabtbGrid td input.input_unedit {background:#F5F5F5;color:#818181;border:1px solid #F5F5F5;}
+.tabtbGrid td input.input_edit {background:#fff;color:#333;border:1px solid #8B8B8B;}
+
+.myworkingboxttable .T9_black {padding:0;}
+.myworkingboxttable .T9_black td {border:0;}
+.myworkingboxttable .T9_black .T9_blackB {background:#efefef;color:#333;font-weight:bold;border-bottom:1px solid #2EA039;padding:5px; }
+.myworkingboxttable .T9_black .shitutable1 {padding:5px;}
+.myworkingboxttable .T9_black .shitutable2 {padding:0 5px 5px;}
+.myworkingboxttable .T9_black .shitutable1 li {background:url(../images/toolbar_icon.gif) no-repeat left 4px;padding-left:15px;*padding-left:0;}
+.mywilldobox {width:98%;border:1px solid #A0A0A0;background:#fff;padding-bottom:10px;margin:10px;}
+.mywilldoboxtitle {position:relative;height:27px;background:url(../images/hc_workboxtitle_bg.gif) repeat-x left top;}
+.mywilldoboxtitle h2 {vertical-align:middle;height:27px;line-height:27px;position:absolute;left:10px;top:-2px;*top:2px;color:#333;font-weight:bold;font-size:12px;width:95%;}
+.mywilldoboxtitle h2 span {vertical-align:middle;padding-left:20px;color:#333;font-weight:normal;}
+.mywilldoboxtitle h2 span select {vertical-align:middle;height:20px;line-height:20px;}
+.mywilldoboxtitle .willdoBTN {vertical-align:middle;position:absolute;left:290px;top:2px;padding:0;margin:0;font-size:12px;overflow:hidden;cursor:pointer;width:68px;height:22px;}
+.mywilldobox .tttb td {padding:0;text-align:center;}
+.mywilldoboxtable {width:98%;}
+.mywilldolist {margin-left:10px;padding:10px 10px 10px 0;font-size:12px;}
+.datainfobar {background:url(../images/datainfobar.jpg) no-repeat left top;width:275px;height:21px;padding-left:30px;padding-top:5px;}
+.datainfolist {padding-left:10px;margin-top:10px;}
+.datainfolist td {height:23px;}
+.datainfolist a {text-decoration:underline;font-size:12px;}
+.datainfolist .datainfolist_timelist {font-size:12px;width:150px;padding:0;color:#671A1A;}
+.datatable {padding:10px;}
+
+
+/*.st_1 {border: 6px solid #2EA039;border-top: 0;border-bottom: 8px solid #2EA039;width: 99%;_height: 500px;min-height: 500px;}*/
+
+.sh {height:8px;width:100%;position:absolute;top:77px;left:0px;border-top:1px solid #fff;display:none;}
+.navline {height:8px;width:100%;position:absolute;top:77px;left:190px;border-top:1px solid #fff;}
+
+#Footer {clear:both;text-align:center;padding-top:10px;}
+#Footer .footernav {color:#666}
+#Footer .footernav a {color:#666}
+#Footer .footernav a:hover {color:#333}
+#Footer .copyrightinfo {color:#666;}
+
+/* worktable public style */
+.myworkingbox .myworkingboxttitle h2 span {font-weight:normal;color:#680404;}
+.buttonbar a {color:#000;}
+.buttonbar a:hover {color:#861500;}
+.buttonbar select {float:left;margin:0 10px;}
+
+.myworkingboxttable .td_cb {text-align:center;width:50px;}
+#Faux .bodytable .myworkingboxttable td {vertical-align:middle;padding:0 5px;}
+
+.c {text-align:center;}
+.w30 {width:30px;}
+.w50 {width:50px;}
+.w80 {width:80px;}
+.w100 {width:100px;}
+.w150 {width:150px;}
+.w200 {width:200px;}
+.w250 {width:250px;}
+.w300 {width:300px;}
+.w350 {width:350px;}
+.w400 {width:400px;}
+.w450 {width:450px;}
+.w500 {width:500px;}
+.w550 {width:550px;}
+
+.TabTable {position:relative;padding-top:30px;}
+.TabTable .TabTableNAV {position:absolute;top:1px;left:20px;height:30px;display:block;}
+.TabTable .TabTableNAV ul {}
+.TabTable .TabTableNAV ul li {display:block;float:left;margin-right:10px;height:30px;}
+.TabTable .TabTableNAV ul li a {float:left;color:#000;padding-top:0px;height:30px;display:block;padding-left:7px;background:url(../images/tabnav_l_bg.jpg) no-repeat left 4px;}
+.TabTable .TabTableNAV ul li a:hover {color:#f60;}
+.TabTable .TabTableNAV ul li a span {font-size:12px;float:left;cursor:pointer;padding-right:7px;padding-top:10px;height:20px;background:url(../images/tabnav_r_bg.jpg) no-repeat right 4px;}
+.TabTable .TabTableNAV ul li.currenttab {}
+.TabTable .TabTableNAV ul li.currenttab a {color:#000;background:url(../images/tabnavcurrent_l_bg.jpg) no-repeat left top;}
+.TabTable .TabTableNAV ul li.currenttab a:hover {color:#000;}
+.TabTable .TabTableNAV ul li.currenttab a span {background:url(../images/tabnavcurrent_r_bg.jpg) no-repeat right top;}
+
+.TabTable .TabTableBOX01 {display:none;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+.TabTable .TabTableBOX01.b {display:block;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+
+.TabTable .TabTableBOX02 {display:none;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+.TabTable .TabTableBOX02.b {display:block;_height:350px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+
+.TabTable .TabTableBOX03 {display:none;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+.TabTable .TabTableBOX03.b {display:block;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+
+.TabTable .TabTableBOX04 {display:none;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+.TabTable .TabTableBOX04.b {display:block;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+
+.TabTable .TabTableBOX05 {display:none;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+.TabTable .TabTableBOX05.b {display:block;_height:220px;min-height:220px;width:96.5%;background:#ECFCFF;border:1px solid #499EB3;margin-left:10px;margin-bottom:10px;;padding:10px 10px 0 10px}
+
+.tabtablebox {padding:0 10px;_padding-bottom:10px;background:#fff;_heiht:10px;min-height:10px;border:1px solid #C1C1C1;margin-bottom:10px;}
+.tabtableboxtitle {line-height:30px;border-bottom:1px solid #999;margin:0;}
+.tabtableboxtitle span {background:url(../images/lims_point_icon.gif) no-repeat 3px 4px;padding-left:15px;color:#00287A;font-size:12px;font-weight:bold;}
+.tabtbt {border-bottom:1px solid #E0E0E0;margin:0;text-align:center;padding-top:15px;padding-bottom:2px;}
+.tabtbtt {width:100%;border:0;}
+.tabtbtt .formname {text-align:center;color:#333;font-size:16px;font-weight:bold}
+.tabtbtt .formnumber {text-align:right;}
+.tabtbtt .formnumber input {border:1px solid #999;border-top:0;border-left:0;border-right:0;vertical-align:middle;height:18px;line-height:18px;padding-left:2px;}
+.tabtableboxtable {width:100%;margin:0;font-size:12px;}
+.tabtableboxtable td {padding:2px;}
+.tabtableboxtable input {border:1px solid #999;border-top:0;border-left:0;border-right:0;vertical-align:middle;height:18px;line-height:18px;padding-left:2px;}
+.tabtableboxtable textarea {font-size:12px;padding:2px;}
+.bodytable .tabtableboxtable td {vertical-align:middle;padding:5px;}
+.bodytable .td_textarealabel {vertical-align:top;}
+
+.myworkingboxtoolbar {font-size:12px;margin-bottom:10px;}
+.myworkingboxtoolbar select {font-size:12px;height:18px;line-height:18px;}
+
+#viewnamecheck {display:inline;color:#f60;padding-left:5px;font-weight:normal;}
+
+.popwin1 {background:#F9F9F9;border:1px solid #2EA039;color:#333;font-size:12px;padding:5px;display:none;}
+.popwin1 .popwintitle {font-weight:bold;margin-right:10px;}
+.popwin1 .popwintbtn {width:44px;height:20px;cursor:pointer;background:url(../images/lims_popwinbtn.png) no-repeat left top;padding:0;margin:0;border:0;}
+.popwin1 table td {vertical-align:middle;font-size:12px;padding:1px;height:18px;line-height:18px}
+.popwin1 table td input {height:20px;line-height:20px;}
+.active {display:block;}
+
+.pagecontrol {text-align:center;font-size:12px;height:20px;line-height:20px;display:block;color:#333;}
+.pagecontrol span {}
+.pagecontrol a {margin-right:2px;*margin-right:0px;height:20px;line-height:20px;border:1px solid #9AAFE5;border-right:1px solid #294DB2;border-bottom:1px solid #294DB2;color:#0E509E;padding:1px 4px;*padding:3px 4px 0;}
+.pagecontrol a:hover {border:1px solid #0E509E;border-right:1px solid #294DB2;border-bottom:1px solid #294DB2;background:#0E509E;color:#fff;padding:1px 4px;*padding:3px 4px 0;}
+
+.AUTOSearcn {position:relative;}
+.AUTOSearcn #word {position:absolute;left:0;top:0;}
+.AUTOSearcn #auto  {position:absolute;left:0;top:20px;border:1px solid #333;}
+
+.rt_tt {height:30px;_height:28px;line-height:32px;line-height:28px;color:#00287A;padding-top:10px;padding-left:20px;background:url(../images/lims_table_icon.gif) no-repeat left 15px;_background:url(../images/lims_table_icon.gif) no-repeat left 13px;}
+.recordtable {width:99%;margin:10px 0;font-size:12px;*border-right:1px solid #333;}
+.recordtable td {border:1px solid #333;padding:0 1px;text-align:center;background:#fff;line-height:22px;}
+.recordtable .rt_h {background:#f5f5f5;color:#333;}
+.recordtable td input {width:90%;background-color:transparent;border:0;padding:2px;padding-bottom:0;text-align:center;margin:0 1px;}
+.recordtable .rt_h input {width:90%;background-color:transparent;font-size:12px;text-align:center;padding-top:2px;margin:0 1px;}
+.addmodelBTN {background:url(../images/lims_popwinbtn.png) no-repeat left top;border:0;padding:0;margin:0;cursor:pointer;width:44px;height:20px;}
+
+.disab {background:#EBEBE4;border:#C4C4C4 1px solid;}
+.tabtableboxtable input.disab {background:#EBEBE4;border:#C4C4C4 1px solid;}
+.tabtableboxtable textarea.disab {background:#EBEBE4;border:#C4C4C4 1px solid;}
+
+.systemerror {margin:20px;color:#333;background:url(../images/lims_systemerror_icon.gif) #ECFCFF no-repeat 20px 20px;;border:1px solid #499EB3;padding:20px 20px 20px 65px;}
+.systemerror h2 {font-size:13px;color:#333;line-height:30px;font-weight:normal;}
+.systemerror a {line-height:25px;}
+.systemerror a:hover {text-decoration:underline;}
+
+#cmViewSelectDiv {}
+#cmViewSelectDiv select {height:20px;line-height:20px;}
+#cmViewSelectDiv input {height:20px;*height:17px;line-height:20px;*line-height:17px;}
+#cmViewSelectDiv img {vertical-align:middle;}
+
+.bottomframebody {background:url(../images/hc_footer_m.gif) repeat-x left top;}
+.footer {clear:both;text-align:center;position:relative;width:100%;}
+.footer .footerlimg {position:absolute;left:0;top:0;width:85px;height:19px;overflow:hidden;padding:0;margin:0;background:url(../images/hc_footer_l.gif) no-repeat left top;}
+.footer .footerrimg {position:absolute;right:0;top:0;width:100px;height:19px;overflow:hidden;padding:0;margin:0;background:url(../images/hc_footer_r.gif) no-repeat left top;}
+.footer h3 {color:#fff;font-size:12px;font-weight:normal;line-height:19px;}
+
+.leftframebody {background:#F8FCFF;_height:100%;}
+.middleframebody {background:url(../images/hc_midbar_bg.gif) #00ABD6 no-repeat left top;}
+
+
+/*chooseuser style*/
+.chooseuserbox {background:#efefef;_padding-right:5px;}
+.chooseusertree {background:url(../images/hc_chooseusertree_bg.gif) #efefef repeat-y left top ;padding:5px;}
+.chooseuservalue {background:url(../images/hc_chooseusertree_bg.gif) #efefef repeat-y left top ;padding-bottom:10px;}
+
+/*top menu style*/
+.topmenuleft {background:url(../images/hc_topnav_bg_l.gif) no-repeat right top;height:38px;width:232px;}
+.topmenumiddle {background:url(../images/hc_topnav_bg_m.gif) repeat-x left top;height:38px;width:auto;}
+.topmenuright {background:url(../images/hc_topnav_bg_r.gif) no-repeat left top;height:38px;width:106px;}
+
+
+	#fm_MainContainer
+	{
+		width:100%;
+		height:21px;
+		padding-top:3px;
+		font-size:12px;
+		
+	}
+	#fm_MainContainer a
+	{
+		width:80px;
+		height:21px;
+		display:block;
+		float:left;
+		text-align:center;
+		line-height:21px;
+		padding:0px;
+		background:url(../images/topnavmianbg.gif) no-repeat;
+		border:0;
+		text-decoration:none;
+		color:#fff;
+		font-size:13px;
+		font-weight:bold;
+    margin:0 2px;
+    border:0;
+	}
+	#fm_MainContainer a:hover
+	{
+
+    text-decoration:none;
+		color:#FFEDA2;
+		background:url(../images/topnavmianbg.gif) no-repeat;
+	  font-weight:bold;
+  }
+	#fm_Container
+	{
+		background:none;
+		height:21px;		
+		cursor:hand;
+		width:125px;
+		padding-top:0px;
+    margin-left:0px;
+		margin-top:0px;
+		margin-bottom:0px;
+    border:0;		
+	}
+	#fm_Container a
+	{
+	  display:block;
+	  background:url(topnavbg_c_b.gif) no-repeat;
+    padding:5px 0 4px 16px;
+    font-size:12px;
+		text-decoration:none;
+		color:#fff;
+		font-weight:normal;		
+	}
+	#fm_Container a:hover
+	{
+	  background:url(topnavbghover_c_b.gif) no-repeat;
+		text-decoration:none;
+		color:#FFEDA2;
+	  font-weight:bold;		
+  }
+
+
+
+
+
+/* select can be inputable style add by Elvis 20101230  */
+.tabtableboxtable .SI_spanS {position:absolute;border:0;border-bottom:1px solid #7F9DB9;overflow:hidden;width:153px;height:18px;*height:21px;clip:rect(-1px 190px 190px 134px);}
+.tabtableboxtable .SI_select {width:153px;height:19px;} 
+.tabtableboxtable .SI_spanI {position:absolute;border:1px solid #7F9DB9;border-right:0;;width:134px;height:17px;*height:20px;line-height:17px;*line-height:20px;}
+.tabtableboxtable .SI_input {border:0;width:134px;height:17px;line-height:17px;background:#fff;}
+
+
+
+
+
+
+
+

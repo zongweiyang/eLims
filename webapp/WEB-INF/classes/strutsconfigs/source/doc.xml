@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false" />
+	<constant name="struts.devMode" value="false" />
+	<!-- 文档管理 -->
+
+	<package name="doc.labDoc" namespace="/doc/labDoc"
+		extends="globalpackage">
+		<action name="listLabDoc" method="listLabDoc"
+			class="labDocAction">
+			<result name="list1">/jsp/source/doc/labDocList.jsp</result>
+			<result name="list">
+				/jsp/source/doc/labDocDetailList.jsp
+			</result>
+		</action>
+		<action name="showLabDocFolder4Select" method="showLabDocFolder4Select"
+			class="labDocAction">
+			<result name="preAdd">
+				/jsp/source/doc/labDocFolderShow4Select.jsp
+			</result>
+		</action>
+		<action name="addLabDocFolder" method="addLabDocFolder"
+			class="labDocAction">
+			<result name="add" type="redirectAction">
+					showLabDocFolder4Select?labDocVo.id=${labDocVo.id}&amp;labDocVo.docId=${labDocVo.docId}
+			</result>
+		</action>
+		<action name="showLabDocFolder4Update" method="showLabDocFolder4Update"
+			class="labDocAction">
+			<result name="preUpdate">
+				/jsp/source/doc/labDocFolderShow4Update.jsp
+			</result>
+		</action>
+			<action name="updateLabDocFolder" method="updateLabDocFolder"
+			class="labDocAction">
+			<result name="add" type="redirectAction">
+					showLabDocFolder4Select?labDocVo.id=${labDocVo.id}&amp;labDocVo.docId=${labDocVo.docId}
+			</result>
+		</action>
+			<action name="deleteLabDocFolder" method="deleteLabDocFolder"
+			class="labDocAction">
+			<result name="delete" type="redirectAction">
+					listLabDoc?labDocVo.id=${labDocVo.id}&amp;labDocVo.docId=${labDocVo.docId}
+			</result>
+		</action>
+		<action name="preAddLabDocFile" method="preAddLabDocFile"
+			class="labDocAction">
+			<result name="preAdd">
+				/jsp/source/doc/labDocFileAdd.jsp
+			</result>
+		</action>
+		<action name="addLabDocFile" method="addLabDocFile"
+			class="labDocAction">
+			<result name="add" type="redirectAction">
+				listLabDoc?labDocVo.id=${labDocVo.id}
+			</result>
+		</action>
+		<action name="deleteLabDocFile" method="deleteLabDocFile"
+			class="labDocAction">
+			<result name="delete" type="redirectAction">
+				listLabDoc?labDocVo.id=${labDocVo.id}
+			</result>
+		</action>
+		<action name="preUpdateLabDocFile" method="preUpdateLabDocFile"
+			class="labDocAction">
+			<result name="preUpdate">
+				/jsp/source/doc/labDocFileUpdate.jsp
+			</result>
+		</action>
+		<action name="updateLabDocFile" method="updateLabDocFile"
+			class="labDocAction">
+			<result name="update" type="redirectAction">
+				listLabDoc?labDocVo.id=${labDocVo.id}
+			</result>
+		</action>
+		<action name="showLabDocFile4Select" method="showLabDocFile4Select" class="labDocAction">
+			<result name="show">
+				/jsp/source/doc/labDocFileShow4Select.jsp
+			</result>
+		</action>
+		<action name="showLabDoc4Select" method="showLabDoc4Select"
+			class="labDocAction">
+			<result name="list">
+				/jsp/source/doc/labDocShow4Select.jsp
+			</result>
+		</action>
+		<action name="addLabDocApply" method="addLabDocApply"
+			class="labDocApplyAction">
+			<result name="add" type="redirectAction">
+				showLabDoc4Select?labDocVo.pid=${labDocVo.pid}
+			</result>
+		</action>
+		<action name="updateLabDocApply4cancel" method="updateLabDocApply4cancel"
+			class="labDocApplyAction">
+			<result name="cancel" type="redirectAction">
+				<param name="actionName">listLabDoc</param>
+			</result>
+		</action>
+		<action name="updateLabDocApply" method="updateLabDocApply"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabDoc</param>
+			</result>
+		</action>
+		<action name="updateLabDocApplyByLabDocId"
+			method="updateLabDocApplyByLabDocId"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+				showLabDoc4Select?labDocVo.pid=${labDocVo.pid}
+			</result>
+		</action>
+		<action name="addLabDocApplyBatch" method="addLabDocApplyBatch"
+			class="labDocApplyAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">showLabDoc4Select</param>
+			</result>
+		</action>
+		<action name="updateLabDocApplyBatch"
+			method="updateLabDocApplyBatch"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+				showLabDoc4Select?labDocVo.ids=${labDocVo.ids}
+			</result>
+		</action>
+		<action name="ajaxCheckApply" method="ajaxCheckApply"
+			class="labDocApplyAction">
+		</action>
+		<action name="ajaxCheckCancel" method="ajaxCheckCancel"
+			class="labDocApplyAction">
+		</action>
+		<action name="showLabDocApply4Select" method="showLabDocApply4Select"
+			class="labDocApplyAction">
+			<result name="list">
+				/jsp/source/doc/labDocApplyShow4Select.jsp
+			</result>
+		</action>
+		<action name="updateLabDocApplyById"
+			method="updateLabDocApplyById"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+					showLabDocApply4Select?labDocApplyVo.id=${labDocApplyVo.id}&amp;labDocApplyVo.flag=${labDocApplyVo.flag}
+			</result>
+		</action>
+		<action name="updateLabDocApplyfByFlag"
+			method="updateLabDocApplyfByFlag"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+				listLabDoc?labDocApplyVo.id=${labDocApplyVo.id}&amp;labDocApplyVo.flag=${labDocApplyVo.flag}
+			</result>
+		</action>
+		<action name="updateLabDocOtherApplyBatch"
+			method="updateLabDocOtherApplyBatch"
+			class="labDocApplyAction">
+			<result name="update" type="redirectAction">
+				showLabDocApply4Select?labDocApplyVo.id=${labDocApplyVo.id}&amp;labDocApplyVo.flag=${labDocApplyVo.flag}
+			</result>
+		</action>
+		<action name="ajaxCheckRefuse" method="ajaxCheckRefuse"
+			class="labDocApplyAction">
+		</action>
+		<action name="ajaxCheckPass" method="ajaxCheckPass"
+			class="labDocApplyAction">
+		</action>
+		<action name="deleteUploadFile" method="deleteUploadFile"
+			class="labDocAction">
+		</action>
+		<action name="ajaxCheckLabDocApply"
+			method="ajaxCheckLabDocApply"
+			class="labDocAction">
+		</action>
+		<action name="listLabDocSolr" method="listLabDocSolr" class="labDocAction">
+        		<result name="list">/jsp/source/doc/solr/labDocSolrAllList.jsp</result>
+        </action>
+        <action name="listLabDocSolr2db" method="listLabDocSolr2db" class="labDocAction">
+        		<result name="list">/jsp/source/doc/solr/labDocSolrList.jsp</result>
+        </action>
+	</package>
+
+</struts>

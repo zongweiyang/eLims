@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+<dwr>
+	<allow>
+		
+		<!-- 系统管理 -->
+		<!--  
+		<create creator="spring" javascript="BussinessCheckeService">   
+            <param name="beanName" value="bussinessCheckeService"></param>
+        </create>-->
+		
+		<create creator="spring" javascript="SysFunctionService">   
+            <param name="beanName" value="sysFunctionService"></param>
+        </create>
+        <create creator="spring" javascript="SysStationService">   
+            <param name="beanName" value="sysStationService"></param>
+        </create>
+		
+	
+        <create creator="spring" javascript="SysRoleService">   
+            <param name="beanName" value="sysRoleService"></param>
+        </create>
+        <create creator="spring" javascript="SysUserService">   
+            <param name="beanName" value="sysUserService"></param>
+        </create>
+        
+        <create creator="spring" javascript="SysOrgService">   
+            <param name="beanName" value="sysOrgService"></param>
+        </create>
+       
+            <create creator="spring" javascript="SysOrglevelService">   
+            <param name="beanName" value="sysOrglevelService"></param>
+        </create>
+            <create creator="spring" javascript="SysDutyService">   
+            <param name="beanName" value="sysDutyService"></param>
+        </create>
+        
+        <convert match="cn.labsoft.labos.base.admin.vo.SysRoleVo"
+			converter="bean">
+			<param name="include"
+				value="rolename,remark" />
+		</convert>
+		<convert match="cn.labsoft.labos.base.admin.vo.SysFunctionVo"
+			converter="bean">
+			<param name="include"
+				value="id,funname,funurl,wfcode" />
+		</convert>
+		
+		<create creator="spring" javascript="LabCodeService">
+			<param name="beanName" value="labCodeService"></param>
+		</create>
+		<create creator="spring" javascript="LabTypeService">
+			<param name="beanName" value="labTypeService"></param>
+		</create>
+		
+		
+        <!--消息管理模块 --> 
+        
+      	<!--portlet -->   
+      	 <create creator="spring" javascript="PortletService">   
+            <param name="beanName" value="portletService"></param>
+        </create> 
+        <!--portlet --> 
+		<convert match="cn.labsoft.labos.base.cm.vo.ColumnVo"
+			converter="bean">
+			<param name="include"
+				value="colId,webCp,webCpurl,webCpargsname,webCpargsvalue,commonCode,keyType,tempOpt" />
+		</convert>
+	</allow>
+</dwr>

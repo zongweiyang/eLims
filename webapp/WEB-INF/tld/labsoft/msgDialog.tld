@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN" "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>1.2</jsp-version>
+    <short-name>msgdialog</short-name>
+    <uri>/msgdialog</uri>
+    <description>A blank tag library template. 
+    </description>
+    <!-- 带遮罩的网页对话框标签 -->
+ <tag>
+    <description>带遮罩的网页对话框标签</description>
+    <name>msgdialog</name>
+    <tag-class>cn.labsoft.labos.utils.MsgDialogTag</tag-class>
+    <!-- 标签体可以是静态HTML元素，表达式语言，但不允许出现JSP脚本 -->
+    <body-content>scriptless</body-content>
+    <attribute>
+        <description>对话框标题文字,默认为"温馨提示"</description>
+        <name>title</name>
+        <required>false</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+        <description>遮罩的高度,默认为屏幕的高度,即100%</description>
+        <name>height</name>
+        <required>false</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+        <description>对话框的顶部距离,默认为100px</description>
+        <name>top</name>
+        <required>false</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute> 
+    <attribute>
+        <description>对话框的宽度,默认为500px</description>
+        <name>boxwidth</name>
+        <required>false</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>             
+    <attribute>
+        <description>基本URL</description>
+        <name>basepath</name>
+        <required>true</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+        <description>临时ID后缀,避免ID冲突,默认为系统时间的毫秒数</description>
+        <name>tmpid</name>
+        <required>false</required>
+        <!-- 可以使用JSP表达式 -->
+        <rtexprvalue>true</rtexprvalue>
+    </attribute>         
+  </tag>
+</taglib>   

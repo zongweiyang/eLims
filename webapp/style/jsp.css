@@ -1,0 +1,63 @@
+/* global */
+*{padding:0;margin:0;}
+body{font-size:12px;font-family:arial,verdana,"simsum";padding:0;margin:0;}
+a{text-decoration:none;color:#0088DD;}
+a:hover{color:#ff6600;}
+li{list-style:none;}
+img{border:none;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;padding:0;margin:0;}
+p,ul,ol,dl,dt,dd,li,forms,input,fieldset{padding:0;margin:0;}
+.clear{clear:both;}
+
+/* jsp style by Elvis 201308*/
+.tabtltle{height:36px;width:100%;margin:0;margin-bottom:5px;padding:0;background:url(../img/tabul_bg.png) repeat-x left top;vertical-align:top;}
+.tabtltle li{height:31px;list-style:none;float:left;margin-right:1px;}
+.tabtltle li a{color:#fff;display:block;width:80px;height:31px;line-height:31px;text-align:center;background:#4B9CD7;font-size:12px;font-weight:bold;cursor:pointer;}
+.tabtltle li a:hover{color:#fff;background:#62a8db;}
+.tabtltle li.current a{color:#157FCC;background:#ADD2ED;cursor:pointer;}
+.tabtltle li.current a:hover{color:#157FCC;background:#ADD2ED;}
+body,form,input{padding:0;margin:0;}
+#basis{width:100%;border-collapse:collapse;text-align:left;margin-bottom:10px;margin-top:10px;margin-left:5px;}
+#basis td{height:24px;line-height:24px;color:#333;font-size:13px;text-align:left;}
+#basis input{height:24px;line-height:24px;border:1px solid #ccc;padding-left:5px;width:200px;font-size:12px;}
+#basis input.cxinput{width:44px;height:24px;border:0;overflow:hidden;background:url(../img/chaxuninput_bg.png) no-repeat left top;cursor:pointer;}
+#senior{width:100%;border-collapse:collapse;text-align:left;margin-bottom:10px;margin-top:10px;margin-left:5px;}
+#senior td{height:24px;line-height:24px;color:#333;font-size:13px;text-align:left;}
+#senior input{height:24px;line-height:24px;border:1px solid #ccc;padding:0 5px;font-size:12px;margin-right:2px;}
+#senior select{height:24px;line-height:24px;border:1px solid #ccc;padding-left:5px;font-size:12px;margin-right:2px;}
+.cxtoolbar{margin:0;margin-top:5px;margin-bottom:10px;clear:both;height:24px;}
+.cxtoolbar input{float:left;}
+input.addinput{margin:0;margin-left:5px;width:60px;height:24px;border:0;overflow:hidden;background:url(../img/addinput_bg.png) no-repeat left top;cursor:pointer;}
+input.delinput{margin:0;margin-left:5px;width:60px;height:24px;border:0;overflow:hidden;background:url(../img/delinput_bg.png) no-repeat left top;cursor:pointer;}
+input.chaxuninput{margin:0;margin-left:5px;width:44px;height:24px;border:0;overflow:hidden;background:url(../img/chaxuninput_bg.png) no-repeat left top;cursor:pointer;}
+.resultTab{width:100%;border:1px solid #C0C0C0;border-collapse:collapse;}
+.resultTab  th{padding:7px 10px;color:#666;text-align:left;font-weight:bold;border:1px solid #C0C0C0;font-size:13px;background:#f5f5f5}
+.resultTab td{padding:5px 10px 4px;color:#333;border:1px solid #EDEDED;text-align:left;font-size:12px;}
+.resultTab .gehang td{background:#fafafa}
+
+.commontitle {width:700;text-align:center;}
+.commontitle h2 {color:#333;font-weight:bold;font-size:24px;}
+
+.TabTableNAV ul{list-style:none;padding-right:10px;padding-left:10px;} 
+.TabTableNAV li{float:left;margin-right:10px;} 
+.currentShow{display:none;}
+
+.shujuTab{width:100%;border:0;border-collapse:collapse;}
+.shujuTab  th{padding:7px 10px;color:#666;text-align:left;font-weight:bold;border:1px solid #EDEDED;font-size:13px;background:#f5f5f5}
+.shujuTab td{padding:5px 10px 4px;color:#333;border:1px solid #EDEDED;text-align:left;font-size:12px;}
+.shujuTab .gehang td{background:#fafafa}
+.shujuTab .c {text-align:center;}
+.shujuTab .l {text-align:left;}
+.shujuTab .r {text-align:right;}
+
+
+
+
+
+
+
+
+
+
+
+

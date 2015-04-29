@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 日志管理 -->
+	<package name="logs.labLogRecord" namespace="/logs/labLogRecord"
+		extends="globalpackage">
+		<action name="listlabLogrecord"
+			class="labLogRecordAction"
+			method="listlabLogrecord">
+			<result name="success">
+				/jsp/base/logs/logrecordList.jsp
+			</result>
+		</action>
+		
+			<action name="exportLabLogrecordList" method="exportLabLogrecordList" class="labLogRecordAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+	
+</struts>

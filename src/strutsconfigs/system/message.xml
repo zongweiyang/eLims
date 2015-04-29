@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"   
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--消息-->
+	<package name="message/messageMain" namespace="/message/messageMain"
+		extends="specialpackage">
+		<action name="listLabMsg4Recive"
+			class="labMsgInfoAction"
+			method="listLabMsg4Recive">
+			<result name="list">/jsp/base/message/labMsgList.jsp</result>
+		</action>
+		<action name="updateLabMsg4Readed" class="labMsgInfoAction" method="updateLabMsg4Readed">
+			<result name="update" type="redirectAction">
+				<param name="actionName">showLabMsg?labMsgDetailVo.id=${labMsgDetailVo.id}</param>
+			</result>
+		</action>
+		<action name="showLabMsg"
+			class="labMsgInfoAction"
+			method="showLabMsg">
+			<result name="search">/jsp/base/message/labMsgShow.jsp</result>
+		</action>
+
+		<action name="showLabMsgAll"
+			class="labMsgInfoAction"
+			method="showLabMsgAll">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMsg4Recive</param>
+			</result>
+		</action>
+
+		<action name="showLabMsgMain"
+			class="labMsgInfoAction"
+			method="showLabMsgMain">
+			<result name="search">
+				/jsp/base/message/labMsgSendedShow.jsp
+			</result>
+		</action>
+
+		<action name="showReadedLabMsg"
+			class="labMsgInfoAction"
+			method="showReadedLabMsg">
+			<result name="search">
+				/jsp/base/message/labMsgReadedShow.jsp
+			</result>
+		</action>
+
+		<action name="showIsDeletedLabMsg"
+			class="labMsgInfoAction"
+			method="showIsDeletedLabMsg">
+			<result name="search">
+				/jsp/base/message/labMsgDeletedShow.jsp
+			</result>
+		</action>
+		<action name="preAddLabMsg4Forword"
+			class="labMsgInfoAction"
+			method="preAddLabMsg4Forword">
+			<result name="preAdd">/jsp/base/message/labMsgAdd.jsp</result>
+		</action>
+		<action name="deleteLabMsg"
+			class="labMsgInfoAction"
+			method="deleteLabMsg">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4Recive</param>
+			</result>
+		</action>
+		<action name="deleteLabMsg4sender"
+			class="labMsgInfoAction"
+			method="deleteLabMsg4sender">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4Sended</param>
+			</result>
+		</action>
+		<action name="deleteLabMsg4CaoGao"
+			class="labMsgInfoAction"
+			method="deleteLabMsg4CaoGao">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4CaoGao</param>
+			</result>
+		</action>
+		<action name="deleteSendedLabMsg"
+			class="labMsgInfoAction"
+			method="deleteSendedLabMsg">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4Sended</param>
+			</result>
+		</action>
+
+		<action name="preAddLabMsg"
+			class="labMsgInfoAction"
+			method="preAddLabMsg">
+			<result name="preAdd">/jsp/base/message/labMsgAdd.jsp</result>
+		</action>
+
+		<action name="addLabMsg" class="labMsgInfoAction" method="addLabMsg">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabMsg4Sended</param>
+			</result>
+			<result name="add2" type="redirectAction">
+				<param name="actionName">listLabMsg4CaoGao</param>
+			</result>
+		</action>
+		<action name="preUpdateLabMsg"
+			class="labMsgInfoAction"
+			method="preUpdateLabMsg">
+			<result name="preUpdate">/jsp/base/message/labMsgUpdate.jsp</result>
+		</action>
+		<action name="updateLabMsg"
+			class="labMsgInfoAction"
+			method="updateLabMsg">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMsg4CaoGao</param>
+			</result>
+		</action>
+		<action name="updateLabMsg4Send" class="labMsgInfoAction" method="updateLabMsg4Send">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMsg4CaoGao</param>
+			</result>
+		</action>
+		<action name="sendCaoGaoLabMsg"
+			class="labMsgInfoAction"
+			method="sendCaoGaoLabMsg">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMsg4Sended</param>
+			</result>
+		</action>
+		<action name="listLabMsg4Sended"
+			class="labMsgInfoAction"
+			method="listLabMsg4Sended">
+			<result name="sended">/jsp/base/message/labMsgSendedList.jsp</result>
+		</action>
+
+		<action name="listLabMsg4IsDelete"
+			class="labMsgInfoAction"
+			method="listLabMsg4IsDelete">
+			<result name="isdelete">
+				/jsp/base/message/labMsgDeletedList.jsp
+			</result>
+		</action>
+
+		<action name="deleteLabMsg4Real"
+			class="labMsgInfoAction"
+			method="deleteLabMsg4Real">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">
+					listLabMsg4IsDelete
+				</param>
+			</result>
+		</action>
+		<action name="realDeleteLabMsg"
+			class="labMsgInfoAction"
+			method="realDeleteLabMsg">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">
+					listLabMsg4IsDelete
+				</param>
+			</result>
+		</action>
+		<action name="realDeleteLabMsgSend"
+			class="labMsgInfoAction"
+			method="realDeleteLabMsgSend">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4Sended</param>
+			</result>
+		</action>
+		<action name="realDeleteLabMsgRead"
+			class="labMsgInfoAction"
+			method="realDeleteLabMsgRead">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">readedLabMsgList</param>
+			</result>
+		</action>
+		<action name="realDeleteLabMsgUnread"
+			class="labMsgInfoAction"
+			method="realDeleteLabMsgUnread">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">noReadLabMsgList</param>
+			</result>
+		</action>
+		<action name="realDeleteLabMsgReceive"
+			class="labMsgInfoAction"
+			method="realDeleteLabMsgReceive">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4Recive</param>
+			</result>
+		</action>
+		<action name="saveLabCaoGao"
+			class="labMsgInfoAction"
+			method="saveLabCaoGao">
+			<result name="save" type="redirectAction">
+				<param name="actionName">preAddLabMsg</param>
+			</result>
+		</action>
+
+		<action name="listLabMsg4CaoGao"
+			class="labMsgInfoAction"
+			method="listLabMsg4CaoGao">
+			<result name="caogao">
+				/jsp/base/message/labMsgcaoGaoList.jsp
+			</result>
+		</action>
+		<action name="deleteCaoGaoLabMsg"
+			class="labMsgInfoAction"
+			method="deleteCaoGaoLabMsg">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMsg4CaoGao</param>
+			</result>
+		</action>
+		<action name="updateLabMsg2Send"
+			class="labMsgInfoAction"
+			method="updateLabMsg2Send">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMsg4IsDelete</param>
+			</result>
+		</action>
+		<action name="ajaxLabMsgUnread"
+			class="labMsgInfoAction"
+			method="ajaxLabMsgUnread">
+		</action>
+		<action name="showLabUser4Select"
+			class="labMsgInfoAction"
+			method="showLabUser4Select">
+			<result name="list">
+				/jsp/base/message/showLabUser4Select.jsp
+			</result>
+		</action>
+	</package>
+	<package name="default" extends="globalpackage">
+		<action name="my"
+			class="labMsgInfoAction">
+			<result>/jsp/base/message/uploadfile.jsp</result>
+		</action>
+	</package>
+</struts>

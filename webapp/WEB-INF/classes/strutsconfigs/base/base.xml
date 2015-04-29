@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 定义一个系统的全局包 -->
+	<package name="basepackage" extends="struts-default">
+		<!-- 定义全部的拦截器 -->
+		<interceptors>
+			<!-- 异常拦截器-->
+			<interceptor name="exceptionInterceptor" class="cn.labsoft.labos.framework.common.interceptor.ExceptionInterceptor"></interceptor>
+			<!-- 身份校验拦截器-->
+			<interceptor name="sessionInterceptor" class="cn.labsoft.labos.framework.common.interceptor.SessionInterceptor"></interceptor>
+			<!-- 安全校验拦截器-->
+			<interceptor name="securityInterceptor" class="cn.labsoft.labos.framework.common.interceptor.SecurityInterceptor"></interceptor>
+			<!-- 权限校验拦截器-->
+			<interceptor name="powerInterceptor" class="cn.labsoft.labos.framework.common.interceptor.PowerInterceptor"></interceptor>
+			<!-- 权限校验拦截器admin-->
+			<interceptor name="powerInterceptor4Admin" class="cn.labsoft.labos.framework.common.interceptor.PowerInterceptor4Admin"></interceptor>
+			<!-- 参数校验拦截器-->
+			<interceptor name="parameterInterceptor" class="cn.labsoft.labos.framework.common.interceptor.ParameterInterceptor"></interceptor>
+			<!-- 身份校验拦截器admin-->
+			<interceptor name="sessionInterceptor4Admin" class="cn.labsoft.labos.framework.common.interceptor.SessionInterceptor4Admin"></interceptor>
+
+			<!-- 系统Action拦截器栈 -->
+			<interceptor-stack name="labInterceptorStack">
+				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="sessionInterceptor"></interceptor-ref>
+				<interceptor-ref name="powerInterceptor"></interceptor-ref>
+				<interceptor-ref name="parameterInterceptor"></interceptor-ref>
+				<interceptor-ref name="securityInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+			<interceptor-stack name="specalInterceptorStack">
+				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="sessionInterceptor"></interceptor-ref>
+				<interceptor-ref name="powerInterceptor"></interceptor-ref>
+				<interceptor-ref name="parameterInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+			<!-- 系统Action拦截器栈 -->
+			<interceptor-stack name="labInterceptorStack4Admin">
+				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="sessionInterceptor4Admin"></interceptor-ref>
+				<interceptor-ref name="powerInterceptor4Admin"></interceptor-ref>
+				<interceptor-ref name="parameterInterceptor"></interceptor-ref>
+				<interceptor-ref name="securityInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+
+			<interceptor-stack name="isFileUpload">
+				<interceptor-ref name="fileUpload">
+					<!--配置允许上传的文件类型，多个用","分隔  -->
+					<param name="allowedTypes">application/zip,application/rar,application/octet-stream,image/bmp,application/pdf,application/msword,application/vnd.ms-excel, image/png,image/gif,image/jpeg,image/GPG,image/x-png,image/pjpeg,text/plain</param>
+					<param name="maximumSize">1000000000</param>
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<global-results>
+			<result name="login">/jsp/error/loginerror.jsp</result>
+			<result name="nextAction">/jsp/include/next.jsp</result>
+			<result name="exception">/jsp/error/error.jsp</result>
+			<result name="AdminLogin">/admin/loginPage4Aadmin.jsp</result>
+			<result name="back" type="redirectAction">logout.action</result>
+			<result name="front" type="redirectAction">logout.action</result>
+			<!-- <result name="exception" type="redirectAction" >
+				<param name="actionName">/processException</param> 
+				<param name="errorForm.displayErrorName">${errorForm.displayErrorName}</param> 
+				<param name="errorForm.gotoUrl">${errorForm.gotoUrl}</param>
+				</result> -->
+		</global-results>
+
+		<global-exception-mappings>
+			<!-- 指Action抛出GlobalException异常时，转入名为exception的结果。 -->
+			<exception-mapping exception="cn.labsoft.labos.framework.common.exception.GlobalException" result="exception" />
+			<!-- 指Action抛出Exception异常时，转入名为exception的结果。 -->
+			<exception-mapping exception="java.lang.Exception" result="exception" />
+		</global-exception-mappings>
+		<!-- 
+			<action name="getImg" class="baseAction" method="getImg">
+			<result>/oa/process-img.jsp</result>
+			</action>
+		-->
+	</package>
+</struts>

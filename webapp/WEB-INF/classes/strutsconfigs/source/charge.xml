@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="charge.labCharge" namespace="/charge/labCharge" extends="globalpackage">
+		<action name="listLabCharge" method="listLabCharge" class="labChargeAction">
+			<result name="list">/jsp/source/charge/labChargeList.jsp</result>
+		</action>
+		<action name="preUpdateLabCharge" method="preUpdateLabCharge" class="labChargeAction">
+			<result name="preUpdate">/jsp/source/charge/labChargeUpdate.jsp</result>
+		</action>
+		<action name="preAddLabCharge" method="preAddLabCharge" class="labChargeAction">
+			<result name="preAdd">/jsp/source/charge/labChargeAdd.jsp</result>
+		</action>
+		<action name="showLabCharge" method="showLabCharge" class="labChargeAction">
+			<result name="show">/jsp/source/charge/labChargeShow.jsp</result>
+		</action>
+		<action name="addLabCharge" method="addLabCharge" class="labChargeAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabCharge</param>
+			</result>
+		</action>
+		<action name="updateLabCharge" method="updateLabCharge" class="labChargeAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabCharge</param>
+			</result>
+		</action>
+		<action name="deleteLabCharge" method="deleteLabCharge" class="labChargeAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabCharge</param>
+			</result>
+		</action>
+		<action name="addLabReport4Bus" method="addLabReport4Bus" class="labChargeAction">
+		   	<result name="add" >
+					/jsp/common/report/labReportShow4Bus.jsp
+			</result>
+		</action>
+		<action name="showLabReport4Bus" method="showLabReport4Bus" class="labSamReportAction">
+		   	<result name="show" >
+					/jsp/common/report/labReportShow4Bus.jsp
+			</result>
+		</action>
+	</package>
+</struts>

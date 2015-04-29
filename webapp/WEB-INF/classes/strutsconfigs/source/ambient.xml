@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="ambient.labAmbient" namespace="/ambient/labAmbient" extends="globalpackage">
+			<action name="listLabAmbient" method="listLabAmbient" class="labAmbientAction">
+				<result name="list">
+					/jsp/source/ambient/labAmbientList.jsp
+				</result>
+			</action>
+			<action name="showLabAmbient" method="showLabAmbient" class="labAmbientAction">
+				<result name="show">
+					/jsp/source/ambient/labAmbientShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabAmbient" method="preAddLabAmbient" class="labAmbientAction">
+				<result name="preAdd">
+					/jsp/source/ambient/labAmbientAdd.jsp
+				</result>
+			</action>
+			<action name="addLabAmbient" method="addLabAmbient" class="labAmbientAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabAmbient.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabAmbient" method="preUpdateLabAmbient" class="labAmbientAction">
+				<result name="preUpdate">
+					/jsp/source/ambient/labAmbientUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabAmbient" method="updateLabAmbient" class="labAmbientAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabAmbient.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabAmbient" method="deleteBatchLabAmbient" class="labAmbientAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabAmbient.action</param>
+				</result>
+			</action>
+			<action name="deleteLabAmbient" method="deleteLabAmbient" class="labAmbientAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabAmbient.action</param>
+				</result>
+			</action>
+			<action name="isDeleteLabAmbient" method="isDeleteLabAmbient" class="labAmbientAction"></action>
+		</package>
+		<package name="ambient.labAmbientInfo" namespace="/ambient/labAmbientInfo" extends="globalpackage">
+			<action name="listLabAmbientInfo" method="listLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="list">
+					/jsp/source/ambient/labAmbientInfoList.jsp
+				</result>
+			</action>
+			<action name="showLabAmbientInfo" method="showLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="show">
+					/jsp/source/ambient/labAmbientInfoShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabAmbientInfo" method="preAddLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="preAdd">
+					/jsp/source/ambient/labAmbientInfoAdd.jsp
+				</result>
+			</action>
+			<action name="addLabAmbientInfo" method="addLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabAmbientInfo.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabAmbientInfo" method="preUpdateLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="preUpdate">
+					/jsp/source/ambient/labAmbientInfoUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabAmbientInfo" method="updateLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabAmbientInfo.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabAmbientInfo" method="deleteBatchLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabAmbientInfo.action</param>
+				</result>
+			</action>
+			<action name="deleteLabAmbientInfo" method="deleteLabAmbientInfo" class="labAmbientInfoAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabAmbientInfo.action</param>
+				</result>
+			</action>
+			<action name="listOverrun" method="listOverrun" class="labAmbientInfoAction">
+				<result name="list">
+					/jsp/source/ambient/overrun/labOverrunList.jsp
+				</result>
+			</action>
+			<action name="showOverrun" method="showOverrun" class="labAmbientInfoAction">
+				<result name="show">
+					/jsp/source/ambient/overrun/labOverrunShow.jsp
+				</result>
+			</action>
+			<action name="listAnalyse" method="listAnalyse" class="labAmbientInfoAction">
+				<result name="list">
+					/jsp/source/ambient/analyse/labAnalyseList.jsp
+				</result>
+			</action>
+			<action name="preJFreeChart" method="preJFreeChart" class="labAmbientInfoAction">
+				<result name="list">
+					/jsp/source/ambient/labAmbientInfoJFree.jsp
+				</result>
+			</action>
+		</package>
+</struts>

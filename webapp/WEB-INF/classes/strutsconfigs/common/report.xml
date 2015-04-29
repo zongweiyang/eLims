@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="report.labReport" namespace="/report/labReport" extends="specialpackage">
+			<action name="listLabReport" method="listLabReport" class="labReportAction">
+				<result name="list">
+					/jsp/common/report/labReportList.jsp
+				</result>
+			</action>
+			<action name="showLabReport" method="showLabReport" class="labReportAction">
+				<result name="show">
+					/jsp/common/report/labReportShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabReport" method="preAddLabReport" class="labReportAction">
+				<result name="preAdd">
+					/jsp/common/report/labReportAdd.jsp
+				</result>
+			</action>
+			<action name="addLabReport" method="addLabReport" class="labReportAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabReport.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabReport" method="preUpdateLabReport" class="labReportAction">
+				<result name="preUpdate">
+					/jsp/common/report/labReportUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabReport" method="updateLabReport" class="labReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabReport.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabReport" method="deleteBatchLabReport" class="labReportAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabReport.action</param>
+				</result>
+			</action>
+			<action name="deleteLabReport" method="deleteLabReport" class="labReportAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabReport.action</param>
+				</result>
+			</action>
+			<action name="preUpdateReportModel" method="preUpdateReportModel" class="labReportAction">
+				<result name="preUpdateExcel">
+					/jsp/common/report/labReportExcelUpdate.jsp
+				</result>
+				<result name="preUpdate">
+					/jsp/common/report/labReportHtmlUpdate.jsp
+				</result>
+			</action>
+			<action name="updateReportModel" method="updateReportModel" class="labReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">preUpdateReportModel.action</param>
+					<param name="labReportVo.id">${labReportVo.id}</param>
+				</result>
+			</action>
+			<action name="preUpdateReportModel4Code" method="preUpdateReportModel4Code" class="labReportAction">
+				<result name="preUpdate">
+					/jsp/common/report/labReportHtmlCodeUpdate.jsp
+				</result>
+			</action>
+			<action name="updateReportModel4Code" method="updateReportModel4Code" class="labReportAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">preUpdateReportModel4Code.action</param>
+					<param name="labReportVo.id">${labReportVo.id}</param>
+				</result>
+			</action>
+			<action name="showReportModel" method="showReportModel" class="labReportAction">
+				<result name="show">
+					/jsp/common/report/labReportJspShow.jsp
+				</result>
+			</action>
+			<action name="addLabReport4Copy" method="addLabReport4Copy" class="labReportAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabReport.action</param>
+				</result>
+			</action>
+			<action name="showLabReport4Bus" method="showLabReport4Bus" class="labReportAction">
+				<result name="show" >
+					/jsp/common/report/labReportShow4Bus.jsp
+				</result>
+			</action>
+			<action name="updateLabReport4Bus" method="updateLabReport4Bus" class="labReportAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">showLabReport4Bus.action</param>
+					<param name="labReportVo.busInsId">${labReportVo.busInsId}</param>
+					<param name="labReportVo.id">${labReportVo.id}</param>
+				</result>
+			</action>
+		</package>
+		<package name="report.labReportTag" namespace="/report/labReportTag" extends="globalpackage">
+			<action name="listLabReportTag" method="listLabReportTag" class="labReportTagAction">
+				<result name="list">
+					/jsp/common/report/tag/labReportTagList.jsp
+				</result>
+			</action>
+			<action name="showLabReportTag" method="showLabReportTag" class="labReportTagAction">
+				<result name="show">
+					/jsp/common/report/tag/labReportTagShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabReportTag" method="preAddLabReportTag" class="labReportTagAction">
+				<result name="preAdd">
+					/jsp/common/report/tag/labReportTagAdd.jsp
+				</result>
+			</action>
+			<action name="addLabReportTag" method="addLabReportTag" class="labReportTagAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabReportTag.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabReportTag" method="preUpdateLabReportTag" class="labReportTagAction">
+				<result name="preUpdate">
+					/jsp/common/report/tag/labReportTagUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabReportTag" method="updateLabReportTag" class="labReportTagAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabReportTag.action</param>
+				</result>
+			</action>
+			<action name="deleteLabReportTag" method="deleteLabReportTag" class="labReportTagAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabReportTag.action</param>
+				</result>
+			</action>
+			<action name="updateLabReportTag4Del" method="updateLabReportTag4Del" class="labReportTagAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabReportTag.action</param>
+				</result>
+			</action>
+			<action name="ajaxLabReportTag4Init" method="ajaxLabReportTag4Init" class="labReportTagAction">
+			</action>
+			<action name="ajaxLabReportTag4List" method="ajaxLabReportTag4List" class="labReportTagAction">
+			</action>
+			<action name="ajaxLabReportTag4Table" method="ajaxLabReportTag4Table" class="labReportTagAction">
+			</action>
+		</package>
+</struts>

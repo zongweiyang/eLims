@@ -1,0 +1,36 @@
+<html xmlns:mml="http://www.w3.org/1998/Math/MathML">
+<head><title>selectedinfix</title>
+</head>
+<body onunload="clos()">
+<p><FONT style="FONT-FAMILY:Times New Roman;COLOR:#005FA9;FONT-SIZE:medium">The following show MathML Content code. You can edit them. After you finish,please click "confirm" button to return to MathEdit Main window.</FONT></p>
+<p align="center">
+<form name='f5'><textarea name='mathcode' cols=50 rows=20></textarea> <br/>
+<input type='button' value='confrim' onclick='changedInfix()'>
+</form>
+</p>
+
+<script type="text/javascript" >
+var sMathml = window.dialogArguments;
+document.f5.mathcode.value=sMathml;
+function clos()
+{
+	window.returnValue=document.f5.mathcode.value;
+}
+
+function changedInfix()
+{ str=document.f5.mathcode.value;
+	if(str=="" ||str==null)
+	{
+	  window.returnValue="return value";
+  }else
+  {
+  	window.returnValue=str;
+  }
+window.close();
+}
+
+</script>
+</body>
+</html>
+
+

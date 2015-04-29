@@ -1,0 +1,64 @@
+<taglib>
+<tlib-version>2.2.3</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>my</short-name>
+	<uri>/jhref</uri>
+	<display-name>"jhref tab"</display-name>
+	<!-- <tag>
+		<name>jtime</name>
+		<tag-class>cn.labsoft.labos.framework.common.taglib.JtimeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>message</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>who</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	 -->
+	<tag>
+		<name>jhref</name>
+		<tag-class>cn.labsoft.labos.framework.common.taglib.JHrefTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>hrFunctionUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			 <type>String</type>
+		</attribute>
+		<attribute>
+			<name>hrFunctionType</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			 <type>String</type>
+		</attribute>
+		<attribute>
+			<name>hrJsFunctions</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			 <type>String</type>
+		</attribute>
+		<attribute>
+			<name>hrAttribute</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			 <type>String</type>
+		</attribute>
+		<attribute>
+			<name>hrFunctionValue</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>String</type>
+		</attribute>
+		<attribute>
+			<name>hrIsInterval</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>boolean</type>
+		</attribute>
+	</tag>
+</taglib>

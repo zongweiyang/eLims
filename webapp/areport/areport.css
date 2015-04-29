@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+html,body{
+	width:100%;height:100%;
+	margin:0px;padding:0px;
+	overflow:hidden;
+}
+table#are-frame{
+	width:100%;height:100%;
+	display:none;
+	border:0px;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+table#are-frame td{
+	border:0px;
+	padding:0px;
+	border-collapse:collapse;
+}
+#are-toolbar{
+	height:1px;
+}
+#are-toolbar>div{
+	overflow:hidden;
+}
+.are-toolbar{
+	left:0px;top:0px;
+	width:100%;
+	position:absolute;
+}
+#are-content{
+	background:#9099AE;
+	overflow-y:auto;
+}
+#are-content>div{
+	overflow:hidden;padding-bottom:20px;
+}
+#are-bottom{
+	height:1px;
+}
+.are-page{
+	width:200mm;height:286mm;
+	border:1px solid #000;
+	margin:15px auto 0px auto;
+	background:#fff;
+}
+.are-page>table{
+	width:100%;height:100%;
+	background:#fff;
+}
+.are-page-left,.are-page-right{
+	width:95px;height:95px;
+}
+.are-page-left-top,.are-page-left-bottom,.are-page-right-top,.are-page-right-bottom{
+	width:24px;height:24px;border:1px solid #AAA;
+}
+.are-page-left-top,.are-page-left-bottom{
+	border-left:0px;
+	float:left;
+}
+.are-page-right-top,.are-page-right-bottom{
+	border-right:0px;
+	float:right;
+}
+.are-page-left-top,.are-page-right-top{
+	border-top:0px;
+}
+.are-page-left-bottom,.are-page-right-bottom{
+	border-bottom:0px;
+}
+.are-page-editor{
+	outline:none;
+	overflow:hidden;
+	cursor:text;
+}
+.are-page-editor p{
+	margin:0px 24px 0px 24px;
+	padding:0px;
+	word-wrap:break-word;
+	word-break:break-all;
+	text-align:left;
+	font-size:13px;
+	cursor:text;
+	font-family:'SimSun';
+	mso-ascii-font-family:'Times New Roman';mso-hansi-font-family:'Times New Roman';
+}
+.are-page-editor table{
+	width:100%;
+	border-collapse:collapse;
+	table-layout:fixed;
+}
+.are-page-editor table td{
+	word-wrap:break-word;
+	word-break:break-all;
+	text-align:center;
+	font-size:13px;
+	cursor:text;
+	font-family:'SimSun';
+	mso-ascii-font-family:'Times New Roman';mso-hansi-font-family:'Times New Roman';
+}
+.are-page-editor table p{
+	margin:0px;
+}
+.are-page-editor .are-page-data-css{
+	color:red;
+}
+.are-page-editor .are-page-data,.are-page-editor .are-page-data1{
+	display:block;
+	text-align:center;
+	width:100%;
+	margin:0px;padding:0px;
+}
+table#are-frame .are-page-editor table,table#are-frame .are-page-editor table td{
+	border:1px solid #000;
+}
+.areport-each-table th,.areport-each-table1 th{
+	font-size:12px;min-height:30px;
+}
+.areport-each-table td,.areport-each-table1 td{
+	min-height:30px;
+}

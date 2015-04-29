@@ -1,0 +1,533 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!-- 项目管理 -->
+	<package name="science.LabScience" namespace="/science/labScience"
+		extends="globalpackage">
+		<action name="listLabScience" method="listLabScience"
+			class="labSciScienceAction">
+			<result name="list1">
+				/jsp/business/science/science/labScienceList.jsp
+			</result>
+			<result name="list2">
+				/jsp/business/science/science/labScienceAuditList.jsp
+			</result>
+			<result name="list3">
+				/jsp/business/science/science/labScienceApproveList.jsp
+			</result>
+			<result name="list4">
+				/jsp/business/science/science/labSciCheckList.jsp
+			</result>
+			<result name="list5">
+				/jsp/business/science/science/labSciCheckAuditList.jsp
+			</result>
+			<result name="list6">
+				/jsp/business/science/science/labSciConcludeList.jsp
+			</result>
+			<result name="list7">
+				/jsp/business/science/science/labSciConcludeAuditList.jsp
+			</result>
+			<result name="list8">
+				/jsp/business/science/query/labSciQueryList.jsp
+			</result>
+		</action>
+		<action name="showLabScience" method="showLabScience"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/science/labScienceShow.jsp
+			</result>
+		</action>
+		<action name="preAddLabScience" method="preAddLabScience"
+			class="labSciScienceAction">
+			<result name="preAdd">
+				/jsp/business/science/science/labScienceAdd.jsp
+			</result>
+		</action>
+		<action name="listLabSciFunds4Select" method="listLabSciFunds4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/science/labSciFundsList4Select.jsp
+			</result>
+		</action>
+		<action name="listLabSciProcess4Select" method="listLabSciProcess4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/science/labSciProcessList4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciProcess4Select" method="showLabSciProcess4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/science/labSciProcessShow4Select.jsp
+			</result>
+		</action>
+		<action name="listLabSciAchievement4Select" method="listLabSciAchievement4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/science/labSciAchievementList4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciFunds4Select" method="showLabSciFunds4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/science/labSciFundsShow4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciAchievement4Select" method="showLabSciAchievement4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/science/labSciAchievementShow4Select.jsp
+			</result>
+		</action>
+		<action name="addLabScience" method="addLabScience"
+			class="labSciScienceAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabScience</param>
+			</result>
+			<result name="input1" type="redirectAction">
+				<param name="actionName">listLabSciFunds4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input2" type="redirectAction">
+				<param name="actionName">listLabSciAchievement4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input3" type="redirectAction">
+				<param name="actionName">listLabSciProcess4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">preUpdateLabScience?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabScience" method="preUpdateLabScience"
+			class="labSciScienceAction">
+			<result name="preUpdate1">
+				/jsp/business/science/science/labScienceUpdate.jsp
+			</result>
+			<result name="preUpdate2">
+				/jsp/business/science/science/labScienceAudit.jsp
+			</result>
+			<result name="preUpdate3">
+				/jsp/business/science/science/labScienceApprove.jsp
+			</result>
+			<result name="preUpdate4">
+				/jsp/business/science/science/labSciCheckUpdate.jsp
+			</result>
+			<result name="preUpdate5">
+				/jsp/business/science/science/labSciCheckAudit.jsp
+			</result>
+			<result name="preUpdate6">
+				/jsp/business/science/science/labSciConcludeUpdate.jsp
+			</result>
+			<result name="preUpdate7"> 
+				/jsp/business/science/science/labSciConcludeAudit.jsp
+			</result>
+			
+		</action>
+		<action name="updateLabScience" method="updateLabScience"
+			class="labSciScienceAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabScience?messageInfo=${messageInfo}</param>
+			</result>
+			<result name="input1" type="redirectAction">
+				<param name="actionName">listLabSciFunds4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input2" type="redirectAction">
+				<param name="actionName">listLabSciAchievement4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input3" type="redirectAction">
+				<param name="actionName">listLabSciProcess4Select?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}&amp;labSciScienceVo.isSeized=${labSciScienceVo.isSeized}&amp;labSciScienceVo.isKnot=${labSciScienceVo.isKnot}</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">preUpdateLabScience?labSciScienceVo.id=${labSciScienceVo.id}&amp;messageInfo=${messageInfo}</param>
+			</result>
+			<result name="update1" type="redirectAction">
+				<param name="actionName">listLabScience4Process</param>
+			</result>
+			
+		</action>
+		<action name="listLabScience4Process" method="listLabScience4Process" class="labSciProcessAction">
+			<result name="list">/jsp/business/science/process/labScience4ProcessList.jsp</result>
+		</action>
+		<action name="updateLabSciScience4Audit" method="updateLabSciScience4Audit"
+			class="labSciScienceAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabScience?messageInfo=${messageInfo}</param>
+			</result>
+		</action>
+		<action name="deleteLabScience" method="deleteLabScience"
+			class="labSciScienceAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabScience</param>
+			</result>
+		</action>
+		<action name="getAllUser" method="getAllUser"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/science/labUserShow4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciScience4Select" method="showLabSciScience4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/science/labScienceList4Select.jsp
+			</result>
+		</action>
+		<action name="showQueryLabScience" method="showQueryLabScience"
+			class="labSciScienceAction">
+			<result name="show1">
+				/jsp/business/science/query/labSciFundsShow4Query1.jsp
+			</result>
+			<result name="show2">
+				/jsp/business/science/query/labSciFundsShow4Query2.jsp
+			</result>
+			<result name="show3">
+				/jsp/business/science/query/labSciFundsShow4Query3.jsp
+			</result>
+			<result name="show4">
+				/jsp/business/science/query/labSciFundsShow4Query4.jsp
+			</result>
+		</action>
+	</package>
+	
+	<!-- 经费管理 -->
+	<package name="science.LabSciFunds" namespace="/science/labSciFunds"
+		extends="globalpackage">
+		<action name="listLabScience" method="listLabScience"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/funds/labSciFundsList.jsp
+			</result>
+		</action>
+		<action name="listLabSciFunds" method="listLabSciFunds"
+			class="labSciFundsAction">
+			<result name="list1">
+				/jsp/business/science/funds/labSciFundsList4Bud.jsp
+			</result>
+			<result name="list2">
+				/jsp/business/science/funds/labSciFundsList4In.jsp
+			</result>
+			<result name="list3">
+				/jsp/business/science/funds/labSciFundsList4Out.jsp
+			</result>
+		</action>
+		
+		<action name="showLabSciFunds" method="showLabSciFunds"
+			class="labSciFundsAction">
+			<result name="show1">
+				/jsp/business/science/funds/labSciFundsShow4Bud.jsp
+			</result>
+			<result name="show2">
+				/jsp/business/science/funds/labSciFundsShow4In.jsp
+			</result>
+			<result name="show3">
+				/jsp/business/science/funds/labSciFundsShow4Out.jsp
+			</result>
+		</action>
+		<action name="preAddLabSciFunds" method="preAddLabSciFunds"
+			class="labSciFundsAction">
+			<result name="preAdd2">
+				/jsp/business/science/funds/labSciFundsAdd4In.jsp
+			</result>
+			<result name="preAdd3">
+				/jsp/business/science/funds/labSciFundsAdd4Out.jsp
+			</result>
+		</action>
+		<action name="addLabSciFunds" method="addLabSciFunds"
+			class="labSciFundsAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSciFunds?labSciFundsVo.type=${labSciFundsVo.type}&amp;labSciFundsVo.labSciScienceId=${labSciFundsVo.labSciScienceId}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabSciFunds" method="preUpdateLabSciFunds"
+			class="labSciFundsAction">
+			<result name="preUpdate2">
+				/jsp/business/science/funds/labSciFundsUpdate4In.jsp
+			</result>
+			<result name="preUpdate3">
+				/jsp/business/science/funds/labSciFundsUpdate4Out.jsp
+			</result>
+		</action>
+		<action name="updateLabSciFunds" method="updateLabSciFunds"
+			class="labSciFundsAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSciFunds?labSciFundsVo.type=${labSciFundsVo.type}&amp;labSciFundsVo.labSciScienceId=${labSciFundsVo.labSciScienceId}</param>
+			</result>
+		</action>
+		<action name="deleteLabSciFunds" method="deleteLabSciFunds"
+			class="labSciFundsAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabSciFunds?labSciFundsVo.type=${labSciFundsVo.type}&amp;labSciFundsVo.labSciScienceId=${labSciFundsVo.labSciScienceId}</param>
+			</result>
+		</action>
+		<action name="listLabSciFundsQuery" method="listLabSciFundsQuery" class="labSciFundsAction">
+				<result name="list">
+					/jsp/business/science/funds/queryList.jsp
+				</result>
+				<result name="list1">
+					/jsp/business/science/funds/query2List.jsp
+				</result>
+		</action>
+	</package>
+	
+	<!-- 学术交流 -->
+	<package name="science.LabSciLearn" namespace="/science/labSciLearn"
+		extends="globalpackage">
+		<action name="listLabSciLearn" method="listLabSciLearn"
+			class="labSciLearnAction">
+			<result name="HY">
+				/jsp/business/science/learn/labSciLearnList4Meet.jsp
+			</result>
+			<result name="JZ">
+				/jsp/business/science/learn/labSciLearnList4Speech.jsp
+			</result>
+			<result name="CC">
+				/jsp/business/science/learn/labSciLearnList4Trip.jsp
+			</result>
+		</action>
+		<action name="preAddLabSciLearn" method="preAddLabSciLearn"
+			class="labSciLearnAction">
+			<result name="HY">
+				/jsp/business/science/learn/labSciLearnAdd4Meet.jsp
+			</result>
+			<result name="JZ">
+				/jsp/business/science/learn/labSciLearnAdd4Speech.jsp
+			</result>
+			<result name="CC">
+				/jsp/business/science/learn/labSciLearnAdd4Trip.jsp
+			</result>
+		</action>
+		<action name="addLabSciLearn" method="addLabSciLearn"
+			class="labSciLearnAction">
+			<result name="add" type="redirectAction">
+				listLabSciLearn?labSciLearnVo.type=${labSciLearnVo.type}
+			</result>
+		</action>
+		<action name="preUpdateLabSciLearn" method="preUpdateLabSciLearn"
+			class="labSciLearnAction">
+			<result name="HY">
+				/jsp/business/science/learn/labSciLearnUpdate4Meet.jsp
+			</result>
+			<result name="JZ">
+				/jsp/business/science/learn/labSciLearnUpdate4Speech.jsp
+			</result>
+			<result name="CC">
+				/jsp/business/science/learn/labSciLearnUpdate4Trip.jsp
+			</result>
+		</action>
+		<action name="updateLabSciLearn" method="updateLabSciLearn"
+			class="labSciLearnAction">
+			<result name="update" type="redirectAction">
+				listLabSciLearn?labSciLearnVo.type=${labSciLearnVo.type}
+			</result>
+		</action>
+		<action name="showLabSciLearn" method="showLabSciLearn"
+			class="labSciLearnAction">
+			<result name="HY">
+				/jsp/business/science/learn/labSciLearnShow4Meet.jsp
+			</result>
+			<result name="JZ">
+				/jsp/business/science/learn/labSciLearnShow4Speech.jsp
+			</result>
+			<result name="CC">
+				/jsp/business/science/learn/labSciLearnShow4Trip.jsp
+			</result>
+		</action>
+		<action name="deleteLabSciLearn" method="deleteLabSciLearn"
+			class="labSciLearnAction">
+			<result name="delete" type="redirectAction">
+				listLabSciLearn?labSciLearnVo.type=${labSciLearnVo.type}
+			</result>
+		</action>
+		<action name="showLabOrg4Select" method="showLabOrg4Select" class="labSciLearnAction">
+			<result name="preTree">
+				/jsp/business/science/learn/labOrg4Select.jsp
+			</result>
+		</action>
+		<action name="treeLabOrg" method="treeLabOrg" class="labSciLearnAction"></action>
+		<action name="showLabUser4Select" method="showLabUser4Select"
+			class="labSciLearnAction">
+			<result name="show">
+				/jsp/business/science/learn/labUser4Select.jsp
+			</result>
+		</action>
+	</package>
+	
+	<!-- 成果管理 -->
+	<package name="science.LabSciAchievement" namespace="/science/labSciAchievement"
+		extends="globalpackage">
+		<action name="listLabSciAchievement" method="listLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="PAPER">
+				/jsp/business/science/achievement/labSciAchievementList4Paper.jsp
+			</result>
+			<result name="BOOK">
+				/jsp/business/science/achievement/labSciAchievementList4Book.jsp
+			</result>
+			<result name="AWARD">
+				/jsp/business/science/achievement/labSciAchievementList4Award.jsp
+			</result>
+			<result name="PATENT">
+				/jsp/business/science/achievement/labSciAchievementList4Patent.jsp
+			</result>
+		</action>
+		<action name="preAddLabSciAchievement" method="preAddLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="PAPER">
+				/jsp/business/science/achievement/labSciAchievementAdd4Paper.jsp
+			</result>
+			<result name="BOOK">
+				/jsp/business/science/achievement/labSciAchievementAdd4Book.jsp
+			</result>
+			<result name="AWARD">
+				/jsp/business/science/achievement/labSciAchievementAdd4Award.jsp
+			</result>
+			<result name="PATENT">
+				/jsp/business/science/achievement/labSciAchievementAdd4Patent.jsp
+			</result>
+		</action>
+		<action name="addLabSciAchievement" method="addLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="add" type="redirectAction">
+				listLabSciAchievement?labSciAchievementVo.type=${labSciAchievementVo.type}
+			</result>
+		</action>
+		<action name="preUpdateLabSciAchievement" method="preUpdateLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="PAPER">
+				/jsp/business/science/achievement/labSciAchievementUpdate4Paper.jsp
+			</result>
+			<result name="BOOK">
+				/jsp/business/science/achievement/labSciAchievementUpdate4Book.jsp
+			</result>
+			<result name="AWARD">
+				/jsp/business/science/achievement/labSciAchievementUpdate4Award.jsp
+			</result>
+			<result name="PATENT">
+				/jsp/business/science/achievement/labSciAchievementUpdate4Patent.jsp
+			</result>
+		</action>
+		<action name="updateLabSciAchievement" method="updateLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="update" type="redirectAction">
+				listLabSciAchievement?labSciAchievementVo.type=${labSciAchievementVo.type}
+			</result>
+		</action>
+		<action name="showLabSciAchievement" method="showLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="PAPER" >
+                  /jsp/business/science/achievement/labSciAchievementShow4Paper.jsp
+			</result>
+			<result name="BOOK" >
+                  /jsp/business/science/achievement/labSciAchievementShow4Book.jsp
+			</result>
+			<result name="AWARD" >
+                  /jsp/business/science/achievement/labSciAchievementShow4Award.jsp
+			</result>
+			<result name="PATENT" >
+                  /jsp/business/science/achievement/labSciAchievementShow4Patent.jsp
+			</result>
+		</action>
+		<action name="deleteLabSciAchievement" method="deleteLabSciAchievement"
+			class="labSciAchievementAction">
+			<result name="delete" type="redirectAction">
+				listLabSciAchievement?labSciAchievementVo.type=${labSciAchievementVo.type}
+			</result>
+		</action>
+		
+		<action name="showLabUser4Select" method="showLabUser4Select"
+			class="labSciAchievementAction">
+			<result name="show">
+				/jsp/business/science/achievement/labUser4Select.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="science.labSciProcess" namespace="/science/labSciProcess" extends="globalpackage">
+		<action name="listLabSciFunds4Select" method="listLabSciFunds4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/process/labSciFundsList4Select.jsp
+			</result>
+		</action>
+		<action name="listLabSciAchievement4Select" method="listLabSciAchievement4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/process/labSciAchievementList4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciFunds4Select" method="showLabSciFunds4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/process/labSciFundsShow4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciAchievement4Select" method="showLabSciAchievement4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/process/labSciAchievementShow4Select.jsp
+			</result>
+		</action>
+		<action name="listLabSciProcess4Select" method="listLabSciProcess4Select"
+			class="labSciScienceAction">
+			<result name="list">
+				/jsp/business/science/process/labSciProcessList4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSciProcess4Select" method="showLabSciProcess4Select"
+			class="labSciScienceAction">
+			<result name="show">
+				/jsp/business/science/process/labSciProcessShow4Select.jsp
+			</result>
+		</action>
+		<action name="listLabScience4Process" method="listLabScience4Process" class="labSciProcessAction">
+			<result name="list">/jsp/business/science/process/labScience4ProcessList.jsp</result>
+		</action>
+		<action name="showLabScience4Process" method="showLabScience4Process" class="labSciProcessAction">
+			<result name="show2" type="redirectAction">
+				<param name="actionName">listLabSciFunds4Select?labSciScienceVo.id=${labSciScienceVo.id}</param>
+			</result>
+			<result name="show3" type="redirectAction">
+				<param name="actionName">listLabSciAchievement4Select?labSciScienceVo.id=${labSciScienceVo.id}</param>
+			</result>
+			<result name="show4" type="redirectAction">
+				<param name="actionName">listLabSciProcess4Select?labSciScienceVo.id=${labSciScienceVo.id}</param>
+			</result>
+			<result name="show">/jsp/business/science/process/labScience4ProcessShow.jsp</result>
+		</action>
+		<action name="listLabSciProcess" method="listLabSciProcess" class="labSciProcessAction">
+			<result name="list">/jsp/business/science/process/labSciProcessList.jsp</result>
+		</action>
+		<action name="preAddLabSciProcess" method="preAddLabSciProcess" class="labSciProcessAction">
+			<result name="preAdd">/jsp/business/science/process/labSciProcessAdd.jsp</result>
+		</action>
+		<action name="addLabSciProcess" method="addLabSciProcess" class="labSciProcessAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSciProcess4Select?labSciScienceVo.id=${labSciProcessVo.labSciScienceId}&amp;labSciScienceVo.auditResult=tab4</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabSciProcess?labSciProcessVo.id=${labSciProcessVo.id}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabSciProcess" method="preUpdateLabSciProcess" class="labSciProcessAction">
+			<result name="preUpdate">/jsp/business/science/process/labSciProcessUpdate.jsp</result>
+		</action>
+		<action name="showLabSciProcess" method="showLabSciProcess" class="labSciProcessAction">
+			<result name="show">/jsp/business/science/process/labSciProcessShow.jsp</result>
+		</action>
+		<action name="updateLabSciProcess" method="updateLabSciProcess" class="labSciProcessAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSciProcess4Select?labSciScienceVo.id=${labSciProcessVo.labSciScienceId}&amp;labSciScienceVo.auditResult=tab4</param>
+			</result>
+			<result name="preUpdate" type="redirectAction">
+				<param name="actionName">preUpdateLabSciProcess?labSciProcessVo.id=${labSciProcessVo.id}</param>
+			</result>
+		</action>
+		<action name="deleteLabSciProcess" method="deleteLabSciProcess" class="labSciProcessAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">showLabScience4Process?labSciScienceVo.id=${labSciScienceVo.id}&amp;labSciScienceVo.auditResult=${labSciScienceVo.auditResult}</param>
+			</result>
+		</action>
+	</package>
+</struts>

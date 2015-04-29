@@ -1,0 +1,279 @@
+/*
+* 设计：李少鹏
+* 时间：2009-09-08
+* 版权：吉他电子科技有限公司
+*/
+
+
+/*定义主界面,重定义标签*/
+
+
+/*连接样式*/
+
+a:link {
+	font-family: "微软雅黑","宋体";
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+}
+
+a:visited {
+	font-family: "微软雅黑","宋体";
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+}
+
+a:hover {
+	font-family: "微软雅黑","宋体";
+	font-size:12px;
+	color:#666666;
+	text-decoration:none;
+}
+
+a:active {
+	font-family: "微软雅黑","宋体";
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+	
+}
+
+
+
+body{
+margin:0px;
+font-family:"微软雅黑","宋体";
+font-size:12px;
+margin:5px;
+}
+
+/*字体定义：t1,t2,t3,t4,t5,t6,t7,t8.......,分别依次从大到小*/
+
+.t1{
+font-size:36px;
+font:bold;}
+
+.t2{
+font-size:24px;
+font:bold;}
+
+.t3{
+font-size:18px;
+font:bold;
+}
+
+
+.t4{
+font-size:16px;
+font:bold;
+}
+
+.t5{
+font-size:14px;
+font:bold;
+}
+
+.t6{
+font-size:12px;
+font:bold;
+}
+
+.t7{
+font-size:10px;
+
+}
+
+.t8{
+position:relative;
+font-size:14px;
+color:#FFFFFF;
+}
+
+/*定义框体圆角玻璃透明样式,
+* 每个窗体有四部分组成，
+*/
+
+.xtop, .xbottom {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden;background:#F7F8F9;filter:Alpha(Opacity=60);opacity: 0.6;}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {border-left:1px solid #FFFFFF; border-right:1px solid #FFFFFF;}
+.xb1 {margin:0 5px; background:#FFFFFF;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+.xboxcontent { border:0 solid #FFFFFF;border-width:0 1px; padding: 4px; background: #DFE6EF;filter:Alpha(Opacity=100);}
+.mytt{height:70px;background:#F7F8F9;filter:Alpha(Opacity=90);opacity: 0.9;border:0 solid  #FFFFFF;border-width:0 1px; padding: 4px;}/*这个是顶部透明层样式*/
+.my_mnue{height:400px;background:#F7F8F9;filter:Alpha(Opacity=90);opacity: 1;border:0 solid  #FFFFFF;border-width:0 1px; padding: 4px;}/*这个是左侧菜单透明效果*/
+
+
+/**透明样式*/
+
+.touming{background:#F7F8F9;filter:Alpha(Opacity=50);opacity: 0.5; position:relative;}
+
+/*首页用户头像照片样式*/
+
+.photokuang{
+position:relative; background-color:#CCCCCC;width:56px;height:66px; margin-left:20px; float:left; padding:2px; border:#ffffff solid 1px;}
+
+/*显示用户信息的表格样式*/
+
+.user_info_table{ background:#333333;filter:Alpha(Opacity=50);opacity: 0.5; margin-left:10px; border:#ffffff solid 1px; float:left; color:#FFFFFF; position:relative;}
+
+/*首页顶部快捷导航栏*/
+
+.top_banner{ border:#FFFFFF solid 1px;  width:70%; height:70px; background-color:#D5D5D5; margin-left:20px; float:left;filter:Alpha(Opacity=60);opacity: 0.6; position:relative;}
+
+
+
+/*页面主体部分开始定义样式*/
+
+
+.main{ height:600px; margin-top:10px; width:100%;}
+
+	
+	/* 首页中每个模块的标题*/
+	.index_title{ height:20px; font-family:"微软雅黑","宋体"; font-size:14px; text-align:left; padding-left:5px;background:#E7E7E7;filter:Alpha(Opacity=80);opacity: 0.8; position:relative; overflow:hidden;}
+	
+	/*首页中各模块标题列表样式*/
+	
+	/*活动*/
+	.title_list{ overflow:hidden;white-space:nowrap;text-overflow:ellipsis;float:left; width:220}	
+	.title_time{  float:left; text-align:center; width:80;}
+	
+	/*外出，项目，备忘*/
+	.title_list_middle{ overflow:hidden;white-space:nowrap;text-overflow:ellipsis;float:left; width:310px;}
+	.title_time_middle{ float:left; text-align:center; width:70px;}
+	
+	/*审批，督办*/
+	.title_list_long{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;float:left; width:560px;}
+	.title_time_long{  float:left; text-align:center; width:90px;}
+	
+	
+	/*页面中间主体 左部菜单 宽度 限定 样式*/
+
+.menu_left{ width:250px; height:auto; margin-left:0px;position:absolute; z-index:1;  left:10px; top:110px;	}
+
+	/*页面 右部 内容 宽度 限制 ，位置 定义  样式*/
+
+.main_right{
+	float:left;
+	margin-left:30px;
+	height:600px;
+	background:transparent;
+	width:80%;
+	position:absolute;
+	left:240px;
+	top:96px;
+}
+
+/*页面右边CSS模拟框架结构容器样式定义*/
+
+	
+
+
+	/*通知模块的样式定义*/
+	
+	.tongzhi{ width:30%; height:150px; float:left;}/*外部包围通知模块的层*/
+	.tongzhi_kuang{ padding:5px; background:#F7F8F9;filter:Alpha(Opacity=70);opacity: 0.9;}
+	.tongzhi_content{background-color:#ffffff; position:relative;opacity: 1; height:110px; padding:5px; border:#cccccc solid 1px; overflow:hidden;
+	text-overflow:ellipsis;}/*通知内容模块*/
+	
+	/*最新活动模块*/
+	.huodong{ width:30%; height:150px; float:left; margin-left:10px;}/*外部包围通知模块的层*/
+	.huodong_kuang{ padding:5px; background:#F7F8F9;filter:Alpha(Opacity=70);opacity: 0.9;}
+	.huodong_content{background-color:#ffffff; position:relative;opacity: 1; height:110px; padding:5px;border:#cccccc solid 1px; overflow:hidden;text-overflow:ellipsis;}/*活动内容模块*/
+	
+	/*外出登记模块*/
+	.waichu{ width:37%; height:150px; float:left; margin-left:10px;}/*外部包围通知模块的层*/
+	.waichu_kuang{ padding:5px; background:#F7F8F9;filter:Alpha(Opacity=70);opacity: 0.9;}
+	.waichu_content{background-color:#ffffff; position:relative;opacity: 1; height:110px; padding:5px;border:#cccccc solid 1px; overflow:hidden;text-overflow:ellipsis;}/*外出登记内容模块*/
+	
+	/*等待审批模块*/
+	.shenpi{ width:61%; height:150px; float:left; margin-top:25px;}/*外部包围通知模块的层*/
+	.shenpi_kuang{ padding:5px; background:#F7F8F9;filter:Alpha(Opacity=70);opacity: 0.9;}
+	.shenpi_content{background-color:#ffffff; position:relative;opacity: 1; height:110px; padding:5px;border:#cccccc solid 1px; overflow:hidden;text-overflow:ellipsis;}/*审批内容模块*/
+	
+	/*项目信息模块*/
+	.project{ width:37%; height:150px; float:left; margin-left:10px;margin-top:25px;}/*外部包围通知模块的层*/
+	.project_kuang{ padding:5px; background:#F7F8F9;filter:Alpha(Opacity=70);opacity: 0.9;}
+	.project_content{background-color:#ffffff; position:relative;opacity: 1; height:110px; padding:5px;border:#cccccc solid 1px; overflow:hidden;text-overflow:ellipsis;}/*外出登记内容模块*/
+
+
+
+
+
+
+
+
+/*页面底部导航样式*/
+
+img {
+	border: none;
+}
+
+/* dock - top */
+.dock {
+	position: relative; 
+	height: 50px; 
+	text-align: center;
+}
+.dock-container {
+	position: absolute;
+	height: 50px;
+	background: url(images/dock-bg2.gif);
+	padding-left: 20px;
+}
+a.dock-item {
+	display: block;
+	width: 40px;
+	color: #000;
+	position: absolute;
+	top: 0px;
+	text-align: center;
+	text-decoration: none;
+	font: bold 12px Arial, Helvetica, sans-serif;
+}
+.dock-item img {
+	border: none; 
+	margin: 5px 10px 0px; 
+	width: 100%; 
+}
+.dock-item span {
+	display: none; 
+	padding-left: 20px;
+}
+
+/* dock2 - bottom */
+#dock2 {
+	width: 100%;
+	bottom: 0px;
+	position: absolute;
+	left: 0px;
+}
+.dock-container2 {
+	position: absolute;
+	height: 50px;
+	background: url(images/dock-bg.gif);
+	padding-left: 20px;
+}
+a.dock-item2 {
+	display: block; 
+	font: bold 14px "微软雅黑", "宋体",Arial, Helvetica, sans-serif;
+	width: 40px; 
+	color: #ffffff;	
+	bottom: 0px;
+	position: absolute;
+	text-align: center;
+	text-decoration: none;
+}
+
+.dock-item2 span {
+	display: none;
+	padding-left: 20px;
+}
+.dock-item2 img {
+	border: none; 
+	margin: 5px 10px 10px;
+	width: 100%; 
+}

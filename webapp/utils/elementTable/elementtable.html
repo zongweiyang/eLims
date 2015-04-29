@@ -1,0 +1,462 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>元素周期表</title>
+<style type="text/css">
+<script type="text/javascript" src="jquery-latest.pack.js"></script>
+<!--
+	body,table {font-family:"tahoma"; font-size: 8pt; line-height:19px;}
+-->
+</style>
+<style type="text/css"><!--	body,table {font-family:"tahoma"; font-size: 8pt; line-height:19px;}--></style></head>
+
+<body bgcolor="#FFFFCC" vlink="#000000" alink="#000000" link="#000000">
+
+<input  type="checkbox"  name="bytype" id="bytype" value="0"  onclick="showTable(this);">定性</input>
+<input  type="checkbox"  name="byvalue" id="byvalue" value="1" onclick="showTable(this);" >定量</input>
+<div align="center" id="elementTable"  style="display:none">
+  <table border="1" width="560" height="220" bgcolor="#FFFFCC" bordercolorlight="#6699FF" bordercolordark="#99CCFF">
+    <center>
+    </center>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC" ><b><font color="#008080" >IA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#6699FF">碱金属</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#99CCFF">碱土金属</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#FF99CC">过渡元素</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">
+        <p align="center"><b><font color="#008080" >0</font></b></td>
+    </tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >1</font></td>
+      <td width="30" align="center" height="30" bgcolor="#99FF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font  color="#000000"><span>H</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IIA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#CCFF99">主族金属</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#00FF00">非金属</td>
+      <td width="60" align="center" height="30" colspan="2" bgcolor="#C0C0C0">稀有气体</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IIIA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IVA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VIA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VIIA</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>He</span></b></td>
+    </tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >2</font></td>
+      <td width="30" align="center" height="30" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Li</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Be</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>B</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>C</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>N</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>O</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>F</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ne</span></b></td>
+    </tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >3</font></td>
+      <td width="30" align="center" height="30" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Na</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Mg</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IIIB</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IVB</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VB</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VIB</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >VIIB</font></b></td>
+    <td width="30" align="center" colspan="3" height="30" bgcolor="#FFFFCC">
+      <p align="left"><b><font color="#008080" >VIIIB</font></b></td>
+    <center>
+    <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IB</font></b></td>
+    <td width="30" align="center" height="30" bgcolor="#FFFFCC"><b><font color="#008080" >IIB</font></b></td>
+    <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Al</span></b></td>
+    <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Si</span></b></td>
+    <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>P</span></b></td>
+    <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>S</span></b></td>
+    <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Cl</span></b></td>
+    <td width="30" align="center" height="30" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ar</span></b></td>
+    </center></tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >4</font></td>
+      <td width="30" align="center" height="30" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>K</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ca</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Sc</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ti</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>V</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Cr</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Mn</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Fe</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Co</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ni</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Cu</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Zn</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ga</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ge</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>As</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Se</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Br</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Kr</span></b></td>
+    </tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >5</font></td>
+      <td width="30" align="center" height="30" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Rb</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Sr</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Y</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Zr</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Nb</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Mo</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000"><span>Tc</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ru</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Rh</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Pd</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ag</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Cd</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>In</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Sn</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Sb</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Te</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>I</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Xe</span></b></td>
+    </tr>
+    <tr>
+      <td width="20" height="17" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >6</font></td>
+      <td width="30" align="center" height="17" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Cs</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ba</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>La</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Hf</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ta</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>W</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Re</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Os</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ir</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Pt</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Au</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Hg</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Tl</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Pb</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Bi</span></b></td>
+      <td width="30" align="center" height="17" bgcolor="#CCFF99"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Po</span></font> </b></td>
+      <td width="30" align="center" height="17" bgcolor="#00FF00"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>At</span></font> </b></td>
+      <td width="30" align="center" height="17" bgcolor="#C0C0C0"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Rn</span></font> </b></td>
+    </tr>
+    <tr>
+      <td width="20" height="30" align="center" bgcolor="#FFFFCC"><font color="#FF00FF" >7</font></td>
+      <td width="30" align="center" height="30" bgcolor="#6699FF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Fr</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#99CCFF"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Ra</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><font color="#FF0000" ><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    />Ac</font></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Rf</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Db</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Sg</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Bh</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Hs</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Mt</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Uun</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Uuu</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Uub</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+      <td width="30" align="center" height="30" bgcolor="#FFFFCC">　</td>
+    </tr>
+  </table>
+  <br>
+  <table border="1" width="560" height="55" bgcolor="#FFFFCC" bordercolorlight="#6699FF" bordercolordark="#99CCFF">
+    <tr>
+      <td width="47" height="30" align="center" colspan="2" bgcolor="#FFFFCC">镧系</td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>La</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ce</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Pr</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Nd</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000"><span>Pm</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Sm</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Eu</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Gd</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Tb</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Dy</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Ho</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Er</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Tm</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Yb</span></b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><span>Lu</span></b></td>
+      <td width="30" align="center" height="30">　</td>
+      <td width="30" align="center" height="30">　</td>
+    </tr>
+    <tr>
+      <td width="47" height="30" align="center" colspan="2" bgcolor="#FFFFCC">锕系</td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Ac</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Th</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Pa</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>U</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Np</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Pu</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Am</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Cm</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Bk</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Cf</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Es</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Fm</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Md</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>No</span></font> </b></td>
+      <td width="30" align="center" height="30" bgcolor="#FF99CC"><b><INPUT TYPE='checkbox' onClick='doSelect(this);' NAME='displayid'    /><font color="#FF0000" ><span>Lr</span></font> </b></td>
+      <td width="30" align="center" height="30">　</td>
+      <td width="30" align="center" height="30">　</td>
+    </tr>
+  </table>
+  
+</div>
+
+<script language="javascript">
+	
+	function doSelect(object) {
+	
+		var content = document.getElementById("selectitems").value;
+		
+		try{
+			var lable=object.parentElement.outerText;
+		}catch(e)
+		{
+		
+			var temptd=object.parentNode;
+		
+			var b=temptd.getElementsByTagName("span");
+			
+			var lable=b[0].innerHTML;
+		}
+		
+		
+		
+	
+	
+		
+		
+	
+		var objflag = object.checked;
+		var returnString="";
+		
+
+		if (objflag) {
+			if (content.length > 0) {
+				var tempString=returnString;
+				tempString = content.concat(",", lable);
+				
+				returnString="";
+
+				var tempArr=tempString.split(",");
+				for(var i=0;i<tempArr.length;i++)
+				{
+					if(tempArr[i]!="定性"&&tempArr[i]!="定量")
+					{
+						
+						if (returnString=="")
+						{
+							returnString=tempArr[i];
+						}else
+						{
+							returnString=returnString+","+tempArr[i];
+						}
+
+					
+					}
+				}
+				
+			} else {
+				returnString = lable;
+				
+			}
+		} else {
+			var selectors=document.getElementsByName("displayid");
+			
+			var lables=new Array();
+			for(var i=0;i<selectors.length;i++)
+			{
+				lables[i]=selectors[i].parentElement.outerText;
+				
+					try{
+						lables[i]=selectors[i].parentElement.outerText;
+
+					}catch(e)
+					{
+						
+							var temptd1=selectors[i].parentNode;
+						
+							var b1=temptd.getElementsByTagName("span");
+							
+							var lable=b1[0].innerHTML;
+					
+					}
+				
+			}
+
+	
+			for(var i=0;i<selectors.length;i++)
+			{
+				if(selectors[i].checked)
+				{
+					if(returnString=="")
+					{
+						returnString=lables[i];
+						
+					}else
+					{
+						returnString=returnString+","+lables[i];
+						
+					}
+				
+				}
+				
+			}
+			
+			
+		}
+
+		var bytype=document.getElementById("bytype");
+		var byvalue=document.getElementById("byvalue");
+		var byStr="";
+		if (bytype.checked)
+		{
+			byStr+="定性";
+		}
+		if (byvalue.checked)
+		{
+			if(byStr!="")
+			{
+				byStr+=",定量";
+			}
+			else{
+				byStr="定量";
+			}
+		}
+		if(returnString!="")
+		{
+			document.getElementById("selectitems").value =byStr+","+ returnString;
+		}
+		else
+		{
+			document.getElementById("selectitems").value =byStr;
+		}
+		
+	}
+	function showTable(object)
+	{
+		
+		var 	displaydiv=document.getElementById("elementTable");
+		var		bytype=document.getElementById("bytype");
+		var		byvalue=document.getElementById("byvalue");
+		var		content = document.getElementById("selectitems");
+		if(object.value=='1'&&object.checked)
+		{
+			displaydiv.style.display = "block";
+			if (content.value!="")
+			{
+				content.value=content.value+","+"定量";
+			}else{
+				content.value="定量";
+			}
+		}else 
+		{
+			if(object.value!='0')
+			{
+				displaydiv.style.display = "none";
+				content.value="";
+					if(bytype.checked){
+						content.value="定性";
+					}
+			}else
+			{
+				
+				if(bytype.checked)
+				{
+					if (content.value!="")
+						{
+							content.value=content.value+","+"定性";
+						}else{
+							content.value="定性";
+						}
+				
+				
+				}else{
+					
+					var temparr=new Array();
+					var tempStr="";
+					tempStr=content.value;
+					temparr=tempStr.split(',');
+					tempStr="";
+					for(var i=0;i<temparr.length;i++)
+					{
+						if (temparr[i]!="定性")
+						{
+							if(tempStr=="")
+							{
+								tempStr=temparr[i];
+							}else
+							{
+								tempStr=tempStr+","+temparr[i];
+							}
+						}
+						
+					}
+					
+					content.value=tempStr;
+				}
+			}
+		}
+		
+	}
+	function submitThis()
+	{
+		var		content = document.getElementById("selectitems");
+		
+		parent.document.getElementById("detectrequirement").value=content.value;
+		self.parent.tb_remove();
+	}
+	function closeMe()
+	{
+		self.parent.tb_remove();
+	}
+	
+</script>
+
+<div align="center">
+  <center>
+  <table border="0" width="560" height="50">
+    <tr>
+    	<td bgcolor="#99CCFF" align="left">
+		<textarea rows="3" cols="80"  name="selectitems"  id="selectitems"  ></textarea>
+		<input  type="button" value="确定"name="确定" onclick="submitThis();"/>
+		<input  type="button" value="关闭"name="关闭" onclick="closeMe();"/>
+		</td>
+		
+    </tr>
+  </table>
+  </center>
+</div>
+<script type="text/javascript">
+	
+	var	content = document.getElementById("selectitems");
+	content.value=parent.document.getElementById("detectrequirement").value;
+</script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<?xml version='1.0' standalone='no'?>
+<tools>
+   <t id="tnew">
+     <imgurl>../mathedit_m/image/tnew.gif</imgurl>
+     <action>doNewCmd()</action>
+   </t>
+   <t id="topen">
+     <imgurl>../mathedit_m/image/topen.gif</imgurl>
+     <action>doOpenCmd()</action>
+   </t>
+   <t id="tsave">
+     <imgurl>../mathedit_m/image/tsave.gif</imgurl>
+     <action>doSaveCmd()</action>
+   </t>
+   <t id="treturnmainwindow">
+     <imgurl>../mathedit_m/image/treturnmainwindow.gif</imgurl>
+     <action>doSaveCmd()</action>
+   </t>
+   <t id="tcut">
+     <imgurl>../mathedit_m/image/tcut.gif</imgurl>
+     <action>doSaveCmd()</action>
+   </t>
+   <t id="tcopy">
+     <imgurl>../mathedit_m/image/tcopy.gif</imgurl>
+     <action>doSaveCmd()</action>
+   </t>
+   <t id="tpaste">
+     <imgurl>../mathedit_m/image/tpaste.gif</imgurl>
+     <action>doSaveCmd()</action>
+   </t>
+   <t id="tundo">
+     <imgurl>../mathedit_m/image/tundo.gif</imgurl>
+     <action>undo()</action>
+   </t>
+   <t id="tredo">
+     <imgurl>../mathedit_m/image/tredo.gif</imgurl>
+     <action>redo()</action>
+   </t>
+   <t id="tfont">
+     <f>Font</f>
+     <f>Times New Roman</f>
+     <f>Courier</f>
+     <f>Garamond</f>
+     <f>serif</f>
+     <action>dofont()</action>
+   </t>
+   <t id="tfontsize">
+     <f>Size</f>
+     <f>Small</f>
+     <f>Normal</f>
+     <f>Big</f>
+     <action>dofontsize()</action>
+   </t>
+   <t id="tbold">
+     <imgurl>../mathedit_m/image/tbold.gif</imgurl>
+     <action>doBoldCmd1()</action>
+   </t>
+   <t id="titalic">
+     <imgurl>../mathedit_m/image/titalic.gif</imgurl>
+     <action>doItalicCmd1()</action>
+   </t>
+   <t id="tforecolor">
+     <imgurl>../mathedit_m/image/tforecolor.gif</imgurl>
+     <action>doColorCmd()</action>
+   </t>
+   <t id="tbackcolor">
+     <imgurl>../mathedit_m/image/tbackcolor.gif</imgurl>
+     <action>doBackgroundColorCmd()</action>
+   </t>
+   
+</tools>

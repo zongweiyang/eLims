@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="formula.labFormula" namespace="/formula/labFormula" extends="globalpackage">
+			<action name="listLabFormula" method="listLabFormula" class="labFormulaAction">
+				<result name="list">
+					/jsp/common/formula/labFormulaList.jsp
+				</result>
+			</action>
+			<action name="showLabFormula" method="showLabFormula" class="labFormulaAction">
+				<result name="show">
+					/jsp/common/formula/labFormulaShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabFormula" method="preAddLabFormula" class="labFormulaAction">
+				<result name="preAdd">
+					/jsp/common/formula/labFormulaAdd.jsp
+				</result>
+			</action>
+			<action name="addLabFormula" method="addLabFormula" class="labFormulaAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabFormula.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabFormula" method="preUpdateLabFormula" class="labFormulaAction">
+				<result name="preUpdate">
+					/jsp/common/formula/labFormulaUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabFormula" method="updateLabFormula" class="labFormulaAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabFormula.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabFormula" method="deleteBatchLabFormula" class="labFormulaAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabFormula.action</param>
+				</result>
+			</action>
+			<action name="deleteLabFormula" method="deleteLabFormula" class="labFormulaAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabFormula.action</param>
+				</result>
+			</action>
+			<action name="showFormula" method="showFormula" class="labFormulaAction">
+				<result name="show">
+					/jsp/common/formula/formulaShow.jsp
+				</result>
+			</action>
+			<action name="ajaxLabFormulaParameter" method="ajaxLabFormulaParameter" class="labFormulaAction"></action>
+		</package>
+		<package name="formula.labFormulaApply" namespace="/formula/labFormulaApply" extends="globalpackage">
+			<action name="listLabFormulaApply" method="listLabFormulaApply" class="labFormulaApplyAction">
+				<result name="list">
+					/jsp/common/formula/labFormulaApplyList.jsp
+				</result>
+			</action>
+			<action name="showLabFormulaApply" method="showLabFormulaApply" class="labFormulaApplyAction">
+				<result name="show">
+					/jsp/common/formula/labFormulaApplyShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabFormulaApply" method="preAddLabFormulaApply" class="labFormulaApplyAction">
+				<result name="preAdd">
+					/jsp/common/formula/labFormulaApplyAdd.jsp
+				</result>
+			</action>
+			<action name="addLabFormulaApply" method="addLabFormulaApply" class="labFormulaApplyAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabFormulaApply.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabFormulaApply" method="preUpdateLabFormulaApply" class="labFormulaApplyAction">
+				<result name="preUpdate">
+					/jsp/common/formula/labFormulaApplyUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabFormulaApply" method="updateLabFormulaApply" class="labFormulaApplyAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabFormulaApply.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabFormulaApply" method="deleteBatchLabFormulaApply" class="labFormulaApplyAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabFormulaApply.action</param>
+				</result>
+			</action>
+			<action name="deleteLabFormulaApply" method="deleteLabFormulaApply" class="labFormulaApplyAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabFormulaApply.action</param>
+				</result>
+			</action>
+			<action name="ajaxReckonFormula" method="ajaxReckonFormula" class="labFormulaApplyAction"></action>
+			<action name="ajaxFormulaApply" method="ajaxFormulaApply" class="labFormulaApplyAction"></action>
+		</package>
+</struts>

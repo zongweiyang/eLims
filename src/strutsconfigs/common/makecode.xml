@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="makecode.labMakeCode" namespace="/makecode/labMakeCode" extends="globalpackage">
+			<action name="listLabMakeCode" method="listLabMakeCode" class="labMakeCodeAction">
+				<result name="list">
+					/jsp/common/makecode/labMakeCodeList.jsp
+				</result>
+			</action>
+			<action name="showLabMakeCode" method="showLabMakeCode" class="labMakeCodeAction">
+				<result name="show">
+					/jsp/common/makecode/labMakeCodeShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabMakeCode" method="preAddLabMakeCode" class="labMakeCodeAction">
+				<result name="preAdd">
+					/jsp/common/makecode/labMakeCodeAdd.jsp
+				</result>
+			</action>
+			<action name="addLabMakeCode" method="addLabMakeCode" class="labMakeCodeAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabMakeCode.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabMakeCode" method="preUpdateLabMakeCode" class="labMakeCodeAction">
+				<result name="preUpdate">
+					/jsp/common/makecode/labMakeCodeUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabMakeCode" method="updateLabMakeCode" class="labMakeCodeAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabMakeCode.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabMakeCode" method="deleteBatchLabMakeCode" class="labMakeCodeAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabMakeCode.action</param>
+				</result>
+			</action>
+			<action name="deleteLabMakeCode" method="deleteLabMakeCode" class="labMakeCodeAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabMakeCode.action</param>
+				</result>
+			</action>
+			<action name="ajaxValidate" method="ajaxValidate" class="cn.labsoft.labos.common.makecode.action.LabMakeCodeAction">
+			</action>
+			<action name="ajaxLabWfFunStep4Select" method="ajaxLabWfFunStep4Select" class="cn.labsoft.labos.common.makecode.action.LabMakeCodeAction"></action>
+		</package>
+</struts>

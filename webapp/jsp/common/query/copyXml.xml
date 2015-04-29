@@ -1,0 +1,8 @@
+	<action name="actionName" method="actionMethod" class="actionURL">
+				<result name="list">
+					JSPURL/queryList.jsp
+				</result>
+				<result name="list1">
+					JSPURL/query2List.jsp
+				</result>
+	</action>

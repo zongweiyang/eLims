@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.i18n.reload" value="false" />
+	<constant name="struts.custom.i18n.resources" value="resources/ApplicationResources"></constant>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.configuration.xml.reload" value="true" />
+	<constant name="struts.action.extension" value="action,," />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.serve.static" value="true" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 文件上传的文件最大值配置100m -->
+	<constant name="struts.multipart.maxSize" value="104857600"></constant>
+
+	<!--基础配置 -->
+	<include file="strutsconfigs/base/*.xml" />
+	<!-- 系统模块 -->
+	<include file="strutsconfigs/system/*.xml" />
+	<!-- 组件模块 -->
+	<include file="strutsconfigs/common/*.xml" />
+	<!-- 业务模块 -->
+	<include file="strutsconfigs/business/*.xml" />
+	<!-- 资源模块 -->
+	<include file="strutsconfigs/source/*.xml" />
+</struts>

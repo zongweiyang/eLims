@@ -1,0 +1,27 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+.box {
+	/*position: absolute;*/
+	top: 50%;
+	left: 50%;
+	/*height:400px;*/
+	width:400px;
+	/*margin-top: 00px;*/
+	/*margin-left: -200px;*/
+}
+.select {
+	border:1px gray solid;
+	position: absolute;
+	display: none;
+	background-color: white;
+	max-height: 200px;
+	overflow-y: auto;
+	
+}
+.select_hover {
+	background-color:#ADD8E6;
+	color:white;
+	cursor:pointer;
+}

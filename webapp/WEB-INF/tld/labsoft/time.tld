@@ -1,0 +1,37 @@
+<taglib>
+	<tlib-version>2.2.3</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>my</short-name>
+	<uri>/jtime</uri>
+	<display-name>"jason time tab"</display-name>
+	<tag>
+		<name>jtime</name>
+		<tag-class>cn.labsoft.labos.framework.common.taglib.JtimeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>message</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>who</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+	<tag>
+		<name>jbutton</name>
+		<tag-class>cn.labsoft.labos.framework.common.taglib.JButtonTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>buttonFunction</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		<attribute>
+			<name>buttonType</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+	</tag>
+</taglib>

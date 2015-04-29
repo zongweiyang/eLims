@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<!--组织管理-->
+	<package name="coreextend.extend" namespace="/coreextend/extend" extends="globalpackage">
+		<action name="*" class="coreExtendAction" method="{1}">
+			<result name="sigleTenant">/theme/${themeType}/loginPage4sigle.jsp</result>
+			<result name="mutiTenant">/theme/${themeType}/loginPage4multi.jsp</result>
+			<result name="loginSuccess">/theme/${themeType}/main.jsp</result>
+			<result name="input">/jsp/error/loginerror.jsp</result>
+			<result name="topframe">/theme/${themeType}/topframe.jsp</result>
+			<result name="leftframe">/theme/${themeType}/leftframe.jsp</result>
+			<result name="homepage">/theme/${themeType}/homepage.jsp</result>
+			<result name="iconMenu">/theme/${themeType}/iconframe.jsp</result>
+			<result name="show">/theme/${themeType}/labOrgShow.jsp</result>
+		</action>
+	</package>
+</struts>

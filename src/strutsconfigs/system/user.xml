@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="user.labUser" namespace="/user/labUser" extends="globalpackage">
+		<action name="listLabUser" class="labUserAction" method="listLabUser">
+			<result name="list">/jsp/base/user/userList.jsp</result>
+		</action>
+		<action name="listLabUser4Org" class="labUserAction" method="listLabUser4Org">
+			<result name="list">/jsp/base/user/userList4Org.jsp</result>
+		</action>
+		<action name="preAddLabUser" class="labUserAction" method="preAddLabUser">
+			<result name="preAdd">/jsp/base/user/userAdd.jsp</result>
+			<result name="preAdd4Admin">/jsp/base/user/userAdd4Admin.jsp</result>
+		</action>
+		<action name="addLabUser" class="labUserAction" method="addLabUser">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabUser.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabUser" class="labUserAction" method="preUpdateLabUser">
+			<result name="preUpdate">/jsp/base/user/userUpdate.jsp</result>
+			<result name="preUpdate4Admin">/jsp/base/user/userUpdate4Admin.jsp</result>
+		</action>
+		<action name="showLabUser4Org" class="labUserAction" method="preUpdateLabUser">
+			<result name="preUpdate">/jsp/base/user/userShow4Org.jsp</result>
+		</action>
+		<action name="preUpdateLabUser4Org" class="labUserAction" method="preUpdateLabUser">
+			<result name="preUpdate">/jsp/base/user/userUpdate4Org.jsp</result>
+		</action>
+		<action name="updateLabUser" class="labUserAction" method="updateLabUser">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUser.action</param>
+			</result>
+		</action>
+		<action name="updateLabUser4Org" class="labUserAction" method="updateLabUser4Org">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUser4Org.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabUser4fun" class="labUserAction" method="preUpdateLabUser4fun">
+			<result name="preUpdate">/jsp/base/user/userFunUpdate.jsp</result>
+		</action>
+		<action name="updateLabUser4fun" class="labUserAction" method="updateLabUser4fun">
+			<result name="update" type="redirectAction">
+				<param name="actionName">preUpdateLabUser4fun.action</param>
+				<param name="labUserVo.id">${labUserVo.id}</param>
+			</result>
+		</action>
+		<!-- <action name="updateLabUser4Self" class="labUserAction" method="updateLabUser4Self">
+			<result name="preUpdate">/jsp/base/user/userUpdateSelf.jsp</result>
+		</action> -->
+		<action name="showLabUser" class="labUserAction" method="showLabUser">
+			<result name="show">/jsp/base/user/userShow.jsp</result>
+		</action>
+		<action name="deleteLabUser" class="labUserAction" method="deleteLabUser">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabUser.action</param>
+			</result>
+		</action>
+		<action name="ajax4IpByLoginName" class="labUserAction" method="ajax4IpByLoginName"></action>
+		<action name="isExistLoginName" class="labUserAction" method="isExistLoginName"></action>
+		<action name="isTruePassword" class="labUserAction" method="isTruePassword"></action>
+		<action name="showLabRole4Select" class="labUserAction" method="showLabRole4Select">
+			<result name="list">/jsp/base/user/roleList4select.jsp</result>
+		</action>
+		<action name="preTreeLabFunction" class="labUserAction" method="preTreeLabFunction">
+			<result name="preTree">/jsp/base/user/funTree4Select.jsp</result>
+		</action>
+		<action name="addLabUserFun" class="labUserAction" method="addLabUserFun">
+			<result name="add">/jsp/base/user/funTree4Select.jsp</result>
+		</action>
+		<action name="treeLabFunction" class="labUserAction" method="treeLabFunction"></action>
+		
+		<action name="preUpdateLabUser4Center" class="labUserAction" method="preUpdateLabUser4Center">
+			<result name="preUpdate">/jsp/base/user/user4Center.jsp</result>
+		</action>
+		<action name="showLabUser4Center1" class="labUserAction" method="showLabUser4Center1">
+			<result name="show">/jsp/base/user/user4Center1.jsp</result>
+		</action>
+		<action name="showLabUser4Center2" class="labUserAction" method="showLabUser4Center2">
+			<result name="show">/jsp/base/user/user4Center2.jsp</result>
+		</action>
+		<action name="showLabUser4Center3" class="labUserAction" method="showLabUser4Center3">
+			<result name="show">/jsp/base/user/user4Center3.jsp</result>
+		</action>
+		<action name="updateLabUser4Center" class="labUserAction" method="updateLabUser4Center">
+			<result name="update" type="redirectAction">
+				<param name="actionName">preUpdateLabUser4Center</param>
+				<param name="labUserVo.id">${labUserVo.id}</param>
+			</result>
+		</action>
+		<action name="listUserQuery" method="listUserQuery" class="cn.labsoft.labos.base.user.action.LabUserAction">
+				<result name="list">
+					/jsp/base/user/queryList.jsp
+				</result>
+				<result name="list1">
+					/jsp/base/user/query2List.jsp
+				</result>
+		</action>
+		<action name="deleteLabUserFun" class="labUserAction" method="deleteLabUserFun">
+		</action>
+	</package>
+	<package name="user.labUserCred" namespace="/user/labUserCred" extends="globalpackage">
+		<action name="listLabUserCred" method="listLabUserCred" class="labUserCredAction">
+			<result name="list">/jsp/base/user/cred/labUserCredList.jsp</result>
+		</action>
+		<action name="showLabUserCred" method="showLabUserCred" class="labUserCredAction">
+			<result name="show">/jsp/base/user/cred/labUserCredShow.jsp</result>
+		</action>
+		<action name="preAddLabUserCred" method="preAddLabUserCred" class="labUserCredAction">
+			<result name="preAdd">/jsp/base/user/cred/labUserCredAdd.jsp</result>
+		</action>
+		<action name="addLabUserCred" method="addLabUserCred" class="labUserCredAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabUserCred.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabUserCred" method="preUpdateLabUserCred" class="labUserCredAction">
+			<result name="preUpdate">/jsp/base/user/cred/labUserCredUpdate.jsp</result>
+		</action>
+		<action name="updateLabUserCred" method="updateLabUserCred" class="labUserCredAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUserCred.action</param>
+			</result>
+		</action>
+		<action name="deleteLabUserCred" method="deleteLabUserCred" class="labUserCredAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabUserCred.action</param>
+			</result>
+		</action>
+		<action name="updateLabUserCred4Del" method="updateLabUserCred4Del" class="labUserCredAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabUserCred.action</param>
+			</result>
+		</action>
+		<action name="showLabUser4Select" method="showLabUser4Select" class="labUserAction">
+			<result name="list">/jsp/base/user/cred/showLabUser4Select.jsp</result>
+		</action>
+	</package>
+	<package name="user.labUserTrain" namespace="/user/labUserTrain" extends="globalpackage">
+		<action name="listLabUserTrain" method="listLabUserTrain" class="labUserTrainAction">
+			<result name="list">/jsp/base/user/train/labUserTrainList.jsp</result>
+		</action>
+		<action name="showLabUserTrain" method="showLabUserTrain" class="labUserTrainAction">
+			<result name="show">/jsp/base/user/train/labUserTrainShow.jsp</result>
+		</action>
+		<action name="preAddLabUserTrain" method="preAddLabUserTrain" class="labUserTrainAction">
+			<result name="preAdd">/jsp/base/user/train/labUserTrainAdd.jsp</result>
+		</action>
+		<action name="addLabUserTrain" method="addLabUserTrain" class="labUserTrainAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabUserTrain" method="preUpdateLabUserTrain" class="labUserTrainAction">
+			<result name="preUpdate">/jsp/base/user/train/labUserTrainUpdate.jsp</result>
+		</action>
+		<action name="updateLabUserTrain" method="updateLabUserTrain" class="labUserTrainAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+		<action name="deleteLabUserTrain" method="deleteLabUserTrain" class="labUserTrainAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+		<action name="updateLabUserTrain4Del" method="updateLabUserTrain4Del" class="labUserTrainAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+		<action name="showLabUser4Select" method="showLabUser4Select" class="labUserAction">
+			<result name="list">/jsp/base/user/train/showLabUser4Select.jsp</result>
+		</action>
+		<action name="preUpdateLabUserTrain4Record" method="preUpdateLabUserTrain4Record" class="labUserTrainAction">
+			<result name="preUpdate">/jsp/base/user/train/labUserTrainUpdate4Record.jsp</result>
+		</action>
+		<action name="updateLabUserTrain4Record" method="updateLabUserTrain4Record" class="labUserTrainAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+		<action name="updateLabUserTrain4End" method="updateLabUserTrain4End" class="labUserTrainAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabUserTrain.action</param>
+			</result>
+		</action>
+	</package>
+</struts>

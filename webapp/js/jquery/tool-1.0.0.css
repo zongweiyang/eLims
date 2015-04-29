@@ -1,0 +1,14 @@
+.validation-success{
+	background:url(img/accept.png) no-repeat;
+}
+.validation-error{
+	background:url(img/cancel.png) no-repeat;	
+}
+.validation-success,.validation-error{
+	width:16px;height:16px;
+	margin-left:3px;
+	display:inline;
+}
+.validation-input-error{
+	border:1px solid red;height:22px;
+}

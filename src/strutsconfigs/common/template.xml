@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="template.labTemplate" namespace="/template/labTemplate" extends="globalpackage">
+		<action name="listLabTemplate" class="labTemplateAction" method="listLabTemplate">
+			<result name="list">/jsp/common/template/templateList.jsp</result>
+		</action>
+		<action name="preAddLabTemplate" class="labTemplateAction" method="preAddLabTemplate">
+			<result name="preAdd">/jsp/common/template/templateAdd.jsp</result>
+		</action>
+		<action name="addLabTemplate" class="labTemplateAction" method="addLabTemplate">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabTemplate</param>
+			</result>
+		</action>
+		<action name="preUpdateLabTemplate" class="labTemplateAction" method="preUpdateLabTemplate">
+			<result name="preUpdate">/jsp/common/template/templateUpdate.jsp</result>
+		</action>
+		<action name="updateLabTemplate" class="labTemplateAction" method="updateLabTemplate">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabTemplate</param>
+			</result>
+		</action>
+		<action name="updateLabTemplate4Del" class="labTemplateAction" method="updateLabTemplate4Del">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabTemplate</param>
+			</result>
+		</action>
+		<action name="preUpdateLabTemplate4Edit" class="labTemplateAction" method="preUpdateLabTemplate4Edit">
+			<result name="preUpdate">/jsp/common/template/templateUpdate4Edit.jsp</result>
+		</action>
+		<action name="updateLabTemplate4Edit" class="labTemplateAction" method="updateLabTemplate4Edit">
+			<result name="update" type="redirectAction">
+				<param name="actionName">preUpdateLabTemplate4Edit</param>
+				<param name="labTemplateVo.id">${labTemplateVo.id}</param>
+			</result>
+		</action>
+		<action name="ajaxVerification4Export" class="labTemplateAction" method="ajaxVerification4Export"></action>
+	</package>
+</struts>

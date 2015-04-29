@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="code.labCode" namespace="/code/labCode" extends="globalpackage">
+		<action name="listLabCode" method="listLabCode" class="labCodeAction">
+			<result name="list">/jsp/base/code/labCodeList.jsp</result>
+		</action>
+		<action name="preAddLabCode" method="preAddLabCode" class="labCodeAction">
+			<result name="preAdd">/jsp/base/code/labCodeAdd.jsp</result>
+		</action>
+		<action name="addLabCode" method="addLabCode" class="labCodeAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">showListLabCode?labCodeVo.typeid=${labCodeVo.typeid}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabCode" method="preUpdateLabCode" class="labCodeAction">
+			<result name="preUpdate">/jsp/base/code/labCodeUpdate.jsp</result>
+		</action>
+		<action name="updateLabCode" method="updateLabCode" class="labCodeAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">showListLabCode?labCodeVo.typeid=${labCodeVo.typeid}</param>
+			</result>
+		</action>
+		<action name="deleteLabCode" method="deleteLabCode" class="labCodeAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">showListLabCode?labCodeVo.typeid=${labCodeVo.typeid}</param>
+			</result>
+		</action>
+		<action name="ajaxIsExsitLabCode" method="ajaxIsExsitLabCode" class="labCodeAction"></action>
+		<action name="ajaxLabCodeList" method="ajaxLabCodeList" class="labCodeAction"></action>
+		<!--设置 -->
+		<action name="showListLabCode" method="showListLabCode"	 class="labCodeAction">
+			<result name="showListLabCode">
+				/jsp/base/code/labCommCodeList.jsp
+			</result>
+		</action>
+		
+		 <action name="addLabCode4Code" method="addLabCode4Code"
+			class="labCodeAction">
+			<result name="addLabCode" type="redirectAction">
+				<param name="actionName">/showListLabCode.action</param>
+				<param name="labCodeVo.typeid">
+					${labCodeVo.typeid}
+				</param>
+				<param name="labCodeVo.typename">
+					${labCodeVo.typename}
+				</param>
+			</result>
+		</action>
+		<action name="preUpdateLabCode4Code" method="preUpdateLabCode4Code"
+			class="labCodeAction">
+			<result name="preUpdateLabCode">
+				/jsp/base/code/labCodePreUpdate.jsp
+			</result>
+			<result name="listLabCode">
+				/jsp/base/code/labCommCodeList.jsp
+			</result>
+		</action>
+		<action name="updateLabCode4Code" method="updateLabCode4Code"
+			class="labCodeAction">
+			<result name="updateLabCode" type="redirectAction">
+				<param name="actionName">/showListLabCode.action</param>
+				<param name="labCodeVo.typeid">
+					${labCodeVo.typeid}
+				</param>
+				<param name="labCodeVo.typename">
+					${labCodeVo.typename}
+				</param>
+			</result>
+		</action>
+		<action name="delLabCode4Code" method="delLabCode4Code"
+			class="labCodeAction">
+			<result name="delLabCode" type="redirectAction">
+				<param name="actionName">/showListLabCode.action</param>
+				<param name="labCodeVo.typeid">
+					${labCodeVo.typeid}
+				</param>
+				<param name="labCodeVo.typename">
+					${labCodeVo.typename}
+				</param>
+			</result>
+		</action>
+		
+	</package>
+
+	<!-- 代码管理 -->
+	<package name="code.labType" namespace="/code/labType" extends="globalpackage">
+		<action name="listLabType" method="listLabType" class="labTypeAction">
+			<result name="list">/jsp/base/code/labTypeList.jsp</result>
+		</action>
+		<action name="ajaxIsExsitLabType" method="ajaxIsExsitLabType" class="labTypeAction"></action>
+
+		<action name="preAddLabType4Code" method="preAddLabType4Code" class="labTypeAction">
+			<result name="preAddLabType">/jsp/base/code/labTypeAdd.jsp</result>
+		</action>
+		<action name="addLabType4Code" method="addLabType4Code" class="labTypeAction">
+			<result name="addLabType" type="redirectAction">
+				<param name="actionName">listLabType.action</param>
+			</result>
+		</action>
+
+		<action name="preUpdateLabType" method="preUpdateLabType" class="labTypeAction">
+			<result name="preUpdate">/jsp/base/code/labTypeUpdate.jsp</result>
+		</action>
+		<action name="updateLabType" method="updateLabType" class="labTypeAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabType</param>
+			</result>
+		</action>
+		<action name="deleteLabType" method="deleteLabType" class="labTypeAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabType</param>
+			</result>
+		</action>
+		
+		 
+	</package>
+</struts>

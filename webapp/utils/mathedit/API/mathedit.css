@@ -1,0 +1,43 @@
+a:link, a:visited{
+	color: #005FA9;
+	text-decoration: none;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+
+#sectionLinks{
+	float: left;
+	width:48px;
+	height:381px;
+	padding: 0px;
+	background-color: #F5f7f7;
+	border-left: 0px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	 font: normal Verdana,sans-serif;
+	 margin:0px;
+   cursor:hand;
+	 background-color: #CCCCCC;
+	 margin-right:3px;
+}
+
+#sectionLinks a:link, #sectionLinks a:visited {
+	display: block;
+	border-top: 1px solid #ffffff;
+	border-bottom: 1px solid #cccccc;
+	background-image: url(bg_nav.jpg);
+	font-weight: bold;
+	padding: 3px 0px 3px 10px;
+	color: #21536A;
+}
+
+#sectionLinks a:hover{
+	border-top: 1px solid #cccccc;
+	background-color: #DDEEFF;
+	background-image: none;
+	font-weight: bold;
+	text-decoration: none;
+}
+.imagebutton {height: 22; width: 23; border: solid 2px #C0C0C0; background-color:#c0c0c0}

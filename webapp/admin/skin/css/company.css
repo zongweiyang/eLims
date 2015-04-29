@@ -1,0 +1,37 @@
+/*公司 各个 页面的 标题 样式*/
+H2{ font-size:18px; height:20px; margin-top:0px;}
+.STYLE1 {color: #66CC33}
+
+/*公司文件夹公用样式，外部控制层*/
+.info_control{  position:relative; padding:10px;background:#f7f8f9; }
+
+.info_inner_control{ height:auto; background-color:#FFFFFF;padding:20px;}
+
+.content_table{ font-size:12px; width:100%; padding:5px; border:#CCCCCC solid 1px; margin-top:5px;}
+
+
+
+
+/* 公司业绩编辑页面样式*/
+
+/*表格样式*/
+
+.yeji_table{ padding:5px; font-size:12px; width:180px; height:200px; float:left; margin-left:40px; margin-top:10px;}
+
+/*图片框*/
+
+.pic_border{ padding:5px; border:#999999 1px solid;}
+
+
+
+/*控制COMPANY内 的内容版面大小，自动出现滚动条*/
+
+.scorll{width:100%; height:440px; overflow-y:scroll;}
+
+/*分页样式*/
+
+.page{ width:100%; height:30px; text-align:center;}
+
+/*再添一页样式*/
+
+.morepage{ width:100%; text-align:right; font-size:14px; color:#FF6600;}

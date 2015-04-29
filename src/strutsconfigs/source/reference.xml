@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts><!-- 标准品管理 -->
+	<package name="reference.labReference" namespace="/reference/labReference" extends="globalpackage">
+		<action name="frameLabReference" method="frameLabReference" class="labRefTypeAction">
+			<result name="frame">/jsp/source/reference/ref/labReferenceTypeFrame.jsp</result>
+		</action>
+		<action name="preLabReferenceZtree" method="preLabReferenceZtree" class="labRefTypeAction">
+			<result name="preTree">/jsp/source/reference/ref/labReferenceTypeZree.jsp</result>
+		</action>
+		<action name="ajaxLabReferenceZtree" method="ajaxLabReferenceZtree" class="labRefTypeAction">
+		</action>
+		<action name="preUpdateLabReference" method="preUpdateLabReference" class="labReferenceAction">
+			<result name="preUpdate">/jsp/source/reference/ref/labReferenceUpdate.jsp</result>
+		</action>
+		<action name="listLabReference" method="listLabReference" class="labReferenceAction">
+			<result name="list">/jsp/source/reference/ref/labReferenceList.jsp</result>
+		</action>
+		<action name="preAddLabReference" method="preAddLabReference" class="labReferenceAction">
+			<result name="preAdd">/jsp/source/reference/ref/labReferenceAdd.jsp</result>
+		</action>
+		<action name="showLabReference" method="showLabReference" class="labReferenceAction">
+			<result name="show">/jsp/source/reference/ref/labReferenceShow.jsp</result>
+		</action>
+		<action name="preLabRefTypeTree" method="preLabRefTypeTree" class="labReferenceAction">
+			<result name="preTree">/jsp/source/reference/ref/labRefTypeShow4Select.jsp</result>
+		</action>
+		<action name="addLabReference" method="addLabReference" class="labReferenceAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabReference?labReferenceVo.referenceTypeId=${labReferenceVo.referenceTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabReference" method="updateLabReference" class="labReferenceAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabReference?labReferenceVo.referenceTypeId=${labReferenceVo.referenceTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabReferenceMove" method="updateLabReferenceMove" class="labReferenceAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">frameLabReference?labReferenceVo.referenceTypeId=${labReferenceVo.referenceTypeId}</param>
+			</result>
+		</action>
+		<action name="deleteLabReference" method="deleteLabReference" class="labReferenceAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabReference?labReferenceVo.referenceTypeId=${labReferenceVo.referenceTypeId}</param>
+			</result>
+		</action>
+		<action name="exportLabReference" method="exportLabReference" class="labReferenceAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+		<action name="showLabRef4Select" method="showLabRef4Select" class="labReferenceAction">
+			<result name="show">/jsp/source/reference/outstore/labRefShow4Select.jsp</result>
+		</action>
+		<action name="ajaxIsExistName" method="isRequiredStandsNo" class="labReferenceAction"></action>
+		<!-- 打印二维码 -->
+		<action name="showLabReference4printTwoCode" method="showLabReference4printTwoCode" class="labReferenceAction">
+		<result name="show">/jsp/common/encoder/labEncoder4TwoCode.jsp</result>
+		</action>
+		<!-- 打印条形码 -->
+		<action name="showLabReference4printBarCode" method="showLabReference4printBarCode" class="labReferenceAction">
+		<result name="show">/jsp/common/encoder/labEncoder4BarCode.jsp</result>
+		</action>
+		<!-- go标准品导入页面 -->
+		<action name="preImportLabReference" method="preImportLabReference" class="labReferenceAction">
+		   <result name="preImport">/jsp/source/reference/ref/labReferenceImport.jsp</result>
+		</action>
+		<!-- 标准品导入-->
+		<action name="importLabReference" method="importLabReference" class="labReferenceAction">
+		   <result name="import" type="redirectAction">
+				<param name="actionName">frameLabReference?labReferenceVo.referenceTypeId=${labReferenceVo.referenceTypeId}</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 标准品分类 -->
+	<package name="reference.labRefType" namespace="/reference/labRefType"
+		extends="globalpackage">
+		<action name="ajaxNode4Add" method="ajaxNode4Add" class="labRefTypeAction"></action>
+		<action name="ajaxNode4Delete" method="ajaxNode4Delete" class="labRefTypeAction"></action>
+		<action name="ajaxNode4Update" method="ajaxNode4Update" class="labRefTypeAction"></action>
+		<action name="ajaxLabReferenceTree" method="ajaxLabReferenceTree" class="labRefTypeAction"></action>
+		<action name="ajaxLabReferenceZtree" method="ajaxLabReferenceZtree" class="labRefTypeAction"></action>
+	</package>
+	
+	<!-- 标准品出库 -->
+	<package name="reference.labRefOutMain" namespace="/reference/labRefOutMain" extends="globalpackage">
+		<action name="listLabRefOutMain" method="listLabRefOutMain" class="labRefOutAction">
+			<result name="list">/jsp/source/reference/outstore/labRefOutList.jsp</result>
+		</action>
+		<action name="preAddLabRefOutMain" method="preAddLabRefOutMain" class="labRefOutAction">
+			<result name="preAdd">/jsp/source/reference/outstore/labRefOutAdd.jsp</result>
+		</action>
+		<action name="addLabRefOutMain" method="addLabRefOutMain" class="labRefOutAction">
+			<result name="add"  type="redirectAction">listLabRefOutMain.action</result>
+		</action>
+		<action name="showLabRefOutMain" method="showLabRefOutMain" class="labRefOutAction">
+			<result name="show">/jsp/source/reference/outstore/labRefOutShow.jsp</result>
+		</action>
+		<action name="exportLabRefOutMain" method="exportLabRefOutMain" class="labRefOutAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+	<!-- 标准品盘点 -->
+	<package name="reference.labRefCheckMain" namespace="/reference/labRefCheckMain" extends="globalpackage">
+		<action name="listLabRefCheckMain" method="listLabRefCheckMain" class="labRefCheckAction">
+			<result name="list">/jsp/source/reference/checkstore/labRefCheckList.jsp</result>
+		</action>
+		<action name="preAddLabRefCheckMain" method="preAddLabRefCheckMain" class="labRefCheckAction">
+			<result name="preAdd">/jsp/source/reference/checkstore/labRefCheckAdd.jsp</result>
+		</action>
+		<action name="addLabRefCheckMain" method="addLabRefCheckMain" class="labRefCheckAction">
+			<result name="add"  type="redirectAction">listLabRefCheckMain.action</result>
+		</action>
+		<action name="deleteRefOutMain" method="deleteRefOutMain" class="labRefCheckAction">
+			<result name="delete"  type="redirectAction">listLabRefOutMain.action</result>
+		</action>
+		<action name="deleteLabRefOutDetail" method="deleteLabRefOutDetail" class="labRefCheckAction">
+			<result name="delete"  type="redirectAction">
+			      <param name="actionName">preAddRefOutMain?labRefInMainVo.id=${labRefOutMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabRefCheckMain" method="showLabRefCheckMain" class="labRefCheckAction">
+			<result name="show">/jsp/source/reference/checkstore/labRefCheckShow.jsp</result>
+		</action>
+	</package>
+	<!-- 标准品采购入库 -->
+	<package name="reference.labRefPurMain" namespace="/reference/labRefPurMain"
+		extends="globalpackage">
+		<action name="listLabRefPurMain" method="listLabRefPurMain"
+			class="labRefPurAction">
+			<result name="list">
+				/jsp/source/reference/purchase/labRefPurMainList.jsp
+			</result>
+		</action>
+		<action name="preAddLabRefPur" method="preAddLabRefPur" class="labRefPurAction">
+			<result name="preAdd">
+				/jsp/source/reference/purchase/labRefPurAdd.jsp
+			</result>
+		</action>
+		<action name="addLabRefPur" method="addLabRefPur" class="labRefPurAction">
+		   <result name="add"  type="redirectAction">
+			      <param name="actionName">listLabRefPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabRefPur?labRefPurMainVo.id=${labRefPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabRefPur" method="showLabRefPur" class="labRefPurAction">
+			<result name="show">
+				/jsp/source/reference/purchase/labRefPurShow.jsp
+			</result>
+		</action>
+		<action name="showLabRef4Select" method="showLabRef4Select" class="labRefPurAction">
+			<result name="show">/jsp/source/reference/purchase/labRefShow4Select.jsp</result>
+		</action>
+		<action name="preUpdateLabRefPur" method="preUpdateLabRefPur" class="labRefPurAction">
+			<result name="preUpdate">/jsp/source/reference/purchase/labRefPurUpdate.jsp</result>
+		</action>
+		<action name="listLabRefPurAudit" method="listLabRefPurAudit" class="labRefPurAction">
+		   <result name="list">
+		     /jsp/source/reference/purchase/labRefPurMainAuditList.jsp
+		   </result>
+		</action>
+		<action name="listLabRefPurApprove" method="listLabRefPurApprove" class="labRefPurAction">
+		   <result name="list">
+		     /jsp/source/reference/purchase/labRefPurMainApproveList.jsp
+		   </result>
+		</action>
+		<action name="deleteLabRefPurMain" method="deleteLabRefPurMain" class="labRefPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurMain</param>
+		   </result>
+		</action>
+		<action name="showLabRefPur4Audit" method="showLabRefPur4Audit" class="labRefPurAction">
+		   <result name="show" >
+		   	/jsp/source/reference/purchase/labRefPurAudit.jsp
+		   </result>
+		</action>
+		<action name="showLabRefPur4Approve" method="showLabRefPur4Approve" class="labRefPurAction">
+		   <result name="show" >
+		   	/jsp/source/reference/purchase/labRefPurApprove.jsp
+		   </result>
+		</action>
+		<action name="updateLabRefPur4Audit" method="updateLabRefPur4Audit" class="labRefPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurAudit</param>
+		   </result>
+		</action>
+		<action name="updateLabRefPur4Approve" method="updateLabRefPur4Approve" class="labRefPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurApprove</param>
+		   </result>
+		</action>
+		<action name="updateLabRefPurMain" method="updateLabRefPurMain" class="labRefPurAction">
+		   <result name="update"  type="redirectAction">
+			      <param name="actionName">listLabRefPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabRefPur?labRefPurMainVo.id=${labRefPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="listLabRefPurIns" method="listLabRefPurIns" class="labRefPurAction">
+		 	<result name="list">/jsp/source/reference/purchase/labRefPurInsList.jsp</result>
+		</action>
+		<action name="preAddLabRefPurIns" method="preAddLabRefPurIns" class="labRefPurAction">
+			<result name="preAdd">/jsp/source/reference/purchase/labRefPurInsAdd.jsp</result>
+		</action>
+		<action name="addLabRefPurIns" method="addLabRefPurIns" class="labRefPurAction">
+		   <result name="add" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurIns</param>
+		   </result>
+		</action>
+		<action name="preUpdateLabRefPurIns" method="preUpdateLabRefPurIns" class="labRefPurAction">
+		 	<result name="preUpdate">/jsp/source/reference/purchase/labRefPurInsUpdate.jsp</result>
+		</action>
+		<action name="updateLabRefPurIns" method="updateLabRefPurIns" class="labRefPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurIns</param>
+		   </result>
+		</action>
+		<action name="showLabRefPur4Ins" method="showLabRefPur4Ins" class="labRefPurAction">
+		 	<result name="show">/jsp/source/reference/purchase/labRefPur4Ins.jsp</result>
+		</action>
+		<action name="updateLabRefPur4Ins" method="updateLabRefPur4Ins" class="labRefPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurIns</param>
+		   </result>
+		</action>
+		<action name="deleteLabRefPurIns" method="deleteLabRefPurIns" class="labRefPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabRefPurIns</param>
+		   </result>
+		</action>
+		
+		<action name="showAllLabRefPurMainExcel" method="showAllLabRefPurMainExcel" class="labRefPurAction">
+		   	<result name="show">/jsp/source/reference/purchase/labRefPurListPrint.jsp</result>
+		</action>
+		<action name="exportLabRefPur" method="exportLabRefPur" class="labRefPurAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd"> 
+
+<struts>     
+	<!-- 角色信息 -->
+	<package name="lab.role" namespace="/role/labRole"
+		extends="globalpackage">
+		<action name="isRequiredRoleName"
+			class="labRoleAction"
+			method="isRequiredRoleName">
+		</action>
+		<action name="isDeleteInIds"
+			class="labRoleAction"
+			method="isDeleteInIds">
+		</action>
+		<action name="listLabRole"
+			class="labRoleAction"
+			method="listLabRole">
+			<result name="list">
+				/jsp/base/role/labRoleList.jsp
+			</result>
+		</action>
+		<action name="preAddLabRole"
+			class="labRoleAction"
+			method="preAddLabRole">
+			<result name="preAdd">
+				/jsp/base/role/labRoleAdd.jsp
+			</result>
+		</action>
+		<action name="addLabRole"
+			class="labRoleAction"
+			method="addLabRole">
+			<result name="add" type="redirectAction">
+				listLabRole.action
+			</result>
+			<result name="input">
+				/jsp/error/validationError1.jsp
+			</result>
+		</action>
+		<action name="preUpdateLabRole"
+			class="labRoleAction"
+			method="preUpdateLabRole">
+			<result name="preUpdate">
+				/jsp/base/role/labRoleUpdate.jsp
+			</result>
+		</action>
+		<action name="updateLabRole"
+			class="labRoleAction"
+			method="updateLabRole">
+			<result name="update" type="redirectAction">
+				listLabRole.action
+			</result>
+			<result name="input">
+				/jsp/error/validationError1.jsp
+			</result>
+		</action>
+		<action name="deleteLabRole"
+			class="labRoleAction"
+			method="deleteLabRole">
+			<result name="delete" type="redirectAction">
+				listLabRole.action
+			</result>
+		</action>
+		<action name="showLabRole"
+			class="labRoleAction"
+			method="showLabRole">
+			<result name="show">
+				/jsp/base/role/labRoleShow.jsp
+			</result>
+		</action>
+		<action name="ajax4ListLabRole"
+			class="labRoleAction"
+			method="ajax4ListLabRole">
+			<result name="list">
+				/jsp/base/role/labRoleList4Ajax.jsp
+			</result>
+		</action>
+		<action name="showLabRoleFun4Select"
+			class="labRoleAction"
+			method="showLabRoleFun4Select">
+			<result name="preTree">
+				/jsp/base/role/labRoleFunShow4Select.jsp
+			</result>
+		</action>
+		<action name="updateLabRoleTree"
+			class="labRoleAction"
+			method="updateLabRoleTree">
+			<result name="update" type="redirectAction">
+				<param name="actionName">
+					showLabRoleFun4Select.action?labRoleVo.id=${labRoleVo.id}
+				</param>
+			</result>
+		</action>
+		<action name="treeLabRoleFun" method="treeLabRoleFun" class="labRoleAction"></action>
+		<action name="ajaxLabRole4Json" method="ajaxLabRole4Json" class="labRoleAction"></action>
+	</package>
+	
+</struts>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop
+           http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-2.5.xsd"
+           >
+	<context:annotation-config />
+	<context:component-scan base-package="cn.labsoft.labos" />
+	
+ 	<aop:aspectj-autoproxy proxy-target-class="true" />
+ 	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:resources/jdbc.properties</value>
+		</property>
+	</bean>
+
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close" dependency-check="none">
+		<property name="driverClass">
+			<value>${datasource.driverClassName}</value>
+		</property>
+		<property name="jdbcUrl">
+			<value>${datasource.url}</value>
+		</property>
+		<property name="user">
+			<value>${datasource.username}</value>
+		</property>
+		<property name="password">
+			<value>${datasource.password}</value>
+		</property>
+		<property name="acquireIncrement">
+			<value>${c3p0.acquireIncrement}</value>
+		</property>
+		<property name="initialPoolSize">
+			<value>${c3p0.initialPoolSize}</value>
+		</property>
+		<property name="minPoolSize">
+			<value>${c3p0.minPoolSize}</value>
+		</property>
+		<property name="maxPoolSize">
+			<value>${c3p0.maxPoolSize}</value>
+		</property>
+		<property name="maxIdleTime">
+			<value>${c3p0.maxIdleTime}</value>
+		</property>
+		<property name="idleConnectionTestPeriod">
+			<value>${c3p0.idleConnectionTestPeriod}</value>
+		</property>
+		<property name="maxStatements">
+			<value>${c3p0.maxStatements}</value>
+		</property>
+		<property name="numHelperThreads">
+			<value>${c3p0.numHelperThreads}</value>
+		</property>
+	</bean>
+
+
+	<bean id="databaseNamingStrategy" class="cn.labsoft.labos.framework.common.database.DatabaseNamingStrategy">
+		<property name="tablePrefix" value="${namingStrategy.tablePrefix}" />
+		<property name="isAddUnderscores" value="${namingStrategy.isAddUnderscores}" />
+		<property name="maxLength" value="${namingStrategy.maxLength}" />
+	</bean>
+
+	<!-- 配置Hibernate中的SessionFactory -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<list>
+				<value>cn.labsoft.labos.*.*.entity</value>
+				<value>cn.labsoft.labos.*.entity</value>
+			</list>
+		</property>
+		<!--<property name="annotatedClasses">
+			<list>
+			<value>cn.labsoft.labos.base.user.entity.LabUser</value>
+			</list>
+			</property>-->
+		<property name="namingStrategy" ref="databaseNamingStrategy" />
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.show_sql">false</prop>
+			</props>
+		</property>
+		<property name="entityInterceptor">
+			<bean id ="translateInterceptor" class="cn.labsoft.labos.i18n.interceptor.TranslateInterceptor" />
+		</property>
+	</bean>
+
+	<bean id="hibernateTemplate" class="org.springframework.orm.hibernate3.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<!-- 事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 事务通知 -->
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="add*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED" />
+			<tx:method name="saveOrUpdate*" propagation="REQUIRED" />
+			<tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	</tx:advice>
+	<!-- 事务通知 proxy-target-class="true"-->
+	<aop:config>
+		<aop:pointcut id="txPointcut" expression="execution(* cn.labsoft..*Service.*(..))" />
+		<aop:pointcut id="txxPointcut" expression="(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.add*(..)))
+			||(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.update*(..)))
+			||(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.delete*(..)))
+			||(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.save*(..)))
+			||(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.saveOrUpdate*(..)))" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
+		<aop:advisor advice-ref="theAroundAdvice" pointcut-ref="txxPointcut" />
+		
+	</aop:config>
+	<!-- log拦截器类 -->
+	<bean id="exceptionLogger" class="cn.labsoft.labos.framework.common.log.LogThrowingAdvice"></bean>
+	<bean id="theAroundAdvice" class="cn.labsoft.labos.framework.common.interceptor.LogAroundAdvice" />
+
+	<!-- 常用供查询条件生成工具 -->
+	<bean id="queryHelper" class="cn.labsoft.labos.utils.queryutil.QueryHelper" abstract="false" lazy-init="default" autowire="default" dependency-check="default"></bean>
+
+	<bean id="baseAction" class="cn.labsoft.labos.framework.common.action.BaseAction" />
+
+	<bean id="dynamicLoadBean" class="cn.labsoft.labos.framework.common.mutidatasource.DynamicLoadBean" />
+</beans>

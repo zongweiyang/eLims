@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<!-- 客户 -->
+		<package name="common.component" namespace="/common/component" extends="globalpackage">
+			<!-- 选人插件 -->
+			<!-- 取得组织树 -->
+			<action name="ajaxLabOrgTree" method="ajaxLabOrgTree" class="labUserChooseAction"></action>
+			<!-- 取得角色树 -->
+			<action name="ajaxJobsTree" method="ajaxJobsTree" class="labUserChooseAction"></action>
+			<!-- 取得权限树 -->
+			<action name="ajaxLabRoleTree" method="ajaxLabRoleTree" class="labUserChooseAction"></action>
+			<!-- 取得组织下用户 -->
+			<action name="ajaxListLabUser4Org" method="ajaxListLabUser4Org" class="labUserChooseAction"></action>
+			<!-- 取得角色下用户 -->
+			<action name="ajaxListLabUser4Role" method="ajaxListLabUser4Role" class="labUserChooseAction"></action>
+			<!-- 取得岗位下用户 -->
+			<action name="ajaxListLabUser4Jobs" method="ajaxListLabUser4Jobs" class="labUserChooseAction"></action>
+			<!-- 根据Id取得用户 -->
+			<action name="ajaxLabUser4Select" method="ajaxLabUser4Select" class="labUserChooseAction"></action>
+		</package>
+</struts>

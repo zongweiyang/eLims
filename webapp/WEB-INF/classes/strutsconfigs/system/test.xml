@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd"> 
+
+<struts>     
+    <package name="mytest" extends="struts-default">
+    	<action name="*" class="myTestAction" method="{1}">
+			<result name="list">/jsp/mytest/list.jsp</result>
+			<result name="add" type="redirectAction">
+				<param name="nameSpace">/mytest</param>
+				<param name="actionName">list</param>
+			</result>
+			<result name="delete" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+			<result name="update2del" type="redirectAction">
+				<param name="actionName">list</param>
+			</result>
+			<result name="show">/jsp/mytest/show.jsp</result>
+		</action>
+	</package>
+</struts>

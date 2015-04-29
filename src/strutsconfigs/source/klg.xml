@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts><!-- 标准管理 -->
+	<package name="klg.labStandard" namespace="/klg/labStandard" extends="globalpackage">
+		<action name="frameLabStandard" method="frameLabStandard" class="labStandardAction">
+			<result name="frame">/jsp/source/klg/standard/labStandardTypeFrame.jsp</result>
+		</action>
+		<action name="preLabStandard4Ztree" method="preLabStandard4Ztree" class="labStandardAction">
+			<result name="show">/jsp/source/klg/standard/labStandardTypeZree.jsp</result>
+		</action>
+		<action name="ajaxLabStandard4Ztree" method="ajaxLabStandard4Ztree" class="labStandardAction">
+		</action>
+		<action name="preUpdateLabStandard" method="preUpdateLabStandard" class="labStandardAction">
+			<result name="preUpdate">/jsp/source/klg/standard/labStandardUpdate.jsp</result>
+		</action>
+		<action name="listLabStandard" method="listLabStandard" class="labStandardAction">
+			<result name="list">/jsp/source/klg/standard/labStandardList.jsp</result>
+		</action>
+		<action name="preAddLabStandard" method="preAddLabStandard" class="labStandardAction">
+			<result name="preAdd">/jsp/source/klg/standard/labStandardAdd.jsp</result>
+		</action>
+		<action name="showLabStandard" method="showLabStandard" class="labStandardAction">
+			<result name="show">/jsp/source/klg/standard/labStandardShow.jsp</result>
+		</action>
+		<action name="addLabStandard" method="addLabStandard" class="labStandardAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabStandard?labStandardVo.standTypeId=${labStandardVo.standTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabStandard" method="updateLabStandard" class="labStandardAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabStandard?labStandardVo.standTypeId=${labStandardVo.standTypeId}</param>
+			</result>
+		</action>
+		<action name="deleteLabStandard" method="deleteLabStandard" class="labStandardAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabStandard?labStandardVo.standTypeId=${labStandardVo.standTypeId}</param>
+			</result>
+		</action>
+		<action name="preImportLabStandard4Excel" method="preImportLabStandard4Excel" class="labStandardAction">
+			<result name="preImport">/jsp/source/klg/standard/labStandardImport.jsp</result>
+		</action>
+		<action name="importLabStandard4Excel" method="importLabStandard4Excel" class="labStandardAction">
+			<result name="import"  type="redirectAction">
+				<param name="actionName">preImportLabStandard4Excel?labStandardVo.standTypeId=${labStandardVo.standTypeId}&amp;type=${type}</param>
+			</result>
+		</action>
+		<action name="ajaxIsExistName" method="isRequiredStandsNo" class="labStandardAction"></action>
+		<action name="listLabStandard4Select" method="listLabStandard4Select" class="labStandardAction">
+			<result name="list">
+				/jsp/source/klg/standard/labStandard4Select.jsp
+			</result>
+		</action>
+		<action name="updateLabStandard4Status" method="updateLabStandard4Status" class="labStandardAction">
+			<result name="update">
+				/jsp/source/klg/standard/labStandardClose.jsp
+			</result>
+		</action>
+	</package>
+	
+	<package name="klg.labItem" namespace="/klg/labItem" extends="globalpackage">
+		<action name="frameLabStandItem" method="frameLabStandItem" class="labItemAction">
+			<result name="frame">/jsp/source/klg/standard/labStandardItemFrame.jsp</result>
+		</action>
+		<action name="preLabStandItemZtree" method="preLabStandItemZtree" class="labItemAction">
+			<result name="show">/jsp/source/klg/standard/labStandardItemZree.jsp</result>
+		</action>
+		<action name="ajaxLabStandItemZtree" method="ajaxLabStandItemZtree" class="labItemAction"></action>
+		<action name="listLabItem" method="listLabItem" class="labItemAction">
+			<result name="list">/jsp/source/klg/item/labItemList.jsp</result>
+		</action>
+		<action name="preUpdateLabItem" method="preUpdateLabItem" class="labItemAction">
+			<result name="preUpdate">/jsp/source/klg/item/labItemUpdate.jsp</result>
+		</action>
+		<action name="preAddLabItem" method="preAddLabItem" class="labItemAction">
+			<result name="preAdd">/jsp/source/klg/item/labItemAdd.jsp</result>
+		</action>
+		<action name="showLabItem" method="showLabItem" class="labItemAction">
+			<result name="show">/jsp/source/klg/item/labItemShow.jsp</result>
+		</action>
+		<action name="showLabAppara4select" method="showLabAppara4select" class="labItemAction">
+			<result name="show">/jsp/source/klg/item/labApparaShow4Select.jsp</result>
+		</action>
+		<action name="addLabItem" method="addLabItem" class="labItemAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabItem</param>
+			</result>
+		</action>
+		<action name="updateLabItem" method="updateLabItem" class="labItemAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabItem</param>
+			</result>
+		</action>
+		<action name="deleteLabItem" method="deleteLabItem" class="labItemAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabItem</param>
+			</result>
+		</action>
+		<action name="preImportLabItem4Excel" method="preImportLabItem4Excel" class="labItemAction">
+			<result name="preImport">/jsp/source/klg/item/labItemImport.jsp</result>
+		</action>
+		<action name="importLabItem4Excel" method="importLabItem4Excel" class="labItemAction">
+			<result name="import"  type="redirectAction">
+				<param name="actionName">preImportLabItem4Excel?type=${type}</param>
+			</result>
+		</action>
+		<action name="ajaxIsExistName" method="ajaxIsExistName" class="labItemAction"></action>
+	</package>
+	
+	<package name="klg.labMethod" namespace="/klg/labMethod" extends="globalpackage">
+		<action name="listLabMethod" method="listLabMethod" class="labMethodAction">
+			<result name="list">/jsp/source/klg/method/labMethodList.jsp</result>
+		</action>
+		<action name="preAddLabMethod" method="preAddLabMethod" class="labMethodAction">
+			<result name="preAdd">/jsp/source/klg/method/labMethodAdd.jsp</result>
+		</action>
+		<action name="preUpdateLabMethod" method="preUpdateLabMethod" class="labMethodAction">
+			<result name="preUpdate">/jsp/source/klg/method/labMethodUpdate.jsp</result>
+		</action>
+		<action name="showLabMethod" method="showLabMethod" class="labMethodAction">
+			<result name="show">/jsp/source/klg/method/labMethodShow.jsp</result>
+		</action>
+		<action name="addLabMethod" method="addLabMethod" class="labMethodAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabMethod</param>
+			</result>
+		</action>
+		<action name="updateLabMethod" method="updateLabMethod" class="labMethodAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabMethod</param>
+			</result>
+		</action>
+		<action name="deleteLabMethod" method="deleteLabMethod" class="labMethodAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabMethod</param>
+			</result>
+		</action>
+		<action name="ajaxMethodIsExistName" method="ajaxMethodIsExistName" class="labMethodAction"></action>
+		<action name="ajaxMethodIsExistCode" method="ajaxMethodIsExistCode" class="labMethodAction"></action>
+	</package>
+	
+	<!-- 标准分类 -->
+	<package name="klg.labStandardType" namespace="/klg/labStandardType"
+		extends="globalpackage">
+		<action name="ajaxLabStandardType4Add" method="ajaxLabStandardType4Add" class="labStandardTypeAction"></action>
+		<action name="ajaxLabStandardType4Delete" method="ajaxLabStandardType4Delete" class="labStandardTypeAction"></action>
+		<action name="ajaxLabStandardType4Update" method="ajaxLabStandardType4Update" class="labStandardTypeAction"></action>
+	</package>
+	<!-- 标准量化-->
+	<package name="klg.labStandardItem" namespace="/klg/labStandardItem" extends="specialpackage">
+		<action name="frameLabStandardItemMethod" method="frameLabStandardItemMethod" class="labStandardItemAction">
+			<result name="frame">/jsp/source/klg/quantify/labStandardItemMethodFrame.jsp</result>
+		</action>
+		<action name="preLabStandardItemMethod4Ztree" method="preLabStandardItemMethod4Ztree" class="labStandardItemAction">
+			<result name="show">/jsp/source/klg/quantify/labStandardItemMethodZree.jsp</result>
+		</action>
+		<action name="ajaxLabStandardItemMethod4Ztree" method="ajaxLabStandardItemMethod4Ztree" class="labStandardItemAction"></action>
+		<action name="listLabStandardItemMethod" method="listLabStandardItemMethod" class="labStandardItemAction">
+			<result name="list">/jsp/source/klg/quantify/labStandardItemMethodList.jsp</result>
+		</action>
+		<action name="preUpdateLabStandardItemMethod" method="preUpdateLabStandardItemMethod" class="labStandardItemAction">
+			<result name="preUpdate">/jsp/source/klg/quantify/labStandardItemMethodUpdate.jsp</result>
+		</action>
+		<action name="updateLabStandardItemMethod" method="updateLabStandardItemMethod" class="labStandardItemAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">preUpdateLabStandardItemMethod?id=${labStandardItemVo.standardId}&amp;labStandardItemVo.labSamTypeId=${labStandardItemVo.labSamTypeId}&amp;pageResult.currentPage=${pageResult.currentPage }&amp;pageResult.pagerMethod=${pageResult.pagerMethod }&amp;pageResult.pageSize=${pageResult.pageSize }</param>
+				<param name="labItemVo.name">${labItemVo.name}</param>
+			</result>
+		</action>
+		<action name="showLabMethod4select" method="showLabMethod4select" class="labStandardItemAction">
+			<result name="preAdd">/jsp/source/klg/quantify/labMethodShow4Select.jsp</result>
+		</action>
+		<action name="addLabStandardItemMethod" method="addLabStandardItemMethod" class="labStandardItemAction">
+			<result name="add">
+				/jsp/source/klg/quantify/labStandardMinItemClose.jsp
+			</result>
+		</action>
+		<action name="showLabStandardItem4select" method="showLabStandardItem4select" class="labStandardItemAction">
+			<result name="preAdd">/jsp/source/klg/quantify/labStandardItemShow4Select.jsp</result>
+		</action>
+		<action name="showLabStandardMinItem4select" method="showLabStandardMinItem4select" class="labStandardItemAction">
+			<result name="preAdd">/jsp/source/klg/quantify/labStandardMinItem4Select.jsp</result>
+		</action>
+		<action name="addLabStandardItem" method="addLabStandardItem" class="labStandardItemAction">
+			<result name="add">
+				/jsp/source/klg/quantify/labStandardMinItemClose.jsp
+			</result>
+		</action>
+		<action name="addLabStandardMinItem" method="addLabStandardMinItem" class="labStandardItemAction">
+			<result name="add">
+				/jsp/source/klg/quantify/labStandardMinItemClose.jsp
+			</result>
+		</action>
+		<action name="showLabStandard" method="showLabStandard" class="labStandardAction">
+			<result name="show">/jsp/source/klg/quantify/labStandardShow.jsp</result>
+		</action>
+		<action name="saveLabStandardItemMethod" method="saveLabStandardItemMethod" class="labStandardItemAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">preAddLabMethods?labStandardItemMethodVo.standardId=${labStandardItemMethodVo.standardId}&amp;labStandardItemMethodVo.methodIds=${labStandardItemMethodVo.methodIds}&amp;labStandardItemMethodVo.itemId=${labStandardItemMethodVo.itemId}&amp;labStandardItemVo.standardId=${labStandardItemVo.standardId}&amp;labStandardItemMethodVo.type=${labStandardItemMethodVo.type}&amp;pageResult.currentPage=${pageResult.currentPage }&amp;pageResult.pagerMethod=${pageResult.pagerMethod }&amp;pageResult.pageSize=${pageResult.pageSize }&amp;labStandardItemVo.labSamTypeId=${labStandardItemVo.labSamTypeId}</param>
+				<param name="labItemVo.name">${labItemVo.name}</param>
+			</result>
+		</action>
+		<action name="preAddLabMethods" method="preAddLabMethods" class="labStandardItemAction">
+			<result name="preAdd" type="redirectAction">
+				<param name="actionName">preUpdateLabStandardItemMethod?id=${labStandardItemVo.standardId}&amp;labStandardItemMethodVo.itemId=${labStandardItemMethodVo.itemId}&amp;labStandardItemMethodVo.methodIds=${labStandardItemMethodVo.methodIds}&amp;labStandardItemMethodVo.type=${labStandardItemMethodVo.type}&amp;pageResult.currentPage=${pageResult.currentPage }&amp;pageResult.pagerMethod=${pageResult.pagerMethod }&amp;pageResult.pageSize=${pageResult.pageSize }&amp;labStandardItemVo.labSamTypeId=${labStandardItemVo.labSamTypeId}</param>
+				<param name="labItemVo.name">${labItemVo.name}</param>
+			</result>
+		</action>
+		<action name="preImportLabStandardItemMethod4Excel" method="preImportLabStandardItemMethod4Excel" class="labStandardItemAction">
+			<result name="preImport">/jsp/source/klg/quantify/labStandardItemMethodImport.jsp</result>
+		</action>
+		<action name="importLabStandardItemMethod4Excel" method="importLabStandardItemMethod4Excel" class="labStandardItemAction">
+			<result name="import"  type="redirectAction">
+				<param name="actionName">preImportLabStandardItemMethod4Excel?labStandardItemMethodVo.standardId=${labStandardItemMethodVo.standardId}&amp;type=${type}</param>
+			</result>
+		</action>
+		<action name="exportLabStandardItemMethod4Excel" method="exportLabStandardItemMethod4Excel" class="labStandardItemAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+		<action name="listLabMethod" method="listLabMethod" class="labMethodAction">
+			<result name="list">/jsp/source/klg/method/labMethodList.jsp</result>
+		</action>
+		<action name="ajaxIsExistName" method="ajaxIsExistName" class="labStandardItemAction"></action>
+		<action name="deleteLabStandardItem" method="deleteLabStandardItem" class="labStandardItemAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">preUpdateLabStandardItemMethod?id=${labStandardItemVo.standardId}&amp;pageResult.currentPage=${pageResult.currentPage }&amp;pageResult.pagerMethod=${pageResult.pagerMethod }&amp;pageResult.pageSize=${pageResult.pageSize }&amp;labStandardItemVo.labSamTypeId=${labStandardItemVo.labSamTypeId}</param>
+				<param name="labItemVo.name">${labItemVo.name}</param>
+			</result>
+		</action>
+	</package> 
+		<package name="klg.labSampingPoint" namespace="/klg/labSampingPoint" extends="globalpackage">
+			<action name="listLabSampingPoint" method="listLabSampingPoint" class="labSampingPointAction">
+				<result name="list">
+					/jsp/source/klg/sampingPoint/labSampingPointList.jsp
+				</result>
+			</action>
+			<action name="showLabSampingPoint" method="showLabSampingPoint" class="labSampingPointAction">
+				<result name="show">
+					/jsp/source/klg/sampingPoint/labSampingPointShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabSampingPoint" method="preAddLabSampingPoint" class="labSampingPointAction">
+				<result name="preAdd">
+					/jsp/source/klg/sampingPoint/labSampingPointAdd.jsp
+				</result>
+			</action>
+			<action name="addLabSampingPoint" method="addLabSampingPoint" class="labSampingPointAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabSampingPoint.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabSampingPoint" method="preUpdateLabSampingPoint" class="labSampingPointAction">
+				<result name="preUpdate">
+					/jsp/source/klg/sampingPoint/labSampingPointUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabSampingPoint" method="updateLabSampingPoint" class="labSampingPointAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSampingPoint.action</param>
+				</result>
+			</action>
+			<action name="deleteLabSampingPoint" method="deleteLabSampingPoint" class="labSampingPointAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSampingPoint.action</param>
+				</result>
+			</action>
+			<action name="updateLabSampingPoint4Del" method="updateLabSampingPoint4Del" class="labSampingPointAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabSampingPoint.action</param>
+				</result>
+			</action>
+		</package>
+</struts>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <title>MathEdit 3.0</title>
+<script type="text/javascript" charset="UTF-8" src="../jquery-1.9.1.min.js"/></script>
+    <script type="text/javascript" src="../ext/adapter/yui/yui-utilities.js"></script>
+    <script type="text/javascript" src="../ext/adapter/yui/ext-yui-adapter.js"></script>
+    <script type="text/javascript" src="../ext/ext-all.js"></script>
+    <script type="text/javascript" src="Base64.js"></script>
+    <script type="text/javascript" src="gui.js"></script>
+    <script type="text/javascript" src="setting.js"></script>
+    <script type="text/javascript" src="mathplayer.js"></script>
+    <script type="text/javascript" src="ChangeBrowserActions.js"></script>
+    <script type="text/javascript" src="IEmouseclick.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="../ext/resources/css/ext-all.css">
+    <link rel="stylesheet" type="text/css" href="mathedit.css">
+</head>
+
+<body onload="start()" onkeypress="doKeyPress(event,1)" onkeydown="doKey(event,1)">
+	  <div id="head">
+     <div id="filebar"></div>
+     <div id="toolbar"></div>
+     <div id="templatebar"></div>
+    </div>
+    <div id="designarea" ><iframe id='design_frame' name='design_frame' width='100%' height='100%' border="1"></iframe></div>
+    <div id="mmlp"></div>
+    <div id="mmlc"></div>
+    <div id="openm"></div>
+    <div id="latex"></div>
+    <div id="braille"></div>
+    <div id="selectedMath" style="display:none"></div>
+    <script type="text/javascript" src="editing.js"></script>
+    <script type="text/javascript" src="infix.js"></script>
+    <script type="text/javascript" src="mathml-infix.js"></script>
+    <script>
+    	window.setTimeout(function(){
+    		editmmlc();
+    	},1000)
+    </script>
+</body>
+</html>

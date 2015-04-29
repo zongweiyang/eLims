@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+	<package name="org.LabOrg" namespace="/org/labOrg" extends="globalpackage">
+		<action name="frameLabOrg" method="frameLabOrg" class="labOrgAction">
+			<result name="frame">/jsp/base/org/orgFrame.jsp</result>
+		</action>
+		<action name="preTreeLabOrg" method="preTreeLabOrg" class="labOrgAction">
+			<result name="preTree">/jsp/base/org/orgTree.jsp</result>
+		</action>
+		<action name="treeLabOrg" method="treeLabOrg" class="labOrgAction"></action>
+		<action name="listLabOrg" method="listLabOrg" class="labOrgAction">
+			<result name="list">/jsp/base/org/orgList.jsp</result>
+		</action>
+		<action name="showLabOrg" method="showLabOrg" class="labOrgAction">
+			<result name="show">/jsp/base/org/orgShow.jsp</result>
+		</action>
+		<action name="preAddLabOrg" method="preAddLabOrg" class="labOrgAction">
+			<result name="preAdd">/jsp/base/org/orgAdd.jsp</result>
+		</action>
+		<action name="addLabOrg" method="addLabOrg" class="labOrgAction">
+			<result name="add" type="redirectAction">
+				frameLabOrg.action?labOrgVo.parentId=${labOrgVo.parentId}
+			</result>
+			
+		</action>
+		<action name="preUpdateLabOrg" method="preUpdateLabOrg" class="labOrgAction">
+			<result name="preUpdate">/jsp/base/org/orgUpdate.jsp</result>
+		</action>
+		<action name="updateLabOrg" method="updateLabOrg" class="labOrgAction">
+			<result name="update" type="redirectAction">
+				frameLabOrg.action?labOrgVo.parentId=${labOrgVo.parentId}
+			</result>
+		</action>
+		<action name="deleteBatchLabOrg" method="deleteBatchLabOrg" class="labOrgAction">
+			<result name="deleteBatch" type="redirectAction">frameLabOrg.action</result>
+		</action>
+		<action name="deleteLabOrg" method="deleteLabOrg" class="labOrgAction">
+			<result name="delete" type="redirectAction">frameLabOrg.action</result>
+		</action>
+		<action name="isRequiredName" method="isRequiredName" class="labOrgAction"></action>
+		<action name="preRadioTreeLabOrg" method="preRadioTreeLabOrg" class="labOrgAction">
+			<result name="preTree">/jsp/base/org/orgRadioTree.jsp</result>
+		</action>
+		<action name="treeRadioLabOrg" method="treeRadioLabOrg" class="labOrgAction"></action>
+		<action name="updateLabOrgMove" method="updateLabOrgMove" class="labOrgAction">
+			<result name="update" type="redirectAction">frameLabOrg.action</result>
+		</action>
+		<action name="getLabUnit" method="getLabUnit" class="labOrgAction">
+			<result name="preUpdate">/jsp/base/org/unitUpdate.jsp</result>
+		</action>
+		<action name="updateLabUnit" method="updateLabUnit" class="labOrgAction">
+			<result name="update" type="redirectAction">
+				getLabUnit.action?labOrgVo.id=${labOrgVo.id}
+			</result>
+		</action>
+	</package>
+</struts>

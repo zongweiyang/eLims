@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts><!-- 耗材管理 -->
+	<package name="consumables.labConsumables" namespace="/consumables/labConsumables" extends="globalpackage">
+		<action name="frameLabConsumables" method="frameLabConsumables" class="labConTypeAction">
+			<result name="frame">/jsp/source/consumables/consum/labConsumablesTypeFrame.jsp</result>
+		</action>
+		<action name="preLabConsumablesZtree" method="preLabConsumablesZtree" class="labConTypeAction">
+			<result name="preTree">/jsp/source/consumables/consum/labConsumablesTypeZree.jsp</result>
+		</action>
+		<action name="ajaxLabConsumablesZtree" method="ajaxLabConsumablesZtree" class="labConTypeAction">
+		</action>
+		<action name="preUpdateLabConsumables" method="preUpdateLabConsumables" class="labConsumablesAction">
+			<result name="preUpdate">/jsp/source/consumables/consum/labConsumablesUpdate.jsp</result>
+		</action>
+		<action name="listLabConsumables" method="listLabConsumables" class="labConsumablesAction">
+			<result name="list">/jsp/source/consumables/consum/labConsumablesList.jsp</result>
+		</action>
+		<action name="preAddLabConsumables" method="preAddLabConsumables" class="labConsumablesAction">
+			<result name="preAdd">/jsp/source/consumables/consum/labConsumablesAdd.jsp</result>
+		</action>
+		<action name="showLabConsumables" method="showLabConsumables" class="labConsumablesAction">
+			<result name="show">/jsp/source/consumables/consum/labConsumablesShow.jsp</result>
+		</action>
+		<action name="preLabConTypeTree" method="preLabConTypeTree" class="labConsumablesAction">
+			<result name="preTree">/jsp/source/consumables/consum/labConTypeShow4Select.jsp</result>
+		</action>
+		<action name="addLabConsumables" method="addLabConsumables" class="labConsumablesAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabConsumables?labConsumablesVo.consumablesTypeId=${labConsumablesVo.consumablesTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabConsumables" method="updateLabConsumables" class="labConsumablesAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabConsumables?labConsumablesVo.consumablesTypeId=${labConsumablesVo.consumablesTypeId}</param>
+			</result>
+		</action>
+		<action name="updateLabConsumablesMove" method="updateLabConsumablesMove" class="labConsumablesAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">frameLabConsumables?labConsumablesVo.consumablesTypeId=${labConsumablesVo.consumablesTypeId}</param>
+			</result>
+		</action>
+		<action name="deleteLabConsumables" method="deleteLabConsumables" class="labConsumablesAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabConsumables?labConsumablesVo.consumablesTypeId=${labConsumablesVo.consumablesTypeId}</param>
+			</result>
+		</action>
+		<action name="exportLabConsumables" method="exportLabConsumables" class="labConsumablesAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+		<action name="showLabCon4Select" method="showLabCon4Select" class="labConsumablesAction">
+			<result name="show">/jsp/source/consumables/outstore/labConShow4Select.jsp</result>
+		</action>
+		<action name="ajaxIsExistName" method="isRequiredStandsNo" class="labConsumablesAction"></action>
+		<!-- 打印二维码 -->
+		<action name="showLabConsumables4printTwoCode" method="showLabConsumables4printTwoCode" class="labConsumablesAction">
+		<result name="show">/jsp/common/encoder/labEncoder4TwoCode.jsp</result>
+		</action>
+		<!-- 打印条形码 -->
+		<action name="showLabConsumables4printBarCode" method="showLabConsumables4printBarCode" class="labConsumablesAction">
+		<result name="show">/jsp/common/encoder/labEncoder4BarCode.jsp</result>
+		</action>
+		<!-- go耗材导入页面 -->
+		<action name="preImportLabConsumables" method="preImportLabConsumables" class="labConsumablesAction">
+		   <result name="preImport">/jsp/source/consumables/consum/labConsumablesImport.jsp</result>
+		</action>
+		<!-- 耗材导入-->
+		<action name="importLabConsumables" method="importLabConsumables" class="labConsumablesAction">
+		   <result name="import" type="redirectAction">
+				<param name="actionName">frameLabConsumables?labConsumablesVo.consumablesTypeId=${labConsumablesVo.consumablesTypeId}</param>
+			</result>
+		</action>
+	</package>
+	
+	<!-- 耗材分类 -->
+	<package name="consumables.labConType" namespace="/consumables/labConType"
+		extends="globalpackage">
+		<action name="ajaxNode4Add" method="ajaxNode4Add" class="labConTypeAction"></action>
+		<action name="ajaxNode4Delete" method="ajaxNode4Delete" class="labConTypeAction"></action>
+		<action name="ajaxNode4Update" method="ajaxNode4Update" class="labConTypeAction"></action>
+		<action name="ajaxLabConsumablesTree" method="ajaxLabConsumablesTree" class="labConTypeAction"></action>
+		<action name="ajaxLabConsumablesZtree" method="ajaxLabConsumablesZtree" class="labConTypeAction"></action>
+	</package>
+	
+	<!-- 耗材出库 -->
+	<package name="consumables.labConOutMain" namespace="/consumables/labConOutMain" extends="globalpackage">
+		<action name="listLabConOutMain" method="listLabConOutMain" class="labConOutAction">
+			<result name="list">/jsp/source/consumables/outstore/labConOutList.jsp</result>
+		</action>
+		<action name="preAddLabConOutMain" method="preAddLabConOutMain" class="labConOutAction">
+			<result name="preAdd">/jsp/source/consumables/outstore/labConOutAdd.jsp</result>
+		</action>
+		<action name="addLabConOutMain" method="addLabConOutMain" class="labConOutAction">
+			<result name="add"  type="redirectAction">listLabConOutMain.action</result>
+		</action>
+		<action name="showLabConOutMain" method="showLabConOutMain" class="labConOutAction">
+			<result name="show">/jsp/source/consumables/outstore/labConOutShow.jsp</result>
+		</action>
+		<action name="exportLabConOutMain" method="exportLabConOutMain" class="labConOutAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+	<!-- 耗材盘点 -->
+	<package name="consumables.labConCheckMain" namespace="/consumables/labConCheckMain" extends="globalpackage">
+		<action name="listLabConCheckMain" method="listLabConCheckMain" class="labConCheckAction">
+			<result name="list">/jsp/source/consumables/checkstore/labConCheckList.jsp</result>
+		</action>
+		<action name="preAddLabConCheckMain" method="preAddLabConCheckMain" class="labConCheckAction">
+			<result name="preAdd">/jsp/source/consumables/checkstore/labConCheckAdd.jsp</result>
+		</action>
+		<action name="addLabConCheckMain" method="addLabConCheckMain" class="labConCheckAction">
+			<result name="add"  type="redirectAction">listLabConCheckMain.action</result>
+		</action>
+		<action name="deleteConOutMain" method="deleteConOutMain" class="labConCheckAction">
+			<result name="delete"  type="redirectAction">listLabConOutMain.action</result>
+		</action>
+		<action name="deleteLabConOutDetail" method="deleteLabConOutDetail" class="labConCheckAction">
+			<result name="delete"  type="redirectAction">
+			      <param name="actionName">preAddConOutMain?labConInMainVo.id=${labConOutMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabConCheckMain" method="showLabConCheckMain" class="labConCheckAction">
+			<result name="show">/jsp/source/consumables/checkstore/labConCheckShow.jsp</result>
+		</action>
+	</package>
+	<!-- 耗材采购入库 -->
+	<package name="consumables.labConPurMain" namespace="/consumables/labConPurMain"
+		extends="globalpackage">
+		<action name="listLabConPurMain" method="listLabConPurMain"
+			class="labConPurAction">
+			<result name="list">
+				/jsp/source/consumables/purchase/labConPurMainList.jsp
+			</result>
+		</action>
+		<action name="preAddLabConPur" method="preAddLabConPur" class="labConPurAction">
+			<result name="preAdd">
+				/jsp/source/consumables/purchase/labConPurAdd.jsp
+			</result>
+		</action>
+		<action name="addLabConPur" method="addLabConPur" class="labConPurAction">
+		   <result name="add"  type="redirectAction">
+			      <param name="actionName">listLabConPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabConPur?labConPurMainVo.id=${labConPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="showLabConPur" method="showLabConPur" class="labConPurAction">
+			<result name="show">
+				/jsp/source/consumables/purchase/labConPurShow.jsp
+			</result>
+		</action>
+		<action name="showLabCon4Select" method="showLabCon4Select" class="labConPurAction">
+			<result name="show">/jsp/source/consumables/purchase/labConShow4Select.jsp</result>
+		</action>
+		<action name="preUpdateLabConPur" method="preUpdateLabConPur" class="labConPurAction">
+			<result name="preUpdate">/jsp/source/consumables/purchase/labConPurUpdate.jsp</result>
+		</action>
+		<action name="listLabConPurAudit" method="listLabConPurAudit" class="labConPurAction">
+		   <result name="list">
+		     /jsp/source/consumables/purchase/labConPurMainAuditList.jsp
+		   </result>
+		</action>
+		<action name="listLabConPurApprove" method="listLabConPurApprove" class="labConPurAction">
+		   <result name="list">
+		     /jsp/source/consumables/purchase/labConPurMainApproveList.jsp
+		   </result>
+		</action>
+		<action name="deleteLabConPurMain" method="deleteLabConPurMain" class="labConPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabConPurMain</param>
+		   </result>
+		</action>
+		<action name="showLabConPur4Audit" method="showLabConPur4Audit" class="labConPurAction">
+		   <result name="show" >
+		   	/jsp/source/consumables/purchase/labConPurAudit.jsp
+		   </result>
+		</action>
+		<action name="showLabConPur4Approve" method="showLabConPur4Approve" class="labConPurAction">
+		   <result name="show" >
+		   	/jsp/source/consumables/purchase/labConPurApprove.jsp
+		   </result>
+		</action>
+		<action name="updateLabConPur4Audit" method="updateLabConPur4Audit" class="labConPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabConPurAudit</param>
+		   </result>
+		</action>
+		<action name="updateLabConPur4Approve" method="updateLabConPur4Approve" class="labConPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabConPurApprove</param>
+		   </result>
+		</action>
+		<action name="updateLabConPurMain" method="updateLabConPurMain" class="labConPurAction">
+		   <result name="update"  type="redirectAction">
+			      <param name="actionName">listLabConPurMain</param>
+		    </result>
+		    <result name="preUpdate"  type="redirectAction">
+			      <param name="actionName">preUpdateLabConPur?labConPurMainVo.id=${labConPurMainVo.id}</param>
+		    </result>
+		</action>
+		<action name="listLabConPurIns" method="listLabConPurIns" class="labConPurAction">
+		 	<result name="list">/jsp/source/consumables/purchase/labConPurInsList.jsp</result>
+		</action>
+		<action name="preAddLabConPurIns" method="preAddLabConPurIns" class="labConPurAction">
+			<result name="preAdd">/jsp/source/consumables/purchase/labConPurInsAdd.jsp</result>
+		</action>
+		<action name="addLabConPurIns" method="addLabConPurIns" class="labConPurAction">
+		   <result name="add" type="redirectAction">
+		   	  <param name="actionName">listLabConPurIns</param>
+		   </result>
+		</action>
+		<action name="preUpdateLabConPurIns" method="preUpdateLabConPurIns" class="labConPurAction">
+		 	<result name="preUpdate">/jsp/source/consumables/purchase/labConPurInsUpdate.jsp</result>
+		</action>
+		<action name="updateLabConPurIns" method="updateLabConPurIns" class="labConPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabConPurIns</param>
+		   </result>
+		</action>
+		<action name="showLabConPur4Ins" method="showLabConPur4Ins" class="labConPurAction">
+		 	<result name="show">/jsp/source/consumables/purchase/labConPur4Ins.jsp</result>
+		</action>
+		<action name="updateLabConPur4Ins" method="updateLabConPur4Ins" class="labConPurAction">
+		   <result name="update" type="redirectAction">
+		   	  <param name="actionName">listLabConPurIns</param>
+		   </result>
+		</action>
+		<action name="deleteLabConPurIns" method="deleteLabConPurIns" class="labConPurAction">
+		   <result name="delete" type="redirectAction">
+		   	  <param name="actionName">listLabConPurIns</param>
+		   </result>
+		</action>
+		
+		<action name="showAllLabConPurMainExcel" method="showAllLabConPurMainExcel" class="labConPurAction">
+		   	<result name="show">/jsp/source/consumables/purchase/labConPurListPrint.jsp</result>
+		</action>
+		<action name="exportLabConPur" method="exportLabConPur" class="labConPurAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+</struts>

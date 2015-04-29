@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts><!-- 样品分类 -->
+	<package name="sam.labSam" namespace="/sam/labSam"
+		extends="globalpackage">
+		<action name="listLabSamType" method="listLabSamType"
+			class="labSamTypeAction">
+			<result name="list">
+				/jsp/business/sam/samType/labSamTypeList.jsp
+			</result>
+		</action>
+		<action name="preAddLabSamType" method="preAddLabSamType" class="labSamTypeAction">
+			<result name="preAdd">/jsp/business/sam/samType/labSamTypeAdd.jsp</result>
+		</action>
+		<action name="addLabSamType" method="addLabSamType"
+			class="labSamTypeAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSamType</param>
+			</result>
+			<result name="input" type="redirectAction">
+				<param name="actionName">preAddKlgTestType</param>
+			</result>
+		</action>
+		<action name="addLabSamTypeItem"
+			method="addLabSamTypeItem"
+			class="labSamTypeAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSamType</param>
+			</result>
+		</action>
+		<action name="updateLabSamType" method="updateLabSamType"
+			class="labSamTypeAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSamType</param>
+			</result>
+		</action>
+		<action name="deleteLabSamType" method="deleteLabSamType"
+			class="labSamTypeAction">
+			<result name="delete" type="redirectAction">
+				<param name="nameSpace">/sam/labSam</param>
+				<param name="actionName">listLabSamType</param>
+			</result>
+		</action>
+		<action name="deleteLabSamType4Batch"
+			method="deleteLabSamType4Batch"
+			class="labSamTypeAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabSamType</param>
+			</result>
+		</action>
+		<action name="showLabSamType" method="showLabSamType"
+			class="labSamTypeAction">
+			<result name="show">
+				/jsp/business/sam/samType/labSamTypeShow.jsp
+			</result>
+		</action>
+		<action name="showLabItem4Select" method="showLabItem4Select"
+			class="labSamTypeAction">
+			<result name="show">
+				/jsp/business/sam/samType/labItemShow4Select.jsp
+			</result>
+		</action>
+		
+		<action name="ajaxCheckChildren" method="ajaxCheckChildren"
+			class="labSamTypeAction">
+		</action>
+		<!-- 样品信息 -->
+		<action name="listLabSam" method="listLabSam"
+			class="labSamAction">
+			<result name="list">
+				/jsp/business/sam/sample/labSamList.jsp
+			</result>
+		</action>
+		<action name="preAddLabSam" method="preAddLabSam"
+			class="labSamAction">
+			<result name="preAdd">
+				/jsp/business/sam/sample/labSamAdd.jsp
+			</result>
+		</action>
+		<action name="addLabSam" method="addLabSam"
+			class="labSamAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabSam</param>
+			</result>
+		</action>
+		<action name="preUpdateLabSam" method="preUpdateLabSam"
+			class="labSamAction">
+			<result name="preUpdate">
+				/jsp/business/sam/sample/labSamUpdate.jsp
+			</result>
+		</action>
+		<action name="updateLabSam" method="updateLabSam"
+			class="labSamAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSam</param>
+			</result>
+		</action>
+		<action name="showLabSam" method="showLabSam"
+			class="labSamAction">
+			<result name="show">
+				/jsp/business/sam/sample/labSamShow.jsp
+			</result>
+		</action>
+			<action name="deleteLabSam" method="deleteLabSam"
+			class="labSamAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabSam</param>
+			</result>
+		</action>
+		<!-- 样品分样 -->
+		<action name="listLabSam4Division" method="listLabSam4Division"
+			class="labSamAction">
+			<result name="list">
+				/jsp/business/sam/sample/division/labSamList4Division.jsp
+			</result>
+		</action>
+		<action name="showLabSam4Division" method="showLabSam4Division"
+			class="labSamAction">
+			<result name="show">
+				/jsp/business/sam/sample/division/labSamShow4Division.jsp
+			</result>
+		</action>
+		<action name="preUpdateLabSam4Division" method="preUpdateLabSam4Division"
+			class="labSamAction">
+			<result name="preUpdate">
+				/jsp/business/sam/sample/division/labSamUpdate4Division.jsp
+			</result>
+		</action>
+		<action name="updateLabSam4Division" method="updateLabSam4Division"
+			class="labSamAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSam4Division</param>
+			</result>
+		</action>
+		<!--余样处理-->
+			<action name="listLabSam4Destory" method="listLabSam4Destory"
+				class="labSamAction">
+				<result name="list">
+					/jsp/business/sam/sample/destory/labSamList4Destory.jsp
+				</result>
+			</action>
+			<action name="showLabSam4Destory" method="showLabSam4Destory"
+				class="labSamAction">
+				<result name="show">
+					/jsp/business/sam/sample/destory/labSamShow4Destory.jsp
+				</result>
+			</action>
+			<action name="preUpdateLabSam4Destory" method="preUpdateLabSam4Destory"
+				class="labSamAction">
+				<result name="preUpdate">
+					/jsp/business/sam/sample/destory/labSamUpdate4Destory.jsp
+				</result>
+			</action>
+			<action name="updateLabSam4Destory" method="updateLabSam4Destory"
+				class="labSamAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabSam4Destory</param>
+				</result>
+			</action>
+		<!-- 样品流转 -->
+		<action name="listLabSam4Out" method="listLabSam4Out" class="labSamAction">
+			<result name="list">/jsp/business/sam/sample/out/labSamList4Out.jsp</result>
+		</action>
+		<action name="showLabSam4Out" method="showLabSam4Out" class="labSamAction">
+			<result name="show">/jsp/business/sam/sample/out/labSamShow4Out.jsp</result>
+		</action>
+		<action name="preUpdateLabSam4Out" method="preUpdateLabSam4Out" class="labSamAction">
+			<result name="preUpdate">/jsp/business/sam/sample/out/labSamUpdate4Out.jsp</result>
+		</action>
+		<action name="updateLabSam4Out" method="updateLabSam4Out"
+			class="labSamAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabSam4Out</param>
+			</result>
+		</action>
+			<action name="showLabSam4Out" method="showLabSam4Out" class="labSamAction">
+			<result name="show">/jsp/business/sam/sample/out/labSamShow4Out.jsp</result>
+		</action>
+		<action name="showLabUser4Select" method="showLabUser4Select"
+			class="labSamAction">
+			<result name="list">
+				/jsp/business/sam/sample/showLabUser4Select.jsp
+			</result>
+		</action>
+		<action name="showLabSam4printTwoCode"
+			method="showLabSam4printTwoCode"
+			class="labSamAction">
+			<result name="print">
+				/jsp/common/encoder/labEncoder4TwoCode.jsp
+			</result>
+		</action>
+		<action name="showLabSam4printBarCode"
+			method="showLabSam4printBarCode"
+			class="labSamAction">
+			<result name="print">
+				/jsp/common/encoder/labEncoder4BarCode.jsp
+			</result>
+		</action>
+		<!-- go样品导入页面 -->
+		<action name="preImportLabSam" method="preImportLabSam"
+			class="labSamAction">
+			<result name="preAdd">
+				/jsp/business/sam/sample/labSamImport.jsp
+			</result>
+		</action>
+		<!-- 样品导入-->
+		<action name="importLabSam" method="importLabSam"
+			class="labSamAction">
+			<result name="list" type="redirectAction">
+				<param name="actionName">listLabSam</param>
+			</result>
+		</action>
+		<action name="listLabSam4Export" method="listLabSam4Export"
+			class="labSamAction">
+			<result name="alertExcel" type="stream">
+				<param name="contentType">
+					application/vnd.ms-excel
+				</param>
+				<param name="inputName">excelStream</param>
+				<param name="contentDisposition">
+					filename="${fileName}"
+				</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>
+</struts>

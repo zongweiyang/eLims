@@ -1,0 +1,562 @@
+/*
+  css书写顺序
+	1. 文本属性：font,text,background
+	2. 环境属性：width,height,border,padding,margin
+	3. 布局属性：position, float, display
+
+  css命名的一般规则
+    元素类型_元素功能, 比如td_label, td_input
+	或 元素类型_元素特殊属性, 比如text_readonly, text_short
+*/
+
+/******************************* default style ***************************/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: "宋体", Arial, Helvetica, sans-serif;
+	font-size:9pt; 
+	color: #000000;
+	text-align:center; 
+	margin:0px;
+	overflow: auto;
+}
+
+img { 
+	border:0px;
+	vertical-align: middle;	
+}
+
+a:link {
+	color:#0065CE;
+	text-decoration:none;
+}
+a:visited { 
+	color: #0065CE; 
+	text-decoration: none
+} 
+a:hover { 
+	color:#FB2424; 
+	text-decoration:none;
+}
+a:active { 
+	color: #FB2424; 
+	text-decoration:none
+}
+
+table{
+	font-family: "宋体", Arial, Helvetica, sans-serif;
+	font-size:9pt; 
+}
+
+input {
+	font-size: 9pt;
+	height: 21px;
+	border: 1px solid #CCCCCC;
+	padding-top: 3px;
+	padding-left: 3px;
+}
+
+textarea {
+	font-size: 9pt;
+	border: 1px solid #CCCCCC;
+	/*height: 60px;*/
+	WORD-BREAK: break-all;
+	padding-left: 3px;
+}
+select{
+	/*height: 23px;
+	width: 150px;*/	
+}
+
+/******************************* 表单控件样式 **************************************/
+/*只读样式*/
+.readonly{
+	/*background-color: #E0E0E0;*/
+	border: 0px;
+	cursor: arrow;
+}
+
+.text_common{
+	width: 150px;
+}
+.text_short{
+	width: 75px;
+}
+.text_min{
+	width: 25px;
+}
+.text_full{
+	width: 100%;
+}
+.textarea_common{
+	width: 100%;
+	height: 60px;
+}
+.select_common{
+	height: 23px;
+	width: 100%;
+}
+
+.button{
+	background-color: #DAE4EF;
+	border: 1px solid #396086;
+	cursor: pointer;
+}
+
+.radioButton, .checkButton, .imgButton{
+	border: 0px;
+}
+
+.textReadOnly{
+    border-left: 0;
+    border-bottom: 0;
+    border-right: 0;
+    border-top: 0;
+    background-color: #FFFFFF;
+   }
+   
+.emphasis {
+	color: #DC402A;
+}
+
+/****************************** 页面各部分样式 *********************************/
+
+.head_banner{
+	color: #2461A0;
+}
+
+/* 窗口标题 */
+.win_title{
+	font-size: 10pt;
+	text-align: left;
+	background-color: #61BCD1;
+	padding: 5px;
+	margin: 0px;
+}
+.win_title .logo{
+	background: url(../images/Forum_nav.gif) no-repeat center;
+	width: 10px;
+	height: 5px;
+	margin-right: 5px;
+}
+
+/*************** 数据列表样式 ***************/
+
+.list_data{
+	color: black;
+	/*highlightBackgroundColor: #C1D2EE;
+	highlightBorderColor: #316AC5;*/
+
+	width: 100%;
+	border: 1px solid #A2C4DD;
+	border-collapse:collapse;
+    margin: 0px;
+}
+
+.list_data thead td{
+	font-weight: bold;
+	color: #000;
+	text-align: center;
+	background-color: #6699cc;
+	height: 20px;
+	padding: 2px 5px;
+	white-space: nowrap;
+}
+.list_data .thead2 td{
+	font-weight: normal;
+	color: #fff;
+}
+
+.list_data tbody tr{
+	/* background-color: expression((this.rowIndex%2==0)? '#BDD3F7' : '#fff')*/
+}
+.list_data tbody td{
+	height: 20px;
+	border: 1px solid #A2C4DD;
+	white-space: nowrap;
+}
+
+.list_data .tr_even{
+	background-color: #fff;
+}
+.list_data .tr_odd{
+	background-color: #ECEFF2;
+}
+.list_data .tr_hover{
+	background-color: #C1D2EE;
+}
+.list_data .tr_selected{
+	color: #fff;
+	background-color: #0A246A;	
+}
+
+/***** 按钮型单元格 *****/
+
+.list_data .td_btn{
+	padding: 0px;
+	text-align: center;
+	line-height: 20px;
+}
+.td_btn a{
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	cursor: hand;
+}
+.td_btn a:link, .td_btn a:visited{
+	text-decoration: none
+	
+}
+.td_btn a:hover, .td_btn a:active{
+	color: #000;
+	background-color: #0E6A9A;
+	text-decoration: none
+}
+
+/*************** 数据表格基本样式 ***************/
+
+/*表格标题*/
+.table_title{
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000;
+	text-align: left;
+	padding: 6px;
+	margin: 0px;
+}
+
+.table_title2{
+	font-size: 10pt;
+	font-weight: normal;
+	text-align: left;
+	height: 25px;
+	line-height: 25px;
+	background: url(../images/bg_linear1.gif) repeat-x center;
+	padding: 5px;
+	margin: 0px;
+}
+
+.table_title3{
+	font-size: 9pt;
+	text-align: right;
+	width: 98%;
+	padding: 3px 0px;
+	
+}
+
+.table_title2 .logo, .table_title3 .logo{
+	background: url(../images/tb_title.gif) no-repeat center;
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
+.table_data{
+	width: 100%;
+}
+
+.table_data .td{
+	color: #000;
+}
+
+.table_data .td_label{
+	padding-right:4px; 
+	padding-top:4px;
+	padding-bottom:4px;
+	background-color: #BDD3F7; 
+	text-align: right; 
+	font-size: 9pt; 
+	width: 120px;
+	word-break: keep-all;
+	
+}
+
+.table_data .td_input{
+	background-color: #fff;
+	text-align: left;
+	padding: 0px;
+	white-space: normal;
+}
+
+.table_data .td_info{
+	background-color: #fff;
+	text-align: left;
+	white-space: normal;
+	padding-left: 5px;
+}
+
+.table_data .tr_textarea{
+	/*height: 65;*/
+}
+
+/*************** 数据录入表格样式 ***************/
+
+.table_inputData{
+	WORD-BREAK: break-all; 
+	WORD-WRAP: break-word;
+}
+
+/*************** 数据显示表格样式 ***************/
+.table_showData{
+	table-layout: fixed;
+	WORD-BREAK: break-all; 
+	WORD-WRAP: break-word;
+}
+
+/*************** 数据查询表格样式 ***************/
+
+.table_queryData{
+}
+
+.table_queryData .td_label{
+	width: 0;
+	white-space: nowrap;	
+}
+
+/* 特别样式：单元格不换行*/
+.nowrap{
+}
+.nowrap .td_label{
+	width: 0;
+	white-space: nowrap;		
+}
+/*************** 统计报表样式 ***************/
+
+.table_statistics{
+}
+
+/*************** 子窗口样式 ***************/
+.window_common{
+}
+
+.window_sub{
+	margin: 0px;
+	overflow: auto;
+}
+
+.gridFrame{
+	padding-top: 10px;
+	width: 98%;
+}
+
+/*************** 窗口控制区 ***************/
+.window_control {
+	text-align: center;	
+	padding: 5px;
+}
+
+/*************** 属性页样式 ***************/
+
+.tabView{
+}
+
+/* 属性页标题 */
+.tabHead {	
+	text-align: left;
+	float: left;
+}
+.tabHead ul{
+	list-style: none;
+	margin: 0px;
+}
+.tabHead li{
+	padding: 5px 15px;
+	background-color: #E4E1DC;
+	border: 1px solid #000;
+	margin-bottom: 1px;
+	cursor: hand;
+}
+.tabHead .tab_off{	
+	background-color: #E4E1DC;
+	border: 1px solid #000;
+}
+.tabHead .tab_on{
+	background-color: #fff;
+	border-right: 2px solid #fff;
+}
+.tabHead .tab_hover{
+	color: red;
+	background-color: #fff;
+}
+.tabHead .tab_space{
+	padding: 0px;
+	height: 1px;
+	width: 20px;
+	border: 0px;
+	border-right: 1px solid #000;
+}
+
+/*属性页内容*/
+.tabContent{
+	float: right;
+	clear: right;
+	border: 1px solid #000;
+	margin-left: -1;
+	z-index: 2;
+}
+.tabContentOther{
+	float: right;
+	clear: right;
+	border-left: 1px solid #84B6D4;
+	margin-left: -1;
+	z-index: 2;
+}
+.tabPage{
+	width: 100%;
+}
+.page_hide {
+	display: none;
+}
+.page_show {
+	display: block;
+}
+
+/**************** 复杂查询样式 ******************/
+.complexQueryRegion{
+	text-align: left; 
+}
+
+.queryTitle{
+	font-size: 10pt;
+	font-weight: normal;
+	color: #000;
+	text-align: left;
+	padding: 6px;
+	margin: 0px;
+	cursor: hand;
+}
+
+.complexQueryTable{
+	width: 100%;
+ 	border-spacing: 1px;
+}
+
+.complexQueryTable tbody tr{
+    border: 1px solid #A2C4DD;
+    background-color: #91B9D7;
+}
+
+.complexQueryTable tr, .complexQueryTable td{
+	padding: 0px;
+}
+
+/*************其他样式******************/
+.emphasis{
+	color:red;
+}
+
+div.hintArea{
+	border:1px solid #CCCCCC;
+	width:98%;
+	text-align:center;
+	
+}
+
+.td-workspace-tree {
+	width: 180px;
+}
+
+.div-workspace-tree {
+	float: left;
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+}
+.div-workspace-list {
+	height: 100%;
+	width:100%; 
+	overflow-y: auto;
+	float: left;
+	padding: 0px;
+}
+
+.td-page-code {
+	height: 20px;
+}
+
+.div-page-code-left, .div-page-code-right{
+	color: blue;
+}
+
+.div-page-code-left {
+	padding-left: 5px; 
+	float: left;
+}
+
+.div-page-code-right {
+	padding-right: 5px; 
+	float: right;
+}
+
+.div-run-info-container {
+	background-color: #6b7a92;
+	border:1px solid  black; 
+	padding-top: 5px; 
+	margin:5px; 
+}
+
+.div-run-info-title {
+	text-align: left; 
+	color: white;
+	padding-left: 5px;
+}
+
+.div-run-info-content {
+	text-align: left; 
+	background-color: white; 
+	padding-top: 5px; 
+	text-indent: 5px;
+	padding-bottom: 5px;
+}
+
+.div-remark {
+	text-align: left;
+	padding-top: 5px;
+	padding-left: 5px;
+	color:#000080;
+}
+
+
+.input-no-border{
+	height:100%;
+	border:0px;
+	margin:0px;
+	padding:0px;
+	cursor:pointer; 
+}
+
+.input-bottom-border{
+	border-bottom-color:#000000; 
+	border-bottom-width:1px; 
+	border-left:0px; 
+	border-right:0px;
+	border-top:0px;
+}
+
+.title-attribute{
+	font-size: 18pt;
+	text-align: center;
+	font-weight: bolder;
+	font-weight:bold;
+}
+
+.tr-expand {
+	background-image: url(../../../component/ext/images/default/layout/mini-bottom.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color:#DFE8F6;
+	cursor:pointer;
+	height: 7px;
+}
+
+.tr-collapse {
+	background-image: url(../../../component/ext/images/default/layout/mini-top.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color:#DFE8F6;
+	cursor:pointer;
+	height: 7px;
+}

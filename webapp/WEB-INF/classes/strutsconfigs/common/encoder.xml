@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="encoder.labEncoder" namespace="/encoder/labEncoder" extends="globalpackage">
+			<action name="listLabEncoder" method="listLabEncoder" class="labEncoderAction">
+				<result name="list">
+					/jsp/common/encoder/labEncoderList.jsp
+				</result>
+			</action>
+			<action name="showLabEncoder" method="showLabEncoder" class="labEncoderAction">
+				<result name="show">
+					/jsp/common/encoder/labEncoderShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabEncoder" method="preAddLabEncoder" class="labEncoderAction">
+				<result name="preAdd">
+					/jsp/common/encoder/labEncoderAdd.jsp
+				</result>
+			</action>
+			<action name="addLabEncoder" method="addLabEncoder" class="labEncoderAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabEncoder.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabEncoder" method="preUpdateLabEncoder" class="labEncoderAction">
+				<result name="preUpdate">
+					/jsp/common/encoder/labEncoderUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabEncoder" method="updateLabEncoder" class="labEncoderAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabEncoder.action</param>
+				</result>
+			</action>
+			<action name="deleteBatchLabEncoder" method="deleteBatchLabEncoder" class="labEncoderAction">
+				<result name="deleteBatch" type="redirectAction">
+					<param name="actionName">listLabEncoder.action</param>
+				</result>
+			</action>
+			<action name="deleteLabEncoder" method="deleteLabEncoder" class="labEncoderAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabEncoder.action</param>
+				</result>
+			</action>
+			<action name="showLabEncoder4BarCode" method="showLabEncoder4BarCode" class="labEncoderAction">
+				<result name="print">
+					/jsp/common/encoder/labEncoder4ShowBarCode.jsp
+				</result>
+			</action>
+			<action name="showLabEncoder4TwoCode" method="showLabEncoder4TwoCode" class="labEncoderAction">
+				<result name="print">
+					/jsp/common/encoder/labEncoder4ShowTwoCode.jsp
+				</result>
+			</action>
+			<action name="ajax2Content4Select" method="ajax2Content4Select" class="labEncoderAction"></action>
+			<action name="ajax4CheckBusId" method="ajax4CheckBusId" class="labEncoderAction"></action>
+		</package>
+</struts>

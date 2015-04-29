@@ -1,0 +1,340 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>WEB打印控件LODOP的样例十五:打印有页头页尾的表格</title>
+
+<script language="javascript" src="LodopFuncs.js"></script>
+<object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width=0 height=0> 
+	<embed id="LODOP_EM" type="application/x-print-lodop" width=0 height=0 pluginspage="install_lodop32.exe"></embed>
+</object> 
+</head>
+<body>
+
+<h2><font color="#009999">演示打印有页头页尾的表格：</font></h2>
+<p>打印表格的方式有两种，函数如下：</p>  
+<p><font color="#0000FF">ADD_PRINT_TABLE(intTop,intLeft,intWidth,intheight,strHTML);</font>用超文本打印<font color="#0000FF"><br>
+ADD_PRINT_TBURL(intTop,intLeft,intWidth,intheight,strURL);</font>按URL地址打印</p>  
+<p>控件将页面元素<b><font color="#0000FF">thead</font></b>的内容做页头，将元素<font color="#0000FF"><b>tfoot</b></font>的内容做页尾</p>  
+<h2><font color="#009999">演示：</font></h2>  
+<p><b>一、<a href="javascript:PrintOneURL();">预览打印</a>如下URL的表格</b>：<br>
+<input type="text" id="T1" size="78" value="http://www.w3school.com.cn/tiy/loadtext.asp?f=xmle_cd_catalog_island_thead">
+</p>  
+<p><br>
+<b>二、控制表格在每页的输出高度：</b>
+</p>  
+<p>在纸张的一个小区域(宽<font size="2">500px×高280px</font>)内输出如下表格，因打不完而分页，分页后每页都输出页头页尾。
+</p>  
+<p>注意如下粗体内容在thead和tfoot标签内，被当做页头页尾。每页的高度<font color="#0000FF">280px</font>是否包含页头页尾是可选的：</p>
+<p><input type="radio" value="0" checked name="Radio1" onclick="check(this.value)">不包含(默认)            
+  <input type="radio" value="1" name="Radio1" onclick="check(this.value)">包含头和尾            
+  <input type="radio" value="2" name="Radio1" onclick="check(this.value)">只包含页头           
+  <input type="radio" value="3" name="Radio1" onclick="check(this.value)">只包含页尾</p>
+<p>看一下<a href="javascript:PreviewMytable();">预览打印</a>或<a href="javascript:DesignMytable();">打印设计</a></p>
+
+<p><b>三、在横向的A4纸张内“满页”<a href="javascript:PrintInFullPage();">预览打印</a>如下表格</b>：</p>
+
+<div id="div1">
+
+<table border=1 width="100%" style="border:solid 1px black;border-collapse:collapse">
+
+<thead>
+<tr><th width="33%" rowspan="2" style="border:solid 1px black"><b><font face="宋体" size="2">作者<font color="#000000">(<i>Artist</i>)</font></font></b></th>
+<th width="33%" style="border:solid 1px black"><b><font face="宋体" size="2">歌曲题目</font></b>
+</th>
+<th width="33%" rowspan="2" style="border:solid 1px black"><b><font face="宋体" size="2">国籍<font color="#000000"><i>(Country)</i></font></font></b></th></tr>
+<tr>
+<th width="34%" style="border:solid 1px black"><b><font color="#000000" face="宋体" size="2"><i>CD Title</i></font></b>  
+</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Bob Dylan</span></td>        
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Empire Burlesque</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Bonnie Tyler</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Hide your heart</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Dolly Parton</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Greatest Hits</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Gary Moore</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Still got the blues</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Eros Ramazzotti</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Eros</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>EU</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Bee Gees</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>One night only</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Dr.Hook</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Sylvias Mother</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Rod Stewart</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Maggie May</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Andrea Bocelli</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Romanza</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>EU</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Percy Sledge</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>When a man loves a woman</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Savage Rose</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Black angel</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>EU</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Many</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>1999 Grammy Nominees</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Kenny Rogers</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>For the good times</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Will Smith</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Big Willie style</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Van Morrison</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Tupelo Honey</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Cat Stevens</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>the very best of</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Sam Brown</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Stop</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>T'Pau</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Bridge of Spies</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Tina Turner</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Private Dancer</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Kim Larsen</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Midt om natten</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>EU</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Luciano Pavarotti</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Pavarotti Gala Concert</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Otis Redding</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>the dock of the bay</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Simply Red</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Picture book</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>EU</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>the Communards</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Red</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>UK</span></td></tr></tbody>
+<tbody>
+<tr>
+<td width="33%" style="border:solid 1px black"><span dataFld=ARTIST>Joe Cocker</span></td>
+<td width="33%" style="border:solid 1px black"><span dataFld=TITLE>Unchain my heart</span></td>
+<td width="34%" style="border:solid 1px black"><span dataFld=COUNtrY>USA</span></td></tr></tbody>
+
+<tfoot>
+<tr><th colspan=3 width="426" style="border:solid 1px black"><b><font face="宋体" size="2">我的CD清单<font color="#000000"><i>(CD                
+    list gungho999@sina.com)</i></font></font></b></th></tr>            
+</tfoot>
+
+</table>
+
+</div>
+<p><b>四、表头表尾无边框演示：</b>
+</p>
+<p>利用表格style可以控制thead和tfoot部分没有边框,下表更接近实用表格，<a href="javascript:PrintNoBorderTable();">预览打印</a>看看：
+</p>
+<div id="div2">
+<table border=0 cellSpacing=0 cellPadding=0  width="100%" height="200" bordercolor="#000000">
+<thead>
+  <tr>
+    <td width="100%" colspan="3" height="41">
+      <p align="center"><b><font face="黑体" size="4">产品入库汇总清单</font></b></td>
+  </tr>
+  <tr>
+    <td   width="33%" height="18">日期：</td>
+    <td width="67%" colspan="2" height="18">部门名称:</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18"><b>入库单编号</b></td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18"><b>产品名称</b></td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18"><b>数量</b></td>
+  </tr>
+  </thead>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">1</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品A</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">100</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">2</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品B</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">200</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">3</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品C</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">300</td>
+  </tr>
+    <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">4</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品D</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">400　</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">5</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品E</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">500</td>
+  </tr>
+    <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">6</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品F</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">600</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">7</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品J</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">700</td>
+  </tr>
+    <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">8</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品H</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">800</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">9</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品I</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">900</td>
+  </tr>
+    <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">10</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品J</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">110</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">11</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品K</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">120</td>
+  </tr>
+    <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">12</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品L</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">130</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">13</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品M</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">140</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">14</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 0px groove;BORDER-BOTTOM: 1px  groove;" width="33%" height="18">产品N</td>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;" width="34%" height="18">150</td>
+  </tr>
+  <tfoot>
+  <tr>
+    <td width="100%" height="15" colspan="3"><b>经办人：</b></td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="3" height="18">　</td>
+  </tr>
+  <tr>
+    <td style="BORDER-COLLAPSE: collapse;  BORDER-LEFT: 1px  groove; BORDER-TOP:1px  groove; BORDER-RIGHT: 1px groove;BORDER-BOTTOM: 1px  groove;"width="100%" colspan="3" height="18"><b>带格线的备注：</b></td>
+  </tr>
+  </tfoot>
+</table>
+</div>
+<p>　
+</p>
+<p><a href="PrintSampIndex.html">&lt;&lt;回样例目录</a>
+</p>
+<script language="javascript" type="text/javascript"> 
+	var LODOP; //声明为全局变量
+        var iRadioValue=0;
+	function PrintOneURL(){
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));  
+		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_按网址打印表格");
+		LODOP.ADD_PRINT_TBURL(46,90,800,300,document.getElementById("T1").value);
+		LODOP.SET_PRINT_STYLEA(0,"HOrient",3);
+		LODOP.SET_PRINT_STYLEA(0,"VOrient",3);
+		LODOP.PREVIEW();			
+	};	
+	function PreviewMytable(){
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));  
+		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_预览打印表格");
+		LODOP.ADD_PRINT_TABLE(100,5,500,280,document.getElementById("div1").innerHTML);
+		LODOP.SET_PRINT_STYLEA(0,"TableHeightScope",iRadioValue);		
+		LODOP.PREVIEW();
+	};	
+	function DesignMytable(){
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));  
+		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_打印设计表格");
+		LODOP.ADD_PRINT_TABLE(100,5,500,280,document.getElementById("div1").innerHTML);
+		LODOP.SET_PRINT_STYLEA(0,"TableHeightScope",iRadioValue);		
+		LODOP.PRINT_DESIGN();
+	};		
+	function PrintInFullPage(){
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));  
+		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_自定义纸张");
+		LODOP.SET_PRINT_PAGESIZE(2,0,0,"A4");	
+		LODOP.ADD_PRINT_TABLE("2%","1%","96%","98%",document.getElementById("div1").innerHTML);
+		LODOP.SET_PREVIEW_WINDOW(0,0,0,800,600,"");
+		LODOP.PREVIEW();				
+	};	
+	function PrintNoBorderTable(){
+		LODOP=getLodop(document.getElementById('LODOP_OB'),document.getElementById('LODOP_EM'));  
+		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_自定义纸张");
+		LODOP.ADD_PRINT_TABLE(10,10,"50%",100,document.getElementById("div2").innerHTML);
+		LODOP.PREVIEW();				
+	};		
+	function check(thisValue){
+	  iRadioValue=thisValue;
+	}
+</script>
+		
+
+</body>
+</html>

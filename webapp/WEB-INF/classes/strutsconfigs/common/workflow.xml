@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd"> 
+
+<struts>     
+	<!-- 流程定义 -->
+	<package name="workflow.process" namespace="/workflow/process" extends="default">
+		<action name="listLabWfProcess" class="labWfProcessAction"
+			method="listLabWfProcess">
+			<result name="list">/jsp/common/workflow/processDef/processList.jsp</result>
+		</action>
+		<action name="preAddLabWfProcess" class="labWfProcessAction"
+			method="preAddLabWfProcess">
+			<result name="preAdd">/jsp/common/workflow/processDef/processAdd.jsp</result>
+		</action>
+		<action name="addLabWfProcess" class="labWfProcessAction"
+			method="addLabWfProcess">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabWfProcess.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabWfProcess" class="labWfProcessAction"
+			method="preUpdateLabWfProcess">
+			<result name="preUpdate">/jsp/common/workflow/processDef/processUpdate.jsp</result>
+		</action>
+		<action name="updateLabWfProcess" class="labWfProcessAction"
+			method="updateLabWfProcess">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabWfProcess.action</param>
+			</result>
+		</action>
+		<action name="updateLabWfProcess2Open" class="labWfProcessAction"
+			method="updateLabWfProcess2Open">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabWfProcess.action</param>
+			</result>
+		</action>
+		<!-- 查看流程初始化 -->
+		<action name="getLabWfProcess" class="labWfProcessAction"
+			method="getLabWfProcess">
+			<result name="show">/jsp/common/workflow/processDef/processShow.jsp</result>
+		</action>
+		<!-- 查看流程建模 -->
+		<action name="showLabWfProgress" class="labWfProcessAction"
+			method="getLabWfProcess">
+			<result name="show">/jsp/common/workflow/processDef/flowContentShow.jsp</result>
+		</action>
+		<action name="deleteLabWfProcess" class="labWfProcessAction"
+			method="deleteLabWfProcess">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabWfProcess.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabWfProcess4Content" class="labWfProcessAction"
+			method="preUpdateLabWfProcess4Content">
+			<result name="preUpdate">/jsp/common/workflow/processDef/flowContent.jsp</result>
+		</action>
+		<action name="preUpdateLabWfProcess4Flow" class="labWfProcessAction"
+			method="preUpdateLabWfProcess4Flow">
+			<result name="preUpdate">/jsp/common/workflow/processDef/flowUpdate.jsp</result>
+		</action>
+		<action name="showLabWfProcess4Flow" class="labWfProcessAction"
+			method="preUpdateLabWfProcess4Flow">
+			<result name="preUpdate">/jsp/common/workflow/processDef/flowShow.jsp</result>
+		</action>
+		<action name="updateLabWfProcess4Flow" class="labWfProcessAction"
+			method="updateLabWfProcess4Flow">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabWfProcess.action</param>
+			</result>
+		</action>
+		<action name="preUpdateLabWfStep" class="labWfProcessAction"
+			method="preUpdateLabWfStep">
+			<result name="preUpdate">/jsp/common/workflow/processDef/stepUpdate.jsp</result>
+		</action>
+		<action name="preUpdateLabWfPath" class="labWfProcessAction"
+			method="preUpdateLabWfPath">
+			<result name="preUpdate">/jsp/common/workflow/processDef/pathUpdate.jsp</result>
+		</action>
+		<action name="showLabWfStep" class="labWfProcessAction"
+			method="showLabWfStep">
+			<result name="show">/jsp/common/workflow/processDef/stepShow.jsp</result>
+		</action>
+		<action name="showLabWfPath" class="labWfProcessAction"
+			method="showLabWfPath">
+			<result name="show">/jsp/common/workflow/processDef/pathShow.jsp</result>
+		</action>
+		<!-- 实例流程展示页面 
+		<action name="showProgress" class="labWfProcessAction"
+			method="showProgress">
+			<result name="show">/jsp/common/workflow/ins/progressShow.jsp</result>
+		</action>-->
+		<action name="ajaxLabWfStep4Select" method="ajaxLabWfStep4Select" class="labWfProcessAction">
+		</action>
+		<action name="ajax4hasOpenedProcess" method="ajax4hasOpenedProcess" class="labWfProcessAction">
+		</action>
+		<action name="listLabWfProcess4Logs" class="labWfProcessAction"
+			method="listLabWfProcess4Logs">
+			<result name="list">/jsp/common/workflow/ins/processList4Logs.jsp</result>
+		</action>
+		<action name="showLabWfProgressIns" class="labWfProcessAction"
+			method="showLabWfProgressIns">
+			<result name="show">/jsp/common/workflow/ins/processShow.jsp</result>
+		</action>
+		<action name="ajaxLabWfStepLogs2show" class="labWfProcessAction"
+			method="ajaxLabWfStepLogs2show">
+		</action>
+	</package>
+		<package name="workflow.labWfConfig" namespace="/workflow/labWfConfig" extends="globalpackage">
+			<action name="listLabWfConfig" method="listLabWfConfig" class="labWfConfigAction">
+				<result name="list">
+					/jsp/common/workflow/config/labWfConfigList.jsp
+				</result>
+			</action>
+			<action name="showLabWfConfig" method="showLabWfConfig" class="labWfConfigAction">
+				<result name="show">
+					/jsp/common/workflow/config/labWfConfigShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabWfConfig" method="preAddLabWfConfig" class="labWfConfigAction">
+				<result name="preAdd">
+					/jsp/common/workflow/config/labWfConfigAdd.jsp
+				</result>
+			</action>
+			<action name="addLabWfConfig" method="addLabWfConfig" class="labWfConfigAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabWfConfig.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabWfConfig" method="preUpdateLabWfConfig" class="labWfConfigAction">
+				<result name="preUpdate">
+					/jsp/common/workflow/config/labWfConfigUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabWfConfig" method="updateLabWfConfig" class="labWfConfigAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabWfConfig.action</param>
+				</result>
+			</action>
+			<action name="deleteLabWfConfig" method="deleteLabWfConfig" class="labWfConfigAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabWfConfig.action</param>
+				</result>
+			</action>
+			<action name="updateLabWfConfig4Del" method="updateLabWfConfig4Del" class="labWfConfigAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabWfConfig.action</param>
+				</result>
+			</action>
+			<action name="ajaxLabWfProcess4Select" method="ajaxLabWfProcess4Select" class="labWfConfigAction">
+			</action>
+		</package>
+</struts>

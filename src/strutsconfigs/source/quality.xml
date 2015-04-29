@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!--质量管理  内部评审计划(按要素)-->
+	<package name="quality.planEle" namespace="/quality/planEle" extends="globalpackage">
+		<action name="listLabQuaAuditPlanEle" method="listLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="list">/jsp/source/quality/planEle/labQuaAuditPlanEleList.jsp</result>
+		</action>
+		<action name="preAddLabQuaAuditPlanEle" method="preAddLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="preAdd">/jsp/source/quality/planEle/labQuaAuditPlanEleAdd.jsp</result>
+		</action>
+		<action name="addLabQuaAuditPlanEle" method="addLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="add" type="redirectAction">
+				<param name="actionName">listLabQuaAuditPlanEle</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaAuditPlanEle" method="preUpdateLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="preUpdate">/jsp/source/quality/planEle/labQuaAuditPlanEleUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaAuditPlanEle" method="updateLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="update" type="redirectAction">
+				<param name="actionName">listLabQuaAuditPlanEle</param>
+			</result>
+		</action>
+		<action name="deleteLabQuaAuditPlanEle" method="deleteLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+			<result name="delete" type="redirectAction">
+				<param name="actionName">listLabQuaAuditPlanEle</param>
+			</result>
+		</action>
+		<action name="showLabQuaAuditPlanEle" method="showLabQuaAuditPlanEle" class="labQuaAuditPlanEleAction">
+		   	<result name="show">/jsp/source/quality/planEle/labQuaAuditPlanEleShow.jsp</result>
+		</action>
+		<action name="preAddLabQuaAuditRecord" method="preAddLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="preAdd">/jsp/source/quality/auditRecord/labQuaAuditRecordAdd.jsp</result>
+		</action>
+		<action name="addLabQuaAuditRecord" method="addLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaAuditPlanEle</param>
+			</result>
+		</action>
+		<action name="deleteLabQuaAuditRecord" method="deleteLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">showLabQuaAuditPlanEle?labQuaAuditPlanEleVo.id=${labQuaAuditRecordVo.quaAuditPlanEleId}</param>
+			</result>
+		</action>
+	</package>
+	<!--质量管理  内审记录-->
+	<package name="quality.auditRecord" namespace="/quality/auditRecord" extends="globalpackage">
+		<action name="listLabQuaAuditRecord" method="listLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="list">/jsp/source/quality/auditRecord/labQuaAuditRecordList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaAuditRecord" method="preUpdateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="preUpdate">/jsp/source/quality/auditRecord/labQuaAuditRecordUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaAuditRecord" method="updateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaAuditRecord</param>
+			</result>
+		</action>
+		<action name="showLabQuaAuditRecord" method="showLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="show">/jsp/source/quality/auditRecord/labQuaAuditRecordShow.jsp</result>
+		</action>
+		<action name="showLabQuaAuditPlanEle4select" method="showLabQuaAuditPlanEle4select" class="labQuaAuditRecordAction">
+			<result name="show">/jsp/source/quality/auditRecord/labQuaAuditPlanEleShow4Select.jsp</result>
+		</action>
+		<action name="deleteLabQuaAuditRecord" method="deleteLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaAuditRecord</param>
+			</result>
+		</action>
+		<!--质量管理  内部报告  -->
+		<action name="listLabQuaAuditReport" method="listLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="list">/jsp/source/quality/auditReport/labQuaAuditReportList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaAuditReport" method="preUpdateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="preUpdate">/jsp/source/quality/auditReport/labQuaAuditReportUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaAuditReport" method="updateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaAuditReport</param>
+			</result>
+		</action>
+		<action name="showLabQuaAuditReport" method="showLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="show">/jsp/source/quality/auditReport/labQuaAuditReportShow.jsp</result>
+		</action>
+		<!--质量管理  归档  -->
+		<action name="listLabQuaAuditFile" method="listLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="list">/jsp/source/quality/auditFile/labQuaAuditFileList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaAuditFile" method="preUpdateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="preUpdate">/jsp/source/quality/auditFile/labQuaAuditFileUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaFile" method="updateLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaAuditFile</param>
+			</result>
+		</action>
+		<action name="showLabQuaAuditFile" method="showLabQuaAuditRecord" class="labQuaAuditRecordAction">
+			<result name="show">/jsp/source/quality/auditFile/labQuaAuditFileShow.jsp</result>
+		</action>
+		<action name="showLabReport4Bus" method="showLabReport4Bus" class="labQuaAuditRecordAction">
+			<result name="show">/jsp/common/report/labReportShow4Bus.jsp</result>
+		</action>
+		<action name="addLabReport4Bus" method="addLabReport4Bus" class="labQuaAuditRecordAction">
+		   	<result name="add" >
+					/jsp/common/report/labReportShow4Bus.jsp
+			</result>
+		</action>
+	</package>
+	<!--质量管理  管理评审计划-->
+	<package name="quality.managePlan" namespace="/quality/managePlan" extends="globalpackage">
+		<action name="listLabQuaManageCheckPlan" method="listLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="list">/jsp/source/quality/managePlan/labQuaManageCheckPlanList.jsp</result>
+		</action>
+		<action name="preAddLabQuaManageCheckPlan" method="preAddLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="preAdd">/jsp/source/quality/managePlan/labQuaManageCheckPlanAdd.jsp</result>
+		</action>
+		<action name="addLabQuaManageCheckPlan" method="addLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckPlan</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaManageCheckPlan" method="preUpdateLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="preUpdate">/jsp/source/quality/managePlan/labQuaManageCheckPlanUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaManageCheckPlan" method="updateLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckPlan</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckPlan" method="showLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="show">/jsp/source/quality/managePlan/labQuaManageCheckPlanShow.jsp</result>
+		</action>
+		<action name="deleteLabQuaManageCheckPlan" method="deleteLabQuaManageCheckPlan" class="labQuaManageCheckPlanAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckPlan</param>
+			</result>
+		</action>
+		<action name="preAddLabQuaManageCheckRecord" method="preAddLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="preAdd">/jsp/source/quality/manage/labQuaManageCheckRecordAdd.jsp</result>
+		</action>
+		<action name="addLabQuaManageCheckRecord" method="addLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckPlan</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckRecord" method="showLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="show">/jsp/source/quality/manage/labQuaManageCheckRecordShow.jsp</result>
+		</action>
+		<action name="deleteLabQuaManageCheckRecord" method="deleteLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">showLabQuaManageCheckPlan?labQuaManageCheckPlanVo.id=${labQuaManageCheckVo.quaManageCheckPlanId}</param>
+			</result>
+		</action>
+	</package>
+	<package name="quality.manage" namespace="/quality/manage" extends="globalpackage">
+		<!--质量管理  管理评审记录-->
+		<action name="listLabQuaManageCheckRecord" method="listLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="list">/jsp/source/quality/manage/labQuaManageCheckRecordList.jsp</result>
+		</action>
+		<action name="preAddLabQuaManageCheckRecord" method="preAddLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="preAdd">/jsp/source/quality/manage/labQuaManageCheckRecordAdd.jsp</result>
+		</action>
+		<action name="addLabQuaManageCheckRecord" method="addLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckRecord</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaManageCheckRecord" method="preUpdateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="preUpdate">/jsp/source/quality/manage/labQuaManageCheckRecordUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaManageCheckRecord" method="updateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckRecord</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckRecord" method="showLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="show">/jsp/source/quality/manage/labQuaManageCheckRecordShow.jsp</result>
+		</action>
+		<action name="deleteLabQuaManageCheckRecord" method="deleteLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckRecord</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckPlan4select" method="showLabQuaManageCheckPlan4select" class="labQuaManageCheckAction">
+			<result name="show">/jsp/source/quality/manage/labQuaManageCheckPlanShow4Select.jsp</result>
+		</action>
+		<!--质量管理  管理评审记录-->
+		<action name="listLabQuaManageCheckReport" method="listLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="list">/jsp/source/quality/manage/labQuaManageCheckReportList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaManageCheckReport" method="preUpdateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="preUpdate">/jsp/source/quality/manage/labQuaManageCheckReportUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaManageCheckReport" method="updateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckReport</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckReport" method="showLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="show">/jsp/source/quality/manage/labQuaManageCheckReportShow.jsp</result>
+		</action>
+		<!--质量管理  归档-->
+		<action name="listLabQuaManageCheckFile" method="listLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="list">/jsp/source/quality/manage/labQuaManageCheckFileList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaManageCheckFile" method="preUpdateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="preUpdate">/jsp/source/quality/manage/labQuaManageCheckFileUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaManageCheckFile" method="updateLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaManageCheckFile</param>
+			</result>
+		</action>
+		<action name="showLabQuaManageCheckFile" method="showLabQuaManageCheck" class="labQuaManageCheckAction">
+			<result name="show">/jsp/source/quality/manage/labQuaManageCheckFileShow.jsp</result>
+		</action>
+		<action name="showLabReport4Bus" method="showLabReport4Bus" class="labQuaManageCheckAction">
+			<result name="show">/jsp/common/report/labReportShow4Bus.jsp</result>
+		</action>
+		<action name="addLabReport4Bus" method="addLabReport4Bus" class="labQuaManageCheckAction">
+		   	<result name="add" >
+					/jsp/common/report/labReportShow4Bus.jsp
+			</result>
+		</action>
+	</package>
+	<!--质量管理  初始化内部评审计划(按要素)-->
+	<package name="quality.initPlan" namespace="/quality/initPlan" extends="globalpackage">
+		<action name="listLabQuaInitAuditPlan" method="listLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="list">/jsp/source/quality/initPlan/labQuaInitAuditPlanList.jsp</result>
+		</action>
+		<action name="listLabQuaInitAuditPlan4Child" method="listLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="contentList">/jsp/source/quality/initPlan/content/labQuaInitAuditPlanContentList.jsp</result>
+			<result name="keyList">/jsp/source/quality/initPlan/key/labQuaInitAuditPlanKeyList.jsp</result>
+		</action>
+		<action name="preAddLabQuaInitAuditPlan" method="preAddLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="preAdd">/jsp/source/quality/initPlan/labQuaInitAuditPlanAdd.jsp</result>
+		</action>
+		<action name="preAddLabQuaInitAuditPlan4Child" method="preAddLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="preAddContent">/jsp/source/quality/initPlan/content/labQuaInitAuditPlanContentAdd.jsp</result>
+			<result name="preAddKey">/jsp/source/quality/initPlan/key/labQuaInitAuditPlanKeyAdd.jsp</result>
+		</action>
+		<action name="addLabQuaInitAuditPlan" method="addLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="add" type="redirectAction">listLabQuaInitAuditPlan</result>
+		</action>
+		<action name="addLabQuaInitAuditPlan4Child" method="addLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="add" type="redirectAction">listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.parentId=${labQuaInitAuditPlanVo.parentId}&amp;labQuaInitAuditPlanVo.rank=${labQuaInitAuditPlanVo.rank}&amp;labQuaInitAuditPlanVo.key=${labQuaInitAuditPlanVo.key}</result>
+		</action>
+		<action name="preUpdateLabQuaInitAuditPlan" method="preUpdateLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="preUpdate">/jsp/source/quality/initPlan/labQuaInitAuditPlanUpdate.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaInitAuditPlan4Child" method="preUpdateLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="preUpdateContent">/jsp/source/quality/initPlan/content/labQuaInitAuditPlanContentUpdate.jsp</result>
+			<result name="preUpdateKey">/jsp/source/quality/initPlan/key/labQuaInitAuditPlanKeyUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaInitAuditPlan" method="updateLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="update" type="redirectAction">listLabQuaInitAuditPlan</result>
+		</action>
+		<action name="updateLabQuaInitAuditPlan4Child" method="updateLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="update" type="redirectAction">listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.parentId=${labQuaInitAuditPlanVo.parentId}&amp;labQuaInitAuditPlanVo.rank=${labQuaInitAuditPlanVo.rank}&amp;labQuaInitAuditPlanVo.key=${labQuaInitAuditPlanVo.key}</result>
+		</action>
+		<action name="deleteLabQuaInitAuditPlan" method="deleteLabQuaInitAuditPlan" class="labQuaInitAuditPlanAction">
+			<result name="delete" type="redirectAction">listLabQuaInitAuditPlan</result>
+		</action>
+		<action name="deleteLabQuaInitAuditPlan4Child" method="deleteLabQuaInitAuditPlan4Child" class="labQuaInitAuditPlanAction">
+			<result name="delete" type="redirectAction">listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.parentId=${labQuaInitAuditPlanVo.parentId}&amp;labQuaInitAuditPlanVo.rank=${labQuaInitAuditPlanVo.rank}&amp;labQuaInitAuditPlanVo.key=${labQuaInitAuditPlanVo.key}</result>
+		</action>
+	</package>
+	<!--质量管理  客户回访登记-->
+	<package name="quality.cusVisit" namespace="/quality/cusVisit" extends="globalpackage">
+		<action name="listLabQuaCusVisit" method="listLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="list">/jsp/source/quality/cusVisit/labQuaCusVisitList.jsp</result>
+		</action>
+		<action name="preAddLabQuaCusVisit" method="preAddLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="preAdd">/jsp/source/quality/cusVisit/labQuaCusVisitAdd.jsp</result>
+		</action>
+		<action name="addLabQuaCusVisit" method="addLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaCusVisit</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaCusVisit" method="preUpdateLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="preUpdate">/jsp/source/quality/cusVisit/labQuaCusVisitUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaCusVisit" method="updateLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaCusVisit</param>
+			</result>
+		</action>
+		<action name="showLabQuaCusVisit" method="showLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="show">/jsp/source/quality/cusVisit/labQuaCusVisitShow.jsp</result>
+		</action>
+		<action name="showLabCustomer4select" method="showLabCustomer4select" class="labQuaCusVisitAction">
+			<result name="list">/jsp/source/quality/cusVisit/labCustomerShow4select.jsp</result>
+		</action>
+		<action name="deleteLabQuaCusVisit" method="deleteLabQuaCusVisit" class="labQuaCusVisitAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaCusVisit</param>
+			</result>
+		</action>
+		<action name="ajaxLabQuaCusVisit4LabOrg" method="ajaxLabQuaCusVisit4LabOrg" class="labQuaCusVisitAction"></action>
+	</package>
+	<!--质量管理  事故报告处理-->
+	<package name="quality.accident" namespace="/quality/accident" extends="globalpackage">
+		<action name="listLabQuaAccident" method="listLabQuaAccident" class="labQuaAccidentAction">
+			<result name="list">/jsp/source/quality/accident/labQuaAccidentList.jsp</result>
+		</action>
+		<action name="listLabQuaAccident4Handle" method="listLabQuaAccident4Handle" class="labQuaAccidentAction">
+			<result name="list">/jsp/source/quality/accident/handle/labQuaAccidentHandleList.jsp</result>
+		</action>
+		<action name="preUpdateLabQuaAccident4Handle" method="preUpdateLabQuaAccident4Handle" class="labQuaAccidentAction">
+			<result name="preUpdate">/jsp/source/quality/accident/handle/labQuaAccidentHandleUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaAccident4Handle" method="updateLabQuaAccident4Handle" class="labQuaAccidentAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaAccident4Handle</param>
+			</result>
+		</action>
+		<action name="listLabQuaAccident4Query" method="listLabQuaAccident4Query" class="labQuaAccidentAction">
+			<result name="list">/jsp/source/quality/accident/query/labQuaAccidentQueryList.jsp</result>
+		</action>
+		<action name="showLabQuaAccident4Query" method="showLabQuaAccident4Query" class="labQuaAccidentAction">
+			<result name="show">/jsp/source/quality/accident/query/labQuaAccidentQueryShow.jsp</result>
+		</action>
+		<action name="preAddLabQuaAccident" method="preAddLabQuaAccident" class="labQuaAccidentAction">
+			<result name="preAdd">/jsp/source/quality/accident/labQuaAccidentAdd.jsp</result>
+		</action>
+		<action name="addLabQuaAccident" method="addLabQuaAccident" class="labQuaAccidentAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaAccident?labQuaAccidentVo.accStatus=${labQuaAccidentVo.accStatus }</param>
+			</result>
+		</action>
+		<action name="preAddLabQuaAccident4Other" method="preAddLabQuaAccident" class="labQuaAccidentAction">
+			<result name="preAdd">/jsp/source/quality/accident/labQuaAccidentAdd4Other.jsp</result>
+		</action>
+		<action name="addLabQuaAccident4Other" method="addLabQuaAccident" class="labQuaAccidentAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">preAddLabQuaAccident4Other?labQuaAccidentVo.otherId=${labQuaAccidentVo.otherId }&amp;labQuaAccidentVo.accType=${labQuaAccidentVo.accType }&amp;demo1=${demo1}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaAccident" method="preUpdateLabQuaAccident" class="labQuaAccidentAction">
+			<result name="preUpdate">/jsp/source/quality/accident/labQuaAccidentUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaAccident" method="updateLabQuaAccident" class="labQuaAccidentAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaAccident?labQuaAccidentVo.accStatus=${labQuaAccidentVo.accStatus }</param>
+			</result>
+		</action>
+		<action name="showLabQuaAccident" method="showLabQuaAccident" class="labQuaAccidentAction">
+			<result name="show">/jsp/source/quality/accident/labQuaAccidentShow.jsp</result>
+		</action>
+		<action name="showLabCustomer4select" method="showLabCustomer4select" class="labQuaAccidentAction">
+			<result name="list">/jsp/source/quality/accident/labCustomerShow4select.jsp</result>
+		</action>
+		<action name="showLabSampRegister4select" method="showLabSampRegister4select" class="labQuaAccidentAction">
+			<result name="list">/jsp/source/quality/accident/labSampRegisterShow4select.jsp</result>
+		</action>
+		<action name="deleteLabQuaAccident" method="deleteLabQuaAccident" class="labQuaAccidentAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaAccident</param>
+			</result>
+		</action>
+		<action name="exportLabQuaAccident4Excel" method="exportLabQuaAccident4Excel" class="labQuaAccidentAction">
+			<result name="export" type="stream">
+		        <param name="contentType">application/vnd.ms-excel</param> 
+		        <param name="inputName">excelStream</param>                                      
+		        <param name="contentDisposition">filename="${fileName}"</param>
+		        <param name="bufferSize">1024</param>
+	     	</result>
+		</action>
+	</package>
+	<!--质量管理  比对验证计划-->
+	<package name="quality.proficiencyPlan" namespace="/quality/proficiencyPlan" extends="globalpackage">
+		<action name="listLabQuaProficiencyPlan" method="listLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="list">/jsp/source/quality/proficiency/plan/labQuaProficiencyPlanList.jsp</result>
+		</action>
+		<action name="preAddLabQuaProficiencyPlan" method="preAddLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="preAdd">/jsp/source/quality/proficiency/plan/labQuaProficiencyPlanAdd.jsp</result>
+		</action>
+		<action name="addLabQuaProficiencyPlan" method="addLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiencyPlan</param>
+			</result>
+			<result name="preUpdate"  type="redirectAction">
+				<param name="actionName">preUpdateLabQuaProficiencyPlan?labQuaProficiencyPlanVo.id=${labQuaProficiencyPlanVo.id}</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaProficiencyPlan" method="preUpdateLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="preUpdate">/jsp/source/quality/proficiency/plan/labQuaProficiencyPlanUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaProficiencyPlan" method="updateLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiencyPlan</param>
+			</result>
+			<result name="preUpdate"  type="redirectAction">
+				<param name="actionName">preUpdateLabQuaProficiencyPlan?labQuaProficiencyPlanVo.id=${labQuaProficiencyPlanVo.id}</param>
+			</result>
+		</action>
+		<action name="showLabQuaProficiencyPlan" method="showLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="show">/jsp/source/quality/proficiency/plan/labQuaProficiencyPlanShow.jsp</result>
+		</action>
+		<action name="deleteLabQuaProficiencyPlan" method="deleteLabQuaProficiencyPlan" class="labQuaProficiencyPlanAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiencyPlan</param>
+			</result>
+		</action>
+		<action name="preAddLabQuaProficiency" method="preAddLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="preAdd">/jsp/source/quality/proficiency/labQuaProficiencyAdd.jsp</result>
+		</action>
+		<action name="addLabQuaProficiency" method="addLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiencyPlan</param>
+			</result>
+		</action>
+		<action name="deleteLabQuaProficiency" method="deleteLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">showLabQuaProficiencyPlan?labQuaProficiencyPlanVo.id=${labQuaProficiencyVo.proficiencyPlanId}</param>
+			</result>
+		</action>
+	</package>
+	<!--质量管理  比对验证记录-->
+	<package name="quality.proficiency" namespace="/quality/proficiency" extends="globalpackage">
+		<action name="listLabQuaProficiency" method="listLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="list">/jsp/source/quality/proficiency/labQuaProficiencyList.jsp</result>
+		</action>
+		<action name="preAddLabQuaProficiency" method="preAddLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="preAdd">/jsp/source/quality/proficiency/labQuaProficiencyAdd.jsp</result>
+		</action>
+		<action name="addLabQuaProficiency" method="addLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiency</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaProficiency" method="preUpdateLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="preUpdate">/jsp/source/quality/proficiency/labQuaProficiencyUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaProficiency" method="updateLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiency</param>
+			</result>
+		</action>
+		<action name="showLabQuaProficiency" method="showLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="show">/jsp/source/quality/proficiency/labQuaProficiencyShow.jsp</result>
+		</action>
+		<action name="showLabQuaProficiencyPlan4select" method="showLabQuaProficiencyPlan4select" class="labQuaProficiencyAction">
+			<result name="show">/jsp/source/quality/proficiency/labQuaProficiencyPlanShow4Select.jsp</result>
+		</action>
+		<action name="deleteLabQuaProficiency" method="deleteLabQuaProficiency" class="labQuaProficiencyAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaProficiency</param>
+			</result>
+		</action>
+	</package>
+	<!--质量管理  投诉处理-->
+	<package name="quality.complain" namespace="/quality/complain" extends="globalpackage">
+		<action name="listLabQuaComplain" method="listLabQuaComplain" class="labQuaComplainAction">
+			<result name="list">/jsp/source/quality/complain/labQuaComplainList.jsp</result>
+		</action>
+		<action name="preAddLabQuaComplain" method="preAddLabQuaComplain" class="labQuaComplainAction">
+			<result name="preAdd">/jsp/source/quality/complain/labQuaComplainAdd.jsp</result>
+		</action>
+		<action name="addLabQuaComplain" method="addLabQuaComplain" class="labQuaComplainAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaComplain</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaComplain" method="preUpdateLabQuaComplain" class="labQuaComplainAction">
+			<result name="preUpdate">/jsp/source/quality/complain/labQuaComplainUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaComplain" method="updateLabQuaComplain" class="labQuaComplainAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaComplain</param>
+			</result>
+		</action>
+		<action name="showLabQuaComplain" method="showLabQuaComplain" class="labQuaComplainAction">
+			<result name="show">/jsp/source/quality/complain/labQuaComplainShow.jsp</result>
+		</action>
+		<action name="showLabQuaComplainPlan4select" method="showLabQuaComplainPlan4select" class="labQuaComplainAction">
+			<result name="show">/jsp/source/quality/complain/labQuaComplainPlanShow4Select.jsp</result>
+		</action>
+		<action name="showLabCustomer4select" method="showLabCustomer4select" class="labQuaComplainAction">
+			<result name="list">/jsp/source/quality/complain/labCustomerShow4select.jsp</result>
+		</action>
+		<action name="deleteLabQuaComplain" method="deleteLabQuaComplain" class="labQuaComplainAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaComplain</param>
+			</result>
+		</action>
+	</package>
+	<!--质量管理  监督抽查-->
+	<package name="quality.control" namespace="/quality/control" extends="globalpackage">
+		<action name="listLabQuaControl" method="listLabQuaControl" class="labQuaControlAction">
+			<result name="list">/jsp/source/quality/control/labQuaControlList.jsp</result>
+		</action>
+		<action name="preAddLabQuaControl" method="preAddLabQuaControl" class="labQuaControlAction">
+			<result name="preAdd">/jsp/source/quality/control/labQuaControlAdd.jsp</result>
+		</action>
+		<action name="addLabQuaControl" method="addLabQuaControl" class="labQuaControlAction">
+			<result name="add"  type="redirectAction">
+				<param name="actionName">listLabQuaControl</param>
+			</result>
+		</action>
+		<action name="preUpdateLabQuaControl" method="preUpdateLabQuaControl" class="labQuaControlAction">
+			<result name="preUpdate">/jsp/source/quality/control/labQuaControlUpdate.jsp</result>
+		</action>
+		<action name="updateLabQuaControl" method="updateLabQuaControl" class="labQuaControlAction">
+			<result name="update"  type="redirectAction">
+				<param name="actionName">listLabQuaControl</param>
+			</result>
+		</action>
+		<action name="showLabQuaControl" method="showLabQuaControl" class="labQuaControlAction">
+			<result name="show">/jsp/source/quality/control/labQuaControlShow.jsp</result>
+		</action>
+		<action name="deleteLabQuaControl" method="deleteLabQuaControl" class="labQuaControlAction">
+			<result name="delete"  type="redirectAction">
+				<param name="actionName">listLabQuaControl</param>
+			</result>
+		</action>
+		<action name="showLabAppara4select" method="showLabAppara4select" class="labQuaControlAction">
+			<result name="show">/jsp/source/quality/control/labApparaShow4Select.jsp</result>
+		</action>
+		<action name="ajaxLabQuaControl4LabOrg" method="ajaxLabQuaControl4LabOrg" class="labQuaControlAction"></action>
+	</package>
+</struts>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC   
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"   
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+		<package name="number.labNumber" namespace="/number/labNumber" extends="globalpackage">
+			<action name="listLabNumber" method="listLabNumber" class="labNumberAction">
+				<result name="list">
+					/jsp/common/number/labNumberList.jsp
+				</result>
+			</action>
+			<action name="showLabNumber" method="showLabNumber" class="labNumberAction">
+				<result name="show">
+					/jsp/common/number/labNumberShow.jsp
+				</result>
+			</action>
+			<action name="preAddLabNumber" method="preAddLabNumber" class="labNumberAction">
+				<result name="preAdd">
+					/jsp/common/number/labNumberAdd.jsp
+				</result>
+			</action>
+			<action name="addLabNumber" method="addLabNumber" class="labNumberAction">
+				<result name="add" type="redirectAction">
+					<param name="actionName">listLabNumber.action</param>
+				</result>
+			</action>
+			<action name="preUpdateLabNumber" method="preUpdateLabNumber" class="labNumberAction">
+				<result name="preUpdate">
+					/jsp/common/number/labNumberUpdate.jsp
+				</result>
+			</action>
+			<action name="updateLabNumber" method="updateLabNumber" class="labNumberAction">
+				<result name="update" type="redirectAction">
+					<param name="actionName">listLabNumber.action</param>
+				</result>
+			</action>
+			<action name="deleteLabNumber" method="deleteLabNumber" class="labNumberAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabNumber.action</param>
+				</result>
+			</action>
+			<action name="updateLabNumber4Del" method="updateLabNumber4Del" class="labNumberAction">
+				<result name="delete" type="redirectAction">
+					<param name="actionName">listLabNumber.action</param>
+				</result>
+			</action>
+		</package>
+</struts>

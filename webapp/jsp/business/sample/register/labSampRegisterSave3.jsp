@@ -227,7 +227,7 @@ function changeThisValue(obj){
 																	</label>
 																</td>
 																<td>
-																	<s:radio list="#{'1':'按项目','2':'按样品','3':'按方法'}" name="labSampRegisterVo.chargeType" theme="simple" onclick="chargeTypes(this);"></s:radio>
+																	<s:radio list="#{'1':getText('bytemi'),'2':getText('by.sam'),'3':getText('bymethod')}" name="labSampRegisterVo.chargeType" theme="simple" onclick="chargeTypes(this);"></s:radio>
 																</td>
 																<td >
 																	<label>

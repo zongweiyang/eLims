@@ -197,7 +197,7 @@ html {
 																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b>批量取消</b> </a>
 																</td>
 																<td style="float: right;">
-																	<s:select list="#{-1:'全部',2:'已通过',1:'未通过'}" headerValue="--请选择--" headerKey="" listKey="key" listValue="value" onchange="getLabDocApplyList(this.value)"></s:select>
+																	<s:select list="#{'-1':getText('page.all'),'2':getText('passed'),'1':getText('unupassed')}" headerValue="--请选择--" headerKey="" listKey="key" listValue="value" onchange="getLabDocApplyList(this.value)"></s:select>
 																</td>
 															</tr>
 														</table>

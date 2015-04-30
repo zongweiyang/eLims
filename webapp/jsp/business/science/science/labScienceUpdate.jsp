@@ -361,7 +361,7 @@
 														</label>
 													</td>
 													<td>
-														<s:radio id="masterSex" name="labSciScienceVo.sex" list="#{'男':'男','女':'女'}" theme="simple" cssStyle="border:0px;"></s:radio> 
+														<s:radio id="masterSex" name="labSciScienceVo.sex" list="#{'男':getText('theme.male'),'女':getText('theme.female')}" theme="simple" cssStyle="border:0px;"></s:radio> 
 													</td>
 												</tr>
 												<tr>

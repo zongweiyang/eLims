@@ -307,7 +307,7 @@ ul.list {
 													<label><s:text name="related.flow"/>：</label>
 												</td>
 												<td>
-													<s:radio theme="simple" value="'N'" onclick="checkFlow(this);" name="packagee.isFlow" list="#{'Y':'是','N':'否'}"  ></s:radio>
+													<s:radio theme="simple" value="'N'" onclick="checkFlow(this);" name="packagee.isFlow" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}"  ></s:radio>
 													<input type="hidden" id="flowId" name="packagee.flowId"  />
 												</td>
 										</tr>

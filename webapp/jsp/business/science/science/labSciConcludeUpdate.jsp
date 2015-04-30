@@ -294,7 +294,7 @@ html {
 													</td>
 													<td colspan="3">
 														<input type="hidden" name="labSciScienceVo.isSeized" value="${labSciScienceVo.isSeized}" />
-															<s:radio id="isKnot" name="labSciScienceVo.isKnot" value="'${labSciScienceVo.isKnot}'" list="#{'Y':'是','N':'否'}" theme="simple" cssStyle="border: 0" ></s:radio> 
+															<s:radio id="isKnot" name="labSciScienceVo.isKnot" value="'${labSciScienceVo.isKnot}'" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" theme="simple" cssStyle="border: 0" ></s:radio> 
 													</td>
 												</tr> 
 												<tr align="center">

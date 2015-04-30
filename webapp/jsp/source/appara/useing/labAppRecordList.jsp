@@ -100,7 +100,7 @@
 																<td>
 																	<s:select name="labApparaVo.status" headerKey=""
 																		headerValue="全部"
-																		list="#{'0':'正常','1':'报修','2':'停用','7':'报废'}"
+																		list="#{'0':getText('common'),'1':getText('report.repair'),'2':getText('stoped'),'7':getText('dropped')}"
 																		value="${labApparaVo.status}" />
 																</td>
 																<td>

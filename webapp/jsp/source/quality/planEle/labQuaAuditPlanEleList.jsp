@@ -80,7 +80,7 @@
 					                      						</td>
 					                      						<td><label>事故情况：</label></td>
 																<td>
-																	<s:select list="#{'0':'未转事故','1':'正在处理','2':'已处理'}" headerKey="" headerValue="--全部--"
+																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
 																		name="labQuaAuditPlanEleVo.accStatus" id="accStatus" theme="simple"  value="'${labQuaAuditPlanEleVo.accStatus}'" ></s:select>
 																</td>
 										                      	<td>

@@ -181,7 +181,7 @@ html {
 									<s:iterator value="#alllist" status="st">
 										<tr>
 							    			<td width="100"><s:text name="data.type"/>:</td>
-							    			<td width="350"><s:select name="labNumberVo.listLabNumberParVo[${st.index}].type" list="#{'0':'字符','1':'日期','2':'数字表达式'}"  onchange="selectCheck(this)" value="'${type}'" theme="simple"></s:select> </td>
+							    			<td width="350"><s:select name="labNumberVo.listLabNumberParVo[${st.index}].type" list="#{'0':getText('charstr'),'1':getText('msg.date'),'2':getText('numexpss')}"  onchange="selectCheck(this)" value="'${type}'" theme="simple"></s:select> </td>
 							    			<s:if test="${type=='0'}">
 							    				<td width="250"><input type="radio" onclick="selectInput(this)" value="0" <s:if test="${expression}!=''">  checked="checked"  </s:if>  name="ss${st.index}"><s:text name="fixed.char"></s:text><input type="radio" onclick="selectInput(this)" value="1" <s:if test="${expression==null}">  checked="checked"  </s:if>  name="ss${st.index}"/>动态字符</td>
 							    			</s:if>

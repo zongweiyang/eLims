@@ -112,7 +112,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:checkboxlist theme="simple" list="#{'1':'周一','2':'周二','3':'周三','4':'周四','5':'周五','6':'周六','7':'周日'}" name="labAttendConfigVo.workDay"></s:checkboxlist>
+												<s:checkboxlist theme="simple" list="#{'1':getText('monday'),'2':getText('quesday'),'3':getText('thirday'),'4':getText('fourday'),'5':getText('firday'),'6':getText('satarday'),'7':getText('sunday')}" name="labAttendConfigVo.workDay"></s:checkboxlist>
 											</td>
 										</tr>
 										<tr>

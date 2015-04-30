@@ -371,7 +371,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:checkboxlist list="#{'1':'条形码','2':'二维码'}" theme="simple" name="labEncoderVo.busType" id="busType" onclick="checkBarCode(this)" />
+												<s:checkboxlist list="#{'1':getText('bardoded'),'2':getText('2dcoded')}" theme="simple" name="labEncoderVo.busType" id="busType" onclick="checkBarCode(this)" />
 											</td>
 										</tr>
 										<tr>
@@ -401,7 +401,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#{'1cm':'小','2cm':'中','3cm':'大'}" name="labEncoderVo.size4One" id="size4One" cssStyle="width: 90px" value="%{labEncoderVo.size4One}" theme="simple"></s:select>
+												<s:select list="#{'1cm':getText('small'),'2cm':getText('medium'),'3cm':getText('large')}" name="labEncoderVo.size4One" id="size4One" cssStyle="width: 90px" value="%{labEncoderVo.size4One}" theme="simple"></s:select>
 											</td>
 											<td>
 												<label>
@@ -429,7 +429,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select id="numLay4One" list="#{'top':'上','bottom':'下','none':'无'}" value="%{labEncoderVo.numLay4One}" name="labEncoderVo.numLay4One" theme="simple" cssStyle="width:80px"></s:select>
+												<s:select id="numLay4One" list="#{'top':getText('shang'),'bottom':getText('xia'),'none':getText('wu')}" value="%{labEncoderVo.numLay4One}" name="labEncoderVo.numLay4One" theme="simple" cssStyle="width:80px"></s:select>
 											</td>
 										</tr>
 										<tr>

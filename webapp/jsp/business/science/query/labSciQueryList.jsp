@@ -156,7 +156,7 @@ function selectLabSciScience()
 															<tr>
 																<td>
 																	<s:select
-																		list="#{0:'按经费支出类型',1:'按科研成果类型',2:'按人员的科研成果',3:'按照每个人论文类型'}"
+																		list="#{'1':getText('byfundtype'),'2':getText('bystudyresult'),'3':getText('bysicsutdy'),'4':getText('bytheistype')}"
 																		headerKey="" headerValue="-全部-"
 																		name="type" id="type"
 																		theme="simple" onchange="showUser();return false;"

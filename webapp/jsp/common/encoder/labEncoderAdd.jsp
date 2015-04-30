@@ -368,7 +368,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:checkboxlist list="#{'1':'条形码','2':'二维码'}" theme="simple" name="labEncoderVo.busType" id="busType" cssStyle="checked=checked" onclick="checkBarCode(this)"/>
+												<s:checkboxlist list="#{'1':getText('bardoded'),'2':getText('2dcoded')}" theme="simple" name="labEncoderVo.busType" id="busType" cssStyle="checked=checked" onclick="checkBarCode(this)"/>
 											</td>
 										</tr>
 										<tr>
@@ -431,7 +431,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select id="numLay4One" list="#{'bottom':'下','top':'上','none':'无'}" value="%{numLay4One}" name="labEncoderVo.numLay4One" theme="simple" cssStyle="width:80px"></s:select>
+												<s:select id="numLay4One" list="#{'bottom':getText('xia'),'top':getText('shang'),'none':getText('wu')}" value="%{numLay4One}" name="labEncoderVo.numLay4One" theme="simple" cssStyle="width:80px"></s:select>
 											</td>
 										</tr>
 										<tr>

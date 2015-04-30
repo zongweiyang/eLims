@@ -96,7 +96,7 @@ function submitthis(action)
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#{'0':'建模中','1':'启用中','2':'已关闭'}" name="labWfProcessVo.status" headerKey="" headerValue="-全部-" theme="simple"></s:select>
+																	<s:select list="#{'0':getText('buildingmodel'),'1':getText('startinglist'),'2':getText('closed')}" name="labWfProcessVo.status" headerKey="" headerValue="-全部-" theme="simple"></s:select>
 																</td>
 																<td>
 																	<l:a uri="${pageResult.action}" value="fun.query" />

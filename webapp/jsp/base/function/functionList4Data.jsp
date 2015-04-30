@@ -203,7 +203,7 @@ function checkDataStr(index,oldVal){
 													<input type="hidden" name="funlist[${st.index}].id" value="${id}" />
 												</td>
 												<td class="l">
-													<s:radio list="#{'org':'部门','user':'用户'}" name="funlist[${st.index}].dataStr" theme="simple" onclick="checkDataStr('${st.index}','${valStr}');"></s:radio>
+													<s:radio list="#{'org':getText('msg.depart'),'user':getText('theme.user')}" name="funlist[${st.index}].dataStr" theme="simple" onclick="checkDataStr('${st.index}','${valStr}');"></s:radio>
 													<span id="valStr${st.index}">
 														<s:if test="${dataStr=='role'}">
 															<s:select id="roleStr${st.index}" list="#request.roleList" listKey="id" listValue="name" name="funlist[${st.index}].valStr" theme="simple"></s:select>

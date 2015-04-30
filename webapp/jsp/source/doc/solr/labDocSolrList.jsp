@@ -176,20 +176,20 @@ html {
 																						</s:else>
 																					</td>
 																					<td>
-																						<s:select list="#{'all':'请选择','author':'作者','keyWord':'关键字','summary':'摘要','remark':'备注'}" headerValue="${ext2=='all'?'请选择':ext2=='place'?'编号':ext2=='author'?'作者':ext2=='authorUnit'?'作者单位':ext2=='keyWord'?'关键字':ext2=='ext1'?'文件柜':ext2=='summary'?'摘要':'备注'}" headerKey="${ext2}" name="labDocVo.ext2" cssStyle="width:100px;"></s:select>
+																						<s:select list="#{'all':getText('plseaseselect'),'author':getText('author'),'keyWord':getText('key.word'),'summary':getText('abstract'),'remark':getText('remark')}" headerValue="${ext2=='all'?getText('plseaseselect'):ext2=='place'?getText('code.number'):ext2=='author'?getText('author'):ext2=='authorUnit'?getText('authordepart'):ext2=='keyWord'?getText('key.word'):ext2=='ext1'?getText('filebox'):ext2=='summary'?getText('abstract'):getText('remark')}" headerKey="${ext2}" name="labDocVo.ext2" cssStyle="width:100px;"></s:select>
 																					</td>
 																					<td>
-																						<s:select list="#{'模糊':'模糊','精确':'精确'}" name="labDocVo.ext3" headerValue="${ext3}" headerKey="${ext3}" cssStyle="width:80px;"></s:select>
+																						<s:select list="#{'模糊':getText('mohu'),'精确':getText('jingquee')}" name="labDocVo.ext3" headerValue="${ext3}" headerKey="${ext3}" cssStyle="width:80px;"></s:select>
 																					</td>
 																					<td>
 																						<input type="text" name="labDocVo.ext4" style="width: 320px;" value="${ext4}" />
 																					</td>
 																					<td>
-																						<s:select list="#{'and':'与','or':'或','<>':'非'}" name="labDocVo.ext5" headerValue="${ext5=='and'?'与':ext5=='or'?'或':'非'}" headerKey="${ext5}" cssStyle="width:50px;"></s:select>
+																						<s:select list="#{'and':getText('yu'),'or':getText('huo'),'<>':getText('fei')}" name="labDocVo.ext5" headerValue="${ext5=='and'?getText('yu'):ext5=='or'?'或':getText('huo')}" headerKey="${ext5}" cssStyle="width:50px;"></s:select>
 																					</td>
 																					<td>
 																						<s:if test="${st.index==0}">
-																							<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr2db.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b>搜索</b> </a>
+																							<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr2db.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b><s:text name="searchwquwerw"/></b> </a>
 																						</s:if>
 																					</td>
 																				</tr>
@@ -203,19 +203,19 @@ html {
 																					<a onclick="addQu();"><img height="20" width="20" src="${basePath}img/jia.gif" /> </a>
 																				</td>
 																				<td>
-																					<s:select list="#{'all':'请选择','author':'作者','keyWord':'关键字','summary':'摘要','remark':'备注'}" name="labDocVo.ext2" cssStyle="width:100px;"></s:select>
+																					<s:select list="#{'all':getText('plseaseselect'),'author':getText('author'),'keyWord':getText('key.word'),'summary':getText('abstract'),'remark':getText('remark')}" name="labDocVo.ext2" cssStyle="width:100px;"></s:select>
 																				</td>
 																				<td>
-																					<s:select list="#{'模糊':'模糊','精确':'精确'}" name="labDocVo.ext3" cssStyle="width:80px;"></s:select>
+																					<s:select list="#{'模糊':getText('mohu'),'精确':getText('jingquee')}" name="labDocVo.ext3" cssStyle="width:80px;"></s:select>
 																				</td>
 																				<td>
 																					<input type="text" name="labDocVo.ext4" style="width: 320px;" />
 																				</td>
 																				<td>
-																					<s:select list="#{'and':'与','or':'或','<>':'非'}" name="labDocVo.ext5" cssStyle="width:50px;"></s:select>
+																					<s:select list="#{'and':getText('yu'),'or':getText('huo'),'<>':getText('fei')}" name="labDocVo.ext5" cssStyle="width:50px;"></s:select>
 																				</td>
 																				<td>
-																					<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr2db.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b>搜索</b> </a>
+																					<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr2db.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b><s:text name="searchwquwerw"/></b> </a>
 																				</td>
 																			</tr>
 																		</table>
@@ -232,7 +232,7 @@ html {
 																<s:text name="file.name"/>
 															</th>
 															<th class="c">
-																<s:text name="lab.code.ops"/>者
+																<s:text name="ops.man"/>
 															</th>
 															<th class="c">
 																<s:text name="remark"/>

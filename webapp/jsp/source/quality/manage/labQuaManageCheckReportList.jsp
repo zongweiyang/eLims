@@ -56,7 +56,7 @@
 																	</label>
 																</td>
 																<td>
-																<s:select theme="simple" list="#{'':'--全部--','0':'已存档','1':'未存档'}"  name="labQuaManageCheckVo.isFile"></s:select>
+																<s:select theme="simple" list="#{'':getText('alldata'),'0':getText('isartich'),'1':getText('unarchtided')}"  name="labQuaManageCheckVo.isFile"></s:select>
 																</td>
 																<td><label>管理评审计划：</label></td>
 																<td>

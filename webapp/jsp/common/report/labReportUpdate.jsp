@@ -133,7 +133,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#{'1':'Html模版','2':'Excel模版'}" name="labReportVo.type" id="type" headerKey="" theme="simple" cssStyle="width:176px;"></s:select>
+												<s:select list="#{'1':getText('html.tmp'),'2':getText('excel.tmp')}" name="labReportVo.type" id="type" headerKey="" theme="simple" cssStyle="width:176px;"></s:select>
 												<font color="red">*</font>
 											</td>
 										</tr>

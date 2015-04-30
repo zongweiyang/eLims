@@ -75,7 +75,7 @@
 											</label>
 										</td>
 										<td>
-											<s:select theme="simple" cssStyle="width:214px" list="#{'excel':'Excel模板'}" id="type" name="labTemplateVo.type" value="%{labTemplateVo.type}"></s:select>
+											<s:select theme="simple" cssStyle="width:214px" list="#{'excel':getText('excel.tmp')}" id="type" name="labTemplateVo.type" value="%{labTemplateVo.type}"></s:select>
 										</td>
 									</tr>
 									<tr>

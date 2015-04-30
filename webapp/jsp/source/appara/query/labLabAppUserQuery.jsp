@@ -121,12 +121,12 @@
 																			</td>
 																			<s:if test="${isVague}==1">
 																				<td>
-																					<s:select list="#{'LIKE':'模糊查询','=':'精确查询'}" theme="simple" name="labQueryVo.listQuery[${st.index}].isVagueValue" ></s:select>
+																					<s:select list="#{'LIKE':getText('mohu.query'),'=':getText('jingque.query')}" theme="simple" name="labQueryVo.listQuery[${st.index}].isVagueValue" ></s:select>
 																					<input type="hidden" value="${isVague}" name="labQueryVo.listQuery[${st.index}].isVague" />
 																				</td>
 																				<s:if test="${isSort}==1">
 																					<td>
-																						<s:select list="#{'1':'请选择：','ASC':'升序','DESC':'降序'}" theme="simple"  value="'${isSortValue}'" name="labQueryVo.listQuery[${st.index}].isSortValue" ></s:select>
+																						<s:select list="#{'1':getText('plseaseselect'),'ASC':getText('up.order')},'DESC':getText('down.order')}" theme="simple"  value="'${isSortValue}'" name="labQueryVo.listQuery[${st.index}].isSortValue" ></s:select>
 																						<input type="hidden" value="${isSort}" name="labQueryVo.listQuery[${st.index}].isSort" />
 																					</td>
 																				</s:if>	
@@ -136,7 +136,7 @@
 																			</s:if>
 																			<s:elseif test="${isSort}==1">
 																					<td>
-																						<s:select list="#{'1':'请选择：','ASC':'顺序','DESC':'倒序'}" theme="simple"  value="'${isSortValue}'" name="labQueryVo.listQuery[${st.index}].isSortValue" ></s:select>
+																						<s:select list="#{'1':getText('plseaseselect'),'ASC':getText('shunxu')},'DESC':getText('daoxu')}" theme="simple"  value="'${isSortValue}'" name="labQueryVo.listQuery[${st.index}].isSortValue" ></s:select>
 																						<input type="hidden" value="${isSort}" name="labQueryVo.listQuery[${st.index}].isSort" />
 																					</td>
 																				<s:else>

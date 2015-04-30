@@ -316,8 +316,8 @@ html {
 																</td>
 																<td></td>
 																<td class="c"><s:select list="#request.samTypeList" listKey="id" listValue="name"  name="standardItemList[${st1.index}].labSamTypeId" value="'${std1.labSamTypeId}'"  theme="simple"></s:select></td>
-																<td class="c"><s:select list="#{'0':'常规项目/基本项目','1':'非常规项目/补充项目','':'-请选择-'}"     name="standardItemList[${st1.index}].itemType" value="'${std1.itemType}'"  theme="simple" ></s:select></td>
-																<td class="c"><s:select list="#{'':'-请选择-','1':'日检','2':'周检','3':'月检','4':'半年检','5':'年检'}"      name="standardItemList[${st1.index}].testType"  theme="simple"  value="'${std1.testType}'"></s:select></td> 
+																<td class="c"><s:select list="#{'0':getText('changguisxing'),'1':getText('guixisng'),'':getText('plseaseselect')}"     name="standardItemList[${st1.index}].itemType" value="'${std1.itemType}'"  theme="simple" ></s:select></td>
+																<td class="c"><s:select list="#{'':getText('plsselect'),'1':getText('daycheckl'),'2':getText('weekcheck'),'3':getText('monthcheck'),'4':getText('halfyearch'),'5':getText('yearcheck')}"      name="standardItemList[${st1.index}].testType"  theme="simple"  value="'${std1.testType}'"></s:select></td> 
 																<td class="c">
 																	<input type="hidden" value="${std1.id}" name="standardItemList[${st1.index}].id"/>
 																	<input type="hidden" id="itemId${st1.index}" name="standardItemList[${st1.index}].itemId" value="${std1.itemId}" />
@@ -358,8 +358,8 @@ html {
 																		<td></td>
 																		<td class="c"></td>
 																		<td class="c"><s:select list="#request.samTypeList" listKey="id" listValue="name"   name="standardItemList[${st1.index}].minSItemList[${st2.index}].labSamTypeId"  theme="simple"></s:select></td>
-																        <td class="c"><s:select list="#{'0':'常规项目/基本项目','1':'非常规项目/补充项目'}"  value="${std1.itemType}"   name="standardItemList[${st1.index}].minSItemList[${st2.index}].itemType"  theme="simple" ></s:select></td>
-																        <td class="c"><s:select list="#{'3':'月检','2':'周检','1':'日检'}"  value="${std1.testType}"    name="standardItemList[${st1.index}].minSItemList[${st2.index}].testType"  theme="simple" ></s:select></td> 
+																        <td class="c"><s:select list="#{'0':getText('changguisxing'),'1':getText('guixisng')}"  value="${std1.itemType}"   name="standardItemList[${st1.index}].minSItemList[${st2.index}].itemType"  theme="simple" ></s:select></td>
+																        <td class="c"><s:select list="#{'3':getText('monthcheck'),'2':getText('weekcheck'),'1':getText('daycheckl')}"  value="${std1.testType}"    name="standardItemList[${st1.index}].minSItemList[${st2.index}].testType"  theme="simple" ></s:select></td> 
 																		<td class="r">
 																			<input type="hidden" value="${sonId1.id}" name="standardItemList[${st1.index}].minSItemList[${st2.index}].id"/>
 																			<input type="hidden"  name="standardItemList[${st1.index}].minSItemList[${st2.index}].minItemId" value="${sonId1.minItemId}" />

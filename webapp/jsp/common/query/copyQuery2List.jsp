@@ -219,13 +219,13 @@
 							                      							</td>
 								                      						<td width="80">
 								                      							<s:if test="${isVague=='1'}">
-								                      								<s:select theme="simple" value="'${isVagueValue}'" list="#{'LIKE':'模糊查询','=':'精确查询'}" name="labQueryVo.listQuery[${st.index}].isVagueValue"></s:select>
+								                      								<s:select theme="simple" value="'${isVagueValue}'" list="#{'LIKE':getText('mohu.query'),'=':getText('jingque.query')}" name="labQueryVo.listQuery[${st.index}].isVagueValue"></s:select>
 								                      								<input type="hidden" value="${isVague}" name="labQueryVo.listQuery[${st.index}].isVague"/>
 								                      							</s:if>
 								                      						</td>
 								                      						<td width="50">
 								                      							<s:if test="${isSort=='1'}">
-								                      								<s:select name="labQueryVo.listQuery[${st.index}].isSortValue" theme="simple" value="'${isSortValue}'" list="#{'1':'请选择','ASC':'升序','DESC':'降序'}"></s:select>
+								                      								<s:select name="labQueryVo.listQuery[${st.index}].isSortValue" theme="simple" value="'${isSortValue}'" list="#{'1':getText('plseaseselect'),'ASC':getText('up.order')},'DESC':getText('down.order')}"></s:select>
 								                      								<input type="hidden" value="1" name="labQueryVo.listQuery[${st.index}].isSort" />
 								                      							</s:if>
 								                      						</td>

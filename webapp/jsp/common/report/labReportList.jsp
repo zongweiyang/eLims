@@ -117,7 +117,7 @@ html {
 					                      					<tr>
 					                      						<td><label><s:text name="config.type"/>：</label></td>
 					                      						<td>
-					                      							<s:select list="#{'':'-全部-','1':'Html模版','2':'Excel模版'}" name="labReportVo.type" theme="simple"></s:select>
+					                      							<s:select list="#{'':getText('alldata'),'1':getText('html.tmp'),'2':getText('excel.tmp')}" name="labReportVo.type" theme="simple"></s:select>
 					                      						</td>
 															   	<td><label><s:text name="config.name"/>：</label></td>
 					                      						<td>

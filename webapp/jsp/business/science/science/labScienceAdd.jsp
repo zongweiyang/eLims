@@ -385,7 +385,7 @@ html {
 												</td>
 												<td>
 													<s:radio id="masterSex" name="labSciScienceVo.sex"
-														value="'男'" list="#{'男':'男','女':'女'}" theme="simple"
+														value="'男'" list="#{'男':getText('theme.male'),'女':getText('theme.female')}" theme="simple"
 														cssStyle="border: 0"></s:radio>
 												</td>
 											</tr>

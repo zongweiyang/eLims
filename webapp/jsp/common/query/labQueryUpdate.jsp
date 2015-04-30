@@ -374,7 +374,7 @@ html {
 														<s:hidden name="labQueryVo.listLabParameter[${st.index}].isVague" value="%{isVague}"></s:hidden>
 													</td>
 													<td>
-														<s:select onchange="changeSelect(this)" name="labQueryVo.listLabParameter[${st.index}].showType" value="${showType}" theme="simple" list="#{'0':'文本框','1':'日期控件','2':'时间控件','3':'下拉框','4':'弹出层'}"></s:select>
+														<s:select onchange="changeSelect(this)" name="labQueryVo.listLabParameter[${st.index}].showType" value="${showType}" theme="simple" list="#{'0':getText('text.type'),'1':getText('date.btn'),'2':getText('time.btn'),'3':getText('dorplisted'),'4':getText('opplisted')}"></s:select>
 														<s:if test="${showType=='3'}">
 															<input type="hidden" name="labQueryVo.listLabParameter[${st.index}].comboxValue" value="<s:property value="comboxValue" escape="true"/> " id="comboxValue${st.index}" />
 															<input type="hidden" name="labQueryVo.listLabParameter[${st.index}].combox" value="${combox}" id="combox${st.index}" />

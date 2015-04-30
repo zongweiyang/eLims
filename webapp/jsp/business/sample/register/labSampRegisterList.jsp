@@ -120,7 +120,7 @@ function showProcess(id){
 																<td>
 																	<s:select theme="simple" list="#request.funStepList"
 																		listKey="stepId" listValue="stepName" headerKey=""
-																		headerValue="-全部-" name="labSampRegisterVo.status"
+																		headerValue='<s:property value="getText('alldata')"/>' name="labSampRegisterVo.status"
 																		id="status"
 																		onchange="submitvalue('sample/labSampRegister/listLabSampRegister.action');">
 																	</s:select>

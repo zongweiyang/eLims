@@ -209,7 +209,7 @@
 											</td>
 											<td>
 												<input disabled="disabled" value="${labApparaVo.verPeriod}" id="verificationPeriod" type="text" size="20" onchange="isNoNatureNum(this);" />
-												<s:select disabled="disabled" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':'月','天':'天'}" theme="simple" />
+												<s:select disabled="disabled" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':getText('month'),'天':getText('dayday')}" theme="simple" />
 											</td>
 											<td>
 												<label>

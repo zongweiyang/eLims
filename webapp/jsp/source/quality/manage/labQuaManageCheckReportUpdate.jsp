@@ -265,10 +265,10 @@
 													</td>
 													<td colspan="3" > 
 														<s:if test="${labQuaManageCheckVo.isFile == '' || labQuaManageCheckVo.isFile == null}">
-															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':'是','1':'否'}" value="'1'" name="labQuaManageCheckVo.isFile"></s:radio>
+															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':getText('lab.yes'),'1':getText('lab.no')}" value="'1'" name="labQuaManageCheckVo.isFile"></s:radio>
 														</s:if>
 														<s:else>
-															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':'是','1':'否'}" value="'${labQuaManageCheckVo.isFile}'" name="labQuaManageCheckVo.isFile"></s:radio>
+															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':getText('lab.yes'),'1':getText('lab.no')}" value="'${labQuaManageCheckVo.isFile}'" name="labQuaManageCheckVo.isFile"></s:radio>
 														</s:else>
 													</td>
 												</tr>

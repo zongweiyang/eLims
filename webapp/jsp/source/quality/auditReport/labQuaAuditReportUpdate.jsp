@@ -324,10 +324,10 @@
 													</td>
 													<td colspan="3" > 
 														<s:if test="${labQuaAuditRecordVo.isFile == '' || labQuaAuditRecordVo.isFile == null }">
-															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':'是','1':'否'}" value="'1'" name="labQuaAuditRecordVo.isFile"></s:radio>
+															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':getText('lab.yes'),'1':getText('lab.no')}" value="'1'" name="labQuaAuditRecordVo.isFile"></s:radio>
 														</s:if>
 														<s:else>
-															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':'是','1':'否'}" value="'${labQuaAuditRecordVo.isFile}'" name="labQuaAuditRecordVo.isFile"></s:radio>
+															<s:radio cssStyle="border:0 " theme="simple" list="#{'0':getText('lab.yes'),'1':getText('lab.no')}" value="'${labQuaAuditRecordVo.isFile}'" name="labQuaAuditRecordVo.isFile"></s:radio>
 														</s:else>
 													</td>
 												</tr>

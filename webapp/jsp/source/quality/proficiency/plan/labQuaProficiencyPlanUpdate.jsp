@@ -185,7 +185,7 @@
 													</label>
 												</td>
 												<td>
-												      <s:radio list="#{'Y':'是','N':'否'}" theme="simple" name="labQuaProficiencyPlanVo.isTest"></s:radio>
+												      <s:radio list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" theme="simple" name="labQuaProficiencyPlanVo.isTest"></s:radio>
 												</td> -->
 											</tr>
 											<tr>

@@ -152,7 +152,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'0':'目录','1':'功能'}" name="labFunctionVo.type" onclick="changeType();"></s:radio>
+											<s:radio theme="simple" list="#{'0':getText('preface'),'1':getText('function')}" name="labFunctionVo.type" onclick="changeType();"></s:radio>
 										</td>
 										<td>
 											<label>
@@ -216,7 +216,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isProcess" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isProcess" ></s:radio>
 										</td>
 										<td>
 											<label>
@@ -224,7 +224,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isTemplate" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isTemplate" ></s:radio>
 										</td>
 									</tr>
 									<tr>
@@ -234,7 +234,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isReport" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isReport" ></s:radio>
 										</td>
 										<td>
 											<label>
@@ -242,7 +242,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isBarCode" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isBarCode" ></s:radio>
 										</td>
 									</tr>
 									<tr>
@@ -252,7 +252,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isQuery" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isQuery" ></s:radio>
 										</td>
 										<td>
 											<label>
@@ -260,7 +260,7 @@
 											</label>
 										</td>
 										<td>
-											<s:radio theme="simple" list="#{'Y':'是','N':'否'}" name="labFunctionVo.isQuickFun" ></s:radio>
+											<s:radio theme="simple" list="#{'Y':getText('lab.yes'),'N':getText('lab.no')}" name="labFunctionVo.isQuickFun" ></s:radio>
 										</td>
 									</tr>
 								</table>

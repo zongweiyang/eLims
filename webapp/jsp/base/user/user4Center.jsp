@@ -236,7 +236,7 @@ function submitvalue(actionstr){
 																</label>
 															</td>
 															<td>
-																<s:select cssStyle="width:214px;" theme="simple" list="#{'小学':'小学','初中':'初中','高中':'高中','中专':'中专','专科':'专科','本科':'本科','研究生':'研究生','博士':'博士'}"   name="labUserVo.education" id="education" ></s:select>
+																<s:select cssStyle="width:214px;" theme="simple" list="#{'小学':getText('xiaoxue'),'初中':getText('chuzhong'),'高中':getText('gaozhong'),'中专':getText('zhongzhuan'),'专科':getText('zhuanke'),'本科':getText('benke'),'研究生':getText('yanjiusheng'),'博士':getText('boshi')}"   name="labUserVo.education" id="education" ></s:select>
 															</td>
 														</tr>
 														<tr>

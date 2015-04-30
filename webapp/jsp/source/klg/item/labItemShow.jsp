@@ -93,7 +93,7 @@
 												<tr>
 													<td><label>收费方式：</label></td>
 													<td>
-														<s:radio disabled="true" list="#{'0':'按项目','1':'按数量'}" value="${labItemVo.priceType}" name="labItemVo.priceType" theme="simple"></s:radio>
+														<s:radio disabled="true" list="#{'0':getText('bytemi'),'1':getText('bynumber')}" value="${labItemVo.priceType}" name="labItemVo.priceType" theme="simple"></s:radio>
 													</td>
 												</tr>
 												<tr>

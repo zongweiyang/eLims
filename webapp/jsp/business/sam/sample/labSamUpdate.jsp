@@ -417,7 +417,7 @@ html {
 																<input style="width: 100%;" type="text" name="labSamMainVo.labSamVoList[${st.index }].sampDate" class="Wdate" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" value="${sampDate }" />
 															</td>
 															<td class="c">
-																<s:select list="#{'N':'检测','Y':'留样'}"  name="labSamMainVo.labSamVoList[${st.index }].isDestory" id="isDestory" cssStyle="width: 80px;" theme="simple"></s:select>
+																<s:select list="#{'N':getText('sample.check'),'Y':getText('left.sam')}"  name="labSamMainVo.labSamVoList[${st.index }].isDestory" id="isDestory" cssStyle="width: 80px;" theme="simple"></s:select>
 															</td>
 															<td class="c" width="50">
 																<s:if test="${isDiv=='Y'}">

@@ -430,7 +430,7 @@ html {
 													</label>
 												</td>
 												<td>
-													<s:radio disabled="true" list="#{'1':'按项目次数','2':'按项目','3':'按样品'}" name="labSampRegisterVo.chargeType" theme="simple" ></s:radio>
+													<s:radio disabled="true" list="#{'1':getText('buitemcount'),'2':getText('bytemi'),'3':getText('by.sam')}" name="labSampRegisterVo.chargeType" theme="simple" ></s:radio>
 												</td>
 												<td >
 													<label>

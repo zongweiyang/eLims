@@ -391,7 +391,7 @@ function checkContact(obj){
 															<tr>	
 																<td><label><s:text name="out.report.style"/>：</label></td>
 																<td>
-																	<s:radio theme="simple" list="#{'1':'按任务','2':'按样品'}" name="labSampRegisterVo.reportMake" value="${labSampRegisterVo.reportMake}"></s:radio>
+																	<s:radio theme="simple" list="#{'1':getText('by.task'),'2':getText('by.sam')}" name="labSampRegisterVo.reportMake" value="${labSampRegisterVo.reportMake}"></s:radio>
 																</td>
 																<td><label><s:text name="get.report.style"/>：</label></td>
 																<td id="reportPost">

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/tomcat7">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="D:/apache-tomcat-7.0.59/lib"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/apache-ant-zip.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/aspectjrt.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/avalon-framework-4.2.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/barcode.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/barcode4j.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/c3p0-0.9.0.4.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/common-annotations.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-chain-1.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-codec-1.7.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-dbcp.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-digester-2.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-fileupload-1.3.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-httpclient-3.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-io-2.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-io-2.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-jexl-2.1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-lang-2.6.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-logging-api-1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-pool.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-validator-1.3.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/ezmorph-1.0.3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/freemarker-2.3.19.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/guava-13.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/httpclient-4.2.3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/httpcore-4.2.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/httpcore-nio-4.0-beta1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/httpmime-4.2.3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/IKAnalyzer2012FF_u1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/javassist-3.11.0.GA.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jeval.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/JNative.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jodconverter-2.2.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jodconverter-cli-2.2.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/json_simple-1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/json-lib-2.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/juh-3.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jurt-3.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jxl-2.6.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jxls-core-1.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/jxls-reader-1.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-analyzers-common-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-analyzers-kuromoji-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-analyzers-phonetic-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-codecs-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-core-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-grouping-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-highlighter-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-memory-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-misc-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-queries-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-queryparser-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-spatial-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-suggest-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mail.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mysql-connector-java-3.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/noggit-0.5.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/ognl-3.0.6.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/org.restlet-2.1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/org.restlet.ext.servlet-2.1.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/org.springframework.core-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/org.springframework.test-3.0.3.RELEASE.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/PDFRenderer.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/peter.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/poi-3.10.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/QR-barCode.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/QRCode.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/ridl-3.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/solr-core-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/solr-solrj-4.3.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/spatial4j-0.3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/spring.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/struts-core-1.3.10.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/struts2-core-2.3.16.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/struts2-junit-plugin-2.3.16.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/struts2-spring-plugin-2.3.16.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/tika-app-1.5.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/unoil-3.0.1.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/xstream-1.4.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/xwork-core-2.3.16.2.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/zookeeper-3.4.5.jar"/>
+	<classpathentry kind="lib" path="D:/medxview/apache-tomcat-7.0.509092/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/medxview/apache-tomcat-7.0.509092/lib/jsp-api.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Java/jdk1.7.0_25"/>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="accessible" pattern="**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry kind="output" path="webapp/WEB-INF/classes"/>
+</classpath>

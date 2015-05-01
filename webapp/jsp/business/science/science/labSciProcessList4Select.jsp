@@ -139,9 +139,9 @@ html {
 									</th>
 									<th property="no"><s:text name="code.number"/></th>
 									<th property="name">名称</th>
-									<th property="type ">类型</th>
+									<th property="type "><s:text name="config.type"/></th>
 									<th property="contents">内容</th>
-									<th property="createTime" >登记时间</th>
+									<th property="createTime" ><s:text name="reg.time"/></th>
 									<th width="18%" class="c">
 										<s:text name="lab.code.ops"/>
 									</th>

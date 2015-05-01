@@ -76,7 +76,7 @@ html {
 																</td>
 																<td>
 															       <label>
-																          会议类型：
+																          <s:text name="conference.type"/>：
 															      </label>
 														      </td>
 														     <td>
@@ -140,7 +140,7 @@ html {
 														<img src="<%=basePath%>img/icon_drag.gif" />
 													</th>
 													<th property="learnType">
-														会议类型
+														<s:text name="conference.type"/>
 													</th>
 													<th property="name">
 														<s:text name="conference.name"/>
@@ -149,7 +149,7 @@ html {
 														参加科室
 													</th>
 													<th property="startTime">
-														召开时间
+														<s:text name="conference.time"/>
 													</th>
 													<th property="place">
 														开会地点

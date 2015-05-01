@@ -223,7 +223,7 @@ html {
 															<s:text name="regular.no"/>
 														</th>
 														<th>
-															<s:text name="std.stock"/>量
+															<s:text name="storenumber"/>
 														</th>
 														<th>
 															<s:text name="inboundnumber"/>

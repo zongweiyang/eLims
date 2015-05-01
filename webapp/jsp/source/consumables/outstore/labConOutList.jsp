@@ -134,7 +134,7 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="receiptno">
-													单据号
+													<s:text name="bill.no"/>
 												</th>
 												<th property="outstorer">
 													<s:text name="out.savinger"/>

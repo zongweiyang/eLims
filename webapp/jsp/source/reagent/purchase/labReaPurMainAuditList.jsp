@@ -191,7 +191,7 @@ html {
 																<s:if test="${isOper=='Y'}">
 																	<l:a href="#"
 																		uri="reagent/labReaPurMain/showLabReaPur4Audit.action?labReaPurMainVo.id=${id}"
-																		value="审核" />
+																		value="flow.check"/>
 																</s:if>
 																<l:a href="#"
 																	uri="reagent/labReaPurMain/showLabReaPur.action?labReaPurMainVo.id=${id}"

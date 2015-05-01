@@ -72,7 +72,7 @@
 																<td>
 																	<input type="text" name="labQuaAccidentVo.accUnitSearch" value="${labQuaAccidentVo.accUnitSearch}" />
 																</td>
-																<td><label>事故类别：</label></td>
+																<td><label><s:text name="accidtype"/>：</label></td>
 					                      						<td>
 					                      							<s:select list="labCodeVoList" listKey="code" listValue="name"  headerKey="" headerValue="--全部--" name="labQuaAccidentVo.accType" id="accType" value="'${labQuaAccidentVo.accType }'" theme="simple" ></s:select>
 					                      						</td>
@@ -124,13 +124,13 @@
 													<s:text name="accidunit"/>
 												</th>
 												<th property="accType">
-												  	事故类别
+												  	<s:text name="accidtype"/>
 												</th>
 												<th>
-													验事故发生 原因、经过
+													<s:text name="accihapreas"/>
 												</th>
 												<th property="createTime">
-												  	 登记日期
+												  	 <s:text name="sam.register"/>
 												</th>
 												<th property="repTime">
 												   处理状态

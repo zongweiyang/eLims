@@ -311,7 +311,7 @@ html {
 													<s:text name="publiccodename"/>
 												</th>
 												<th>
-													公共代码类型编码
+													<s:text name="puliccodestylcode"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

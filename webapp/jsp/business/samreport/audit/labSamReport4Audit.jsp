@@ -270,7 +270,7 @@ function showReport(){
 													</th>
 												</s:if>
 												<th width="100">
-													<s:text name="checker"/>检测人
+													<s:text name="checker"/>
 												</th>
 												<th width="100">
 													<s:text name="chk.date"/>

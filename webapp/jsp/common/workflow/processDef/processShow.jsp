@@ -190,7 +190,7 @@ html {
 														<s:text name="node.id"/>
 													</td>
 													<td class="c">
-														节点类型
+														<s:text name="nodetype"/>
 													</td>
 												</tr>
 												<s:iterator id="" status="st" value="labWfProcessVo.funStepList">

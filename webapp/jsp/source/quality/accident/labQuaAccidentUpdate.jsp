@@ -103,7 +103,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>检验事故报告登记单</span>
+												<span><s:text name="chekaccisheetrec"/></span>
 											</div>
 											<table class="FormtableCon">
 												 <tr>
@@ -119,7 +119,7 @@
 												</td>
 												<td class="r">
 													<label>
-														事故类别：
+														<s:text name="accidtype"/>：
 													</label>
 												</td>
 												<td>
@@ -129,7 +129,7 @@
 											<tr id="TR" style="display: none;">
 												<td class="r" width="160">
 													<label>
-														送检单：
+														<s:text name="snedcheck"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -139,7 +139,7 @@
 											<!-- <tr>
 												<td class="r">
 													<label>
-														事故负责人：
+														<s:text name="accifuze"/>：
 													</label>
 												</td>
 												<td>
@@ -148,7 +148,7 @@
 												</td>
 												<td class="r">
 													<label>
-														事故发生时间：
+														<s:text name="accidtime"/>：
 													</label>
 												</td>
 												<td>
@@ -159,7 +159,7 @@
 											<tr>
 											    <td class="r">
 												       <label>
-														室负责人：
+														<s:text name="labmasterman"/>：
 														</label>
 												</td>
 												<td>
@@ -178,7 +178,7 @@
 											<tr>
 											    <td class="r">
 												       <label>
-														 质量负责人：
+														 <s:text name="qosmaind"/>：
 														</label>
 												</td>
 												<td>
@@ -197,7 +197,7 @@
 											<tr>
 												<td class="r">
 													<label>
-														检验事故发生
+														<s:text name="chekacichap"/>
 														原因、经过：
 													</label>
 												</td>
@@ -208,7 +208,7 @@
 											<tr>
 											   <td class="r">
 													<label>
-														事故原因分析
+														<s:text name="accireason"/>
 														以及处理意见：
 													</label>
 												</td>

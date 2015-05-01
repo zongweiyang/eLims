@@ -192,7 +192,7 @@ html {
 																<s:if test="${isOper=='Y'}">
 																	<l:a href="#"
 																		uri="reference/labRefPurMain/showLabRefPur4Audit.action?labRefPurMainVo.id=${id}"
-																		value="审核" />
+																		value="flow.check"/>
 																</s:if>
 																<l:a href="#"
 																	uri="reference/labRefPurMain/showLabRefPur.action?labRefPurMainVo.id=${id}"

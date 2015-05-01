@@ -227,7 +227,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															标准文件：
+															<s:text name="stdfiles"/>：
 														</label>
 													</td>
 													<td colspan="3">

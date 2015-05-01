@@ -65,7 +65,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>投诉登记与处理表</span>
+												<span><s:text name="touregsheet"/></span>
 											</div>
 											<table class="FormtableCon">
 												<tr>
@@ -92,7 +92,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														投&nbsp;&nbsp;诉&nbsp;&nbsp;人：
+														<s:text name="tousuren"/>：
 													</label>
 												</td>
 												<td>
@@ -101,7 +101,7 @@
 												</td>
 												<td class="r" width="150">
 												    <label>
-														投诉日期：
+														<s:text name="apoinrdate"/>：
 													</label>
 												</td>
 												<td>
@@ -112,7 +112,7 @@
 											<tr>
 											   <td class="r" width="150">
 											       <label>
-													质量负责人：
+													<s:text name="qosmaind"/>：
 													</label>
 												</td>
 												<td>
@@ -133,7 +133,7 @@
 											<tr>
 											   <td class="r" width="150">
 												       <label>
-														实验室负责人：
+														<s:text name="labmasterman"/>：
 														</label>
 												</td>
 												<td>
@@ -165,7 +165,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														投诉内容：
+														<s:text name="compncontent"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -195,7 +195,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														<s:text name="opinionunit"/>：(人)意见：
+														<s:text name="opinionunit"/>：
 													</label>
 												</td>
 												<td colspan="3">

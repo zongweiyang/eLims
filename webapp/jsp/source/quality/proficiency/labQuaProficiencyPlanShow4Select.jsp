@@ -87,7 +87,7 @@
 																		name="labQuaProficiencyPlanVo.unitOrgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																<td><label>名称：</label></td>
+																<td><label><s:text name="config.name"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyPlanVo.name" value="${labQuaProficiencyPlanVo.name}" />
 					                      						</td>

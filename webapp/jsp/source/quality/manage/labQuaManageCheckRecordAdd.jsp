@@ -211,7 +211,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													评审中发现的问题和结论：
+													<s:text name="finderroreancol"/>：
 														</label>
 												</td>
 												<td colspan="3">
@@ -231,7 +231,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													对纠正/改进措施的检查：
+													<s:text name="jiuzhengcheck"/>：
 														</label>
 												</td>
 												<td colspan="3">

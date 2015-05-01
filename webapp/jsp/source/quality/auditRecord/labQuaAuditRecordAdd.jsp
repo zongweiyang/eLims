@@ -319,10 +319,10 @@
 																<s:text name="page.record"/>   款
 															</th>
 															<th width="" align="center">
-																检查内容
+																<s:text name="chkcontend"/>
 															</th>
 															<th width="205">
-																检查方法
+																<s:text name="check.methods"/>
 															</th>
 															<th width="30">
 																符合
@@ -337,7 +337,7 @@
 																存在问题
 															</th>
 															<th width="340">
-																整改情况(跟踪人、时间)
+																<s:text name="zhenggaiqinfo"/>
 															</th>
 														</thead>
 														<tbody>

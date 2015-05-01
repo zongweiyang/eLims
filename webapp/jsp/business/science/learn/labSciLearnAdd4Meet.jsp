@@ -186,7 +186,7 @@ html {
 															<input type="text" name="labSciLearnVo.startTime"
 														    id="startTime" value="${labSciLearnVo.startTime}" size="15" class="Wdate"
 														  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',alwaysUseStartDate:true,maxDate:'#F{$dp.$D(\'endTime\')}'});" valType="required,strLength" max="32"
-														   strLength-msg="召开时间不能超过32位" msg="召开时间不能为空"/><s:text name="to"/>
+														   strLength-msg="<s:text name="conference.time"/>不能超过32位" msg="<s:text name="conference.time"/>不能为空"/><s:text name="to"/>
 														   <input type="text" name="labSciLearnVo.endTime"
 														    id="endTime" value="${labSciLearnVo.endTime}" size="15" class="Wdate"
 														   onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm',alwaysUseStartDate:true,minDate:'#F{$dp.$D(\'startTime\')}'});"  />

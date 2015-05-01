@@ -156,7 +156,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														地区：
+												<s:text name="areamap"/>：
 													</label>
 												</td>
 												<td>
@@ -165,7 +165,7 @@
 												</td>
 											    <td class="r" width="150">
 													<label>
-														执行标准：
+												<s:text name="zhixingstg"/>：
 													</label>
 												</td>
 												<td>
@@ -200,7 +200,7 @@
 											<tr>
 												<td class="r" width="150">
 												       <label>
-														抽查人：
+														<s:text name="chouschare"/>：
 														</label>
 												</td>
 												<td>
@@ -210,7 +210,7 @@
 												<td class="r" width="150">
 													
 													<label>
-														抽查日期：
+														<s:text name="chksdate"/>：
 													</label>
 												</td>
 												<td>
@@ -221,7 +221,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-														监督人：
+														<s:text name="jiandupeo"/>：
 														</label>
 												</td>
 												<td>
@@ -231,7 +231,7 @@
 												<td class="r" width="150">
 													
 													<label>
-														监督日期：
+														<s:text name="jiandudate"/>：
 													</label>
 												</td>
 												<td>
@@ -243,7 +243,7 @@
 										</div>
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>监督内容</span>
+												<span><s:text name="jianducontent"/></span>
 												<label style="float: right;margin-right: 20px;cursor: pointer;" onclick="javascript:$(this).parent().next().toggle();">[<font color="red"><s:text name="open.close"/></font>]</label>
 											</div>
 											<div style="margin-top: 10px; margin-bottom: 10px;">
@@ -251,13 +251,13 @@
 													<thead>
 														<tr>
 															<th>
-																监督内容
+																<s:text name="jianducontent"/>
 															</th>
 															<th>
-																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;状态描述
+																&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:text name="statedesc"/>
 															</th>
 															<th>
-																不合格原因及自理结果
+																<s:text name="notreasonresultl"/>
 															</th>
 														</tr>
 													</thead>
@@ -299,7 +299,7 @@
 											<tr>
 												<td class="r" width="150">
 												       <label>
-														本次抽查综合评价：
+														<s:text name="conheping"/>：
 														</label>
 												</td>
 												<td colspan="3">

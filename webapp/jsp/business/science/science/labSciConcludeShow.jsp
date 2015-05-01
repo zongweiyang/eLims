@@ -129,7 +129,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															起止时间：
+																	<s:text name="start.time"/>：
 														</label>
 													</td>
 													<td>
@@ -137,19 +137,19 @@ html {
 															style="width: 80px;" value="${labSciScienceVo.startDate}"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});"
-															valType="required" strLength-msg="起止时间长度不能超过32位"
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位"
 															disabled="true" />
 														<s:text name="to"/>
 														<input type="text" name="labSciScienceVo.endDate"
 															style="width: 80px;" value="${labSciScienceVo.endDate}"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});"
-															valType="required" strLength-msg="起止时间长度不能超过32位"
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位"
 															disabled="true" />
 													</td>
 													<td>
 														<label>
-															实际结束时间：
+															实际<s:text name="end.time"/>：
 														</label>
 													</td>
 													<td>
@@ -157,7 +157,7 @@ html {
 															style="width: 80px;" value="${labSciScienceVo.trueEndDate}"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});"
-															valType="required" strLength-msg="起止时间长度不能超过32位"
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位"
 															disabled="true" />
 													</td>
 												</tr>
@@ -201,7 +201,7 @@ html {
 										<div>
 											<table  id="person" class="FormtableCon" id="person">
 														<tr align="center">
-															  <td rowspan="${1+fn:length(labSciScienceVo.authorList)}" width="10%" id="rowNum1">参与人信息</td>
+															  <td rowspan="${1+fn:length(labSciScienceVo.authorList)}" width="10%" id="rowNum1"><s:text name="patiinfo"/></td>
 															</td>
 															<td width="18%" class="l">
 															<s:text name="nike.name"/>
@@ -331,7 +331,7 @@ html {
 														万元
 													</td>
 													<td class="r">
-														剩余经费：
+														<s:text name="reaminfund"/>：
 													</td>
 													<td>
 														<input type="text" name="labSciScienceVo.paperFunds"
@@ -348,7 +348,7 @@ html {
 														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金额
 													</td>
 													<td width="18%" class="c">
-														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经手人
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:text name="jingshouren"/>
 													</td>
 													<td width="18%" class="c">
 														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

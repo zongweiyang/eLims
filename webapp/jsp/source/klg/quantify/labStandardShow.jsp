@@ -82,7 +82,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>标准类型：</label></td>
+													<td><label><s:text name="stdtypess"/>：</label></td>
 													<td colspan="3">
 														<s:if test="${labStandardVo.standIndex=='1'}">限量标准</s:if>
 														<s:elseif test="${labStandardVo.standIndex=='2'}">方法标准</s:elseif>

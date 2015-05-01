@@ -214,7 +214,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														审核日期：
+														<s:text name="auditdatess"/>：
 													</label>
 												</td>
 												<td>

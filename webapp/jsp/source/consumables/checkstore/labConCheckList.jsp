@@ -131,7 +131,7 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="checkno">
-													单据号
+													<s:text name="bill.no"/>
 												</th>
 												<th property="name">
 													<s:text name="pansubject"/>

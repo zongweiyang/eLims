@@ -106,7 +106,7 @@
 																		name="labQuaControlVo.labOrgSearch" id="labOrgId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-					                      						<td><label>抽查编号：</label></td>
+					                      						<td><label><s:text name="chouchabiao"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaControlVo.anaNoSearch" value="${labQuaControlVo.anaNoSearch}" />
 					                      						</td>
@@ -158,7 +158,7 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="anaNo">
-													抽查编号
+													<s:text name="chouchabiao"/>
 												</th>
 												<th property="unitOrg.name">
 													<s:text name="theme.depart"/>
@@ -167,10 +167,10 @@
 													实验室
 												</th>
 												<th property="place">
-													地区
+											<s:text name="areamap"/>
 												</th>
 												<th property="standardName">
-													执行标准
+											<s:text name="zhixingstg"/>
 												</th>
 												<th property="appCode">
 													<s:text name="app.style"/>
@@ -179,7 +179,7 @@
 													<s:text name="app.no"/>
 												</th>
 												<th property="conTime">
-													监督日期
+													<s:text name="jiandudate"/>
 												</th>
 												<th property="accStatus">
 													<s:text name="accidentinfo"/>

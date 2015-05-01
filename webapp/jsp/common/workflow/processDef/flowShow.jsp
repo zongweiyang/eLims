@@ -563,7 +563,7 @@ Component.prototype=
 	initialize:function(position,type,id)
 	{
         this.element=document.createElement("DIV");
-		//节点类型
+		//<s:text name="nodetype"/>
 		this.type=type;
 		//生成ID
 		if(id!=null)

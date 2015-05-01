@@ -150,19 +150,19 @@ html {
 									</div>
 									<table class="FormtableCon">
 											<tr>
-												<td class="r" width="150"><label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label></td>
+												<td class="r" width="150"><label><s:text name="namelarge"/>：：</label></td>
 												<td><input size="40" type="text" name="labSciProcessVo.name" id="name"  valType="required" msg="名称不能为空"  /></td>
 												<td class="r" width="150"><label>录&nbsp;&nbsp;入&nbsp;&nbsp;人：</label></td>
 												<td><input size="40" type="text" name="labSciProcessVo.writeUser" id="writeUser" value="${labSciProcessVo.writeUser }"  valType="required" msg="填写人不能为空" /></td>
 											</tr>
 											<tr>
-												<td class="r" width="150"><label>开始时间：</label></td>
+												<td class="r" width="150"><label><s:text name="start.time"/>：</label></td>
 												<td><input size="40" type="text" class="Wdate"  valType="required" msg="开始时间不能为空" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,maxDate:'#F{$dp.$D(\'endTime\')}'});" name="labSciProcessVo.startTime" id="startTime"  /></td>
-												<td class="r" width="150"><label>结束时间：</label></td>
+												<td class="r" width="150"><label><s:text name="end.time"/>：</label></td>
 												<td><input size="40" type="text" class="Wdate"  valType="required" msg="结束时间不能为空" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,minDate:'#F{$dp.$D(\'startTime\')}'});" name="labSciProcessVo.endTime" id="endTime"  /></td>
 											</tr>
 											<tr>
-												<td class="r" width="150"><label>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</label></td>
+												<td class="r" width="150"><label><s:text name="type.large"/>：：</label></td>
 												<td id="TD3"><s:select cssStyle="width:231px;" list="#request.labCodeVoList"  theme="simple" listKey="name" listValue="name" id="types" onchange="selectType(this);"></s:select> <input valType="required" msg="类型不能为空" type="hidden" name="labSciProcessVo.type" value="${request.labCodeVoList[0].name }" id="type"/></td>
 												<td id="TD1" class="r" width="150"><label><s:text name="sam.number"/>：</label></td>
 												<td id="TD2"><input size="40" type="text" name="labSciProcessVo.sampRegisterNum" id="sampRegisterNum" value="${labSciProcessVo.sampRegisterNum }" />&nbsp;&nbsp;<l:a href="#" uri="science/labSciProcess/addLabSciProcess.action?labSciProcessVo.auditResult=0" value="generateconten" /></td>

@@ -68,7 +68,7 @@
 					                      			<td class="blockTd" style="padding: 6px 10px;vertical-align:center;">
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
-					                      						<td><label>投诉单号：</label></td>
+					                      						<td><label><s:text name="compno"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaComplainVo.no" value="${labQuaComplainVo.no}" />
 					                      						</td>
@@ -76,7 +76,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaComplainVo.unitSearch" value="${labQuaComplainVo.unitSearch}" />
 					                      						</td>
-					                      						<td><label>投诉人：</label></td>
+					                      						<td><label><s:text name="tousuren"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaComplainVo.nameSearch" value="${labQuaComplainVo.nameSearch}" />
 					                      						</td>
@@ -124,22 +124,22 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="no">
-													投诉单号
+													<s:text name="compno"/>
 												</th>
 												<th property="unit">
 													<s:text name="opinionunit"/>：
 												</th>
 												<th property="name">
-													投诉人
+													<s:text name="tousuren"/>
 												</th>
 												<th property="skillPerson">
-													实验室负责人
+													<s:text name="labmasterman"/>
 												</th>
 												<th property="qualityPerson">
-													质量负责人
+													<s:text name="qosmaind"/>
 												</th>
 												<th property="appTime">
-													投诉日期
+													<s:text name="apoinrdate"/>
 												</th>
 												<th property="accStatus">
 													<s:text name="accidentinfo"/>

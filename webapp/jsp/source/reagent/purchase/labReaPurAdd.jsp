@@ -239,7 +239,7 @@ html {
 															<s:text name="rearegular"/>
 														</th>
 														<th>
-															<s:text name="std.stock"/>量
+															<s:text name="storenumber"/>
 														</th>
 														<th>
 															<s:text name="buyingnumber"/>

@@ -112,9 +112,9 @@
 												<th property="no" width="150">任务<s:text name="code.number"/></th>
 												<th property="labSampCustomerVo.labCustomerName"><s:text name="lec.cust.name"/></th>
 												<th width="70"><s:text name="sam.number"/></th>
-												<th property="taskType" width="100">检测类别</th>
-												<th property="reportType" width="100">报告性质</th>
-												<th property="createTime" width="150">登记日期</th>
+												<th property="taskType" width="100"><s:text name="checking.type"/></th>
+												<th property="reportType" width="100"><s:text name="report.performance"/></th>
+												<th property="createTime" width="150"><s:text name="sam.register"/></th>
 											</tr>
 											<s:if test="labSampRegisterVoList!=null">
 												<s:set name="alllist" value="labSampRegisterVoList" />

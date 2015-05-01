@@ -121,7 +121,7 @@ html {
 													</td>
 													<td class="r" width="150">
 														<label>
-															申&nbsp;&nbsp;请&nbsp;&nbsp;人：
+															<s:text name="appleypeol"/>：
 														</label>
 													</td>
 													<td>
@@ -138,7 +138,7 @@ html {
 												<tr>
 													<td class="r" width="150">
 														<label>
-															起止时间：
+																	<s:text name="start.time"/>：
 														</label>
 													</td>
 													<td>
@@ -156,7 +156,7 @@ html {
 													</td>
 													<td class="r" width="150">
 														<label>
-															依托实验室：
+															<s:text name="yilailab"/>：
 														</label>
 													</td>
 													<td>
@@ -218,7 +218,7 @@ html {
 														金额
 													</th>
 													<th width="18%" class="c">
-														经手人
+														<s:text name="jingshouren"/>
 													</th>
 													<th width="18%" class="c">
 														<s:text name="remark"/>
@@ -265,7 +265,7 @@ html {
 												</tr>
 												<tr>
 													<td width="275" class="c">
-														<font color="red">剩余经费：</font>
+														<font color="red"><s:text name="reaminfund"/>：</font>
 													</td>
 													<td colspan="3">
 														<label id="count" style="margin-left: 205px;color: red;">${labSciScienceVo.paperFunds}</label><font color="red">&nbsp;&nbsp;万元</font>

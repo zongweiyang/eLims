@@ -154,7 +154,7 @@ html {
 															<s:text name="regular.no"/>
 														</th>
 														<th>
-															<s:text name="std.stock"/>量
+															<s:text name="storenumber"/>
 														</th>
 														<s:if test="${labRefPurMainVo.type=='0'}">
 															<th>

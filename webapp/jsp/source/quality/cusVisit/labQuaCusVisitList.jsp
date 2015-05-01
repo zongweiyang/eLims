@@ -158,7 +158,7 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th  property="no">
-													登记编号
+													<s:text name="regnod"/>
 												</th>
 												<th property="unitOrg.name">
 													<s:text name="theme.depart"/>
@@ -176,7 +176,7 @@
 													<s:text name="custtel"/>
 												</th>
 												<th property="visitTime">
-													回访时间
+													<s:text name="visitetime"/>：
 												</th>
 												<th property="accStatus">
 													<s:text name="accidentinfo"/>

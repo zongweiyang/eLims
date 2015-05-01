@@ -230,7 +230,7 @@ html {
 															<s:text name="stdandard.regular"/>
 														</th>
 														<th>
-															<s:text name="std.stock"/>量
+															<s:text name="storenumber"/>
 														</th>
 														<th>
 															<s:text name="inboundnumber"/>

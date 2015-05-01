@@ -147,7 +147,7 @@
 									<tr>
 										<td>
 											<label>
-												功能类型：
+												<s:text name="f.type"/>：
 											</label>
 										</td>
 										<td>
@@ -165,7 +165,7 @@
 									<tr>
 										<td>
 											<label>
-												菜单显示：
+												<s:text name="menu.show"/>：
 											</label>
 										</td>
 										<td>
@@ -180,14 +180,14 @@
 										</td>
 										<td>
 											<label>
-												位置显示：
+												<s:text name="site.show"/>：
 											</label>
 										</td>
 										<td>
 											<input type="checkbox" name="labFunctionVo.isFront" <s:if test="${labFunctionVo.isFront == 'Y'}"> checked="checked"</s:if> value="Y" id="isFrontY" />
-											前台显示
+											<s:text name="front.show"/>
 											<input type="checkbox" name="labFunctionVo.isBack" <s:if test="${labFunctionVo.isBack == 'Y'}"> checked="checked"</s:if> value="Y" id="isBackY" />
-											后端显示
+											<s:text name="back.show"/>
 										</td>
 									</tr>
 									<tr>
@@ -211,7 +211,7 @@
 									<tr>
 										<td>
 											<label id="SCLC">
-												生成流程：
+										<s:text name="make.flow"/>：
 											</label>
 										</td>
 										<td>

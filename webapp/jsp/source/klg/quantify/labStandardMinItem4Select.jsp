@@ -82,7 +82,7 @@ html {
 													精度
 												</th>
 												<th property="price">
-													检测费
+													<s:text name="checking.fee"/>
 												</th>
 											</tr>
 											<s:if test="pageResult.resultList!=null">

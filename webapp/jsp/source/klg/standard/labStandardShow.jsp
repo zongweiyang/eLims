@@ -93,7 +93,7 @@
 													<td><label>规格型号：</label></td>
 													<td>${labStandardVo.standIndex}
 													</td>
-													<td><label>标准文件：</label></td>
+													<td><label><s:text name="stdfiles"/>：</label></td>
 													<td colspan="">
 														<s:if test="${fn:length(loadList)>0}">
 															<s:iterator status="st2" value="#request.loadList" id="">

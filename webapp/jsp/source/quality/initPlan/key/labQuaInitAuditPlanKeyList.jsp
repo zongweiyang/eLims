@@ -57,7 +57,7 @@
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>检查内容>>检查重点</span>
+												<span><s:text name="chkcontend"/>>><s:text name="checmain"/></span>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->
@@ -67,7 +67,7 @@
 					                      			<td class="blockTd" style="padding: 6px 10px;vertical-align:center;">
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
-					                      						 <td><label>检查重点：</label></td>
+					                      						 <td><label><s:text name="checmain"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaInitAuditPlanVo.searchName" value="${labQuaInitAuditPlanVo.searchName}" />
 					                      						</td>
@@ -113,7 +113,7 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="name">
-													检查重点
+											<s:text name="checmain"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

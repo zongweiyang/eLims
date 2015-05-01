@@ -254,7 +254,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															申&nbsp;&nbsp;请&nbsp;&nbsp;人：
+															<s:text name="appleypeol"/>：
 														</label>
 													</td>
 													<td>
@@ -268,7 +268,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															起止时间：
+																	<s:text name="start.time"/>：
 														</label>
 													</td>
 													<td>
@@ -276,13 +276,13 @@
 															value="${labSciScienceVo.startDate}" id="startDate"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,maxDate:'#F{$dp.$D(\'endDate\')}'});"
-															valType="required" strLength-msg="起止时间长度不能超过32位" />
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位" />
 														<s:text name="to"/>
 														<input type="text" name="labSciScienceVo.endDate"
 															value="${labSciScienceVo.endDate}" id="endDate"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,minDate:'#F{$dp.$D(\'startDate\')}'});" 
-															valType="required" strLength-msg="起止时间长度不能超过32位" />
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位" />
 													</td>
 												</tr>
 												<tr>
@@ -297,7 +297,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															依托实验室：
+															<s:text name="yilailab"/>：
 														</label>
 													</td>
 													<td>
@@ -310,7 +310,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															所属学科：
+													<s:text name="owndaches"/>：
 														</label>
 													</td>
 													<td>
@@ -320,7 +320,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															学科领域：
+															<s:text name="xuekelingyu"/>：
 														</label>
 													</td>
 													<td>
@@ -347,7 +347,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+															<s:text name="nike.name"/>：
 														</label>
 													</td>
 													<td>
@@ -357,7 +357,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：
+															<s:text name="theme.sex"/>：
 														</label>
 													</td>
 													<td>
@@ -565,7 +565,7 @@
 															max="512" strLength-msg="风险评估不能超过512位">${labSciScienceVo.risk}</textarea>
 													</td>
 													<td class="r" width="150">
-														可行性分析：
+												<s:text name="kexingxingfen"/>：
 													</td>
 													<td>
 														<textarea rows="2" cols="40"

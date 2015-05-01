@@ -156,7 +156,7 @@ html {
 														<s:text name="rearegular"/>
 													</th>
 													<th property="amount">
-														<s:text name="std.stock"/>量
+														<s:text name="storenumber"/>
 													</th>
 												</tr>
 											</thead>

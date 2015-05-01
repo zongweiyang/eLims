@@ -100,7 +100,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														制&nbsp;&nbsp;表&nbsp;&nbsp;人：
+														<s:text name="zhibiaoren"/>：
 													</label>
 												</td>
 												<td >
@@ -108,7 +108,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														制表日期：
+														<s:text name="zhibiaodate"/>：
 													</label>
 												</td>
 												<td>
@@ -220,10 +220,10 @@
 																<s:text name="page.record"/>   款
 															</th>
 															<th width="205" align="center">
-																检查内容
+																<s:text name="chkcontend"/>
 															</th>
 															<th width="205">
-																检查方法
+																<s:text name="check.methods"/>
 															</th>
 															<th width="30">
 																符合
@@ -238,7 +238,7 @@
 																存在问题
 															</th>
 															<th width="340">
-																整改情况(跟踪人、时间)
+																<s:text name="zhenggaiqinfo"/>
 															</th>
 														</thead>
 														<tbody>

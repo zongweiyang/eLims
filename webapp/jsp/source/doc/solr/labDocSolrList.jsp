@@ -115,7 +115,7 @@ html {
 														<a href="javascript:;"><span><s:text name="advsearch"/></span> </a>
 													</li>
 													<li id="li02" class="">
-														<a href="javascript:;" onclick="javascript:window.location.href='<%=basePath%>doc/labDoc/listLabDocSolr.action';return false;"><span>专业检索</span> </a>
+														<a href="javascript:;" onclick="javascript:window.location.href='<%=basePath%>doc/labDoc/listLabDocSolr.action';return false;"><span><s:text name="prosearch"/></span> </a>
 													</li>
 												</ul>
 											</div>
@@ -130,7 +130,7 @@ html {
 																	<table cellspacing="0" cellpadding="0" border="0">
 																		<tr>
 																			<td colspan="4" style="text-align: center;">
-																				<font><s:text name="selected"/>文献类型</font>
+																				<font><s:text name="selected"/><s:text name="wenxiantyle"/></font>
 																				<br />
 																				<center style="padding-left: 10px;">
 																					<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="check('1')"><b>全选</b> </a>

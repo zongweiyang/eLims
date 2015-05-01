@@ -190,7 +190,7 @@ html {
 																	&nbsp;&nbsp;
 																	<l:a href="#"
 																		uri="science/labScience/preUpdateLabScience.action?labSciScienceVo.id=${id}&messageInfo=2"
-																		onclick="getOne('${id}');" value="审核" />
+																		onclick="getOne('${id}');" value="flow.check"/>
 																	</s:if>
 																</td>
 															</tr>

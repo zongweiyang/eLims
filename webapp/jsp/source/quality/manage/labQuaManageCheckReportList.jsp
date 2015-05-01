@@ -103,7 +103,7 @@
 													<s:text name="audittime"/>
 												</th>
 												<th property="isFile">
-													<s:text name="lab.yes"/>否存档
+													<s:text name="shifoucun"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

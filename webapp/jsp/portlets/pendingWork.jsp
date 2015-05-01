@@ -26,19 +26,19 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									<td class="c">1</td>
 									<td class="c">admin</td>
 									<td class="c">2010-5-19</td>
-									<td>[样品编号:20100519001]待检</td>
+									<td>[<s:text name="sam.id"/>:20100519001]<s:text name="waistcheck"/></td>
 								</tr>
 								<tr>
 									<td class="c">2</td>
 									<td class="c">test</td>
 									<td class="c">2010-5-23</td>
-									<td>[样品编号:20100519001]待检</td>
+									<td>[<s:text name="sam.id"/>:20100519001]<s:text name="waistcheck"/></td>
 								</tr>
 								<tr>
 									<td class="c">3</td>
 									<td class="c">test3</td>
 									<td class="c">2010-6-11</td>
-									<td>[样品编号:20100611001]待检</td>
+									<td>[<s:text name="sam.id"/>:20100611001]<s:text name="waistcheck"/></td>
 								</tr>
 							</tbody>
 						</table>

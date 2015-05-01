@@ -85,7 +85,7 @@
 																		name="labQuaManageCheckPlanVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-					                      						<td><label>评审时间：</label></td>
+					                      						<td><label><s:text name="audittime"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaManageCheckPlanVo.recTime" value="${labQuaManageCheckPlanVo.recTime}" class="Wdate"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" />
 					                      						 </td>
@@ -122,7 +122,7 @@
 															<s:text name="acceptreason"/>
 												</th>
 												<th property="groupLeader">
-													<s:text name="paticipangenral"/>员（组长）
+													<s:text name="parandmaster"/>
 												</th>
 												<th property="checkPeople">
 													<s:text name="accpterman"/>

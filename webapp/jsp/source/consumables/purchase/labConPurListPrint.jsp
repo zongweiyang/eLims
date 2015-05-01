@@ -282,7 +282,7 @@
 													</tr>
 													<tr>
 														<td class="r">
-															申请时间：
+															<s:text name="applytime"/>：
 														</td>
 														<td class="c" colspan="4">
 															${labConPurMainVo.createTime}

@@ -81,7 +81,7 @@
 												</td>
 												<td class="r" width="180">
 													<label>
-														事故类别：
+														<s:text name="accidtype"/>：
 													</label>
 												</td>
 												<td>
@@ -92,7 +92,7 @@
 											<tr id="TR" style="display: none;">
 												<td class="r" width="160">
 													<label>
-														送检单：
+														<s:text name="snedcheck"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -103,7 +103,7 @@
 											<tr>
 												<td class="r" width="180">
 													<label>
-														检验事故发生
+														<s:text name="chekacichap"/>
 														原因、经过：
 													</label>
 												</td>
@@ -114,7 +114,7 @@
 											<tr>
 											   <td class="r" width="180">
 													<label>
-														事故原因分析以及处理意见：
+														<s:text name="acccireasonopon"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -133,7 +133,7 @@
 												<tr>
 													<td class="r" width="180">
 														<label>
-															事故处理结果及防范措施：
+															<s:text name="accidresult"/>及防范措施：
 														</label>
 													</td>
 													<td colspan="3">
@@ -143,7 +143,7 @@
 												<tr>
 													<td class="r" width="180">
 														<label>
-															事故处理人：
+															<s:text name="accdelapel"/>：
 														</label>
 													</td>
 													<td>

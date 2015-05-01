@@ -113,7 +113,7 @@
 												</td>
 												<td  class="r" width="150">
 													<label>
-														实&nbsp;&nbsp;验&nbsp;&nbsp;室：
+														<s:text name="labroom"/>：
 													</label>
 												</td>
 												<td>
@@ -138,7 +138,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：
+														<s:text name="nike.name"/>：
 													</label>
 												</td>
 												<td>
@@ -160,7 +160,7 @@
 												</td>
 												<td class="r" width="150">
 												    <label>
-													     回访时间：
+													     <s:text name="visitetime"/>：：
 													</label>
 												</td>
 												<td>

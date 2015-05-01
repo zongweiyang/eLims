@@ -79,19 +79,19 @@ html {
 									</div>
 									<table class="FormtableCon">
 											<tr>
-												<td class="r" width="150"><label>类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：</label></td>
+												<td class="r" width="150"><label><s:text name="type.large"/>：：</label></td>
 												<td colspan="3">${labSciProcessVo.type }</td>
 											</tr>
 											<tr>
-												<td class="r" width="150"><label>名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：</label></td>
+												<td class="r" width="150"><label><s:text name="namelarge"/>：：</label></td>
 												<td>${labSciProcessVo.name }</td>
-												<td class="r" width="150"><label>填&nbsp;&nbsp;写&nbsp;&nbsp;人：</label></td>
+												<td class="r" width="150"><label><s:text name="waritepoel"/>：</label></td>
 												<td>${labSciProcessVo.writeUser }</td>
 											</tr>
 											<tr>
-												<td class="r" width="150"><label>开始时间：</label></td>
+												<td class="r" width="150"><label><s:text name="start.time"/>：</label></td>
 												<td>${labSciProcessVo.startTime }</td>
-												<td class="r" width="150"><label>结束时间：</label></td>
+												<td class="r" width="150"><label><s:text name="end.time"/>：</label></td>
 												<td>${labSciProcessVo.endTime }</td>
 											</tr>
 											<tr>

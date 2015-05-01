@@ -59,7 +59,7 @@
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>检查内容</span>
+												<span><s:text name="chkcontend"/></span>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->
@@ -69,7 +69,7 @@
 					                      			<td class="blockTd" style="padding: 6px 10px;vertical-align:center;">
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
-					                      						 <td><label>检查内容：</label></td>
+					                      						 <td><label><s:text name="chkcontend"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaInitAuditPlanVo.searchName" value="${labQuaInitAuditPlanVo.searchName}" />
 					                      						</td>
@@ -115,7 +115,7 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="name">
-													检查内容
+													<s:text name="chkcontend"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -141,7 +141,7 @@
 																&nbsp;&nbsp;
 																<l:a href="#" uri="quality/initPlan/deleteLabQuaInitAuditPlan4Child.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 																&nbsp;&nbsp;
-																<a id="BtnEdit" href="javascript:void(0);" onclick="window.location.href='<%=basePath%>quality/initPlan/listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.rank=3&labQuaInitAuditPlanVo.parentId=${id}&labQuaInitAuditPlanVo.key=${labQuaInitAuditPlanVo.parentId }';">检查重点</a>                 
+																<a id="BtnEdit" href="javascript:void(0);" onclick="window.location.href='<%=basePath%>quality/initPlan/listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.rank=3&labQuaInitAuditPlanVo.parentId=${id}&labQuaInitAuditPlanVo.key=${labQuaInitAuditPlanVo.parentId }';"><s:text name="checmain"/></a>                 
 															</td>
 														</tr>
 													</s:iterator>

@@ -189,7 +189,7 @@ html {
 														</td>
 														<td>
 															<label>
-																申请时间：
+																<s:text name="applytime"/>：
 															</label>
 														</td>
 														<td>

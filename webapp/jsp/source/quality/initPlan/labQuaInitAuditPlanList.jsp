@@ -135,7 +135,7 @@
 																&nbsp;&nbsp;
 																<l:a href="#" uri="quality/initPlan/deleteLabQuaInitAuditPlan.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 																&nbsp;&nbsp;
-                                                      			<a id="BtnEdit" href="javascript:void(0);" onclick="window.location.href='<%=basePath%>quality/initPlan/listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.rank=2&labQuaInitAuditPlanVo.parentId=${id}';">检查内容</a>                    
+                                                      			<a id="BtnEdit" href="javascript:void(0);" onclick="window.location.href='<%=basePath%>quality/initPlan/listLabQuaInitAuditPlan4Child.action?labQuaInitAuditPlanVo.rank=2&labQuaInitAuditPlanVo.parentId=${id}';"><s:text name="chkcontend"/></a>                    
 															</td>
 														</tr>
 													</s:iterator>

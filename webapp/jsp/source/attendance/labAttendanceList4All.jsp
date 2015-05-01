@@ -89,16 +89,16 @@ html {
 															应出勤（<s:text name="dayday"/>）
 														</th>
 														<th>
-															<s:text name="lated"/>（次/人）
+															<s:text name="lated"/>（<s:text name="ciren"/>）
 														</th>
 														<th>
-															<s:text name="be.out"/>（次/人）
+															<s:text name="be.out"/>（<s:text name="ciren"/>）
 														</th>
 														<th>
-															<s:text name="save.atd"/>（次/人）
+															<s:text name="save.atd"/>（<s:text name="ciren"/>）
 														</th>
 														<th>
-															<s:text name="lat.card"/>（次/人）
+															<s:text name="lat.card"/>（<s:text name="ciren"/>）
 														</th>
 													</tr>
 													<tr>

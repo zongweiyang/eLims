@@ -206,7 +206,7 @@ html {
 										<tr>
 											<td class="r" width="150">
 												<label>
-													名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称：
+													<s:text name="namelarge"/>：：
 												</label>
 											</td>
 											<td>
@@ -216,7 +216,7 @@ html {
 											</td>
 											<td class="r" width="150">
 												<label>
-													填&nbsp;&nbsp;写&nbsp;&nbsp;人：
+													<s:text name="waritepoel"/>：
 												</label>
 											</td>
 											<td>
@@ -229,7 +229,7 @@ html {
 										<tr>
 											<td class="r" width="150">
 												<label>
-													开始时间：
+													<s:text name="start.time"/>：
 												</label>
 											</td>
 											<td>
@@ -253,7 +253,7 @@ html {
 										<tr>
 											<td class="r" width="150">
 												<label>
-													类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型：
+													<s:text name="type.large"/>：：
 												</label>
 											</td>
 											<td id="TD3">
@@ -276,7 +276,7 @@ html {
 												&nbsp;&nbsp;
 												<l:a href="#"
 													uri="science/labSciProcess/updateLabSciProcess.action?labSciProcessVo.auditResult=0"
-													value="生成检测内容" />
+													value="generateconten" />
 											</td>
 										</tr>
 										<tr>

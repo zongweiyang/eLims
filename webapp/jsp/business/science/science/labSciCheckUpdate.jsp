@@ -48,7 +48,7 @@
 						<div class="myworkingboxttitle">
 							<h2>
 								${funName}：
-								<span>中检</span>
+								<span><s:text name="midlecheck"/></span>
 							</h2>
 						</div>
 
@@ -130,7 +130,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															申&nbsp;&nbsp;请&nbsp;&nbsp;人：
+															<s:text name="appleypeol"/>：
 														</label>
 													</td>
 													<td>
@@ -147,7 +147,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															起止时间：
+																	<s:text name="start.time"/>：
 														</label>
 													</td>
 													<td>
@@ -165,7 +165,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															依托实验室：
+															<s:text name="yilailab"/>：
 														</label>
 													</td>
 													<td>
@@ -227,7 +227,7 @@
 														金额
 													</th>
 													<th width="18%" class="c">
-														经手人
+														<s:text name="jingshouren"/>
 													</th>
 													<th width="18%" class="c">
 														<s:text name="remark"/>
@@ -288,7 +288,7 @@
 											<table class="FormtableCon">
 												<tr>
 													<td class="r" width="150">
-														<s:text name="lab.yes"/>否中检：
+														<s:text name="fimidkecheck"/>：
 													</td>
 													<td colspan="3">
 														<input type="hidden" name="labSciScienceVo.isKnot" value="${labSciScienceVo.isKnot}" />

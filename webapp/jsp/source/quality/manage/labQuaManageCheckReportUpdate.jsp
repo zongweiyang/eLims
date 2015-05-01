@@ -260,7 +260,7 @@
 												<tr>
 												    <td class="r" width="150">
 													       <label>
-																<s:text name="lab.yes"/>否存档：
+																<s:text name="shifoucun"/>：
 															</label>
 													</td>
 													<td colspan="3" > 

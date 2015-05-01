@@ -173,7 +173,7 @@ function ajax4AddFolder(pid){
 								</div>
 								<div class="Formtable">
 									<div class="Formtabletitle">
-										<span>我的文档 </span>
+										<span><s:text name="my.doc"/> </span>
 									</div>
 									<div style="margin: 10px 50px 10px 50px;">
 										<table border="0" width="100%">

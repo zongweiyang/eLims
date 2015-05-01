@@ -162,13 +162,13 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="receiptno">
-													单据号
+													<s:text name="bill.no"/>
 												</th>
 												<th property="applicant">
 													<s:text name="applier"/>
 												</th>
 												<th property="createTime">
-													申请时间
+													<s:text name="applytime"/>
 												</th>
 												<th property="inTime">
 													<s:text name="inboudtime"/>

@@ -63,7 +63,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>年度比对和验证实验<s:text name="record.info"/></span>
+												<span><s:text name="ninadredinfo"/></span>
 											</div>
 											<table class="FormtableCon">
 										 		<tr>

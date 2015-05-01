@@ -137,7 +137,7 @@
 																	<tr>
 																		<td>
 																			<label>
-																				经费类型：
+																				<s:text name="funtypele"/>：
 																			</label>
 																		</td>
 																		<td>
@@ -171,7 +171,7 @@
 																金额
 															</th>
 															<th width="18%" class="c" property="type">
-																经费类型
+																<s:text name="funtypele"/>
 															</th>
 															<th width="18%" class="c" property="remark">
 																<s:text name="remark"/>
@@ -194,13 +194,13 @@
 					                                                    <td class="c">${money}&nbsp;&nbsp;万元</td>
 					                                                    <td class="c">
 					                                                    	<s:if test="${type == '0' }">
-					                                                    		入账经费    
+					                                                    		<s:text name="infundeed"/>    
 					                                                    	</s:if>
 					                                                    	<s:if test="${type == '1' }">
 					                                                    		<s:text name="out.fee"/>
 					                                                    	</s:if>
 					                                                    	<s:if test="${type == '2' }">
-					                                                    		预算经费
+					                                                    		<s:text name="budgetfunsdfs"/>
 					                                                    	</s:if>
 					                                                    </td>
 					                                                    <td class="c">${remark}</td>

@@ -181,7 +181,7 @@
 												</td>
 												<!-- <td class="r">
 													<label>
-														生成检测任务：
+														<s:text name="genchktest"/>：
 													</label>
 												</td>
 												<td>

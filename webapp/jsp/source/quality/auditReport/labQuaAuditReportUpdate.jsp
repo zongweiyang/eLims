@@ -247,7 +247,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														审核日期：
+														<s:text name="auditdatess"/>：
 													</label>
 												</td>
 												<td>
@@ -319,7 +319,7 @@
 												<tr>
 												    <td class="r" width="150">
 													       <label>
-																<s:text name="lab.yes"/>否存档：
+																<s:text name="shifoucun"/>：
 															</label>
 													</td>
 													<td colspan="3" > 

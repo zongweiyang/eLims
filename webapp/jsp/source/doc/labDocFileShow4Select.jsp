@@ -74,7 +74,7 @@ var api = frameElement.api, W = api.opener, D = W.document; // api.opener 为载
 											<tr>
 												<td class="r">
 													<label>
-														文件类型：
+														<s:text name="filetypess"/>：
 													</label>
 												</td>
 												<td>

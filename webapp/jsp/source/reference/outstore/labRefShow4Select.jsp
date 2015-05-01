@@ -183,7 +183,7 @@ html {
 													<s:text name="std.reg"/>
 													</th>
 													<th property="amount">
-														<s:text name="std.stock"/>量
+														<s:text name="storenumber"/>
 													</th>
 													<th property="unit">
 														<s:text name="theme.depart"/>

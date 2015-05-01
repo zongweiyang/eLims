@@ -213,7 +213,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>标准文件：</label></td>
+													<td><label><s:text name="stdfiles"/>：</label></td>
 													<td colspan="3">
 														 <a id="BtnEdit" class="zPushBtn"
 															href="javascript:void(0);"

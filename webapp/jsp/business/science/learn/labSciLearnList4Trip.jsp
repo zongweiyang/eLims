@@ -76,7 +76,7 @@ html {
 																</td>
 																<td>
 															       <label>
-																          外出交流类型：
+																          <s:text name="outer.exchange.type"/>：
 															      </label>
 														      </td>
 														     <td>
@@ -140,7 +140,7 @@ html {
 														<img src="<%=basePath%>img/icon_drag.gif" />
 													</th>
 													<th property="learnType">
-														外出交流类型
+														<s:text name="outer.exchange.type"/>
 													</th>
 													<th property="name">
 														<s:text name="outer.exchange.name"/>
@@ -149,7 +149,7 @@ html {
 														参加科室
 													</th>
 													<th property="startTime">
-														外出交流时间
+														<s:text name="outer.exchange.time"/>
 													</th>
 													<th property="place">
 														外出交流地点

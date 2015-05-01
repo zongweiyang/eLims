@@ -27,7 +27,7 @@
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>检查内容>>检查重点&nbsp;&nbsp;[<font color="red"><s:text name="admin.add"/></font>]</span>
+												<span><s:text name="chkcontend"/>>><s:text name="checmain"/>&nbsp;&nbsp;[<font color="red"><s:text name="admin.add"/></font>]</span>
 											</h2>
 										</div>
 										<div class="FUNCIONBARNEW">
@@ -56,7 +56,7 @@
 											</div>
 											<table class="FormtableCon">
 												<tr>
-										 			<td class="r" width="120"><label>检查重点：</label></td>
+										 			<td class="r" width="120"><label><s:text name="checmain"/>：</label></td>
 										 			<td>
 										 				<textarea cols="50" rows="4" valType="required" msg="检查重点不能为空" name="labQuaInitAuditPlanVo.name" id="name"></textarea>
 										 			</td>

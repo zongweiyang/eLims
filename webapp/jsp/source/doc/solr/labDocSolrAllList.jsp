@@ -66,7 +66,7 @@ html {
 											<div class="TabTableNAV">
 												<ul>
 													<li id="li01" class="">
-														<a href="javascript:;" onclick="javascript:window.location.href='<%=basePath%>doc/labDoc/listLabDocSolr2db.action';return false;"><span>高级检索</span> </a>
+														<a href="javascript:;" onclick="javascript:window.location.href='<%=basePath%>doc/labDoc/listLabDocSolr2db.action';return false;"><span><s:text name="advsearch"/></span> </a>
 													</li>
 													<li id="li02" class="currenttab">
 														<a href="javascript:;"><span><s:text name="prosearch"/></span> </a>

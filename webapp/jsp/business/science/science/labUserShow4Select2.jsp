@@ -98,7 +98,7 @@ html {
 						<s:text name="nike.name"/>
 						</th>
 						<th class="c">
-						     性别
+						     <s:text name="theme.sex"/>
 						</th>
 						<th class="l" >
 						    职务

@@ -170,7 +170,7 @@ html {
 														<s:text name="regular.no"/>
 													</th>
 													<th property="amount">
-														<s:text name="std.stock"/>量
+														<s:text name="storenumber"/>
 													</th>
 
 												</tr>

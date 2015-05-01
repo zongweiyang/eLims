@@ -129,7 +129,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															起止时间：
+																	<s:text name="start.time"/>：
 														</label>
 													</td>
 													<td>
@@ -137,19 +137,19 @@ html {
 															style="width: 80px;" value="${labSciScienceVo.startDate}"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});"
-															valType="required" strLength-msg="起止时间长度不能超过32位"
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位"
 															disabled="true" />
 														<s:text name="to"/>
 														<input type="text" name="labSciScienceVo.endDate"
 															style="width: 80px;" value="${labSciScienceVo.endDate}"
 															class="Wdate" size="15"
 															onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});"
-															valType="required" strLength-msg="起止时间长度不能超过32位"
+															valType="required" strLength-msg="		<s:text name="start.time"/>长度不能超过32位"
 															disabled="true" />
 													</td>
 													<td>
 														<label>
-															依托实验室：
+															<s:text name="yilailab"/>：
 														</label>
 													</td>
 													<td>
@@ -296,7 +296,7 @@ html {
 														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金额
 													</td>
 													<td width="18%" class="l">
-														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经手人
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<s:text name="jingshouren"/>
 													</td>
 													<td width="18%" class="l">
 														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;备注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

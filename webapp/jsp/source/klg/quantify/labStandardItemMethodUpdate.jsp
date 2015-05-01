@@ -242,7 +242,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															标准类型：
+															<s:text name="stdtypess"/>：
 														</label>
 													</td>
 													<td>
@@ -287,7 +287,7 @@ html {
 														<s:text name="itemperference"/>
 													</td>
 													<td class="c">
-														检测方式
+														<s:text name="chekstyle"/>
 													</td>
 													<td class="c">
 														<s:text name="projected"/>

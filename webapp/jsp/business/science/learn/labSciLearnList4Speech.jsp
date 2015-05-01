@@ -76,7 +76,7 @@ html {
 																</td>
 																<td>
 															       <label>
-																          讲座类型：
+																          <s:text name="lecture.type"/>：
 															      </label>
 														      </td>
 														     <td>
@@ -86,7 +86,7 @@ html {
 														      </td>
 														      <td>
 															       <label>
-																          主讲人：
+																      <s:text name="teachermain"/>：
 															      </label>
 														      </td>
 														     <td>
@@ -149,16 +149,16 @@ html {
 														<img src="<%=basePath%>img/icon_drag.gif" />
 													</th>
 													<th property="learnType">
-														讲座类型
+														<s:text name="lecture.type"/>
 													</th>
 													<th property="name">
 														<s:text name="lecture.name"/>
 													</th>
 													<th property="speaker">
-														主讲人
+												<s:text name="teachermain"/>
 													</th>
 													<th property="startTime">
-														讲座时间
+														<s:text name="lecture.time"/>
 													</th>
 													<th property="place">
 														讲座地点

@@ -182,7 +182,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															编制日期：
+															<s:text name="codedates"/>：
 														</label>
 													</td>
 													<td>
@@ -221,7 +221,7 @@
 												<table class="FormtableCon_sform" id="OneTable" >
 													<thead>
 															<th width="50" class="c">
-																条款
+																<s:text name="page.record"/>款
 															</th>
 															<th width="500" class="c">
 																要素

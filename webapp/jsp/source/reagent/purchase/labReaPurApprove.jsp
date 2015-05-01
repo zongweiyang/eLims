@@ -27,7 +27,7 @@ html {
 				    validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -47,7 +47,7 @@ html {
 				 });
 			}
 			function goAction(action){
-				if(confirm("确认要提交吗?")){
+				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 					$('form').attr('action','${basePath}'+action);
 					var flag=$('input[name="labReaPurMainVo.auditResult"]:checked').val();
 					if("-1"==flag){

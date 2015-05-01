@@ -76,7 +76,7 @@ html {
 													<s:text name="chkitemnuit"/>
 												</th>
 												<th property="demo1">
-													标准分值
+													<s:text name="biaozhunfen"/>
 												</th>
 												<th property="demo2">
 													精度

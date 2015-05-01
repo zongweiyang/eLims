@@ -36,7 +36,7 @@
 			
 			function deleteBatch(){
 				if(check('labAmbientVo.ids')){
-					if(confirm('确定批量删除吗?'))
+					if(confirm('<s:property value="getText('confirbatchdel')"/>'))
 					{
 						submitvalue('<%=basePath%>ambient/labAmbient/deleteBatchLabAmbient.action');				
 					}	

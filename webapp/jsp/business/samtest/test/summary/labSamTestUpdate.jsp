@@ -76,7 +76,7 @@ html {
 			var isStatus='0';
 			function submitvalue(actionstr){
 				$('form').attr('action','<%=basePath%>'+actionstr);
-				if(confirm("您确认要提交吗？")){
+				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 					$('form').submit();
 				}
 			}
@@ -88,7 +88,7 @@ html {
 					return false;
 				}
 				$('form').attr('action','<%=basePath%>'+actionstr);
-				if(confirm("您确认要提交吗？")){
+				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 					$('form').submit();
 				}
 			}

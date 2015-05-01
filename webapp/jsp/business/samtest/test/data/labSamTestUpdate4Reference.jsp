@@ -36,7 +36,7 @@ html {
 	    }
 			
 		function deleteEntity(obj){
-			var flag = confirm("确定要删除么？");
+			var flag = confirm('<s:property value="getText('fimrtodel')"/>');
 			 if(flag){
 				 $(obj).parent().parent().remove();
 			 }

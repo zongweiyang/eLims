@@ -27,7 +27,7 @@ html {
 	<script>
 		var api = frameElement.api, W = api.opener, D = W.document;
 		function saveSubmit(){
-			if(confirm('确认提交吗')){
+			if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 				W.flushThisPage();
 			}		
 		}

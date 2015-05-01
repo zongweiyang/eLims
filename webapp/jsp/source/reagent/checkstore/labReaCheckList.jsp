@@ -15,7 +15,7 @@ html {
 </style>
 		<script>
 			function deleteEntity(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goAction(url);
 				}
 				return ;
@@ -26,7 +26,7 @@ html {
 					validate.tip("请选择！",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goAction(url);
 				}
 				return;

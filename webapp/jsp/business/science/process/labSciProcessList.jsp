@@ -65,7 +65,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		编号：
+																		<s:text name="code.number"/>：
 																	</label>
 																</td>
 																<td>
@@ -129,7 +129,7 @@ html {
 													<th class="w50">
 														<img src="<%=basePath%>img/icon_drag.gif" />
 													</th>
-													<th property="no">编号</th>
+													<th property="no"><s:text name="code.number"/></th>
 													<th property="name">名称</th>
 													<th property="type ">类型</th>
 													<th property="contents">内容</th>

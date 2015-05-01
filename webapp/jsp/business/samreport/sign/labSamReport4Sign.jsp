@@ -54,7 +54,7 @@ html {
 	<script> 
 function submitvalue(actionstr){
 	$('form').attr('action','<%=basePath%>'+actionstr);
-	if(confirm("您确认要提交吗？")){
+	if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 		$('form').submit();
 	}
 }
@@ -62,7 +62,7 @@ function submit2Back(actionstr){
 	var html = $('#auditMessage').html();
 	html=html.replace(/(^\s*)|(\s*$)/g,'');
 	if(html==''){
-		alert('<s:property value="getText('input.audited')"/>');
+		alert('<s:property value="getText('plseauditopinion')"/>');
 		return false;
 	}
 	submitvalue(actionstr);

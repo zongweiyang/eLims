@@ -24,7 +24,7 @@ html {
 			df.submit();  
 		}
 			function deleteOne(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -35,7 +35,7 @@ html {
 				    validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -165,7 +165,7 @@ html {
 													单据号
 												</th>
 												<th property="applicant">
-													申请人
+													<s:text name="applier"/>
 												</th>
 												<th property="createTime">
 													申请时间
@@ -177,7 +177,7 @@ html {
 													<s:text name="sam.state"/>
 												</th>
 												<th property="type">
-													类型
+													<s:text name="config.type"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

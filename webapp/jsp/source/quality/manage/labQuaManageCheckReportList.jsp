@@ -134,7 +134,7 @@
 																	<font color="red">未存档</font>
 																</s:if>
 																<s:if test="${isFile == 0 }">
-																	<font color="red">已存档</font>
+																	<font color="red"><s:text name="aucechied"/></font>
 																</s:if>
 															</td>
 															<td class="c">

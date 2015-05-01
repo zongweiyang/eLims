@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/planEle/deleteLabQuaAuditPlanEle.action?labQuaAuditPlanEleVo.ids='+id);
 		      	   $('form').submit();
 			    }
@@ -74,7 +74,7 @@
 																		name="labQuaAuditPlanEleVo.orgIdSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name" ></s:select>
 																</td>
-					                      						<td><label>编制人：</label></td>
+					                      						<td><label>		<s:text name="coderepeople"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaAuditPlanEleVo.createPeople" value="${labQuaAuditPlanEleVo.createPeople}" />
 					                      						</td>
@@ -134,7 +134,7 @@
 													审核依据
 												</th>
 												<th property="createPeople">
-													编制人
+													<s:text name="coderepeople"/>
 												</th>
 												<th property="auditTime">
 													批准日期
@@ -181,7 +181,7 @@
 																	<span style="color: red;">正在处理</span>
 																</s:if>
 																<s:elseif test="${accStatus == 2}">
-																	<span style="color: red;">已处理</span>
+																	<span style="color: red;"><s:text name="sam.dealed"/></span>
 																</s:elseif>
 																<s:else>
 																	<span style="color: red;">未转事故</span>

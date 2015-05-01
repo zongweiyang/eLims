@@ -169,7 +169,7 @@ html {
 										</div>
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
-											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title="点击此处，隐藏/显示该信息">
+											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title='<s:property value="getText('lab.click.here')"/>'>
 												<span><s:text name="stdinfo"/>[<font color="blue">${labStandardVo.standTypeName}</font>]</span>
 											</div>
 											<table class="FormtableCon">
@@ -180,7 +180,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labStandardVo.code" valType="required"  msg="标准编号不能为空" id="code" type="text" size="40" onblur="ajaxIsExistName(this);" value="${labStandardVo.code}" />
+														<input name="labStandardVo.code" valType="required"  msg='<s:property value="getText('stdcodenotempty')"/>' id="code" type="text" size="40" onblur="ajaxIsExistName(this);" value="${labStandardVo.code}" />
 													</td>
 													<td>
 														<label>

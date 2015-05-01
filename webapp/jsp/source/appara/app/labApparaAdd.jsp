@@ -269,7 +269,7 @@
 											</label>
 										</td>
 										<td>
-											<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':getText('common'),'2':getText('report.repair'),'3':getText('stoped'),'4':getText('dropped')}" value="%{labApparaVo.status}" />
+											<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':'正常','2':'报修','3':'停用','4':'报废'}" value="%{labApparaVo.status}" />
 										</td>
 										<td>
 											<label>
@@ -289,7 +289,7 @@
 										</td>
 										<td>
 											<input name="labApparaVo.verPeriod" value="${labApparaVo.verPeriod}" id="verificationPeriod" type="text" size="20" onchange="isNoNatureNum(this);" />
-											<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':getText('month'),'天':getText('dayday')}" theme="simple" />
+											<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':'月','天':'天'}" theme="simple" />
 										</td>
 										<td>
 											<label>

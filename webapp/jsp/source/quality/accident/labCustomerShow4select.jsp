@@ -87,7 +87,7 @@
                                                    			<tr>
                                                       			<td>
                                                      				<a id="BtnPreview" class="zPushBtn" href="#" onclick="submitvalue();" >
-                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b>确定选择</b></a>
+                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b><s:text name="confirmseelet"/></b></a>
                                                      			</td>
                                                     		</tr>
                                                 		</table>

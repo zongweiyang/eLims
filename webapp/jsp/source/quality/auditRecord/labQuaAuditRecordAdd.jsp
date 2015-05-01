@@ -193,7 +193,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															编制日期：
+															<s:text name="codedates"/>：
 														</label>
 													</td>
 													<td>
@@ -258,7 +258,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															编制人员：
+															<s:text name="coderepeople"/>员：
 														</label>
 													</td>
 													<td>
@@ -267,7 +267,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															编制日期：
+															<s:text name="codedates"/>：
 														</label>
 													</td>
 													<td>
@@ -316,7 +316,7 @@
 												<table class="FormtableCon_sform" id="OneTable" >
 													<thead>
 															<th width="50" class="c">
-																条   款
+																<s:text name="page.record"/>   款
 															</th>
 															<th width="" align="center">
 																检查内容

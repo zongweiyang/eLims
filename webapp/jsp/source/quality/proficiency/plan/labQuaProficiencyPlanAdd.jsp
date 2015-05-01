@@ -229,7 +229,7 @@
 										</div>
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>检测任务</span>
+												<span><s:text name="checkatsk"/></span>
 												<label style="padding-left: 10px;" onclick="showTable(this)">
 													[&nbsp;
 													<font color="blue">生成任务</font>&nbsp;]
@@ -251,7 +251,7 @@
 														</td>
 														<td class="r" width="150">
 															<label>
-																任务编号：
+																<s:text name="task.no"/>：
 															</label>
 														</td>
 														<td>
@@ -271,7 +271,7 @@
 														</td>
 														<td class="r" width="150">
 															<label>
-																联系电话：
+																<s:text name="theme.phone"/>：
 															</label>
 														</td>
 														<td>

@@ -188,7 +188,7 @@ html {
 													</td>
 													<td class="r" width="150">
 														<label>
-															已拨经费：
+															<s:text name="yiboyinfei"/>：
 														</label>
 													</td>
 													<td>

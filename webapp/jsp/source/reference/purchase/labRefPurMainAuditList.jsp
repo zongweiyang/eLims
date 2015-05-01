@@ -25,7 +25,7 @@ html {
 			}
 			
 			function deleteEntity(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -36,7 +36,7 @@ html {
 					validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;

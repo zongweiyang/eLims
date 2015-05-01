@@ -12,7 +12,7 @@
     function submitvalue(actionstr){
         var df = document.forms[0];
         df.action = actionstr;
-	  	if(confirm("确认要停用该仪器吗！")){
+	  	if(confirm('<s:property value="getText('confrimstoclapp')"/>')){
 	  		df.submit();
 	  	}
     }
@@ -91,7 +91,7 @@
 											</table>
 										</div>
 										<div class="Formtable" style="margin-top: 0px;">
-											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title="点击隐藏/显示">
+											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title='<s:property value="getText('cliskchowhiddd')"/>'>
 												<span><s:text name="record.list.bet"/></span>
 											</div>
 											<table id="tableId" class="FormtableCon">
@@ -205,7 +205,7 @@
 											</table>
 										</div>
 										<div class="Formtable" style="margin-top: 0px;">
-											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title="点击隐藏/显示">
+											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title='<s:property value="getText('cliskchowhiddd')"/>'>
 												<span><s:text name="biz.progress"/></span>
 											</div>
 											<div id="contentFrame">

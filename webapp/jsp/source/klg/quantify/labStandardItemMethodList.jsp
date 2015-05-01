@@ -62,7 +62,7 @@ html {
 									<div class="myworkingbox">
 										<div class="myworkingboxttitle">
 											<h2>
-												${funName }：首页
+												${funName }：<s:text name="top.index"/>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->
@@ -115,7 +115,7 @@ html {
 													<s:text name="biaozcode"/>
 												</th>
 												<th property="standIndex">
-													<s:text name="regular.no"/>型号
+													<s:text name="regularstyle"/>
 												</th>
 												<th>
 													<s:text name="projected"/>

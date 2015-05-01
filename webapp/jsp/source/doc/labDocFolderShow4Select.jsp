@@ -111,7 +111,7 @@ html {
 											<tr>
 												<td class="c" style="height: 80">
 													<label>
-														图标
+														<s:text name="icon.addr"/>
 													</label>
 												</td>
 												<td class="l" colspan="3">

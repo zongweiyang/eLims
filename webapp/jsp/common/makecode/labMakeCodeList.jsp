@@ -35,7 +35,7 @@
 			
 			function deleteBatch(){
 				if(check('labMakeCodeVo.ids')){
-					if(confirm('确定批量删除吗?'))
+					if(confirm('<s:property value="getText('confirbatchdel')"/>'))
 					{
 						submitvalue('<%=basePath%>makecode/labMakeCode/deleteBatchLabMakeCode.action');				
 					}	

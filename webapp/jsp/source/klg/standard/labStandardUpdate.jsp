@@ -174,9 +174,9 @@
 											</div>
 											<table class="FormtableCon">
 												<tr>
-													<td><label>标准编号：</label></td>
+													<td><label><s:text name="stdcodes"/>：</label></td>
 													<td>
-														<input name="labStandardVo.code" valType="required" msg="标准编号不能为空" id="code" type="text" size="40" value="${labStandardVo.code}" />
+														<input name="labStandardVo.code" valType="required" msg='<s:property value="getText('stdcodenotempty')"/>' id="code" type="text" size="40" value="${labStandardVo.code}" />
 													</td>
 													<td><label>标准名称：</label></td>
 													<td>
@@ -268,7 +268,7 @@
 														</td>
 														<td class="c">
 															<s:if test="${st.index==0}">
-																<a href="#" onclick="copyrow()">添加</a>
+																<a href="#" onclick="copyrow()"><s:text name="added"/></a>
 															</s:if>
 															<a href="#" onclick="delrow(this)">删除</a	
 														</td>

@@ -47,7 +47,7 @@
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
 					                      						<td>
-					                      							<label>方法名称：</label>
+					                      							<label><s:text name="method.name"/>：</label>
 					                      						</td>
 					                      						<td>
 					                      							<input type="text" name="labMethodVo.name" id="name" value="${labMethodVo.name }"/>
@@ -77,10 +77,10 @@
 														onclick="if(this.checked==true) { checkAll('labStandardItemMethodVo.ids'); } else { clearAll('labStandardItemMethodVo.ids'); }" />
 												</th>
 												<th property="name">
-													方法名称
+													<s:text name="method.name"/>
 												</th>
 												<th property="code">
-													方法编号
+													<s:text name="methodno"/>
 												</th>
 											</tr>
 											<s:if test="pageResult.resultList!=null">

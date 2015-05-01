@@ -106,7 +106,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input name="labOrgVo.name"  valType="required,strLength"  max="10" msg="最多输入10个汉字"  id="name" type="text" size="20" value="${labOrgVo.name }" onblur="checkOrgname(this);" />
+												<input name="labOrgVo.name"  valType="required,strLength"  max="10" msg='<s:property value="getText('input10word')"/>'  id="name" type="text" size="20" value="${labOrgVo.name }" onblur="checkOrgname(this);" />
 											</td>
 											<td>
 												<label>
@@ -114,7 +114,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input name="labOrgVo.linkMan" valType="strLength"  max="10" msg="最多输入10个汉字" id="linkman" type="text" size="20" value="${labOrgVo.linkMan}" maxlength="8" />
+												<input name="labOrgVo.linkMan" valType="strLength"  max="10" msg='<s:property value="getText('input10word')"/>' id="linkman" type="text" size="20" value="${labOrgVo.linkMan}" maxlength="8" />
 											</td>
 										</tr>
 										<tr>
@@ -133,7 +133,7 @@ html {
 											</td>
 											<td>
 												<s:select list="#request.listLabCode" cssStyle="width:153px" headerKey="0" headerValue="------请选择-----" onchange="checkLab(this)"  value="'${labOrgVo.typeId}|${labOrgVo.type}'"   theme="simple" listValue="name" listKey="id+'|'+name" ></s:select>
-												<input type="hidden" id="typeId" name="labOrgVo.typeId" valType="required" msg="请选择组织类型" value="${labOrgVo.typeId}"  />
+												<input type="hidden" id="typeId" name="labOrgVo.typeId" valType="required" msg='<s:property value="getText('selectorgtype')"/>' value="${labOrgVo.typeId}"  />
 												<input type="hidden" id="typeName"  name="labOrgVo.type"  value="${labOrgVo.type}"/>
 											</td>
 										</tr>

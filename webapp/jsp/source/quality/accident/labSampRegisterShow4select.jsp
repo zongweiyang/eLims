@@ -62,7 +62,7 @@
                                                   			<tr>
 																<td>
 																	<label>
-																		任务编号：
+																		<s:text name="task.no"/>：
 																	</label>
 																</td>
 																<td>
@@ -96,7 +96,7 @@
                                                    			<tr>
                                                       			<td>
                                                      				<a id="BtnPreview" class="zPushBtn" href="#" onclick="submitvalue();" >
-                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b>确定选择</b></a>
+                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b><s:text name="confirmseelet"/></b></a>
                                                      			</td>
                                                     		</tr>
                                                 		</table>
@@ -109,7 +109,7 @@
 												<th>
 												
 												</th>
-												<th property="no" width="150">任务编号</th>
+												<th property="no" width="150">任务<s:text name="code.number"/></th>
 												<th property="labSampCustomerVo.labCustomerName">课题&nbsp;/&nbsp;客户名称</th>
 												<th width="70">样品数量</th>
 												<th property="taskType" width="100">检测类别</th>

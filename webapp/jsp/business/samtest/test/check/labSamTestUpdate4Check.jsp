@@ -83,7 +83,7 @@ html {
 			});
 			if(key==true){
 				$('form').attr('action','<%=basePath%>'+actionstr);
-				if(confirm("您确认要提交吗？")){
+				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 					$('form').submit();
 				}
 			}
@@ -97,7 +97,7 @@ html {
 				return false;
 			}
 			$('form').attr('action','<%=basePath%>'+actionstr);
-			if(confirm("您确认要提交吗？")){
+			if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 				$('form').submit();
 			}
 		}
@@ -250,7 +250,7 @@ html {
 													<s:if test="${demo!='Y'&&demo3=='Y'}">
 														<td style="text-align: center;cursor: hand;" onclick="checkTd(this)">
 															<s:if test="${demo4=='Y'}">
-																<span style="color: red;" title="复测">${demo1}</span>
+																<span style="color: red;" title='<s:property value="getText('fucessd')"/>'>${demo1}</span>
 															</s:if>
 															<s:else>
 																${demo1}

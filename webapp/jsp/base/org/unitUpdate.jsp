@@ -151,7 +151,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input name="labOrgVo.name" valType="required,strLength" max="10" msg="最多输入10个汉字" style="width: 300px;" id="name" type="text" size="20" value="${labOrgVo.name }" onblur="checkOrgname(this);" />
+												<input name="labOrgVo.name" valType="required,strLength" max="10" msg='<s:property value="getText('input10word')"/>' style="width: 300px;" id="name" type="text" size="20" value="${labOrgVo.name }" onblur="checkOrgname(this);" />
 											</td>
 											<td>
 												<label>
@@ -159,7 +159,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input name="labOrgVo.linkMan" valType="strLength" max="10" msg="最多输入10个汉字" style="width: 300px;" id="linkman" type="text" size="20" value="${labOrgVo.linkMan}" maxlength="8" />
+												<input name="labOrgVo.linkMan" valType="strLength" max="10" msg='<s:property value="getText('input10word')"/>' style="width: 300px;" id="linkman" type="text" size="20" value="${labOrgVo.linkMan}" maxlength="8" />
 											</td>
 										</tr>
 										<tr>

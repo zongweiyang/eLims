@@ -95,7 +95,7 @@ border-right: #C0C0C0 1px solid;
 				cache: false,
 				success: function(data) {
 					if(data=='1'){
-						if(confirm("您要删除的文件已经被其他人申请,删除该文件后所有申请信息也被删除！")){
+						if(confirm('<s:property value="getText('deletfileisdelet')"/>')){
 						window.location.href='<%=basePath%>doc/labDoc/deleteLabDocFile.action?labDocVo.id='+id+'&labDocVo.pid='+pid;
 						}
 					}else{
@@ -133,7 +133,7 @@ border-right: #C0C0C0 1px solid;
 	
 	});
 	function deleteFolder(id,pid){
-		if(confirm("确认删除该文件夹吗？")){
+		if(confirm('<s:property value="getText('confirmtodelfolder')"/>')){
 		window.location.href='${basePath}doc/labDoc/deleteLabDocFolder.action?labDocVo.id='+id+'&labDocVo.pid='+pid;
 		}
 	}
@@ -236,13 +236,13 @@ border-right: #C0C0C0 1px solid;
 																<s:text name="file.name"/>
 															</th>
 															<th>
-																类型
+																<s:text name="config.type"/>
 															</th>
 															<th>
-																创建日期
+																<s:text name="createdate"/>
 															</th>
 															<th>
-																文件说明
+																<s:text name="filedoc"/>
 															</th>
 															<th>
 																<s:text name="lab.code.ops"/>
@@ -283,9 +283,9 @@ border-right: #C0C0C0 1px solid;
 							</div>
 							<div class="Formtable">
 								<div class="Formtabletitle">
-									<span>我的申请</span>
+									<span><s:text name="myapply"/></span>
 									<label style="float: right;">
-										<a href="javascript:;" onclick="showAllLabDoc()" >&nbsp;&nbsp;+&nbsp;查看全部&nbsp;&nbsp;&nbsp;&nbsp;</a>
+										<a href="javascript:;" onclick="showAllLabDoc()" >&nbsp;&nbsp;+&nbsp;<s:text name="checkallslook"/>&nbsp;&nbsp;&nbsp;&nbsp;</a>
 									</label>
 								</div>
 								<div style="margin-top: 10px; margin-bottom: 10px;">
@@ -302,13 +302,13 @@ border-right: #C0C0C0 1px solid;
 													<s:text name="author"/>
 												</th>
 												<th>
-													科室
+											<s:text name="theme.office"/>
 												</th>
 												<th>
-													申请日期
+											<s:text name="apply.date"/>
 												</th>
 												<th>
-													文件说明
+													<s:text name="filedoc"/>
 												</th>
 												<th>
 													<s:text name="sam.state"/>
@@ -343,21 +343,21 @@ border-right: #C0C0C0 1px solid;
 														${labDocVo.remark }
 													</td>
 													<td class="c">
-														<s:if test="${status==1 }">审核中</s:if>
-														<s:elseif test="${status==2}">已赋权</s:elseif>
-														<s:elseif test="${status==3}">已拒绝</s:elseif>
-														<s:elseif test="${status==4}">无权限</s:elseif>
+														<s:if test="${status==1 }"><s:text name="checkingnow"/></s:if>
+														<s:elseif test="${status==2}"><s:text name="fuquaned"/></s:elseif>
+														<s:elseif test="${status==3}"><s:text name="denied"/></s:elseif>
+														<s:elseif test="${status==4}"><s:text name="noprivi"/></s:elseif>
 													</td>
 													<td class="c" width="120">
 														<s:if test="${status>0&&status<3||status==4}">
 															<a
-																href="<%=basePath%>doc/labDoc/updateLabDocApply4cancel.action?labDocApplyVo.id=${id }">取消</a>
+																href="<%=basePath%>doc/labDoc/updateLabDocApply4cancel.action?labDocApplyVo.id=${id }"><s:text name="config.cancel"/>
 														</s:if>
 														<s:elseif test="${status==3}">
 															<a
-																href="<%=basePath%>doc/labDoc/updateLabDocApply.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=1">申请</a>&nbsp;&nbsp;
+																href="<%=basePath%>doc/labDoc/updateLabDocApply.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=1"><s:text name="applyedsdsdf"/></a>&nbsp;&nbsp;
 											        <a
-																href="<%=basePath%>doc/labDoc/updateLabDocApply4cancel.action?labDocApplyVo.id=${id }">取消</a>
+																href="<%=basePath%>doc/labDoc/updateLabDocApply4cancel.action?labDocApplyVo.id=${id }"><s:text name="config.cancel"/>
 														</s:elseif>
 													</td>
 												</tr>
@@ -368,10 +368,10 @@ border-right: #C0C0C0 1px solid;
 							</div>
 							<div class="Formtable">
 								<div class="Formtabletitle">
-									<span>我的审核</span>
+									<span><s:text name="kmuaudit"/></span>
 									<label style="float: right;">
 										<a href="javascript:;" onclick="showOtherApplyLabDoc()"
-											>&nbsp;&nbsp;+&nbsp;查看全部&nbsp;&nbsp;&nbsp;&nbsp;</a>
+											>&nbsp;&nbsp;+&nbsp;<s:text name="checkallslook"/>&nbsp;&nbsp;&nbsp;&nbsp;</a>
 									</label>
 								</div>
 								<div style="margin-top: 10px; margin-bottom: 10px;">
@@ -385,16 +385,16 @@ border-right: #C0C0C0 1px solid;
 													<s:text name="file.name"/>
 												</th>
 												<th width="180">
-													申请人
+													<s:text name="applier"/>
 												</th>
 												<th>
-													科室
+											<s:text name="theme.office"/>
 												</th>
 												<th>
-													申请日期
+											<s:text name="apply.date"/>
 												</th>
 												<th>
-													文件说明
+													<s:text name="filedoc"/>
 												</th>
 												<th>
 													<s:text name="sam.state"/>
@@ -429,25 +429,25 @@ border-right: #C0C0C0 1px solid;
 														${labDocVo.remark }
 													</td>
 													<td class="c">
-														<s:if test="${status==4 }">无权限</s:if>
-														<s:elseif test="${status==1}">审核中</s:elseif>
-														<s:elseif test="${status==2}">已赋权</s:elseif>
-														<s:elseif test="${status==3}">已拒绝</s:elseif>
+														<s:if test="${status==4 }"><s:text name="noprivi"/></s:if>
+														<s:elseif test="${status==1}"><s:text name="checkingnow"/></s:elseif>
+														<s:elseif test="${status==2}"><s:text name="fuquaned"/></s:elseif>
+														<s:elseif test="${status==3}"><s:text name="denied"/></s:elseif>
 													</td>
 													<td class="c" width="120">
 														<s:if test="${status==2}">
 															<a
-																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=4">取消</a>
+																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=4"><s:text name="config.cancel"/>
 														</s:if>
 														<s:elseif test="${status==1}">
 															<a
-																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">通过</a>&nbsp;&nbsp;
+																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">		<s:text name="flow.pass"/></a>&nbsp;&nbsp;
 											        <a
-																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=3">拒绝</a>
+																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=3"><s:text name="jujuesd"/></a>
 														</s:elseif>
 														<s:elseif test="${status==3||status==4}">
 															<a
-																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">通过</a>&nbsp;&nbsp;
+																href="<%=basePath%>doc/labDoc/updateLabDocApplyfByFlag.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">		<s:text name="flow.pass"/></a>&nbsp;&nbsp;
 											        </s:elseif>
 													</td>
 												</tr>

@@ -188,7 +188,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														编制人员：
+														<s:text name="coderepeople"/>员：
 													</label>
 												</td>
 												<td>
@@ -196,7 +196,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														编制日期：
+														<s:text name="codedates"/>：
 													</label>
 												</td>
 												<td>
@@ -279,7 +279,7 @@
 												</div>
 												<div id="contentFrame">
 													<span style="background-color: #ccc;"><font
-														color="red">【请使用IE8浏览器查看流程图】</font> </span>
+														color="red"><s:text name="use.ie8"/></font> </span>
 													<iframe name="content" id="content"
 														src="<%=basePath%>/workflow/process/showLabWfProgressIns.action?labWfProcessInsVo.busId=${labQuaAuditRecordVo.id}"
 														onload="document.all.content.style.height=document.content.document.body.clientHeight"

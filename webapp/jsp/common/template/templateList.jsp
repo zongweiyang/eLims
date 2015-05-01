@@ -10,7 +10,7 @@
 		$('#labTemplateForm').attr('action','<%=basePath%>'+actionstr).submit();
 	}
 	function checkDelete(actionstr){
-		if(confirm("是否删除？")){
+		if(confirm('<s:property value="getText('deleteornot')"/>')){
 			window.location.href = '<%=basePath%>'+actionstr;
 		}
 	}
@@ -19,7 +19,7 @@
 			validate.tip('请只少选择一项',null,1);
 			return ;
 		}
-		if(confirm("是否删除？")){
+		if(confirm('<s:property value="getText('deleteornot')"/>')){
 			submitvalue(actionstr);
 		}
 	}

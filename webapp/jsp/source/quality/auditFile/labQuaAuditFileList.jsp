@@ -10,7 +10,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/auditRecord/deleteLabQuaAuditRecord.action?labQuaAuditRecordVo.ids='+id);
 		      	   $('form').submit();
 			    }
@@ -157,10 +157,10 @@
 													内审组长
 												</th>
 												<th property="writeMember">
-													编制人
+													<s:text name="coderepeople"/>
 												</th>
 												<th property="writeTime">
-													编制时间
+													<s:text name="codetimes"/>
 												</th>
 												<th>
 													进度

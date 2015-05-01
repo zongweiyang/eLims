@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteEntity(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -29,7 +29,7 @@
 					validate.tip('请选择要删除的条目.',$('labChargeVo.ids'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;

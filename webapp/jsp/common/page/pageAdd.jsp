@@ -64,7 +64,7 @@
 														</label>
 													</td>
 													<td>
-														<input id="name" value="${labPageEditorVo.name}" valType="required,strLength" max="64" msg="中文名称不能为空" strLength-msg="长度不能超过64位" maxlength="64" name="labPageEditorVo.name" title="例：功能新增页面" />
+														<input id="name" value="${labPageEditorVo.name}" valType="required,strLength" max="64" msg="中文名称不能为空" strLength-msg="长度不能超过64位" maxlength="64" name="labPageEditorVo.name" title='<s:property value="getText('funcnesaddpage')"/>' />
 													</td>
 													<td>
 														<label>

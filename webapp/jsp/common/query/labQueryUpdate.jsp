@@ -335,7 +335,7 @@ html {
 											[&nbsp;
 											<font color="blue"><s:text name="open.close"/></font>&nbsp;]
 										</label>
-										<span><a onclick="showParameter()" style="cursor: hand" title="点击获取显示列表"><s:text name="param.info.k"/></a> </span>
+										<span><a onclick="showParameter()" style="cursor: hand" title='<s:property value="getText('clisckhsowlist')"/>'><s:text name="param.info.k"/></a> </span>
 									</div>
 									<div style="margin: 10px 50px 10px 50px; display: none;">
 										<table border="0" class="myworkingboxttable" width="100%" id="parameTable">
@@ -424,7 +424,7 @@ html {
 											[&nbsp;
 											<font color="blue"><s:text name="open.close"/></font>&nbsp;]
 										</label>
-										<span><a onclick="showCountParameter()" style="cursor: hand" title="点击获取显示列表"><s:text name="param.info.k"/></a> </span>
+										<span><a onclick="showCountParameter()" style="cursor: hand" title='<s:property value="getText('clisckhsowlist')"/>'><s:text name="param.info.k"/></a> </span>
 									</div>
 									<div style="margin: 10px 50px 10px 50px; display: none;">
 										<table border="0" class="myworkingboxttable" width="100%" id="countParameTable">

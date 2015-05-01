@@ -191,10 +191,10 @@ html {
 															<tr>
 
 																<td>
-																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="applylabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b>批量通过</b> </a>
+																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="applylabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b><s:text name="batchpassd"/></b> </a>
 																</td>
 																<td>
-																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b>批量取消</b> </a>
+																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b><s:text name="abtchcancel"/></b> </a>
 																</td>
 																<td style="float: right;">
 																	<s:select list="#{'-1':getText('page.all'),'2':getText('passed'),'1':getText('unupassed')}" headerValue="--请选择--" headerKey="" listKey="key" listValue="value" onchange="getLabDocApplyList(this.value)"></s:select>
@@ -267,14 +267,14 @@ html {
 													</td>
 													<td class="c">
 														<s:if test="${status==1}">
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">通过</a>
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=3">拒绝</a>
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2">		<s:text name="flow.pass"/>
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=3"><s:text name="jujuesd"/></a>
 														</s:if>
 														<s:elseif test="${status==2}">
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=4"> 取消</a>&nbsp;&nbsp;
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=4"> <s:text name="config.cancel"/>&nbsp;&nbsp;
 														</s:elseif>
 														<s:elseif test="${status==3||status==4}">
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2"> 通过</a>&nbsp;&nbsp;
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyById.action?labDocApplyVo.id=${id }&labDocApplyVo.flag=2"> 		<s:text name="flow.pass"/></a>&nbsp;&nbsp;
 														</s:elseif>
 													</td>
 												</tr>

@@ -98,7 +98,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		申请人：
+																		<s:text name="applier"/>：
 																	</label>
 																</td>
 																<td>
@@ -160,7 +160,7 @@ html {
 													单据号
 												</th>
 												<th property="applicant">
-													申请人
+													<s:text name="applier"/>
 												</th>
 												<th property="createTime">
 													申请时间

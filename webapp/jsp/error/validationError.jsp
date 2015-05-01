@@ -41,6 +41,6 @@
         </script>  
         </s:if>  
      
-　　<h2 align="center">注意!!页面将在<div id='num' style='display=inline;'>5</div>秒后回到上一个页面</h2>
+　　<h2 align="center"><s:text name="auchpagenext"/><div id='num' style='display=inline;'>5</div><s:text name="miaobackpre"/></h2>
 	
 </body>

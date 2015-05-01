@@ -118,7 +118,7 @@ function submitvalue(actionstr,id){
 												</label>
 											</td>
 											<td>
-												<input name="labRoleVo.name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg="角色名称不能为空" id="name" type="text" size="20" value="${labRoleVo.name}" onblur="checkRolename('${labRoleVo.id}')" />
+												<input name="labRoleVo.name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg='<s:property value="getText('rolenameempty')"/>' id="name" type="text" size="20" value="${labRoleVo.name}" onblur="checkRolename('${labRoleVo.id}')" />
 											</td>
 											<td>
 												<label>

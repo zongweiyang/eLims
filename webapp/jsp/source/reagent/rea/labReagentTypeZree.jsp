@@ -110,7 +110,7 @@ div#rMenu ul li{
 					return false;
 				} else {
 					var treeNode=nodes[0];
-					if(confirm("确认删除分类 " + treeNode.name + " 吗？")){
+					if(confirm('<s:property value="getText('confirmdeleclassi')"/>' + treeNode.name)){
 						$.ajax({
 							url:'${basePath}reagent/labReaType/ajaxNode4Delete.action',
 							type:'POST',

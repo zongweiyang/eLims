@@ -13,7 +13,7 @@
 		  	}
 			function deleteBatch(){
 				if(check('labQueryVo.ids')){
-					if(confirm('确定批量删除吗?'))
+					if(confirm('<s:property value="getText('confirbatchdel')"/>'))
 					{
 						submitvalue('<%=basePath%>query/labQuery/deleteBatchLabQuery.action');				
 					}	

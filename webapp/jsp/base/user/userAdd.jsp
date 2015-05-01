@@ -172,7 +172,7 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td width="310">
-													<input name="labUserVo.name" onmouseover="this.title='长度不能超过8位'" value="${labUserVo.name}" valType="required,strLength" max="8" msg="用户名不能为空" strLength-msg="长度不能超过8位" id="username" type="text" size="20" maxlength="8" />
+													<input name="labUserVo.name" onmouseover="this.title='长度不能超过8位'" value="${labUserVo.name}" valType="required,strLength" max="8" msg='<s:property value="getText('usennept')"/>' strLength-msg="长度不能超过8位" id="username" type="text" size="20" maxlength="8" />
 												</td>
 												<td width="150">
 													<label>
@@ -298,7 +298,7 @@ function submitvalue(actionstr){
 													<s:text name="theme.role"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：
 												</td>
 												<td width="310">
-													<input readonly="readonly" size="50" type="text" valType="required" msg="角色未能为空" name="labUserVo.userOrgList[0].roleNames" value="${labUserVo.userOrgList[0].roleNames}" id="roleName0" value="" />
+													<input readonly="readonly" size="50" type="text" valType="required" msg='<s:property value="getText('rolenotemp')"/>' name="labUserVo.userOrgList[0].roleNames" value="${labUserVo.userOrgList[0].roleNames}" id="roleName0" value="" />
 													<input type="hidden" name="labUserVo.userOrgList[0].roleIds" id="roleId0" value="" />
 													&nbsp;
 													<a href="javascript:;" onclick="ajax2RoleList('0')" name="xuanze"><s:text name="selected"/></a>

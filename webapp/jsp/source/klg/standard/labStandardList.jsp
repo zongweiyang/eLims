@@ -24,13 +24,13 @@ html {
 					validate.tip('请选择要删除的条目.',$('labStandardVo.ids'));
 					return ;
 				}
-				if(confirm('与该标准的标准量化信息会删除，确定删除？')){
+				if(confirm('<s:property value="getText('msg.confirm.del')"/>')){
 					goAction(url);
 				}
 				return ;
 			}
 			function deleteOne(id){
-				if(confirm('确定要删除吗?')){	 
+				if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			      window.location.href='<%=basePath%>klg/labStandard/deleteLabStandard.action?labStandardVo.ids='+id;
 			    }
 			}
@@ -95,7 +95,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		<s:text name="std.name"/>：
+																		标准名称：
 																	</label>
 																</td>
 																<td>
@@ -103,7 +103,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		<s:text name="biaozcode"/>：
+																		<s:text name="stdcodes"/>：
 																	</label>
 																</td>
 																<td>
@@ -132,7 +132,7 @@ html {
 																	<l:a uri="klg/labStandard/deleteLabStandard.action" onclick="deleteEntityForBatch('/klg/labStandard/deleteLabStandard.action');" value="lab.code.deleteall" />	
 																</td>
 																<td>
-																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="inbiaozhun"/>
+																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="导入标准"/>
 																</td>
 															</tr>
 														</table>
@@ -149,13 +149,13 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="name">
-													<s:text name="std.name"/>
+													标准名称
 												</th>
 												<th property="code">
-													<s:text name="biaozcode"/>
+													<s:text name="stdcodes"/>
 												</th>
 												<th property="standIndex">
-													<s:text name="biaolenave"/>
+													标准分级
 												</th>
 												<th property=standStatus>
 													<s:text name="sam.state"/>
@@ -189,7 +189,7 @@ html {
 																	被替换
 																</s:if>
 																<s:else>
-																	使用中
+																	<s:text name="using"/>
 																</s:else>
 															</td>
 															<td class="c">

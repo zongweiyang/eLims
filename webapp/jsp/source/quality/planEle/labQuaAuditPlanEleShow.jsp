@@ -40,7 +40,7 @@
 			}
 			function deleteOne(id){
 				var planId=$('#id').val();
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/planEle/deleteLabQuaAuditRecord.action?labQuaAuditRecordVo.ids='+id+'&labQuaAuditRecordVo.quaAuditPlanEleId='+planId);
 		      	   $('form').submit();
 			    }
@@ -190,7 +190,7 @@
 													<td class="r" width="150">
 														
 														<label>
-															编制日期：
+															<s:text name="codedates"/>：
 														</label>
 													</td>
 													<td>
@@ -228,7 +228,7 @@
 												<table class="FormtableCon_sform" id="OneTable" >
 													<thead>
 															<th width="50" class="c">
-																条款
+																<s:text name="page.record"/>款
 															</th>
 															<th width="500" class="c">
 																要素
@@ -372,10 +372,10 @@
 													内审组长
 												</th>
 												<th property="writeMember">
-													编制人
+													<s:text name="coderepeople"/>
 												</th>
 												<th property="writeTime">
-													编制时间
+													<s:text name="codetimes"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

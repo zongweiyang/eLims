@@ -36,7 +36,7 @@
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>检查内容>>检查重点&nbsp;&nbsp;[<font color="red">修改</font>]</span>
+												<span>检查内容>>检查重点&nbsp;&nbsp;[<font color="red"><s:text name="lab.code.modify"/></font>]</span>
 											</h2>
 										</div>
 										<div class="FUNCIONBARNEW">

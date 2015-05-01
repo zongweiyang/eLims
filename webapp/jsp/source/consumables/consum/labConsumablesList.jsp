@@ -54,7 +54,7 @@ html {
 		
 		function deleteBatch(url){
 			if(check('labConsumablesVo.ids')){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goAction(url);
 				}
 			}

@@ -123,7 +123,7 @@ html {
 										</div>
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
-											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title="点击此处，隐藏/显示该信息">
+											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title='<s:property value="getText('lab.click.here')"/>'>
 												<span><s:text name="coninfo"/></span>
 											</div>
 											<table class="FormtableCon">

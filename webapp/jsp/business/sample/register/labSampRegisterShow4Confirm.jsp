@@ -54,7 +54,7 @@ html {
 var api = frameElement.api, W = api.opener, D = W.document;
 
 function ok(url){
-	if(confirm("您确认要提交吗？")){
+	if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 		W.submitValuex(url);
 		api.close();
 	}

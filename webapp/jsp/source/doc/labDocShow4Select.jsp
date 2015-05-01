@@ -167,7 +167,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		科室：
+																<s:text name="theme.office"/>：
 																	</label>
 																</td>
 																<td>
@@ -175,7 +175,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		创建人：
+																		<s:text name="createman"/>：
 																	</label>
 																</td>
 																<td>
@@ -207,10 +207,10 @@ html {
 															<tr>
 
 																<td>
-																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="applylabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b>批量申请</b> </a>
+																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="applylabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b><s:text name="batchapply"/></b> </a>
 																</td>
 																<td>
-																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b>批量取消</b> </a>
+																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b><s:text name="abtchcancel"/></b> </a>
 																</td>
 															</tr>
 														</table>
@@ -231,16 +231,16 @@ html {
 													<s:text name="file.name"/>
 												</th>
 												<th >
-													创建人
+													<s:text name="createman"/>
 												</th>
 												<th>
-													科室
+											<s:text name="theme.office"/>
 												</th>
 												<th>
-													创建日期
+													<s:text name="createdate"/>
 												</th>
 												<th>
-													文件说明
+													<s:text name="filedoc"/>
 												</th>
 												<th>
 													<s:text name="sam.state"/>
@@ -279,26 +279,26 @@ html {
 													<s:if test="${creatorId==labDocVo.userId}">
 													</s:if>
 													<s:else>
-														<s:if test="${status==0}">无权限</s:if>
-														<s:elseif test="${status==1}">审核中</s:elseif>
-														<s:elseif test="${status==2}">已赋权</s:elseif>
-														<s:elseif test="${status==3}">已拒绝</s:elseif>
+														<s:if test="${status==0}"><s:text name="noprivi"/></s:if>
+														<s:elseif test="${status==1}"><s:text name="checkingnow"/></s:elseif>
+														<s:elseif test="${status==2}"><s:text name="fuquaned"/></s:elseif>
+														<s:elseif test="${status==3}"><s:text name="denied"/></s:elseif>
 													</s:else>	
 													</td>
 													<td class="c">
 													<s:if test="${creatorId==labDocVo.userId}">
-													 	 申请
+													 	 <s:text name="applyedsdsdf"/>
 													</s:if>
 													<s:else>
 														<s:if test="${status==0}">
-															<a href="javascript:;" onclick="shenQing('${id }');return false;">申请</a>
+															<a href="javascript:;" onclick="shenQing('${id }');return false;"><s:text name="applyedsdsdf"/></a>
 														</s:if>
 														<s:elseif test="${status==1||status==2}">
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyByLabDocId.action?labDocVo.id=${id }">取消</a>
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyByLabDocId.action?labDocVo.id=${id }"><s:text name="config.cancel"/>
 														</s:elseif>
 														<s:elseif test="${status==3}">
-															<a href="<%=basePath%>doc/labDoc/addLabDocApply.action?labDocVo.id=${id }">申请</a>
-															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyByLabDocId.action?labDocVo.id=${id }"> 取消</a>&nbsp;&nbsp;
+															<a href="<%=basePath%>doc/labDoc/addLabDocApply.action?labDocVo.id=${id }"><s:text name="applyedsdsdf"/></a>
+															<a href="<%=basePath%>doc/labDoc/updateLabDocApplyByLabDocId.action?labDocVo.id=${id }"> <s:text name="config.cancel"/>&nbsp;&nbsp;
 														</s:elseif>
 													</s:else>	
 													</td>

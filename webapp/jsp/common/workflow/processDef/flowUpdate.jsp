@@ -88,8 +88,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <body onload="loadDefault();" style="height:100%">
 	<div id="toolbardiv"  style="width:50px;float:left;height:100%;background-color:#efeeee">
 		<div>
-			<input id="tools" name="tools" nodetype='move' type="button" title="移动" value=""/><br />
-		    <input id="tools" name="tools" nodetype='Link' type="button" title="迁移" value=""/>
+			<input id="tools" name="tools" nodetype='move' type="button" title='<s:property value="getText('moved')"/>' value=""/><br />
+		    <input id="tools" name="tools" nodetype='Link' type="button" title='<s:property value="getText('fun.transfer')"/>' value=""/>
 		</div>
 	</div>
 	<div style="width:100%;height:100%;position:relative"  >
@@ -3511,7 +3511,7 @@ function del()
 	{
 		if(obj!=null)
 		{
-			if(confirm('你确定要删除'))
+			if(confirm('<s:property value="getText('fimrtodel')"/>'))
 			t.deleteSelectObj();
 		}
 	}

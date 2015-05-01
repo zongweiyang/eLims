@@ -196,7 +196,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														编制日期：
+														<s:text name="codedates"/>：
 													</label>
 												</td>
 												<td>

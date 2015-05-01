@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteEntity(url){
-				if(confirm('与该方法的标准量化信息会删除，确定删除？')){
+				if(confirm('<s:property value="getText('msg.confirm.del')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -29,14 +29,14 @@
 					validate.tip('请选择要删除的条目.',$('labItemVo.ids'));
 					return ;
 				}
-				if(confirm('与该方法的标准量化信息会删除，确定删除？')){
+				if(confirm('<s:property value="getText('msg.confirm.del')"/>')){
 					goToNextAction(url);
 				}
 				return ;
 			}
 			
 			function deleteOne(id){
-				if(confirm('确定要删除吗?')){	 
+				if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			      window.location.href='<%=basePath%>klg/labMethod/deleteLabMethod.action?labMethodVo.ids='+id;
 			    }
 			}
@@ -73,7 +73,7 @@
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
 					                      						<td>
-					                      							<label>方法名称：</label>
+					                      							<label><s:text name="method.name"/>：</label>
 					                      						</td>
 					                      						<td>
 					                      							<input type="text" name="labMethodVo.name" id="name" value="${labMethodVo.name }"/>
@@ -118,19 +118,19 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="name">
-													方法名称
+													<s:text name="method.name"/>
 												</th>
 												<th  property="code">
-													方法编号
+													<s:text name="methodno"/>
 												</th>
 												<th>
 													<s:text name="usingapp"/>
 												</th>
 												<th  property="price">
-													费用
+											<s:text name="charge.fee"/>：
 												</th>
 												<th  property="context">
-													内容
+											<s:text name="contentdesd"/>：
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

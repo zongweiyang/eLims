@@ -27,7 +27,7 @@ html {
 					validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -47,7 +47,7 @@ html {
 				 });
 			}
 			function submitAction(action){
-				if(confirm("确认要提交吗?")){
+				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 					$('form').attr('action','${basePath}'+action);
 					var flag=$('input[name="labConPurMainVo.auditResult"]:checked').val();
 					if("-1"==flag){
@@ -84,7 +84,7 @@ html {
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>详情</span>
+												<span><s:text name="details.info"/></span>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->
@@ -129,7 +129,7 @@ html {
 																name="labConPurMainVo.id" />
 														<td>
 															<label>
-																申请人：
+																<s:text name="applier"/>：
 															</label>
 														</td>
 														<td>

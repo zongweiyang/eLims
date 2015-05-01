@@ -19,7 +19,7 @@ html {
 				$('form').submit();
 			}
 			function deleteEntity(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -30,7 +30,7 @@ html {
 					validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -73,7 +73,7 @@ html {
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>详情</span>
+												<span><s:text name="details.info"/></span>
 											</h2>
 										</div>
 										<!-- 按钮条 开始 -->
@@ -111,7 +111,7 @@ html {
 														</td>
 														<td>
 															<label>
-																申请人：
+																<s:text name="applier"/>：
 															</label>
 														</td>
 														<td>
@@ -197,12 +197,12 @@ html {
 											<div class="Formtable" style="margin-top: 0px;">
 												<div class="Formtabletitle"
 													onclick="javascript:$(this).next().toggle();"
-													title="点击隐藏/显示">
+													title='<s:property value="getText('cliskchowhiddd')"/>'>
 													<span><s:text name="biz.progress"/></span>
 												</div>
 												<div id="contentFrame">
 													<span style="background-color: #ccc;"><font
-														color="red">【请使用IE8浏览器查看流程图】</font> </span>
+														color="red"><s:text name="use.ie8"/></font> </span>
 													<iframe name="content" id="content"
 														src="<%=basePath%>/workflow/process/showLabWfProgressIns.action?labWfProcessInsVo.busId=${labConPurMainVo.id}"
 														onload="document.all.content.style.height=document.content.document.body.clientHeight"

@@ -31,7 +31,7 @@
 						}
 					},
 					error:function(){
-						alert('<s:property value="getText('network.error')"/>');
+						alert('<s:property value="getText('theme.net.fail')"/>');
 					}
 				});
 			}
@@ -116,14 +116,14 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>所用仪器：</label></td>
+													<td><label><s:text name="usingappsed"/>：</label></td>
 													<td>
 														<input name="labItemVo.appName" id="appName" type="text" size="40" value="${labItemVo.appName}" onclick="selectApp();" />
 														<input type="hidden" name="labItemVo.appId" value="${labItemVo.appId }" id="appId" />
 													</td>
-													<td><label>标准分值：</label></td>
+													<td><label><s:text name="biaozhunfen"/>：</label></td>
 													<td>
-														<input valType="required" msg="标准分值不能为空" name="labItemVo.demo1" id="demo1" type="text" size="40" onblur="checkDemo1();" value="${labItemVo.demo1}" />
+														<input valType="required" msg="<s:text name="biaozhunfen"/>不能为空" name="labItemVo.demo1" id="demo1" type="text" size="40" onblur="checkDemo1();" value="${labItemVo.demo1}" />
 													</td>
 												</tr>
 												<tr>
@@ -137,9 +137,9 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>收费方式：</label></td>
+													<td><label><s:text name="feesutyle"/>：</label></td>
 													<td>
-														<s:radio list="#{'0':getText('bytemi'),'1':getText('bynumber')}" value="${labItemVo.priceType}" name="labItemVo.priceType" theme="simple"></s:radio>
+														<s:radio list="#{'0':getText('bytimesdf'),'1':getText('bynusmbere')}" value="${labItemVo.priceType}" name="labItemVo.priceType" theme="simple"></s:radio>
 													</td>
 												</tr>
 												<tr>

@@ -53,7 +53,7 @@ html {
 	<script> 
 function submitvalue(actionstr){
 	$('form').attr('action','<%=basePath%>'+actionstr);
-	if(confirm("您确认要提交吗？")){
+	if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 		$('form').submit();
 	}
 }

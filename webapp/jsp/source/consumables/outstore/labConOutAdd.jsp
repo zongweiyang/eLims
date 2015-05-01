@@ -34,7 +34,7 @@ html {
 	    }
 			
 		function deleteEntity(obj){
-			 var flag=confirm("确定删除么？");
+			 var flag=confirm('<s:property value="getText('lab.confirm.delete')"/>');
 			 if(flag){
 				 $(obj).parent().parent().remove();
 			 }

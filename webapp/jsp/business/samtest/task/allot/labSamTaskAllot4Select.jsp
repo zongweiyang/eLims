@@ -90,7 +90,7 @@ html {
       			validate.tip('请输入批次号.！',$('#samNo'));
       			return false;
       		}
-    		if(confirm('确认提交吗')){
+    		if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 				$('form').attr('action','<%=basePath%>'+actionstr);
 				$('form').submit();
 			}

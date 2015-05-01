@@ -169,7 +169,7 @@ html {
 								<div class="Formtable">
 									<div class="Formtabletitle">
 										<span><s:text name="no.reg"/></span>
-										<label id="xs" style="margin-left:  817px;color: #0088ee;cursor: pointer;" title="显示该信息" onclick="openThis();"><s:text name="refreshed"/></label>
+										<label id="xs" style="margin-left:  817px;color: #0088ee;cursor: pointer;" title='<s:property value="getText('showinforsds')"/>' onclick="openThis();"><s:text name="refreshed"/></label>
 									</div>
 									<table class="FormtableCon" id="defineTab">
 									</table>

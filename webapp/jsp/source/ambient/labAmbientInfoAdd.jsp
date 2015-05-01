@@ -106,7 +106,7 @@
 												<td><label><s:text name="param.unit"/>：</label></td>
 												<td>
 													<input type="text" readonly="readonly"  id="unit" />
-													<input type="hidden" readonly="readonly" valType="required" msg="请选择参数" name="labAmbientInfoVo.labAmbientId" id="labAmbientId" />
+													<input type="hidden" readonly="readonly" valType="required" msg='<s:property value="getText('selparm')"/>' name="labAmbientInfoVo.labAmbientId" id="labAmbientId" />
 												</td>
 											</tr>
 											<tr>

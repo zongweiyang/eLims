@@ -137,7 +137,7 @@ html {
 													<tr>
 													<s:iterator value="attendList" status="st">
 														<s:if test="${isGood=='Y'}">
-																<td style="background-color: green;" title="加班">
+																<td style="background-color: green;" title='<s:property value="getText('addban')"/>'>
 																	<div class="day">${day}</div>
 																	<p>${startTime} ~ ${endTime}&nbsp;</p>
 																	<div class="remark">${remark}&nbsp;</div>
@@ -153,28 +153,28 @@ html {
 																</td>
 															</s:elseif>
 															<s:elseif test="${noWork=='Y'}">
-																<td style="background-color: red;" title="旷工">
+																<td style="background-color: red;" title='<s:property value="getText('kuanggong')"/>'>
 																	<div class="day">${day}</div>
 																	<p>&nbsp;</p>
 																	<div class="remark">&nbsp;</div>
 																</td>
 															</s:elseif>
 															<s:elseif test="${startFlag=='Y'||endFlag=='Y'}">
-																<td style="background-color: yellow;" title="迟到早退">
+																<td style="background-color: yellow;" title='<s:property value="getText('chidaozaotui')"/>'>
 																	<div class="day">${day}</div>
 																	<p>${startTime} ~ ${endTime}&nbsp;</p>
 																	<div class="remark">${remark}&nbsp;</div>
 																</td>
 															</s:elseif>
 															<s:elseif test="${afterFlag=='Y'}">
-																<td style="background-color: #99FF99;" title="补签">
+																<td style="background-color: #99FF99;" title='<s:property value="getText('att.repair')"/>'>
 																	<div class="day">${day}</div>
 																	<p>${startTime} ~ ${endTime}&nbsp;</p>
 																	<div class="remark">${remark}&nbsp;</div>
 																</td>
 															</s:elseif>
 															<s:elseif test="${isOk=='Y'}">
-																<td style="background-color:#00CC00;"  title="正常">
+																<td style="background-color:#00CC00;"  title='<s:property value="getText('common')"/>'>
 																	<div class="day">${day}</div>
 																	<p>${startTime} ~ ${endTime}&nbsp;</p>
 																	<div class="remark">${remark}&nbsp;</div>

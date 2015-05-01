@@ -186,7 +186,7 @@
 		    		revertFunc();
 		    		return false;
 		    	}
-		    	if(!confirm("确认修改预约时间吗？")){
+		    	if(!confirm('<s:property value="getText('confrimmodiriedtime')"/>')){
 		    		revertFunc(); //恢复
 		    	}else{
 		    		var url = '<%=basePath%>appara/useing/ajaxLabAppUsebes4update.action?labApparaUseVo.id='+event.id+'&labApparaUseVo.beStartDate='+bespeakStartDate+'&labApparaUseVo.beEndDate='+bespeakEndDate+'&labApparaUseVo.appId='+event.appId; 

@@ -72,7 +72,7 @@ html {
 				
 		    }
 		    function delrow(id,type){
-		    	if(confirm('确定要删除吗?')){	
+		    	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	
 		    		goToNextAction('/klg/labStandardItem/deleteLabStandardItem.action?labStandardItemVo.id='+id+'&labStandardItemVo.typex='+type);
 		    	}
 		    }
@@ -140,7 +140,7 @@ html {
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>维护</span>
+												<span><s:text name="maintain"/></span>
 											</h2>
 										</div>
 										<div class="FUNCIONBARNEW">
@@ -169,7 +169,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		样品分类：
+																		<s:text name="sam.classify"/>：
 																	</label>
 																</td>
 																<td>
@@ -187,7 +187,7 @@ html {
 																	<l:a uri="/klg/labStandardItem/updateLabStandardItemMethod.action" img="/img/query.gif" onclick="goAction('preUpdateLabStandardItemMethod.action');" value="fun.query"/>
 																</td>
 																<td style="vertical-align: middle;">
-																	<font color="red">一次输入多个关键字，请用"，"进行分隔</font>
+																	<font color="red"><s:text name="duhaofenge"/></font>
 																</td>
 															</tr>
 														</table>
@@ -199,8 +199,8 @@ html {
 										<div class="Formtable">
 											<div class="Formtabletitle">
 												<span><s:text name="stdinfo"/>[<font color="red">${labStandardVo.standTypeName}</font>]</span>
-												<label id="yc"  style="float: right;display: none; color: #0088ee;cursor: pointer;margin-right: 10px;" title="关闭该信息" onclick="closeThis();" >[关闭]</label>
-												<label id="xs" style="float: right;color: #0088ee;cursor: pointer;margin-right: 10px;" title="显示该信息" onclick="openThis();">[显示]</label>
+												<label id="yc"  style="float: right;display: none; color: #0088ee;cursor: pointer;margin-right: 10px;" title='<s:property value="getText('closeinfo')"/>' onclick="closeThis();" >[关闭]</label>
+												<label id="xs" style="float: right;color: #0088ee;cursor: pointer;margin-right: 10px;" title='<s:property value="getText('showinforsds')"/>' onclick="openThis();">[显示]</label>
 											</div>
 											<table id="tableMain" style="display: none;" class="FormtableCon">
 												<tr>
@@ -281,7 +281,7 @@ html {
 														<s:text name="lab.sequence"/>
 													</td>
 													<td class="c">
-														样品分类
+														<s:text name="sam.classify"/>
 													</td>
 													<td class="c">
 														<s:text name="itemperference"/>
@@ -293,7 +293,7 @@ html {
 														<s:text name="projected"/>
 													</td>
 													<td class="c">
-														指标
+														<s:text name="indexnumber"/>
 													</td>
 													<td class="c" width="48">
 														数值精度

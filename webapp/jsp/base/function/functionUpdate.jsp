@@ -134,7 +134,7 @@
 											</label>
 										</td>
 										<td>
-											<input name="labFunctionVo.name" valType="required,strLength" max="32" strLength-msg="功能名称长度不能超过32位" msg="功能名称不能为空" id="name" type="text" size="30" value="${labFunctionVo.name}" onblur="checkFunNname(this,'${labFunctionVo.name}');" />
+											<input name="labFunctionVo.name" valType="required,strLength" max="32" strLength-msg="功能名称长度不能超过32位" msg='<s:property value="getText('funnameempty')"/>' id="name" type="text" size="30" value="${labFunctionVo.name}" onblur="checkFunNname(this,'${labFunctionVo.name}');" />
 										</td>
 										<td>
 											<label>
@@ -142,7 +142,7 @@
 											</label>
 										</td>
 										<td>
-											<input name="labFunctionVo.wfcode" id="wfcode" type="text" size="30" value="${labFunctionVo.wfcode}"  valType="required,strLength"  max="32" strLength-msg="编码长度不能超过32位" msg="编码不能为空" onblur="checkFunCode(this,'${labFunctionVo.wfcode}','${labFunctionVo.id}');" readonly="readonly"/>
+											<input name="labFunctionVo.wfcode" id="wfcode" type="text" size="30" value="${labFunctionVo.wfcode}"  valType="required,strLength"  max="32" strLength-msg='<s:property value="getText('codelength32')"/>' msg='<s:property value="getText('config.code.empty')"/>' onblur="checkFunCode(this,'${labFunctionVo.wfcode}','${labFunctionVo.id}');" readonly="readonly"/>
 										</td>
 									</tr>
 									<tr>

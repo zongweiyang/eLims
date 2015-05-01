@@ -127,7 +127,7 @@ function showProcess(id){
 																<td>
 																	<s:select theme="simple" list="#request.funStepList"
 																		listKey="stepId" listValue="stepName" headerKey=""
-																		headerValue='<s:property value="getText('alldata')"/>' name="labReaPurMainVo.status"
+																		headerValue="-全部-" name="labReaPurMainVo.status"
 																		id="status"
 																		onchange="submitvalue('listLabReaPurMain.action');">
 																	</s:select>
@@ -227,9 +227,9 @@ function showProcess(id){
 																	test="${isOper!='Y' && (status=='采购审核'|| status=='采购审批')}">
 																	<l:a href="#"
 																		uri="reagent/labReaPurMain/showAllLabReaPurMainExcel.action?labReaPurMainVo.id=${id}"
-																		value="print" />
+																		value="打印" />
 																	<l:a href="#" uri="" onclick="showReport('${id}');"
-																		value="print" />
+																		value="打印1" />
 																</s:if>
 
 															</td>

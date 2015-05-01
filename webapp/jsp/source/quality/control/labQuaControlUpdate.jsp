@@ -57,7 +57,7 @@
        				}
        			},
        			error:function (){
-       				alert('<s:property value="getText('network.error')"/>');
+       				alert('<s:property value="getText('theme.net.fail')"/>');
        			}
        		});
        }

@@ -7,7 +7,7 @@
 <body>
 <html>
 	<head>
-		<title>出错啦</title>
+		<title><s:text name="errorlass"/></title>
 		<meta http-equiv=content-type content="text/html; charset=gb2312">
 		<meta content="mshtml 6.00.2800.1458" name="generator">
 		<link type=text/css rel=stylesheet>

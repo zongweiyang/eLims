@@ -54,7 +54,7 @@ html {
 						$('form').submit();
 				}
 				function submitvalue1(actionstr){
-						if(!confirm("确认取消预约时间吗？"))return false;
+						if(!confirm('<s:property value="getText('confirmcaceltime')"/>'))return false;
 						$('form').attr('action','<%=basePath%>'+actionstr);
 						$('form').submit();
 				}

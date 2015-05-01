@@ -83,7 +83,7 @@ var api = frameElement.api, W = api.opener, D = W.document; // api.opener 为载
 											</tr><tr>
 												<td class="r">
 													<label>
-														创建日期：
+														<s:text name="createdate"/>：
 													</label>
 												</td>
 												<td>
@@ -114,7 +114,7 @@ var api = frameElement.api, W = api.opener, D = W.document; // api.opener 为载
 											<tr>
 												<td class="r" style="height: 80">
 													<label>
-														文件说明：
+														<s:text name="filedoc"/>：
 													</label>
 												</td>
 												<td>

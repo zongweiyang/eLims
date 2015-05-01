@@ -57,7 +57,7 @@ function submitvalue(actionstr){
 }
 function submit2Conf(actionstr){
 	$('form').attr('action','<%=basePath%>'+actionstr);
-	if(confirm("您确认要提交吗？")){
+	if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 		$('form').submit();
 	}
 }
@@ -249,7 +249,7 @@ function showReport(flag){
 														<s:if test="${fn:length(labSamReportVo.reportPath)>0}">
 															<a class="zPushBtn"
 																href="javascript:void(0);"
-																onclick="if(confirm('重新生成将会重置所有样式，确认？')){showReport('1');}"><img
+																onclick="if(confirm('<s:property value="getText('regeneteatesd')"/>')){showReport('1');}"><img
 																	height="20" width="20" src="${basePath}/img/icon/add.gif" /><b><s:text name="re.generate"/></b>
 															</a>
 														</s:if>

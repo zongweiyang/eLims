@@ -174,7 +174,7 @@ html {
 													</td>
 													<td>
 														<label>
-															已拨经费：
+															<s:text name="yiboyinfei"/>：
 														</label>
 													</td>
 													<td>

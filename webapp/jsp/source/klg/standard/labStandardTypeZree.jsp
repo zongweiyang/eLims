@@ -59,7 +59,7 @@
 		function beforeRemove(treeId, treeNode) {
 			var zTree = $.fn.zTree.getZTreeObj("zTree");
 			zTree.selectNode(treeNode);
-			if(confirm("确认删除分类 " + treeNode.name + " 吗？")){
+			if(confirm('<s:property value="getText('confirmdeleclassi')"/>' + treeNode.name)){
 				$.ajax({
 					url:'${basePath}/klg/labStandardType/ajaxLabStandardType4Delete.action',
 					type:'POST',

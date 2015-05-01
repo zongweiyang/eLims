@@ -274,7 +274,7 @@
 															${labConPurMainVo.receiptno}
 														</td>
 														<td class="r" width="15%">
-															申请人：
+															<s:text name="applier"/>：
 														</td>
 														<td class="c" colspan="2" width="25%">
 															${labConPurMainVo.applicant}

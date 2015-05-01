@@ -26,7 +26,7 @@
 						                 记录总数:&nbsp;<FONT color="red"><s:property value="pageResult.pageBean.totalRows"/></FONT>&nbsp;条&nbsp;
 					           (每页<s:property value="pageResult.pageBean.pageSize"/>条)&nbsp;&nbsp;
 					                --> <s:if test="pageResult.pageBean.currentPage==1">
-					                                                 首页 &nbsp;上一页
+					                                                 <s:text name="top.index"/> &nbsp;上一页
 
 
 

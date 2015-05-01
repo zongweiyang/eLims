@@ -59,13 +59,13 @@
 										<!-- 表单型表格（显示） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>检测${funName }</span>
+												<span><s:text name="sample.check"/>${funName }</span>
 											</div>
 											<table class="FormtableCon">
 												<tr>
 													<td class="w100">
 														<label>
-															方法名称：
+															<s:text name="method.name"/>：
 														</label>
 													</td>
 													<td>
@@ -73,7 +73,7 @@
 													</td>
 													<td class="w100">
 														<label>
-															方法编号：
+															<s:text name="methodno"/>：
 														</label>
 													</td>
 													<td>
@@ -83,14 +83,14 @@
 												<tr>
 													<td>
 														<label>
-															费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用：
+															<s:text name="charge.fee"/>：
 														</label>
 													</td>
 													<td>
 														${labMethodVo.price}
 														（<s:text name="theme.yuan"/>）
 													</td>
-													<td><label>方法文件：</label></td>
+													<td><label><s:text name="methodfile"/>：</label></td>
 													<td>
 														<s:if test="${fn:length(loadList)>0}">
 															<s:iterator status="st2" value="#request.loadList" id="">
@@ -103,7 +103,7 @@
 												</tr>
 												<tr>
 													<td>
-														<label>使用仪器：</label>
+														<label><s:text name="usingapp"/>：</label>
 													</td>
 													<td colspan="3">
 														<textarea cols="60" id="appName" rows="3" name="labMethodVo.labApparaName" onclick="showApp()" ></textarea>
@@ -113,7 +113,7 @@
 												<tr>
 													<td>
 														<label>
-															内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：
+															<s:text name="contentdesd"/>：
 														</label>
 													</td>
 													<td colspan="3">

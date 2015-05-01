@@ -40,7 +40,7 @@
 			}
 			function deleteOne(id){
 				var planId = $('#id').val();
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/proficiencyPlan/deleteLabQuaProficiency.action?labQuaProficiencyVo.ids='+id+'&labQuaProficiencyVo.proficiencyPlanId='+planId);
 		      	   $('form').submit();
 			    }

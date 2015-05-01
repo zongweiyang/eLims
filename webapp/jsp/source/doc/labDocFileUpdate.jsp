@@ -36,7 +36,7 @@ html {
 	} 
 							
 	function deleteThis(id){
-		if(!confirm("确认删除文件吗？删除后不可恢复")) return false;
+		if(!confirm('<s:property value="getText('confirmnotreplse')"/>')) return false;
 		$('#fileId').html('');
 		$('#fileIcon').html('');
 
@@ -88,7 +88,7 @@ html {
 						<div class="myworkingboxttitle">
 							<h2>
 								${funName }：
-								<span>${path}&nbsp;&nbsp;[<font color="red">${labDocVo.fileName}-修改</font>]</span>
+								<span>${path}&nbsp;&nbsp;[<font color="red">${labDocVo.fileName}-<s:text name="lab.code.modify"/></font>]</span>
 							</h2>
 						</div>
 						<form action="addLabUser" method="post" name="labDocForm"
@@ -137,11 +137,11 @@ html {
 											<tr>
 												<td class="c">
 													<label>
-														上传文件
+														<s:text name="up.file"/>
 													</label>
 												</td>
 												<td>
-													<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="uploadFile('${labDocVo.id}','doc');" height="20" width="20"><img height="20" width="20" src="<%=basePath%>img/filesave.gif" /> <b>添加附件</b> </a>
+													<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="uploadFile('${labDocVo.id}','doc');" height="20" width="20"><img height="20" width="20" src="<%=basePath%>img/filesave.gif" /> <b><s:text name="msg.add.attachment"/></b> </a>
 													<div id="upfiles">
 														<s:iterator value="#request.loadList" status="st">
 															<span id="${id}">${name }<a href="javascript:;" onclick="deleteUploadFile(this,'${id }')"><img src="<%=basePath%>img/zhongzhi.gif" /> </a> </span>&nbsp;&nbsp;&nbsp;

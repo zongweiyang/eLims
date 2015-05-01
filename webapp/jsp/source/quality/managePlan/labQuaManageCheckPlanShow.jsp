@@ -47,7 +47,7 @@
 			}
 			function deleteOne(id){
 				var planId=$('#id').val();
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/managePlan/deleteLabQuaManageCheckRecord.action?labQuaManageCheckVo.ids='+id+'&labQuaManageCheckVo.quaManageCheckPlanId='+planId);
 		      	   $('form').submit();
 			    }
@@ -188,7 +188,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														计划编制人：
+																<s:text name="plancodepeo"/>：
 													</label>
 												</td>
 												<td>

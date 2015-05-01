@@ -389,7 +389,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															联系电话：
+															<s:text name="theme.phone"/>：
 														</label>
 													</td>
 													<td>
@@ -399,7 +399,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															联系邮箱：
+															<s:text name="email"/>：
 														</label>
 													</td>
 													<td>
@@ -416,7 +416,7 @@
 											<span><s:text name="itemcanyuinfo"/></span>
 											<!-- <label style="padding-left: 885px;" >
 											[&nbsp;<a style="align: right; font-color: green;"
-											href="javascript:void(0);" onclick="addRow1(this);return false;">添加一行</a>&nbsp;]
+											href="javascript:void(0);" onclick="addRow1(this);return false;"><s:text name="added.a.row"/></a>&nbsp;]
 											</label> -->
 											<label style="float: right; padding-right: 10px;"
 												onclick="$(this).parent().next().toggle();">
@@ -475,7 +475,7 @@
 											<label style="padding-left: 920px;" >
 											[&nbsp;<a style="align: right; font-color: green;"
 															href="javascript:void(0);"
-															onclick="addRow2(this);return false;">添加一行</a>&nbsp;]
+															onclick="addRow2(this);return false;"><s:text name="added.a.row"/></a>&nbsp;]
 											</label>
 											<label style="float: right; padding-right: 10px;"
 												onclick="$(this).parent().next().toggle();">

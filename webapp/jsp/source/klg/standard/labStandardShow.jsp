@@ -70,7 +70,7 @@
 											</div>
 											<table class="FormtableCon">
 												<tr>
-													<td><label>标准编号：</label></td>
+													<td><label><s:text name="stdcodes"/>：</label></td>
 													<td>
 														${labStandardVo.code}
 													</td>

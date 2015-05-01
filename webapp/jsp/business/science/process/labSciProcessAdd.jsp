@@ -174,7 +174,7 @@ html {
 												<td><input size="40" type="text" name="labSciProcessVo.hardCopy" id="hardCopy" /></td>
 											</tr> -->
 											<tr>
-												<td class="r" width="150"><label>内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：</label></td>
+												<td class="r" width="150"><label><s:text name="contentdesd"/>：</label></td>
 												<td colspan="3"><textarea  name="labSciProcessVo.contents" cols="40" rows="3" id="contents" ></textarea></td>
 											</tr>
 											<tr>

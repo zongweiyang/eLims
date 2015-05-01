@@ -19,7 +19,7 @@ html {
 				$('form').submit();
 			}
 			function deleteEntity(url){
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -30,7 +30,7 @@ html {
 					validate.tip("请至少选中一项.",$('#functionId'));
 					return ;
 				}
-				if(confirm('确认删除选中信息吗?')){
+				if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 					goToNextAction(url);
 				}
 				return ;
@@ -197,7 +197,7 @@ html {
 											<div class="Formtable" style="margin-top: 0px;">
 												<div class="Formtabletitle"
 													onclick="javascript:$(this).next().toggle();"
-													title="点击隐藏/显示">
+													title='<s:property value="getText('cliskchowhiddd')"/>'>
 													<span><s:text name="biz.progress"/></span>
 												</div>
 												<div id="contentFrame">

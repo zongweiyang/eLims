@@ -11,7 +11,7 @@
 	  	df.submit();
 	}
 	function deleteEntity(url){
-		if(confirm('确认删除选中信息吗?')){
+		if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 			goToNextAction(url);
 		}
 		return ;
@@ -32,7 +32,7 @@
 			alert('<s:property value="getText('selectdeleapp')"/>');
 			return ;
 		}else{
-			if(confirm('确认删除选中信息吗?')){
+			if(confirm('<s:property value="getText('confirmselectdel')"/>')){
 				$('form').attr('action','${basePath}'+url);
 				$('form').submit();
 			}

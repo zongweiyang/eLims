@@ -26,7 +26,7 @@ html {
 				$('form').submit();
 			}
 			function deleteEntity(obj){
-			 	if(confirm('确认要删除吗?')){
+			 	if(confirm('<s:property value="getText('fimrtodel')"/>')){
 					$(obj).parent().parent().remove();
 				}
 			}

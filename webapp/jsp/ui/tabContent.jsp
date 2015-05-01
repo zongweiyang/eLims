@@ -24,7 +24,7 @@ html {
 		<!-- 通用标题 开始 用于显示一些单据的标题 -->
 		<div class="commontitle">
 			<h2>
-				XXXXXXXXXXXXXXXX损益表
+				XXXXXXXXXXXXXXXX<s:text name="shunyibiao"/>
 			</h2>
 		</div>
 		<!-- 通用标题 结束 用于显示一些单据的标题 -->
@@ -38,25 +38,25 @@ html {
 							<tr>
 								<td>
 									<label>
-										文字或标题：
+										<s:text name="textandtitle"/>：
 										<label>
 								</td>
 								<td>
 									<label>
-										<s:text name="selected"/>框
+										<s:text name="selectbox"/>
 										<label>
 											<select>
 												<option>
-													选项一
+													<s:text name="optionone"/>
 												</option>
 												<option>
-													选项二
+													<s:text name="optiontwo"/>
 												</option>
 											</select>
 								</td>
 								<td>
 									<label>
-										每页显示
+										<s:text name="pageshow"/>
 										<label>
 											<select>
 												<option>
@@ -67,7 +67,7 @@ html {
 												</option>
 											</select>
 											<label>
-												条
+												<s:text name="page.record"/>
 												<label>
 								</td>
 								<td>
@@ -94,19 +94,19 @@ html {
 							<tr>
 								<td>
 									<label>
-										按钮类型演示：
+										<s:text name="buttonstdemo"/>：
 										<label>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/bianji.gif" /><b>通用</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/bianji.gif" /><b><s:text name="toyong"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinjian.gif" /><b>新建</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinjian.gif" /><b><s:text name="newbuild"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shanchu.gif" /><b>删除</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shanchu.gif" /><b><s:text name="lab.code.del"/></b>
 									</a>
 								</td>
 								<td>
@@ -114,7 +114,7 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/bianji.gif" /><b>修改</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/bianji.gif" /><b><s:text name="lab.code.modify"/></b>
 									</a>
 								</td>
 							</tr>
@@ -134,7 +134,7 @@ html {
 							<tr>
 								<td>
 									<label>
-										按钮类型演示：
+										<s:text name="buttonstdemo"/>：
 										<label>
 								</td>
 								<td>
@@ -142,11 +142,11 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/tongyi.gif" /><b>同意</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/tongyi.gif" /><b><s:text name="agereend"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fanhui.gif" /><b>返回列表</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fanhui.gif" /><b><s:text name="lab.back.list"/></b>
 									</a>
 								</td>
 								<td>
@@ -154,7 +154,7 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/filesavenew.gif" /><b>保存并新增</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/filesavenew.gif" /><b><s:text name="saveandnews"/></b>
 									</a>
 								</td>
 							</tr>
@@ -174,19 +174,19 @@ html {
 							<tr>
 								<td>
 									<label>
-										按钮类型演示：
+										<s:text name="buttonstdemo"/>：
 										<label>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shuaxin.gif" /><b>刷新</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shuaxin.gif" /><b><s:text name="msg.refresh"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhuanyi.gif" /><b>转移</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhuanyi.gif" /><b><s:text name="transeredse"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fuzhi.gif" /><b>复制</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fuzhi.gif" /><b><s:text name="copy"/></b>
 									</a>
 								</td>
 								<td>
@@ -198,11 +198,11 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhuanyi.gif" /><b>导出</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhuanyi.gif" /><b><s:text name="export"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhongzhi.gif" /><b>终止</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/zhongzhi.gif" /><b><s:text name="deadednd"/></b>
 									</a>
 								</td>
 							</tr>
@@ -222,7 +222,7 @@ html {
 							<tr>
 								<td>
 									<label>
-										按钮类型演示：
+										<s:text name="buttonstdemo"/>：
 										<label>
 								</td>
 								<td>
@@ -262,7 +262,7 @@ html {
 							<tr>
 								<td>
 									<label>
-										按钮类型演示：
+										<s:text name="buttonstdemo"/>：
 										<label>
 								</td>
 								<td>
@@ -274,11 +274,11 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/weiduyoujian.gif" /><b>未读消息</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/weiduyoujian.gif" /><b><s:text name="msg.unread"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/yiduxinxi.gif" /><b>已读消息</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/yiduxinxi.gif" /><b><s:text name="msg.readed"/></b>
 									</a>
 								</td>
 							</tr>
@@ -296,7 +296,7 @@ html {
 			<table class="FormtableCon">
 				<tr>
 					<td>
-						内容内容内容内容内容内容内容内容内容内容
+				<s:text name="contentdesd"/>：内容内容内容内容内容内容内容内容内容
 					</td>
 				</tr>
 			</table>
@@ -336,10 +336,10 @@ html {
 						<s:text name="config.name"/><s:text name="config.name"/>名称名称名称名称名称名称名称名称
 					</td>
 					<td>
-						编码编码编码编码编码编码编码编码编码编码
+						<s:text name="codessafd"/>编码编码编码编码编码编码编码编码编码
 					</td>
 					<td class="c">
-						修改&nbsp;|&nbsp;删除&nbsp;|&nbsp;代码维护
+						<s:text name="modifdelmain"/>
 					</td>
 				</tr>
 				<tr>
@@ -353,10 +353,10 @@ html {
 						<s:text name="config.name"/><s:text name="config.name"/>名称名称名称名称名称名称名称名称
 					</td>
 					<td>
-						编码编码编码编码编码编码编码编码编码编码
+						<s:text name="codessafd"/>编码编码编码编码编码编码编码编码编码
 					</td>
 					<td class="c">
-						修改&nbsp;|&nbsp;删除&nbsp;|&nbsp;代码维护
+						<s:text name="modifdelmain"/>
 					</td>
 				</tr>
 			</tbody>
@@ -380,7 +380,7 @@ html {
 					</td>
 					<td>
 						<label>
-							编号：
+							<s:text name="code.number"/>：
 						</label>
 					</td>
 					<td>
@@ -414,16 +414,16 @@ html {
 					</td>
 					<td>
 						<label>
-							类型：
+							<s:text name="config.type"/>：
 						</label>
 					</td>
 					<td>
 						<select>
 							<option>
-								选项一
+								<s:text name="optionone"/>
 							</option>
 							<option>
-								选项二
+								<s:text name="optiontwo"/>
 							</option>
 						</select>
 					</td>
@@ -458,7 +458,7 @@ html {
 					</td>
 					<td>
 						<label>
-							编号：
+							<s:text name="code.number"/>：
 						</label>
 					</td>
 					<td>
@@ -483,11 +483,11 @@ html {
 				</td>
 				<td>
 					<label>
-						类型：
+						<s:text name="config.type"/>：
 					</label>
 				</td>
 				<td>
-					类型一
+					<s:text name="config.type"/>一
 				</td>
 				<td>
 					<label>

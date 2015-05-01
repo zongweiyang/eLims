@@ -81,7 +81,7 @@ html {
 				var selectCheck='0';
 		  		function submitvalue(actionstr){
 		  			if(orgId!=''){
-		  				if(confirm('确认提交吗')){
+		  				if(confirm('<s:property value="getText('confirmconmmit')"/>')){
 			  	 			$('form').attr('action',actionstr);
 							$('form').submit();
 						}

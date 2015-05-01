@@ -31,7 +31,7 @@
 						}
 					},
 					error:function(){
-						alert('<s:property value="getText('network.error')"/>');
+						alert('<s:property value="getText('theme.net.fail')"/>');
 					}
 				});
 			}
@@ -102,7 +102,7 @@
                                         </div>		
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
-											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor:pointer;"  title="点击此处，隐藏/显示该信息">
+											<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor:pointer;"  title='<s:property value="getText('lab.click.here')"/>'>
 												<span>${funName }[<font color="blue">${labItemVo.name}</font>]</span>
 											</div>
 											<table class="FormtableCon">
@@ -117,12 +117,12 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>所用仪器：</label></td>
+													<td><label><s:text name="usingappsed"/>：</label></td>
 													<td>
 														<input name="labItemVo.appName" id="appName" type="text" size="40" value="${labItemVo.appName}" onclick="selectApp();" />
 														<input type="hidden" name="labItemVo.appId" value="${labItemVo.appId }" id="appId" />
 													</td>
-													<td><label>标准分值：</label></td>
+													<td><label><s:text name="biaozhunfen"/>：</label></td>
 													<td>
 														<input  name="labItemVo.demo1" id="demo1" type="text" size="40" onblur="checkDemo1();" value="${labItemVo.demo1}" />
 													</td>
@@ -138,9 +138,9 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>收费方式：</label></td>
+													<td><label><s:text name="feesutyle"/>：</label></td>
 													<td>
-														<s:radio list="#{'0':getText('bytemi'),'1':getText('bynumber')}" value="'0'" name="labItemVo.priceType" theme="simple"></s:radio>
+														<s:radio list="#{'0':getText('bytimesdf'),'1':getText('bynusmbere')}" value="'0'" name="labItemVo.priceType" theme="simple"></s:radio>
 													</td>
 												</tr>
 												<tr>

@@ -358,7 +358,7 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td>
-													<input name="labUserVo.name" onmouseover="this.title='长度不能超过8位'" value="${labUserVo.name}" valType="required,strLength" max="8" msg="用户名不能为空" strLength-msg="长度不能超过8位" id="username" type="text" size="20" maxlength="8" />
+													<input name="labUserVo.name" onmouseover="this.title='长度不能超过8位'" value="${labUserVo.name}" valType="required,strLength" max="8" msg='<s:property value="getText('usennept')"/>' strLength-msg="长度不能超过8位" id="username" type="text" size="20" maxlength="8" />
 												</td>
 												<td>
 													<label>

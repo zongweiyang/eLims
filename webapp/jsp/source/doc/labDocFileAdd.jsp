@@ -125,7 +125,7 @@ html {
 											<tr>
 												<td class="c">
 													<label>
-														关键字
+														<s:text name="key.word"/>
 													</label>
 												</td>
 												<td>
@@ -135,7 +135,7 @@ html {
 											<tr>
 												<td class="c">
 													<label>
-														文件类别
+														<s:text name="filetpesfs"/>
 													</label>
 												</td>
 												<td>
@@ -145,7 +145,7 @@ html {
 											<tr>
 												<td class="c">
 													<label>
-														摘要
+														<s:text name="abstract"/>
 													</label>
 												</td>
 												<td colspan="3">
@@ -155,11 +155,11 @@ html {
 											<tr>
 												<td class="c">
 													<label>
-														上传文件
+														<s:text name="up.file"/>
 													</label>
 												</td>
 												<td>
-													<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="uploadFile('${labDocVo.uuid }','doc');" height="20" width="20"><img height="20" width="20" src="<%=basePath%>img/filesave.gif" /><b>添加附件</b> </a>
+													<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="uploadFile('${labDocVo.uuid }','doc');" height="20" width="20"><img height="20" width="20" src="<%=basePath%>img/filesave.gif" /><b><s:text name="msg.add.attachment"/></b> </a>
 													<div id="upfiles"></div>
 												</td>
 											</tr>

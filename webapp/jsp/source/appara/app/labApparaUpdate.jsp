@@ -85,7 +85,7 @@
 		 });
 	}//多附件labUpLoads.jsp height:300,
 	function deleteThis(obj,id){
-		if(!confirm("确认删除文件吗？")) return false;
+		if(!confirm('<s:property value="getText('confirmnotreplse')"/>')) return false;
 		var url = '<%=basePath%>appara/delLabAppFile.action'; 
 		$.ajax({
 				url:url,
@@ -100,7 +100,7 @@
 					}
 				},
 				error:function(){
-					alert('<s:property value="getText('network.error')"/>');
+					alert('<s:property value="getText('theme.net.fail')"/>');
 				}
 			});	
 	}
@@ -311,7 +311,7 @@
 														</label>
 													</td>
 													<td>
-														<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':getText('common'),'1':getText('report.repair'),'2':getText('stoped'),'7':getText('dropped')}" value="%{labApparaVo.status}" />
+														<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':'正常','1':'报修','2':'停用','7':'报废'}" value="%{labApparaVo.status}" />
 														&nbsp;&nbsp;&nbsp;
 														<span style="color: red">*</span>
 													</td>
@@ -333,7 +333,7 @@
 													</td>
 													<td>
 														<input name="labApparaVo.verPeriod" value="${labApparaVo.verPeriod}" id="verificationPeriod" type="text" size="20" onchange="isNoNatureNum(this);" />
-														<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':getText('month'),'天':getText('dayday')}" theme="simple" />
+														<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':'月','天':'天'}" theme="simple" />
 													</td>
 													<td>
 														<label>

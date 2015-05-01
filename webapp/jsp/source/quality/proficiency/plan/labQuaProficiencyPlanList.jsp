@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/proficiencyPlan/deleteLabQuaProficiencyPlan.action?labQuaProficiencyPlanVo.ids='+id);
 		      	   $('form').submit();
 			    }
@@ -206,7 +206,7 @@
 																	<span style="color: red;">正在处理</span>
 																</s:if>
 																<s:elseif test="${accStatus == 2}">
-																	<span style="color: red;">已处理</span>
+																	<span style="color: red;"><s:text name="sam.dealed"/></span>
 																</s:elseif>
 																<s:else>
 																	<span style="color: red;">未转事故</span>

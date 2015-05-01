@@ -274,7 +274,7 @@ html {
 																	<s:iterator value="#st.listTitle">
 																		<th>
 																			<span style="color: red;">${demo1}</span>
-																			<span style="color: blue; cursor: hand;" title="检验人">（${demo2}）</span>
+																			<span style="color: blue; cursor: hand;" title='<s:property value="getText('tester')"/>'>（${demo2}）</span>
 																		</th>
 																	</s:iterator>
 																</s:iterator>

@@ -73,7 +73,7 @@ function ajax4AddFolder(pid){
 			cache: false,
 			success: function(data) {
 				if(data=='1'){
-					if(confirm("您要删除的文件已经被其他人申请,删除该文件后所有申请信息也被删除！")){
+					if(confirm('<s:property value="getText('deletfileisdelet')"/>')){
 					window.location.href='<%=basePath%>doc/labDoc/deleteLabDocFile.action?labDocVo.id='+id+'&labDocVo.pid='+pid;
 					}
 				}else{
@@ -104,7 +104,7 @@ function ajax4AddFolder(pid){
 	 });
     }
     function deleteFolder(id,pid){
-		if(confirm("确认删除该文件夹吗？")){
+		if(confirm('<s:property value="getText('confirmtodelfolder')"/>')){
 		window.location.href='${basePath}doc/labDoc/deleteLabDocFolder.action?labDocVo.id='+id+'&labDocVo.pid='+pid;
 		}
 	}
@@ -217,13 +217,13 @@ function ajax4AddFolder(pid){
 														<s:text name="file.name"/>
 													</th>
 													<th>
-														类型
+														<s:text name="config.type"/>
 													</th>
 													<th>
-														创建日期
+														<s:text name="createdate"/>
 													</th>
 													<th>
-														文件说明
+														<s:text name="filedoc"/>
 													</th>
 													<th>
 														<s:text name="lab.code.ops"/>

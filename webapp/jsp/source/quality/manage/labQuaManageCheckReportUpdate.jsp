@@ -175,7 +175,7 @@
 												</td>
 												<td class="r" width="300">
 													<label>
-														编制日期：
+														<s:text name="codedates"/>：
 													</label>
 												</td>
 												<td>
@@ -244,7 +244,7 @@
 														<s:if test="${fn:length(labQuaManageCheckVo.reportPath)>0}">
 															<a class="zPushBtn"
 																href="javascript:void(0);"
-																onclick="if(confirm('重新生成将会重置所有样式，确认？')){showReport('1');}"><img
+																onclick="if(confirm('<s:property value="getText('regeneteatesd')"/>')){showReport('1');}"><img
 																	height="20" width="20" src="${basePath}/img/dayin.gif" /><b><s:text name="re.generate"/></b>
 															</a>
 														</s:if>

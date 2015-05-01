@@ -117,8 +117,8 @@ html {
 												<td>${labSciProcessVo.hardCopy }</td>
 											</tr> -->
 											<tr>
-												<td class="r" width="150"><label>内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：</label></td>
-												<td colspan="3"><textarea readonly="readonly" valType="required" msg="内容不能为空"  name="labSciProcessVo.contents" cols="40" rows="3" id="contents" >${labSciProcessVo.contents }</textarea></td>
+												<td class="r" width="150"><label><s:text name="contentdesd"/>：</label></td>
+												<td colspan="3"><textarea readonly="readonly" valType="required" msg='<s:property value="getText('connotempty')"/>'  name="labSciProcessVo.contents" cols="40" rows="3" id="contents" >${labSciProcessVo.contents }</textarea></td>
 											</tr>
 											<tr>
 												<td class="r" width="150"><label><s:text name="lab.remark"/>：</label></td>

@@ -14,7 +14,7 @@ function submitthis(action)
 	document.processForm.submit();
 }
  function deleteOne(url){
- 	if(confirm("确认删除？")){
+ 	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){
  		document.processForm.action='${basePath}'+url;
 	    document.processForm.submit();
  	}
@@ -84,7 +84,7 @@ function submitthis(action)
 																</td>
 																<td>
 																	<label>
-																		编码：
+																		<s:text name="codessafd"/>：
 																	</label>
 																</td>
 																<td>
@@ -135,13 +135,13 @@ function submitthis(action)
 														<s:text name="config.name"/>
 													</th>
 													<th class="c" width="150" property="code">
-														编码
+														<s:text name="codessafd"/>
 													</th>
 													<th class="c" width="90" property="userName">
 														创建者
 													</th>
 													<th class="c" width="100" property="createDate">
-														创建日期
+														<s:text name="createdate"/>
 													</th>
 													<th class="c" >
 														<s:text name="remark"/>
@@ -185,7 +185,7 @@ function submitthis(action)
 																	启用中
 																</s:if>
 																<s:elseif test="${status=='2'}">
-																	已关闭
+																	<s:text name="closed"/>
 																</s:elseif>
 																<s:else>
 																	建模中

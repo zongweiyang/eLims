@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/initPlan/deleteLabQuaInitAuditPlan.action?labQuaInitAuditPlanVo.ids='+id);
 		      	   $('form').submit();
 			    }

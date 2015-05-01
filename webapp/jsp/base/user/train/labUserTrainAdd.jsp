@@ -221,7 +221,7 @@ min-width: 180px;
 												</label>
 											</td>
 											<td colspan="3">
-												<textarea name="labUserTrainVo.content" cols="60" rows="3" id="content"  valType="required"  msg="内容不能为空">${labUserTrainVo.content}</textarea>
+												<textarea name="labUserTrainVo.content" cols="60" rows="3" id="content"  valType="required"  msg='<s:property value="getText('connotempty')"/>'>${labUserTrainVo.content}</textarea>
 											</td>
 										</tr>
 										<tr>

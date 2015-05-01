@@ -38,7 +38,7 @@
 										<div class="myworkingboxttitle">
 											<h2>
 												${funName }：
-												<span>仪器使用记录列表</span>
+												<span><s:text name="appusinglist"/></span>
 											</h2>
 										</div>
 										<div class="FUNCIONBARNEW">
@@ -74,7 +74,7 @@
 																	<l:a uri="appara/useing/preAddLabAppUse.action" value="lab.code.add" />
 																</td>
 																<td>
-																	<a id="BtnPreview" class="zPushBtn" href="#" onclick="add();return false;"><img height="20" width="20" src="<%=basePath%>img/add.gif" /><b>预约</b> </a>
+																	<a id="BtnPreview" class="zPushBtn" href="#" onclick="add();return false;"><img height="20" width="20" src="<%=basePath%>img/add.gif" /><b><s:text name="yuyue"/></b> </a>
 																</td>
 															</tr>
 														</table>

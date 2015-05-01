@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/auditRecord/deleteLabQuaAuditRecord.action?labQuaAuditRecordVo.ids='+id);
 		      	   $('form').submit();
 			    }
@@ -93,7 +93,7 @@
 																	</label>
 																</td>
 																<td>
-																<s:select theme="simple" list="#{'':getText('alldata'),'0':getText('isartich'),'1':getText('unarchtided')}"  name="labQuaAuditRecordVo.isFile"></s:select>
+																<s:select theme="simple" list="#{'':'--全部--','0':'已存档','1':'未存档'}"  name="labQuaAuditRecordVo.isFile"></s:select>
 																</td>
 																<td>
 																	<label>
@@ -149,10 +149,10 @@
 													内审组长
 												</th>
 												<th property="writeMember">
-													编制人
+													<s:text name="coderepeople"/>
 												</th>
 												<th property="writeTime">
-													编制时间
+													<s:text name="codetimes"/>
 												</th>
 												<th property="isFile">
 													<s:text name="lab.yes"/>否存档
@@ -195,7 +195,7 @@
 																	<font color="red">未存档</font>
 																</s:if>
 																<s:if test="${isFile == 0 }">
-																	<font color="red">已存档</font>
+																	<font color="red"><s:text name="aucechied"/></font>
 																</s:if>
 															</td>
 															<td class="c">

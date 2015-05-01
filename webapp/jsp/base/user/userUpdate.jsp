@@ -297,7 +297,7 @@ function submitvalue(actionstr){
 															<s:text name="theme.role"/>：
 														</td>
 														<td>
-															<input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList[${st.index}].roleNames" valType="required" msg="角色未能为空" id="roleName${st.index}" value="${roleNames}" />
+															<input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList[${st.index}].roleNames" valType="required" msg='<s:property value="getText('rolenotemp')"/>' id="roleName${st.index}" value="${roleNames}" />
 															<input type="hidden" name="labUserVo.userOrgList[${st.index}].roleIds" id="roleId${st.index}" value="${roleIds}" />
 															 
 															<a href="javascript:;" onclick="ajax2RoleList('${st.index}')" name="xuanze"><s:text name="selected"></s:text></a>
@@ -320,7 +320,7 @@ function submitvalue(actionstr){
 														<s:text name="theme.role"/>：
 													</td>
 													<td>
-														<input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList[0].roleNames" valType="required" msg="角色未能为空" id="roleName0" value="" />
+														<input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList[0].roleNames" valType="required" msg='<s:property value="getText('rolenotemp')"/>' id="roleName0" value="" />
 														<input type="hidden" name="labUserVo.userOrgList[0].roleIds" id="roleId0" value="" />
 														<a href="javascript:;" onclick="ajax2RoleList('0')" name="xuanze"><s:text name="selected"/></a>
 													</td>

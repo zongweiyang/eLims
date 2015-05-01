@@ -147,7 +147,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														计划编制人：
+																<s:text name="plancodepeo"/>：
 													</label>
 												</td>
 												<td>

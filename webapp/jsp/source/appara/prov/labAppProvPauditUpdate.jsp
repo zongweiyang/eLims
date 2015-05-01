@@ -90,7 +90,7 @@
 								</table>
 							</div>
 							<div class="Formtable">
-								<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title="点击隐藏/显示">
+								<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title='<s:property value="getText('cliskchowhiddd')"/>'>
 									<span><s:text name="app.stock.rec"/></span>
 								</div>
 								<table id="tableId" class="FormtableCon">

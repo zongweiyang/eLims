@@ -70,7 +70,7 @@ html {
 					<table class="FormtableCon">
 						<tr>
 							<td>
-								<label>请选择Excel文件：</label>
+								<label><s:text name="sleectexcelfile"/>：</label>
 							</td>
 							<td>
 								<input type="file" name="upload" id="file" valType="suffix" suffix=".xlsx,.xls" msg="请选择Excel格式文件"   />

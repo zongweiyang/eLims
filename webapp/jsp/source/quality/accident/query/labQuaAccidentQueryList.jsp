@@ -18,7 +18,7 @@
 				$('#form').submit();
 			}
 			function deleteOne(id){
-			   	if(confirm('确定要删除吗?')){	 
+			   	if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			       $('form').attr('action','<%=basePath%>quality/accident/deleteLabQuaAccident.action?labQuaAccidentVo.ids='+id);
 		      	   $('form').submit();
 			    }
@@ -85,7 +85,7 @@
 																	<select name="labQuaAccidentVo.accStatus">
 																		<option <s:if test="${labQuaAccidentVo.accStatus == ''}">selected="selected"</s:if> value="" >--全部--</option>
 																		<option <s:if test="${labQuaAccidentVo.accStatus == '0,1'}">selected="selected"</s:if> value="0,1">未处理</option>
-																		<option <s:if test="${labQuaAccidentVo.accStatus == '2'}">selected="selected"</s:if> value="2">已处理</option>
+																		<option <s:if test="${labQuaAccidentVo.accStatus == '2'}">selected="selected"</s:if> value="2"><s:text name="sam.dealed"/></option>
 																	</select>
 																</td>
 																<td>
@@ -165,7 +165,7 @@
 															</td>
 															<td class="c">
 																<s:if test="${accStatus == '2' }">
-																	<label style="color: red;">已处理</label>
+																	<label style="color: red;"><s:text name="sam.dealed"/></label>
 																</s:if>
 																<s:else>
 																	<label style="color: red;">未处理</label>

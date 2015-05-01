@@ -141,13 +141,13 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>检测${funName }</span>
+												<span><s:text name="sample.check"/>${funName }</span>
 											</div>
 											<table class="FormtableCon">
 												<tr>
 													<td>
 														<label>
-															方法名称：
+															<s:text name="method.name"/>：
 														</label>
 													</td>
 													<td>
@@ -155,7 +155,7 @@
 													</td>
 													<td>
 														<label>
-															方法编号：
+															<s:text name="methodno"/>：
 														</label>
 													</td>
 													<td>
@@ -165,14 +165,14 @@
 												<tr>
 													<td>
 														<label>
-															费&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;用：
+															<s:text name="charge.fee"/>：
 														</label>
 													</td>
 													<td>
 														<input valType="number" name="labMethodVo.price" id="price" type="text" size="30" value="${labMethodVo.price}" />
 														（<s:text name="theme.yuan"/>）
 													</td>
-													<td><label>方法文件：</label></td>
+													<td><label><s:text name="methodfile"/>：</label></td>
 													<td colspan="">
 														 <a id="BtnEdit" class="zPushBtn"
 															href="javascript:void(0);"
@@ -193,7 +193,7 @@
 												</tr>
 												<tr>
 													<td>
-														<label>使用仪器：</label>
+														<label><s:text name="usingapp"/>：</label>
 													</td>
 													<td colspan="3">
 														<textarea cols="60" id="appName" rows="3" name="labMethodVo.labApparaName" onclick="showApp()" >${labMethodVo.labApparaName }</textarea>
@@ -203,7 +203,7 @@
 												<tr>
 													<td>
 														<label>
-															内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：
+															<s:text name="contentdesd"/>：
 														</label>
 													</td>
 													<td colspan="3">

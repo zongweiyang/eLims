@@ -366,7 +366,7 @@ html {
 								</div>
 								<div class="Formtable">
 									<div class="Formtabletitle">
-										<span>检测内容</span>
+												<s:text name="checking.content"/>
 										<label style="float: right; padding-right: 10px;" onclick="$(this).parent().next().toggle();">
 											[&nbsp;
 											<font color="blue"><s:text name="open.close"/></font>&nbsp;]

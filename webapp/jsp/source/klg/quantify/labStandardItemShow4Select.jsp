@@ -54,7 +54,7 @@ html {
 																	
 																</td>
 																<td style="vertical-align: middle;">
-																	<font color="red">一次输入多个关键字，请用"，"进行分隔</font>
+																	<font color="red"><s:text name="duhaofenge"/></font>
 																</td>
 															</tr>
 														</table>
@@ -76,13 +76,13 @@ html {
 													<s:text name="theme.depart"/>
 												</th>
 												<th property="demo1">
-													指标
+													<s:text name="indexnumber"/>
 												</th>
 												<th property="demo2">
-													工时
+													<s:text name="unithoure"/>
 												</th>
 												<th property="price">
-													价格
+													<s:text name="price.number"/>
 												</th>
 											</tr>
 											<s:if test="#request.labItemVoList!=null">

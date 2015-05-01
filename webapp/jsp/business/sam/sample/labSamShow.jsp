@@ -84,7 +84,7 @@ html {
 											</table>
 										</div>
 										<div class="Formtable">
-										<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title="点击此处，隐藏/显示该信息">
+										<div class="Formtabletitle" onclick="$(this).next().toggle()" style="cursor: pointer;" title='<s:property value="getText('lab.click.here')"/>'>
 												<span><s:text name="base.info"/></span>
 											</div>
 											<table class="FormtableCon">

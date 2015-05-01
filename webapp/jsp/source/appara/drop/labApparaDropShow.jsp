@@ -83,7 +83,7 @@
 											</table>
 										</div>
 										<div class="Formtable">
-											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title="点击隐藏/显示">
+											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title='<s:property value="getText('cliskchowhiddd')"/>'>
 												<span><s:text name="droped.list"/></span>
 											</div>
 											<table id="tableId" class="FormtableCon">
@@ -194,7 +194,7 @@
 											</table>
 										</div>
 										<div class="Formtable" style="margin-top: 0px;">
-											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title="点击隐藏/显示">
+											<div class="Formtabletitle" onclick="javascript:$(this).next().toggle();" title='<s:property value="getText('cliskchowhiddd')"/>'>
 												<span><s:text name="biz.progress"/></span>
 											</div>
 											<div id="contentFrame">

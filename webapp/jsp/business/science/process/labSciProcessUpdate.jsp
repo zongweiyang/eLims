@@ -276,13 +276,13 @@ html {
 												&nbsp;&nbsp;
 												<l:a href="#"
 													uri="science/labSciProcess/updateLabSciProcess.action?labSciProcessVo.auditResult=0"
-													value="generateconten" />
+													value="生成检测内容" />
 											</td>
 										</tr>
 										<tr>
 											<td class="r" width="150">
 												<label>
-													内&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;容：
+													<s:text name="contentdesd"/>：
 												</label>
 											</td>
 											<td colspan="3">
@@ -329,7 +329,7 @@ html {
 								<s:if test="${fn:length(sampList) > 0 }">
 									<div class="Formtable">
 										<div class="Formtabletitle">
-											<span>检测内容</span>
+													<s:text name="checking.content"/>
 											<label style="float: right; padding-right: 10px;"
 												onclick="$(this).parent().next().toggle();">
 												[&nbsp;
@@ -342,10 +342,10 @@ html {
 												<thead>
 													<tr>
 														<th width="100">
-															批内编号
+															<s:text name="batch.no"/>
 														</th>
 														<th width="100">
-															原编号
+															<s:text name="origin.number"/>
 														</th>
 														<th width="190">
 															样品名称

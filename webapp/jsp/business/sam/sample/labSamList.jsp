@@ -293,7 +293,7 @@ html {
 															</td>
 															<td class="c">
 																	<l:a href="javascript:;" uri="sam/labSam/preUpdateLabSam.action?labSamMainVo.id=${id}" value="lab.code.modify" />
-																	<l:a href="javascript:;" uri="sam/labSam/deleteLabSam.action?labSamMainVo.ids=${id}" onclick="javascript:if(confirm('确定要删除吗?')){nextUrl('${basePath}sam/labSam/deleteLabSam.action?labSamMainVo.ids=${id}');}return false;" value="config.del" />
+																	<l:a href="javascript:;" uri="sam/labSam/deleteLabSam.action?labSamMainVo.ids=${id}" onclick="javascript:if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){nextUrl('${basePath}sam/labSam/deleteLabSam.action?labSamMainVo.ids=${id}');}return false;" value="config.del" />
 															</td>
 														</tr>
 													</s:iterator>

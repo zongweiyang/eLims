@@ -98,7 +98,7 @@ function SetCwinHeight(){
 										<div class="TabTableNAV">
 											<ul>
 												<li id="li01" class="currenttab">
-													<a href="${basePath}/jsp/ui/tabContent.jsp" ; target="userInfoFrame" onclick="shadowdiv('01');"><span>损益表</span>
+													<a href="${basePath}/jsp/ui/tabContent.jsp" ; target="userInfoFrame" onclick="shadowdiv('01');"><span><s:text name="shunyibiao"/></span>
 													</a>
 												</li>
 												<li id="li02" class="">

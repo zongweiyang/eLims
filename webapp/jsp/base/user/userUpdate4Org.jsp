@@ -96,7 +96,7 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td class="w300">
-													<input name="labUserVo.name" valType="required,strLength" max="32" msg="用户名不能为空" strLength-msg="用户名长度不能超过32位" value="${labUserVo.name}" id="username" type="text" size="20" readonly="readonly" style="background-color: #e9e9e9;" />
+													<input name="labUserVo.name" valType="required,strLength" max="32" msg='<s:property value="getText('usennept')"/>' strLength-msg="用户名长度不能超过32位" value="${labUserVo.name}" id="username" type="text" size="20" readonly="readonly" style="background-color: #e9e9e9;" />
 												</td>
 												<td class="w100">
 													<label>

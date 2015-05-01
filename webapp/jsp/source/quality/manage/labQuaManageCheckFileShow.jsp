@@ -187,7 +187,7 @@
 												</div>
 												<div id="contentFrame">
 													<span style="background-color: #ccc;"><font
-														color="red">【请使用IE8浏览器查看流程图】</font> </span>
+														color="red"><s:text name="use.ie8"/></font> </span>
 													<iframe name="content" id="content"
 														src="<%=basePath%>/workflow/process/showLabWfProgressIns.action?labWfProcessInsVo.busId=${labQuaManageCheckVo.id}"
 														onload="document.all.content.style.height=document.content.document.body.clientHeight"

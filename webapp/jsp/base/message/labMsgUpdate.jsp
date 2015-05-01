@@ -180,7 +180,7 @@ html {
 											<td>
 												<textarea rows="2" cols="90" id="receiverName" name="labMsgMainVo.receiverNames" readonly="readonly">${labMsgMainVo.receiverNames}</textarea>
 												<input type="hidden" id="receiverId" name="labMsgMainVo.receiverIds" value="${labMsgMainVo.receiverIds}" />
-												<a href="javascript:;" onclick="ajax2UserList()" name="xuanze" title="请选择" class="thickbox"><s:text name="msg.add.receiver"></s:text></a>
+												<a href="javascript:;" onclick="ajax2UserList()" name="xuanze" title='<s:property value="getText('selected.pls')"/>' class="thickbox"><s:text name="msg.add.receiver"></s:text></a>
 												<font color="red">*</font>
 											</td>
 										</tr>

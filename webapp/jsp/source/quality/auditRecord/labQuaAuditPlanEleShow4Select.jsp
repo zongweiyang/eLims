@@ -89,7 +89,7 @@
 																		name="labQuaAuditPlanEleVo.orgIdSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name" ></s:select>
 																</td>
-					                      						<td><label>编制人：</label></td>
+					                      						<td><label>		<s:text name="coderepeople"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaAuditPlanEleVo.createPeople" value="${labQuaAuditPlanEleVo.createPeople}" />
 					                      						</td>
@@ -127,7 +127,7 @@
 													审核依据
 												</th>
 												<th property="createPeople">
-													编制人
+													<s:text name="coderepeople"/>
 												</th>
 												<th property="auditTime">
 													批准日期

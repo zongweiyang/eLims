@@ -210,7 +210,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														编制人员：
+														<s:text name="coderepeople"/>员：
 													</label>
 												</td>
 												<td>
@@ -220,7 +220,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														编制日期：
+														<s:text name="codedates"/>：
 													</label>
 												</td>
 												<td>

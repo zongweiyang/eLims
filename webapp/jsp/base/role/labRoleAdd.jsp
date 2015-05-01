@@ -109,7 +109,7 @@ html {
 											</label>
 										</td>
 										<td>
-											<input name="labRoleVo.name" id="name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg="角色名称不能为空" type="text" size="20" onblur="checkRolename()" />
+											<input name="labRoleVo.name" id="name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg='<s:property value="getText('rolenameempty')"/>' type="text" size="20" onblur="checkRolename()" />
 										</td>
 										<td>
 											<label>

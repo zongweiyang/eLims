@@ -101,7 +101,7 @@
                                                    			<tr>
                                                       			<td>
                                                      				<a id="BtnPreview" class="zPushBtn" href="#" onclick="submitvalue();" >
-                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b>确定选择</b></a>
+                                                     				<img height="20" width="20" src="<%=basePath%>img/xinjian.gif"/><b><s:text name="confirmseelet"/></b></a>
                                                      			</td>
                                                     		</tr>
                                                 		</table>
@@ -121,7 +121,7 @@
 													<s:text name="cust.name"/>
 												</th>
 												<th property="level">
-													联系人
+													<s:text name="org.people"/>
 												</th>
 												<th property="level">
 													<s:text name="custtel"/>

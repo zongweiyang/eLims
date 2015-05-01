@@ -71,11 +71,11 @@
 													</td>
 												</tr>
 												<tr>
-													<td class="r"><label>所用仪器：</label></td>
+													<td class="r"><label><s:text name="usingappsed"/>：</label></td>
 													<td class="l">
 														${labItemVo.appName}
 													</td>
-													<td class="r"><label>标准分值：</label></td>
+													<td class="r"><label><s:text name="biaozhunfen"/>：</label></td>
 													<td class="l">
 														${labItemVo.demo1}
 													</td>
@@ -85,13 +85,13 @@
 													<td class="l">
 														${labItemVo.demo2}
 													</td>
-													<td class="r"><label>价格：</label></td>
+													<td class="r"><label><s:text name="price.number"/>：</label></td>
 													<td class="l">
 														${labItemVo.demo5}
 													</td>
 												</tr>
 												<tr>
-													<td><label>收费方式：</label></td>
+													<td><label><s:text name="feesutyle"/>：</label></td>
 													<td>
 														<s:radio disabled="true" list="#{'0':getText('bytemi'),'1':getText('bynumber')}" value="${labItemVo.priceType}" name="labItemVo.priceType" theme="simple"></s:radio>
 													</td>

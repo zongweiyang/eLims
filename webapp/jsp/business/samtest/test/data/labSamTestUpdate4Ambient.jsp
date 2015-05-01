@@ -130,7 +130,7 @@ html {
 															</td>
 															<td>
 																<input type="text" readonly="readonly" value="${labAmbientInfoVo.labAmbientUnit}"  id="unit" />
-																<input type="hidden" readonly="readonly" valType="required" msg="请选择参数" value="${labAmbientInfoVo.labAmbientId}" name="labAmbientInfoVo.labAmbientId" id="labAmbientId" />
+																<input type="hidden" readonly="readonly" valType="required" msg='<s:property value="getText('selparm')"/>' value="${labAmbientInfoVo.labAmbientId}" name="labAmbientInfoVo.labAmbientId" id="labAmbientId" />
 															</td>
 														</tr>
 														<tr>

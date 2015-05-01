@@ -7,7 +7,7 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 		<script>
 		function deleteOne(id){
-			if(confirm('确定作废吗?')){
+			if(confirm('<s:property value="getText('confirmderoped')"/>')){
 				submitvalue('samreport/labSamReport/updateLabSamReport4Del.action?labSamReportVo.ids='+id);
 			}	
 		}

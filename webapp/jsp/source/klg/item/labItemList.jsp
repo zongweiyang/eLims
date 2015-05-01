@@ -24,7 +24,7 @@ html {
 					validate.tip('请选择要删除的条目.',$('labItemVo.ids'));
 					return ;
 				}
-				if(confirm('与该项目的标准量化信息会删除，确定删除？')){
+				if(confirm('<s:property value="getText('infodeleconfirm')"/>')){
 					goAction(url);
 				}
 				return ;
@@ -51,7 +51,7 @@ html {
 		    }
 		    
 		    function deleteOne(id){
-				if(confirm('确定要删除吗?')){	 
+				if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){	 
 			      window.location.href='<%=basePath%>klg/labItem/deleteLabItem.action?labItemVo.ids='+id;
 			    }
 			}
@@ -143,13 +143,13 @@ html {
 													<s:text name="theme.depart"/>
 												</th>
 												<th  property="demo1">
-													标准分值
+													<s:text name="biaozhunfen"/>
 												</th>
 												<th  property="demo2">
-													工时
+													<s:text name="unithoure"/>
 												</th>
 												<th property="price">
-													价格
+													<s:text name="price.number"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

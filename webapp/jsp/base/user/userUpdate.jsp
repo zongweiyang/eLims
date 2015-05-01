@@ -102,7 +102,7 @@ function submitvalue(actionstr){
 		 });
 	}
 	function alertMsg(){
-		alert("组织改变，则原组织的所有权限全部清空，请谨慎操作！");
+		alert('<s:property value="getText('orgchangeallright')"/>');
 	}
 	function uploadFile(busId,busType){
 	   fileTypes = '*.jpg;*.gif;*.png;';

@@ -19,7 +19,7 @@ function selectLabSciScience()
 		{
 		  if($('#type').val()=='')
              {
-                 alert('请选择统计类型');
+                 alert('<s:property value="getText('ansticktype')"/>');
                  return false;
              }
 		  if($('#type').val()!='2'&&$('#type').val()!='3'){
@@ -29,17 +29,17 @@ function selectLabSciScience()
        		});
              if(i>1)
              {
-                 alert('只能选择一个项目');
+                 alert('<s:property value="getText('onlyoneitem')"/>');
                  return false;
              }else if(i==0)
              {
-                 alert('请选择一个项目');
+                 alert('<s:property value="getText('plsselectoneit')"/>');
                  return false;
              }
              }
              else if($('#type').val()=='2'&&$('#userId').val()=='')
              {
-                 alert('请选择人');
+                 alert('<s:property value="getText('lselectpoe')"/>');
                  return false;
              }
              return true;
@@ -54,7 +54,7 @@ function selectLabSciScience()
 			$.dialog({
 				id:'id',
 				content:'url:'+'<%=basePath%>science/labScience/showQueryLabScience.action?type='+$('#type').val()+'&labSciScienceVo.id='+ids+'&userId='+$('#userId').val(),
-				title:'统计图',
+				title:'<s:property value="getText('chartinfo')"/>',
 				opacity:0.4,
 				width:1100, 
 				height:500,

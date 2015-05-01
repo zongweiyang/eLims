@@ -80,7 +80,7 @@
 			ComCodeService.isExsitLabCodeByCode(checkStr,document.getElementById("typeid").value,flag,function getDate(retrueStr){
 				if(retrueStr=="1"){
 					if(flag=="0"){
-						alert("输入的公共代码名称重复!");
+						alert('<s:property value="getText('lab.codeinputname.repeat')"/>');
 						document.getElementById("name").focus();
 						checkFlag = false;
 						return false;

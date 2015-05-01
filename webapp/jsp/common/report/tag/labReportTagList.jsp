@@ -30,14 +30,14 @@ r <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 			  dataType:'text',
 		   	  success:function (data){
 		   	  	if(data=="true"){
-	            	alert("标签初始化成功.");
+	            	alert('<s:property value="getText('taginitsuccess')"/>');
 	          	 }else{
-	          	 	alert("标签初始化失败.");
+	          	 	alert('<s:property value="getText('taginitfaulur')"/>');
 	             }
 	             flashThisPage();
 		   	  },
 		   	  error:function (data){
-		   	  	alert('请求错误.');
+		   	  	alert('<s:property value="getText('config.request.error')"/>');
 		   	  }
 		   });
 		}

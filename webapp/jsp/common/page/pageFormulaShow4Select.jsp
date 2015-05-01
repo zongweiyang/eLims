@@ -30,7 +30,7 @@
 			dataType:'text',
 	  		success:function (data){
 	   	  		if(data=="false"){
-					alert("此文件不存在");
+					alert('<s:property value="getText('filenotexist')"/>');
 					return ;
 				}else{
 					$("#jspUrl",D).val(url);

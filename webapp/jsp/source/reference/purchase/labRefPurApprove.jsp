@@ -37,7 +37,7 @@ html {
 				$.dialog({
 					id:'userId',
 					content:'url:'+url,
-					title:'标准品列表',
+					title:'<s:property value="getText('standardllist')"/>',
 					opacity:0.4,
 					width:600,
 					height:400,
@@ -53,7 +53,7 @@ html {
 					if("-1"==flag){
 						var auditMessage=$('#auditMessage').val();
 						if(""==auditMessage){
-							alert("请填写审批意见！");
+							alert('<s:property value="getText('inputappopinon')"/>');
 							return;
 						}
 					}

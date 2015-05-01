@@ -12,7 +12,7 @@
 	}
 	function submit4Add(actionstr){
 		if($('input[name="labPageEditorVo.urls"]:checked').length == 0){
-			alert('请至少选择一项');
+			alert('<s:property value="getText('plseselctonei')"/>');
 			return ;
 		}
 		$('#pageFileForm').attr('action','<%=basePath%>page/labPageEditor/'+actionstr).submit();

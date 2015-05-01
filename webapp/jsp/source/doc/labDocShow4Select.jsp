@@ -36,7 +36,7 @@
 				}     
 		   }  
 		if(m<1){
-			alert("请选择要申请的记录！");
+			alert('<s:property value="getText('plseaupplyredoc')"/>');
 			return false;
 		}else{
 			return true;
@@ -67,9 +67,9 @@
 						        }
 						        n=n+1;	
 						        if(url=='<%=basePath%>doc/labDoc/ajaxCheckApply.action'){
-						         alert('该文档已经被申请!请选择其他文档');   
+						         alert('<s:property value="getText('docexisapprol')"/>');   
 						         }else{
-						          alert('您还未申请该文件！'); 
+						          alert('<s:property value="getText('appisnotfile')"/>'); 
 						         }    
 						        return false;
 							}
@@ -80,9 +80,9 @@
 		}  
 		if(m<1){
 		if(url=='<%=basePath%>doc/labDoc/ajaxCheckApply.action'){
-			alert("请选择要申请的记录！");
+			alert('<s:property value="getText('plseaupplyredoc')"/>');
 		}else{
-		    alert("请选择要取消的记录！");
+		    alert('<s:property value="getText('plsecancelrecord')"/>');
 		}
 			return false;
 		}else{
@@ -112,7 +112,7 @@
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件详情',
+			title:'<s:property value="getText('filedestails')"/>',
 			zIndex:100000,
 			opacity:0.4,
 			width:500,

@@ -46,7 +46,7 @@
 			function checkNum(obj){
 				var val=$(obj).val();
 				if(isNaN(val)){
-					alert("请输入正确数字！");
+					alert('<s:property value="getText('pleseinpunumber')"/>');
 					$(obj).val(0);
 				}
 			}
@@ -54,7 +54,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/planEle/showLabQuaAuditPlanEle4select.action',
-					title:'内审计划列表',
+					title:'<s:property value="getText('internchecklist')"/>',
 					opacity:0.4,
 					width:900, 
 					height:400,

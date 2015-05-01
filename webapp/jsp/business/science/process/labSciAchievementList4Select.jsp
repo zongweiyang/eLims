@@ -19,7 +19,7 @@
 		   $.dialog({
 					id:'processId',
 					content:'url:'+url,
-					title:'成果详情',
+					title:'<s:property value="getText('resultdetails')"/>',
 					opacity:0.4,
 					width:900,
 					height:400,
@@ -173,7 +173,7 @@ html {
                                                  	</s:if>
                                                  </td>
 												<td class="c">
-													<l:a href="#" uri="science/labSciProcess/showLabSciAchievement4Select.action" onclick="showLabSciAchievement('${id}');" value="详情"/>	
+													<l:a href="#" uri="science/labSciProcess/showLabSciAchievement4Select.action" onclick="showLabSciAchievement('${id}');" value="details.info"/>	
 												</td>
 											</tr>
 										</s:iterator>

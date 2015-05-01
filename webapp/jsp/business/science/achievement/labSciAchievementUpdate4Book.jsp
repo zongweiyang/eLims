@@ -45,7 +45,7 @@
 		$.dialog({
 			id:'userFunction',
 			content:'url:'+'<%=basePath%>science/labSciAchievement/showLabUser4Select.action?treeNid='+num,
-			title:'选择人员：',
+			title:'<s:property value="getText('selepeo')"/>',
 			opacity:0.4,
 			width:600, 
 			height:400,
@@ -59,7 +59,7 @@
 		$.dialog({
 			id:'LabSciScienceFunction',
 			content:'url:'+'<%=basePath%>science/labScience/showLabSciScience4Select.action?treeNid=1',
-			title:'选择所属的项目：',
+			title:'<s:property value="getText('seleitemown')"/>',
 			opacity:0.4,
 			width:1000, 
 			height:400,

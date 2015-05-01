@@ -37,7 +37,7 @@ html {
 				$.dialog({
 					id:'userId',
 					content:'url:'+url,
-					title:'耗材列表',
+					title:'<s:property value="getText('consulist')"/>',
 					opacity:0.4,
 					width:600,
 					height:400,
@@ -53,7 +53,7 @@ html {
 					if("-1"==flag){
 						var auditMessage=$('#auditMessage').val();
 						if(""==auditMessage){
-							alert("请填写审核意见！");
+							alert('<s:property value="getText('plseauditopinion')"/>');
 							return;
 						}
 					}

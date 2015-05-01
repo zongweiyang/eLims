@@ -87,7 +87,7 @@ html {
    		var table=$('#'+id);
 	    var index=table.find('tr').length;
 	    if(index <= 2){
-	    	alert("不能少于一行!");
+	    	alert('<s:property value="getText('cannotonerow')"/>');
 	    }else{
 	    	deleteEntity(obj,id,id2);
 	    }
@@ -141,7 +141,7 @@ html {
 	   	var money = 0;
 		var val=$(obj).val();
 		if(isNaN(val)){
-			alert("请输入正确数字！");
+			alert('<s:property value="getText('pleseinpunumber')"/>');
 			$(obj).val("0.0");
 			 $('#count').html("0.0");
 		  	$('#applyFunds').val("0.0");

@@ -13,7 +13,7 @@
 		var flage = $("input[name=labApparaCheckVo.auditResult]:checked").val();
 	    if("-1"==flage){
 	    	if(''==$("#auditMessage").val()){
-		    	alert("请填写审核意见");
+		    	alert('<s:property value="getText('plseauditopinon')"/>');
 	    		return false;
 	    	}
 	    }
@@ -22,7 +22,7 @@
     }
     function check(){
         if ($("#verificationTime").val()=='' || $("#verificationTime").val()== null) {
-            alert("请选择检查日期!");
+            alert('<s:property value="getText('selectcheckdate')"/>');
 			return false;
         }
         else {

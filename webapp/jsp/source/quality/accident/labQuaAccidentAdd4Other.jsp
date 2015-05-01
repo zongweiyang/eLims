@@ -15,7 +15,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>/quality/accident/showLabCustomer4select.action?labQuaAccidentVo.accUnitId='+accUnitId,
-					title:'单位列表',
+					title:'<s:property value="getText('departlist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,

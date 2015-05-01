@@ -50,7 +50,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/proficiency/showLabQuaProficiency.action?labQuaProficiencyVo.id='+id,
-					title:'详情',
+					title:'<s:property value="getText('details.info')"/>',
 					opacity:0.4,
 					width:900, 
 					height:500,
@@ -272,7 +272,7 @@
 																${planTime }
 															</td>
 															<td class="c">
-														  		<l:a href="#" uri="quality/proficiency/showLabQuaProficiency.action" onclick="showLabQuaProficiency('${id}');" value="详情" />
+														  		<l:a href="#" uri="quality/proficiency/showLabQuaProficiency.action" onclick="showLabQuaProficiency('${id}');" value="details.info" />
 																&nbsp;&nbsp;
 																<l:a href="#" uri="quality/proficiencyPlan/deleteLabQuaProficiency.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 															</td>

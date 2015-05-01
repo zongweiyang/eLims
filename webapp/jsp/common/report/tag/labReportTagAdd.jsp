@@ -52,11 +52,11 @@ html {
   	function submitvalue(actionstr){
 	  	if($("div[class='Formtable oneEachDiv']").css("display")=="block"){
 	  		if($("#labReportTagTitle").val()==''){
-	  			alert("标签名称不能为空！");
+	  			alert('<s:property value="getText('tagshouldnot')"/>');
 	  			return false;
 	  		}
 	  		if($("#labReportTagCode").val()==''){
-	  			alert("表达式不能为空！");
+	  			alert('<s:property value="getText('expsonnotexm')"/>');
 	  			return false;
 	  		}
 	  	}

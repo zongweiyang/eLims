@@ -62,7 +62,7 @@ function showReport(){
 	$.dialog({
 		id:'id',
 		content:'url:'+url,
-		title:'打印页面',
+		title:'<s:property value="getText('pageprint')"/>',
 		opacity:0.4,
 		width:1050,
 		height:height,
@@ -302,7 +302,7 @@ function showReport(){
 											<tr>
 												<td><label><s:text name="sender.style"/>：</label></td>
 												<td id="reportPost">
-													<s:checkboxlist theme="simple" list="{'自取','快递','传真','Email'}" name="labSamReportVo.samReportEndVo.reportPost"></s:checkboxlist>
+													<s:checkboxlist theme="simple" list="{getText('sample.selfget'),getText('eproessi'),getText('fax'),'Email'}" name="labSamReportVo.samReportEndVo.reportPost"></s:checkboxlist>
 												</td>
 												<td><label><s:text name="msg.send.date"/>：</label></td>
 												<td>

@@ -27,7 +27,7 @@
 					}     
 				}  
 				if(m<1){
-					alert("请选择要仪器！");
+					alert('<s:property value="getText('plseselectapp')"/>');
 					return false;
 				}else{
 					return true;
@@ -38,7 +38,7 @@
 			$.dialog({
 				id:'power',
 				content:'url:'+url,
-				title:'仪器清单模板上传：',
+				title:'<s:property value="getText('applistmulup')"/>',
 				maxBtn:false,
 				rang: true,
 				drag: true,
@@ -99,7 +99,7 @@ function uploadFile(busId,busType){
 	   $.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'导入仪器清单',
+			title:'<s:property value="getText('import.app.list')"/>',
 			opacity:0.4,
 			width:300, 
 			height:300,
@@ -161,7 +161,7 @@ function uploadFile(busId,busType){
 																	</label>
 																</td>
 																<td>
-																	<s:select theme="simple" cssStyle="width:80px;" name="labApparaVo.status" headerKey="" headerValue="全部" list="#{'0':'正常','1':'验收','2':'报修','3':'停用','4':'报废'}" value="${labApparaVo.status}" />
+																	<s:select theme="simple" cssStyle="width:80px;" name="labApparaVo.status" headerKey="" headerValue="全部" list="#{'0':getText('common'),'1':getText('finished.check'),'2':getText('report.repair'),'3':getText('stoped'),'4':getText('dropped')}" value="${labApparaVo.status}" />
 																</td>
 																<td>
 																	<l:a uri="/appara/listLabApparaItems.action" value="fun.query" />

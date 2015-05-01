@@ -70,7 +70,7 @@ html {
 				$.dialog({
 					id:'roleId',
 					content:'url:'+url,
-					title:'耗材列表',
+					title:'<s:property value="getText('consulist')"/>',
 					opacity:0.4,
 					width:800,
 					height:500,

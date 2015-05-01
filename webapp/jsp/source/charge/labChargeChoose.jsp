@@ -33,7 +33,7 @@
 				if(value.length>0){
 					var key=BASEisNotFloat(value);
 					if(key){
-						alert("请输入正确的费用.");
+						alert('<s:property value="getText('plsecorrfee')"/>');
 						$(obj).val("0.0");
 						return false;
 					}

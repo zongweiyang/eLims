@@ -29,7 +29,7 @@
 			}
 		});
 		if(strTemp.length <= 0){
-			alert("请选择要删除的仪器");
+			alert('<s:property value="getText('selectdeleapp')"/>');
 			return ;
 		}else{
 			if(confirm('确认删除选中信息吗?')){

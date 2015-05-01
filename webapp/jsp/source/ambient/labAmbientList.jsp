@@ -27,7 +27,7 @@
 					}     
 				}  
 				if(m<1){
-					alert("请选择要删除的记录！");
+					alert('<s:property value="getText('lab.selectdelete')"/>');
 					return false;
 				}else{
 					return true;
@@ -57,7 +57,7 @@
 					dataType:'text',
 					success:function (data){
 						if(data=="1"){
-							alert("此条记录中已被使用，不可删除");
+							alert('<s:property value="getText('recordnotdele')"/>');
 							return false;
 						}
 				   	  }

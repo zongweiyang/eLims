@@ -17,7 +17,7 @@
 		  		var startTime = $('#startTime').val();
 		  		var endTime = $('#endTime').val();
 		  		if(id==''){
-		  			alert("选择参数名称");
+		  			alert('<s:property value="getText('plseparamname')"/>');
 		  		}else{
 		  		var url="${basePath}/ambient/labAmbientInfo/preJFreeChart.action?labAmbientInfoVo.labAmbientId="+id+'&labAmbientInfoVo.startTime='+startTime+'&labAmbientInfoVo.endTime='+endTime;
 	  				$.dialog({

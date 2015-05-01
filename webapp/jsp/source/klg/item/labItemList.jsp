@@ -33,7 +33,7 @@ html {
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>klg/labItem/preImportLabItem4Excel.action?labItemVo.type=${labItemVo.type}',
-					title:'项目导入',
+					title:'<s:property value="getText('proimport')"/>',
 					opacity:0.4,
 					width:400, 
 					height:200,

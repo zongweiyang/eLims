@@ -31,7 +31,7 @@
        				}
        			},
        			error:function (){
-       				alert('您的网络不通.');
+       				alert('<s:property value="getText('network.error')"/>');
        			}
        		});
        }
@@ -40,7 +40,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/cusVisit/showLabCustomer4select.action?labQuaCusVisitVo.cusUnitId='+cusUnitId,
-					title:'客户列表',
+					title:'<s:property value="getText('custlist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,

@@ -21,7 +21,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器报废单打印',
+			title:'<s:property value="getText('appdroplistprint')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

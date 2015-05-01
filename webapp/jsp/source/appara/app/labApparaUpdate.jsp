@@ -27,7 +27,7 @@
 			var message = "";
 			if(value!=""){
 				if (!myRegExp.test(value)) {
-					alert("请以正确的价格！如20.97");
+					alert('<s:property value="getText('correctprice')"/>');
 					$(obj).val("");
 				}
 			}
@@ -39,7 +39,7 @@
             var msg="";
 			if (value != "") {
                 if (!strReg.test(value)) {
-                    alert("请输入正确的数字！");
+                    alert('<s:property value="getText('plseiputnumber')"/>');
                     $(obj).val("");
                 }
 			}
@@ -75,7 +75,7 @@
 	   $.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'仪器附件上传',
+			title:'<s:property value="getText('appattupload')"/>',
 			opacity:0.4,
 			width:300, 
 			height:300,
@@ -94,13 +94,13 @@
 				dataType:'text',
 				success:function(data){
 					if('true' == data){
-						alert('删除成功');
+						alert('<s:property value="getText('delete.success')"/>');
 						$('#'+id).html('');
 						  $(obj).parent().remove();
 					}
 				},
 				error:function(){
-					alert('网络不通.');
+					alert('<s:property value="getText('network.error')"/>');
 				}
 			});	
 	}
@@ -109,7 +109,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器保管人：',
+			title:'<s:property value="getText('apprsaver')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

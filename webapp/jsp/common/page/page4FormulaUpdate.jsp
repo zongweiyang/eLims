@@ -11,7 +11,7 @@
 	<script language=javascript>
 	function submitvalue(actionstr){
 		if(null == $('#js').val() || '' == $('#js').val()){
-			alert('请输入js信息');
+			alert('<s:property value="getText('plesjsinfo')"/>');
 			return ;
 		}
 		var df = document.pageForm;

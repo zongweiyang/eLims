@@ -77,7 +77,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		标准名称：
+																		<s:text name="std.name"/>：
 																	</label>
 																</td>
 																<td>
@@ -85,7 +85,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		标准编号：
+																		<s:text name="biaozcode"/>：
 																	</label>
 																</td>
 																<td>
@@ -112,10 +112,10 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="name">
-													标准名称
+													<s:text name="std.name"/>
 												</th>
 												<th property="code">
-													标准编号
+													<s:text name="biaozcode"/>
 												</th>
 												<th property="standIndex">
 													类别

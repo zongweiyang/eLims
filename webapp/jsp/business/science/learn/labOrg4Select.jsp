@@ -47,7 +47,7 @@ html {
 			   names+=nodes[i].name+',';
 			   ids+=nodes[i].treeNid+',';		   
 			}}else{
-			   alert("请选择");
+			   alert('<s:property value="getText('selected.pls')"/>');
 				return ;
 			}
 			names+=nodes[nodes.length-1].name;

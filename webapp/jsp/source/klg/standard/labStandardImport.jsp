@@ -27,13 +27,13 @@ html {
 		function submitvalueforlist(){
 			 var file = $('#file').val();
 		    if(file == ''){
-		    	alert("请选择文件！");
+		    	alert('<s:property value="getText('plseselectfile')"/>');
 		    	return false;
 		    }
 		    var stuff=file.match(/^(.*)(\.)(.{1,8})$/)[3]; 
 	        if(stuff!='xls')
 	        {
-	           alert('文件类型不正确，请选择.xls文件');
+	           alert('<s:property value="getText('xlsplesefile')"/>');
 	           return false;
 	        }
 		    var df=document.listForm;

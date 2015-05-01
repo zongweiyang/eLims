@@ -19,7 +19,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器故障单打印',
+			title:'<s:property value="getText('apperrorprint')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

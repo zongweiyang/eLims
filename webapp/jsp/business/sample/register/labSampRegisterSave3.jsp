@@ -26,7 +26,7 @@ function showRegister4Confirm(){
 	$.dialog({
 		id:'id',
 		content:'url:'+'<%=basePath %>sample/labSampRegister/showLabSampRegister4Confirm.action?labSampRegisterVo.id=${labSampRegisterVo.id}',
-		title:'登记单信息',
+		title:'<s:property value="getText('reglistbill')"/>',
 		opacity:0.4,
 		width:1000, 
 		height:600,
@@ -59,7 +59,7 @@ function ajax4labSampItem(){
         }
    	  },
    	  error:function (data){
-   	  	alert('请求错误.');
+   	  	alert('<s:property value="getText('config.request.error')"/>');
    	  }
    });
 	return msg;
@@ -71,7 +71,7 @@ function chargeTypes(obj){
 function countRowMoney(obj,index){
 	var thisVal=parseFloat($(obj).val());
 	if(isNaN(thisVal)){
-		alert('格式不正确.');
+		alert('<s:property value="getText('formatisnot')"/>');
 		$(obj).val(0);
 		return false;
 	}
@@ -88,7 +88,7 @@ function countRowMoney(obj,index){
 function countRowMoneyx(obj){
 	var vs=parseFloat($(obj).val());
 	if(isNaN(vs)){
-		alert("金额格式不正确.");
+		alert('<s:property value="getText('moneyformatieoor')"/>');
 		$(obj).val(0.0);
 		return false;
 	}
@@ -102,7 +102,7 @@ function countRowMoneyx(obj){
 function countTotal(obj){
 	var vs=parseFloat($(obj).val());
 	if(isNaN(vs)){
-		alert("金额格式不正确.");
+		alert('<s:property value="getText('moneyformatieoor')"/>');
 		$(obj).val(0.0);
 		return false;
 	}

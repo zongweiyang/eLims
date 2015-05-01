@@ -26,7 +26,7 @@
 	       			name = $(check).attr("planName");
 		       	});
 				 if(id == "" || id.length == 0){
-				 	alert("请选择比对验证计划！");
+				 	alert('<s:property value="getText('selectchkplan')"/>');
 				 	return false;
 				 }
 				 $('#proficiencyPlanId',D).val(id);

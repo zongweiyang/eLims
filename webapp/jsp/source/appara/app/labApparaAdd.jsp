@@ -19,7 +19,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器保管人：',
+			title:'<s:property value="getText('apprsaver')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,
@@ -106,7 +106,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器保管人：',
+			title:'<s:property value="getText('apprsaver')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

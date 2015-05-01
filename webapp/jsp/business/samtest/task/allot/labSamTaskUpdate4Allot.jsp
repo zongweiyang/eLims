@@ -196,7 +196,7 @@ html {
 				$.dialog({
 					id:'parentFunction',
 					content:'url:'+'<%=basePath%>samtest/labSamTask/showlabSamTaskAllot4Select.action?labSamTestVo.itemName='+itemNames+'&labSamTestVo.demo='+itemSamNum+'&labSamTestVo.testManName='+testMan+'&labSamTestVo.checkManName='+checkMan+'&labSamTestVo.taskId='+taskIds,
-					title:'分配信息：',
+					title:'<s:property value="getText('fenpeiinfo')"/>',
 					opacity:0.4,
 					width:800, 
 					height:600,

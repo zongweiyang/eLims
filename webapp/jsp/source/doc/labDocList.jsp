@@ -58,7 +58,7 @@ border-right: #C0C0C0 1px solid;
 		$.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'文件库',
+			title:'<s:property value="getText('filesetoscd')"/>',
 			opacity:0.4,
 			width:800,
 			height:500,
@@ -72,7 +72,7 @@ border-right: #C0C0C0 1px solid;
 		$.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'我的审核',
+			title:'<s:property value="getText('mychecking')"/>',
 			opacity:0.4,
 			width:800,
 			height:500,
@@ -114,7 +114,7 @@ border-right: #C0C0C0 1px solid;
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件详情',
+			title:'<s:property value="getText('filedestails')"/>',
 			opacity:0.4,
 			width:500,
 			height:300,
@@ -142,7 +142,7 @@ border-right: #C0C0C0 1px solid;
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件夹现修改',
+			title:'<s:property value="getText('filemodified')"/>',
 			opacity:0.4,
 			width:600,
 			height:400,

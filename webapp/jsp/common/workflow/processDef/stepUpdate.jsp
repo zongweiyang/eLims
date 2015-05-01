@@ -133,7 +133,7 @@
             		var vv=$(obj).val();
             		var reg = /^\d{1,3}$/;
             		if(!reg.test(vv)){
-            			alert("请输入3位以内正整数！");
+            			alert('<s:property value="getText('inputthreeinte')"/>');
             			$(obj).val("");
             		}
             	}
@@ -191,7 +191,7 @@
 					ids+=$(this).val()+",";
 				});
 			}else{
-				alert("选中对象出错！");
+				alert('<s:property value="getText('plseobjecteror')"/>');
 			}
 			//过期天数
 			var overDate=$('#overDate').val();

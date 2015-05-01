@@ -56,7 +56,7 @@
 			  	function submitvalue(actionstr){
 					var df = document.labFormulaForm;
 					if($("#editor").val()==''){
-						alert("请保存编辑公式！");
+						alert('<s:property value="getText('plsesaveeditgorm')"/>');
 						return false;
 					}
 				 	df.action=actionstr;

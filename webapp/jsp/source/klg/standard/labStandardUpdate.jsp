@@ -17,12 +17,12 @@
 			function submitForm(){
 				var name=$('#name').val();
 				if(name.length==0){
-					alert("请输入标准名称.");
+					alert('<s:property value="getText('plsinputstd')"/>');
 					return false;
 				}
 				var code=$('#code').val();
 				if(code.length==0){
-					alert("请输入标准编号.");
+					alert('<s:property value="getText('inputstdcode')"/>');
 					return false;
 				}
 				
@@ -47,13 +47,13 @@
 					dataType:'text',
 					success:function(data){
 						if(data=='1'){
-							alert('标准编号已经存在.');
+							alert('<s:property value="getText('stdcodeisexist')"/>');
 							$(obj).val("");
 							$(obj).select();
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}
@@ -78,7 +78,7 @@
 			   $.dialog({
 					id:'id',
 					content:'url:'+url,
-					title:'标准文件上传',
+					title:'<s:property value="getText('stdfileupload')"/>',
 					opacity:0.4,
 					width:300, 
 					height:80,
@@ -95,7 +95,7 @@
 					$.dialog({
 						id:'ids',
 						content:'url:'+url,
-						title:'代替标准选择',
+						title:'<s:property value="getText('stdstdseelct')"/>',
 						opacity:0.4,
 						width:800,
 						height:500,
@@ -192,9 +192,9 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>标准分级：</label></td>
+													<td><label><s:text name="biaolenave"/>：</label></td>
 													<td>
-														<s:select list="{'国家标准','行业标准','地质标准'}" name="labStandardVo.standIndex" value="%{labStandardVo.standIndex}" theme="simple"></s:select>
+														<s:select list="{getText('countstd'),getText('induststd'),getText('dizhiindustry')}" name="labStandardVo.standIndex" value="%{labStandardVo.standIndex}" theme="simple"></s:select>
 													</td>
 													<td>
 														<label>

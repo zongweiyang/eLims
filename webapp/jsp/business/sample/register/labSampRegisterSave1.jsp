@@ -29,13 +29,13 @@ function submitValue(url){
 		}
 	});
 	if(reprotStr =="1"){
-		alert("取报告方式含有快递，请务必填写邮编和地址.");
+		alert('<s:property value="getText('reportstylecode')"/>');
 		return false;
 	}else if(reprotStr =="2"){
-		alert("取报告方式含有传真类型，请务必填写传真号.");
+		alert('<s:property value="getText('faxstlefax')"/>');
 		return false;
 	}else if(reprotStr =="3"){
-		alert("取报告方式含有email类型，请务必填写email.");
+		alert('<s:property value="getText('getemailstyle')"/>');
 		return false;
 	}
 	$('form').attr('action','${basePath}'+url);
@@ -65,7 +65,7 @@ function ajax4labSampItem(){
         }
    	  },
    	  error:function (data){
-   	  	alert('请求错误.');
+   	  	alert('<s:property value="getText('config.request.error')"/>');
    	  }
    });
 	return msg;
@@ -74,7 +74,7 @@ function showLabCustomer4Select(){
 	$.dialog({
 		id:'id',
 		content:'url:'+'<%=basePath %>sample/labSampRegister/showLabCustomer4Select.action',
-		title:'客户列表',
+		title:'<s:property value="getText('custlist')"/>',
 		opacity:0.4,
 		width:800, 
 		height:500,
@@ -95,13 +95,13 @@ function showRegister4Confirm(){
 		}
 	});
 	if(reprotStr =="1"){
-		alert("取报告方式含有快递，请务必填写邮编和地址.");
+		alert('<s:property value="getText('reportstylecode')"/>');
 		return false;
 	}else if(reprotStr =="2"){
-		alert("取报告方式含有传真类型，请务必填写传真号.");
+		alert('<s:property value="getText('faxstlefax')"/>');
 		return false;
 	}else if(reprotStr =="3"){
-		alert("取报告方式含有email类型，请务必填写email.");
+		alert('<s:property value="getText('getemailstyle')"/>');
 		return false;
 	}
 	var msg=ajax4labSampItem();
@@ -112,7 +112,7 @@ function showRegister4Confirm(){
 	$.dialog({
 		id:'id',
 		content:'url:'+'<%=basePath %>sample/labSampRegister/showLabSampRegister4Confirm.action?labSampRegisterVo.id=${labSampRegisterVo.id}',
-		title:'登记单信息',
+		title:'<s:property value="getText('reglistbill')"/>',
 		opacity:0.4,
 		width:1000, 
 		height:600,
@@ -322,7 +322,7 @@ function checkContact(obj){
 																	</label>
 																</td>
 																<td>
-																	<s:radio theme="simple" list="{'自送样','现场采样'}" value="'自送样'" name="labSampRegisterVo.sampSource"></s:radio>
+																	<s:radio theme="simple" list="{getText('zisongyang'),getText('xiancaiynag')}" value="'自送样'" name="labSampRegisterVo.sampSource"></s:radio>
 																</td>
 																<td>
 																	<label>
@@ -379,7 +379,7 @@ function checkContact(obj){
 																<td><label><s:text name="checking.type"/>：</label></td>
 																<td><s:select list="#request.JCLBlist" listKey="name" listValue="name" theme="simple"  cssStyle="width:270px;" name="labSampRegisterVo.taskType"></s:select></td>
 																<td><label><s:text name="report.performance"/>：</label></td>
-																<td><s:radio list="{'检测','检验'}" theme="simple" name="labSampRegisterVo.reportType" /></td>
+																<td><s:radio list="{getText('sample.check'),getText('test')}" theme="simple" name="labSampRegisterVo.reportType" /></td>
 															</tr>
 															<tr>
 																<td><label><s:text name="report.sum"/>：</label></td>
@@ -395,7 +395,7 @@ function checkContact(obj){
 																</td>
 																<td><label><s:text name="get.report.style"/>：</label></td>
 																<td id="reportPost">
-																	<s:checkboxlist theme="simple" list="{'自取','快递','传真','Email'}" name="labSampRegisterVo.reportPost"></s:checkboxlist>
+																	<s:checkboxlist theme="simple" list="{getText('sample.selfget'),getText('eproessi'),getText('fax'),'Email'}" name="labSampRegisterVo.reportPost"></s:checkboxlist>
 																</td>
 															</tr>
 														</table>

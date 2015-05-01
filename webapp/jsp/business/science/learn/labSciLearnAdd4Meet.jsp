@@ -46,7 +46,7 @@
 		$.dialog({
 			id:'parentFunction',
 			content:'url:'+'<%=basePath%>science/labSciLearn/showLabOrg4Select.action?labOrgVo.id='+$("#labOrgId").val(),
-			title:'选择<s:text name="msg.depart"/>：',
+			title:'<s:property value="getText('selecdeprart')"/>',
 			opacity:0.4,
 			width:500, 
 			height:300,
@@ -58,13 +58,13 @@
 	function getUser(){
 		var orgId=$('#labOrgId').val();
 		if(orgId.length == 0){
-			alert("请选择参加科室!");
+			alert('<s:property value="getText('selectrooleto')"/>');
 			return false;
 		}
 		$.dialog({
 			id:'userFunction',
 			content:'url:'+'<%=basePath%>science/labSciLearn/showLabUser4Select.action?labSciLearnVo.labOrgId='+orgId,
-			title:'选择人员：',
+			title:'<s:property value="getText('selepeo')"/>',
 			opacity:0.4,
 			width:700, 
 			height:400,
@@ -77,7 +77,7 @@
 		$.dialog({
 			id:'LabSciScienceFunction',
 			content:'url:'+'<%=basePath%>science/labScience/showLabSciScience4Select.action?treeNid=1',
-			title:'选择所属的项目：',
+			title:'<s:property value="getText('seleitemown')"/>',
 			opacity:0.4,
 			width:1000, 
 			height:400,

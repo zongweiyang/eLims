@@ -38,7 +38,7 @@
 	       			orgName = $(check).attr("orgName");
 		       	});
 				 if(id == "" || id.length == 0){
-				 	alert("请选择管理评审计划!");
+				 	alert('<s:property value="getText('manageplanpingshen')"/>');
 				 	return false;
 				 }
 				  closeMe();

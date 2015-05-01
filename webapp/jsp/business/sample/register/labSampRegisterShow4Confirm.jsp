@@ -200,7 +200,7 @@ function ok(url){
 													</label>
 												</td>
 												<td>
-													<s:radio disabled="true" theme="simple" list="{'自送样','现场采样'}" value="'自送样'" name="labSampRegisterVo.sampSource"></s:radio>
+													<s:radio disabled="true" theme="simple" list="{getText('zisongyang'),getText('xiancaiynag')}" value="'自送样'" name="labSampRegisterVo.sampSource"></s:radio>
 												</td>
 												<td>
 													<label>

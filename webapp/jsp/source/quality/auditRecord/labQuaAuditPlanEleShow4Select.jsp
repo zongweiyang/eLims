@@ -26,7 +26,7 @@
 	       			name = $(check).attr("planName");
 		       	});
 				 if(id == "" || id.length == 0){
-				 	alert("请选择内审计划！");
+				 	alert('<s:property value="getText('internplan')"/>');
 				 	return false;
 				 }
 				 $('#quaAuditPlanEleId',D).val(id);
@@ -42,7 +42,7 @@
 	       			name = $(check).attr("planName");
 		       	});
 				 if(id == "" || id.length == 0){
-				 	alert("请选择内审计划！");
+				 	alert('<s:property value="getText('internplan')"/>');
 				 	return false;
 				 }
 				  closeMe();

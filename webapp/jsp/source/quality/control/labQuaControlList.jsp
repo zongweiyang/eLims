@@ -54,7 +54,7 @@
        				}
        			},
        			error:function (){
-       				alert('您的网络不通.');
+       				alert('<s:property value="getText('network.error')"/>');
        			}
        		});
        		
@@ -241,7 +241,7 @@
 																<l:a href="#" uri="quality/control/deleteLabQuaControl.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />	  
 																<s:if test="${accStatus == ''|| accStatus == null || accStatus=='0'}">
 																	&nbsp;&nbsp;
-																	<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-JDCC');" value="转事故"/>	
+																	<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-JDCC');" value="transferaccid"/>	
 																</s:if>
 															</td>
 														</tr>

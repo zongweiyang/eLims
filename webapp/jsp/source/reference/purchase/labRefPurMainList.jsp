@@ -214,7 +214,7 @@ html {
 																	test="${isOper!='Y' && (status=='采购审核'|| status=='采购审批')}">
 																	<l:a href="#"
 																		uri="reference/labRefPurMain/showAllLabRefPurMainExcel.action?labRefPurMainVo.id=${id}"
-																		value="打印" />
+																		value="print" />
 																</s:if>
 
 															</td>

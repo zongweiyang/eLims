@@ -15,7 +15,7 @@
     }
     function check(){
         if ($("#verificationTime").val()=='' || $("#verificationTime").val()== null) {
-            alert("请选择检查日期!");
+            alert('<s:property value="getText('selectcheckdate')"/>');
 			return false;
         }
         else {
@@ -27,7 +27,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器选择：',
+			title:'<s:property value="getText('sleapptus')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

@@ -94,11 +94,11 @@ html {
 									addParameter(data);
 								}else{
 									$("#parameter").hide();
-									alert('请检查此公式是否正确');
+									alert('<s:property value="getText('formisright')"/>');
 								}
 							},
 							error:function(){
-								alert('网络不通.');
+								alert('<s:property value="getText('network.error')"/>');
 							}
 						});	
 				}
@@ -120,7 +120,7 @@ html {
 					$.dialog({
 						id:'parentFunction',
 						content:'url:'+'<%=basePath%>/page/labPageEditor/showPageFormula4Select.action',
-						title:'页面选择：',
+						title:'<s:property value="getText('pagesletct')"/>',
 						opacity:0.4,
 						width:800, 
 						height:500,
@@ -134,7 +134,7 @@ html {
 					$.dialog({
 						id:'parentFunction',
 						content:'url:'+'<%=basePath%>/page/labPageEditor/preUpdatePageEdit4Formula.action?labPageEditorVo.id='+$("#jspUrlId").val(),
-						title:'编辑页面：',
+						title:'<s:property value="getText('editpage')"/>',
 						opacity:0.4,
 						width:800, 
 						height:500,
@@ -147,7 +147,7 @@ html {
 					$.dialog({
 						id:'parentFunction',
 						content:'url:'+'<%=basePath%>/formula/labFormula/showFormula.action?labFormulaVo.id='+$("#labFormulaId").val(),
-						title:'公式显示：',
+						title:'<s:property value="getText('formulashow')"/>',
 						opacity:0.4,
 						width:800, 
 						height:500,

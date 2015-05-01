@@ -26,7 +26,7 @@ function showRegister4Confirm(){
 	$.dialog({
 		id:'id',
 		content:'url:'+'<%=basePath %>sample/labSampRegister/showLabSampRegister4Confirm.action?labSampRegisterVo.id=${labSampRegisterVo.id}',
-		title:'登记单信息',
+		title:'<s:property value="getText('reglistbill')"/>',
 		opacity:0.4,
 		width:1000, 
 		height:600,
@@ -54,7 +54,7 @@ function ajax4labSampItem(){
         }
    	  },
    	  error:function (data){
-   	  	alert('请求错误.');
+   	  	alert('<s:property value="getText('config.request.error')"/>');
    	  }
    });
 	return msg;

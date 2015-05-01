@@ -46,7 +46,7 @@ html {
 			$.dialog({
 				id:'userId',
 				content:'url:'+url,
-				title:'试剂列表',
+				title:'<s:property value="getText('applisted')"/>',
 				opacity:0.4,
 				width:650,
 				height:400,

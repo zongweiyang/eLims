@@ -120,7 +120,7 @@
 	   	var money = 0;
 		var val=$(obj).val();
 		if(isNaN(val)){
-			alert("请输入正确数字！");
+			alert('<s:property value="getText('pleseinpunumber')"/>');
 			$(obj).val("0.0");
 			 $('#count').html("0.0");
 		  	$('#applyFunds').val("0.0");

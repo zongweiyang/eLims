@@ -69,11 +69,11 @@ request.setAttribute("basePath",basePath);
 					dataType:'text',
 					success:function(data){
 						if(data=="false"){
-							alert("删除失败.");
+							alert('<s:property value="getText('deletefailue')"/>');
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}else
@@ -84,7 +84,7 @@ request.setAttribute("basePath",basePath);
 				
 		function beforeRename(treeId, treeNode, newName) {
 			if (newName.length == 0) {
-				alert("分类名称不能为空.");
+				alert('<s:property value="getText('classifynamenotempty')"/>');
 				return false;
 			}
 			$.ajax({
@@ -94,11 +94,11 @@ request.setAttribute("basePath",basePath);
 				dataType:'text',
 				success:function(data){
 					if(data=="false"){
-						alert("修改失败.");
+						alert('<s:property value="getText('modifedfauls')"/>');
 					}
 				},
 				error:function(){
-					alert('网络不通.');
+					alert('<s:property value="getText('network.error')"/>');
 				}
 			});
 			return true;
@@ -123,11 +123,11 @@ request.setAttribute("basePath",basePath);
 							var zTree = $.fn.zTree.getZTreeObj("zTree");
 								zTree.addNodes(treeNode, {id:'addBtn_'+ treeNode.tId,treeNid:data, pId:treeNode.id, name:"未命名"});
 						}else{
-							alert("增加异常.");
+							alert('<s:property value="getText('addexcepton')"/>');
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			});

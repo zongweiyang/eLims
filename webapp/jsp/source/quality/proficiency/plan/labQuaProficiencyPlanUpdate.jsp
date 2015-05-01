@@ -36,7 +36,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>sample/labSampRegister/showLabItem4Select.action?labItemVo.categoryIds='+typeId+'&labItemVo.index='+index,
-					title:'受控项目信息',
+					title:'<s:property value="getText('cont.item.info')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,
@@ -324,7 +324,7 @@
 																id="sampRegisterNum" type="text"
 																value="${labQuaProficiencyPlanVo.sampRegisterNum}" />&nbsp;&nbsp;
 															&nbsp;&nbsp;
-															<l:a href="#" uri="quality/proficiencyPlan/updateLabQuaProficiencyPlan.action?labQuaProficiencyPlanVo.auditResult=0" value="生成检测内容" />
+															<l:a href="#" uri="quality/proficiencyPlan/updateLabQuaProficiencyPlan.action?labQuaProficiencyPlanVo.auditResult=0" value="generateconten" />
 														</td>
 													</tr>
 												</table>

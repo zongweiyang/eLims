@@ -154,7 +154,7 @@ html {
 						$.dialog({
 							id:'ids',
 							content:'url:'+url,
-							title:'下拉框显示值',
+							title:'<s:property value="getText('dorplistvalue')"/>',
 							opacity:0.4,
 							width:500,
 							height:300,
@@ -169,7 +169,7 @@ html {
 					$.dialog({
 							id:'ids',
 							content:'url:'+url,
-							title:'弹出层显示信息',
+							title:'<s:property value="getText('boxtaninfo')"/>',
 							opacity:0.4,
 							width:500,
 							height:300,

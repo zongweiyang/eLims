@@ -68,7 +68,7 @@ html {
 						if(date=='0'){
 						ajaxToContent(obj);
 						}else{
-						alert("该业务已经定义过！");
+						alert('<s:property value="getText('bizdifineds')"/>');
 						return false;
 						}
 						}
@@ -130,7 +130,7 @@ html {
 			       				}
 							},
 							error:function(){
-								alert('网络不通.');
+								alert('<s:property value="getText('network.error')"/>');
 							}
 						});
 					}else{
@@ -229,12 +229,12 @@ html {
 						}
 					}
 					if(m>3){
-						alert("只能选择三个属性！");
+						alert('<s:property value="getText('onlythreeattr')"/>');
 						$(obj).attr("checked",false);
 						m = m - 1;
 						return false;
 					}else if(n>3){
-						alert("只能选择三个属性！");
+						alert('<s:property value="getText('onlythreeattr')"/>');
 						$(obj).attr("checked",false);
 						n = n - 1;
 						return false;
@@ -280,7 +280,7 @@ html {
 					lock:true
 				 });
 				 }else{
-				alert("请选择属性！");
+				alert('<s:property value="getText('plseattribute')"/>');
 				}
 		    }
 		    function ajax2TwoCode(){
@@ -308,7 +308,7 @@ html {
 					lock:true
 				 });
 				 }else{
-				alert("请选择属性！");
+				alert('<s:property value="getText('plseattribute')"/>');
 				}
 		    }
 			</script>

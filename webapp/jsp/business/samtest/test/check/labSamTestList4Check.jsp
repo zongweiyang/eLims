@@ -101,7 +101,7 @@
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																	<l:a  uri="samtest/labSamTask/preUpdateSamTask4IssuedBeach.action" onclick="javaScript:alert('假动作');"  img="img/add.gif" value="批量录入" />
+																	<l:a  uri="samtest/labSamTask/preUpdateSamTask4IssuedBeach.action" onclick="javaScript:alert('假动作');"  img="img/add.gif" value="batchinputd" />
 																</td>
 															</tr>
 														</table>

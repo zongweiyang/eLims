@@ -97,7 +97,7 @@ html {
 				   	 	$('#method'+index).append(optionStr);
 				   	 },
 				   	 error:function (data){
-				   	 	alert('请求错误.');
+				   	 	alert('<s:property value="getText('config.request.error')"/>');
 				   	 }
 				});
 		 	}
@@ -122,7 +122,7 @@ html {
 				   	 	onchangex(obj,index);
 				   	 },
 				   	 error:function (data){
-				   	 	alert('请求错误.');
+				   	 	alert('<s:property value="getText('config.request.error')"/>');
 				   	 }
 				});
 		 	}

@@ -40,7 +40,7 @@ function ajax4AddFolder(pid){
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件夹新增',
+			title:'<s:property value="getText('folderadded')"/>',
 			opacity:0.4,
 			width:600,
 			height:400,
@@ -93,7 +93,7 @@ function ajax4AddFolder(pid){
 	$.dialog({
 		pid:'pid',
 		content:'url:'+url,
-		title:'文件详情',
+		title:'<s:property value="getText('filedestails')"/>',
 		opacity:0.4,
 		width:500,
 		height:300,
@@ -113,7 +113,7 @@ function ajax4AddFolder(pid){
 		$.dialog({
 			pid:'pid',
 			content:'url:'+url,
-			title:'文件夹现修改',
+			title:'<s:property value="getText('filemodified')"/>',
 			opacity:0.4,
 			width:600,
 			height:400,

@@ -18,7 +18,7 @@
 
 		function submitValue()	{
 			if($('#fileName').val()==''){
-				alert("请输入名称");
+				alert('<s:property value="getText('inputname')"/>');
 				return false;
 			}else{
 				var df = document.labDocForm;	

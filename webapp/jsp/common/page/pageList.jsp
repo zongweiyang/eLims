@@ -25,7 +25,7 @@
 			dataType:'text',
 	  		success:function (data){
 	   	  		if(data=="false"){
-					alert("此文件不存在");
+					alert('<s:property value="getText('filenotexist')"/>');
 					return ;
 				}else{
 					window.location.href = '<%=basePath%>page/labPageEditor/preUpdateLabPage4Edit.action?labPageEditorVo.id='+id;
@@ -37,7 +37,7 @@
 		$.dialog({
 			id:'filePage',
 			content:'url:'+'<%=basePath%>/page/labPageEditor/'+actionstr,
-			title:'页面列表',
+			title:'<s:property value="getText('pagelistedsdf')"/>',
 			opacity:0.4,
 			width:800, 
 			height:500,

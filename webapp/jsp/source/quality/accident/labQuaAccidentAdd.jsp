@@ -10,7 +10,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>/quality/accident/showLabCustomer4select.action?labQuaAccidentVo.accUnitId='+accUnitId,
-					title:'单位列表',
+					title:'<s:property value="getText('departlist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,
@@ -24,7 +24,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>/quality/accident/showLabSampRegister4select.action?labQuaAccidentVo.otherId='+otherId,
-					title:'送检单列表',
+					title:'<s:property value="getText('sendchecklist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,

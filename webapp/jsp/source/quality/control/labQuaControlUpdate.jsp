@@ -57,7 +57,7 @@
        				}
        			},
        			error:function (){
-       				alert('您的网络不通.');
+       				alert('<s:property value="getText('network.error')"/>');
        			}
        		});
        }
@@ -66,7 +66,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/control/showLabAppara4select.action?labQuaControlVo.appId='+appId,
-					title:'仪器列表',
+					title:'<s:property value="getText('apprllist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,

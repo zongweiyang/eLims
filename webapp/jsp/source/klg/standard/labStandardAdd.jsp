@@ -21,7 +21,7 @@ html {
 					var index=uploadTest.lastIndexOf(".");
 					var newLoad=uploadTest.substring(index+1,uploadTest.length);
 					if(newLoad=="rar"){
-						alert("不能上传rar压缩文件!");
+						alert('<s:property value="getText('cannotuploadrad')"/>');
 						return false;
 					}
 				}
@@ -53,13 +53,13 @@ html {
 					dataType:'text',
 					success:function(data){
 						if(data=='1'){
-							alert('标准编号已经存在.');
+							alert('<s:property value="getText('stdcodeisexist')"/>');
 							$(obj).val("");
 							$(obj).select();
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}
@@ -84,7 +84,7 @@ html {
 			   $.dialog({
 					id:'id',
 					content:'url:'+url,
-					title:'标准文件上传',
+					title:'<s:property value="getText('stdfileupload')"/>',
 					opacity:0.4,
 					width:300, 
 					height:80,
@@ -99,7 +99,7 @@ html {
 					$.dialog({
 						id:'ids',
 						content:'url:'+url,
-						title:'代替标准选择',
+						title:'<s:property value="getText('stdstdseelct')"/>',
 						opacity:0.4,
 						width:800,
 						height:500,
@@ -176,7 +176,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															标准编号：
+															<s:text name="biaozcode"/>：
 														</label>
 													</td>
 													<td>
@@ -184,7 +184,7 @@ html {
 													</td>
 													<td>
 														<label>
-															标准名称：
+															<s:text name="std.name"/>：
 														</label>
 													</td>
 													<td>
@@ -210,9 +210,9 @@ html {
 													</td>
 												</tr>
 												<tr>
-													<td><label>标准分级：</label></td>
+													<td><label><s:text name="biaolenave"/>：</label></td>
 													<td>
-														<s:select list="{'国家标准','行业标准','地质标准'}" name="labStandardVo.standIndex" value="%{labStandardVo.standIndex}" theme="simple"></s:select>
+														<s:select list="{getText('countstd'),getText('induststd'),getText('dizhiindustry')}" name="labStandardVo.standIndex" value="%{labStandardVo.standIndex}" theme="simple"></s:select>
 													</td>
 													<td>
 														<label>

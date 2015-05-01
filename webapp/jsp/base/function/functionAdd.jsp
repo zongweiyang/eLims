@@ -38,7 +38,7 @@
 			dataType:'text',
 	  		success:function (data){
 	   	  		if(data=="true"){
-					alert("此功能名已存在，请重新输入");
+					alert('<s:property value="getText('name.exist')"/>');
 					$(obj).val('');
 				}
 			}
@@ -55,7 +55,7 @@
 			dataType:'text',
 	  		success:function (data){
 	   	  		if(data=="true"){
-					alert("编号已存在，请重新输入.");
+					alert('<s:property value="getText('code.exist')"/>');
 					$(obj).val('');
 				}
 			}

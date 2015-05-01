@@ -37,7 +37,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/manage/showLabQuaManageCheckPlan4select.action',
-					title:'管理评审计划列表',
+					title:'<s:property value="getText('mangeplanlist')"/>',
 					opacity:0.4,
 					width:900, 
 					height:400,

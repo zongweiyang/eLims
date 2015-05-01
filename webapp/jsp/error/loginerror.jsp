@@ -16,7 +16,7 @@
 .errorblock a:hover {text-decoration:underline;color:#333;font-weight:bold;} 
 </style>
 <script   language='javascript'>
-alert("您已经安全退出，请重新登录！");
+alert('<s:property value="getText('existsecuty')"/>');
 window.parent.parent.location.href='<%=basePath%>coreextend/extend/login.action';
 </script>
 </head>

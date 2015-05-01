@@ -201,7 +201,7 @@
 															<l:a href="#" uri="quality/planEle/preAddLabQuaAuditRecord.action?labQuaAuditRecordVo.quaAuditPlanEleId=${id}&labQuaAuditRecordVo.quaAuditPlanEleName=${purpose }" value="记录"/>	
 															<s:if test="${accStatus == ''|| accStatus == null || accStatus=='0'}">
 																&nbsp;&nbsp;
-																<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-NBSP');" value="转事故"/>	
+																<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-NBSP');" value="transferaccid"/>	
 															</s:if>
 															</td>
 														</tr>

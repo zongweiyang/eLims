@@ -117,7 +117,7 @@ html {
        				}
 				},
 				error:function(){
-					alert('网络不通.');
+					alert('<s:property value="getText('network.error')"/>');
 				}
 			});
 		}else{

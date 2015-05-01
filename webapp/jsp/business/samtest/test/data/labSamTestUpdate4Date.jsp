@@ -91,13 +91,13 @@ html {
 		function submitvalueforlist(){
 			 var file = $('#file').val();
 		    if(file == ''){
-		    	alert("请选择文件！");
+		    	alert('<s:property value="getText('plseselectfile')"/>');
 		    	return false;
 		    }
 		    var stuff=file.match(/^(.*)(\.)(.{1,8})$/)[3]; 
 	        if(stuff!='xls')
 	        {
-	           alert('文件类型不正确，请选择.xls文件');
+	           alert('<s:property value="getText('xlsplesefile')"/>');
 	           return false;
 	        }
 			submitValue('samtest/labSamTest/updateLabSamTest4Validate.action');
@@ -108,7 +108,7 @@ html {
 		   $.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'原始记录单上传',
+				title:'<s:property value="getText('yaunshibill')"/>',
 				opacity:0.4,
 				width:300, 
 				height:300,
@@ -123,7 +123,7 @@ html {
 		   $.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'附件上传',
+				title:'<s:property value="getText('attupload')"/>',
 				opacity:0.4,
 				width:300, 
 				height:300,
@@ -162,7 +162,7 @@ html {
  	 $.dialog({
 			id:'parentShowInfo',
 			content:'url:'+'<%=basePath%>samtest/labSamTest/showLabSamTestInfo.action?labSamTestBeatchVo.id='+$("#labSamTestBeatchId").val(),
-			title:'数据录入信息预览：',
+			title:'<s:property value="getText('datainputinfo')"/>',
 			opacity:0.4,
 			width:800, 
 			height:600,

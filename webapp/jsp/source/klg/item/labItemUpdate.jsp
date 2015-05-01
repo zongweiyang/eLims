@@ -25,13 +25,13 @@
 					dataType:'text',
 					success:function(data){
 						if(data=='1'&& name!=$(obj).val()){
-							alert('项目名已经存在.');
+							alert('<s:property value="getText('itemnameisexis')"/>');
 							$(obj).val("");
 							$(obj).select();
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}
@@ -40,7 +40,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>klg/labItem/showLabAppara4select.action?labItemVo.appId='+appId,
-					title:'仪器列表',
+					title:'<s:property value="getText('apprllist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,
@@ -52,7 +52,7 @@
 			function checkDemo1(){
 				var demo1 = $("#demo1").val();
 				if(!/^[0-9]*$/.test(demo1)){
-					alert("标准分值请填写数字!");
+					alert('<s:property value="getText('stdvalueinput')"/>');
 					$("#demo1").select();
 				}
 			}

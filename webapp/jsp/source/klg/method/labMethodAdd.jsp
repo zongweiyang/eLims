@@ -16,7 +16,7 @@
 			function submitforform(){
 				var name=$('#name').val();
 				if(name.length==0){
-					alert("请输入受控方法名称.");
+					alert('<s:property value="getText('conrnamemethod')"/>');
 					return false;
 				}
 				$('#form').submit();
@@ -25,7 +25,7 @@
 			function goToNextAction(url){
 				var name=$('#name').val();
 				if(name.length==0){
-					alert("请输入检测方法名称.");
+					alert('<s:property value="getText('plseinputchkmethod')"/>');
 					return false;
 				}
 				$('#form').attr('action','${basePath}'+url);
@@ -48,7 +48,7 @@
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}
@@ -89,7 +89,7 @@
 				$.dialog({
 					id:'power',
 					content:'url:'+url,
-					title:'仪器选择：',
+					title:'<s:property value="getText('sleapptus')"/>',
 					maxBtn:false,
 					rang: true,
 					drag: true,

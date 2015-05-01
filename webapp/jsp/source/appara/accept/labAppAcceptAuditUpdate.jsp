@@ -14,7 +14,7 @@
          var flage = $("input[name=labApparaAcceptVo.auditResult]:checked").val();
 	    if("-1"==flage){
 	    	if(''==$("#auditMessage").val()){
-		    	alert("请填写审核意见");
+		    	alert('<s:property value="getText('plseauditopinon')"/>');
 	    		return false;
 	    	}
 	    }

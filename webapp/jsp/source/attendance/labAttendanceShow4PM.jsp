@@ -41,7 +41,7 @@ html {
 		          	 }
 			   	  },
 			   	  error:function (data){
-			   	  	alert('请求错误.');
+			   	  	alert('<s:property value="getText('config.request.error')"/>');
 			   	  }
 			   });	 
 			}

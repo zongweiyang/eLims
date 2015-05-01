@@ -25,12 +25,12 @@
 					dataType:'text',
 					success:function(data){
 						if(data=='1'){
-							alert('检测方法名称已经存在.');
+							alert('<s:property value="getText('cheknameisexis')"/>');
 							$(obj).select();
 						}
 					},
 					error:function(){
-						alert('网络不通.');
+						alert('<s:property value="getText('network.error')"/>');
 					}
 				});
 			}
@@ -41,7 +41,7 @@
 			   $.dialog({
 					id:'id',
 					content:'url:'+url,
-					title:'标准文件上传',
+					title:'<s:property value="getText('stdfileupload')"/>',
 					opacity:0.4,
 					width:300, 
 					height:80,
@@ -73,7 +73,7 @@
 				$.dialog({
 					id:'power',
 					content:'url:'+url,
-					title:'仪器选择：',
+					title:'<s:property value="getText('sleapptus')"/>',
 					maxBtn:false,
 					rang: true,
 					drag: true,

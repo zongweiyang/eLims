@@ -17,7 +17,7 @@
 		 		var value="";
 		 		var html='<select name="labQueryVo.listQuery['+id+'].value" id="select'+id+'">';
 		 		if(info==''){
-		 			alert('请输入表达式');
+		 			alert('<s:property value="getText('plseexpingo')"/>');
 		 		}else{
 					$("input").each(function(){
 						value+=$(this).val();
@@ -84,7 +84,7 @@
 					type:'post',
 					dataType:'json',
 					success:function (data){
-						var html='<tr><td colspan="4"><l:a uri="query/labQuery/listLabQuery.action" onclick="goBack();" value="page.confirm" /><l:a uri="query/labQuery/addLabQuery.action" onclick="addRow();" value="added" /><l:a uri="query/labQuery/deleteLabQuery.action" onclick="deleteRow();" value="lab.code.del" /><l:a uri="query/labQuery/list.action" onclick="showSelect();" value="自动获取" /></td></tr>';	
+						var html='<tr><td colspan="4"><l:a uri="query/labQuery/listLabQuery.action" onclick="goBack();" value="page.confirm" /><l:a uri="query/labQuery/addLabQuery.action" onclick="addRow();" value="added" /><l:a uri="query/labQuery/deleteLabQuery.action" onclick="deleteRow();" value="lab.code.del" /><l:a uri="query/labQuery/list.action" onclick="showSelect();" value="autogets" /></td></tr>';	
 						$.each(data, function(){   
 						    html+='<tr>';
 							html+='<td><label>显示值</label> </td>';
@@ -125,7 +125,7 @@
 						<l:a uri="query/labQuery/listLabQuery.action" onclick="goBack();" value="page.confirm" />
 						<l:a uri="query/labQuery/addLabQuery.action" onclick="addRow();" value="added" />
 						<l:a uri="query/labQuery/deleteLabQuery.action" onclick="deleteRow();" value="lab.code.del" />
-						<l:a uri="query/labQuery/list.action" onclick="showSelect();" value="自动获取" />
+						<l:a uri="query/labQuery/list.action" onclick="showSelect();" value="autogets" />
 					</td>
 				</tr>
 				<tr>

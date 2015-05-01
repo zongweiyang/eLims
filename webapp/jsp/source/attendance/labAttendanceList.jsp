@@ -44,7 +44,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'今日考勤',
+				title:'<s:property value="getText('todayatten')"/>',
 				opacity:0.4,
 				max: false,                  
 		        min: false,
@@ -58,7 +58,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'考勤补签',
+				title:'<s:property value="getText('attenbuchan')"/>',
 				opacity:0.4,
 				max: false,                  
 		        min: false,

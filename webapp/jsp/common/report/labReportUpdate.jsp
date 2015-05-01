@@ -70,7 +70,7 @@ html {
 				   	  	$('#busCode').val(vv[1]);
 				   	  	$('#busId').val(vv[0]);
 				   }else{
-				   		alert("数据异常");
+				   		alert('<s:property value="getText('dataexception')"/>');
 				   }
 				}
 			</script>

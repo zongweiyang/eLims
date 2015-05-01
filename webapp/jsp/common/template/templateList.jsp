@@ -40,7 +40,7 @@
 		$.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'模板定义',
+			title:'<s:property value="getText('moduledefine')"/>',
 			opacity:0.4,
 			width:1050,
 			height:height,

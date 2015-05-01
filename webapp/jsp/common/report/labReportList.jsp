@@ -36,7 +36,7 @@ html {
 					}     
 				}  
 				if(m<1){
-					alert("请选择要删除的记录！");
+					alert('<s:property value="getText('lab.selectdelete')"/>');
 					return false;
 				}else{
 					return true;
@@ -64,7 +64,7 @@ html {
 				$.dialog({
 					id:'id',
 					content:'url:'+url,
-					title:'报告设计',
+					title:'<s:property value="getText('reprotdesign')"/>',
 					opacity:0.4,
 					width:1050,
 					height:height,
@@ -76,7 +76,7 @@ html {
 			function submit4Copy(){
 				var idLength=$('input[name="labReportVo.ids"]:checked').length;
 		    	if(idLength!=1){
-		    		alert("请选择一条数据进行复制.");
+		    		alert('<s:property value="getText('copyonedata')"/>');
 		    		return false;
 		    	}else{
 		    		var id=$('input[name="labReportVo.ids"]:checked').val();

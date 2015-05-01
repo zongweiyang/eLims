@@ -45,7 +45,7 @@
 		               			 		checkColum='';
 		          				 } 
 							}catch(e){
-								alert('请检查提供的json数据格式。');
+								alert('<s:property value="getText('jsonformate')"/>');
 								return ;
 							}
 								jsonVlue=data;
@@ -53,7 +53,7 @@
 								$("#showDiv table").append(html);
 								$("#showDiv").show();
 					   	  },error: function(XMLHttpRequest, textStatus, errorThrown) {
-                        	alert('请检查路径');
+                        	alert('<s:property value="getText('chekcpath')"/>');
                  		 }
 		 			 });
 		 			

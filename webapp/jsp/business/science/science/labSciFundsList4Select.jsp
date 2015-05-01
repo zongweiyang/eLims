@@ -38,7 +38,7 @@
 				   $.dialog({
 							id:'processId',
 							content:'url:'+url,
-							title:'经费详情',
+							title:'<s:property value="getText('fundinfo')"/>',
 							opacity:0.4,
 							width:900,
 							height:400,
@@ -205,7 +205,7 @@
 					                                                    </td>
 					                                                    <td class="c">${remark}</td>
 																		<td class="c">
-																			<l:a href="#" uri="science/labScience/showLabSciFunds4Select.action" onclick="showLabSciFunds('${id }');" value="详情"/>	
+																			<l:a href="#" uri="science/labScience/showLabSciFunds4Select.action" onclick="showLabSciFunds('${id }');" value="details.info"/>	
 																		</td>
 																	</tr>
 																</s:iterator>

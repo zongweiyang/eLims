@@ -92,7 +92,7 @@
 				$.dialog({
 					id:'power',
 					content:'url:'+url,
-					title:'新增预约：',
+					title:'<s:property value="getText('addedpre')"/>',
 					maxBtn:false,
 					rang: true,
 					drag: true,
@@ -115,7 +115,7 @@
 				$.dialog({
 					id:'power',
 					content:'url:'+url,
-					title:'修改预约：',
+					title:'<s:property value="getText('todayreserve')"/>',
 					maxBtn:false,
 					rang: true,
 					drag: true,
@@ -182,7 +182,7 @@
 					}
 					var bespeakEndDate= year+"-"+month+"-"+date+" "+hour+":"+minutes +":"+second;
 		    	}else{
-		    		alert("请填写预约结束时间！");
+		    		alert('<s:property value="getText('preendtiem')"/>');
 		    		revertFunc();
 		    		return false;
 		    	}
@@ -196,14 +196,14 @@
 							dataType:'text',
 							success:function(data){
 								if('false'==data){
-									alert('时间冲突修改失败!');
+									alert('<s:property value="getText('tiemconsionfailu')"/>');
 									revertFunc();
 								}else{
-									alert('修改成功!');
+									alert('<s:property value="getText('modify.success')"/>');
 								}
 							},
 							error:function(){
-								alert('网络不通.');
+								alert('<s:property value="getText('network.error')"/>');
 							}
 						});
 		    	}

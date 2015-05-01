@@ -15,7 +15,7 @@
 			function checkNum(obj){
 				var val=$(obj).val();
 				if(isNaN(val)){
-					alert("请输入正确数字！");
+					alert('<s:property value="getText('pleseinpunumber')"/>');
 					$(obj).val(0);
 				}
 			}
@@ -290,7 +290,7 @@
 															<input  valType="number" msg="样品数量输入不正确！" size="40" valType="number"  name="labQuaProficiencyPlanVo.sampRegisterNum"
 																id="sampRegisterNum" type="text"
 																value="${labQuaProficiencyPlanVo.sampRegisterNum}"/>&nbsp;&nbsp;
-															<l:a href="#" uri="quality/proficiencyPlan/addLabQuaProficiencyPlan.action?labQuaProficiencyPlanVo.auditResult=0" value="生成检测内容" />
+															<l:a href="#" uri="quality/proficiencyPlan/addLabQuaProficiencyPlan.action?labQuaProficiencyPlanVo.auditResult=0" value="generateconten" />
 														</td>
 													</tr>
 												</table>

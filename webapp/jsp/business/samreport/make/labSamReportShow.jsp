@@ -58,7 +58,7 @@ function showReport(){
 	$.dialog({
 		id:'id',
 		content:'url:'+url,
-		title:'打印页面',
+		title:'<s:property value="getText('pageprint')"/>',
 		opacity:0.4,
 		width:1050,
 		height:height,

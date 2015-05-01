@@ -56,7 +56,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/managePlan/showLabQuaManageCheckRecord.action?labQuaManageCheckVo.id='+id,
-					title:'详情',
+					title:'<s:property value="getText('details.info')"/>',
 					opacity:0.4,
 					width:900, 
 					height:500,
@@ -280,7 +280,7 @@
 															${recTime }
 														</td>
 														<td class="c">
-															<l:a href="#" uri="quality/managePlan/showLabQuaManageCheckRecord.action" onclick="showLabQuaManageCheckRecord('${id}');"  value="详情" />
+															<l:a href="#" uri="quality/managePlan/showLabQuaManageCheckRecord.action" onclick="showLabQuaManageCheckRecord('${id}');"  value="details.info" />
 															&nbsp;&nbsp;
 															<l:a href="#" uri="quality/managePlan/deleteLabQuaManageCheckRecord.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 														</td>

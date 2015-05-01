@@ -22,7 +22,7 @@ html {
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>klg/labStandardItem/preImportLabStandardItemMethod4Excel.action',
-					title:'标准量化导入',
+					title:'<s:property value="getText('lianghuaimport')"/>',
 					opacity:0.4,
 					width:400, 
 					height:300,
@@ -74,7 +74,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		标准名称：
+																		<s:text name="std.name"/>：
 																	</label>
 																</td>
 																<td>
@@ -82,7 +82,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		标准编号：
+																		<s:text name="biaozcode"/>：
 																	</label>
 																</td>
 																<td>
@@ -109,10 +109,10 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="name">
-													标准名称
+													<s:text name="std.name"/>
 												</th>
 												<th property="code">
-													标准编号
+													<s:text name="biaozcode"/>
 												</th>
 												<th property="standIndex">
 													<s:text name="regular.no"/>型号

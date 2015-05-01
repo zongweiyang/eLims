@@ -29,7 +29,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/auditRecord/showLabQuaAuditPlanEle4select.action',
-					title:'内审计划列表',
+					title:'<s:property value="getText('internchecklist')"/>',
 					opacity:0.4,
 					width:900, 
 					height:400,
@@ -45,7 +45,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+url,
-					title:'打印页面',
+					title:'<s:property value="getText('pageprint')"/>',
 					opacity:0.4,
 					width:1050,
 					height:height,             

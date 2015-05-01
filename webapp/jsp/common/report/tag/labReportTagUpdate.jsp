@@ -167,7 +167,7 @@ html {
 	function deleteOne(obj){
 		var length=$(obj).parent().parent().parent().find('tr').length;
 		if(length<=1){
-			alert("不能删除全部.");
+			alert('<s:property value="getText('cannotdeleteall')"/>');
 			return false;
 		}
 		if(confirm('<s:property value="getText('msg.confirm.del')"/>')){

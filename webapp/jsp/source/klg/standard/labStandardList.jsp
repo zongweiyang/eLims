@@ -38,7 +38,7 @@ html {
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>klg/labStandard/preImportLabStandard4Excel.action?labStandardVo.standTypeId=${labStandardVo.standTypeId}&labStandardVo.standTypeName=${labStandardVo.standTypeName}',
-					title:'标准导入',
+					title:'<s:property value="getText('stdimport')"/>',
 					opacity:0.4,
 					width:400, 
 					height:200,
@@ -95,7 +95,7 @@ html {
 															<tr>
 																<td>
 																	<label>
-																		标准名称：
+																		<s:text name="std.name"/>：
 																	</label>
 																</td>
 																<td>
@@ -103,7 +103,7 @@ html {
 																</td>
 																<td>
 																	<label>
-																		标准编号：
+																		<s:text name="biaozcode"/>：
 																	</label>
 																</td>
 																<td>
@@ -132,7 +132,7 @@ html {
 																	<l:a uri="klg/labStandard/deleteLabStandard.action" onclick="deleteEntityForBatch('/klg/labStandard/deleteLabStandard.action');" value="lab.code.deleteall" />	
 																</td>
 																<td>
-																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="导入标准"/>
+																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="inbiaozhun"/>
 																</td>
 															</tr>
 														</table>
@@ -149,13 +149,13 @@ html {
 													<img src="<%=basePath%>img/icon_drag.gif" />
 												</th>
 												<th property="name">
-													标准名称
+													<s:text name="std.name"/>
 												</th>
 												<th property="code">
-													标准编号
+													<s:text name="biaozcode"/>
 												</th>
 												<th property="standIndex">
-													标准分级
+													<s:text name="biaolenave"/>
 												</th>
 												<th property=standStatus>
 													<s:text name="sam.state"/>

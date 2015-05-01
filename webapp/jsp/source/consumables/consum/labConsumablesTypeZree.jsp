@@ -155,7 +155,7 @@
 						}else if(data.length!=32&&data.length>0){
 							alert(data);
 						}else{
-							alert("增加异常.");
+							alert('<s:property value="getText('addexcepton')"/>');
 						}
 					},
 					error:function(){

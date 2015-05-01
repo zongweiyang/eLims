@@ -10,7 +10,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/complain/showLabCustomer4select.action?labQuaComplainVo.unitId='+unitId,
-					title:'单位列表',
+					title:'<s:property value="getText('departlist')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,

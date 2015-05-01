@@ -34,7 +34,7 @@ function submitvalue(actionstr){
 	   $.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'logo上传',
+			title:'<s:property value="getText('logo.upload')"/>',
 			opacity:0.4,
 			width:300, 
 			height:80,

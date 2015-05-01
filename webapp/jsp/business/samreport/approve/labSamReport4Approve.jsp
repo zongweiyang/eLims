@@ -61,7 +61,7 @@ function submit2Back(actionstr){
 	var html = $('#auditMessage').html();
 	html=html.replace(/(^\s*)|(\s*$)/g,'');
 	if(html==''){
-		alert('请输入审核意见.');
+		alert('<s:property value="getText('input.audited')"/>');
 		return false;
 	}
 	submitvalue(actionstr);
@@ -72,7 +72,7 @@ function showReport(){
 	$.dialog({
 		id:'id',
 		content:'url:'+url,
-		title:'打印页面',
+		title:'<s:property value="getText('pageprint')"/>',
 		opacity:0.4,
 		width:1050,
 		height:height,

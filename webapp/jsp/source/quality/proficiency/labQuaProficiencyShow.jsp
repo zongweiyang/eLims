@@ -24,7 +24,7 @@
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath %>quality/proficiency/showLabQuaProficiencyPlan4select.action',
-					title:'比对验证计划列表',
+					title:'<s:property value="getText('duibichecklist')"/>',
 					opacity:0.4,
 					width:900, 
 					height:400,

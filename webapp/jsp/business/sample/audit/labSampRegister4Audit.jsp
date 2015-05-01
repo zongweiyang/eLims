@@ -63,7 +63,7 @@ html {
 			var html = $('#auditMessage').html();
 			html=html.replace(/(^\s*)|(\s*$)/g,'');
 			if(html==''){
-				alert('请输入审核意见.');
+				alert('<s:property value="getText('input.audited')"/>');
 				return false;
 			}
 			submitvalue(actionstr);

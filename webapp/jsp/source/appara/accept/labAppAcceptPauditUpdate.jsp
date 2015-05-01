@@ -14,7 +14,7 @@
         var flage = $("input[name=labApparaAcceptVo.auditResult]:checked").val();
 	    if("-1"==flage){
 	    	if(''==$("#pauditMessage").val()){
-		    	alert("请填写审批意见");
+		    	alert('<s:property value="getText('plseinputopinion')"/>');
 	    		return false;
 	    	}
 	    }

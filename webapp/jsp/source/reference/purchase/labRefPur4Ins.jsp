@@ -53,7 +53,7 @@ html {
 				$.dialog({
 					id:'roleId',
 					content:'url:'+url,
-					title:'标准品列表',
+					title:'<s:property value="getText('standardllist')"/>',
 					opacity:0.4,
 					width:800,
 					height:500,

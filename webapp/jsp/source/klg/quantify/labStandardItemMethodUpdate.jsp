@@ -25,7 +25,7 @@ html {
 				$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath%>/klg/labStandardItem/showLabStandardItem4select.action?labStandardItemVo.standardId=${labStandardVo.id}',
-					title:'关联项目',
+					title:'<s:property value="getText('relaitem')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,
@@ -41,7 +41,7 @@ html {
 		    	$.dialog({
 					id:'id',
 					content:'url:'+'<%=basePath%>/klg/labStandardItem/showLabStandardMinItem4select.action?labStandardItemVo.standardId=${labStandardVo.id}&labStandardItemVo.itemId='+itemId,
-					title:'增加小项',
+					title:'<s:property value="getText('addalittle')"/>',
 					opacity:0.4,
 					width:800, 
 					height:500,
@@ -85,7 +85,7 @@ html {
 		    			$.dialog({
 							id:'id',
 							content:'url:'+'<%=basePath%>/klg/labStandardItem/showLabMethod4select.action?labStandardItemMethodVo.standardId=${labStandardVo.id}&labStandardItemMethodVo.itemId=${labStandardItemMethodVo.itemId}&labStandardItemMethodVo.methodIds=${labStandardItemMethodVo.methodIds}&currentPages='+currentPage+'&pagerMethods='+pagerMethod+'&pageSizes='+pageSize,
-							title:'受控方法',
+							title:'<s:property value="getText('contrmethod')"/>',
 							opacity:0.4,
 							width:800, 
 							height:500,
@@ -206,7 +206,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															标准名称：
+															<s:text name="std.name"/>：
 														</label>
 													</td>
 													<td>
@@ -214,7 +214,7 @@ html {
 													</td>
 													<td>
 														<label>
-															标准编号：
+															<s:text name="biaozcode"/>：
 														</label>
 													</td>
 													<td>

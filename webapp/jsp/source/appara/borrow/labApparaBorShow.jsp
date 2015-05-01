@@ -19,7 +19,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器借用单打印',
+			title:'<s:property value="getText('appborrowprint')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

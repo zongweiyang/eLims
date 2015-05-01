@@ -22,7 +22,7 @@ html {
 			var minSize = $("#minSize").val();
 			var maxSize = $("#maxSize").val();
 			if(minSize>maxSize){
-				alert("后面的数量应该大于等于前面的数量！");
+				alert('<s:property value="getText('tagerrornumber')"/>');
 				return false;
 			}
 			var df=document.regentForm;
@@ -118,7 +118,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'试剂类型列表',
+				title:'<s:property value="getText('appdtypelist')"/>',
 				opacity:0.4,
 				width:600,
 				height:400,
@@ -133,7 +133,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'试剂类型列表',
+				title:'<s:property value="getText('appdtypelist')"/>',
 				opacity:0.4,
 				width:400,
 				height:300,
@@ -258,13 +258,13 @@ html {
 																	<l:export params="labReagentVo,pageResult" type="excel" source="${labReagentVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}" />
 																</td>
 																<td>
-																	<l:a uri="reagent/labReagent/preAddLabReagent.action" onclick="importReagent('${labReagentVo.reagentTypeId}');return false;" value="导入试剂清单" img="/img/daoru.gif"/>
+																	<l:a uri="reagent/labReagent/preAddLabReagent.action" onclick="importReagent('${labReagentVo.reagentTypeId}');return false;" value="importreadlist" img="/img/daoru.gif"/>
 																</td>
 																<td>
-																	<l:a uri="reagent/labReagent/listLabReagent4printTwoCode.action" onclick="ajax2TwoCode();return false;" value="打印二维码" />
+																	<l:a uri="reagent/labReagent/listLabReagent4printTwoCode.action" onclick="ajax2TwoCode();return false;" value="print.2d" />
 																</td>
 																<td>
-																	<l:a uri="reagent/labReagent/listLabReagent4printBarCode.action" onclick="ajax2BarCode();return false;" value="打印条形码" />
+																	<l:a uri="reagent/labReagent/listLabReagent4printBarCode.action" onclick="ajax2BarCode();return false;" value="print.bar" />
 																</td>
 																<!-- <td>
 																	<l:a

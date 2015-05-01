@@ -19,7 +19,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器验收单打印',
+			title:'<s:property value="getText('appcheckprint')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

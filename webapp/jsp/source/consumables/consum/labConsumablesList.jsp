@@ -19,7 +19,7 @@ html {
 			var minSize = $("#minSize").val();
 			var maxSize = $("#maxSize").val();
 			if(minSize>maxSize){
-				alert("后面的数量应该大于等于前面的数量！");
+				alert('<s:property value="getText('tagerrornumber')"/>');
 				return false;
 			}
 			var df=document.regentForm;

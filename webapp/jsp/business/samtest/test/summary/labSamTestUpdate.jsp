@@ -84,7 +84,7 @@ html {
 				var html = $('#auditMessage').html();
 				html=html.replace(/(^\s*)|(\s*$)/g,'');
 				if(html==''){
-					alert('请输入不合格意见.');
+					alert('<s:property value="getText('inpputnnotcorr')"/>');
 					return false;
 				}
 				$('form').attr('action','<%=basePath%>'+actionstr);

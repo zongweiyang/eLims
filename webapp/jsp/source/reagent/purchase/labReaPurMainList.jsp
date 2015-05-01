@@ -26,7 +26,7 @@ function showReport(busId){
 	$.dialog({
 		id:'id',
 		content:'url:'+url,
-		title:'打印页面',
+		title:'<s:property value="getText('pageprint')"/>',
 		opacity:0.4,
 		width:1050,
 		height:height,
@@ -227,9 +227,9 @@ function showProcess(id){
 																	test="${isOper!='Y' && (status=='采购审核'|| status=='采购审批')}">
 																	<l:a href="#"
 																		uri="reagent/labReaPurMain/showAllLabReaPurMainExcel.action?labReaPurMainVo.id=${id}"
-																		value="打印" />
+																		value="print" />
 																	<l:a href="#" uri="" onclick="showReport('${id}');"
-																		value="打印1" />
+																		value="print" />
 																</s:if>
 
 															</td>

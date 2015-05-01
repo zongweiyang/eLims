@@ -15,7 +15,7 @@
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'今日考勤',
+				title:'<s:property value="getText('todayatten')"/>',
 				opacity:0.4,
 				max: false,                  
 		        min: false,

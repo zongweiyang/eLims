@@ -407,7 +407,7 @@
 															${writeTime }
 														</td>
 														<td class="c">
-															<l:a href="#" uri="quality/auditRecord/showLabQuaAuditRecord.action" onclick="showLabQuaAuditRecord('${id}');"  value="详情" />
+															<l:a href="#" uri="quality/auditRecord/showLabQuaAuditRecord.action" onclick="showLabQuaAuditRecord('${id}');"  value="details.info" />
 															&nbsp;&nbsp;
 															<l:a href="#" uri="quality/planEle/deleteLabQuaAuditRecord.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 														</td>

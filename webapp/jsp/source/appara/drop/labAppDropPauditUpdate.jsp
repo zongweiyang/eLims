@@ -14,7 +14,7 @@
         var flage = $("input[name=labApparaDropVo.auditResult]:checked").val();
 	    if("-1"==flage){
 	    	if(''==$("#view3").val()){
-		    	alert("请填写审批意见");
+		    	alert('<s:property value="getText('plseinputopinion')"/>');
 	    		return false;
 	    	}
 	    }
@@ -26,7 +26,7 @@
 		$.dialog({
 			id:'power',
 			content:'url:'+url,
-			title:'仪器选择：',
+			title:'<s:property value="getText('sleapptus')"/>',
 			maxBtn:false,
 			rang: true,
 			drag: true,

@@ -64,7 +64,7 @@ function submit2Conf(actionstr){
 function showReport(flag){
 	var tempId=$('#tempId').val();
 	if(tempId==''){
-		alert("模版为选中或未配置.");
+		alert('<s:property value="getText('modleseletconfig')"/>');
 		return false;
 	}
 	var height = window.screen.height-250;
@@ -72,7 +72,7 @@ function showReport(flag){
 	$.dialog({
 		id:'id',
 		content:'url:'+url,
-		title:'打印页面',
+		title:'<s:property value="getText('pageprint')"/>',
 		opacity:0.4,
 		width:1050,
 		height:height,

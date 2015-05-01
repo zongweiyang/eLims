@@ -17,7 +17,7 @@
 		 		var value="";
 		 		var html='<select style="width:145px" name="labQueryVo.listQuery['+id+'].value" id="select'+id+'">';
 		 		if(info==''){
-		 			alert('请输入表达式');
+		 			alert('<s:property value="getText('plseexpingo')"/>');
 		 		}else{
 					$("input").each(function(){
 						value+=$(this).val();

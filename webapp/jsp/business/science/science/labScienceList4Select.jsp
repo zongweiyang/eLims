@@ -32,7 +32,7 @@
        		});
              if(i>1)
              {
-                 alert('只能选择一个项目');
+                 alert('<s:property value="getText('onlyoneitem')"/>');
                  return;
              }else{
        		 $('#labSciScienceId',D).val(id);

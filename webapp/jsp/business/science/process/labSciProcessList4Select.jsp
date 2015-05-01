@@ -24,7 +24,7 @@
 	   $.dialog({
 				id:'processId',
 				content:'url:'+url,
-				title:'过程详情',
+				title:'<s:property value="getText('procedure.detail')"/>',
 				opacity:0.4,
 				width:800,
 				height:400,
@@ -156,7 +156,7 @@ html {
 												<td>${contents}</td>
 												<td class="c">${createTime }</td>
 												<td class="c">
-													<l:a href="#" uri="science/labSciProcess/showLabSciProcess.action" onclick="showLabSciProcess('${id }');" value="详情"/>	
+													<l:a href="#" uri="science/labSciProcess/showLabSciProcess.action" onclick="showLabSciProcess('${id }');" value="details.info"/>	
 													&nbsp;&nbsp;<l:a href="#" uri="science/labSciProcess/deleteLabSciProcess.action?labSciProcessVo.ids=${id}"
 																		onclick="deleteOne('${id}','${labSciScienceId }');" value="lab.code.del" />
 												</td>

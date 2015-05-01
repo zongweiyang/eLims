@@ -35,7 +35,7 @@
 			}     
 		}  
 		if(m<1){
-			alert("请选择要申请的记录！");
+			alert('<s:property value="getText('plseaupplyredoc')"/>');
 			return false;
 		}else{
 			return true;
@@ -67,9 +67,9 @@
 							        }
 							        n=n+1;	
 							        if(url=='<%=basePath%>doc/labDoc/ajaxCheckPass.action'){
-							         alert('该文档已经通过!请选择其他文档');   
+							         alert('<s:property value="getText('docexistseleother')"/>');   
 							         }else{
-							          alert('您选择的文档已经被取消！'); 
+							          alert('<s:property value="getText('codeixsiscancel')"/>'); 
 							         }    
 							        return false;
 								}
@@ -80,9 +80,9 @@
 		}  
 			if(m<1){
 			if(url=='<%=basePath%>doc/labDoc/ajaxCheckPass.action'){
-				alert("请选择要通过的文档！");
+				alert('<s:property value="getText('plseselectdoc')"/>');
 			}else{
-			    alert("请选择要取消的文档！");
+			    alert('<s:property value="getText('plsecanceldoc')"/>');
 			}
 				return false;
 			}else{

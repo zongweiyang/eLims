@@ -41,14 +41,14 @@ function submitvalue(actionstr){
 		  dataType:'text',
 	   	  success:function (data){
 	   	  	if(data=="true"){
-             alert("此登陆名已存在，请重新输入");
+             alert('<s:property value="getText('exist.loginname')"/>');
               eq="1";
            	  }else{
                 eq="0";
               }
 	   	  },
 	   	  error:function (data){
-	   	  	alert('请求错误.');
+	   	  	alert('<s:property value="getText('config.request.error')"/>');
 	   	  }
 	   });	 
     	return eq;
@@ -91,7 +91,7 @@ function submitvalue(actionstr){
 		$.dialog({
 			id:'roleId',
 			content:'url:'+url,
-			title:'角色列表',
+			title:'<s:property value="getText('msg.role.list')"/>',
 			opacity:0.4,
 			width:800,
 			max: false,                  
@@ -101,7 +101,7 @@ function submitvalue(actionstr){
 		 });
 	}
 	function alertMsg(){
-		alert("组织改变，则原组织的所有权限全部清空，请谨慎操作！");
+		alert('<s:property value="getText('orgchangeallright')"/>');
 	}
 	function uploadFile(busId,busType){
 	   fileTypes = '*.jpg;*.gif;*.png;';
@@ -110,7 +110,7 @@ function submitvalue(actionstr){
 	   $.dialog({
 			id:'id',
 			content:'url:'+url,
-			title:'图片上传',
+			title:'<s:property value="getText('image.upload')"/>',
 			opacity:0.4,
 			width:300, 
 			height:80,

@@ -57,7 +57,7 @@
 					$.dialog({
 						id:'parentFunction',
 						content:'url:'+'<%=basePath%>/page/labPageEditor/preUpdatePageEdit4Formula.action?labPageEditorVo.id='+$("#jspUrlId").val(),
-						title:'编辑页面：',
+						title:'<s:property value="getText('editpage')"/>',
 						opacity:0.4,
 						width:800, 
 						height:500,

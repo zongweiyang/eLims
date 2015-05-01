@@ -180,7 +180,7 @@
 				//将数据反回去
 				goback();
 			}else{
-				alert("数据未填写完整！");
+				alert('<s:property value="getText('datanotall')"/>');
 			}
 		}
 		function goback(){

@@ -19,7 +19,7 @@ html {
 			var minSize = $("#minSize").val();
 			var maxSize = $("#maxSize").val();
 			if(minSize>maxSize){
-				alert("后面的数量应该大于等于前面的数量！");
+				alert('<s:property value="getText('tagerrornumber')"/>');
 				return false;
 			}
 			var df=document.regentForm;
@@ -76,7 +76,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'标准品类型列表',
+				title:'<s:property value="getText('stdtypelsit')"/>',
 				opacity:0.4,
 				width:600,
 				height:400,
@@ -91,7 +91,7 @@ html {
 			$.dialog({
 				id:'id',
 				content:'url:'+url,
-				title:'标准品类型列表',
+				title:'<s:property value="getText('stdtypelsit')"/>',
 				opacity:0.4,
 				width:400,
 				height:300,
@@ -285,15 +285,15 @@ html {
 																<td>
 																	<l:a uri="reference/labReference/preAddLabReference.action"
 																		onclick="importReference('${labReferenceVo.referenceTypeId}');return false;"
-																		value="导入标准品清单" />
+																		value="importstdlist" />
 																</td>
 																<td>
 																	<l:a uri="reference/labReference/preAddLabReference.action"
-																		onclick="ajax2TwoCode();return false;" value="打印二维码" />
+																		onclick="ajax2TwoCode();return false;" value="print.2d" />
 																</td>
 																<td>
 																	<l:a uri="reference/labReference/preAddLabReference.action"
-																		onclick="ajax2BarCode();return false;" value="打印条形码" />
+																		onclick="ajax2BarCode();return false;" value="print.bar" />
 																</td>
 															</tr>
 														</table>

@@ -20,7 +20,7 @@ html {
 		 		if(msg=='Y'){
 		 			W.flushThisWin();
 		 			api.close();
-		 			alert("补签成功！");
+		 			alert('<s:property value="getText('buchansuccess')"/>');
 		 		}
 		 	});
 		</script>

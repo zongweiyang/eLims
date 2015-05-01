@@ -26,7 +26,7 @@
 					}     
 				}  
 				if(m<1){
-					alert("请选择要删除的记录！");
+					alert('<s:property value="getText('lab.selectdelete')"/>');
 					return false;
 				}else{
 					return true;

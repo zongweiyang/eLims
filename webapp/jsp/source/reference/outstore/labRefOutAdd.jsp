@@ -46,7 +46,7 @@ html {
 			$.dialog({
 				id:'userId',
 				content:'url:'+url,
-				title:'标准品列表',
+				title:'<s:property value="getText('standardllist')"/>',
 				opacity:0.4,
 				width:600,
 				height:400,

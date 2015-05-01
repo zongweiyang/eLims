@@ -62,7 +62,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>管理评审<s:text name="plan.info"/>：</span>
+												<span><s:text name="manageauditlist"/>：</span>
 												<label style="float: right;margin-right: 20px;cursor: pointer;" onclick="javascript:$(this).parent().next().toggle();">[<font color="red"><s:text name="open.close"/></font>]</label>   
 											</div>
 											<table class="FormtableCon">
@@ -79,7 +79,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														评审计划：
+														<s:text name="auditplanded"/>：
 													</label>
 												</td>
 												<td>
@@ -93,7 +93,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														评审时间：
+														<s:text name="audittime"/>：
 													</label>
 												</td>
 												<td>
@@ -103,7 +103,7 @@
 												</td>
 											    <td class="r" width="150">
 													<label>
-														评审地点：
+														<s:text name="auditsite"/>：
 													</label>
 												</td>
 												<td>
@@ -116,7 +116,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													组长：
+													<s:text name="groupmaster"/>：
 														</label>
 												</td>
 												<td>
@@ -126,7 +126,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														组员：
+														<s:text name="grouppeople"/>：
 													</label>
 												</td>
 												<td>
@@ -147,7 +147,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													管理评审记录：
+													<s:text name="manageaccpreco"/>：
 														</label>
 												</td>
 												<td colspan="3">
@@ -187,7 +187,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														编&nbsp;&nbsp;制&nbsp;&nbsp;人：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -207,7 +207,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														批&nbsp;&nbsp;准&nbsp;&nbsp;人：
+														<s:text name="pizhunren"/>：
 													</label>
 												</td>
 												<td>
@@ -216,7 +216,7 @@
 												</td>
 												<td class="r" width="300">
 													<label>
-														批准日期：
+														<s:text name="acceptdate"/>：
 													</label>
 												</td>
 												<td>

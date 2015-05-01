@@ -64,14 +64,14 @@
 																		name="labQuaManageCheckVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																<td><label>管理评审计划：</label></td>
+																<td><label><s:text name="manageauditlist"/>：</label></td>
 																<td>
 																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue="--全部--"
 																		name="labQuaManageCheckVo.quaManageCheckPlanName" id="quaManageCheckPlanName" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
 					                      						<td>
-																	<label>进度：</label>
+																	<label><s:text name="progressing"/>：</label>
 																</td>
 																<td>
 																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="-全部-" name="labQuaManageCheckVo.status" id="status" onchange="submitAction();" />
@@ -112,16 +112,16 @@
 													<s:text name="commtunit"/>
 												</th>
 												<th>
-													管理评审计划
+													<s:text name="manageauditlist"/>
 												</th>
 												<th property="address">
-													评审地点
+													<s:text name="auditsite"/>
 												</th>
 												<th property="recTime">
-													评审时间
+													<s:text name="audittime"/>
 												</th>
 												<th property="recordTime">
-													进度
+													<s:text name="progressing"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -155,7 +155,7 @@
 																${status }
 															</td>
 															<td class="c">
-																<s:if test="${status == '管理评审记录'}">
+																<s:if test="${status == '<s:text name="manageaccpreco"/>'}">
 																	<l:a href="#" uri="quality/manage/showLabQuaManageCheckRecord.action?labQuaManageCheckVo.id=${id}"  value="look.check" />
 																</s:if>
 																<s:elseif test="${status == '管理评审报告'}">
@@ -166,7 +166,7 @@
 																</s:else>
 																<s:if test="${isOper=='Y'}"> 
 															  		&nbsp;&nbsp;
-															  		<l:a href="#" uri="quality/manage/preUpdateLabQuaManageCheckFile.action?labQuaManageCheckVo.id=${id}" value="归档" />
+															  		<l:a href="#" uri="quality/manage/preUpdateLabQuaManageCheckFile.action?labQuaManageCheckVo.id=${id}" value="archives" />
 																</s:if>	
 															</td>
 														</tr>

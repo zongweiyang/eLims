@@ -146,7 +146,7 @@
 										 		<tr>
 													<td class="r" width="150">
 														<label>
-															内审要素：
+															<s:text name="internaeles"/>：
 														</label>
 													</td>
 													<td>
@@ -160,7 +160,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															内审计划：
+															<s:text name="intendsdsplan"/>：
 														</label>
 													</td>
 													<td>
@@ -182,7 +182,7 @@
 													</td>
 													<td class="r" width="150">
 													<label>
-														内审地点：
+														<s:text name="interndsite"/>：
 													</label>
 												</td>
 												<td>
@@ -194,7 +194,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审组长：
+														<s:text name="auditleader"/>：
 													</label>
 												</td>
 												<td>
@@ -216,7 +216,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														编&nbsp;&nbsp;制&nbsp;&nbsp;人：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -334,7 +334,7 @@
 												<tr>
 												    <td class="r" width="150">
 													       <label>
-														存档说明：
+														<s:text name="docdesc"/>：
 															</label>
 													</td>
 													<td colspan="3">
@@ -344,7 +344,7 @@
 												<tr>
 												    <td class="r" width="150">
 														<label>
-															归档人：
+															<s:text name="coderman"/>：
 														</label>
 													</td>
 													<td>
@@ -353,7 +353,7 @@
 													</td>
 													<td class="r" width="240">
 														<label>
-															归档日期：
+															<s:text name="docerdate"/>：
 														</label>
 													</td>
 													<td>

@@ -51,7 +51,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>初始化内部要素</span>
+												<span><s:text name="initineterele"/></span>
 											</div>
 											<table class="FormtableCon">
 												<tr>

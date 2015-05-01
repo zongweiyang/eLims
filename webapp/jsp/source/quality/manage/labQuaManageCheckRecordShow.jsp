@@ -60,7 +60,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														评审计划名称：
+														<s:text name="auditplanname"/>：
 													</label>
 												</td>
 												<td>
@@ -70,7 +70,7 @@
 											<tr>
 												<td class="r" width="100">
 													<label>
-														评审地点：
+														<s:text name="auditsite"/>：
 													</label>
 												</td>
 												<td>
@@ -78,7 +78,7 @@
 												</td>
 											    <td class="r" width="150">
 													<label>
-														评审主持人：
+														<s:text name="acctlescte"/>：
 													</label>
 												</td>
 												<td>
@@ -88,7 +88,7 @@
 											<tr>
 												<td class="r" width="100">
 													<label>
-														评审日期：
+																<s:text name="acctptdate"/>：
 													</label>
 												</td>
 												<td>
@@ -96,7 +96,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														评审依据：
+																<s:text name="acceptreason"/>：
 													</label>
 												</td>
 												<td>
@@ -107,7 +107,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													组&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;长：
+													<s:text name="groupmaster"/>：
 														</label>
 												</td>
 												<td>
@@ -115,7 +115,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														组&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;员：
+														<s:text name="grouppeople"/>：
 													</label>
 												</td>
 												<td>
@@ -125,7 +125,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													批&nbsp;&nbsp;准&nbsp;&nbsp;人：
+													<s:text name="pizhunren"/>：
 														</label>
 												</td>
 												<td>
@@ -133,7 +133,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														批准时间：
+														<s:text name="pizhuNtime"/>：
 													</label>
 												</td>
 												<td>
@@ -143,7 +143,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													评审内容：
+													<s:text name="penshenconte"/>：
 														</label>
 												</td>
 												<td colspan="3">
@@ -161,7 +161,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														编&nbsp;&nbsp;制&nbsp;&nbsp;人：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td class="l" width="300">

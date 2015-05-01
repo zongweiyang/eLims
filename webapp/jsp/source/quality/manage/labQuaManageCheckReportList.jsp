@@ -52,13 +52,13 @@
 																</td>
 																<td>
 																	<label>
-																		存档状态：
+																		<s:text name="docstatus"/>：
 																	</label>
 																</td>
 																<td>
 																<s:select theme="simple" list="#{'':getText('alldata'),'0':getText('isartich'),'1':getText('unarchtided')}"  name="labQuaManageCheckVo.isFile"></s:select>
 																</td>
-																<td><label>管理评审计划：</label></td>
+																<td><label><s:text name="manageauditlist"/>：</label></td>
 																<td>
 																	<input name="labQuaManageCheckVo.quaManageCheckPlanName" id="quaManageCheckPlanName" value="${labQuaManageCheckVo.quaManageCheckPlanName }">
 																</td>
@@ -94,13 +94,13 @@
 													<s:text name="commtunit"/>
 												</th>
 												<th property="labQuaManageCheckPlan.name">
-													管理评审计划
+													<s:text name="manageauditlist"/>
 												</th>
 												<th property="address">
-													评审地点
+													<s:text name="auditsite"/>
 												</th>
 												<th property="labQuaManageCheckPlan.recTime">
-													评审时间
+													<s:text name="audittime"/>
 												</th>
 												<th property="isFile">
 													<s:text name="lab.yes"/>否存档

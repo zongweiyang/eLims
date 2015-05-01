@@ -314,7 +314,7 @@ html {
 						<img src="${basePath}img/icon_drag.gif" />
 					</th>
 					<th>
-						公共代码类型名称
+						<s:text name="publiccodename"/>
 					</th>
 					<th>
 						公共代码类型编码

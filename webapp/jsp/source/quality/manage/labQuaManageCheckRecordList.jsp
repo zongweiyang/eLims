@@ -83,7 +83,7 @@
 																		name="labQuaManageCheckVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																<td><label>管理评审计划：</label></td>
+																<td><label><s:text name="manageauditlist"/>：</label></td>
 																<td>
 																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue="--全部--"
 																		name="labQuaManageCheckVo.quaManageCheckPlanName" id="quaManageCheckPlanName" theme="simple"
@@ -131,16 +131,16 @@
 													<s:text name="commtunit"/>
 												</th>
 												<th>
-													管理评审计划
+													<s:text name="manageauditlist"/>
 												</th>
 												<th property="address">
-													评审地点
+													<s:text name="auditsite"/>
 												</th>
 												<th property="recTime">
-													评审时间
+													<s:text name="audittime"/>
 												</th>
 												<th>
-													进度
+													<s:text name="progressing"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

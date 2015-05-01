@@ -66,7 +66,7 @@
 					                      			<td class="blockTd" style="padding: 6px 10px;vertical-align:center;">
 					                      				<table cellspacing="0" cellpadding="0" border="0">
 					                      					<tr>
-					                      						 <td><label>要素：</label></td>
+					                      						 <td><label><s:text name="elements"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaInitAuditPlanVo.searchName" value="${labQuaInitAuditPlanVo.searchName}" />
 					                      						</td>
@@ -109,7 +109,7 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="name">
-													要素
+													<s:text name="elements"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

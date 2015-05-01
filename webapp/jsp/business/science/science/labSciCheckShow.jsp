@@ -204,7 +204,7 @@ html {
 														<s:text name="chkinfoed"/>
 													</td>
 													<td>
-														<s:text name="lab.yes"/>否按计划进行：
+														<s:text name="ifplanedbegin"/>：
 													</td>
 													<td>
 														<textarea rows="4" cols="60"
@@ -215,14 +215,14 @@ html {
 												</tr>
 												<tr>
 													<td>
-														研究进度：
+														<s:text name="studyprogress"/>：
 													</td>
 													<td>
 														<textarea rows="4" cols="60"
 															name="labSciScienceVo.schedule"
 															value="${labSciScienceVo.schedule}"
 															valType="strLength" max="512"
-															strLength-msg="研究进度不能超过512位" disabled="true">${labSciScienceVo.schedule}</textarea>
+															strLength-msg="<s:text name="studyprogress"/>不能超过512位" disabled="true">${labSciScienceVo.schedule}</textarea>
 													</td>
 												</tr>
 												<tr>
@@ -248,7 +248,7 @@ html {
 												</tr>
 												<tr>
 													<td>
-														下面计划：
+														<s:text name="lovwnplan"/>：
 													</td>
 													<td>
 														<textarea rows="4" cols="60" name="labSciScienceVo.nextPlan"

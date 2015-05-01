@@ -89,7 +89,7 @@
 																</td>
 																<td>
 																	<label>
-																		内审计划：
+																		<s:text name="intendsdsplan"/>：
 																	</label>
 																</td>
 																<td>
@@ -137,19 +137,19 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th property="labQuaAuditPlanEle.purpose">
-													内审计划
+													<s:text name="intendsdsplan"/>
 												</th>
 												<th property="org.name">
-													被审部门
+													<s:text name="checkeddepart"/>
 												</th>
 												<th property="auditPart">
-													内审要素
+													<s:text name="internaeles"/>
 												</th>
 												<th property="month">
-													内审月份
+													<s:text name="internchkmonth"/>
 												</th>
 												<th property="checkHead">
-													内审组长
+													<s:text name="auditleader"/>
 												</th>
 												<th property="writeMember">
 													<s:text name="coderepeople"/>
@@ -158,7 +158,7 @@
 													<s:text name="codetimes"/>
 												</th>
 												<th>
-													进度
+													<s:text name="progressing"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

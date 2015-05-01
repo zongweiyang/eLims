@@ -87,15 +87,15 @@
 																		name="labQuaProficiencyPlanVo.unitOrgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																<td><label>计划名称：</label></td>
+																<td><label><s:text name="plannamed"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyPlanVo.name" value="${labQuaProficiencyPlanVo.name}" />
 					                      						</td>
-																<td><label>批准人：</label></td>
+																<td><label><s:text name="accpterman"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyPlanVo.auditPeople" value="${labQuaProficiencyPlanVo.auditPeople}" />
 					                      						</td>
-					                      						 <td><label>事故情况：</label></td>
+					                      						 <td><label><s:text name="accidentinfo"/>：</label></td>
 					                      						<td>
 																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
 																		name="labQuaProficiencyPlanVo.accStatus" id="accStatus" theme="simple" value="'${labQuaProficiencyPlanVo.accStatus}'" ></s:select>
@@ -142,25 +142,25 @@
 													<s:text name="theme.depart"/>
 												</th>
 												<th property="name">
-													计划名称
+													<s:text name="plannamed"/>
 												</th>
 												<th>
-													比对验证内容
+													<s:text name="duibiyanzheng"/>
 												</th>
 												<th property="planTime">
-													计划实施日期
+													<s:text name="jishuashishidate"/>
 												</th>
 												<th property="payMoney">
-													经费预算
+													<s:text name="fundbudget"/>
 												</th>
 												<th property="auditPeople">
-													批准人
+													<s:text name="accpterman"/>
 												</th>
 												<th property="auditDate">
-													批准日期
+													<s:text name="acceptdate"/>
 												</th>
 												<th property="accStatus">
-													事故情况
+													<s:text name="accidentinfo"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -203,13 +203,13 @@
 															</td>
 															<td  class="c">
 																<s:if test="${accStatus == 1}">
-																	<span style="color: red;">正在处理</span>
+																	<span style="color: red;"><s:text name="dealtingwith"/></span>
 																</s:if>
 																<s:elseif test="${accStatus == 2}">
 																	<span style="color: red;"><s:text name="sam.dealed"/></span>
 																</s:elseif>
 																<s:else>
-																	<span style="color: red;">未转事故</span>
+																	<span style="color: red;"><s:text name="untrunacci"/></span>
 																</s:else>
 															</td>
 															<td class="c">

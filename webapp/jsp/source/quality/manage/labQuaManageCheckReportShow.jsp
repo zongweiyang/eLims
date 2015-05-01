@@ -92,7 +92,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														评审计划：
+														<s:text name="auditplanded"/>：
 													</label>
 												</td>
 												<td>
@@ -102,7 +102,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														评审时间：
+														<s:text name="audittime"/>：
 													</label>
 												</td>
 												<td>
@@ -110,7 +110,7 @@
 												</td>
 											    <td class="r" width="150">
 													<label>
-														评审地点：
+														<s:text name="auditsite"/>：
 													</label>
 												</td>
 												<td>
@@ -121,7 +121,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													组长：
+													<s:text name="groupmaster"/>：
 														</label>
 												</td>
 												<td>
@@ -129,7 +129,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														组员：
+														<s:text name="grouppeople"/>：
 													</label>
 												</td>
 												<td>
@@ -139,7 +139,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														编&nbsp;&nbsp;制&nbsp;&nbsp;人：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -157,7 +157,7 @@
 											<tr>
 											    <td class="r" width="150">
 													<label>
-														批&nbsp;&nbsp;准&nbsp;&nbsp;人：
+														<s:text name="pizhunren"/>：
 													</label>
 												</td>
 												<td>
@@ -165,7 +165,7 @@
 												</td>
 												<td class="r" width="300">
 													<label>
-														批准日期：
+														<s:text name="acceptdate"/>：
 													</label>
 												</td>
 												<td>
@@ -175,7 +175,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													管理评审记录：
+													<s:text name="manageaccpreco"/>：
 														</label>
 												</td>
 												<td colspan="3">
@@ -206,7 +206,7 @@
 														</a>
 													</s:if>
 													<s:else>
-														未生成报告
+														<s:text name="ungenerate.report"/>
 													</s:else>
 													</td>
 													<td>
@@ -222,7 +222,7 @@
 												<tr>
 												    <td class="r" width="150">
 													       <label>
-														存档说明：
+														<s:text name="docdesc"/>：
 															</label>
 													</td>
 													<td colspan="3">
@@ -232,7 +232,7 @@
 												<tr>
 												    <td class="r" width="150">
 														<label>
-															归档人：
+															<s:text name="coderman"/>：
 														</label>
 													</td>
 													<td>
@@ -240,7 +240,7 @@
 													</td>
 													<td class="r" width="270">
 														<label>
-															归档日期：
+															<s:text name="docerdate"/>：
 														</label>
 													</td>
 													<td>

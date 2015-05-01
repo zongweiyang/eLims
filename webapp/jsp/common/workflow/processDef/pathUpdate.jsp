@@ -102,7 +102,7 @@
 <body style="overflow-x:hidden;width: 95%;">
     <!-- id不能设置为nodeName否则会报错 错误与1777行 原因是跟jquery重名这也是ie直接获取id所导致的问题 Aaron-->
     <div id="nodeNameSet">
-        <label>迁移名称：</label>
+        <label>		<s:text name="transfername"/>：</label>
         <input type="text" name="labWfPathVo.name" id="pathName" value="${labWfPathVo.name}"/>
     </div>
     <div id="top">

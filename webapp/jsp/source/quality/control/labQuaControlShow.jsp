@@ -79,7 +79,7 @@
 												  <tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:text name="theme.depart"/>：
 													</label>
 												</td>
 												<td>

@@ -54,10 +54,10 @@
 										<!-- 表单型表格（显示） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>初始化内部要素</span>
+												<span><s:text name="initineterele"/></span>
 											</div>
 											<table class="FormtableCon">
-										 			<td><label>要素</label></td>
+										 			<td><label><s:text name="elements"/></label></td>
 										 			<td>
 										 				<textarea cols="20" readonly="readonly" rows="10" name="labQuaAuditPlanVo.name" id="name">${labQuaAuditPlanVo.name}</textarea>
 										 			</td>

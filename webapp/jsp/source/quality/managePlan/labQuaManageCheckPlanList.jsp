@@ -78,7 +78,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaManageCheckPlanVo.recTime" value="${labQuaManageCheckPlanVo.recTime}" class="Wdate"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" />
 					                      						 </td>
-					                      						 <td><label>事故情况：</label></td>
+					                      						 <td><label><s:text name="accidentinfo"/>：</label></td>
 																<td>
 																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
 																		name="labQuaManageCheckPlanVo.accStatus" id="accStatus" theme="simple" value="'${labQuaManageCheckPlanVo.accStatus}'" ></s:select>
@@ -125,28 +125,28 @@
 													<s:text name="commtunit"/>
 												</th>
 												<th property="name">
-													计划名称
+													<s:text name="plannamed"/>
 												</th>
 												<th property="address">
-													评审地点
+													<s:text name="auditsite"/>
 												</th>
 												<th property="foundation">
-													评审依据
+															<s:text name="acceptreason"/>
 												</th>
 												<th property="groupLeader">
-													参加人员（组长）
+													<s:text name="paticipangenral"/>员（组长）
 												</th>
 												<th property="checkPeople">
-													批准人
+													<s:text name="accpterman"/>
 												</th>
 												<th property="checkTime">
-													批准日期
+													<s:text name="acceptdate"/>
 												</th>
 												<th property="recTime">
-													评审时间
+													<s:text name="audittime"/>
 												</th>
 												<th property="accStatus">
-													事故情况
+													<s:text name="accidentinfo"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -190,13 +190,13 @@
 															</td>
 															<td  class="c">
 																<s:if test="${accStatus == 1}">
-																	<span style="color: red;">正在处理</span>
+																	<span style="color: red;"><s:text name="dealtingwith"/></span>
 																</s:if>
 																<s:elseif test="${accStatus == 2}">
 																	<span style="color: red;"><s:text name="sam.dealed"/></span>
 																</s:elseif>
 																<s:else>
-																	<span style="color: red;">未转事故</span>
+																	<span style="color: red;"><s:text name="untrunacci"/></span>
 																</s:else>
 															</td>
 															<td class="c">

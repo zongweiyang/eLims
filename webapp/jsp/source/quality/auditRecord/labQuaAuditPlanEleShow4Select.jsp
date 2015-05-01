@@ -118,19 +118,19 @@
 													<s:text name="theme.depart"/>
 												</th>
 												<th property="purpose">
-													审核目的
+													<s:text name="audittarget"/>
 												</th>
 												<th property="range">
-													审核范围
+													<s:text name="auditfanwei"/>
 												</th>
 												<th property="implement">
-													审核依据
+													<s:text name="audireaseon"/>
 												</th>
 												<th property="createPeople">
 													<s:text name="coderepeople"/>
 												</th>
 												<th property="auditTime">
-													批准日期
+													<s:text name="acceptdate"/>
 												</th>
 											</tr>
 												<s:if test="labQuaAuditPlanEleVoList!=null">

@@ -232,7 +232,7 @@ html {
 													</td>
 													<td>
 														<label>
-															实施日期：
+															<s:text name="shishidate"/>：
 														</label>
 													</td>
 													<td>

@@ -297,14 +297,14 @@
 												</tr> 
 												<tr>
 													<td class="r" width="150">
-														研究进度：
+														<s:text name="studyprogress"/>：
 													</td>
 													<td>
 														<textarea rows="2" cols="40"
 															name="labSciScienceVo.schedule"
 															value="${labSciScienceVo.schedule}"
 															valType="strLength" max="512"
-															strLength-msg="研究进度不能超过512位">${labSciScienceVo.schedule}</textarea>
+															strLength-msg="<s:text name="studyprogress"/>不能超过512位">${labSciScienceVo.schedule}</textarea>
 													</td>
 													<td class="r" width="150">
 														取得成果：
@@ -317,7 +317,7 @@
 												</tr>
 												<tr>
 													<td  class="r" width="150">
-														计划完成情况：
+														<s:text name="plancominfo"/>：
 													</td>
 													<td>
 														<textarea rows="2" cols="40"

@@ -188,7 +188,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labStandardVo.name" valType="required" msg="标准名称不能为空" id="name" type="text" size="40" value="${labStandardVo.name}" />
+														<input name="labStandardVo.name" valType="required" msg='<s:property value="getText('stdnamenotemp')"/>' id="name" type="text" size="40" value="${labStandardVo.name}" />
 													</td>
 												</tr>
 												<tr>
@@ -202,7 +202,7 @@ html {
 													</td>
 													<td>
 														<label>
-															实施日期：
+															<s:text name="shishidate"/>：
 														</label>
 													</td>
 													<td>

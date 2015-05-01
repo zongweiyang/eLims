@@ -77,7 +77,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>管理评审<s:text name="plan.info"/>：</span>
+												<span><s:text name="manageauditlist"/>：</span>
 												<label style="float: right;margin-right: 20px;cursor: pointer;" onclick="javascript:$(this).parent().next().toggle();">[<font color="red"><s:text name="open.close"/></font>]</label>
 											</div>
 											<table class="FormtableCon">
@@ -94,7 +94,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														评审计划：
+														<s:text name="auditplanded"/>：
 													</label>
 												</td>
 												<td>
@@ -108,7 +108,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														评审时间：
+														<s:text name="audittime"/>：
 													</label>
 												</td>
 												<td>
@@ -118,7 +118,7 @@
 												</td>
 											    <td class="r" width="150">
 													<label>
-														评审地点：
+														<s:text name="auditsite"/>：
 													</label>
 												</td>
 												<td>
@@ -131,7 +131,7 @@
 											<tr>
 											    <td class="r" width="150">
 												       <label>
-													组长：
+													<s:text name="groupmaster"/>：
 														</label>
 												</td>
 												<td>
@@ -141,7 +141,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														组员：
+														<s:text name="grouppeople"/>：
 													</label>
 												</td>
 												<td>
@@ -174,7 +174,7 @@
 													</a>
 												</s:if>
 												<s:else>
-													未生成报告
+													<s:text name="ungenerate.report"/>
 												</s:else>
 												</td>
 											</tr>

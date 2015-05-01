@@ -41,7 +41,7 @@ html {
 			});
 			tempTr.find('td').eq(14).remove();
 			tempTr.find('td').eq(14).remove();
-			tempTr.append('<td><label> 样品数量 </label></td> <td><input type="text" size="2" name="labSamMainVo.labSamVoList['+tempIndex+''+ j +'].total" /> </td> ');
+			tempTr.append('<td><label> <s:text name="sam.number"/> </label></td> <td><input type="text" size="2" name="labSamMainVo.labSamVoList['+tempIndex+''+ j +'].total" /> </td> ');
 			tempTr.find('td').eq(15).append('<a href="javascript:;" onclick="deleteOne(this);return false;"><s:text name="lab.code.del"/></a>');
 			$('#oneEach').append(tempTr);
 			}

@@ -64,7 +64,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+															<s:text name="theme.depart"/>：
 														</label>
 													</td>
 													<td class="l" width="407">
@@ -72,7 +72,7 @@
 													</td>
 													<td class="r" width="150">
 													<label>
-														内审地点：
+														<s:text name="interndsite"/>：
 													</label>
 													</td>
 													<td>
@@ -82,7 +82,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审组长：
+														<s:text name="auditleader"/>：
 													</label>
 												</td>
 												<td>
@@ -118,7 +118,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														批&nbsp;&nbsp;准&nbsp;&nbsp;人：
+														<s:text name="pizhunren"/>：
 													</label>
 												</td>
 												<td width="380">
@@ -126,7 +126,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														批准日期：
+														<s:text name="acceptdate"/>：
 													</label>
 												</td>
 												<td>
@@ -145,7 +145,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															内审月份：
+															<s:text name="internchkmonth"/>：
 														</label>
 													</td>
 													<td class="l" width="407">
@@ -153,7 +153,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															内审要素：
+															<s:text name="internaeles"/>：
 														</label>
 													</td>
 													<td>
@@ -210,7 +210,7 @@
 										</div>
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>评审内容</span>
+												<span><s:text name="penshenconte"/></span>
 												<label style="float: right;margin-right: 20px;cursor: pointer;" onclick="javascript:$(this).parent().next().toggle();">[<font color="red"><s:text name="open.close"/></font>]</label>
 											</div>
 											<div style="margin-top: 10px; margin-bottom: 10px;" >

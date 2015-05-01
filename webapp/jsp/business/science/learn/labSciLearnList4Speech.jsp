@@ -152,7 +152,7 @@ html {
 														讲座类型
 													</th>
 													<th property="name">
-														讲座名称
+														<s:text name="lecture.name"/>
 													</th>
 													<th property="speaker">
 														主讲人

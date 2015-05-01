@@ -62,7 +62,7 @@
 											</div>
 											<table class="FormtableCon">
 												<tr>
-													<td><label>标准名称：</label></td>
+													<td><label><s:text name="std.name"/>：</label></td>
 													<td>
 														${labStandardVo.name}
 													</td>
@@ -76,7 +76,7 @@
 													<td>
 														${labStandardVo.releaseDate}
 													</td>
-													<td><label>实施日期：</label></td>
+													<td><label><s:text name="shishidate"/>：</label></td>
 													<td>
 														${labStandardVo.materialDate}
 													</td>
@@ -106,7 +106,7 @@
 											<table class="FormtableCon" id="indexTable">
 												<tr>
 													<td class="c" width="50">序号</td>
-													<td class="c">名称</td>
+													<td class="c"><s:text name="config.name"/></td>
 												</tr>
 												<s:iterator status="st" value="labStandardVo.indexList">
 													<tr>

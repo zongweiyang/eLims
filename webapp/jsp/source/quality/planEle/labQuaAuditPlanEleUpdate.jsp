@@ -82,7 +82,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:text name="theme.depart"/>：
 													</label>
 												</td>
 												<td>
@@ -90,18 +90,18 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														审核目的：
+														<s:text name="audittarget"/>：
 													</label>
 												</td>
 												<td>
 												<input size="40"  name="labQuaAuditPlanEleVo.purpose" id="purpose" type="text"
-													valType="required" msg="审核目的不能为空"  value="${labQuaAuditPlanEleVo.purpose }" maxlength="50"  />
+													valType="required" msg="<s:text name="audittarget"/>不能为空"  value="${labQuaAuditPlanEleVo.purpose }" maxlength="50"  />
 												</td>
 											</tr>
 											<tr>
 												<td class="r" width="150">
 													<label>
-														审核范围：
+														<s:text name="auditfanwei"/>：
 													</label>
 												</td>
 												<td>
@@ -111,7 +111,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														审核依据：
+														<s:text name="audireaseon"/>：
 													</label>
 												</td>
 												<td>
@@ -123,7 +123,7 @@
 											<tr>
 													<td class="r" width="150">
 														<label>
-															审核方式：
+															<s:text name="auditstyless"/>：
 														</label>
 													</td>
 													<td >
@@ -132,18 +132,18 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															内审地点：
+															<s:text name="interndsite"/>：
 														</label>
 													</td>
 													<td>
-														<input size="40" valType="required" msg="内审地点不能为空" name="labQuaAuditPlanEleVo.address" id="address"
+														<input size="40" valType="required" msg="<s:text name="interndsite"/>不能为空" name="labQuaAuditPlanEleVo.address" id="address"
 															type="text"  value="${labQuaAuditPlanEleVo.address}"/>
 													</td>
 												</tr>
 												<tr>
 													<td class="r" width="150">
 														<label>
-															内审组长：
+															<s:text name="auditleader"/>：
 														</label>
 													</td>
 													<td>
@@ -152,7 +152,7 @@
 													</td>
 													<td class="r" width="150">
 													       <label>
-															审核员：
+															<s:text name="auditers"/>：
 															</label>
 													</td>
 													<td>
@@ -162,7 +162,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														编&nbsp;&nbsp;制&nbsp;&nbsp;人：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td >
@@ -183,7 +183,7 @@
 												<tr>
 													<td class="r" width="150">
 													       <label>
-															批准人：
+															<s:text name="accpterman"/>：
 															</label>
 													</td>
 													<td>
@@ -193,7 +193,7 @@
 													<td class="r" width="150">
 														
 														<label>
-															批准日期：
+															<s:text name="acceptdate"/>：
 														</label>
 													</td>
 													<td>
@@ -213,52 +213,52 @@
 												<table class="FormtableCon_sform" id="OneTable" >
 													<thead>
 															<th width="50" class="c">
-																<s:text name="page.record"/>款
+																<s:text name="tiaokuan"/>
 															</th>
 															<th width="500" class="c">
-																要素
+																<s:text name="elements"/>
 															</th>
 															<th width="20" class="c">
-																一月
+																<s:text name="month1"/>
 															</th>
 															<th width="20" class="c">
-																二月
+																<s:text name="month2"/>
 															</th>
 															<th width="20" class="c">
-																三月
+																<s:text name="month3"/>
 															</th>
 															<th width="20" class="c">
-																四月
+																<s:text name="month4"/>
 															</th>
 															<th width="20" class="c">
-																五月
+																<s:text name="month5"/>
 															</th>
 															<th width="20" class="c">
-																六月
+																<s:text name="month6"/>
 															</th>
 															<th width="20" class="c">
-																七月
+																<s:text name="month7"/>
 															</th>
 															<th width="20" class="c">
-																八月
+																<s:text name="month8"/>
 															</th>
 															<th width="20" class="c">
-																九月
+																<s:text name="month9"/>
 															</th>
 															<th width="20" class="c">
-																十月
+																<s:text name="month10"/>
 															</th>
 															<th width="20" class="c">
-																十一月
+																<s:text name="month11"/>
 															</th>
 															<th width="20" class="c">
-																十二月
+																<s:text name="month12"/>
 															</th>
 															<th width="100" class="c">
 																<s:text name="prj.manager"/>
 															</th>
 															<th width="100" class="c">
-																协助人
+																<s:text name="helpman"/>
 															</th>
 													</thead>
 												<tbody>

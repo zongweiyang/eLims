@@ -70,13 +70,13 @@
 																		name="labQuaProficiencyVo.orgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																<td><label>比对计划：</label></td>
+																<td><label><s:text name="duibiplan"/>：</label></td>
 					                      						<td>
 					                      							<s:select list="labQuaProficiencyPlanVoList" id="planId" listKey="id"
 																		listValue="name" name="labQuaProficiencyVo.proficiencyPlanId"
 																		theme="simple" cssStyle="width:150px;" headerKey="" headerValue="请选择"></s:select>
 					                      						</td>
-																<td><label>参加人：</label></td>
+																<td><label><s:text name="paticipangenral"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyVo.joinPeople" value="${labQuaProficiencyVo.joinPeople}" />
 					                      						</td>
@@ -122,22 +122,22 @@
 													<s:text name="theme.depart"/>
 												</th>
 												<th>
-													比对计划
+													<s:text name="duibiplan"/>
 												</th>
 												<th>
-													比对/验证内容
+													<s:text name="duibiyanzheng"/>
 												</th>
 												<th property="ratioItem">
 													<s:text name="duibichkitem"/>
 												</th>
 												<th property="payMoney">
-													经费预算
+													<s:text name="fundbudget"/>
 												</th>
 												<th property="joinPeople">
-													参加人
+													<s:text name="paticipangenral"/>
 												</th>
 												<th property="planTime">
-													实施日期
+													<s:text name="shishidate"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>

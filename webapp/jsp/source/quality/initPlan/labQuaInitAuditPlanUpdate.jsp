@@ -58,12 +58,12 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>初始化内部要素</span>
+												<span><s:text name="initineterele"/></span>
 											</div>
 											<table class="FormtableCon">
-										 			<td><label>要素</label></td>
+										 			<td><label><s:text name="elements"/></label></td>
 										 			<td>
-										 				<textarea cols="50" rows="4" valType="required" msg="要素不能为空" name="labQuaInitAuditPlanVo.name" id="name">${labQuaInitAuditPlanVo.name}</textarea>
+										 				<textarea cols="50" rows="4" valType="required" msg='<s:property value="getText('elsementempty')"/>' name="labQuaInitAuditPlanVo.name" id="name">${labQuaInitAuditPlanVo.name}</textarea>
 										 			</td>
 										 		</tr>
 											</table>

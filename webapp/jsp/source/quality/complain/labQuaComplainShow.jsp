@@ -61,7 +61,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														样品名称：
+														<s:text name="sam.name"/>：
 													</label>
 												</td>
 												<td>

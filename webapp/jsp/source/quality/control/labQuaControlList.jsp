@@ -114,7 +114,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaControlVo.appCodeSearch" value="${labQuaControlVo.appCodeSearch}" />
 					                      						</td>
-					                      						<td><label>事故情况：</label></td>
+					                      						<td><label><s:text name="accidentinfo"/>：</label></td>
 																<td>
 																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
 																		name="labQuaControlVo.accStatus" id="accStatus" theme="simple" value="'${labQuaControlVo.accStatus}'" ></s:select>
@@ -182,7 +182,7 @@
 													监督日期
 												</th>
 												<th property="accStatus">
-													事故情况
+													<s:text name="accidentinfo"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -226,13 +226,13 @@
 															</td>
 															<td  class="c">
 																<s:if test="${accStatus == 1}">
-																	<span style="color: red;">正在处理</span>
+																	<span style="color: red;"><s:text name="dealtingwith"/></span>
 																</s:if>
 																<s:elseif test="${accStatus == 2}">
 																	<span style="color: red;"><s:text name="sam.dealed"/></span>
 																</s:elseif>
 																<s:else>
-																	<span style="color: red;">未转事故</span>
+																	<span style="color: red;"><s:text name="untrunacci"/></span>
 																</s:else>
 															</td>
 															<td class="c">

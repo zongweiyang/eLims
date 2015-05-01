@@ -312,7 +312,7 @@ function checkContact(obj){
 																	</label>
 																</td>
 																<td>
-																	<input type="text" name="labSampRegisterVo.sampNum" value="${labSampRegisterVo.sampNum}" id="sampNum" size="40"  valType="required,number" msg="样品数量为空或输入不正确！" />
+																	<input type="text" name="labSampRegisterVo.sampNum" value="${labSampRegisterVo.sampNum}" id="sampNum" size="40"  valType="required,number" msg="<s:text name="sam.number"/>为空或输入不正确！" />
 																</td>
 															</tr>
 															<tr>

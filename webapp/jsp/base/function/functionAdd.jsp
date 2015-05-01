@@ -129,7 +129,7 @@
 									<tr>
 										<td>
 											<label>
-												功能名称：
+												<s:text name="function.name"/>：
 											</label>
 										</td>
 										<td>

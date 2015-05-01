@@ -242,7 +242,7 @@ html {
 														<td>
 															<textarea rows="3" cols="40" name="labSciLearnVo.participant" readonly="true" onclick="getUser();return false;"
 																id="participant" value="${labSciLearnVo.participant}" size="40"
-																valType="required,strLength" max="128" msg="参加人员不能为空" strLength-msg="参加人员长度不能超过128位">${labSciLearnVo.participant}</textarea>
+																valType="required,strLength" max="128" msg="<s:text name="paticipangenral"/>员不能为空" strLength-msg="<s:text name="paticipangenral"/>员长度不能超过128位">${labSciLearnVo.participant}</textarea>
 															<input type="hidden" id="participantId" name="labSciLearnVo.participantId" value="${labSciLearnVo.participantId }"/>
 														</td>
 													</tr>

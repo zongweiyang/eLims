@@ -108,7 +108,7 @@
 										 		<tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:text name="theme.depart"/>：
 													</label>
 												</td>
 												<td>
@@ -116,7 +116,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														计划名称：
+														<s:text name="plannamed"/>：
 													</label>
 												</td>
 												<td>
@@ -126,7 +126,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														比对/验证类型：
+														<s:text name="duibiyanzhengtype"/>：
 													</label>
 												</td>
 												<td>
@@ -134,7 +134,7 @@
 												</td>
 												<td class="r">
 													<label>
-														计划实施日期：
+														<s:text name="jishuashishidate"/>：
 													</label>
 												</td>
 												<td>
@@ -144,7 +144,7 @@
 											<tr>
 												<td class="r">
 													<label>
-														经费预算：
+														<s:text name="fundbudget"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -154,7 +154,7 @@
 											<tr>
 												<td class="r">
 													<label>
-														计&nbsp;&nbsp;划&nbsp;&nbsp;人：
+														<s:text name="planman"/>：
 													</label>
 												</td>
 												<td>
@@ -163,7 +163,7 @@
 												<td class="r">
 													
 													<label>
-														计划日期：
+														<s:text name="plandatedd"/>：
 													</label>
 												</td>
 												<td>
@@ -173,7 +173,7 @@
 											<tr>
 												<td class="r">
 												    <label>
-													   批&nbsp;&nbsp;准&nbsp;&nbsp;人：
+													   <s:text name="pizhunren"/>：
 													</label>
 												</td>
 												<td>
@@ -182,7 +182,7 @@
 												<td class="r">
 													
 													<label>
-														批准日期：
+														<s:text name="acceptdate"/>：
 													</label>
 												</td>
 												<td>
@@ -192,11 +192,11 @@
 											<tr>
 												<td class="r">
 												       <label>
-													   比对/验证内容及要求：
+													   <s:text name="duibiandyaoq"/>：
 														</label>
 												</td>
 												<td colspan="3">
-													<textarea readonly="readonly" rows="3" cols="40" name="labQuaProficiencyPlanVo.contents" id="contents"  valType="required" msg="比对/验证类型不能为空">${labQuaProficiencyPlanVo.contents}</textarea>
+													<textarea readonly="readonly" rows="3" cols="40" name="labQuaProficiencyPlanVo.contents" id="contents"  valType="required" msg='<s:property value="getText('sytoeduibinitem')"/>'>${labQuaProficiencyPlanVo.contents}</textarea>
 												</td>
 											</tr>
 											<tr>
@@ -228,19 +228,19 @@
 														<s:text name="theme.depart"/>
 													</th>
 													<th>
-														比对/验证内容
+														<s:text name="duibiyanzheng"/>
 													</th>
 													<th property="ratioItem">
 														<s:text name="duibichkitem"/>
 													</th>
 													<th property="payMoney">
-														经费预算
+														<s:text name="fundbudget"/>
 													</th>
 													<th property="joinPeople">
-														参加人
+														<s:text name="paticipangenral"/>
 													</th>
 													<th property="planTime">
-														实施日期
+														<s:text name="shishidate"/>
 													</th>
 													<th>
 														<s:text name="lab.code.ops"/>

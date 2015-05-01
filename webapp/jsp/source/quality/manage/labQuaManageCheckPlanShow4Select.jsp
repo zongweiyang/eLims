@@ -113,25 +113,25 @@
 													<s:text name="commtunit"/>
 												</th>
 												<th property="name">
-													计划名称
+													<s:text name="plannamed"/>
 												</th>
 												<th property="address">
-													评审地点
+													<s:text name="auditsite"/>
 												</th>
 												<th property="foundation">
-													评审依据
+															<s:text name="acceptreason"/>
 												</th>
 												<th property="groupLeader">
-													参加人员（组长）
+													<s:text name="paticipangenral"/>员（组长）
 												</th>
 												<th property="checkPeople">
-													批准人
+													<s:text name="accpterman"/>
 												</th>
 												<th property="checkTime">
-													批准日期
+													<s:text name="acceptdate"/>
 												</th>
 												<th property="recTime">
-													评审时间
+													<s:text name="audittime"/>
 												</th>
 											</tr>
 												<s:if test="labQuaManageCheckPlanVoList!=null">

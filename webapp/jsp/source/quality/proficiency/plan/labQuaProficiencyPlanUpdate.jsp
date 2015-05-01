@@ -23,7 +23,7 @@
 			function showTable(obj){
 				var test=$('#isTest').val();
 				if(test=='Y'){
-					$(obj).html('[&nbsp;<font color="blue">生成任务</font>&nbsp;]');
+					$(obj).html('[&nbsp;<font color="blue"><s:text name="genetask"/></font>&nbsp;]');
 					$('#isTest').val('N');
 				}else{
 					$(obj).html('[&nbsp;<font color="blue">取消任务</font>&nbsp;]');
@@ -121,13 +121,13 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>年度比对和验证实验计划表</span>
+												<span><s:text name="yearduibyanzhengshe"/></span>
 											</div>
 											<table class="FormtableCon">
 										 		<tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:text name="theme.depart"/>：
 													</label>
 												</td>
 												<td>
@@ -137,11 +137,11 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														计划名称：
+														<s:text name="plannamed"/>：
 													</label>
 												</td>
 												<td>
-													<input size="40" name="labQuaProficiencyPlanVo.name" id="name" valType="required" msg="计划名称不能为空"
+													<input size="40" name="labQuaProficiencyPlanVo.name" id="name" valType="required" msg='<s:property value="getText('plannamenotempt')"/>'
 														type="text" value="${labQuaProficiencyPlanVo.name}"
 														/>
 												</td>
@@ -149,35 +149,35 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														比对/验证类型：
+														<s:text name="duibiyanzhengtype"/>：
 													</label>
 												</td>
 												<td>
-													<input size="40" name="labQuaProficiencyPlanVo.proficiencyType" id="proficiencyType" valType="required" msg="比对/验证类型不能为空"
+													<input size="40" name="labQuaProficiencyPlanVo.proficiencyType" id="proficiencyType" valType="required" msg='<s:property value="getText('sytoeduibinitem')"/>'
 														type="text" value="${labQuaProficiencyPlanVo.proficiencyType}"
 														/>
 												</td>
 												<td class="r">
 													<label>
-														计划实施日期：
+														<s:text name="jishuashishidate"/>：
 													</label>
 												</td>
 												<td>
 													<input size="40" name="labQuaProficiencyPlanVo.planTime" id="planTime"
-														type="text" value="${labQuaProficiencyPlanVo.planTime}" valType="required" msg="计划实施日期不能为空"
+														type="text" value="${labQuaProficiencyPlanVo.planTime}" valType="required" msg='<s:property value="getText('jishuashnotempyt')"/>'
 														class="Wdate"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" />
 												</td>
 											</tr>
 											<tr>
 												<td class="r">
 													<label>
-														经费预算：
+														<s:text name="fundbudget"/>：
 													</label>
 												</td>
 												<td colspan="3">
 												       <input size="40" name="labQuaProficiencyPlanVo.payMoney" id="payMoney"
 														type="text" value="${labQuaProficiencyPlanVo.payMoney}"
-														valType="required"  msg="经费预算不能为空"  onblur="checkNum(this);"/>
+														valType="required"  msg='<s:property value="getText('fundfeeenotem')"/>'  onblur="checkNum(this);"/>
 												</td>
 												<!-- <td class="r">
 													<label>
@@ -191,7 +191,7 @@
 											<tr>
 												<td class="r">
 													<label>
-														计&nbsp;&nbsp;划&nbsp;&nbsp;人：
+														<s:text name="planman"/>：
 													</label>
 												</td>
 												<td>
@@ -202,7 +202,7 @@
 												<td class="r">
 													
 													<label>
-														计划日期：
+														<s:text name="plandatedd"/>：
 													</label>
 												</td>
 												<td>
@@ -213,7 +213,7 @@
 											<tr>
 												<td class="r">
 												    <label>
-													   批准人：
+													   <s:text name="accpterman"/>：
 													</label>
 												</td>
 												<td>
@@ -223,7 +223,7 @@
 												<td class="r">
 													
 													<label>
-														批准日期：
+														<s:text name="acceptdate"/>：
 													</label>
 												</td>
 												<td>
@@ -234,11 +234,11 @@
 											<tr>
 												<td class="r">
 												       <label>
-													   比对/验证内容及要求：
+													   <s:text name="duibiandyaoq"/>：
 														</label>
 												</td>
 												<td colspan="3">
-													<textarea rows="3" cols="40" name="labQuaProficiencyPlanVo.contents" id="contents"  valType="required" msg="比对/验证类型不能为空">${labQuaProficiencyPlanVo.contents}</textarea>
+													<textarea rows="3" cols="40" name="labQuaProficiencyPlanVo.contents" id="contents"  valType="required" msg='<s:property value="getText('sytoeduibinitem')"/>'>${labQuaProficiencyPlanVo.contents}</textarea>
 												</td>
 											</tr>
 											<tr>
@@ -258,7 +258,7 @@
 												<span><s:text name="checkatsk"/></span>
 												<label style="padding-left: 10px;" onclick="showTable(this)">
 													[&nbsp;
-													<font color="blue">生成任务</font>&nbsp;]
+													<font color="blue"><s:text name="genetask"/></font>&nbsp;]
 												</label>
 											</div>
 											<s:if test="${labQuaProficiencyPlanVo.isTest=='Y'}">
@@ -316,11 +316,11 @@
 													<tr>
 														<td class="r" width="150">
 															<label>
-																样品数量：
+																<s:text name="sam.number"/>：
 															</label>
 														</td>
 														<td colspan="3">
-															<input size="40"  valType="number" msg="样品数量输入不正确！" name="labQuaProficiencyPlanVo.sampRegisterNum"
+															<input size="40"  valType="number" msg='<s:property value="getText('samnumbernotco')"/>' name="labQuaProficiencyPlanVo.sampRegisterNum"
 																id="sampRegisterNum" type="text"
 																value="${labQuaProficiencyPlanVo.sampRegisterNum}" />&nbsp;&nbsp;
 															&nbsp;&nbsp;
@@ -348,10 +348,10 @@
 																<s:text name="origin.number"/>
 															</th>
 															<th width="190">
-																样品名称
+																<s:text name="sam.name"/>
 															</th>
 															<th width="110">
-																样品类型
+																<s:text name="sam.type"/>
 															</th>
 															<th>
 																<s:text name="checking.item"/>

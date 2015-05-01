@@ -143,7 +143,7 @@ html {
 														会议类型
 													</th>
 													<th property="name">
-														会议名称
+														<s:text name="conference.name"/>
 													</th>
 													<th property="labOrgName">
 														参加科室

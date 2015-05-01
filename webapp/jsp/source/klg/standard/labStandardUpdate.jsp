@@ -178,16 +178,16 @@
 													<td>
 														<input name="labStandardVo.code" valType="required" msg='<s:property value="getText('stdcodenotempty')"/>' id="code" type="text" size="40" value="${labStandardVo.code}" />
 													</td>
-													<td><label>标准名称：</label></td>
+													<td><label><s:text name="std.name"/>：</label></td>
 													<td>
-														<input name="labStandardVo.name" valType="required" msg="标准名称不能为空" id="name" type="text" size="40" value="${labStandardVo.name}" />
+														<input name="labStandardVo.name" valType="required" msg='<s:property value="getText('stdnamenotemp')"/>' id="name" type="text" size="40" value="${labStandardVo.name}" />
 													</td>
 												</tr>
 												<tr>
 													<td><label><s:text name="publish.date"/>：</label></td>
 													<td><input readonly="readonly" name="labStandardVo.releaseDate" value="${labStandardVo.releaseDate}" id="releaseDate" class="Wdate" size="40" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" /> 
 													</td>
-													<td><label>实施日期：</label></td>
+													<td><label><s:text name="shishidate"/>：</label></td>
 													<td><input readonly="readonly" name="labStandardVo.materialDate" value="${labStandardVo.materialDate}" id="materialDate" class="Wdate" size="40" type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" /> 
 													</td>
 												</tr>
@@ -255,7 +255,7 @@
 											<table class="FormtableCon" id="indexTable">
 												<tr>
 													<td class="c" width="50">序号</td>
-													<td class="c">名称</td>
+													<td class="c"><s:text name="config.name"/></td>
 													<td class="c" width="100">操作</td>
 												</tr>
 												<s:iterator status="st" value="labStandardVo.indexList">

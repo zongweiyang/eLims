@@ -71,7 +71,7 @@
 																</td>
 																<td>
 																	<label>
-																		课题&nbsp;/&nbsp;客户名称：
+																		<s:text name="lec.cust.name"/>：
 																	</label>
 																</td>
 																<td>
@@ -110,8 +110,8 @@
 												
 												</th>
 												<th property="no" width="150">任务<s:text name="code.number"/></th>
-												<th property="labSampCustomerVo.labCustomerName">课题&nbsp;/&nbsp;客户名称</th>
-												<th width="70">样品数量</th>
+												<th property="labSampCustomerVo.labCustomerName"><s:text name="lec.cust.name"/></th>
+												<th width="70"><s:text name="sam.number"/></th>
 												<th property="taskType" width="100">检测类别</th>
 												<th property="reportType" width="100">报告性质</th>
 												<th property="createTime" width="150">登记日期</th>

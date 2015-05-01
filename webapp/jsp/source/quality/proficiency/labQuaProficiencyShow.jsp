@@ -69,7 +69,7 @@
 										 		<tr>
 													<td class="r" width="150">
 														<label>
-															单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+															<s:text name="theme.depart"/>：
 														</label>
 													</td>
 													<td>
@@ -87,7 +87,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															参&nbsp;&nbsp;加&nbsp;&nbsp;人：
+															<s:text name="participant"/>：
 														</label>
 													</td>
 													<td >
@@ -95,7 +95,7 @@
 													</td>
 													<td class="r" width="150">
 													       <label>
-														   实施日期：
+														   <s:text name="shishidate"/>：
 															</label>
 													</td>
 													<td>
@@ -105,7 +105,7 @@
 													<tr>
 													<td class="r" width="150"">
 														<label>
-															经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：
+															<s:text name="funddes"/>：
 														</label>
 													</td>
 													<td >
@@ -115,7 +115,7 @@
 												<tr>
 													<td class="r" width="150">
 													    <label>
-														     比对/验证内容：
+														     <s:text name="duibiyanzheng"/>：
 														</label>
 													</td>
 													<td colspan="3">
@@ -125,7 +125,7 @@
 												<tr>
 													<td class="r" width="150">
 													    <label>
-														     主任意见：
+														     <s:text name="leaderopionon"/>：
 														</label>
 													</td>
 													<td colspan="3">

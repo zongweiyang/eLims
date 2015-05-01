@@ -266,7 +266,7 @@ html {
 											</td>
 											<td id="TD1" class="r" width="150">
 												<label>
-													样品数量：
+													<s:text name="sam.number"/>：
 												</label>
 											</td>
 											<td id="TD2">
@@ -348,10 +348,10 @@ html {
 															<s:text name="origin.number"/>
 														</th>
 														<th width="190">
-															样品名称
+															<s:text name="sam.name"/>
 														</th>
 														<th width="110">
-															样品类型
+															<s:text name="sam.type"/>
 														</th>
 														<th>
 															<s:text name="checking.item"/>

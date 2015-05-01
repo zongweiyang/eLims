@@ -91,7 +91,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyPlanVo.name" value="${labQuaProficiencyPlanVo.name}" />
 					                      						</td>
-																<td><label>批准人：</label></td>
+																<td><label><s:text name="accpterman"/>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaProficiencyPlanVo.auditPeople" value="${labQuaProficiencyPlanVo.auditPeople}" />
 					                      						</td>
@@ -120,22 +120,22 @@
 													<s:text name="theme.depart"/>
 												</th>
 												<th>
-													计划名称
+													<s:text name="plannamed"/>
 												</th>
 												<th>
-													比对验证内容
+													<s:text name="duibiyanzheng"/>
 												</th>
 												<th property="planTime">
-													计划实施日期
+													<s:text name="jishuashishidate"/>
 												</th>
 												<th property="payMoney">
-													经费预算
+													<s:text name="fundbudget"/>
 												</th>
 												<th property="auditPeople">
-													批准人
+													<s:text name="accpterman"/>
 												</th>
 												<th property="auditDate">
-													批准日期
+													<s:text name="acceptdate"/>
 												</th>
 											</tr>
 												<s:if test="labQuaProficiencyPlanVoList!=null">

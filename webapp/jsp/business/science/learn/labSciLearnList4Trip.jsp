@@ -143,7 +143,7 @@ html {
 														外出交流类型
 													</th>
 													<th property="name">
-														外出交流名称
+														<s:text name="outer.exchange.name"/>
 													</th>
 													<th property="labOrgName">
 														参加科室

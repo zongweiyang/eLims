@@ -79,13 +79,13 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>年度比对和验证实验记录表</span>
+												<span><s:text name="yeardubi"/></span>
 											</div>
 											<table class="FormtableCon">
 										 		<tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:text name="theme.depart"/>：
 													</label>
 												</td>
 												<td>
@@ -95,18 +95,18 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														比对计划：
+														<s:text name="duibiplan"/>：
 													</label>
 												</td>
 												<td>
 													<input size="40" onclick="showLabQuaProficiencyPlan4select();" name="labQuaProficiencyVo.proficiencyPlanName" id="proficiencyPlanName" type="text" value="${labQuaProficiencyVo.proficiencyPlanName}"/>
-													<input size="40" name="labQuaProficiencyVo.proficiencyPlanId" valType="required" msg="比对计划不能为空"  id="proficiencyPlanId" type="hidden" value="${labQuaProficiencyVo.proficiencyPlanId}"/>
+													<input size="40" name="labQuaProficiencyVo.proficiencyPlanId" valType="required" msg="<s:text name="duibiplan"/>不能为空"  id="proficiencyPlanId" type="hidden" value="${labQuaProficiencyVo.proficiencyPlanId}"/>
 												</td>
 											</tr>
 											<tr>
 												<td class="r" width="150">
 													<label>
-														参&nbsp;&nbsp;加&nbsp;&nbsp;人：
+														<s:text name="participant"/>：
 													</label>
 												</td>
 												<td >
@@ -116,7 +116,7 @@
 												</td>
 												<td class="r" width="150">
 												       <label>
-													   实施日期：
+													   <s:text name="shishidate"/>：
 														</label>
 												</td>
 												<td>
@@ -125,9 +125,9 @@
 												</td>
 											</tr>
 												<tr>
-												<td class="r" width="150"">
+												<td class="r" width="150">
 													<label>
-														经&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;费：
+														<s:text name="funddes"/>：
 													</label>
 												</td>
 												<td >
@@ -148,7 +148,7 @@
 											<tr>
 												<td class="r" width="150">
 												    <label>
-													     比对/验证内容：
+													     <s:text name="duibiyanzheng"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -158,7 +158,7 @@
 											<tr>
 												<td class="r" width="150">
 												    <label>
-													     主任意见：
+													     <s:text name="leaderopionon"/>：
 													</label>
 												</td>
 												<td colspan="3">

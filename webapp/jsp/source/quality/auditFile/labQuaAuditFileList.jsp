@@ -93,7 +93,7 @@
 																		theme="simple" listKey="id" listValue="name" />
 																</td>
 																<td>
-																	<label>内审计划：</label>
+																	<label><s:text name="intendsdsplan"/>：</label>
 																</td>
 																<td>
 																	<s:select id="planId" theme="simple"
@@ -102,7 +102,7 @@
 																		headerValue="--全部--" listKey="id" listValue="purpose" />
 																</td>
 																<td>
-																	<label>进度：</label>
+																	<label><s:text name="progressing"/>：</label>
 																</td>
 																<td>
 																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="-全部-" name="labQuaAuditRecordVo.status" id="status" onchange="submitAction();" />
@@ -142,19 +142,19 @@
 													<img src="<%=basePath%>img/icon_drag.gif"/>
 												</th>
 												<th>
-													内审计划
+													<s:text name="intendsdsplan"/>
 												</th>
 												<th>
-													被审部门
+													<s:text name="checkeddepart"/>
 												</th>
 												<th property="auditPart">
-													内审要素
+													<s:text name="internaeles"/>
 												</th>
 												<th property="month">
-													内审月份
+													<s:text name="internchkmonth"/>
 												</th>
 												<th property="checkHead">
-													内审组长
+													<s:text name="auditleader"/>
 												</th>
 												<th property="writeMember">
 													<s:text name="coderepeople"/>
@@ -163,7 +163,7 @@
 													<s:text name="codetimes"/>
 												</th>
 												<th>
-													进度
+													<s:text name="progressing"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -217,7 +217,7 @@
 																</s:else>
 														  		<s:if test="${isOper=='Y'}"> 
 															  		&nbsp;&nbsp;
-															  		<l:a href="#" uri="quality/auditRecord/preUpdateLabQuaAuditFile.action?labQuaAuditRecordVo.id=${id}" value="归档" />
+															  		<l:a href="#" uri="quality/auditRecord/preUpdateLabQuaAuditFile.action?labQuaAuditRecordVo.id=${id}" value="archives" />
 														  		</s:if>
 															</td>
 														</tr>

@@ -126,7 +126,7 @@
 										 		<tr>
 													<td class="r" width="150">
 														<label>
-															内审要素：
+															<s:text name="internaeles"/>：
 														</label>
 													</td>
 													<td>
@@ -140,7 +140,7 @@
 													</td>
 													<td class="r" width="150">
 														<label>
-															内审计划：
+															<s:text name="intendsdsplan"/>：
 														</label>
 													</td>
 													<td>
@@ -160,7 +160,7 @@
 													</td>
 													<td class="r" width="150">
 													<label>
-														内审地点：
+														<s:text name="interndsite"/>：
 													</label>
 												</td>
 												<td>
@@ -170,7 +170,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审组长：
+														<s:text name="auditleader"/>：
 													</label>
 												</td>
 												<td>
@@ -265,7 +265,7 @@
 													</a>
 												</s:if>
 												<s:else>
-													未生成报告
+													<s:text name="ungenerate.report"/>
 												</s:else>
 												</td>
 											</tr>

@@ -202,10 +202,10 @@ html {
 														${name}
 													</td>
 													<td class="l">
-														<s:select onchange="ajax2MethodOption(this,'${id}','${st.index}');" list="#ls.standardList" id="stand${st.index}" listKey="id" listValue="name" name="${st.index}" headerKey="" headerValue="-请选择-" theme="simple" cssStyle="min-width:150px;"></s:select>
+														<s:select onchange="ajax2MethodOption(this,'${id}','${st.index}');" list="#ls.standardList" id="stand${st.index}" listKey="id" listValue="name" name="${st.index}" headerKey="" headerValue="" theme="simple" cssStyle="min-width:150px;"></s:select>
 													</td>
 													<td class="l">
-														<s:select onchange="onchangex4Method(this,'${st.index}');" list="#ls.methodList" id="method${st.index}" listKey="id" listValue="name" name="${st.index}" headerKey="" headerValue="-请选择-" theme="simple" cssStyle="min-width:150px;"></s:select>
+														<s:select onchange="onchangex4Method(this,'${st.index}');" list="#ls.methodList" id="method${st.index}" listKey="id" listValue="name" name="${st.index}" headerKey="" headerValue="" theme="simple" cssStyle="min-width:150px;"></s:select>
 													</td>
 													<td class="c">
 														<input type="checkbox" name="labItemVo.ids"

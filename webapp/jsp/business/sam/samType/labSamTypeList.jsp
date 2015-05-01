@@ -152,7 +152,7 @@ html {
 													<label>
 														<s:text name="up.level.name"/>
 													</label>
-													<s:select id="parentId" name="labSamTypeVo.pid" list="labSamTypeVo.labSamTypeVoList" headerKey="0" headerValue="样品分类" listKey="id" listValue="name"></s:select>
+													<s:select id="parentId" name="labSamTypeVo.pid" list="labSamTypeVo.labSamTypeVoList" headerKey="0" headerValue="" listKey="id" listValue="name"></s:select>
 												</td>
 												<td>
 													<label>

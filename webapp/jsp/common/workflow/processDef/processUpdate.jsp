@@ -249,7 +249,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<s:select list="#request.funcList" listKey="id" listValue="name+'('+parentName+')'" name="labWfProcessVo.funId" id="functionId" headerKey="" headerValue="请选择流程源..." theme="simple" onchange="ajaxToStep(this);"></s:select>
+														<s:select list="#request.funcList" listKey="id" listValue="name+'('+parentName+')'" name="labWfProcessVo.funId" id="functionId" headerKey="" headerValue="" theme="simple" onchange="ajaxToStep(this);"></s:select>
 														<font color="red">*</font>
 													</td>
 													<td style="width: 100px" class="r">

@@ -68,11 +68,11 @@ function submitthis(action)
 															<tr>
 																<td>
 																	<label>
-																		业务：
+																		<s:text name="tmp.biz"/>：
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#request.funcList" listKey="id" listValue="name" name="labWfProcessVo.funId" headerKey="" headerValue="-全部-" theme="simple"></s:select>
+																	<s:select list="#request.funcList" listKey="id" listValue="name" name="labWfProcessVo.funId" headerKey="" headerValue="" theme="simple"></s:select>
 																</td>
 																<td>
 																	<label>
@@ -96,7 +96,7 @@ function submitthis(action)
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#{'0':getText('buildingmodel'),'1':getText('startinglist'),'2':getText('closed')}" name="labWfProcessVo.status" headerKey="" headerValue="-全部-" theme="simple"></s:select>
+																	<s:select list="#{'0':getText('buildingmodel'),'1':getText('startinglist'),'2':getText('closed')}" name="labWfProcessVo.status" headerKey="" headerValue="" theme="simple"></s:select>
 																</td>
 																<td>
 																	<l:a uri="${pageResult.action}" value="fun.query" />
@@ -129,7 +129,7 @@ function submitthis(action)
 														<s:text name="lab.sequence"/>
 													</th>
 													<th class="c" width="100" property="funName">
-														业务
+														<s:text name="tmp.biz"/>
 													</th>
 													<th class="c" width="200" >
 														<s:text name="config.name"/>
@@ -138,7 +138,7 @@ function submitthis(action)
 														<s:text name="codessafd"/>
 													</th>
 													<th class="c" width="90" property="userName">
-														创建者
+														<s:text name="createman"/>
 													</th>
 													<th class="c" width="100" property="createDate">
 														<s:text name="createdate"/>

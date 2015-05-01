@@ -83,7 +83,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="请选择"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaProficiencyPlanVo.unitOrgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>

@@ -83,7 +83,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="labOrgList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgList" headerKey="" headerValue=""
 																		name="labQuaProficiencyPlanVo.unitOrgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
@@ -97,7 +97,7 @@
 					                      						</td>
 					                      						 <td><label><s:text name="accidentinfo"/>：</label></td>
 					                      						<td>
-																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
+																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue=""
 																		name="labQuaProficiencyPlanVo.accStatus" id="accStatus" theme="simple" value="'${labQuaProficiencyPlanVo.accStatus}'" ></s:select>
 																</td>
 										                      	<td>

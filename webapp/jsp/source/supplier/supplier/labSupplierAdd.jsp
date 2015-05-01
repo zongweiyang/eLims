@@ -153,7 +153,7 @@ html {
 											<td>
 												<s:select list="#request.companyList"
 													name="labSupplierVo.companyType" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="name"
+													headerValue="" theme="simple" listKey="name"
 													listValue="name"></s:select>
 											</td>
 											<td>
@@ -177,7 +177,7 @@ html {
 											<td>
 												<s:select list="#request.typeList"
 													name="labSupplierVo.goodsType" multiple="multiple" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="name"
+													headerValue="" theme="simple" listKey="name"
 													listValue="name"></s:select>
 											</td>
 											<td>
@@ -284,7 +284,7 @@ html {
 											<td width="450">
 												<s:select list="#request.bankList"
 													name="labSupplierVo.account" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="name"
+													headerValue="" theme="simple" listKey="name"
 													listValue="name"></s:select>
 											</td>
 

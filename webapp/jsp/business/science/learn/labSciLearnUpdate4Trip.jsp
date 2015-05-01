@@ -172,7 +172,7 @@ html {
 														</td>
 														<td>
 															<s:select list="#request.typeList" cssStyle="width:273px" listKey="name"
-															listValue="name" headerKey="" headerValue="--请选择--"
+															listValue="name" headerKey="" headerValue=""
 															name="labSciLearnVo.learnType" value="${labSciLearnVo.learnType}" id="learnType" theme="simple"></s:select>
 														</td>
 													</tr>

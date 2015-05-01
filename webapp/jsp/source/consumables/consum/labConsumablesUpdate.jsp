@@ -162,7 +162,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<s:select list="#request.codeList" name="labConsumablesVo.dangerSize" headerKey="" headerValue="-请选择-" theme="simple" listKey="name" listValue="name"></s:select>
+														<s:select list="#request.codeList" name="labConsumablesVo.dangerSize" headerKey="" headerValue="" theme="simple" listKey="name" listValue="name"></s:select>
 													</td>
 												</tr>
 												<tr>
@@ -190,7 +190,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<s:select list="#request.labOrgVoList" theme="simple" name="labConsumablesVo.saveOrg" headerKey="" headerValue="-请选择-" value="${labConsumablesVo.saveOrg}" id="orgId" listValue="name" listKey="id"></s:select>
+														<s:select list="#request.labOrgVoList" theme="simple" name="labConsumablesVo.saveOrg" headerKey="" headerValue="" value="${labConsumablesVo.saveOrg}" id="orgId" listValue="name" listKey="id"></s:select>
 													</td>
 													<td>
 														<label>
@@ -217,7 +217,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<s:select list="#request.supplierList" theme="simple" name="labConsumablesVo.unit" headerKey="" headerValue="-请选择-" value="%{labConsumablesVo.unit}" id="unit" listValue="name" listKey="id" cssStyle="width:280px;"></s:select>
+														<s:select list="#request.supplierList" theme="simple" name="labConsumablesVo.unit" headerKey="" headerValue="" value="%{labConsumablesVo.unit}" id="unit" listValue="name" listKey="id" cssStyle="width:280px;"></s:select>
 													</td>
 												</tr>
 												<tr>

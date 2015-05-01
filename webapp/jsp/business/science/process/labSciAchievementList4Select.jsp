@@ -107,7 +107,7 @@ html {
 												</td>
 												<td>
 													<s:select list="#request.codeList" listKey="code"
-														listValue="name" headerKey="" headerValue="-全部-"
+														listValue="name" headerKey="" headerValue=""
 														name="labSciAchievementVo.type" id="type" theme="simple"
 														>
 													</s:select>

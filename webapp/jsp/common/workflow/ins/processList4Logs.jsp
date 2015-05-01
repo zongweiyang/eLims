@@ -42,7 +42,7 @@ function submitthis(action)
 															<tr>
 																<td><label><s:text name="tmp.biz"/>：</label></td>
 					                      						<td>
-					                      							<s:select list="#request.funcList" listKey="id" listValue="name" name="labWfProcessVo.funId" headerKey="" headerValue="-全部-" 
+					                      							<s:select list="#request.funcList" listKey="id" listValue="name" name="labWfProcessVo.funId" headerKey="" headerValue="" 
 														              theme="simple"></s:select>
 					                      						</td>
 					                      						<td><label><s:text name="config.name"/>：</label></td>

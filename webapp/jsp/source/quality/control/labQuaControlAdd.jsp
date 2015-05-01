@@ -132,7 +132,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select list="unitOrgVoList" headerKey="" headerValue="--请选择--" cssStyle="width:273px;"
+													<s:select list="unitOrgVoList" headerKey="" headerValue="" cssStyle="width:273px;"
 													name="labQuaControlVo.unitOrgSearch" value="'${labQuaCusVisitVo.unitOrgId}|${labQuaCusVisitVo.unitOrgName }'" id="unitOrgId" theme="simple"
 													listKey="id+'|'+name" listValue="name" onchange="selectChange(this);"></s:select>
 													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaControlVo.unitOrgId" value="${labQuaControlVo.unitOrgId }"  />
@@ -144,7 +144,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select list="labOrgVoList" headerKey="" headerValue="--请选择--" cssStyle="width:273px;"
+													<s:select list="labOrgVoList" headerKey="" headerValue="" cssStyle="width:273px;"
 													name="labQuaControlVo.labOrgSearch" id="labOrgId" theme="simple"
 													listKey="id+'|'+name" listValue="name" ></s:select>
 													<input size="40" type="hidden"  id="labId" valType="required" msg="请选择实验室" name="labQuaControlVo.labOrgId" value="${labQuaControlVo.labOrgId }"  />

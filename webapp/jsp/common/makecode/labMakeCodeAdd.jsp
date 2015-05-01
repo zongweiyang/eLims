@@ -382,7 +382,7 @@ ul.list {
 												</label>
 											</td>
 											<td>
-												<s:select list="#request.YZLXList" headerKey="" headerValue="---请选择---" name="packagee.clazz.prop[0].validateName" listKey="code" listValue="name" theme="simple"></s:select>
+												<s:select list="#request.YZLXList" headerKey="" headerValue="" name="packagee.clazz.prop[0].validateName" listKey="code" listValue="name" theme="simple"></s:select>
 											</td>
 										</tr>
 									</table>
@@ -397,7 +397,7 @@ ul.list {
 												<label><s:text name="flow.select"/>：</label>
 											</td>
 											<td colspan="3" style="text-align: left;">
-												<s:select list="#request.processList" onchange="checkList(this)" headerKey="" headerValue="---请选择---" listKey="id" theme="simple" listValue="name"></s:select>
+												<s:select list="#request.processList" onchange="checkList(this)" headerKey="" headerValue="" listKey="id" theme="simple" listValue="name"></s:select>
 											</td>		
 										</tr>
 									</table>

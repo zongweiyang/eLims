@@ -98,7 +98,7 @@ html {
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																<s:select list="#request.funcList" listKey="id" listValue="name" name="labEncoderVo.busId" id="busId" headerKey="" headerValue="全部" ></s:select>
+																<s:select list="#request.funcList" listKey="id" listValue="name" name="labEncoderVo.busId" id="busId" headerKey="" headerValue="" ></s:select>
 																</td>
 																<td>
 																	<l:a uri="${pageResult.action}"  onclick="submitAction();" value="fun.query"/>

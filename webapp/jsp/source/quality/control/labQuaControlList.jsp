@@ -96,13 +96,13 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="unitOrgVoList" headerKey="" headerValue="--全部--" onchange="selectChange(this);"
+																	<s:select list="unitOrgVoList" headerKey="" headerValue="" onchange="selectChange(this);"
 																		name="labQuaControlVo.unitOrgSearch" id="unitOrgId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
 																 <td><label>实验室：</label></td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaControlVo.labOrgSearch" id="labOrgId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
@@ -116,7 +116,7 @@
 					                      						</td>
 					                      						<td><label><s:text name="accidentinfo"/>：</label></td>
 																<td>
-																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
+																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue=""
 																		name="labQuaControlVo.accStatus" id="accStatus" theme="simple" value="'${labQuaControlVo.accStatus}'" ></s:select>
 																</td>
 										                      	<td>

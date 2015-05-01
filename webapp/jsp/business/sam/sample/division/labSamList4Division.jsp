@@ -101,7 +101,7 @@ html {
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#{'N':getText('sam.undivied'),'Y':getText('sam.divieded')}" headerKey="" headerValue="全部" listKey="key" listValue="value" theme="simple" name="labSamMainVo.isDiv"></s:select>
+																	<s:select list="#{'N':getText('sam.undivied'),'Y':getText('sam.divieded')}" headerKey="" headerValue="" listKey="key" listValue="value" theme="simple" name="labSamMainVo.isDiv"></s:select>
 																</td>
 																<td>
 																	<l:a uri="${pageResult.action}" onclick="submitAction();" value="fun.query" />

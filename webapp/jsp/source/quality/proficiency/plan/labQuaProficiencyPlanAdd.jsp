@@ -90,7 +90,7 @@
 														</label>
 													</td>
 													<td>
-														<s:select headerKey="" headerValue="请选择" list="labOrgList"
+														<s:select headerKey="" headerValue="" list="labOrgList"
 															theme="simple" listKey="id+'|'+name" listValue="name"
 															cssStyle="width:273px;" onchange="checkLab(this);"></s:select>
 														<input type="hidden" id="orgId"

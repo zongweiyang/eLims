@@ -104,7 +104,7 @@ html {
 																<td>
 																	<s:select list="#request.levelList"
 																		name="labCustomerVo.level" headerKey=""
-																		headerValue="---------全部--------" theme="simple"
+																		headerValue="" theme="simple"
 																		listKey="name" listValue="name"></s:select>
 																</td>
 																<td>

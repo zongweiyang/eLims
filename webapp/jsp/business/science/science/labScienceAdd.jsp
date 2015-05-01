@@ -313,7 +313,7 @@ html {
 												<td>
 													<s:select cssStyle="width:273px" theme="simple"
 														list="#request.sourceList" listKey="name" listValue="name"
-														headerKey="" headerValue="-请选择-"
+														headerKey="" headerValue=""
 														name="labSciScienceVo.source"
 														value="${labSciScienceVo.source}" id="source" />
 												</td>
@@ -325,7 +325,7 @@ html {
 												<td>
 													<s:select cssStyle="width:273px" theme="simple"
 														list="#request.orgList" listKey="id" listValue="name"
-														headerKey="" headerValue="-请选择-"
+														headerKey="" headerValue=""
 														name="labSciScienceVo.labOrgId"
 														value="${labSciScienceVo.labOrgId}" id="labOrgId" />
 												</td>

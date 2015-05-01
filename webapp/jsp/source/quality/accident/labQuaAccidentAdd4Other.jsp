@@ -84,7 +84,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select list="labCodeVoList" headerKey="" headerValue="--请选择--" name="labQuaAccidentVo.accType" cssStyle="width:273px;" id="accType" value="'${labQuaAccidentVo.accType }'" listKey="code" listValue="name" disabled="true" theme="simple" ></s:select>
+													<s:select list="labCodeVoList" headerKey="" headerValue="" name="labQuaAccidentVo.accType" cssStyle="width:273px;" id="accType" value="'${labQuaAccidentVo.accType }'" listKey="code" listValue="name" disabled="true" theme="simple" ></s:select>
 												</td>
 											</tr>
 											<!--<tr>

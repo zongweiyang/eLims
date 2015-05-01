@@ -143,7 +143,7 @@ html {
 											<td>
 												<s:select list="#request.priceList"
 													name="labSupEvaluateVo.price" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="code"
+													headerValue="" theme="simple" listKey="code"
 													listValue="name" cssStyle="width:200px;"></s:select>
 											</td>
 											<td>
@@ -154,7 +154,7 @@ html {
 											<td>
 												<s:select list="#request.timeList"
 													name="labSupEvaluateVo.delivery" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="code"
+													headerValue="" theme="simple" listKey="code"
 													listValue="name" cssStyle="width:200px;"></s:select>
 											</td>
 										</tr>
@@ -167,7 +167,7 @@ html {
 											<td>
 												<s:select list="#request.qualityList"
 													name="labSupEvaluateVo.quality" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="code"
+													headerValue="" theme="simple" listKey="code"
 													listValue="name" cssStyle="width:200px;"></s:select>
 											</td>
 											<td>
@@ -178,7 +178,7 @@ html {
 											<td>
 												<s:select list="#request.serverList"
 													name="labSupEvaluateVo.server" headerKey=""
-													headerValue="---请选择---" theme="simple" listKey="code"
+													headerValue="" theme="simple" listKey="code"
 													listValue="name" cssStyle="width:200px;"></s:select>
 											</td>
 										</tr>

@@ -113,7 +113,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select list="labCodeVoList" listKey="name" listValue="name"  headerKey="" headerValue="--请选择--" onchange="changeValue(this);" name="labQuaAccidentVo.accType" cssStyle="width:273px;" id="accType" value="'${labQuaAccidentVo.accType }'" theme="simple" ></s:select>
+													<s:select list="labCodeVoList" listKey="name" listValue="name"  headerKey="" headerValue="" onchange="changeValue(this);" name="labQuaAccidentVo.accType" cssStyle="width:273px;" id="accType" value="'${labQuaAccidentVo.accType }'" theme="simple" ></s:select>
 												</td>
 											</tr>
 											<tr style="display: none;" id="TR">

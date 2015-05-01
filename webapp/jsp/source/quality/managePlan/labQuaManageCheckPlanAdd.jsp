@@ -67,7 +67,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select list="labOrgVoList" headerKey="" cssStyle="width:273px;" headerValue="--请选择--"
+													<s:select list="labOrgVoList" headerKey="" cssStyle="width:273px;" headerValue=""
 													name="labQuaManageCheckPlanVo.orgSearch" id="orgSearch" theme="simple"
 													listKey="id+'|'+name" listValue="name" onchange="selectChange(this);"></s:select>
 													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaManageCheckPlanVo.orgId" value="${labQuaManageCheckPlanVo.orgId }"  />

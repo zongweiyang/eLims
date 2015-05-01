@@ -170,7 +170,7 @@
 				                      								<tr>
 								                      						<td width="100"> <label><s:text name="query.state"/>：</label></td>
 								                      						<td width="100">
-								                      							<s:select headerKey="0" name="labQueryVo.listQuery[0].id" onchange="checkName(this)" headerValue="请选择条件" cssStyle="width:90px" theme="simple" list="#request.listQuery" listKey="parameterId" listValue="demo"></s:select>
+								                      							<s:select headerKey="0" name="labQueryVo.listQuery[0].id" onchange="checkName(this)" headerValue="" cssStyle="width:90px" theme="simple" list="#request.listQuery" listKey="parameterId" listValue="demo"></s:select>
 							                      							</td>
 								                      						<td width="120"></td>
 								                      						<td width="80"></td>
@@ -189,7 +189,7 @@
 																	<tr>
 																		<td width="100"> <label><s:text name="query.state"/>：</label></td>
 								                      						<td width="100">
-								                      							<s:select headerKey="0" value="'${id}'" name="labQueryVo.listQuery[${st.index}].id"  onchange="checkName(this)" headerValue="请选择条件" cssStyle="width:90px" theme="simple" list="#request.listQuery" listKey="parameterId" listValue="demo"></s:select>
+								                      							<s:select headerKey="0" value="'${id}'" name="labQueryVo.listQuery[${st.index}].id"  onchange="checkName(this)" headerValue="" cssStyle="width:90px" theme="simple" list="#request.listQuery" listKey="parameterId" listValue="demo"></s:select>
 							                      							</td>
 								                      						<td width="120">
 								                      							<input type="hidden" value="${demo}" name="labQueryVo.listQuery[${st.index}].demo"  />	

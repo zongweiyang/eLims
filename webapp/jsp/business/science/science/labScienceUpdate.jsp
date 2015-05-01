@@ -292,7 +292,7 @@
 														</label>
 													</td>
 													<td>
-														<s:select cssStyle="width:273px" theme="simple" list="#request.sourceList" listKey="name" listValue="name" headerKey="" headerValue="-请选择-" name="labSciScienceVo.source"
+														<s:select cssStyle="width:273px" theme="simple" list="#request.sourceList" listKey="name" listValue="name" headerKey="" headerValue="" name="labSciScienceVo.source"
 															 id="source"/>
 													</td>
 													<td class="r" width="150">
@@ -303,7 +303,7 @@
 													<td>
 														<s:select cssStyle="width:273px" theme="simple" list="#request.orgList"
 															listKey="id" listValue="name" headerKey=""
-															headerValue="-请选择-" name="labSciScienceVo.labOrgId"
+															headerValue="" name="labSciScienceVo.labOrgId"
 															id="labOrgId" />
 													</td>
 												</tr>

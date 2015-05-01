@@ -173,7 +173,7 @@ html {
 																	</label>
 																</td>
 																<td>
-																	<s:select headerKey="" headerValue="-全部-" list="#request.samTypeList" listKey="id" listValue="name"  name="labStandardItemVo.labSamTypeId"  theme="simple"></s:select>
+																	<s:select headerKey="" headerValue="" list="#request.samTypeList" listKey="id" listValue="name"  name="labStandardItemVo.labSamTypeId"  theme="simple"></s:select>
 																</td>
 																<td>
 																	<label>
@@ -331,7 +331,7 @@ html {
 																<s:else>
 																<td class="c"><input type="text" name="standardItemList[${st1.index}].scores"  value="${std1.scores }"  readonly="true"/></td>
 																<td class="c" width="35">
-																	<s:select list="#request.jingduList" headerKey="" headerValue="-请选择-" name="standardItemList[${st1.index}].decimalCount" theme="simple" listKey="name" listValue="name" value="'${std1.decimalCount}'" cssStyle="width:80px;"></s:select>
+																	<s:select list="#request.jingduList" headerKey="" headerValue="" name="standardItemList[${st1.index}].decimalCount" theme="simple" listKey="name" listValue="name" value="'${std1.decimalCount}'" cssStyle="width:80px;"></s:select>
 																</td>
 																<td class="c">
 																			<s:select  list="#{'':'','<':'<','<=':'<=','>':'>','>=':'>='}" value="'${std1.minKey}'"  name="standardItemList[${st1.index}].minKey"   theme="simple" ></s:select><br />

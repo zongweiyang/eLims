@@ -99,7 +99,7 @@
 																</td>
 																<td>
 																	<s:select name="labApparaVo.status" headerKey=""
-																		headerValue="全部"
+																		headerValue=""
 																		list="#{'0':getText('common'),'1':getText('report.repair'),'2':getText('stoped'),'7':getText('dropped')}"
 																		value="${labApparaVo.status}" />
 																</td>

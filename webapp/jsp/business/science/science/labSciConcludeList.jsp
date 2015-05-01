@@ -103,7 +103,7 @@ html {
 																</td>
 																<td>
 																	<s:select list="#request.funStepList" listKey="stepId"
-																		listValue="stepName" headerKey="" headerValue="-全部-"
+																		listValue="stepName" headerKey="" headerValue=""
 																		name="labSciScienceVo.status" id="status"
 																		theme="simple"
 																		onchange="submitvalue('/science/labScience/listLabScience.action');">

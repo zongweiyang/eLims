@@ -125,7 +125,7 @@ html {
 					                      						</td>
 					                      						<td><label><s:text name="tmp.biz"/>：</label></td>
 					                      						<td>
-					                      							<s:select list="#request.funcList" listKey="id" listValue="name" name="labReportVo.busId" headerKey="" headerValue="-全部-" theme="simple" ></s:select>
+					                      							<s:select list="#request.funcList" listKey="id" listValue="name" name="labReportVo.busId" headerKey="" headerValue="" theme="simple" ></s:select>
 					                      						</td>
 										                      	<td>
 										                      		<l:a uri="${pageResult.action}"  onclick="submitAction();" value="fun.query"/>

@@ -172,7 +172,7 @@ html {
 														</td>
 														<td>
 															<s:select list="#request.typeList" listKey="name" cssStyle="width:273px"
-															listValue="name" headerKey="" headerValue="--请选择--"
+															listValue="name" headerKey="" headerValue=""
 															name="labSciLearnVo.learnType" value="${labSciLearnVo.learnType}" id="learnType" theme="simple"></s:select>
 														</td>
 													</tr>
@@ -198,7 +198,7 @@ html {
 														</td>
 														<td>
 															<s:select list="#request.roomList" listKey="name" cssStyle="width:273px"
-															listValue="name" headerKey="" headerValue="--请选择--"
+															listValue="name" headerKey="" headerValue=""
 															name="labSciLearnVo.place" value="#{labSciLearnVo.place}" id="place" theme="simple"></s:select>
 														</td>
 													</tr>

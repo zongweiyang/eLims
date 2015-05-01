@@ -316,10 +316,10 @@ html {
 														</td>
 														<td style="text-align: center;" onclick="checkTd(this)">
 															<input type="hidden" id="labSamTaskId" name="taskId" value="${taskId}"  />
-															<s:select theme="simple" headerKey="0"  onclick="clikSelect()" onchange="checkOrg(this)" headerValue="--请选择--" name="listLabSamTestVo[${st.index}].testManId" list="#request.listLabUserTest" listKey="id+'|'+name" listValue="name"></s:select>
+															<s:select theme="simple" headerKey="0"  onclick="clikSelect()" onchange="checkOrg(this)" headerValue="" name="listLabSamTestVo[${st.index}].testManId" list="#request.listLabUserTest" listKey="id+'|'+name" listValue="name"></s:select>
 														</td>
 														<td style="text-align: center;" onclick="checkTd(this)">
-															<s:select theme="simple" headerKey="0" headerValue="--请选择--"  onclick="clikSelect()" onchange="checkOrg(this)" name="listLabSamTestVo[${st.index}].checkManId" list="#request.listLabUserCheck" listKey="id+'|'+name" listValue="name"></s:select>
+															<s:select theme="simple" headerKey="0" headerValue=""  onclick="clikSelect()" onchange="checkOrg(this)" name="listLabSamTestVo[${st.index}].checkManId" list="#request.listLabUserCheck" listKey="id+'|'+name" listValue="name"></s:select>
 														</td>
 														</tr>
 													</s:iterator>

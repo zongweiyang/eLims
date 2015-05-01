@@ -74,7 +74,7 @@
 																</td>
 																<td><label><s:text name="accidtype"/>：</label></td>
 					                      						<td>
-					                      							<s:select list="labCodeVoList" listKey="code" listValue="name"  headerKey="" headerValue="--全部--" name="labQuaAccidentVo.accType" id="accType" value="'${labQuaAccidentVo.accType }'" theme="simple" ></s:select>
+					                      							<s:select list="labCodeVoList" listKey="code" listValue="name"  headerKey="" headerValue="" name="labQuaAccidentVo.accType" id="accType" value="'${labQuaAccidentVo.accType }'" theme="simple" ></s:select>
 					                      						</td>
 																<td>
 																	<label>

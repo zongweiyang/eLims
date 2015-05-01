@@ -81,7 +81,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="commtunit"/>：</label></td>
 																<td>
-																	<s:select list="labOrgList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgList" headerKey="" headerValue=""
 																		name="labQuaManageCheckPlanVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>

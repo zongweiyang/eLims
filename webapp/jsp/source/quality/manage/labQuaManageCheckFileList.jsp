@@ -60,13 +60,13 @@
 					                      					<tr>
 					                      						<td><label><s:text name="commtunit"/>：</label></td>
 																<td>
-																	<s:select list="labOrgList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgList" headerKey="" headerValue=""
 																		name="labQuaManageCheckVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
 																<td><label><s:text name="manageauditlist"/>：</label></td>
 																<td>
-																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue=""
 																		name="labQuaManageCheckVo.quaManageCheckPlanName" id="quaManageCheckPlanName" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
@@ -74,7 +74,7 @@
 																	<label><s:text name="progressing"/>：</label>
 																</td>
 																<td>
-																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="-全部-" name="labQuaManageCheckVo.status" id="status" onchange="submitAction();" />
+																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="" name="labQuaManageCheckVo.status" id="status" onchange="submitAction();" />
 																</td>
 										                      	<td>
 										                      		<l:a uri="${SessionContainer.lastUrl}" onclick="submitAction();" value="fun.query" />

@@ -155,7 +155,7 @@ html {
 													<td>
 														<s:select theme="simple" list="#request.orgList"
 															listKey="id" listValue="name" headerKey=""
-															headerValue="-请选择-" name="labSciScienceVo.labOrgId"
+															headerValue="" name="labSciScienceVo.labOrgId"
 															value="${labSciScienceVo.labOrgId}" id="labOrgId"
 															disabled="true" />
 													</td>

@@ -80,7 +80,7 @@
 																</td>
 																<td>
 																	<s:select list="#request.funStepList" listKey="stepId"
-																		listValue="stepName" headerKey="" headerValue="-全部-"
+																		listValue="stepName" headerKey="" headerValue=""
 																		name="labApparaProvVo.status" id="status"
 																		theme="simple">
 																	</s:select>

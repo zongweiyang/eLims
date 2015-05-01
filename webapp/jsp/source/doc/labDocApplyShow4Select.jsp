@@ -155,7 +155,7 @@ html {
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#request.orgList" theme="simple" name="labDocVo.orgId" id="orgId0" listValue="name" listKey="id" headerValue="全部" headerKey="-1"></s:select>
+																	<s:select list="#request.orgList" theme="simple" name="labDocVo.orgId" id="orgId0" listValue="name" listKey="id" headerValue="" headerKey="-1"></s:select>
 																</td>
 																<td>
 																	<label>
@@ -197,7 +197,7 @@ html {
 																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="cancellabDocBatch();return false;"><img height="20" width="20" src="<%=basePath%>img/accept.gif" /><b><s:text name="abtchcancel"/></b> </a>
 																</td>
 																<td style="float: right;">
-																	<s:select list="#{'-1':getText('page.all'),'2':getText('passed'),'1':getText('unupassed')}" headerValue="--请选择--" headerKey="" listKey="key" listValue="value" onchange="getLabDocApplyList(this.value)"></s:select>
+																	<s:select list="#{'-1':getText('page.all'),'2':getText('passed'),'1':getText('unupassed')}" headerValue="" headerKey="" listKey="key" listValue="value" onchange="getLabDocApplyList(this.value)"></s:select>
 																</td>
 															</tr>
 														</table>

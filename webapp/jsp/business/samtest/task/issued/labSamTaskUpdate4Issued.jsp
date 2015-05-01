@@ -197,7 +197,7 @@ html {
 														${sampNum}
 													</td>
 													<td style="text-align: center;" onclick="checkTd(this)">
-														<s:select theme="simple" headerKey="0" headerValue="--请选择--" name="listLabSamTestVo[${st.index}].orgId" list="#request.listOrgVo" listKey="id+'&'+name" listValue="name" onclick="clikSelect()" onchange="checkOrg(this)"></s:select>
+														<s:select theme="simple" headerKey="0" headerValue="" name="listLabSamTestVo[${st.index}].orgId" list="#request.listOrgVo" listKey="id+'&'+name" listValue="name" onclick="clikSelect()" onchange="checkOrg(this)"></s:select>
 													</td>
 												</tr>
 											</s:iterator>

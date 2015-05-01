@@ -82,7 +82,7 @@
 					                      						</td>
 					                      						 <td><label><s:text name="accidentinfo"/>：</label></td>
 																<td>
-																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
+																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue=""
 																		name="labQuaComplainVo.accStatus" id="accStatus" theme="simple" value="'${labQuaComplainVo.accStatus}'" ></s:select>
 																</td>
 										                      	<td>

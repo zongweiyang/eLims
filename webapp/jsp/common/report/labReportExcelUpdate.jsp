@@ -145,7 +145,7 @@ function getValue(obj){
 								<tr>
 									<td>
 										<s:text name="tag"/>：
-										<s:select list="#request.reportDataList" listKey="code" listValue="title" headerKey="" headerValue="请选择..." theme="simple" onchange="getValue(this)"></s:select>
+										<s:select list="#request.reportDataList" listKey="code" listValue="title" headerKey="" headerValue="" theme="simple" onchange="getValue(this)"></s:select>
 									</td>
 									<td>
 										<s:text name="formed"/>：

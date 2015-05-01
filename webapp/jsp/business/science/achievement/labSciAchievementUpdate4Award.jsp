@@ -151,7 +151,7 @@ html {
 														<td>
 															<s:select list="#request.typeList" listKey="name"
 																cssStyle="width:273px;" listValue="name" headerKey=""
-																headerValue="--请选择--"
+																headerValue=""
 																name="labSciAchievementVo.achievementType"
 																id="achievementType" theme="simple"></s:select>
 														</td>
@@ -223,7 +223,7 @@ html {
 														<td>
 															<s:select list="#request.qkList" listKey="name"
 																cssStyle="width:273px;" listValue="name" headerKey=""
-																headerValue="--请选择--"
+																headerValue=""
 																name="labSciAchievementVo.organization"
 																value="#{labSciAchievementVo.organization}"
 																id="organization" theme="simple"></s:select>
@@ -254,7 +254,7 @@ html {
 														<td>
 															<s:select list="#request.hjdjList" listKey="name"
 																cssStyle="width:273px;" listValue="name" headerKey=""
-																headerValue="--请选择--"
+																headerValue=""
 																name="labSciAchievementVo.achievementNum"
 																value="#{labSciAchievementVo.achievementNum}"
 																id="achievementNum" theme="simple"></s:select>
@@ -271,7 +271,7 @@ html {
 														<td colspan="3">
 															<s:select list="#request.searchList" listKey="name"
 																cssStyle="width:273px;" listValue="name" headerKey=""
-																headerValue="--请选择--"
+																headerValue=""
 																name="labSciAchievementVo.researchContents"
 																value="#{labSciAchievementVo.researchContents}"
 																id="researchContents" theme="simple"></s:select>

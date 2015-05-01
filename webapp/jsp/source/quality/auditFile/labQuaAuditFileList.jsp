@@ -88,7 +88,7 @@
 																</td>
 																<td>
 																	<s:select list="labOrgVoList" headerKey=""
-																		headerValue="--全部--"
+																		headerValue=""
 																		name="labQuaAuditRecordVo.labOrgId" id="labOrgId"
 																		theme="simple" listKey="id" listValue="name" />
 																</td>
@@ -99,13 +99,13 @@
 																	<s:select id="planId" theme="simple"
 																		name="labQuaAuditRecordVo.quaAuditPlanEleId"
 																		list="labQuaAuditPlanEleVoList" headerKey=""
-																		headerValue="--全部--" listKey="id" listValue="purpose" />
+																		headerValue="" listKey="id" listValue="purpose" />
 																</td>
 																<td>
 																	<label><s:text name="progressing"/>：</label>
 																</td>
 																<td>
-																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="-全部-" name="labQuaAuditRecordVo.status" id="status" onchange="submitAction();" />
+																	<s:select theme="simple" list="funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="" name="labQuaAuditRecordVo.status" id="status" onchange="submitAction();" />
 																</td>
 																<td>
 																	<l:a uri="${SessionContainer.lastUrl}"onclick="submitAction();" value="fun.query" />

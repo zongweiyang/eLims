@@ -83,7 +83,7 @@
 																	</label>
 																</td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaAuditRecordVo.labOrgId" id="labOrgId"
 																		theme="simple" listKey="id" listValue="name"></s:select>
 																</td>

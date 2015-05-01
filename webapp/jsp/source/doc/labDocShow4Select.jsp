@@ -171,7 +171,7 @@ html {
 																	</label>
 																</td>
 																<td>
-																	<s:select list="#request.orgList" theme="simple" name="labDocVo.orgId" id="orgId0" listValue="name" listKey="id" headerValue="全部" headerKey="-1"></s:select>
+																	<s:select list="#request.orgList" theme="simple" name="labDocVo.orgId" id="orgId0" listValue="name" listKey="id" headerValue="" headerKey="-1"></s:select>
 																</td>
 																<td>
 																	<label>

@@ -226,7 +226,7 @@ html {
 														<s:select list="#request.codeList"
 															value="${labReferenceVo.dangerSize}"
 															name="labReferenceVo.dangerSize" headerKey=""
-															headerValue="-请选择-" theme="simple" listKey="name"
+															headerValue="" theme="simple" listKey="name"
 															listValue="name"></s:select>
 													</td>
 													<td>
@@ -265,7 +265,7 @@ html {
 													<td>
 														<s:select list="#request.labOrgVoList" theme="simple"
 															name="labReferenceVo.saveOrg" headerKey=""
-															headerValue="-请选择-" value="${labReferenceVo.saveOrg}"
+															headerValue="" value="${labReferenceVo.saveOrg}"
 															id="orgId" listValue="name" listKey="id"></s:select>
 													</td>
 													</tr>
@@ -303,7 +303,7 @@ html {
 													<td>
 														<s:select list="#request.supplierList" theme="simple"
 															name="labReferenceVo.unit" headerKey=""
-															headerValue="-请选择-" value="%{labReferenceVo.unit}"
+															headerValue="" value="%{labReferenceVo.unit}"
 															id="unit" listValue="name" listKey="id" cssStyle="width:280px;"></s:select>
 													</td>
 													<td>

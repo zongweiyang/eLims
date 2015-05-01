@@ -83,7 +83,7 @@
 																	</label>
 																</td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaAuditRecordVo.labOrgId" id="labOrgId"
 																		theme="simple" listKey="id" listValue="name"></s:select>
 																</td>
@@ -96,7 +96,7 @@
 																	<s:select id="planId" theme="simple"
 																		name="labQuaAuditRecordVo.quaAuditPlanEleId"
 																		list="labQuaAuditPlanEleVoList" headerKey=""
-																		headerValue="--全部--" listKey="id" listValue="purpose"></s:select>
+																		headerValue="" listKey="id" listValue="purpose"></s:select>
 																</td>
 										                      	<td>
 										                      		<l:a uri="${SessionContainer.lastUrl}" onclick="submitAction();" value="fun.query" />

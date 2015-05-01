@@ -157,7 +157,7 @@ function selectLabSciScience()
 																<td>
 																	<s:select
 																		list="#{'1':getText('byfundtype'),'2':getText('bystudyresult'),'3':getText('bysicsutdy'),'4':getText('bytheistype')}"
-																		headerKey="" headerValue="-全部-"
+																		headerKey="" headerValue=""
 																		name="type" id="type"
 																		theme="simple" onchange="showUser();return false;"
 																		></s:select>
@@ -166,7 +166,7 @@ function selectLabSciScience()
 																	<s:select
 																		list="#request.userList" listKey="id"
 																		listValue="name"
-																		headerKey="" headerValue="-全部-"
+																		headerKey="" headerValue=""
 																		name="userId" id="userId"
 																		theme="simple"
 																		></s:select>

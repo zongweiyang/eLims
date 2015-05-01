@@ -262,7 +262,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#request.listLabFunction" cssStyle="width:153px" headerKey="0" headerValue="------请选择-----" onchange="checkFun(this)" theme="simple" value="'${labQueryVo.funId}'+'|'+'${labQueryVo.funName}'" listValue="name" listKey="id+'|'+name"></s:select>
+												<s:select list="#request.listLabFunction" cssStyle="width:153px" headerKey="0" headerValue="" onchange="checkFun(this)" theme="simple" value="'${labQueryVo.funId}'+'|'+'${labQueryVo.funName}'" listValue="name" listKey="id+'|'+name"></s:select>
 												<input type="hidden" id="funName" name="labQueryVo.funName" value="${labQueryVo.funName}" />
 												<input type="hidden" id="funId" name="labQueryVo.funId" value="${labQueryVo.funId}" valType="required" msg="请选择功能名称" />
 											</td>

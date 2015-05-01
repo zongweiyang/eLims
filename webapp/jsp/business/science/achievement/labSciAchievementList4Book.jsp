@@ -81,7 +81,7 @@ html {
 														        </td>
 														        <td>
 																	<s:select list="#request.typeList" listKey="name"
-																		listValue="name" headerKey="" headerValue="--请选择--"
+																		listValue="name" headerKey="" headerValue=""
 																		name="labSciAchievementVo.achievementType"
 																		id="achievementType" theme="simple"></s:select>
 																</td>

@@ -134,7 +134,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#request.listLabCode" cssStyle="width:153px" headerKey="0" headerValue="------请选择-----" onchange="checkLab(this)"   theme="simple" listValue="name" listKey="id+'|'+name" ></s:select>
+												<s:select list="#request.listLabCode" cssStyle="width:153px" headerKey="0" headerValue="" onchange="checkLab(this)"   theme="simple" listValue="name" listKey="id+'|'+name" ></s:select>
 												<input type="hidden"  id="typeId" valType="required" msg='<s:property value="getText('selectorgtype')"/>' name="labOrgVo.typeId"  />
 												<input type="hidden" id="typeName"  name="labOrgVo.type"  />
 											</td>

@@ -244,7 +244,7 @@ html {
 																<input type="hidden" value="${itemId}" name="listLabSamTestVo[${fn:length(listLabDemoVo)*st.index+stt.index}].itemId" />
 																<input type="hidden" value="${itemName}" name="listLabSamTestVo[${fn:length(listLabDemoVo)*st.index+stt.index}].itemName" />
 																<input type="hidden" value="${demo1}" name="listLabSamTestVo[${fn:length(listLabDemoVo)*st.index+stt.index}].taskId" />
-																<s:select theme="simple" headerKey="0" headerValue="--请选择--" name="listLabSamTestVo[${fn:length(listLabDemoVo)*st.index+stt.index}].orgId" list="#request.listOrgVo" listKey="id+'&'+name" listValue="name" onclick="clikSelect()" onchange="checkOrg(this)"></s:select>
+																<s:select theme="simple" headerKey="0" headerValue="" name="listLabSamTestVo[${fn:length(listLabDemoVo)*st.index+stt.index}].orgId" list="#request.listOrgVo" listKey="id+'&'+name" listValue="name" onclick="clikSelect()" onchange="checkOrg(this)"></s:select>
 															</td>
 														</s:if>
 														<s:else>

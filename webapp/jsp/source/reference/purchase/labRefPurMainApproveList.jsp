@@ -129,7 +129,7 @@ html {
 																</td>
 																<td>
 																	<s:select list="#request.funStepList" listKey="stepId"
-																		listValue="stepName" headerKey="" headerValue="-全部-"
+																		listValue="stepName" headerKey="" headerValue=""
 																		name="labRefPurMainVo.status" id="status"
 																		onchange="submitvalue('listLabRefPurApprove.action');">
 																	</s:select>

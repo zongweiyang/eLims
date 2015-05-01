@@ -94,7 +94,7 @@ html {
 																<td>
 																	<s:select list="#request.typeList"
 																		name="labSupplierVo.goodsType" headerKey=""
-																		headerValue="---------全部--------" theme="simple"
+																		headerValue="" theme="simple"
 																		listKey="name" listValue="name"></s:select>
 																</td>
 																<td>

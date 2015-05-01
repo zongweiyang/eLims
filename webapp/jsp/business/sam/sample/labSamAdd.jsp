@@ -297,7 +297,7 @@ html {
 												</td>
 												<td class="c"><input size="5" type="text" name="labSamMainVo.labSamVoList[${st.index }].specifications" value="" id="specifications${st.index}"/>
 													<img src="/img/lefttorightselect/arrow_dwn.gif" onclick="copySampInfo('specifications','${st.index}')"/></td>
-												<td class="c"><s:select id="sampTypeId${st.index}" name="labSamMainVo.labSamVoList[${st.index }].samTypeId" list="#request.labSamTypeVoList" headerKey="0" headerValue="样品分类" listKey="id" listValue="name" theme="simple"></s:select>
+												<td class="c"><s:select id="sampTypeId${st.index}" name="labSamMainVo.labSamVoList[${st.index }].samTypeId" list="#request.labSamTypeVoList" headerKey="0" headerValue="" listKey="id" listValue="name" theme="simple"></s:select>
 													<img src="/img/lefttorightselect/arrow_dwn.gif" onclick="copySampInfo('sampTypeId','${st.index}')" /></td>
 												</td>
 												

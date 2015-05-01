@@ -161,7 +161,7 @@ function uploadFile(busId,busType){
 																	</label>
 																</td>
 																<td>
-																	<s:select theme="simple" cssStyle="width:80px;" name="labApparaVo.status" headerKey="" headerValue="全部" list="#{'0':getText('common'),'1':getText('finished.check'),'2':getText('report.repair'),'3':getText('stoped'),'4':getText('dropped')}" value="${labApparaVo.status}" />
+																	<s:select theme="simple" cssStyle="width:80px;" name="labApparaVo.status" headerKey="" headerValue="" list="#{'0':getText('common'),'1':getText('finished.check'),'2':getText('report.repair'),'3':getText('stoped'),'4':getText('dropped')}" value="${labApparaVo.status}" />
 																</td>
 																<td>
 																	<l:a uri="/appara/listLabApparaItems.action" value="fun.query" />

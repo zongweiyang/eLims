@@ -97,7 +97,7 @@ html {
 																	</label>
 																</td>
 																<td>
-																	<s:select theme="simple" list="#request.funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="-全部-" name="labSampRegisterVo.status" id="status" onchange="submitvalue('sample/labSampRegister/listLabSampRegister4Approve.action');">
+																	<s:select theme="simple" list="#request.funStepList" listKey="stepId" listValue="stepName" headerKey="" headerValue="" name="labSampRegisterVo.status" id="status" onchange="submitvalue('sample/labSampRegister/listLabSampRegister4Approve.action');">
 																	</s:select>
 																</td>
 																<td>

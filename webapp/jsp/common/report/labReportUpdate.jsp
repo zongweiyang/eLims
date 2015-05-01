@@ -144,7 +144,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#request.funcList" listKey="id+'^'+wfcode" listValue="name" id="funSelect" theme="simple" cssStyle="width:176px;" headerKey="" headerValue="-请选择-" onchange="getWfProcessCode(this);"></s:select>
+												<s:select list="#request.funcList" listKey="id+'^'+wfcode" listValue="name" id="funSelect" theme="simple" cssStyle="width:176px;" headerKey="" headerValue="" onchange="getWfProcessCode(this);"></s:select>
 												<input type="hidden" name="labReportVo.busId" id="busId" value="${labReportVo.busId}" />
 												<font color="red">*</font>
 											</td>

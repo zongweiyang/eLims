@@ -139,7 +139,7 @@ html {
 													</label>
 												</td>
 												<td>
-												 <s:select list="%{docTypeList}" theme="simple" headerKey="" listKey="name" listValue="name" headerValue="--请选择--" name="labDocVo.literature"></s:select>
+												 <s:select list="%{docTypeList}" theme="simple" headerKey="" listKey="name" listValue="name" headerValue="" name="labDocVo.literature"></s:select>
 												</td>
 											</tr>
 											<tr>

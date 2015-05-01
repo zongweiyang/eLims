@@ -79,13 +79,13 @@
 					                      					<tr>
 					                      						<td><label><s:text name="commtunit"/>：</label></td>
 																<td>
-																	<s:select list="labOrgList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgList" headerKey="" headerValue=""
 																		name="labQuaManageCheckVo.orgSearch" id="orgSearch" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
 																<td><label><s:text name="manageauditlist"/>：</label></td>
 																<td>
-																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labQuaManageCheckPlanVoList" headerKey="" headerValue=""
 																		name="labQuaManageCheckVo.quaManageCheckPlanName" id="quaManageCheckPlanName" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>

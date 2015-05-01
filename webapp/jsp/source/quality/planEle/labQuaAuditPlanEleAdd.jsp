@@ -95,7 +95,7 @@
 														</label>
 													</td>
 													<td>
-														<s:select list="#request.orgList" onchange="checkLab(this)"  theme="simple" listKey="id+'|'+name" listValue="name" cssStyle="width:273px;"  headerKey="" headerValue="--请选择--"/>
+														<s:select list="#request.orgList" onchange="checkLab(this)"  theme="simple" listKey="id+'|'+name" listValue="name" cssStyle="width:273px;"  headerKey="" headerValue=""/>
 														<input type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaAuditPlanEleVo.orgId"  />
 														<input type="hidden"  id="orgName" name="labQuaAuditPlanEleVo.orgName"  />
 													</td>

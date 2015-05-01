@@ -70,7 +70,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="orgList" headerKey="" headerValue="--全部--"
+																	<s:select list="orgList" headerKey="" headerValue=""
 																		name="labQuaAuditPlanEleVo.orgIdSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name" ></s:select>
 																</td>
@@ -80,7 +80,7 @@
 					                      						</td>
 					                      						<td><label><s:text name="accidentinfo"/>：</label></td>
 																<td>
-																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue="--全部--"
+																	<s:select list="#{'0':getText('unureturnerro'),'1':getText('dealingwith'),'2':getText('deleswith')}" headerKey="" headerValue=""
 																		name="labQuaAuditPlanEleVo.accStatus" id="accStatus" theme="simple"  value="'${labQuaAuditPlanEleVo.accStatus}'" ></s:select>
 																</td>
 										                      	<td>

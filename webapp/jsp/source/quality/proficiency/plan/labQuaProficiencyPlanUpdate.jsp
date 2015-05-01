@@ -131,7 +131,7 @@
 													</label>
 												</td>
 												<td>
-													<s:select headerKey="" headerValue="请选择" list="labOrgList" theme="simple" listKey="id+'|'+name"  value="'${labQuaProficiencyPlanVo.unitOrgId}|${labQuaProficiencyPlanVo.unitOrgName}'" listValue="name" cssStyle="width:273px;" onchange="checkLab(this);"></s:select>
+													<s:select headerKey="" headerValue="" list="labOrgList" theme="simple" listKey="id+'|'+name"  value="'${labQuaProficiencyPlanVo.unitOrgId}|${labQuaProficiencyPlanVo.unitOrgName}'" listValue="name" cssStyle="width:273px;" onchange="checkLab(this);"></s:select>
 													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaProficiencyPlanVo.unitOrgId" value="${labQuaProficiencyPlanVo.unitOrgId }"  />
 													<input size="40" type="hidden"  id="orgName" name="labQuaProficiencyPlanVo.unitOrgName"  value="${labQuaProficiencyPlanVo.unitOrgName }" />
 												</td>

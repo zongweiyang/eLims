@@ -85,7 +85,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="--全部--"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaAuditPlanEleVo.orgIdSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name" ></s:select>
 																</td>

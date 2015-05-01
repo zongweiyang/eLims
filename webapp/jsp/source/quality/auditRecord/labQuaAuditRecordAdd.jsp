@@ -144,7 +144,7 @@
 													</td>
 													<td class="l" width="430px;">
 														${labQuaAuditPlanEleVo.orgName }
-														<!--<s:select list="labOrgVoList" headerKey="" cssStyle="width:273px;" headerValue="--请选择--"  value="'${labQuaAuditPlanEleVo.orgId}|${labQuaAuditPlanEleVo.orgName }'" id="unitOrgId" theme="simple"
+														<!--<s:select list="labOrgVoList" headerKey="" cssStyle="width:273px;" headerValue=""  value="'${labQuaAuditPlanEleVo.orgId}|${labQuaAuditPlanEleVo.orgName }'" id="unitOrgId" theme="simple"
 														listKey="id+'|'+name" listValue="name" onchange="selectChange(this);"></s:select>-->
 														<input type="hidden"  id="orgId" name="labQuaAuditRecordVo.labOrgId" value="${labQuaAuditPlanEleVo.orgId }"  />
 														<input type="hidden"  id="orgName" name="labQuaAuditRecordVo.labOrgName"  value="${labQuaAuditPlanEleVo.orgName }" />
@@ -238,7 +238,7 @@
 													</td>
 													<td>
 														<s:select name="labQuaAuditRecordVo.month" id="month"
-															list="labCodeVoList" theme="simple" listKey="code" listValue="name" value="'${labQuaAuditRecordVo.month }'"  onchange="getList();" cssStyle="width:273px;" headerKey="" headerValue="-请选择-"></s:select>
+															list="labCodeVoList" theme="simple" listKey="code" listValue="name" value="'${labQuaAuditRecordVo.month }'"  onchange="getList();" cssStyle="width:273px;" headerKey="" headerValue=""></s:select>
 													</td>
 													<td class="r" width="150">
 														<label>

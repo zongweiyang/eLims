@@ -66,7 +66,7 @@
 					                      					<tr>
 					                      						 <td><label><s:text name="theme.depart"/>：</label></td>
 																<td>
-																	<s:select list="labOrgVoList" headerKey="" headerValue="--全部--"  cssStyle="width:150px;"
+																	<s:select list="labOrgVoList" headerKey="" headerValue=""  cssStyle="width:150px;"
 																		name="labQuaProficiencyVo.orgSearch" id="unitId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
@@ -74,7 +74,7 @@
 					                      						<td>
 					                      							<s:select list="labQuaProficiencyPlanVoList" id="planId" listKey="id"
 																		listValue="name" name="labQuaProficiencyVo.proficiencyPlanId"
-																		theme="simple" cssStyle="width:150px;" headerKey="" headerValue="请选择"></s:select>
+																		theme="simple" cssStyle="width:150px;" headerKey="" headerValue=""></s:select>
 					                      						</td>
 																<td><label><s:text name="paticipangenral"/>：</label></td>
 					                      						<td>

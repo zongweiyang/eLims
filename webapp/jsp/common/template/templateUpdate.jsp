@@ -85,7 +85,7 @@
 											</label>
 										</td>
 										<td>
-											<s:select list="listLabFunction" listKey="id" listValue="name" name="labTemplateVo.busId" id="busId" value="%{labTemplateVo.busId}" headerKey="" headerValue="请选择..." theme="simple" cssStyle="width:214px;"></s:select>
+											<s:select list="listLabFunction" listKey="id" listValue="name" name="labTemplateVo.busId" id="busId" value="%{labTemplateVo.busId}" headerKey="" headerValue="" theme="simple" cssStyle="width:214px;"></s:select>
 										</td>
 										<td>
 											<label>

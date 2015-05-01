@@ -121,7 +121,7 @@
 		<tbody id="pathContent">
 			<tr>
 				<td>
-					<s:select list="#request.varList" listKey="name+'|'+value"  listValue="name" onchange="toValue(this);" name="variableId" id="variableId" headerKey="" headerValue="-请选择-" theme="simple" cssStyle="width:150px;"></s:select>
+					<s:select list="#request.varList" listKey="name+'|'+value"  listValue="name" onchange="toValue(this);" name="variableId" id="variableId" headerKey="" headerValue="" theme="simple" cssStyle="width:150px;"></s:select>
 					<input size="15" type="hidden" value="" id=""/>
 				</td>
 				<td>

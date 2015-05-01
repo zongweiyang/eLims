@@ -155,7 +155,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select theme="simple" list="#request.orgList" listKey="id" listValue="name" name="labUserTrainVo.orgId" id="orgId"  headerKey="" headerValue="请选择..."></s:select>
+												<s:select theme="simple" list="#request.orgList" listKey="id" listValue="name" name="labUserTrainVo.orgId" id="orgId"  headerKey="" headerValue=""></s:select>
 											</td>
 											<td>
 												<label>

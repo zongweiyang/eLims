@@ -72,8 +72,11 @@ html {
 	}
 	function uploadFile(busId,busType){
 	  fileTypes = '*.jpg;*.gif;*.png;';
-	   var url='<%=basePath%>utils/upload/labUpLoad.jsp?busId='+busId+'&fileTypes='
-	   +fileTypes+'&busType='+busType+'&showType=show';
+	  <%-- var url='<%=basePath%>utils/upload/labUpLoad.jsp?busId='+busId+'&fileTypes='
+	   +fileTypes+'&busType='+busType+'&showType=show'; --%>
+	   var path = '<%=basePath%>';
+	   var url= path + 'org/labOrg/upload.action?fileInfoVo.busId='+busId+'&fileInfoVo.fileTypes='
+	   +fileTypes+'&fileInfoVo.busType='+busType+'&fileInfoVo.showType=show';
 	   $.dialog({
 			id:'id',
 			content:'url:'+url,

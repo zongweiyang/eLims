@@ -57,5 +57,10 @@
 				getLabUnit.action?labOrgVo.id=${labOrgVo.id}
 			</result>
 		</action>
+		<action name="upload" method="upload" class="fileUploadAction">
+			<result name="tojsp">
+			/utils/upload/labUpLoad.jsp
+			</result>
+		</action>
 	</package>
 </struts>

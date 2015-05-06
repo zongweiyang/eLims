@@ -8,14 +8,14 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 	SessionContainer son=(SessionContainer)ServletActionContext.getRequest().getSession().getAttribute(SessionContainer.Session_Container);
-	String busId = request.getParameter("busId");
-	String busType = request.getParameter("busType");
-	String fileTypes = request.getParameter("fileTypes");
+	String busId = String.valueOf(request.getAttribute("busId"));
+	String busType =  String.valueOf(request.getAttribute("busType"));
+	String fileTypes =  String.valueOf(request.getAttribute("fileTypes"));
 	
 	String userId= son.getUserId();
 	
-	String saveType = request.getParameter("saveType");
-	String showType = request.getParameter("showType");//show在线显示，用于图片logo等，file文件名显示，可删除用于普通上传
+	String saveType =String.valueOf(request.getAttribute("saveType"));
+	String showType = String.valueOf(request.getAttribute("showType"));//show在线显示，用于图片logo等，file文件名显示，可删除用于普通上传
 %>
 <script type="text/javascript">
 	var basePath='<%=basePath %>';
@@ -42,15 +42,15 @@ var property={
     file_types:fileTypes,
     post_params:post_params,
     file_upload_limit:1,
-    btn_add_text:"添加",
-    btn_up_text:"上传",
-    btn_cancel_text:"放弃",
-    btn_clean_text:"清空",
-    op_del_text:"单项删除",
-    op_up_text:"单项上传",
-    op_fail_text:"上传失败",
-    op_ok_text:"上传成功",
-    op_no_text:"取消上传",
+    btn_add_text:'<s:property value="getText('added')"/>',
+    btn_up_text:'<s:property value="getText('uploaded')"/>',
+    btn_cancel_text:'<s:property value="getText('giveup')"/>',
+    btn_clean_text:'<s:property value="getText('clearup')"/>',
+    op_del_text:'<s:property value="getText('oneitemdelete')"/>',
+    op_up_text:'<s:property value="getText('oneitemupload')"/>',
+    op_fail_text:'<s:property value="getText('uploadfailed')"/>',
+    op_ok_text:'<s:property value="getText('upload.success')"/>',
+    op_no_text:'<s:property value="getText('cancelupload')"/>',
 	upload_url:"<%=basePath %>/LabUploadServlet?busId="+busId+"&busType="+busType+"&userId="+userId+"&showType="+showType+"&saveType="+saveType
 };
 $(document).ready(function(){

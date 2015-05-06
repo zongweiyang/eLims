@@ -6,7 +6,7 @@
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 	request.setAttribute("basePath", basePath);
 	Locale locale = (Locale)request.getSession().getAttribute(Globals.LOCALE_KEY);
-	if(locale == null)locale = Locale.getDefault();
+	if(locale == null)locale = request.getLocale();
 %>
 <!DOCTYPE html>
 <html>

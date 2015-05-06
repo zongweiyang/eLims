@@ -341,6 +341,8 @@ public class BaseAction extends ActionSupport implements SessionAware{
 		try {
 			out = response.getWriter();
 			out.write(sbf.toString());
+			out.flush();
+			out.close();
 			return true;
 		} catch (IOException e) {
 			//e.printStackTrace();

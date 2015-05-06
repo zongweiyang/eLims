@@ -31,12 +31,14 @@
 				float:left;
 				height:100%;
 			}
+		
 			#left{
 				width:150px;
 			}
+			
 			iframe {
 				width:100%;height:100%;
-				border:0px;
+				/* border:0px; */
 			}
 			#nav {
 				font-size: 13px;
@@ -44,6 +46,15 @@
 				height: 29px;
 				font-family: "微软雅黑";
 				font-weight: normal;
+			}
+			#MianFrame{
+				border-left:1px solid grey; 
+				border-bottom: none;
+				border-right: none;
+				border-top: none;
+			}
+			#workarea{
+				cursor: w-resize;
 			}
 			#nav a {
 				display: block;
@@ -83,11 +94,36 @@
 			function onbeforeunload_handler(){
 				window.location.href="<%=basePath%>admin/coreextend/extend/closeWin.action";
 			}
+			
 			$(function() {
 				$(window).resize(function() {
 					setWorkWidthHeight();
 				});
 				setWorkWidthHeight();
+				var widths = false;
+				$('#workarea').mousemove(function(e){
+					
+				}).mousedown(function(e){
+					widths = true;
+					var x = e.pageX;
+					 $(window).mousemove(function(e) {
+						var offset = e.offsetX;
+						if(offset != 0 && x < e.pageX){
+							var width=$('#left').width() + 20;
+							$('#left').width(width);
+							$('#workarea').width($('#work').width() - $('#left').width());
+						}
+						else if(offset != 0 && x > e.pageX){
+							var width=$('#left').width() - 20;
+							$('#left').width(width);
+							$('#workarea').width($('#work').width() - $('#left').width());
+						}
+				        $(window).unbind("mousemove");
+				     });
+				}).mouseup(function(){
+					widths = false;
+				    $(window).unbind("mousemove");
+				});
 				//绑定左侧隐藏和显示
 				$('.sfbtn').click(
 					function() {
@@ -132,7 +168,7 @@
 				<iframe name="leftframe" scrolling="no" frameborder="0" src="<%=basePath%>admin/coreextend/extend/leftframe.action"></iframe>
 			</div>
 			<div id="workarea">
-				<iframe id="MianFrame" name="workarea" scrolling="yes" frameborder="0" src="<%=basePath%>admin/coreextend/extend/mainframe.action"></iframe>
+				<iframe id="MianFrame" name="workarea" scrolling="yes" frameborder="1" src="<%=basePath%>admin/coreextend/extend/mainframe.action"></iframe>
 			</div>
 		</div>
 	</body>

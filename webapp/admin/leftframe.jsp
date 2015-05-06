@@ -1,9 +1,12 @@
+<%@page import="org.apache.struts.Globals"%>
 <%@ page language="java" import="java.util.*,cn.labsoft.labos.utils.tree.*" pageEncoding="UTF-8"%>
 <%@page isELIgnored="false"%>
 <%
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 	request.setAttribute("basePath", basePath);
+	Locale locale = (Locale)request.getSession().getAttribute(Globals.LOCALE_KEY);
+	if(locale == null)locale = Locale.getDefault();
 %>
 <!DOCTYPE html>
 <html>
@@ -56,7 +59,7 @@ div.zTreeDemoBackground {
 	padding: 0px;
 }
 .ztree LI{
-	width: 150px;
+	width: 100%;
 	padding-left:0px;
 	padding-right: 0px;
 }
@@ -70,9 +73,9 @@ div.zTreeDemoBackground {
 	text-decoration:none;
 }
 .ztree li a.level0 {
-	width: 150px;
+	width: 100%; 
 	height: 25px;
-	text-align: left;
+	text-align: center;
 	padding-left:10px;
 	display: block;
 	background-color: #EEEEE0;
@@ -80,18 +83,18 @@ div.zTreeDemoBackground {
 }
 
 .ztree li a.level1 {
-	width: 150px;
+	width: 100%;
 	height: 25px;
-	text-align: left;
+	text-align: center;
 	padding-left:10px;
 	background-color: #E0EEEE;
 	border: 1px silver solid;
 }
 
 .ztree li a.cur {
-	width: 80px;
+	width: 100%;
 	height: 25px;
-	text-align: center;
+	text-align: left;
 	background-color: #FFA07A;
 	border: 1px silver solid;
 }
@@ -106,7 +109,7 @@ div.zTreeDemoBackground {
 
 
 .ztree li a.level2 {
-	width: 150px; 
+	width: 100%; 
 	height : 25px;
 	text-align: left;
 	background-color: #EEEEE0;
@@ -145,29 +148,32 @@ div.zTreeDemoBackground {
 </style>
 		<SCRIPT type="text/javascript">
 		var curMenu = null;
+		var localeStr = '<%=locale%>';
 		var setting = {
-			async: {
-				enable: true,
-				url:"<%=basePath%>admin/function/labFunction/ajaxTreeLabFunction4Admin.action?labFunctionVo.id=${labFunctionVo.id}",
-				autoParam:["treeNid"],
-				dataFilter: filter
-			},
-			view: {
-				showIcon:false,
-				showLine:false,
-				dblClickExpand: false,
-				selectedMulti: false
-			},
-			data: {
-				simpleData: {
-					enable: true
+				async: {
+					enable: true,
+					url:"<%=basePath%>admin/function/labFunction/ajaxTreeLabFunction4Admin.action?labFunctionVo.id=${labFunctionVo.id}",
+					autoParam:["treeNid"],
+					dataFilter: filter
+				},
+				view: {
+					showIcon:false,
+					showLine:false,
+					dblClickExpand: false,
+					selectedMulti: false,
+					fontCss:{}
+				},
+				data: {
+					simpleData: {
+						enable: true
+					}
+				},
+				callback: {
+					beforeExpand: beforeExpand,
+					onExpand: onExpand,
+					onClick: onClick,
+					onAsyncSuccess: onChangeText
 				}
-			},
-			callback: {
-				beforeExpand: beforeExpand,
-				onExpand: onExpand,
-				onClick: onClick
-			}
 		};
 		
 		var curExpandNode = null;
@@ -231,7 +237,14 @@ div.zTreeDemoBackground {
 		function onExpand(event, treeId, treeNode) {
 			curExpandNode = treeNode;
 		}
- 
+ 		function onChangeText(event, treeId, treeNode, msg){
+ 			if(localeStr == 'en_US'){
+	 			$('.ztree li a.level0').css('text-align','left');
+	 			$('.ztree li a.level1').css('text-align','left');
+	 			$('.ztree li a.level2').css('text-align','left');
+	 			$('.ztree li a.cur').css('text-align','center');
+ 			}
+ 		}
 		function onClick(e,treeId, treeNode) {
 			var zTree = $.fn.zTree.getZTreeObj("zTree");
 			zTree.expandNode(treeNode, null, null, null, true);
@@ -273,7 +286,7 @@ div.zTreeDemoBackground {
 	</head>
 	<body>
 		<div>
-			<ul id="zTree" class="ztree" style="width: 150px"></ul>
+			<ul id="zTree" class="ztree" style="width: 100%"></ul>
 		</div>
 	</body>
 </html>

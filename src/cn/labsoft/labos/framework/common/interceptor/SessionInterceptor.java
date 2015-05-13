@@ -39,13 +39,13 @@ public class SessionInterceptor extends BaseInterceptor {
 	@SuppressWarnings("unchecked")
 	@Override
 	public String intercept(ActionInvocation invocation) throws Exception {
-		super.intercept(invocation);
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String funIdNew = request.getParameter("funId");
 		
 		Map session=ActionContext.getContext().getSession();
 		SessionContainer sessionContainer = (SessionContainer) session.get(SessionContainer.Session_Container);
 		String nameSpace = invocation.getProxy().getNamespace().toUpperCase().trim();
+		
 		if (null != nameSpace && !"".equals(nameSpace)) {
 			if ("/".equals(nameSpace)) {
 				//说明是跟路径  不需要+ "/"
@@ -54,8 +54,12 @@ public class SessionInterceptor extends BaseInterceptor {
 			}
 		}
 		String URL = (nameSpace + invocation.getProxy().getActionName() + ".action").toUpperCase().trim();
+		
+		System.out.println(String.format("funId=%s,url=%s",funIdNew,URL));
+		
 		if (null != funIdNew && !"".equals(funIdNew)) {
 			session.put("funId", funIdNew);
+			sessionContainer.setFunId(funIdNew);
 		}
 
 		//判断是否是后台用户的操作

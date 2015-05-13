@@ -17,7 +17,7 @@
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/barcode.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/barcode4j.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/c3p0-0.9.0.4.jar"/>
-	<classpathentry kind="lib" path="webapp/WEB-INF/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/cglib-nodep-3.1.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/common-annotations.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-beanutils.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/commons-chain-1.2.jar"/>
@@ -80,7 +80,7 @@
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-spatial-4.3.0.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/lucene-suggest-4.3.0.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mail.jar"/>
-	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mysql-connector-java-3.1.13-bin.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/mysql-connector-java-5.1.35.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/noggit-0.5.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/ognl-3.0.6.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/org.restlet-2.1.1.jar"/>
@@ -109,8 +109,8 @@
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/xstream-1.4.2.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/xwork-core-2.3.16.2.jar"/>
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/zookeeper-3.4.5.jar"/>
-	<classpathentry kind="lib" path="D:/medxview/apache-tomcat-7.0.509092/lib/servlet-api.jar"/>
-	<classpathentry kind="lib" path="D:/medxview/apache-tomcat-7.0.509092/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-7.0.59/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="D:/apache-tomcat-7.0.59/lib/jsp-api.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Java/jdk1.7.0_25"/>

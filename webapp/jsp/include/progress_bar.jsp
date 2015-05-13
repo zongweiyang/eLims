@@ -4,7 +4,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;
 	String url = request.getParameter("url");
-	try{
+	try{	
 		if(url.indexOf("?")>-1){
 			url = url.replace("^","&");
 		}else{
@@ -26,8 +26,6 @@
 	</script>
 	</head>
 	<body onLoad="loadDataFDB();">
-
-
 		<div>
 			<div id="tbMsg" align="center"
 				style="margin-top: 200px; display: block;">

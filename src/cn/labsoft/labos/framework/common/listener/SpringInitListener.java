@@ -42,8 +42,7 @@ public class SpringInitListener implements ServletContextListener {
 	 */
 	public void contextInitialized(ServletContextEvent arg0) {
 		if (log.isInfoEnabled()) {
-			log
-					.info("spring loader bean..begin*****************************************************");
+			log.info("spring loader bean..begin*****************************************************");
 		}
 		try {
 			  String path = Thread.currentThread().getContextClassLoader().getResource("").getPath();
@@ -69,8 +68,7 @@ public class SpringInitListener implements ServletContextListener {
 			
 		}
 		if (log.isInfoEnabled()) {
-			log
-					.info("spring loader bean..end******************************************************");
+			log.info("spring loader bean..end******************************************************");
 		}
 	}
 

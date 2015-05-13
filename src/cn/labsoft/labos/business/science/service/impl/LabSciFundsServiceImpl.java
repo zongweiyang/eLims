@@ -1,17 +1,11 @@
 package cn.labsoft.labos.business.science.service.impl;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.hibernate.Query;
-import org.hibernate.Session;
 import org.springframework.stereotype.Service;
-
-import com.mysql.jdbc.ResultSet;
 
 import cn.labsoft.labos.business.science.dao.ILabSciFundsDAO;
 import cn.labsoft.labos.business.science.dao.ILabSciScienceDAO;

@@ -33,6 +33,7 @@ import cn.labsoft.labos.base.user.vo.LabUserVo;
 import cn.labsoft.labos.constants.Constants_Base;
 import cn.labsoft.labos.framework.common.action.BaseAction;
 import cn.labsoft.labos.framework.common.exception.GlobalException;
+import cn.labsoft.labos.framework.common.interceptor.Action;
 import cn.labsoft.labos.framework.common.log.Log4J;
 import cn.labsoft.labos.framework.common.servicefactory.SystemInstance;
 import cn.labsoft.labos.framework.common.sesseionutils.SessionContainer;
@@ -128,9 +129,10 @@ public class CoreExtend4AdminAction extends BaseAction {
 	public String login() throws GlobalException {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession session = request.getSession();
-	/*	Locale locale = null;
-		locale = getLocale();
-		session.setAttribute(Globals.LOCALE_KEY, locale);*/
+		Locale locale = null;
+		locale = request.getLocale();
+		session.setAttribute(Globals.LOCALE_KEY, locale);
+		ActionContext.getContext().setLocale(locale);
 		SessionContainer sc = getSessionContainer();
 		if (null != sc) {
 			getMainMenu();

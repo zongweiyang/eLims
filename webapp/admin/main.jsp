@@ -113,7 +113,7 @@
 							$('#left').width(width);
 							$('#workarea').width($('#work').width() - $('#left').width());
 						}
-						else if(offset != 0 && x > e.pageX){
+						else if(offset != 0 && x > e.pageX){	
 							var width=$('#left').width() - 20;
 							$('#left').width(width);
 							$('#workarea').width($('#work').width() - $('#left').width());

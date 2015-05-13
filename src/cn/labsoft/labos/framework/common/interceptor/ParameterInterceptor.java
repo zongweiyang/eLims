@@ -48,7 +48,6 @@ public class ParameterInterceptor extends BaseInterceptor {
 			}
 		}
 		*/
-		
 		String actionName = actionInvocation.getProxy().getActionName();
 		//弹层页面
 		if(Action.isSelectPage(actionName)){

@@ -10,6 +10,8 @@
 		<interceptors>
 			<!-- 异常拦截器-->
 			<interceptor name="exceptionInterceptor" class="cn.labsoft.labos.framework.common.interceptor.ExceptionInterceptor"></interceptor>
+			<!-- 国际化配置拦截器-->
+			<interceptor name="i18nInterceptor" class="cn.labsoft.labos.framework.common.interceptor.I18nInterceptor"></interceptor>
 			<!-- 身份校验拦截器-->
 			<interceptor name="sessionInterceptor" class="cn.labsoft.labos.framework.common.interceptor.SessionInterceptor"></interceptor>
 			<!-- 安全校验拦截器-->
@@ -22,10 +24,10 @@
 			<interceptor name="parameterInterceptor" class="cn.labsoft.labos.framework.common.interceptor.ParameterInterceptor"></interceptor>
 			<!-- 身份校验拦截器admin-->
 			<interceptor name="sessionInterceptor4Admin" class="cn.labsoft.labos.framework.common.interceptor.SessionInterceptor4Admin"></interceptor>
-
 			<!-- 系统Action拦截器栈 -->
 			<interceptor-stack name="labInterceptorStack">
 				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="i18nInterceptor"></interceptor-ref>
 				<interceptor-ref name="sessionInterceptor"></interceptor-ref>
 				<interceptor-ref name="powerInterceptor"></interceptor-ref>
 				<interceptor-ref name="parameterInterceptor"></interceptor-ref>
@@ -34,6 +36,7 @@
 			</interceptor-stack>
 			<interceptor-stack name="specalInterceptorStack">
 				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="i18nInterceptor"></interceptor-ref>
 				<interceptor-ref name="sessionInterceptor"></interceptor-ref>
 				<interceptor-ref name="powerInterceptor"></interceptor-ref>
 				<interceptor-ref name="parameterInterceptor"></interceptor-ref>
@@ -42,6 +45,7 @@
 			<!-- 系统Action拦截器栈 -->
 			<interceptor-stack name="labInterceptorStack4Admin">
 				<interceptor-ref name="exceptionInterceptor"></interceptor-ref>
+				<interceptor-ref name="i18nInterceptor"></interceptor-ref>
 				<interceptor-ref name="sessionInterceptor4Admin"></interceptor-ref>
 				<interceptor-ref name="powerInterceptor4Admin"></interceptor-ref>
 				<interceptor-ref name="parameterInterceptor"></interceptor-ref>

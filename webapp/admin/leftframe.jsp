@@ -243,6 +243,11 @@ div.zTreeDemoBackground {
 	 			$('.ztree li a.level1').css('text-align','left');
 	 			$('.ztree li a.level2').css('text-align','left');
 	 			$('.ztree li a.cur').css('text-align','center');
+ 			}else{
+ 				$('.ztree li a.level0').css('text-align','center');
+	 			$('.ztree li a.level1').css('text-align','center');
+	 			$('.ztree li a.level2').css('text-align','center');
+	 			$('.ztree li a.cur').css('text-align','left');
  			}
  		}
 		function onClick(e,treeId, treeNode) {

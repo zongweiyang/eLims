@@ -154,14 +154,17 @@ public class LabUserFunDAOImpl extends BaseDAO implements ILabUserFunDAO {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public boolean getLabUserFunHavePower(String userId, String id,
+	public boolean getLabUserFunHavePower(String userId, String funId,
 			String action) throws GlobalException {
+		
+		System.out.println(String.format("userId=%s,funId=%s,action=%s", userId,funId,action));
+		
 		try {
 			if (userId.equals("0")) {
 				return true;
 			}
 			String hql = "FROM LabUserFun WHERE user.id='" + userId + "'";
-			hql += " AND function.id = '" + id + "'";
+			hql += " AND function.id = '" + funId + "'";
 			if (action.equals(LogCommonInformation.DELETE)) {
 				hql += " AND isDelete='Y'";
 			} else if (action.equals(LogCommonInformation.QUERY)) {

@@ -100,16 +100,17 @@ public class CoreExtendAction extends BaseAction {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession tempSession = request.getSession();
 		tempSession.removeAttribute(SessionContainer.Session_Container);
-		/*Locale locale = null;
-		locale = getLocale();
-		tempSession.setAttribute(Globals.LOCALE_KEY, locale);*/
+		Locale locale = null;
+		locale = request.getLocale();
+		tempSession.setAttribute(Globals.LOCALE_KEY, locale);
+		ActionContext.getContext().setLocale(locale);
 		SessionContainer sc = getSessionContainer();
 		if (null != sc) {
 			tempSession.removeAttribute(SessionContainer.Session_Container);
 		}else{
 			sc = new SessionContainer();
 		}
-		
+		 
 		initProperty(sc);
 		try{
 			//session.put(SessionContainer.Session_Container, sc);

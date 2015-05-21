@@ -225,7 +225,7 @@
 																	<l:a href="#" uri="quality/proficiencyPlan/deleteLabQuaProficiencyPlan.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 																</s:if>
 																&nbsp;&nbsp;
-															  	<l:a href="#" uri="quality/proficiencyPlan/preAddLabQuaProficiency.action?labQuaProficiencyVo.proficiencyPlanId=${id}&labQuaProficiencyVo.proficiencyPlanName=${name }&labQuaProficiencyVo.orgName=${unitOrgName }&labQuaProficiencyVo.orgId=${unitOrgId }" value="记录" />
+															  	<l:a href="#" uri="quality/proficiencyPlan/preAddLabQuaProficiency.action?labQuaProficiencyVo.proficiencyPlanId=${id}&labQuaProficiencyVo.proficiencyPlanName=${name }&labQuaProficiencyVo.orgName=${unitOrgName }&labQuaProficiencyVo.orgId=${unitOrgId }" value="jilu" />
 																<s:if test="${accStatus == ''|| accStatus == null || accStatus=='0'}">
 																	&nbsp;&nbsp;
 																	<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-NLYZ');" value="transferaccid"/>	

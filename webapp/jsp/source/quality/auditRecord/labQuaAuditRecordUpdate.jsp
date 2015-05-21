@@ -144,7 +144,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														被审<s:text name="msg.depart"/>：
+														<s:text name="auditdeparted"/>：
 													</label>
 												</td>
 												<td>
@@ -175,7 +175,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														内&nbsp;&nbsp;审&nbsp;&nbsp;员：
+														<s:text name="innealauditedd"/>：
 													</label>
 												</td>
 												<td>
@@ -186,7 +186,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														审核报告发放<s:text name="msg.depart"/>：
+														<s:text name="auditrepedmp"/>：
 													</label>
 												</td>
 												<td>
@@ -205,7 +205,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														<s:text name="coderepeople"/>员：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -246,7 +246,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														审核情况概述：
+														<s:text name="auditinfoasfd"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -256,7 +256,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审结论：
+														<s:text name="internlcloudi"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -274,7 +274,7 @@
 												<table class="myworkingboxttable" id="OneTable" >
 													<thead>
 															<th width="50" class="c">
-																<s:text name="page.record"/>   款
+																<s:text name="tiaokuan"/>
 															</th>
 															<th width="" align="center">
 																<s:text name="chkcontend"/>
@@ -283,16 +283,16 @@
 																<s:text name="check.methods"/>
 															</th>
 															<th width="30">
-																符合
+														<s:text name="fuhaed"/>
 															</th>
 															<th width="30">
-																基本符合
+														<s:text name="basefuhe"/>
 															</th>
 															<th width="30">
-																不符合
+														<s:text name="bufuheasd"/>
 															</th>
 															<th width="155">
-																存在问题
+														<s:text name="existproblesm"/>
 															</th>
 															<th width="340">
 																<s:text name="zhenggaiqinfo"/>

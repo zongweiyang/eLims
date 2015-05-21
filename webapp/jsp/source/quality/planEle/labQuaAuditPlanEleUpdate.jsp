@@ -136,7 +136,7 @@
 														</label>
 													</td>
 													<td>
-														<input size="40" valType="required" msg="<s:text name="interndsite"/>不能为空" name="labQuaAuditPlanEleVo.address" id="address"
+														<input size="40" valType="required" msg='<s:property value="getText('neshennotemep')"/>' name="labQuaAuditPlanEleVo.address" id="address"
 															type="text"  value="${labQuaAuditPlanEleVo.address}"/>
 													</td>
 												</tr>

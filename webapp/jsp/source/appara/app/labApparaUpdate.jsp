@@ -10,7 +10,8 @@
 		<script type="text/javascript">
         function submitvalue(actionstr){
             var df = document.forms[0];
-            df.action = actionstr;
+            var path = '${basePath}';
+            df.action =path + actionstr;
             if (actionstr == 'updateApparatusInfo.action') {
                 if (validateForm(df)) {
                     df.submit();

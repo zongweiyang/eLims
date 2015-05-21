@@ -25,7 +25,7 @@ html {
 				var msg=true;
 				$('input[id*="num"]').each(function(){
 					if($(this).val().length==0){
-						validate.tip("数量不能为空！",$(this));
+						validate.tip('<s:property value="getText('numbernotempy')"/>',$(this));
 						msg=false;
 					}
 				});
@@ -49,7 +49,7 @@ html {
 				  //  var concentrationx = document.getElementById('concentration'+i).value;
 					
 					if (!strReg.test(num)) {
-						validate.tip("请输入正确格式的的数据！<s:text name="ifed"/>：20",$('#functionId'));
+						validate.tip('<s:property value="getText('inputcorddata')"/>',$('#functionId'));
 						$("#num"+i).focus();
 						return false;
 					}
@@ -91,7 +91,7 @@ html {
 			function checkTotal(obj,i){
 				if($(obj).val().length>0){
 					if(BASEisNotFloat($(obj).val())) {
-						validate.tip("请输入数字",$('#functionId'));
+						validate.tip('<s:property value="getText('theme.input.number')"/>',$('#functionId'));
 						$(obj).val("0");
 					}
 				}
@@ -173,7 +173,7 @@ html {
 														<td>
 															<input type="text" name="labRefPurMainVo.receiptno"
 																valType="required,strLength" max="128"
-																strLength-msg="单据号长度不能超过128位" msg="单据号不能为空"
+																strLength-msg='<s:property value="getText('danju128')"/>' msg='<s:property value="getText('danjuidnotem')"/>'
 																value="${labRefPurMainVo.receiptno}" />
 															<input type="hidden" name="labRefPurMainVo.id"
 																value="${labRefPurMainVo.id}" id="labRefPurMainId" />
@@ -186,7 +186,7 @@ html {
 														<td>
 															<input type="text" name="labRefPurMainVo.applicant"
 																valType="required,strLength" max="32"
-																strLength-msg="申请人长度不能超过32位" msg="申请人号不能为空"
+																strLength-msg='<s:property value="getText('appname32')"/>' msg='<s:property value="getText('applynoenotempy')"/>'
 																value="${labRefPurMainVo.applicant}" />
 														</td>
 														<td>
@@ -198,7 +198,7 @@ html {
 															<input name="labRefPurMainVo.createTime"
 																value="${labRefPurMainVo.createTime}" id="name"
 																valType="required,strLength" max="128"
-																strLength-msg="申请时间长度不能超过128位" msg="申请时间不能为空"
+																strLength-msg='<s:property value="getText('apptimenote128')"/>' msg='<s:property value="getText('apptimenotrm')"/>'
 																class="Wdate" size="30"
 																onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" />
 														</td>
@@ -267,13 +267,13 @@ html {
 																<input type="text"
 																	name="labRefPurMainVo.labRefPurDetailVoList[${st.index }].num"
 																	valType="strLength" max="16"
-																	strLength-msg="入库量不能超过16位"
+																	strLength-msg='<s:property value="getText('inboundnot16')"/>'
 																	onblur="checkTotal(this,'${st.index+1}');"
 																	id="num${st.index }" } value="${num }" />
 															</td>
 															<td class="c" width="300">
 																<input type="text" valType="strLength" max="128"
-																	strLength-msg="备注不能超过128位"
+																	strLength-msg='<s:property value="getText('remarknot128')"/>'
 																	name="labRefPurMainVo.labRefPurDetailVoList[${st.index }].remark"
 																	value="${remark }" />
 															</td>

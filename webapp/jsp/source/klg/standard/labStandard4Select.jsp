@@ -95,7 +95,7 @@ html {
 																	<l:a uri="${SessionContainer.lastUrl}" onclick="submitAction();" value="fun.query" />
 																</td>
 																<td>
-																	<l:a uri="klg/labStandard/updateLabStandard4Status.action" onclick="submitvalue('updateLabStandard4Status.action');" value="确定选择"/>
+																	<l:a uri="klg/labStandard/updateLabStandard4Status.action" onclick="submitvalue('updateLabStandard4Status.action');" value="confirmseelet"/>
 																</td>
 															</tr>
 														</table>
@@ -118,7 +118,7 @@ html {
 													<s:text name="biaozcode"/>
 												</th>
 												<th property="standIndex">
-													类别
+												<s:text name="typed"/>
 												</th>
 											</tr>
 											<s:if test="listLabStandardVo!=null">

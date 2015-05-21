@@ -94,7 +94,7 @@ html {
 			obj=$(obj);
 			if(parseInt(obj.val())>sampNum){
 				obj.val("");
-				validate.tip('请正确输入分配数量！',obj);
+				validate.tip('<s:property value="getText('pleaseinputcornumber')"/>',obj);
 			}else{
 				$(".myworkingboxttable tr:gt("+obj.closest('tr').index()+")").find("input[type*=checkbox]").each(function(){
 					if($(this).attr("checked")){
@@ -136,14 +136,14 @@ html {
 					itemNames+=$(this).find("input[type=checkbox]").val();
 					itemNames+=",";
 					if($(this).find('input[name*=sampNum]').val()==''){
-							validate.tip('请输入分配数量！',$(this).find('input[name*=sampNum]'));
+							validate.tip('<s:property value="getText('pleaseinpuasdftnumber')"/>',$(this).find('input[name*=sampNum]'));
 							key=false;
 							return false;
 					}
 					itemSamNum+=$(this).find('input[name*=sampNum]').val();
 					itemSamNum+=",";
 					if($(this).find('select[name*=testManId]').val()=='0'){
-						validate.tip('请选择检测人！',$(this).find('select[name*=testManId]'));
+						validate.tip('<s:property value="getText('inputcheknam')"/>',$(this).find('select[name*=testManId]'));
 							key=false;
 							return false;
 					}
@@ -152,7 +152,7 @@ html {
 					taskIds+=$(this).find('input[name=taskId]').val();
 					taskIds+=",";
 						if($(this).find('select[name*=checkManId]').val()=='0'){
-							validate.tip('请选择检验人！',$(this).find('select[name*=checkManId]'));
+							validate.tip('<s:property value="getText('selecheckman')"/>',$(this).find('select[name*=checkManId]'));
 							key=false;
 							return false;
 					}

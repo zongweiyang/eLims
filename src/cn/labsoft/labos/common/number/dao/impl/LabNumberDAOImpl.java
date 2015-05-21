@@ -123,7 +123,7 @@ public class LabNumberDAOImpl extends BaseDAO implements ILabNumberDAO {
 		int sort=0;
 		if(!StrUtils.isBlankOrNull(type)){
 			String hql="FROM LabNumber WHERE isDel='"+Constants_Base.N+"' AND type='"+type+"'";
-			List<LabNumber> listLabNumber=super.find(hql);
+			List<LabNumber> listLabNumber=this.find(hql);
 			if(listLabNumber!=null&&listLabNumber.size()>0){
 				hql="FROM LabNumberPar WHERE isDel='"+Constants_Base.N+"' AND labNumber.id='"+listLabNumber.get(0).getId()+"' ORDER BY sort";
 				List<LabNumberPar> listLabNumberPar=super.find(hql);

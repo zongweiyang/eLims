@@ -97,7 +97,7 @@ ul.list {
 		}
 		function delRow(){
 			if($("#tableValue tr:last").index()==0){
-				validate.tip('请正确操作！详细信息列不能为空',$("#columNumber"),1)
+				validate.tip('<s:property value="getText('opscorrentdetail')"/>',$("#columNumber"),1)
 			}else{
 				$("#tableValue tr:last").remove();
 				$("#columNumber").val(parseInt($("#columNumber").val())-1);
@@ -145,7 +145,7 @@ ul.list {
 					$("#tableValue").append(tableRows);
 			}else{
 				obj.val(1);
-		      validate.tip('请正确输入属性个数',obj,1)	
+		      validate.tip('<s:property value="getText('corprosnum')"/>',obj,1)	
 		     }
 		}
 		function toClazzName(obj){

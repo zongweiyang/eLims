@@ -155,7 +155,7 @@
 																${status }
 															</td>
 															<td class="c">
-																<s:if test="${status == '<s:text name="manageaccpreco"/>'}">
+																<s:if test="${status == '管理评审记录'}">
 																	<l:a href="#" uri="quality/manage/showLabQuaManageCheckRecord.action?labQuaManageCheckVo.id=${id}"  value="look.check" />
 																</s:if>
 																<s:elseif test="${status == '管理评审报告'}">

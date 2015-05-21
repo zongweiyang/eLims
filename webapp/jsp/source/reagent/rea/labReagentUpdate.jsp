@@ -135,7 +135,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.code" id="code" valType="required,strLength" max="32" readonly="true" strLength-msg="试剂编码长度不能超过32位" msg="试剂编码不能为空" type="text" size="40" value="${labReagentVo.code}" />
+														<input name="labReagentVo.code" id="code" valType="required,strLength" max="32" readonly="true" strLength-msg='<s:property value="getText('reagcodelennot32')"/>' msg='<s:property value="getText('reacodenotemoy')"/>' type="text" size="40" value="${labReagentVo.code}" />
 													</td>
 													<td>
 														<label>
@@ -143,7 +143,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.name" id="name" valType="required,strLength" max="128" strLength-msg="试剂名称长度不能超过128位" msg="试剂名称不能为空" type="text" size="40" value="${labReagentVo.name}" />
+														<input name="labReagentVo.name" id="name" valType="required,strLength" max="128" strLength-msg='<s:property value="getText('reagnamenot128')"/>' msg='<s:property value="getText('reannamenotemp')"/>' type="text" size="40" value="${labReagentVo.name}" />
 														<input name="labReagentVo.id" id="id" type="hidden" size="40" value="${labReagentVo.id}" />
 														<input name="labReagentVo.isDel" id="isDel" type="hidden" size="40" value="${labReagentVo.isDel}" />
 													</td>
@@ -155,7 +155,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.size" id="size" valType="required,strLength" max="32" strLength-msg="试剂规格长度不能超过32位" msg="试剂规格不能为空" type="text" size="40" value="${labReagentVo.size}" />
+														<input name="labReagentVo.size" id="size" valType="required,strLength" max="32" strLength-msg='<s:property value="getText('rearegunot32')"/>' msg='<s:property value="getText('rearegunot32')"/>' type="text" size="40" value="${labReagentVo.size}" />
 													</td>
 
 													<td>
@@ -164,7 +164,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.purity" valType="strLength" max="32" strLength-msg="纯度的长度不能超过32位" id="purity" type="text" size="40" value="${labReagentVo.purity}" />
+														<input name="labReagentVo.purity" valType="strLength" max="32" strLength-msg='<s:property value="getText('purelengnot32')"/>' id="purity" type="text" size="40" value="${labReagentVo.purity}" />
 													</td>
 												</tr>
 												<tr>
@@ -183,7 +183,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.safeAmount" value="${labReagentVo.safeAmount}" valType="required,strLength" max="16" strLength-msg="警戒数量长度不能超过16位" msg="警戒数量不能为空" id="releaseDate" size="40" type="text" />
+														<input name="labReagentVo.safeAmount" value="${labReagentVo.safeAmount}" valType="required,strLength" max="16" strLength-msg='<s:property value="getText('alarmlennot16')"/>' msg='<s:property value="getText('alarmnotem')"/>' id="releaseDate" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>
@@ -193,7 +193,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.amount" value="${labReagentVo.amount}" valType="strLength" max="16" strLength-msg="库存长度不能超过16位" id="amount" size="40" type="text" />
+														<input name="labReagentVo.amount" value="${labReagentVo.amount}" valType="strLength" max="16" strLength-msg='<s:property value="getText('stocklennot16')"/>' id="amount" size="40" type="text" />
 													</td>
 
 													<td>
@@ -212,7 +212,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.saveUser" valType="strLength" max="32" strLength-msg="保管人长度不能超过32位" onclick="selectLabUser();" value="${labReagentVo.saveUser}" id="saveUser" size="40" type="text" />
+														<input name="labReagentVo.saveUser" valType="strLength" max="32" strLength-msg='<s:property value="getText('savinglennotover')"/>' onclick="selectLabUser();" value="${labReagentVo.saveUser}" id="saveUser" size="40" type="text" />
 													</td>
 
 													<td>
@@ -221,7 +221,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReagentVo.safeDate" valType="strLength" max="11" strLength-msg="有限期长度不能超过11位" value="${labReagentVo.safeDate}" id="safeDate" size="40" type="text" />
+														<input name="labReagentVo.safeDate" valType="strLength" max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>' value="${labReagentVo.safeDate}" id="safeDate" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>
@@ -240,7 +240,7 @@ html {
 														</label>
 													</td>
 													<td colspan="">
-														<textarea rows="3" cols="36" name="labReagentVo.remark" valType="strLength" max="128" strLength-msg="备注长度不能超过128位" id="remark">${labReagentVo.remark}</textarea>
+														<textarea rows="3" cols="36" name="labReagentVo.remark" valType="strLength" max="128" strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark">${labReagentVo.remark}</textarea>
 													</td>
 												</tr>
 												<tr>

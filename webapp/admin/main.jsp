@@ -96,6 +96,7 @@
 			}
 			
 			$(function() {
+				
 				$(window).resize(function() {
 					setWorkWidthHeight();
 				});

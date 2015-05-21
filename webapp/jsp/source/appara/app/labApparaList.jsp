@@ -8,8 +8,9 @@
 	 function submitvalue(actionstr){
 	       if(check('labApparaVo.ids'))
 	       {
+	    	var path = '${basePath}';
             var df = document.forms[0];
-            df.action = actionstr;
+            df.action = path+actionstr;
 		    df.submit();
 		  	}
      }

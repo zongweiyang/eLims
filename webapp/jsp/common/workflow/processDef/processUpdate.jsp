@@ -106,7 +106,7 @@ html {
 					$('#bzhtsh').remove();
 					$('#bzhxx').html("");
 					$('#bzhxx').append(
-    				     $('<tr>').append($('<td>').addClass('c').append('节点名称'))
+    				     $('<tr>').append($('<td>').addClass('c').append('<s:property value="getText('node.name')"/>'))
      								 .append($('<td>').addClass('c').append('节点编号'))
        				);
        				for(var i=0;i<result.length;i++){
@@ -168,8 +168,8 @@ html {
 							'<select name="labWfProcessVo.subProcessList['+i+'].id" id="subProcessId'+i+'" >'+optionStr+'</select>'+
 						'</td>'+
 						'<td>'+
-							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="N" />正常流转'+
-							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="Y" checked="true" />骤停等待'+
+							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="N" />'+'<s:property value="getText('norm.flow')"/>'+
+							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="Y" checked="true" />'+'<s:property value="getText('stop.wait')"/>'+
 						'</td>'+
 						'<td class="c">'+
 							'<a href="javascript:;" onclick="deleteOne(this);"><s:text name="lab.code.del"/></a>'+
@@ -231,7 +231,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input type="text" name="labWfProcessVo.name" value="${labWfProcessVo.name}" id="processName" size="30" valType="required,strLength" max="32" msg="名称不能为空" strLength-msg="长度不能超过32位" />
+														<input type="text" name="labWfProcessVo.name" value="${labWfProcessVo.name}" id="processName" size="30" valType="required,strLength" max="32" msg='<s:property value="getText('lab.msg.name')"/>' strLength-msg='<s:property value="getText('lab.strlength.msg')"/>' />
 													</td>
 													<td style="width: 100px" class="r">
 														<label>
@@ -239,7 +239,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input type="text" name="labWfProcessVo.code" value="${labWfProcessVo.code}" id="code" size="30" valType="strLength" max="32" strLength-msg="长度不能超过32位" />
+														<input type="text" name="labWfProcessVo.code" value="${labWfProcessVo.code}" id="code" size="30" valType="strLength" max="32" strLength-msg='<s:property value="getText('lab.strlength.msg')"/>' />
 													</td>
 												</tr>
 												<tr>

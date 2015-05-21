@@ -129,8 +129,8 @@ html {
 														</label>
 													</td>
 													<td>
-														<s:if test="${labWfProcessVo.isSubWf=='Y'}">是</s:if>
-														<s:else>否</s:else>
+														<s:if test="${labWfProcessVo.isSubWf=='Y'}"><s:text name="lab.yes"/></s:if>
+														<s:else><s:text name="lab.no"/></s:else>
 													</td>
 												</tr>
 												<tr>
@@ -167,8 +167,8 @@ html {
 															${name}
 														</td>
 														<td>
-															<s:if test="${isStop=='N'}">正常流转</s:if>
-															<s:else>骤停等待</s:else>
+															<s:if test="${isStop=='N'}"><s:text name="norm.flow"/></s:if>
+															<s:else><s:text name="stop.wait"/></s:else>
 														</td>
 														<td class="c">
 															<a href="#" onclick="nextUri('/workflow/process/getLabWfProcess.action?labWfProcessVo.id=${id}');"><s:text name="look.check"/></a>
@@ -216,7 +216,7 @@ html {
 											<table class="FormtableCon_line">
 												<tr>
 													<td class="c" width="40%">
-														<s:text name="变量名"/>
+														<s:text name="var.name"/>
 													</td>
 													<td class="c" width="20%">
 														<s:text name="var.value"/>

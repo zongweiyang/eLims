@@ -130,7 +130,7 @@ html {
 											<td width="450">
 												<input type="text" name="labSupplierVo.code" id="code"
 													value="${labSupplierVo.code}" readonly="true"
-													valType="required" msg="供应商编号不能为空"/>
+													valType="required" msg='<s:property value="getText('supnonotempty')"/>'/>
 											</td>
 											<td width="150">
 												<label>
@@ -139,7 +139,7 @@ html {
 											</td>
 											<td>
 												<input type="text" name="labSupplierVo.name" id="name"
-													value="${labSupplierVo.name }" valType="required"  msg="供应商名称不能为空"//>
+													value="${labSupplierVo.name }" valType="required"  msg='<s:property value="getText('suppliernameempty')"/>'//>
 											</td>
 										</tr>
 										<tr>
@@ -188,7 +188,7 @@ html {
 													onFocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})"
 													name="labSupplierVo.startDate"
 													value="${labSupplierVo.startDate }" id="startDate"
-													valType="required" msg="关系建立时间不能为空"/>
+													valType="required" msg='<s:property value="getText('relatedtimeisnotnu')"/>'/>
 											</td>
 										</tr>
 										<tr>
@@ -200,7 +200,7 @@ html {
 											<td>
 												<input type="text" name="labSupplierVo.person"
 													value="${labSupplierVo.person }" id="person"
-													valType="required" msg="联系人不能为空"/>
+													valType="required" msg='<s:property value="getText('msgpeoplenotempty')"/>'/>
 											</td>
 											<td>
 												<label>
@@ -210,7 +210,7 @@ html {
 											<td>
 												<input type="text" name="labSupplierVo.phone"
 													value="${labSupplierVo.phone }" id="phone"
-													valType="required,phone"  phone-msg="联系电话不准确" msg="联系电话不能为空" />
+													valType="required,phone"  phone-msg='<s:property value="getText('telnotcor')"/>' msg='<s:property value="getText('telnotempy')"/>' />
 											</td>
 										</tr>
 
@@ -223,7 +223,7 @@ html {
 											<td>
 												<input type="text" name="labSupplierVo.email"
 													value="${labSupplierVo.email }" id="email"
-													valType="required,email" email-msg="邮箱不准确" msg="邮箱不能为空"/>
+													valType="required,email" email-msg='<s:property value="getText('emialnotco')"/>' msg='<s:property value="getText('emailnotem')"/>'/>
 											</td>
 											<td>
 												<label>
@@ -232,7 +232,7 @@ html {
 											</td>
 											<td>
 												<input type="text" name="labSupplierVo.fax"
-													value="${labSupplierVo.fax }" id="fax" valType="fax"  fax-msg="传真不准确"/>
+													value="${labSupplierVo.fax }" id="fax" valType="fax"  fax-msg='<s:property value="getText('faxnotcor')"/>'/>
 											</td>
 										</tr>
 										<tr>
@@ -243,7 +243,7 @@ html {
 											</td>
 											<td>
 												<input type="text" name="labSupplierVo.zipCode"
-													value="${labSupplierVo.zipCode }" id="zipCode" valType="required,zipCode" zipCode-msg="邮编不准确" msg="邮编不能为空"/>
+													value="${labSupplierVo.zipCode }" id="zipCode" valType="required,zipCode" zipCode-msg='<s:property value="getText('postcodenotco')"/>' msg="邮编不能为空"/>
 											</td>
 											<td>
 												<label>
@@ -294,7 +294,7 @@ html {
 											<td>
 												<input type="text" name="labSupplierVo.accountName"
 													id="accountName" value="${labSupplierVo.accountName }"
-													valType="required"  msg="账户名称不能为空"/>
+													valType="required"  msg='<s:property value="getText('accountnamenotco')"/>'/>
 											</td>
 
 

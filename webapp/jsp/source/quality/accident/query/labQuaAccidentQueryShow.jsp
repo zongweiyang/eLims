@@ -95,7 +95,7 @@
 												<td class="r" width="180">
 													<label>
 														<s:text name="chekacichap"/>
-														原因、经过：
+														<s:text name="reasonjingguo"/>：
 													</label>
 												</td>
 												<td colspan="3">

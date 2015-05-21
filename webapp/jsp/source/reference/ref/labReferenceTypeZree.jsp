@@ -101,11 +101,11 @@
 					dataType:'text',
 					success:function(data){
 						if(data=="false"){
-							validate.tip("删除失败.",$('#functionId'));
+							validate.tip('<s:property value="getText('delete.fail')"/>',$('#functionId'));
 						}
 					},
 					error:function(){
-						validate.tip("网络不通.",$('#functionId'));
+						validate.tip('<s:property value="getText('theme.net.fail')"/>',$('#functionId'));
 					}
 				});
 			}
@@ -117,7 +117,7 @@
 				
 		function beforeRename(treeId, treeNode, newName) {
 			if (newName.length == 0) {
-				validate.tip("分类名称不能为空.",$('#functionId'));
+				validate.tip('<s:property value="getText('classifynamenotempty')"/>',$('#functionId'));
 				return false;
 			}
 			$.ajax({
@@ -127,11 +127,11 @@
 				dataType:'text',
 				success:function(data){
 					if(data=="false"){
-					validate.tip("修改失败.",$('#functionId'));
+					validate.tip('<s:property value="getText('modify.fail')"/>',$('#functionId'));
 					}
 				},
 				error:function(){
-					validate.tip("网络不通.",$('#functionId'));
+					validate.tip('<s:property value="getText('theme.net.fail')"/>',$('#functionId'));
 				}
 			});
 			return true;
@@ -142,7 +142,7 @@
 			var sObj = $("#" + treeNode.tId + "_span");
 			if ($("#addBtn_"+treeNode.id).length>0) return;
 			var addStr = "<span class='button add' id='addBtn_" + treeNode.id
-				+ "' title='新增' onfocus='this.blur();'></span>";
+				+ "' title='<s:property value="getText('admin.add')"/>' onfocus='this.blur();'></span>";
 			sObj.append(addStr);
 			var btn = $("#addBtn_"+treeNode.id);
 			if (btn) btn.bind("click", function(){
@@ -154,13 +154,13 @@
 					success:function(data){
 						if(data.length==32){
 							var zTree = $.fn.zTree.getZTreeObj("zTree");
-								zTree.addNodes(treeNode, {id:'addBtn_'+ treeNode.tId,treeNid:data, pId:treeNode.id, name:"未命名"});
+								zTree.addNodes(treeNode, {id:'addBtn_'+ treeNode.tId,treeNid:data, pId:treeNode.id, name:'<s:property value="getText('appratus.unknow')"/>'});
 						}else{
-						  validate.tip("增加异常.",$('#functionId'));
+						  validate.tip('<s:property value="getText('addexcepton')"/>',$('#functionId'));
 						}
 					},
 					error:function(){
-						validate.tip("网络不通.",$('#functionId'));
+						validate.tip('<s:property value="getText('theme.net.fail')"/>',$('#functionId'));
 					}
 				});
 			});

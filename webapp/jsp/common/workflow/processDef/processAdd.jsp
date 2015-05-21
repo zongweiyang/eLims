@@ -105,8 +105,8 @@ html {
 					$('#bzhtsh').remove();
 					$('#bzhxx').html("");
 					$('#bzhxx').append(
-    				     $('<tr>').append($('<td>').addClass('c').append('节点名称'))
-     								 .append($('<td>').addClass('c').append('节点编号'))
+    				     $('<tr>').append($('<td>').addClass('c').append('<s:property value="getText('node.name')"/>'))
+     								 .append($('<td>').addClass('c').append('<s:property value="getText('node.id')"/>'))
        				);
        				for(var i=0;i<result.length;i++){
        					$('#bzhxx').append(
@@ -123,15 +123,15 @@ html {
 		}else{
 			var htmlstr='<tr>'+
 							'<td class="c">'+
-									'节点名称'+
+									'<s:property value="getText('node.name')"/>'+
 							'</td>'+
 							'<td class="c">'+
-									'节点编号'+
+									'<s:property value="getText('node.id')"/>'+
 							'</td>'+
 						'</tr>'+
 						'<tr id="bzhtsh">'+
 							'<td colspan="2">'+
-								'<font color="red">请先选择流程源．．．</font>'+
+								'<font color="red">'+ '<s:property value="getText('selectsoruce')"/>' +'</font>'+
 							'</td>'+
 						'</tr>';
 			$('#bzhxx').html(htmlstr);
@@ -172,8 +172,8 @@ html {
 							'<select name="labWfProcessVo.subProcessList['+i+'].id" id="subProcessId'+i+'" >'+optionStr+'</select>'+
 						'</td>'+
 						'<td>'+
-							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="N" />正常流转'+
-							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="Y" checked="true" />骤停等待'+
+							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="N" />'+'<s:property value="getText('norm.flow')"/>'+
+							'<input type="radio" name="labWfProcessVo.subProcessList['+i+'].isStop" value="Y" checked="true" />'+'<s:property value="getText('stop.wait')"/>'+
 						'</td>'+
 						'<td class="c">'+
 							'<a href="javascript:;" onclick="deleteOne(this);"><s:text name="lab.code.del"/></a>'+
@@ -301,8 +301,8 @@ html {
 														<s:select list="#request.processList" listKey="id" listValue="name" name="labWfProcessVo.subProcessList[0].id" id="subProcessId${st.index}" theme="simple"></s:select>
 													</td>
 													<td>
-														<input type="radio" name="labWfProcessVo.subProcessList[0].isStop" value="N" />正常流转
-														<input type="radio" name="labWfProcessVo.subProcessList[0].isStop" value="Y" checked="true" />骤停等待
+														<input type="radio" name="labWfProcessVo.subProcessList[0].isStop" value="N" /><s:text name="norm.flow"/>
+														<input type="radio" name="labWfProcessVo.subProcessList[0].isStop" value="Y" checked="true" /><s:text name="stop.wait"/>
 													</td>
 													<td class="c">
 														<a href="javascript:;" onclick="deleteOne(this);"><s:text name="lab.code.del"/></a>
@@ -342,7 +342,7 @@ html {
 											<table class="FormtableCon_line" id="LCBL">
 												<tr>
 													<td class="c" width="40%">
-														<s:text name="变量名"/>
+														<s:text name="var.name"/>
 													</td>
 													<td class="c" width="20%">
 														<s:text name="var.value"/>

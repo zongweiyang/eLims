@@ -12,7 +12,7 @@
 	<script language=javascript> 
 	function submitvalue(actionstr){
 		if(null != $('#name').val() && $('#name').val() == ''){
-			validate.tip('请填写功能名称',$('#name'));
+			validate.tip('<s:property value="getText('input.fun.name')"/>',$('#name'));
 			return ;
 		}
 		var df = document.stFunctionform;

@@ -103,7 +103,7 @@
 													</td>
 												</tr>
 													<tr>
-													<td class="r" width="150"">
+													<td class="r" width="150">
 														<label>
 															<s:text name="funddes"/>：
 														</label>

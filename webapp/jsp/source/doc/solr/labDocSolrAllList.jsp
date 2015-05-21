@@ -84,12 +84,12 @@ html {
 																	<table cellspacing="0" cellpadding="0" border="0">
 																		<tr>
 																			<td style="width: 1000px; text-align: center;">
-																				<textarea id="TextArea1" name="labUpload.content" cols="60" rows="3" style="color: #838383;margin-bottom:10px;" onclick="changeText()" />${labUpload.content==null?'请输入您想查询的词汇':labUpload.content}</textarea>
+																				<textarea id="TextArea1" name="labUpload.content" cols="60" rows="3" style="color: #838383;margin-bottom:10px;" onclick="changeText()" />${labUpload.content==null?getText('inputsearchwork'):labUpload.content}</textarea>
 																			</td>
 																		</tr>
 																		<tr>
 																			<td style="padding-left: 45%;">
-																				<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b>搜&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;索</b> </a>
+																				<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick="goToNextAction('doc/labDoc/listLabDocSolr.action');return false;"><img height="20" width="20" src="${basePath}img/chakan.gif" /><b><s:text name="fun.query"/></b> </a>
 																			</td>
 																		</tr>
 																	</table>
@@ -108,7 +108,7 @@ html {
 																		<p class="fifterName fl"><s:text name="file.name"/>:${name}</p>
 																	</td>
 																	<td width="8%">
-																		<p style="text-align:right;display:inline-block;float:right;font-size:14px;">&nbsp;作者:${creater}</p>
+																		<p style="text-align:right;display:inline-block;float:right;font-size:14px;">&nbsp;<s:text name="author"/>:${creater}</p>
 																	</td>
 																	<td width="10%" style="text-align:right;">
 																		<div class="timedate" style="font-size: 14px;"><s:text name="msg.date"/>:${createTime}</div>

@@ -198,17 +198,17 @@
 													</td>
 													<td>
 														<label>
-															<s:text name="lab.yes"/>否启用：
+															<s:text name="yesnostart"/>：
 														</label>
 													</td>
 													<td>
 														<s:if test="${labStandardVo.isUsed == 'Y' }">
-															<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="Y"/>启用&nbsp;&nbsp;&nbsp;
-															<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="N"/>不启用
+															<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="Y"/><s:text name="start"/>
+															<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="N"/><s:text name="dongtstart"/>
 														</s:if>
 														<s:else>
-															<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="Y"/>启用&nbsp;&nbsp;&nbsp;
-															<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="N"/>不启用
+															<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="Y"/><s:text name="start"/>
+															<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="N"/><s:text name="dongtstart"/>
 														</s:else>
 													</td>
 												</tr>

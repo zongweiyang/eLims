@@ -147,7 +147,7 @@
 																${createTime }
 															</td>
 															<td class="c">
-														  		<l:a href="#" uri="quality/accident/preUpdateLabQuaAccident4Handle.action?labQuaAccidentVo.id=${id}" value="处理" />
+														  		<l:a href="#" uri="quality/accident/preUpdateLabQuaAccident4Handle.action?labQuaAccidentVo.id=${id}" value="deal.with" />
 															</td>
 														</tr>
 													</s:iterator>

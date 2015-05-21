@@ -93,7 +93,7 @@
 																	</label>
 																</td>
 																<td>
-																<s:select theme="simple" list="#{'':'--全部--','0':'已存档','1':'未存档'}"  name="labQuaAuditRecordVo.isFile"></s:select>
+																<s:select theme="simple" list="#{'':getText("allselectedsaf"),'0':getText("aucechied"),'1':'<s:text name="unarchired"/>'}"  name="labQuaAuditRecordVo.isFile"></s:select>
 																</td>
 																<td>
 																	<label>
@@ -192,7 +192,7 @@
 															</td>
 															<td class="c">
 																<s:if test="${isFile == null || isFile == '' || isFile == 1 }">
-																	<font color="red">未存档</font>
+																	<font color="red"><s:text name="unarchired"/></font>
 																</s:if>
 																<s:if test="${isFile == 0 }">
 																	<font color="red"><s:text name="aucechied"/></font>

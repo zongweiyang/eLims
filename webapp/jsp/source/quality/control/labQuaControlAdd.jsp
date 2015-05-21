@@ -47,7 +47,7 @@
        			dataType:'text',
        			success:function (data){
        				var result=eval('('+data+')');
-       				$('#labOrgId').html('--请选择--');
+       				$('#labOrgId').html('<s:property value="getText('selected.pls')"/>');
        				for(var i=0;i<result.length;i++){
        					$('#labOrgId').append(
        						$('<option>').attr({'value':result[i].id+'|'+result[i].name}).html(result[i].name)
@@ -128,14 +128,14 @@
 												  <tr>
 												<td class="r" width="150">
 													<label>
-														单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位：
+														<s:property name="theme.depart"/>：
 													</label>
 												</td>
 												<td>
 													<s:select list="unitOrgVoList" headerKey="" headerValue="" cssStyle="width:273px;"
 													name="labQuaControlVo.unitOrgSearch" value="'${labQuaCusVisitVo.unitOrgId}|${labQuaCusVisitVo.unitOrgName }'" id="unitOrgId" theme="simple"
 													listKey="id+'|'+name" listValue="name" onchange="selectChange(this);"></s:select>
-													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaControlVo.unitOrgId" value="${labQuaControlVo.unitOrgId }"  />
+													<input size="40" type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaControlVo.unitOrgId" value="${labQuaControlVo.unitOrgId }"  />
 													<input size="40" type="hidden"  id="orgName" name="labQuaControlVo.unitOrgName"  value="${labQuaControlVo.unitOrgName }" />
 												</td>
 												<td  class="r" width="150">

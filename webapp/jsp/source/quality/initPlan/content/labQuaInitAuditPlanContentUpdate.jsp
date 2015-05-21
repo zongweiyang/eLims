@@ -65,7 +65,7 @@
 										 		<tr>
 										 			<td class="r" width="120"><label><s:text name="chkcontend"/>：</label></td>
 										 			<td>
-										 				<textarea cols="50" rows="4" valType="required" msg="<s:text name="chkcontend"/>不能为空" name="labQuaInitAuditPlanVo.name" id="name">${labQuaInitAuditPlanVo.name}</textarea>
+										 				<textarea cols="50" rows="4" valType="required" msg=<s:text name="chkcontentnotyempy"/> name="labQuaInitAuditPlanVo.name" id="name">${labQuaInitAuditPlanVo.name}</textarea>
 										 			</td>
 										 		</tr>
 											</table>

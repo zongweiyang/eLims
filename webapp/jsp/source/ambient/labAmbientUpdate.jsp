@@ -57,7 +57,7 @@
 					var upValue=parseFloat($("#upValue").val());
 					var downValue=parseFloat($("#downValue").val());
 					if(downValue>=upValue){	
-						var message='下限值不能大于等于上限值';
+						var message='<s:property value="getText('lowervaluecantuper')"/>';
 						validate.tip(message,$("#upValue"))
 						return;
 					}
@@ -96,13 +96,13 @@
 										<table class="FormtableCon">
 											<tr>
 												<td class="c"><label><s:text name="param.name"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.name" id="name" valType="required" msg="参数名称不能为空"  value="${labAmbientVo.name}"/></td>
+												<td><input type="text" name="labAmbientVo.name" id="name" valType="required" msg='<s:property value="getText('paramnamecannotempty')"/>'  value="${labAmbientVo.name}"/></td>
 												<td class="c"><label><s:text name="upper.value"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.upValue" id="upValue" valType="required,number" msg="请正确输入上限值" min="0" value="${labAmbientVo.upValue}"/></td>
+												<td><input type="text" name="labAmbientVo.upValue" id="upValue" valType="required,number" msg='<s:property value="getText('pleaseinputcor')"/>' min="0" value="${labAmbientVo.upValue}"/></td>
 											</tr>
 											<tr>
 												<td class="c"><label><s:text name="lower.value"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.downValue" id="downValue" valType="required,number" msg="请正确输入下限值"  min="0" value="${labAmbientVo.downValue}"/></td>
+												<td><input type="text" name="labAmbientVo.downValue" id="downValue" valType="required,number" msg='<s:property value="getText('pleaseinputlow')"/>'  min="0" value="${labAmbientVo.downValue}"/></td>
 												<td class="c"><label><s:text name="theme.depart"/>：</label></td>
 												<td>
 													<s:select list="#request.listLabCode" cssStyle="width:130px" name="labAmbientVo.unit" value="'${labAmbientVo.unit}'"   theme="simple" listValue="name" listKey="name" ></s:select>
@@ -124,7 +124,7 @@
 		</body>
 		<script language="javascript" type="text/javascript">
 			function required() {
-				this.a1 = new Array("name", "请填写参数名称!", new Function("varName"," return this[varName];"));
+				this.a1 = new Array("name", '<s:property value="getText('inputparamname')"/>', new Function("varName"," return this[varName];"));
 			}
 			function maxlength() {
 		

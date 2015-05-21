@@ -164,7 +164,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReferenceVo.purity" valType="strLength" max="32" strLength-msg="纯度的长度不能超过32位" id="purity" type="text" size="40" value="${labReferenceVo.purity}" />
+														<input name="labReferenceVo.purity" valType="strLength" max="32" strLength-msg='<s:property value="getText('purelengnot32')"/>' id="purity" type="text" size="40" value="${labReferenceVo.purity}" />
 													</td>
 												</tr>
 												<tr>
@@ -182,7 +182,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReferenceVo.safeAmount" value="${labReferenceVo.safeAmount}" valType="required,strLength" max="16" strLength-msg="警戒数量长度不能超过16位" msg="警戒数量不能为空" id="releaseDate" size="40" type="text" />
+														<input name="labReferenceVo.safeAmount" value="${labReferenceVo.safeAmount}" valType="required,strLength" max="16" strLength-msg='<s:property value="getText('alarmlennot16')"/>' msg='<s:property value="getText('alarmnotem')"/>' id="releaseDate" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>

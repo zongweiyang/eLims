@@ -157,7 +157,7 @@ public class LabUserFunDAOImpl extends BaseDAO implements ILabUserFunDAO {
 	public boolean getLabUserFunHavePower(String userId, String funId,
 			String action) throws GlobalException {
 		
-		System.out.println(String.format("userId=%s,funId=%s,action=%s", userId,funId,action));
+		Log4J.info((String.format("userId=%s,funId=%s,action=%s", userId,funId,action)));
 		
 		try {
 			if (userId.equals("0")) {

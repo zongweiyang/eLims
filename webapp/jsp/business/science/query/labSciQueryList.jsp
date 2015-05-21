@@ -173,7 +173,7 @@ function selectLabSciScience()
 																</td>
 																<td>
 																	<l:a uri="science/labScience/showQueryLabScience.action"
-																		onclick="submitvalue1();" value="统计分析" img="/img/query.gif"/>
+																		onclick="submitvalue1();" value="top.statistic.analysis" img="/img/query.gif"/>
 																</td>
 															</tr>
 														</table>

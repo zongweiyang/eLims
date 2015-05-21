@@ -110,7 +110,7 @@ function submitvalue(actionstr,id){
 												</label>
 											</td>
 											<td>
-												<input name="labRoleVo.sort" valType="required,strLength" max="11" strLength-msg="序号长度不能超过11位" id="sort" type="text" size="20" value="${labRoleVo.sort}" />
+												<input name="labRoleVo.sort" valType="required,strLength" max="11" strLength-msg='<s:property value="getText('seqcannotover11')"/>' id="sort" type="text" size="20" value="${labRoleVo.sort}" />
 											</td>
 											<td>
 												<label>
@@ -118,7 +118,7 @@ function submitvalue(actionstr,id){
 												</label>
 											</td>
 											<td>
-												<input name="labRoleVo.name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg='<s:property value="getText('rolenameempty')"/>' id="name" type="text" size="20" value="${labRoleVo.name}" onblur="checkRolename('${labRoleVo.id}')" />
+												<input name="labRoleVo.name" valType="required,strLength" max="32" strLength-msg='<s:property value="getText('rolenameconat32')"/>' msg='<s:property value="getText('rolenameempty')"/>' id="name" type="text" size="20" value="${labRoleVo.name}" onblur="checkRolename('${labRoleVo.id}')" />
 											</td>
 											<td>
 												<label>
@@ -126,8 +126,8 @@ function submitvalue(actionstr,id){
 												</label>
 											</td>
 											<td>
-												<input type="radio" name="labRoleVo.show" value="FRONT" <s:if test="${labRoleVo.show=='FRONT'}">checked="checked"</s:if>/>前端
-												<input type="radio" name="labRoleVo.show" value="BACK" <s:if test="${labRoleVo.show=='BACK'}">checked="checked"</s:if>/>后端
+												<input type="radio" name="labRoleVo.show" value="FRONT" <s:if test="${labRoleVo.show=='FRONT'}">checked="checked"</s:if>/><s:text name="front"/>
+												<input type="radio" name="labRoleVo.show" value="BACK" <s:if test="${labRoleVo.show=='BACK'}">checked="checked"</s:if>/><s:text name="backend"/>
 											</td>
 									</tr>
 									<tr>
@@ -137,7 +137,7 @@ function submitvalue(actionstr,id){
 											</label>
 										</td>
 										<td colspan="5">
-												<textarea name="labRoleVo.remark" valType="strLength" max="256" strLength-msg="备注长度不能超过256位" cols="60" rows="3" label='<s:property value="getText('remark')"/>'>${labRoleVo.remark}</textarea>
+												<textarea name="labRoleVo.remark" valType="strLength" max="256" strLength-msg='<s:property value="getText('remark.toolong')"/>' cols="60" rows="3" label='<s:property value="getText('remark')"/>'>${labRoleVo.remark}</textarea>
 										</tr>
 										<tr>
 										<td>

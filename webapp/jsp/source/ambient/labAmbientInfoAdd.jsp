@@ -111,7 +111,7 @@
 											</tr>
 											<tr>
 												<td ><label><s:text name="param.value"/>：</label></td>
-												<td><input type="text" name="labAmbientInfoVo.value" id="value" valType="required,numBetween" msg="请正确输入参数值"  min="0" />
+												<td><input type="text" name="labAmbientInfoVo.value" id="value" valType="required,numBetween" msg='<s:property value="getText('inputcorrvalue')"/>'  min="0" />
 											
 												<td><label><s:text name="address"/>：</label></td>
 												<td><input type="text" name="labAmbientInfoVo.address" id="address" /></td>

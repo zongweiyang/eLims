@@ -55,7 +55,7 @@ public class SessionInterceptor extends BaseInterceptor {
 		}
 		String URL = (nameSpace + invocation.getProxy().getActionName() + ".action").toUpperCase().trim();
 		
-		System.out.println(String.format("funId=%s,url=%s",funIdNew,URL));
+//		System.out.println(String.format("funId=%s,url=%s",funIdNew,URL));
 		
 		if (null != funIdNew && !"".equals(funIdNew)) {
 			session.put("funId", funIdNew);

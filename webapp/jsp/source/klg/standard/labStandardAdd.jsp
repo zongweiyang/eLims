@@ -216,12 +216,12 @@ html {
 													</td>
 													<td>
 														<label>
-															<s:text name="lab.yes"/>否启用：
+															<s:text name="yesnostart"/>：
 														</label>
 													</td>
 													<td>
-														<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="Y"/>启用&nbsp;&nbsp;&nbsp;
-														<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="N"/>不启用
+														<input type="radio" style="border: 0px;" checked="checked" name="labStandardVo.isUsed" value="Y"/><s:text name="start"/>
+														<input type="radio" style="border: 0px;" name="labStandardVo.isUsed" value="N"/><s:text name="dongtstart"/>
 													</td>
 												</tr>
 												<tr>
@@ -247,7 +247,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															代替标准：
+													<s:text name="satrgdbiaoz"/>：
 														</label>
 													</td>
 													<td colspan="3">
@@ -258,7 +258,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															标准说明：
+													<s:text name="startdshuom"/>：
 														</label>
 													</td>
 													<td colspan="3">

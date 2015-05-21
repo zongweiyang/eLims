@@ -69,7 +69,7 @@
 												</td>
 												<td>
 													<s:select list="labOrgVoList" headerKey="" headerValue="" theme="simple" cssStyle="width:150px;"   value="'${labQuaManageCheckPlanVo.orgId}|${labQuaManageCheckPlanVo.orgName }'" listKey="id+'|'+name" listValue="name" onchange="selectChange(this);"></s:select>
-													<input type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaManageCheckPlanVo.orgId" value="${labQuaManageCheckPlanVo.orgId }"  />
+													<input type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaManageCheckPlanVo.orgId" value="${labQuaManageCheckPlanVo.orgId }"  />
 													<input type="hidden"  id="orgName" name="labQuaManageCheckPlanVo.orgName"  value="${labQuaManageCheckPlanVo.orgName }" />
 												</td>
 												<td class="r" width="150">

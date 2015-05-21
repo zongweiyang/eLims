@@ -230,19 +230,19 @@ html {
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xieyoujian.gif" /><b>写邮件</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xieyoujian.gif" /><b><s:text name="wiretemail"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinjianyoujian.gif" /><b>新建邮件</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinjianyoujian.gif" /><b><s:text name="newmailed"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinzengfujian.gif" /><b>新增附件</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/xinzengfujian.gif" /><b><s:text name="newattachted"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shanchuyoujian.gif" /><b>删除邮件</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/shanchuyoujian.gif" /><b><s:text name="deletemail"/></b>
 									</a>
 								</td>
 							</tr>
@@ -266,11 +266,11 @@ html {
 										<label>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/youjianlianjie.gif" /><b>邮件链接</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/youjianlianjie.gif" /><b><s:text name="maillink"/></b>
 									</a>
 								</td>
 								<td>
-									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fsyoujian.gif" /><b>发送邮件</b>
+									<a id="BtnPreview" class="zPushBtn" href="#" onclick=""><img height="20" width="20" src="${basePath}img/fsyoujian.gif" /><b><s:text name="sendedmaild"/></b>
 									</a>
 								</td>
 								<td>
@@ -296,7 +296,7 @@ html {
 			<table class="FormtableCon">
 				<tr>
 					<td>
-				<s:text name="contentdesd"/>：内容内容内容内容内容内容内容内容内容
+				<s:text name="contentdesd"/>：
 					</td>
 				</tr>
 			</table>
@@ -333,10 +333,10 @@ html {
 						1
 					</td>
 					<td>
-						<s:text name="config.name"/><s:text name="config.name"/>名称名称名称名称名称名称名称名称
+						<s:text name="config.name"/><s:text name="config.name"/>
 					</td>
 					<td>
-						<s:text name="codessafd"/>编码编码编码编码编码编码编码编码编码
+						<s:text name="codessafd"/>
 					</td>
 					<td class="c">
 						<s:text name="modifdelmain"/>
@@ -350,10 +350,10 @@ html {
 						1
 					</td>
 					<td>
-						<s:text name="config.name"/><s:text name="config.name"/>名称名称名称名称名称名称名称名称
+						<s:text name="config.name"/><s:text name="config.name"/>
 					</td>
 					<td>
-						<s:text name="codessafd"/>编码编码编码编码编码编码编码编码编码
+						<s:text name="codessafd"/>
 					</td>
 					<td class="c">
 						<s:text name="modifdelmain"/>
@@ -405,11 +405,11 @@ html {
 					<td>
 						<input name="" id="name" type="radio" value="" />
 						<label style="padding: 0 20px 0 5px;">
-							男
+					<s:text name="theme.male"/>
 						</label>
 						<input name="" id="name" type="radio" value="" />
 						<label style="padding: 0 20px 0 5px;">
-							女
+					<s:text name="theme.female"/>
 						</label>
 					</td>
 					<td>
@@ -479,7 +479,7 @@ html {
 					</label>
 				</td>
 				<td>
-					男
+			<s:text name="theme.male"/>
 				</td>
 				<td>
 					<label>

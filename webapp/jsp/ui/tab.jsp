@@ -87,7 +87,7 @@ function SetCwinHeight(){
 
 									<div class="myworkingboxttitle">
 										<h2>
-											报表管理：
+											<s:text name="reportmange"/>：
 											<span><s:text name="tjinfo"/></span>
 										</h2>
 									</div>
@@ -102,15 +102,15 @@ function SetCwinHeight(){
 													</a>
 												</li>
 												<li id="li02" class="">
-													<a href="${basePath}/statistics/report/getFinanceReport.action" target="userInfoFrame" onclick="shadowdiv('02');"><span>应收应付</span>
+													<a href="${basePath}/statistics/report/getFinanceReport.action" target="userInfoFrame" onclick="shadowdiv('02');"><span><s:text name="yingshouyinffu"/></span>
 													</a>
 												</li>
 												<li id="li03" class="">
-													<a href="${basePath}/statistics/report/getCashReport.action" target="userInfoFrame" onclick="shadowdiv('03');"><span>现金流</span>
+													<a href="${basePath}/statistics/report/getCashReport.action" target="userInfoFrame" onclick="shadowdiv('03');"><span><s:text name="xianjinliu"/></span>
 													</a>
 												</li>
 												<li id="li04" class="">
-													<a href="${basePath}/statistics/report/getBusinessReport.action" target="userInfoFrame" onclick="shadowdiv('04');"><span>主辅业累计</span>
+													<a href="${basePath}/statistics/report/getBusinessReport.action" target="userInfoFrame" onclick="shadowdiv('04');"><span><s:text name="zhufuye"/></span>
 													</a>
 												</li>
 												<li id="li05" class="">

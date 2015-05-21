@@ -89,7 +89,7 @@ html {
 								$('#content4OneTr').html('');
 								$('#content4OneTr').append(
 		       						$('<tr>').append($('<td>').addClass('c').append('条形码属性名称'))
-		       								 .append($('<td>').addClass('c').append('条形码属性赋值'))
+		       								 .append($('<td>').addClass('c').append('<s:property value="getText('barvalue')"/>'))
 		       								 .append($('<td>').addClass('c').append('排序'))
 		       								 .append($('<td>').addClass('c').append('是否显示'))
 		       								 .append($('<td>').addClass('c').append('操作'))
@@ -107,7 +107,7 @@ html {
 			       				$('#content4TwoXz').remove();
 								$('#content4TwoTr').html('');
 								$('#content4TwoTr').append(
-		       						$('<tr>').append($('<td>').addClass('c').append('二维码属性名称'))
+		       						$('<tr>').append($('<td>').addClass('c').append('<s:property value="getText('2dcodefuzhi')"/>'))
 		       								 .append($('<td>').addClass('c').append('二维码属性赋值'))
 		       								 .append($('<td>').addClass('c').append('排序'))
 		       								 .append($('<td>').addClass('c').append('是否显示'))
@@ -139,7 +139,7 @@ html {
 											'条形码属性名称'+
 										'</td>'+
 										'<td class="c">'+
-											'条形码属性赋值'+
+											'<s:property value="getText('barvalue')"/>'+
 										'</td>'+
 									'</tr>'+
 									'<tr id="content4OneXz">'+
@@ -150,7 +150,7 @@ html {
 						$('#content4OneTr').html(htmlstr);
 						htmlstr='<tr>'+
 										'<td class="c">'+
-											'二维码属性名称'+
+											'<s:property value="getText('2dcodefuzhi')"/>'+
 										'</td>'+
 										'<td class="c">'+
 											'二维码属性赋值'+

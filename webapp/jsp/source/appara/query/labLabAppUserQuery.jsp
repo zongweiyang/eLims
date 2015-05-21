@@ -8,7 +8,8 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 		<script language="JavaScript">
 			function submitvalue(actionstr){
-		      	$('form').attr('action',actionstr);
+				var path = '${basePath}';
+		      	$('form').attr('action',path+actionstr);
 				$('form').submit();
 		  	}
 		  	function doAction(page){

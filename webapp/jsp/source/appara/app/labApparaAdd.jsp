@@ -9,8 +9,9 @@
 		<script type="text/javascript" src="<%=basePath%>js/jquery-1.3.2.js"></script>
 		<script type="text/javascript">
         function submitvalue(actionstr){
+        	var path = '${basePath}';
             var df = document.forms[0];
-            df.action = actionstr;
+            df.action = path+actionstr;
             df.submit();
         }
         

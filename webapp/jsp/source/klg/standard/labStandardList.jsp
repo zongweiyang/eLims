@@ -132,7 +132,7 @@ html {
 																	<l:a uri="klg/labStandard/deleteLabStandard.action" onclick="deleteEntityForBatch('/klg/labStandard/deleteLabStandard.action');" value="lab.code.deleteall" />	
 																</td>
 																<td>
-																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="导入标准"/>
+																	<l:a uri="klg/labStandard/preAddLabStandard.action" onclick="impotExcel();return false;"  value="iimportstd"/>
 																</td>
 															</tr>
 														</table>

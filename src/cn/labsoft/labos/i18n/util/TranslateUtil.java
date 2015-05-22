@@ -21,6 +21,7 @@ public class TranslateUtil {
 		
 	}
 	public static String get(String key){
-		return pros.getProperty(key);
+		if(key == null)return null;
+		return pros.getProperty(key.trim());
 	}
 }

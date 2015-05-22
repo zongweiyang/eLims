@@ -76,7 +76,7 @@ function submitvalue(actionstr){
 		table.append($('<tr key="'+index+'">')
 			 .append('<td><s:text name="msg.depart"/>：</td>')
 			 .append('<td><select name="labUserVo.userOrgList['+index+'].orgId" id="orgId'+index+'" >'+optionStr+'</select></td>')
-			 .append('<td>角色：</td>')
+			 .append('<td><s:property value="getText('theme.role')"/>：</td>')
 			 .append('<td><input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList['+index+'].roleNames" id="roleName'+index+'" value="" />'
 						+'<input type="hidden" name="labUserVo.userOrgList['+index+'].roleIds" id="roleId'+index+'" value=""/>'
 						+'   <a href="javascript:;" onclick="ajax2RoleList('+index+')" name="xuanze"><s:text name="selected"/></a>'

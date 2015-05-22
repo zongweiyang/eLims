@@ -334,7 +334,7 @@
 													</td>
 													<td>
 														<input name="labApparaVo.verPeriod" value="${labApparaVo.verPeriod}" id="verificationPeriod" type="text" size="20" onchange="isNoNatureNum(this);" />
-														<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="年" headerValue="年" list="#{'月':'月','天':'天'}" theme="simple" />
+														<s:select name="labApparaVo.verPeriodStr" value="%{labApparaVo.verPeriodStr}" headerKey="" headerValue="" list="#{'年':getText("year"),'月':getText("month"),'天':getText("day")}" theme="simple" />
 													</td>
 													<td>
 														<label>

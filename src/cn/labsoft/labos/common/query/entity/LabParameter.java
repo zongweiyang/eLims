@@ -7,15 +7,18 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
 
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 @Entity
 public class LabParameter extends AbstractBasePo {
 	private static final long serialVersionUID = 1L;
 	private String name;//参数名称
+	@Translator
 	private String nameChin;//参数中文名
 	private String isVague;//是否模糊查询
 	private String showType;//显示方式 0文本框，1：日期控件，2：时间控件,3:下拉框,4:弹出层
 	
 	private String isSort;
+	@Translator(isHtml = true)
 	private String comboxValue;//下拉框值
 	private String combox;
 	private LabQuery labQuery; 

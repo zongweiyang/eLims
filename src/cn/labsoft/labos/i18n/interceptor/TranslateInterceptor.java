@@ -5,6 +5,8 @@ import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -12,6 +14,7 @@ import javax.servlet.http.HttpSession;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.struts.Globals;
 import org.apache.struts2.ServletActionContext;
+import org.apache.xmlbeans.impl.jam.JSourcePosition;
 import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
 
@@ -19,45 +22,100 @@ import cn.labsoft.labos.i18n.annotation.Translator;
 import cn.labsoft.labos.i18n.util.TranslateUtil;
 
 /**
- * @author zongwei.yang 
- * 2015/3/31
+ * @author zongwei.yang 2015/3/31
  */
 
 public class TranslateInterceptor extends EmptyInterceptor {
 	private static final long serialVersionUID = -7300183928694718984L;
-	
-	
-	@Override
-	public boolean onLoad(Object entity,Serializable id,Object[] stateValue,String[] propertyNames,Type[] types) {
-//		Object obj = this.getEntity(entityName, id);
+	private static final String regex = "option";
+
+	boolean isUS() {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		HttpSession tempSession = request.getSession();
-		
-		Map<String,Object> objMap = new HashMap<String,Object>();
-		Map<String,Integer> indexMap = new HashMap<String,Integer>();
-		for(int i=0;i<propertyNames.length;i++){
-			objMap.put(propertyNames[i], stateValue[i]);
-			indexMap.put(propertyNames[i], i);
-		}
-		
 		Locale locale = (Locale) tempSession.getAttribute(Globals.LOCALE_KEY);
-		
-		if(entity !=null && locale != null && locale.equals(Locale.US)){
-			
-			Field [] fields = entity.getClass().getDeclaredFields();
+		return locale != null && locale.equals(Locale.US);
+	}
+
+	String getNewValue(String oldValue) {
+		String transValue = TranslateUtil.get(oldValue);
+		transValue = StringUtils.isEmpty(transValue) ? oldValue : transValue;
+		return transValue;
+	}
+	
+	String getNewHtmlValue(String oldValue) {
+		StringBuilder builder = new StringBuilder();
+		if(!StringUtils.isEmpty(oldValue)){
+			char[] str = oldValue.toCharArray();
+			boolean in = false;
+			int start=0,end=0;
+			boolean star = false;
+			for(int i = 0;i<oldValue.length();i++){
+				if(in){
+					if(str[i]=='>'){
+						start = i+1;
+						star = true;
+						builder.append(str[i]);
+					}
+					else if(star && str[i]=='<' && (i+7) < oldValue.length() && oldValue.subSequence(i+1,i+8).equals("/option")){
+						end = i;
+						String v = oldValue.substring(start, end);
+						String newV = TranslateUtil.get(v);
+						builder.append(newV!=null?newV:v);
+						builder.append('<');
+						in =false;
+						star = false;
+						start = 0;
+						end = 0;
+					}
+				}
+				else{
+					if(str[i]=='<'){
+						builder.append(str[i]);
+						int j = i+7;
+						if(j<oldValue.length()){
+							String sub = oldValue.substring(i+1, j);
+							if(sub.equals(regex)){
+								i=j;
+								builder.append(regex);
+								in = true;
+							}
+						}
+					}
+					else{
+						builder.append(str[i]);
+					}
+				}
+			}
+		}
+		return builder.toString();
+	}
+
+	@Override
+	public boolean onLoad(Object entity, Serializable id, Object[] stateValue,
+			String[] propertyNames, Type[] types) {
+
+		if (entity != null) {
+			Map<String, Object> objMap = new HashMap<String, Object>();
+			Map<String, Integer> indexMap = new HashMap<String, Integer>();
+			for (int i = 0; i < propertyNames.length; i++) {
+				objMap.put(propertyNames[i], stateValue[i]);
+				indexMap.put(propertyNames[i], i);
+			}
+
+			Field[] fields = entity.getClass().getDeclaredFields();
 			try {
-				for(Field f:fields){
+				for (Field f : fields) {
 					Translator translator = f.getAnnotation(Translator.class);
-					if( translator != null ){
-						
+					if (translator != null && isUS()) {
 						Object oldValue = objMap.get(f.getName());
-						String value = String.valueOf(oldValue);
-//						System.out.println(value);
-						if(!StringUtils.isEmpty(value)){
-							String transValue = TranslateUtil.get(value);
-							transValue = StringUtils.isEmpty(transValue) ? value : transValue;
-							stateValue[indexMap.get(f.getName())] = transValue;
-//							System.out.println("transte: "+transValue);
+						if (oldValue != null) {
+							String value = String.valueOf(oldValue);
+							if (!translator.isHtml()) {
+								value = getNewValue(value);
+							} else {
+								value = getNewHtmlValue(value);
+							}
+							stateValue[indexMap.get(f.getName())] = value;
 						}
 					}
 				}
@@ -67,43 +125,5 @@ public class TranslateInterceptor extends EmptyInterceptor {
 		}
 		return false;
 	}
-	
-	/*@Override
-	public Object getEntity(String entityName,Serializable id){
-//		System.out.println(entityName + id);
-//		SessionFactory sf = (SessionFactory) SpringContext.getBean("sessionFactory");
-		
-		Object obj = super.getEntity(entityName, id);
-//		Object obj = this.getEntity(entityName, id);
-		HttpServletRequest request = ServletActionContext.getRequest();
-		HttpSession tempSession = request.getSession();
-		
-		Locale locale = (Locale) tempSession.getAttribute(Globals.LOCALE_KEY);
-		
-		if(obj !=null && locale != null && locale.equals(Locale.US)){
-			
-			Field [] fields = obj.getClass().getDeclaredFields();
-			try {
-				for(Field f:fields){
-					Translator translater = f.getAnnotation(Translator.class);
-					if( translater != null ){
-						f.setAccessible(true);
-						String value = String.valueOf(f.get(obj));
-						System.out.println(value);
-						if(!StringUtils.isEmpty(value)){
-							String transValue = TranslateUtil.get(value);
-							transValue = StringUtils.isEmpty(transValue) ? value : transValue;
-							f.set(obj, transValue);
-							System.out.println(transValue);
-						}
-					}
-				}
-			} catch (IllegalArgumentException e) {
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				e.printStackTrace();
-			}
-		}
-		return obj;
-	}*/
+
 }

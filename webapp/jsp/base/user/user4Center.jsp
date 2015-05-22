@@ -155,9 +155,9 @@ function submitvalue(actionstr){
 																</label>
 															</td>
 															<td>
-																<input type="radio" name="labUserVo.sex" value="男" <s:if test="${labUserVo.sex=='男'}">checked="checked" </s:if> />
+																<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>' <s:if test="${labUserVo.sex=='男'}">checked="checked" </s:if> />
 																<s:text name="theme.male"/>
-																<input type="radio" name="labUserVo.sex" value="女" <s:if test="${labUserVo.sex=='女'}">checked="checked" </s:if> />
+																<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>' <s:if test="${labUserVo.sex=='女'}">checked="checked" </s:if> />
 																<s:text name="theme.female"/>
 															</td>
 														</tr>

@@ -34,7 +34,7 @@
 			function selectChange(obj){
        		var value=$(obj).val();
        		if(value.length==0){
-       			$('#labOrgId').append($('<option>').attr({'value':'','selected':'selected'}).html("--请选择--"));
+       			$('#labOrgId').append($('<option>').attr({'value':'','selected':'selected'}).html('<s:property value="getText('selected.pls')"/>'));
        			return ;
        		}
 			var oo=value.split('|');

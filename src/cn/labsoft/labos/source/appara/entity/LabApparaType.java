@@ -7,6 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 
 /**
  * @title 仪器类型表
@@ -15,8 +16,9 @@ import cn.labsoft.labos.framework.common.po.AbstractBasePo;
 @Table(name="lab_appara_type")
 public class LabApparaType extends AbstractBasePo {
 
-	
+	private static final long serialVersionUID = 2231167345807578778L;
 	private LabApparaType type;
+	@Translator
 	private String appName;
 
 	@ManyToOne

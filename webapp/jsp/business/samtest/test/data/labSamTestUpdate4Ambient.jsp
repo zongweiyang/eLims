@@ -120,7 +120,7 @@ html {
 																</label>
 															</td>
 															<td>
-																<s:select list="#request.listLabAmbientVo" cssStyle="width:153px" onchange="check(this)" headerValue="------请选择------" headerKey="0" theme="simple" value="'${labAmbientInfoVo.labAmbientId}'+'|'+'${labAmbientInfoVo.labAmbientUnit}'" listValue="name" listKey="id+'|'+unit"></s:select>
+																<s:select list="#request.listLabAmbientVo" cssStyle="width:153px" onchange="check(this)" headerValue="" headerKey="0" theme="simple" value="'${labAmbientInfoVo.labAmbientId}'+'|'+'${labAmbientInfoVo.labAmbientUnit}'" listValue="name" listKey="id+'|'+unit"></s:select>
 															</td>
 
 															<td class="c">

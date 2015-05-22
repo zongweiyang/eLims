@@ -186,7 +186,7 @@
 											</td>
 											<td>
 												<s:if test="${labApparaVo.status == '0'}">
-													<input disabled="disabled" value="正常" type="text" size="20" />
+													<input disabled="disabled" value='<s:property value="getText('common')"/>' type="text" size="20" />
 												</s:if>
 												<s:elseif test="${labApparaVo.status == '7'}">
 													<input disabled="disabled" value="废弃" type="text" size="20" />

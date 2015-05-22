@@ -312,7 +312,7 @@
 														</label>
 													</td>
 													<td>
-														<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':'正常','1':'报修','2':'停用','7':'报废'}" value="%{labApparaVo.status}" />
+														<s:select theme="simple" cssStyle="width:152px" name="labApparaVo.status" id="status" list="#{'0':getText("common"),'1':getText("report.repair"),'2':getText("stoped"),'7':getText("dropped")}" value="%{labApparaVo.status}" />
 														&nbsp;&nbsp;&nbsp;
 														<span style="color: red">*</span>
 													</td>

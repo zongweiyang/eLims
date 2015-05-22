@@ -132,7 +132,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -141,7 +141,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -176,7 +176,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -185,7 +185,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -226,7 +226,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -235,7 +235,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -270,7 +270,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -279,7 +279,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -394,9 +394,9 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td>
-													<input type="radio" name="labUserVo.sex" value="男" checked="checked" />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>' checked="checked" />
 													<s:text name="theme.male"/>
-													<input type="radio" name="labUserVo.sex" value="女" />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>' />
 													<s:text name="theme.female"/>
 												</td>
 											</tr>

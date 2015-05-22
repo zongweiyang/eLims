@@ -7,6 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 
 /**
  * @title 耗材类型表
@@ -17,6 +18,7 @@ import cn.labsoft.labos.framework.common.po.AbstractBasePo;
 public class LabConType extends AbstractBasePo {
 
 	private LabConType type;
+	@Translator
 	private String name;
 
 

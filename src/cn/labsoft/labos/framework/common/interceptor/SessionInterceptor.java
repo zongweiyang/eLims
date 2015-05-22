@@ -59,7 +59,7 @@ public class SessionInterceptor extends BaseInterceptor {
 		
 		if (null != funIdNew && !"".equals(funIdNew)) {
 			session.put("funId", funIdNew);
-			sessionContainer.setFunId(funIdNew);
+			//sessionContainer.setFunId(funIdNew);
 		}
 
 		//判断是否是后台用户的操作

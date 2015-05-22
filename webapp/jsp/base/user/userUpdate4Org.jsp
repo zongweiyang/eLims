@@ -130,10 +130,10 @@ function submitvalue(actionstr){
 												size="20" class="Wdate" onfocus="WdatePicker()" /></td>
 											<td><label> <s:text name="theme.sex" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;：
 											</label></td>
-											<td><input type="radio" name="labUserVo.sex" value="男"
+											<td><input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>'
 												<s:if test="${labUserVo.sex=='男'}">checked="checked" </s:if> />
 												<s:text name="theme.male" /> <input type="radio"
-												name="labUserVo.sex" value="女"
+												name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>'
 												<s:if test="${labUserVo.sex=='女'}">checked="checked" </s:if> />
 												<s:text name="theme.female" /></td>
 										</tr>

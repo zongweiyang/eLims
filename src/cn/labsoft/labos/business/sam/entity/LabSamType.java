@@ -4,11 +4,14 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Transient;
+
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 
 @Entity
 public class LabSamType extends AbstractBasePo {
 	private static final long serialVersionUID = 1L;
+	@Translator
 	private String name;
 	private String code;
     private LabSamType labSamType;

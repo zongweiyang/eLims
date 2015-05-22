@@ -7,6 +7,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 
 /**
  * @title 试剂类型表
@@ -21,6 +22,7 @@ public class LabReaType extends AbstractBasePo {
 	 */
 	private static final long serialVersionUID = 1L;
 	private LabReaType type;
+	@Translator
 	private String name;
 
 	@ManyToOne

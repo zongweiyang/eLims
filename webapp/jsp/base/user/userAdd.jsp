@@ -208,9 +208,9 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td width="310">
-													<input type="radio" name="labUserVo.sex" value="男" checked="checked" />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>' checked="checked" />
 													<s:text name="theme.male"/>
-													<input type="radio" name="labUserVo.sex" value="女" />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>' />
 													<s:text name="theme.female"/>
 												</td>
 											</tr>

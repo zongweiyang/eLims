@@ -74,9 +74,9 @@ function submitvalue(actionstr){
 		</s:iterator>
 		
 		table.append($('<tr key="'+index+'">')
-			 .append('<td>组织：</td>')
+			 .append('<td><s:property value="getText('theme.role')"/>：</td>')
 			 .append('<td><select name="labUserVo.userOrgList['+index+'].orgId" id="orgId'+index+'" >'+optionStr+'</select></td>')
-			 .append('<td>角色：</td>')
+			 .append('<td><s:property value="getText('theme.role')"/>：</td>')
 			 .append('<td><input readonly="readonly" size="50" type="text" name="labUserVo.userOrgList['+index+'].roleNames" id="roleName'+index+'" value="" />'
 						+'<input type="hidden" name="labUserVo.userOrgList['+index+'].roleIds" id="roleId'+index+'" value=""/>'
 						+'   <a href="javascript:;" onclick="ajax2RoleList('+index+')" name="xuanze"><s:text name="selected"/></a>'
@@ -144,7 +144,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -153,7 +153,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -188,7 +188,7 @@ function submitvalue(actionstr){
 				$('<tr>').attr({
 					'key':0
 				}).append(
-					$('<td>').html('组织：')
+					$('<td>').html('<s:property value="getText('orgnized')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<select>').attr({
@@ -197,7 +197,7 @@ function submitvalue(actionstr){
 						}).append(optionStr)
 					)
 				).append(
-					$('<td>').html('角色：')
+					$('<td>').html('<s:property value="getText('theme.role')"/>: ')
 				).append(
 					$('<td>').append(
 						$('<input type="text">').attr({
@@ -310,9 +310,9 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td>
-													<input type="radio" name="labUserVo.sex" value="男" <s:if test="${labUserVo.sex=='男'}">checked="checked" </s:if> />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>' <s:if test="${labUserVo.sex=='男'}">checked="checked" </s:if> />
 													<s:text name="theme.male"/>
-													<input type="radio" name="labUserVo.sex" value="女" <s:if test="${labUserVo.sex=='女'}">checked="checked" </s:if> />
+													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>' <s:if test="${labUserVo.sex=='女'}">checked="checked" </s:if> />
 													<s:text name="theme.female"/>
 												</td>
 											</tr>

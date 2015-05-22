@@ -52,7 +52,7 @@
 					if(null != data && data != ''){
 						var result = eval('('+ data +')');
 						$('#paramSelect').append(
-							$('<option>').attr({'value':''}).html('请选择')
+							$('<option>').attr({'value':''}).html('<s:property value="getText('selected.pls')"/>')
 						)
 						if(null != result && result.length > 0){
 							for(var i = 0; i < result.length; i++){
@@ -63,7 +63,7 @@
 						}
 					}else{
 						$('#paramSelect').append(
-							$('<option>').attr({'value':''}).html('请选择')
+							$('<option>').attr({'value':''}).html('<s:property value="getText('selected.pls')"/>')
 						)
 					}
 				}

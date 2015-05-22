@@ -9,7 +9,7 @@
 %>
 <html>
 	<head>
-		<title>模板管理</title>
+		<title><s:text name="tmp.manage"/></title>
 		<link rel='stylesheet' type='text/css' href='<%=basePath%>utils/iWebOffice/test.css'>
 		<script language="javascript" for=WebOffice event="OnMenuClick(vIndex,vCaption)">
    if (vIndex==1){  //打开本地文件
@@ -131,7 +131,7 @@ $(function(){
 				if(null != data && data != '[]'){
 					var result = eval('('+ data +')');
 					$('#paramSelect').append(
-						$('<option>').attr({'value':''}).html('请选择')
+						$('<option>').attr({'value':''}).html('<s:property value="getText('selected.pls')"/>')
 					)
 					if(null != result && result.length > 0){
 						for(var i = 0; i < result.length; i++){
@@ -142,7 +142,7 @@ $(function(){
 					}
 				}else{
 					$('#paramSelect').append(
-						$('<option>').attr({'value':''}).html('请选择')
+						$('<option>').attr({'value':''}).html('<s:property value="getText('selected.pls')"/>')
 					)
 				}
 			}

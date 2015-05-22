@@ -34,7 +34,7 @@
 			function selectChange(obj){
        		var value=$(obj).val();
        		if(value.length==0){
-       			$('#labOrgId').append($('<option>').attr({'value':'','selected':'selected'}).html("--请选择--"));
+       			$('#labOrgId').append($('<option>').attr({'value':'','selected':'selected'}).html('<s:property value="getText('selected.pls')"/>'));
        			return ;
        		}
 			var oo=value.split('|');
@@ -47,7 +47,7 @@
        			dataType:'text',
        			success:function (data){
        				var result=eval('('+data+')');
-       				$('#labOrgId').html('--请选择--');
+       				$('#labOrgId').html('<s:property value="getText('selected.pls')"/>');
        				for(var i=0;i<result.length;i++){
        					$('#labOrgId').append(
        						$('<option>').attr({'value':result[i].id+'|'+result[i].name}).html(result[i].name)

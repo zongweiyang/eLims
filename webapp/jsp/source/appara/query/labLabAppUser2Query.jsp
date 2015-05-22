@@ -95,7 +95,7 @@
 				   	 		}
 			   	 			if(data.isSort!=null&&data.isSort=='1'){
 				   	 			orderHtml+='<select name="labQueryVo.listQuery['+rowIndex+'].isSortValue">';
-				   	 			orderHtml+='<option value="1">请选择</option>';
+				   	 			orderHtml+='<option value="1"><s:property value="getText('selected.pls')"/></option>';
 				   	 			orderHtml+='<option value="ASC">升序</option>';
 				   	 			orderHtml+='<option value="DESC">降序</option>';
 				   	 			orderHtml+='</select>';

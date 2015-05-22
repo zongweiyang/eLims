@@ -8,13 +8,16 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 
+
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 
 @Entity
 @Table(name="lab_ref_type")
 public class LabRefType extends AbstractBasePo{
 
 	private LabRefType type;
+	@Translator
 	private String name;
 
 	@ManyToOne

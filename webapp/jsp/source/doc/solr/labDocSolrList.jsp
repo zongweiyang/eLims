@@ -32,7 +32,7 @@
 		var trtd="<tr><td><a onclick=\"delQu(this);\"><img height=\"20\" width=\"20\" src=\"${basePath}img/jian.gif\" /></a></td>";
 				trtd+="<td>";
 					trtd+="<select name=\"labDocVo.ext2\" style=\"width\:100px;\">";
-						trtd+="<option value=\"all\">请选择</option>";
+						trtd+="<option value=\"all\"><s:property value="getText('selected.pls')"/></option>";
 						trtd+="<option value=\"author\">作者</option>";
 						trtd+="<option value=\"keyWord\">关键字</option>";
 						trtd+="<option value=\"summary\">摘要</option>";

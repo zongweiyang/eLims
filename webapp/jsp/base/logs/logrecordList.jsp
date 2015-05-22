@@ -143,8 +143,8 @@ html {
 																     <l:export params="labLogRecordVo,pageResult" type="excel" source="${labLogRecordVo.filePath}" target="${funName}-${now}.xls" value="export"/>
 																	 <l:export params="labLogRecordVo,pageResult" type="word" source="${labLogRecordVo.filePath}" target="${funName}-${now}.xls" value="export"/>
 																	 <!-- 
-																	 <l:export params="pageResult.resultList" type="csv" property="XXX:method,XXX:module,XXX:workTable,XXX:ip,XXX:dateTime" target="${funName}-${now}.csv" value="导出csv${funName}"/>
-																	 <l:export params="pageResult.resultList" type="csv" property="method,module,workTable,ip,dateTime" target="${funName}-${now}.csv" value="导出csv${funName}"/>
+																	 <l:export params="pageResult.resultList" type="csv" property="XXX:method,XXX:module,XXX:workTable,XXX:ip,XXX:dateTime" target="${funName}-${now}.csv" value="#export#csv${funName}"/>
+																	 <l:export params="pageResult.resultList" type="csv" property="method,module,workTable,ip,dateTime" target="${funName}-${now}.csv" value="#export#csv${funName}"/>
 																	 -->
 																</td>
 															</tr>

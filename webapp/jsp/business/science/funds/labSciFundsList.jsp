@@ -91,7 +91,7 @@ html {
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																	<l:export params="labSciFundsVo,pageResult" type="excel" source="${labSciFundsVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}"/>
+																	<l:export params="labSciFundsVo,pageResult" type="excel" source="${labSciFundsVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}"/>
 																</td>
 															</tr>
 														</table>

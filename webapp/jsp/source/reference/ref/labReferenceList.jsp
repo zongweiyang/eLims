@@ -279,8 +279,8 @@ html {
 																<td>
 																	<!--<l:a uri="reference/labReference/preAddLabReference.action"
 																		onclick="ajaxVerification('exportLabReference.action');return false;"
-																		value="导出标准品清单" />-->
-																		<l:export params="labReferenceVo,pageResult" type="excel" source="${labReferenceVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}"/>
+																		value="#export#标准品清单" />-->
+																		<l:export params="labReferenceVo,pageResult" type="excel" source="${labReferenceVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}"/>
 																</td>
 																<td>
 																	<l:a uri="reference/labReference/preAddLabReference.action"

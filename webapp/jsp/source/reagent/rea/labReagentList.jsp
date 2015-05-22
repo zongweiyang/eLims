@@ -254,8 +254,8 @@ html {
 																<td>
 																	<!--<l:a uri="reagent/labReagent/preAddLabReagent.action"
 																		onclick="ajaxVerification('exportLabReagent.action');return false;"
-																		value="导出试剂清单" />-->
-																	<l:export params="labReagentVo,pageResult" type="excel" source="${labReagentVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}" />
+																		value="#export#试剂清单" />-->
+																	<l:export params="labReagentVo,pageResult" type="excel" source="${labReagentVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}" />
 																</td>
 																<td>
 																	<l:a uri="reagent/labReagent/preAddLabReagent.action" onclick="importReagent('${labReagentVo.reagentTypeId}');return false;" value="importreadlist" img="/img/daoru.gif"/>

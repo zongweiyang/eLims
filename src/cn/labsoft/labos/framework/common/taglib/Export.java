@@ -94,6 +94,7 @@ public class Export extends Base {
 		A labTag = new A( id,  type,  uri,  value, title,  
 			disabled,   onclick,  img,  cssClass, 
 			cssStyle, key,  tooltips,  alt, null,null,html);
+		labTag.setValue(jhref.getText(value));
 		jhref.setLabTag(labTag);
 	}
 	

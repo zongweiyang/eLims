@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.apache.struts2.ServletActionContext;
 import org.apache.struts2.components.Component;
 
-import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.DefaultTextProvider;
 import com.opensymphony.xwork2.util.ValueStack;
 
@@ -57,7 +56,17 @@ public class BaseComponent extends Component {
 	public String getText(String key){
 		String value = key;
 		if(this.textProvider != null){
-			value = this.textProvider.getText(key);
+			if(value != null && value.contains("#")){
+				int s = value.indexOf("#");
+				int e = value.lastIndexOf("#");
+				String sub = value.substring(s+1, e);
+				String end = "#"+sub+"#";
+				sub = " "+this.textProvider.getText(sub)+" ";
+				value = value.replace(end, sub);
+				return value;
+			}else{
+				value = this.textProvider.getText(key);
+			}
 		}
 		if(value==null)value=key;
 		return value;

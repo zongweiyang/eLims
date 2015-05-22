@@ -192,7 +192,7 @@ function uploadFile(busId,busType){
 																	<l:a uri="appara/preAddLabAppara.action" onclick="submitvalue('exportLabAppExcel.action?labApparaVo.typeId=${labApparaVo.typeId}');return false;" value="export.app.list" />
 																	 -->
 																	 
-																	 <l:export params="labReagentVo,pageResult" type="excel" source="${labApparaVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}" />
+																	 <l:export params="labReagentVo,pageResult" type="excel" source="${labApparaVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}" />
 																</td>
 																<td>
 																	<l:a uri="appara/preAddLabAppara.action" onclick="importExcel('getLabAppExcel.action?labApparaVo.typeId=${labApparaVo.typeId}');return false;" value="import.app.list" />

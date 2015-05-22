@@ -149,8 +149,8 @@ html {
 																	<!--<l:a
 																		uri="customer/labCustomer/preAddLabCustomer.action"
 																		onclick="ajaxVerification('customer/labCustomer/exportLabCustomer.action');"
-																		value="导出客户单" />-->
-																		<l:export params="labCustomerVo,pageResult" type="excel" source="${labCustomerVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}"/>
+																		value="#export#客户单" />-->
+																		<l:export params="labCustomerVo,pageResult" type="excel" source="${labCustomerVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}"/>
 																</td>
 															</tr>
 														</table>

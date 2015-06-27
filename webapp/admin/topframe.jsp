@@ -6,6 +6,17 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<title></title>
 		<script type="text/javascript">
+		function changeLang(){
+			var language = '<%=lang%>';
+			
+			if(language=='CN'){
+				$.get('<%=basePath%>langAdmin.action?request_locale=en_US');
+			}
+			else if(language =='US'){
+				$.get('<%=basePath%>langAdmin.action?request_locale=zh_CN');
+			}
+			window.top.location.reload();
+		}
 		function menu(obj){
 			var linkNum=0;
 			$("a[id*='MENUA_HREF']").each(function (linkNum){
@@ -128,7 +139,7 @@
 			<table class="Headertoolsbar" cellspacing="0" cellpadding="0" border="0">
 				<tr>
 					<td class="left">
-						<img src="<%=basePath%>admin/adminlogo.png"  />
+						<%-- <img src="<%=basePath%>admin/adminlogo.png"  /> --%>
 						<div id="locales">
 							<ul >
 								<li >
@@ -144,6 +155,9 @@
 					<td class="right">
 						<div class="headertool">
 							<ul class="topicon">
+								<li>
+									<a class="ti_lang" href="" onclick="changeLang();"></a>
+								</li>
 								<li>
 									<a class="ti_loginout" href="<%=basePath%>admin/coreextend/extend/logout.action" target="_top"></a>
 								</li>

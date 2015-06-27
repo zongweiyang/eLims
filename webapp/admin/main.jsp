@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<!-- 代码来指定浏览器使用特定的文档模式，必须在除 title 外的其他 meta 之前使用 -->
-		<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<link rel="icon" href="favicon.ico" type="image/x-icon" /> 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<%@ include file="/jsp/include/common.jsp"%>

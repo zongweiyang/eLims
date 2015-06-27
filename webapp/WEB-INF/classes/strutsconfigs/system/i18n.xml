@@ -9,6 +9,8 @@
 		<action name="lang" class="langAction">
 			<result name="success">/theme/${themeType}/main.jsp</result>
 		</action>
+	</package>
+	<package name="i18nadmin" extends="adminpackage">
 		<action name="langAdmin" class="langAdminAction" >
 			<result name="success">/admin/main.jsp</result>
 		</action>

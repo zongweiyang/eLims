@@ -208,7 +208,7 @@
 																	<l:a href="#" uri="quality/managePlan/deleteLabQuaManageCheckPlan.action" onclick="deleteOne('${id}');return false;"  value="lab.code.del" />
 																</s:if>
 																	  &nbsp;&nbsp;
-															  		<l:a href="#" uri="quality/managePlan/preAddLabQuaManageCheckRecord.action?labQuaManageCheckVo.quaManageCheckPlanId=${id}&labQuaManageCheckVo.quaManageCheckPlanName=${name }" value="记录" />
+															  		<l:a href="#" uri="quality/managePlan/preAddLabQuaManageCheckRecord.action?labQuaManageCheckVo.quaManageCheckPlanId=${id}&labQuaManageCheckVo.quaManageCheckPlanName=${name }" value="jilu" />
 																<s:if test="${accStatus == ''|| accStatus == null || accStatus=='0'}">
 																	&nbsp;&nbsp;
 																	<l:a href="#" uri="quality/accident/preAddLabQuaAccident4Other.action"  onclick="selectAccident('${id}','ACC-GLPS');" value="transferaccid"/>	

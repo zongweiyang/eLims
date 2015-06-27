@@ -24,7 +24,7 @@ html {
 			function deleteEntityForBatch(url){
 				var checkbox=validationCheckbox('ids');
 				if(checkbox==0){
-				    validate.tip("请至少选中一项.",$('#functionId'));
+				    validate.tip('<s:property value="getText('select.one.m')"/>',$('#functionId'));
 					return ;
 				}
 				if(confirm('<s:property value="getText('confirmselectdel')"/>')){

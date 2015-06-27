@@ -77,7 +77,7 @@ html {
 		function submitvalue(actionstr){
 			var key=true;
 			$("#numTab").find('input[name*=demo]').each(function(){
-				validate.tip('还有未检测样品！',$(this));
+				validate.tip('<s:property value="getText('havenochecksam')"/>',$(this));
 				key=false;
 				return false;
 			});

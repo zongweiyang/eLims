@@ -290,7 +290,7 @@ html {
 											<table class="FormtableCon">
 												<tr>
 													<td class="r" width="150">
-														<s:text name="lab.yes"/>否结项：
+														<s:text name="lab.yes"/>否over.item：
 													</td>
 													<td colspan="3">
 														<input type="hidden" name="labSciScienceVo.isSeized" value="${labSciScienceVo.isSeized}" />

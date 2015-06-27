@@ -66,7 +66,7 @@
 											</label>
 										</td>
 										<td>
-											<input type="text" name="labTemplateVo.name" valType="required,strLength" max="32" msg="名称不能为空" strLength-msg="长度不能超过32位" id="title" value="${labTemplateVo.name}" size="30" />
+											<input type="text" name="labTemplateVo.name" valType="required,strLength" max="32" msg='<s:property value="getText('lab.msg.name')"/>' strLength-msg='<s:property value="getText('lab.strlength.msg')"/>' id="title" value="${labTemplateVo.name}" size="30" />
 										</td>
 										<td>
 											<label>

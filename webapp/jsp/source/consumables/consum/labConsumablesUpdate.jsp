@@ -172,7 +172,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labConsumablesVo.safeAmount" value="${labConsumablesVo.safeAmount}" valType="required,strLength" max="16" strLength-msg="警戒数量长度不能超过16位" msg="警戒数量不能为空" id="releaseDate" size="40" type="text" />
+														<input name="labConsumablesVo.safeAmount" value="${labConsumablesVo.safeAmount}" valType="required,strLength" max="16" strLength-msg='<s:property value="getText('alarmlennot16')"/>' msg='<s:property value="getText('alarmnotem')"/>' id="releaseDate" size="40" type="text" />
 													</td>
 													<td>
 														<label>
@@ -180,7 +180,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labConsumablesVo.amount" value="${labConsumablesVo.amount}" valType="strLength" max="16" strLength-msg="库存长度不能超过16位" id="amount" size="40" type="text" />
+														<input name="labConsumablesVo.amount" value="${labConsumablesVo.amount}" valType="strLength" max="16" strLength-msg='<s:property value="getText('stocklennot16')"/>' id="amount" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>
@@ -198,7 +198,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labConsumablesVo.saveUser" onclick="selectLabUser();" valType="strLength" max="32" strLength-msg="保管人长度不能超过32位" value="${labConsumablesVo.saveUser}" id="saveUser" size="40" type="text" />
+														<input name="labConsumablesVo.saveUser" onclick="selectLabUser();" valType="strLength" max="32" strLength-msg='<s:property value="getText('savinglennotover')"/>' value="${labConsumablesVo.saveUser}" id="saveUser" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>
@@ -208,7 +208,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labConsumablesVo.safeDate" valType="strLength" max="11" strLength-msg="有限期长度不能超过11位" value="${labConsumablesVo.safeDate}" id="safeDate" size="40" type="text" />
+														<input name="labConsumablesVo.safeDate" valType="strLength" max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>' value="${labConsumablesVo.safeDate}" id="safeDate" size="40" type="text" />
 													</td>
 
 													<td>
@@ -227,7 +227,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<textarea rows="3" cols="36" name="labConsumablesVo.remark" valType="strLength" max="128" strLength-msg="备注长度不能超过128位" id="remark">${labConsumablesVo.remark}</textarea>
+														<textarea rows="3" cols="36" name="labConsumablesVo.remark" valType="strLength" max="128" strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark">${labConsumablesVo.remark}</textarea>
 													</td>
 													<td>
 														<label>

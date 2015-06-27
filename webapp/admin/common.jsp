@@ -9,6 +9,7 @@
 	String path = request.getContextPath();
 	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
 	SessionContainer sessionContainer = (SessionContainer) session.getAttribute(SessionContainer.Session_Container);
+	
 %>
 
 <script language="javascript">

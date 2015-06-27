@@ -189,7 +189,7 @@
 												<td class="r">
 													<label>
 														<s:text name="chekacichap"/>
-														原因、经过：
+														<s:text name="reasonjingguo"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -200,7 +200,7 @@
 											   <td class="r">
 													<label>
 														<s:text name="accireason"/>
-														以及处理意见：
+														<s:text name="andchuliyij"/>：
 													</label>
 												</td>
 												<td colspan="3">

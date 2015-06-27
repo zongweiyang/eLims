@@ -91,7 +91,7 @@ html {
 														<td>
 															<input type="text" name="labReaCheckMainVo.checkno"
 																valType="required,strLength" max="64"
-																strLength-msg="单据号长度不能超过64位" msg="单据号不能为空"
+																strLength-msg='<s:property value="getText('danjunot64')"/>' msg='<s:property value="getText('danjuidnotem')"/>'
 																value="${labReaCheckMainVo.checkno}" />
 														</td>
 														<td>
@@ -102,7 +102,7 @@ html {
 														<td>
 															<input type="text" name="labReaCheckMainVo.checker"
 																valType="required,strLength" max="32"
-																strLength-msg="盘点人长度不能超过32位" msg="盘点人不能为空"
+																strLength-msg='<s:property value="getText('inventorynot32')"/>' msg='<s:property value="getText('inventorynotem')"/>'
 																value="${labReaCheckMainVo.checker}" />
 														</td>
 														<td>
@@ -124,7 +124,7 @@ html {
 														<td>
 															<input type="text" name="labReaCheckMainVo.name"
 																valType="required,strLength" max="128"
-																strLength-msg="盘点主题长度不能超过128位" msg="盘点主题不能为空"
+																strLength-msg='<s:property value="getText('inventsubjenot128')"/>' msg='<s:property value="getText('inventsubnotem')"/>'
 																value="${labReaCheckMainVo.name}" />
 														</td>
 													</tr>
@@ -223,7 +223,7 @@ html {
 															</td>
 															<td class="c">
 																<input type="text" valType="required,strLength" max="16"
-																	strLength-msg="盘点库存长度不能超过16位" msg="盘点库存不能为空"
+																	strLength-msg='<s:property value="getText('pandiannot16')"/>' msg='<s:property value="getText('invnestocknot')"/>'
 																	name="labReaCheckMainVo.labReaCheckDetailVoList[${st.index}].amount"
 																	value="${amount}" />
 															</td>

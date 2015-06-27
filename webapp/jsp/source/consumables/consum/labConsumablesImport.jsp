@@ -27,7 +27,7 @@ html {
 		function submitvalueforlist(){
 		   var file=$('input[type="file"]').val();
 		   if(file==''||file==null){ 
-		       validate.tip("文件不能为空",$('#functionId'));
+		       validate.tip('<s:property value="getText('file.nulled')"/>',$('#functionId'));
 		   }
 		    else{
 		      var df=document.listForm;

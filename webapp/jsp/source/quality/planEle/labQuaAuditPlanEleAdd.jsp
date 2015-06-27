@@ -96,7 +96,7 @@
 													</td>
 													<td>
 														<s:select list="#request.orgList" onchange="checkLab(this)"  theme="simple" listKey="id+'|'+name" listValue="name" cssStyle="width:273px;"  headerKey="" headerValue=""/>
-														<input type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaAuditPlanEleVo.orgId"  />
+														<input type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaAuditPlanEleVo.orgId"  />
 														<input type="hidden"  id="orgName" name="labQuaAuditPlanEleVo.orgName"  />
 													</td>
 													<td class="r" width="150">
@@ -147,7 +147,7 @@
 														</label>
 													</td>
 													<td>
-														<input size="40" valType="required" msg="<s:text name="interndsite"/>不能为空" name="labQuaAuditPlanEleVo.address" id="address"
+														<input size="40" valType="required" msg='<s:property value="getText('neshennotemep')"/>' name="labQuaAuditPlanEleVo.address" id="address"
 															type="text"  value="${labQuaAuditPlanEleVo.address}"/>
 													</td>
 												</tr>
@@ -158,7 +158,7 @@
 														</label>
 													</td>
 													<td>
-														<input size="40" valType="required" msg="内审组长不能为空" name="labQuaAuditPlanEleVo.checkHead"
+														<input size="40" valType="required" msg='<s:property value="getText('neishenzuzhangnotem')"/>' name="labQuaAuditPlanEleVo.checkHead"
 															id="checkHead" type="text"  value="${labQuaAuditPlanEleVo.checkHead }" />
 													</td>
 													<td class="r" width="150">

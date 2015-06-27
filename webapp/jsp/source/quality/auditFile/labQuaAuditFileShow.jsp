@@ -152,7 +152,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															被审<s:text name="msg.depart"/>：
+															<s:text name="auditdeparted"/>：
 														</label>
 													</td>
 													<td>
@@ -178,7 +178,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														内  审  员：
+														<s:text name="innealauditedd"/>：
 													</label>
 												</td>
 												<td>
@@ -188,7 +188,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														<s:text name="coderepeople"/>员：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -224,7 +224,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														审核情况概述：
+														<s:text name="auditinfoasfd"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -234,7 +234,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审结论：
+														<s:text name="internlcloudi"/>：
 													</label>
 												</td>
 												<td colspan="3">

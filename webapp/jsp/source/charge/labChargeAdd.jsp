@@ -178,7 +178,7 @@
 													</td>
 													<td>
 														<textarea name="labChargeVo.payInfo" valType="strLength"
-															max="512" strLength-msg="备注长度不能超过512位" cols="30" rows="3"
+															max="512" strLength-msg='<s:property value="getText('remakrnot512')"/>' cols="30" rows="3"
 															label="备注">${labChargeVo.payInfo}</textarea>
 													</td>
 												</tr>

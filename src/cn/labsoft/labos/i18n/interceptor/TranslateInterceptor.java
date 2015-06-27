@@ -19,6 +19,7 @@ import org.hibernate.EmptyInterceptor;
 import org.hibernate.type.Type;
 
 import cn.labsoft.labos.i18n.annotation.Translator;
+import cn.labsoft.labos.i18n.annotation.TranslatorType;
 import cn.labsoft.labos.i18n.util.TranslateUtil;
 
 /**
@@ -42,47 +43,86 @@ public class TranslateInterceptor extends EmptyInterceptor {
 		return transValue;
 	}
 	
+	String getNewSqlValue(String oldValue){
+		StringBuilder builder = new StringBuilder();
+		if(!StringUtils.isEmpty(oldValue)){
+			char[] str = oldValue.toCharArray();
+			boolean afterFrom = false;
+			for (int i = 0; i < str.length; i++) {
+				char a = str[i];
+				if(!afterFrom && (a == 'A' || a == 'a')  && (i+2) < str.length){
+					char s = str[i+1];
+					char k = str[i+2];
+					if( (s=='S' || s=='s') && k==' '){
+						
+						builder.append("AS ");
+						int j = i+3;
+						while(j < str.length && (str[j] != ',' && str[j]!=' ' && str[j]!='F' && str[j]!='f'))j++;
+						if(j < str.length){
+							
+							if(( j+4 )<= str.length && (str[j]=='F' || str[j]=='f')){
+								String ss = oldValue.substring(j, j+4);
+								if(ss.toUpperCase().equals("FROM"))afterFrom = true;
+							}
+						
+							String v = oldValue.substring(i+2,j);
+							String newV = TranslateUtil.get(v);
+							builder.append("'"+(newV !=null ? newV : v )+"'");
+							builder.append(" "+str[j]);
+							i = j;
+						}
+					}else{
+						builder.append(str[i]);
+					}
+				}else{
+					if(( i+4 )<= str.length && (str[i]=='F' || str[i]=='f')){
+						String s = oldValue.substring(i, i+4);
+						if(s.toUpperCase().equals("FROM"))afterFrom = true;
+					}
+					builder.append(str[i]);
+				}
+			}
+		}
+		return builder.toString();
+	}
+	
 	String getNewHtmlValue(String oldValue) {
 		StringBuilder builder = new StringBuilder();
 		if(!StringUtils.isEmpty(oldValue)){
 			char[] str = oldValue.toCharArray();
-			boolean in = false;
-			int start=0,end=0;
-			boolean star = false;
+			boolean inOption = false;
+			int start=0;
+			boolean beginTranslate = false;
 			for(int i = 0;i<oldValue.length();i++){
-				if(in){
+				if(inOption){
 					if(str[i]=='>'){
 						start = i+1;
-						star = true;
+						beginTranslate = true;
 						builder.append(str[i]);
 					}
-					else if(star && str[i]=='<' && (i+7) < oldValue.length() && oldValue.subSequence(i+1,i+8).equals("/option")){
-						end = i;
-						String v = oldValue.substring(start, end);
+					else if(beginTranslate && str[i]=='<' && (i+7) < oldValue.length() && oldValue.subSequence(i+1,i+8).equals("/option")){
+						
+						String v = oldValue.substring(start, i);
 						String newV = TranslateUtil.get(v);
 						builder.append(newV!=null?newV:v);
 						builder.append('<');
-						in =false;
-						star = false;
+						inOption =false;
+						beginTranslate = false;
 						start = 0;
-						end = 0;
 					}
 				}
 				else{
+					builder.append(str[i]);
 					if(str[i]=='<'){
-						builder.append(str[i]);
 						int j = i+7;
 						if(j<oldValue.length()){
 							String sub = oldValue.substring(i+1, j);
 							if(sub.equals(regex)){
 								i=j;
 								builder.append(regex);
-								in = true;
+								inOption = true;
 							}
 						}
-					}
-					else{
-						builder.append(str[i]);
 					}
 				}
 			}
@@ -110,10 +150,14 @@ public class TranslateInterceptor extends EmptyInterceptor {
 						Object oldValue = objMap.get(f.getName());
 						if (oldValue != null) {
 							String value = String.valueOf(oldValue);
-							if (!translator.isHtml()) {
-								value = getNewValue(value);
-							} else {
+							if ( TranslatorType.HTML == translator.type()  ) {
 								value = getNewHtmlValue(value);
+							}
+							else if(TranslatorType.SQL == translator.type() ){
+								value = getNewSqlValue(value);
+							}
+							else {
+								value = getNewValue(value);
 							}
 							stateValue[indexMap.get(f.getName())] = value;
 						}

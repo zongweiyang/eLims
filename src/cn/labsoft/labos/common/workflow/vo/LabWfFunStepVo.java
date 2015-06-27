@@ -1,6 +1,7 @@
 package cn.labsoft.labos.common.workflow.vo;
 
 import cn.labsoft.labos.framework.common.vo.BaseVo;
+import cn.labsoft.labos.i18n.annotation.Translator;
 import cn.labsoft.labos.utils.exportexcel.ExcelAnnotation;
 
 
@@ -27,6 +28,7 @@ public class LabWfFunStepVo extends BaseVo{
 	@ExcelAnnotation(exportName = "节点定义Id")
 	private String stepId;//该步骤对应的功能Id
 	@ExcelAnnotation(exportName = "节点定义名称")
+	@Translator
 	private String stepName;
 	@ExcelAnnotation(exportName = "节点编码")
 	private String stepCode;

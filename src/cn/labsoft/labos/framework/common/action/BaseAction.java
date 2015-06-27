@@ -3,6 +3,7 @@ package cn.labsoft.labos.framework.common.action;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Field;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.Locale;
@@ -24,6 +25,10 @@ import cn.labsoft.labos.framework.common.exception.GlobalException;
 import cn.labsoft.labos.framework.common.log.Log4J;
 import cn.labsoft.labos.framework.common.page.PageResult;
 import cn.labsoft.labos.framework.common.sesseionutils.SessionContainer;
+import cn.labsoft.labos.framework.common.vo.BaseVo;
+import cn.labsoft.labos.i18n.annotation.Translator;
+import cn.labsoft.labos.i18n.annotation.TranslatorType;
+import cn.labsoft.labos.i18n.util.TranslateUtil;
 import cn.labsoft.labos.utils.StrUtils;
 import cn.labsoft.labos.coreextend.action.Theme;
 
@@ -129,6 +134,7 @@ public class BaseAction extends ActionSupport implements SessionAware{
 	}
 	
 	protected void setAttribute(String name,Object obj){
+		obj = filterTranslator(obj);
 		getRequest().setAttribute(name,obj);
 	}
 	
@@ -407,4 +413,39 @@ public class BaseAction extends ActionSupport implements SessionAware{
 		this.sessionName = sessionName;
 	}
 	
+	public Object filterTranslator(Object obj){
+		Locale locale = (Locale)getRequest().getSession().getAttribute(Globals.LOCALE_KEY);
+		if(locale!=null && locale.equals(Locale.US)){
+			if(obj instanceof List){
+				List list = (List) obj;
+				for(int i=0;i<list.size();i++){
+					Object value = list.get(i);
+					if(value instanceof BaseVo){
+						value = filter(value);
+						list.set(i, value);
+					}
+				}
+			}else if(obj instanceof BaseVo){
+				obj = filter(obj);
+			}
+		}
+		return obj;
+	}
+	private Object filter(Object entity){
+		Field[] fields = entity.getClass().getDeclaredFields();
+		try {
+			for (Field f : fields) {
+				Translator translator = f.getAnnotation(Translator.class);
+				if(translator != null ){
+					f.setAccessible(true);
+					String value = String.valueOf(f.get(entity));
+					value = TranslateUtil.get(value);
+					if(value !=null) f.set(entity, value);
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return entity;
+	}
 }

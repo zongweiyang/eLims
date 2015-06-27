@@ -29,13 +29,13 @@ html {
 					dataType:'text',
 					success:function(data){
 						if(data=='1'){
-						   validate.tip("试剂编号已经存在.",$('#functionId'));
+						   validate.tip('<s:property value="getText('reanoexist')"/>',$('#functionId'));
 							$(obj).val("");
 							$(obj).select();
 						}
 					},
 					error:function(){
-					    validate.tip("网络不通.",$('#functionId'));
+					    validate.tip('<s:property value="getText('theme.net.fail')"/>',$('#functionId'));
 					}
 				});
 			}
@@ -170,7 +170,7 @@ html {
 													<td>
 														<input name="labReagentVo.code" id="code"
 															valType="required,strLength" max="32" readonly="true"
-															strLength-msg="试剂编码不能超过32位" msg="试剂编码不能为空" type="text"
+															strLength-msg='<s:property value="getText('reacodenot32')"/>' msg='<s:property value="getText('reacodenotemoy')"/>' type="text"
 															size="40" value="${labReagentVo.code}" />
 													</td>
 													<td>
@@ -181,7 +181,7 @@ html {
 													<td>
 														<input name="labReagentVo.name" id="name"
 															valType="required,strLength" max="128"
-															strLength-msg="试剂名称长度不能超过128位" msg="试剂名称不能为空" type="text"
+															strLength-msg='<s:property value="getText('reagnamenot128')"/>' msg='<s:property value="getText('reannamenotemp')"/>' type="text"
 															size="40" value="${labReagentVo.name}" />
 													</td>
 												</tr>
@@ -195,7 +195,7 @@ html {
 														<input name="labReagentVo.size"
 															value="${labReagentVo.size}" id="size"
 															valType="required,strLength" max="32"
-															strLength-msg="试剂规格长度不能超过32位" msg="试剂规格不能为空" type="text"
+															strLength-msg='<s:property value="getText('rearegunot32')"/>' msg='<s:property value="getText('rearegunot32')"/>' type="text"
 															size="40" />
 													</td>
 												
@@ -233,7 +233,7 @@ html {
 														<input name="labReagentVo.safeAmount"
 															value="${labReagentVo.safeAmount}"
 															valType="required,strLength" max="16"
-															strLength-msg="警戒数量长度不能超过16位" msg="警戒数量不能为空"
+															strLength-msg='<s:property value="getText('alarmlennot16')"/>' msg='<s:property value="getText('alarmnotem')"/>'
 															id="releaseDate" size="40" type="text" />
 													</td>
 														</tr>
@@ -246,7 +246,7 @@ html {
 													<td>
 														<input name="labReagentVo.amount"
 															value="${labReagentVo.amount}" valType="strLength"
-															max="16" strLength-msg="库存长度不能超过16位" id="amount"
+															max="16" strLength-msg='<s:property value="getText('stocklennot16')"/>' id="amount"
 															size="40" type="text" />
 														<input name="labReagentVo.uuid"
 															value="${labReagentVo.uuid}" id="uuid" size="40"
@@ -274,7 +274,7 @@ html {
 													<td>
 														<input name="labReagentVo.saveUser" onclick="selectLabUser();"
 															value="${labReagentVo.saveUser}" valType="strLength"
-															max="32" strLength-msg="保管人长度不能超过32位" id="saveUser"
+															max="32" strLength-msg='<s:property value="getText('savinglennotover')"/>' id="saveUser"
 															size="40" type="text" />
 													</td>
 
@@ -286,7 +286,7 @@ html {
 													<td>
 														<input name="labReagentVo.safeDate"
 															value="${labReagentVo.safeDate}" valType="strLength"
-															max="11" strLength-msg="有限期长度不能超过11位" id="safeDate"
+															max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>' id="safeDate"
 															size="40" type="text" />
 														<s:text name="dayday"/>
 													</td>
@@ -312,7 +312,7 @@ html {
 													<td colspan="">
 														<textarea rows="3" cols="36" name="labReagentVo.remark"
 															valType="strLength" max="128"
-															strLength-msg="备注长度不能超过128位" id="remark">${labReagentVo.remark}</textarea>
+															strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark">${labReagentVo.remark}</textarea>
 													</td>
 														</tr>
 												<tr>

@@ -124,7 +124,7 @@
 												<tr>
 													<td class="r" width="180">
 														<label>
-															<s:text name="accidresult"/>及防范措施：
+															<s:text name="accidresult"/>><s:text name="andfangfa"/><：
 														</label>
 													</td>
 													<td colspan="3">

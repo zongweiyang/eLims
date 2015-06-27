@@ -192,7 +192,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReferenceVo.amount" value="${labReferenceVo.amount}" valType="strLength" max="16" strLength-msg="库存长度不能超过16位" id="amount" size="40" type="text" />
+														<input name="labReferenceVo.amount" value="${labReferenceVo.amount}" valType="strLength" max="16" strLength-msg='<s:property value="getText('stocklennot16')"/>' id="amount" size="40" type="text" />
 													</td>
 													<td>
 														<label>
@@ -210,7 +210,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReferenceVo.saveUser" valType="strLength" max="32" strLength-msg="保管人长度不能超过32位" onclick="selectLabUser();" value="${labReferenceVo.saveUser}" id="saveUser" size="40" type="text" />
+														<input name="labReferenceVo.saveUser" valType="strLength" max="32" strLength-msg='<s:property value="getText('savinglennotover')"/>' onclick="selectLabUser();" value="${labReferenceVo.saveUser}" id="saveUser" size="40" type="text" />
 													</td>
 													<td>
 														<label>
@@ -218,7 +218,7 @@ html {
 														</label>
 													</td>
 													<td>
-														<input name="labReferenceVo.safeDate" valType="strLength" max="11" strLength-msg="有限期长度不能超过11位" value="${labReferenceVo.safeDate}" id="safeDate" size="40" type="text" />
+														<input name="labReferenceVo.safeDate" valType="strLength" max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>' value="${labReferenceVo.safeDate}" id="safeDate" size="40" type="text" />
 													</td>
 												</tr>
 												<tr>
@@ -236,7 +236,7 @@ html {
 														</label>
 													</td>
 													<td colspan="">
-														<textarea rows="3" cols="36" name="labReferenceVo.remark" valType="strLength" max="128" strLength-msg="备注长度不能超过128位" id="remark">${labReferenceVo.remark}</textarea>
+														<textarea rows="3" cols="36" name="labReferenceVo.remark" valType="strLength" max="128" strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark">${labReferenceVo.remark}</textarea>
 													</td>
 												</tr>
 												<tr>

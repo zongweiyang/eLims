@@ -592,6 +592,9 @@ a.zPushBtnDisabled:hover b {cursor: not-allowed;color: #999;font-size:12px;backg
 .topicon li a {display:block;width:73px;height:73px;overflow:hidden;}
 .ti_index {background:url(../images/topicon_index_n.png) no-repeat left top;}
 .ti_index:hover {background:url(../images/topicon_index_a.png) no-repeat left top;}
+.ti_lang {background:url(../images/lang.png) no-repeat left top;}
+.ti_lang:hover {background:url(../images/lang_a.png) no-repeat left top;}
+
 
 .ti_yibiao {background:url(../images/topicon_tongji_n.png) no-repeat left top;}
 .ti_yibiao:hover {background:url(../images/topicon_tongji_a.png) no-repeat left top;}

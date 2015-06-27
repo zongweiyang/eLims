@@ -109,7 +109,7 @@
 												<th>
 												
 												</th>
-												<th property="no" width="150">任务<s:text name="code.number"/></th>
+												<th property="no" width="150"><s:text name="task.no"/></th>
 												<th property="labSampCustomerVo.labCustomerName"><s:text name="lec.cust.name"/></th>
 												<th width="70"><s:text name="sam.number"/></th>
 												<th property="taskType" width="100"><s:text name="checking.type"/></th>

@@ -92,7 +92,7 @@ html {
 											</td>
 											<td>
 												<textarea rows="3" cols="40" name="labSciFundsVo.remark" disabled="true"
-													valType="strLength" max="512" strLength-msg="备注长度不能超过512位">${labSciFundsVo.remark}</textarea>
+													valType="strLength" max="512" strLength-msg='<s:property value="getText('remakrnot512')"/>'>${labSciFundsVo.remark}</textarea>
 											</td>
 											</td>
 										</tr>
@@ -147,7 +147,7 @@ html {
 											</td>
 											<td>
 												<textarea rows="3" cols="40" name="labSciFundsVo.remark"
-													valType="strLength" max="512" strLength-msg="备注长度不能超过512位" disabled="true">${labSciFundsVo.remark}</textarea>
+													valType="strLength" max="512" strLength-msg='<s:property value="getText('remakrnot512')"/>' disabled="true">${labSciFundsVo.remark}</textarea>
 											</td>
 											<td class="r" width="150">
 													<label>
@@ -215,7 +215,7 @@ html {
 											</td>
 											<td>
 												<textarea rows="3" cols="40" name="labSciFundsVo.remark" disabled="true"
-													valType="strLength" max="512" strLength-msg="备注长度不能超过512位">${labSciFundsVo.remark}</textarea>
+													valType="strLength" max="512" strLength-msg='<s:property value="getText('remakrnot512')"/>'>${labSciFundsVo.remark}</textarea>
 											</td>
 											<td class="r" width="150">
 												<label>

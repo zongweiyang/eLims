@@ -79,7 +79,7 @@
 					                      					<tr>
 					                      						<td>
 																	<label>
-																	被审<s:text name="msg.depart"/>：
+																	<s:text name="auditdeparted"/>：
 																	</label>
 																</td>
 																<td>

@@ -30,7 +30,7 @@ html {
      	  var thisnum=$('#amount'+index).val();
           if(eval(thisnum)>eval(num))
           {
-            validate.tip("库存不够！",$('#functionId'));
+            validate.tip('<s:property value="getText('stocknotco')"/>',$('#functionId'));
             $('#amount'+index).val('');
           }
 	    }
@@ -152,7 +152,7 @@ html {
 														<td>
 															<input type="text" name="labReaOutMainVo.receiptno"
 																valType="required,strLength" max="32"
-																strLength-msg="单据号长度不能超过32位" msg="单据号不能为空"
+																strLength-msg='<s:property value="getText('danjunotover32')"/>' msg='<s:property value="getText('danjuidnotem')"/>'
 																value="${labReaOutMainVo.receiptno}" />
 															<input type="hidden" id="reagentIds"
 																value="${reagentIds}" />
@@ -165,7 +165,7 @@ html {
 														<td>
 															<input type="text" name="labReaOutMainVo.outstorer"
 																valType="required,strLength" max="64"
-																strLength-msg="出库人长度不能超过64位" msg="出库人不能为空"
+																strLength-msg='<s:property value="getText('outboundnot64')"/>' msg='<s:property value="getText('outboudnnotemp')"/>'
 																value="${labReaOutMainVo.outstorer}" />
 														</td>
 														<td>
@@ -259,7 +259,7 @@ html {
 																	onblur="panduan('${num}','${st.index}');return false;"
 																	name="labReaOutMainVo.labReaOutDetailVoList[${st.index}].amount"
 																	valType="required,strLength" max="16"
-																	strLength-msg="出库量长度不能超过16位" msg="出库量不能为空"
+																	strLength-msg='<s:property value="getText('oubputlennot16')"/>' msg='<s:property value="getText('outputnoatmeu')"/>'
 																	id="amount${st.index}" value="${amount}" />
 																</s:else>
 																
@@ -271,7 +271,7 @@ html {
 																<input type="text"
 																	name="labReaOutMainVo.labReaOutDetailVoList[${st.index}].remark"
 																	valType="strLength" max="512" style="width: 200px;"
-																	strLength-msg="备注长度不能超过512位" value="${remark}" />
+																	strLength-msg='<s:property value="getText('remakrnot512')"/>' value="${remark}" />
 															</s:else>
 															</td>
 															<td class="c">

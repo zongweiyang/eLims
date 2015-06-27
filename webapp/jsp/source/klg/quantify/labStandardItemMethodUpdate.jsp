@@ -252,7 +252,7 @@ html {
 												<tr>
 													<td>
 														<label>
-															代替标准：
+													<s:text name="satrgdbiaoz"/>：
 														</label>
 													</td>
 													<td colspan="3">

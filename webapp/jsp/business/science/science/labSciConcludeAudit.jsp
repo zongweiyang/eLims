@@ -349,7 +349,7 @@ html {
 												<tr>
 													<td class="r" width="150">
 														<label>
-															<s:text name="lab.yes"/>否通过结项：
+															<s:text name="lab.yes"/>否通过over.item：
 														</label>
 													</td>
 													<td class="l" width="407">

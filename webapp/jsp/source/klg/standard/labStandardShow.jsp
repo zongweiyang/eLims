@@ -90,7 +90,7 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>规格型号：</label></td>
+													<td><label><s:text name="regxinghao"/>：</label></td>
 													<td>${labStandardVo.standIndex}
 													</td>
 													<td><label><s:text name="stdfiles"/>：</label></td>
@@ -105,11 +105,11 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>代替标准：</label></td>
+													<td><label><s:text name="stdcreate"/>：</label></td>
 													<td colspan="3"><textarea disabled="true" cols="40" rows="3" name="labStandardVo.replaceName">${labStandardVo.replaceName}</textarea></td>
 												</tr>
 												<tr>
-													<td><label>标准说明：</label></td>
+													<td><label><s:text name="startdshuom"/>：</label></td>
 													<td colspan="3"><textarea disabled="true" cols="40" rows="3" name="labStandardVo.remark">${labStandardVo.remark}</textarea></td>
 												</tr>
 											</table>

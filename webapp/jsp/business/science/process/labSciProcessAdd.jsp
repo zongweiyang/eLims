@@ -151,7 +151,7 @@ html {
 									<table class="FormtableCon">
 											<tr>
 												<td class="r" width="150"><label><s:text name="namelarge"/>：：</label></td>
-												<td><input size="40" type="text" name="labSciProcessVo.name" id="name"  valType="required" msg="名称不能为空"  /></td>
+												<td><input size="40" type="text" name="labSciProcessVo.name" id="name"  valType="required" msg='<s:property value="getText('lab.msg.name')"/>'  /></td>
 												<td class="r" width="150"><label>录&nbsp;&nbsp;入&nbsp;&nbsp;人：</label></td>
 												<td><input size="40" type="text" name="labSciProcessVo.writeUser" id="writeUser" value="${labSciProcessVo.writeUser }"  valType="required" msg="填写人不能为空" /></td>
 											</tr>

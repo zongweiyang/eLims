@@ -131,7 +131,7 @@
 															</td>
 															<td class="c">
 																<s:if test="${isFile == 1 || isFile == '' || isFile == null  }">
-																	<font color="red">未存档</font>
+																	<font color="red"><s:text name="unarchired"/></font>
 																</s:if>
 																<s:if test="${isFile == 0 }">
 																	<font color="red"><s:text name="aucechied"/></font>

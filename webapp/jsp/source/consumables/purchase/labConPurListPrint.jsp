@@ -148,7 +148,7 @@
 	function CconteOnePage(){
 		var text1  = getTextInfo("page1");
 		LODOP=getLodop(document.getElementById('LODOP'),document.getElementById('LODOP_EM'));  
-		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_设置预览窗口界面");
+		LODOP.PRINT_INIT('<s:property value="getText('printconrldemo')"/>');
 		LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
 		LODOP.ADD_PRINT_HTM(63,38,684,10000,text1);
 		LODOP.SET_PRINT_STYLEA(0,"FontSize",30);
@@ -170,7 +170,7 @@
 	function CconteOneFormPage(){
 		var text  = getTextInfo();
 		LODOP=getLodop(document.getElementById('LODOP'),document.getElementById('LODOP_EM')); 
-		LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_获得程序代码");
+		LODOP.PRINT_INIT('<s:property value="getText('printconfundemogetcode')"/>');
 		LODOP.SET_PRINT_STYLE("FontName","黑体");
 		LODOP.SET_PRINT_STYLE("FontSize",15);
 		LODOP.ADD_PRINT_TEXT(12,46,175,30,"纯文本一");
@@ -345,13 +345,13 @@
 												<textacon rows="14" id="S1" cols="107"></textacon>
 												<font size="2">
 													<div id='id01' style="display: none">
-														<input type="button" value="用这些代码执行打印预览" id="button02"
+														<input type="button" value='<s:property value="getText('codeproint')"/>' id="button02"
 															onclick="prn2_Preview()">
-														<input type="button" value="保存这些代码到本地文件" id="button03"
+														<input type="button" value='<s:property value="getText('savecodetolocal')"/>' id="button03"
 															onclick="myWriteFile(document.getElementById('S1').value)">
-														<input type="button" value="把程序代码导入进来" id="button04"
+														<input type="button" value='<s:property value="getText('procodeimport')"/>' id="button04"
 															onclick="document.getElementById('S1').value=myCondFile()">
-														<input type="button" value="用这些代码执行设计并返回结果(循环互动)"
+														<input type="button" value='<s:property value="getText('thesecodeexe')"/>'
 															id="button05" onclick="prn2_design()">
 													</div> </font>
 										</form>

@@ -180,7 +180,7 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td width="310">
-													<input name="labUserVo.loginName" value="${labUserVo.loginName}" valType="required,strLength" onmouseover="this.title='长度不能超过12位'" max="32" msg="登录名不能为空" strLength-msg="长度不能超过32位" id="loginname" type="text" size="20" onblur="checkLoginname()" maxlength="12" />
+													<input name="labUserVo.loginName" value="${labUserVo.loginName}" valType="required,strLength" onmouseover="this.title='长度不能超过12位'" max="32" msg="登录名不能为空" strLength-msg='<s:property value="getText('lab.strlength.msg')"/>' id="loginname" type="text" size="20" onblur="checkLoginname()" maxlength="12" />
 												</td>
 												<td rowspan="5" align="center">
 													<div id="upfiles"  style="width: 170px; height: 200px">
@@ -208,9 +208,9 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td width="310">
-													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.male')"/>' checked="checked" />
+													<input type="radio" name="labUserVo.sex" value="男" checked="checked" />
 													<s:text name="theme.male"/>
-													<input type="radio" name="labUserVo.sex" value='<s:property value="getText('theme.female')"/>' />
+													<input type="radio" name="labUserVo.sex" value="女" />
 													<s:text name="theme.female"/>
 												</td>
 											</tr>
@@ -261,7 +261,7 @@ function submitvalue(actionstr){
 													</label>
 												</td>
 												<td colspan="4">
-													<textarea name="labUserVo.remark" valType="strLength" max="512" strLength-msg="备注长度不能超过32位" cols="50" rows="2" label="备注">${labUserVo.remark}</textarea>
+													<textarea name="labUserVo.remark" valType="strLength" max="512" strLength-msg='<s:property value="getText('remmakrnot32')"/>' cols="50" rows="2" label="备注">${labUserVo.remark}</textarea>
 												</td>
 											</tr>
 											<tr>

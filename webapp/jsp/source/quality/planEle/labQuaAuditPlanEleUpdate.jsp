@@ -147,7 +147,7 @@
 														</label>
 													</td>
 													<td>
-														<input size="40" valType="required" msg="内审组长不能为空" name="labQuaAuditPlanEleVo.checkHead"
+														<input size="40" valType="required" msg='<s:property value="getText('neishenzuzhangnotem')"/>' name="labQuaAuditPlanEleVo.checkHead"
 															id="checkHead" type="text"  value="${labQuaAuditPlanEleVo.checkHead }" />
 													</td>
 													<td class="r" width="150">

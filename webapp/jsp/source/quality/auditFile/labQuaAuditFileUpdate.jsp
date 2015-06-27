@@ -166,7 +166,7 @@
 												<tr>
 													<td class="r" width="150">
 														<label>
-															被审<s:text name="msg.depart"/>：
+															<s:text name="auditdeparted"/>：
 														</label>
 													</td>
 													<td>
@@ -198,7 +198,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														内&nbsp;&nbsp;审&nbsp;&nbsp;员：
+														<s:text name="innealauditedd"/>：
 													</label>
 												</td>
 												<td>
@@ -210,7 +210,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														<s:text name="coderepeople"/>员：
+														<s:text name="coderepeople"/>：
 													</label>
 												</td>
 												<td>
@@ -252,7 +252,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														审核情况概述：
+														<s:text name="auditinfoasfd"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -262,7 +262,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														内审结论：
+														<s:text name="internlcloudi"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -301,7 +301,7 @@
 										</div>
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span>内审报告归档</span>
+												<span><s:text name="internreportachi"/></span>
 												<label style="float: right;margin-right: 20px;cursor: pointer;" onclick="javascript:$(this).parent().next().toggle();">[<font color="red"><s:text name="open.close"/></font>]</label>
 											</div>
 											<table class="FormtableCon">

@@ -243,7 +243,7 @@ html {
 											</td>
 											<td>
 												<input type="text" name="labSupplierVo.zipCode"
-													value="${labSupplierVo.zipCode }" id="zipCode" valType="required,zipCode" zipCode-msg='<s:property value="getText('postcodenotco')"/>' msg="邮编不能为空"/>
+													value="${labSupplierVo.zipCode }" id="zipCode" valType="required,zipCode" zipCode-msg='<s:property value="getText('postcodenotco')"/>' msg='<s:property value="getText('codenostem')"/>'/>
 											</td>
 											<td>
 												<label>

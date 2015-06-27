@@ -117,7 +117,7 @@ html {
 													</td>
 													<td>
 														<input name="labReferenceVo.purity" valType="strLength"
-															max="32" strLength-msg="纯度的长度不能超过32位" id="purity"
+															max="32" strLength-msg='<s:property value="getText('purelengnot32')"/>' id="purity"
 															type="text" size="40" value="${labReferenceVo.purity}" disabled="true"/>
 													</td>
 														</tr>
@@ -142,7 +142,7 @@ html {
 														<input name="labReferenceVo.safeAmount"
 															value="${labReferenceVo.safeAmount}"
 															valType="required,strLength" max="16"
-															strLength-msg="警戒数量长度不能超过16位" msg="警戒数量不能为空"
+															strLength-msg='<s:property value="getText('alarmlennot16')"/>' msg='<s:property value="getText('alarmnotem')"/>'
 															id="releaseDate" size="40" type="text" disabled="true"/>
 													</td>
 														</tr>
@@ -155,7 +155,7 @@ html {
 													<td>
 														<input name="labReferenceVo.amount"
 															value="${labReferenceVo.amount}" valType="strLength"
-															max="16" strLength-msg="库存长度不能超过16位" id="amount"
+															max="16" strLength-msg='<s:property value="getText('stocklennot16')"/>' id="amount"
 															size="40" type="text" disabled="true"/>
 													</td>
 													<td>
@@ -178,7 +178,7 @@ html {
 													</td>
 													<td>
 														<input name="labReferenceVo.saveUser" valType="strLength"
-															max="32" strLength-msg="保管人长度不能超过32位"
+															max="32" strLength-msg='<s:property value="getText('savinglennotover')"/>'
 															value="${labReferenceVo.saveUser}" id="saveUser"
 															size="40" type="text" disabled="true"/>
 													</td>
@@ -189,7 +189,7 @@ html {
 													</td>
 													<td>
 														<input name="labReferenceVo.safeDate" valType="strLength"
-															max="11" strLength-msg="有限期长度不能超过11位"
+															max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>'
 															value="${labReferenceVo.safeDate}" id="safeDate"
 															size="40" type="text" disabled="true"/>
 													</td>
@@ -214,7 +214,7 @@ html {
 													<td colspan="">
 														<textarea rows="3" cols="36" name="labReferenceVo.remark"
 															valType="strLength" max="128"
-															strLength-msg="备注长度不能超过128位" id="remark" disabled="true">${labReferenceVo.remark}</textarea>
+															strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark" disabled="true">${labReferenceVo.remark}</textarea>
 													</td>
 														</tr>
 												<tr>

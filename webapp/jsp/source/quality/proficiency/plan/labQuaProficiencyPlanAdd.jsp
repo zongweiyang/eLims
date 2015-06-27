@@ -94,7 +94,7 @@
 															theme="simple" listKey="id+'|'+name" listValue="name"
 															cssStyle="width:273px;" onchange="checkLab(this);"></s:select>
 														<input type="hidden" id="orgId"
-															valType="required" msg="请选择单位"
+															valType="required" msg='<s:property value="getText('slecltdepart')"/>'
 															name="labQuaProficiencyPlanVo.unitOrgId"
 															value="${labQuaProficiencyPlanVo.unitOrgId }" />
 														<input type="hidden" id="orgName"
@@ -276,7 +276,7 @@
 														</td>
 														<td>
 															<input size="40" name="labQuaProficiencyPlanVo.sampRegisterTel"
-																id="sampRegisterTel" type="text"  valType="phone"  phone-msg="电话格式不准确"
+																id="sampRegisterTel" type="text"  valType="phone"  phone-msg='<s:property value="getText('phonefomatnot')"/>'
 																value="${labQuaProficiencyPlanVo.sampRegisterTel}" />
 														</td>
 													</tr>

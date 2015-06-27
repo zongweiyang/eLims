@@ -108,7 +108,7 @@ html {
 								$('#content4TwoTr').html('');
 								$('#content4TwoTr').append(
 		       						$('<tr>').append($('<td>').addClass('c').append('<s:property value="getText('2dcodefuzhi')"/>'))
-		       								 .append($('<td>').addClass('c').append('二维码属性赋值'))
+		       								 .append($('<td>').addClass('c').append('<s:property value="getText('2dcodefuzhi')"/>'))
 		       								 .append($('<td>').addClass('c').append('排序'))
 		       								 .append($('<td>').addClass('c').append('是否显示'))
 		       								 .append($('<td>').addClass('c').append('操作'))
@@ -153,7 +153,7 @@ html {
 											'<s:property value="getText('2dcodefuzhi')"/>'+
 										'</td>'+
 										'<td class="c">'+
-											'二维码属性赋值'+
+											'<s:property value="getText('2dcodefuzhi')"/>'+
 										'</td>'+
 									'</tr>'+
 									'<tr id="content4TwoXz">'+

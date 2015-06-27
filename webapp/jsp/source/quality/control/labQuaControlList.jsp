@@ -164,7 +164,7 @@
 													<s:text name="theme.depart"/>
 												</th>
 												<th property="labOrg.name">
-													实验室
+											<s:text name="labroom"/>
 												</th>
 												<th property="place">
 											<s:text name="areamap"/>

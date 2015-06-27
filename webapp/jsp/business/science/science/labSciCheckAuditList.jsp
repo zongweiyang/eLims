@@ -186,10 +186,10 @@ html {
 																</td>
 																<td class="c">
 																	<a href="<%=basePath%>science/labSciProcess/showLabScience4Process.action?labSciScienceVo.id=${id}"><s:text name="look.check"/></a>
-																	<s:if test="${status == '项目中检' }">
+																	<s:if test="${status == '项目midlecheck' }">
 																	&nbsp;&nbsp;
 																	<l:a href="#" uri="science/labScience/preUpdateLabScience.action?labSciScienceVo.id=${id}&messageInfo=5"
-																		onclick="getOne('${id}');" value="中检" />
+																		onclick="getOne('${id}');" value="midlecheck" />
 																	</s:if>
 																</td>
 															</tr>

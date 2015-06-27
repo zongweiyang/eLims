@@ -237,7 +237,7 @@ html {
 												</tr>
 												<tr>
 													<td>
-														存在问题和改进措施：
+												<s:text name="existproblesm"/>和改进措施：
 													</td>
 													<td>
 														<textarea rows="4" cols="60"

@@ -109,7 +109,7 @@ request.setAttribute("basePath",basePath);
 			var sObj = $("#" + treeNode.tId + "_span");
 			if ($("#addBtn_"+treeNode.id).length>0) return;
 			var addStr = "<span class='button add' id='addBtn_" + treeNode.id
-				+ "' title='新增' onfocus='this.blur();'></span>";
+				+ "' title='<s:property value="getText('admin.add')"/>' onfocus='this.blur();'></span>";
 			sObj.append(addStr);
 			var btn = $("#addBtn_"+treeNode.id);
 			if (btn) btn.bind("click", function(){
@@ -121,7 +121,7 @@ request.setAttribute("basePath",basePath);
 					success:function(data){
 						if(data.length==32){
 							var zTree = $.fn.zTree.getZTreeObj("zTree");
-								zTree.addNodes(treeNode, {id:'addBtn_'+ treeNode.tId,treeNid:data, pId:treeNode.id, name:"未命名"});
+								zTree.addNodes(treeNode, {id:'addBtn_'+ treeNode.tId,treeNid:data, pId:treeNode.id, name:'<s:property value="getText('appratus.unknow')"/>'});
 						}else{
 							alert('<s:property value="getText('addexcepton')"/>');
 						}

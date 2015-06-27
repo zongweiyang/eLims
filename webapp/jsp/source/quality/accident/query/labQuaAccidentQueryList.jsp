@@ -78,13 +78,13 @@
 					                      						</td>
 																<td>
 																	<label>
-																		处理状态：
+																		<s:text name="chulistate"/>：
 																	</label>
 																</td>
 																<td>
 																	<select name="labQuaAccidentVo.accStatus">
-																		<option <s:if test="${labQuaAccidentVo.accStatus == ''}">selected="selected"</s:if> value="" >--全部--</option>
-																		<option <s:if test="${labQuaAccidentVo.accStatus == '0,1'}">selected="selected"</s:if> value="0,1">未处理</option>
+																		<option <s:if test="${labQuaAccidentVo.accStatus == ''}">selected="selected"</s:if> value="" ><s:text name="allselectedsaf"/></option>
+																		<option <s:if test="${labQuaAccidentVo.accStatus == '0,1'}">selected="selected"</s:if> value="0,1"><s:text name="sam.undealed"/></option>
 																		<option <s:if test="${labQuaAccidentVo.accStatus == '2'}">selected="selected"</s:if> value="2"><s:text name="sam.dealed"/></option>
 																	</select>
 																</td>
@@ -133,7 +133,7 @@
 												  	 <s:text name="sam.register"/>
 												</th>
 												<th property="repTime">
-												   处理状态
+												   <s:text name="chulistate"/>
 												</th>
 												<th>
 													<s:text name="lab.code.ops"/>
@@ -168,7 +168,7 @@
 																	<label style="color: red;"><s:text name="sam.dealed"/></label>
 																</s:if>
 																<s:else>
-																	<label style="color: red;">未处理</label>
+																	<label style="color: red;"><s:text name="sam.undealed"/></label>
 																</s:else>
 															</td>
 															<td class="c">

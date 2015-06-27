@@ -248,7 +248,7 @@ function checkContact(obj){
 																		</label>
 																	</td>
 																	<td>
-																		<input type="text" name="labSampRegisterVo.labSampCustomerVo.telephone" readonly="readonly" value="${labSampRegisterVo.labSampCustomerVo.telephone}" id="telephone" size="40"  valType="phone"  phone-msg="电话格式不准确"/>
+																		<input type="text" name="labSampRegisterVo.labSampCustomerVo.telephone" readonly="readonly" value="${labSampRegisterVo.labSampCustomerVo.telephone}" id="telephone" size="40"  valType="phone"  phone-msg='<s:property value="getText('phonefomatnot')"/>'/>
 																	</td>
 																	<td>
 																		<label>

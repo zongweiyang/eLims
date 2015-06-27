@@ -211,7 +211,7 @@ html {
 											</td>
 											<td>
 												<input size="40" type="text" name="labSciProcessVo.name"
-													id="name" valType="required" msg="名称不能为空"
+													id="name" valType="required" msg='<s:property value="getText('lab.msg.name')"/>'
 													value="${labSciProcessVo.name }" />
 											</td>
 											<td class="r" width="150">

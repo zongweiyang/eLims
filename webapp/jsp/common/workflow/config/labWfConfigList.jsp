@@ -1,5 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+
 <html>
 	<head>
 		<%@ include file="/jsp/include/common.jsp"%>
@@ -64,7 +65,7 @@ html {
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																	<l:a uri="workflow/labWfConfig/preAddLabWfConfig.action" value="lab.code.add" />
+																	<l:a uri="workflow/labWfConfig/preAddLabWfConfig.action?labWfConfigVo.funId=${funId}" value="lab.code.add" />
 																</td>
 															</tr>
 														</table>

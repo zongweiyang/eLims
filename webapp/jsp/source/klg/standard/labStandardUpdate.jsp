@@ -235,14 +235,14 @@
 													</td>
 												</tr>
 												<tr>
-													<td><label>代替标准：</label></td>
+													<td><label><s:text name="stdcreate"/>：</label></td>
 													<td colspan="3"><textarea cols="40" rows="3" name="labStandardVo.replaceName" id="replaceName" onclick="selectStandard()">${labStandardVo.replaceName}</textarea>
 													</td>
 														<input type="hidden" name="labStandardVo.replaceIds" value="${labStandardVo.replaceIds}" id="replaceIds"/>
 														
 												</tr>
 												<tr>
-													<td><label>标准说明：</label></td>
+													<td><label><s:text name="startdshuom"/>：</label></td>
 													<td colspan="3"><textarea cols="40" rows="3" name="labStandardVo.remark">${labStandardVo.remark}</textarea></td>
 												</tr>
 											</table>

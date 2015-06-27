@@ -8,9 +8,9 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD,ElementType.METHOD})
 @Documented
 @Inherited
 public @interface Translator {
-	boolean isHtml() default false;
+	TranslatorType type() default TranslatorType.DEFAULT;
 }

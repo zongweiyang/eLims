@@ -64,6 +64,17 @@ display: block;
 }
 </style>
 <script type="text/javascript">
+function changeLang(){
+	var language = '<%=lang%>';
+	
+	if(language=='CN'){
+		$.get('<%=basePath%>lang.action?request_locale=en_US');
+	}
+	else if(language =='US'){
+		$.get('<%=basePath%>lang.action?request_locale=zh_CN');
+	}
+	window.top.location.reload();
+}
 function hideAndShow(){
     var size = window.parent.document.getElementById("bottomid").cols;
 	if(size == '190,*'){
@@ -180,27 +191,16 @@ function changeStyle(t,count,id) {
 <div id="Header">
 <table class="Headertoolsbar" cellspacing="0" cellpadding="0" border="0">
   <tr>			<td class="left">
-					<img src="<%=basePath%>img/logo/1398701782241.png" />
+					<%-- <img src="<%=basePath%>img/logo/1398701782241.png" /> --%>
   				</td>
 				<td class="left">
 					<%--  <img src="<%=basePath%>${session.SessionContainer.logoUrl}" /> --%>
-					<div id="locales">
-						<ul>
-							<li><a href="<%=basePath%>lang.action?request_locale=zh_CN"
-								onclick="window.top.location.reload();"
-								style="font-family: 微软雅黑;"> 简体中文</a></li>
-							<li><a href="<%=basePath%>lang.action?request_locale=en_US"
-								onclick="window.top.location.reload();"
-								style="font-weight: bold;" class="last"> English</a></li>
-						</ul>
-						<div class="clear"></div>
-					</div>
-
 				</td>
 
 				<td class="right">
       <div class="headertool">
         <ul class="topicon">
+        	<li><a  href="" onclick="changeLang();" class="ti_lang"></a></li>
 			<li><a  href="<%=basePath%>portlets/showPortlets.action" onclick="" class="ti_index" target="workarea"></a></li>
           <li>
         <s:if test="${sessionScope.isDD==true}">

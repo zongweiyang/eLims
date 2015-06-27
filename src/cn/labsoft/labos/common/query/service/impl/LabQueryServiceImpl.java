@@ -548,12 +548,12 @@ public class LabQueryServiceImpl implements ILabQueryService {
 	public String[] getSql(LabQueryVo labQueryVo) {
 		String[] sql = new String[2];
 		if (labQueryVo.getListLabParameter() != null && labQueryVo.getListLabParameter().size() > 0) {
-		SqlVo sqlVo = getSqlVo(labQueryVo.getName());
-		if (isSqlParamterNull(labQueryVo))
-			labQueryVo.setIsNull(Constants_Base.TRUE);
-		else
-			labQueryVo.setIsNull(Constants_Base.FALSE);
-		sql = getSqlByWhere(sqlVo, labQueryVo);
+			SqlVo sqlVo = getSqlVo(labQueryVo.getName());
+			if (isSqlParamterNull(labQueryVo))
+				labQueryVo.setIsNull(Constants_Base.TRUE);
+			else
+				labQueryVo.setIsNull(Constants_Base.FALSE);
+			sql = getSqlByWhere(sqlVo, labQueryVo);
 		}else{
 			sql[1] = "SELECT COUNT(1) "+labQueryVo.getName().substring(labQueryVo.getName().indexOf("FROM"));
 			sql[0] = labQueryVo.getName();

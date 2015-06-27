@@ -111,6 +111,8 @@
 	<classpathentry kind="lib" path="webapp/WEB-INF/lib/zookeeper-3.4.5.jar"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-7.0.59/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="D:/apache-tomcat-7.0.59/lib/jsp-api.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/sqljdbc4-4.0.jar"/>
+	<classpathentry kind="lib" path="webapp/WEB-INF/lib/aspectjweaver-1.7.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7">
 		<attributes>
 			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="C:/Java/jdk1.7.0_25"/>

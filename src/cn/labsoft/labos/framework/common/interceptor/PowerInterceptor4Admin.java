@@ -47,7 +47,7 @@ public class PowerInterceptor4Admin extends BaseInterceptor {
 		}
 		String uri = (nameSpace + invocation.getProxy().getActionName() + ".action").trim();
 		String URI = uri.toUpperCase();
-		boolean specialURI = (URI != null && uri.length() > 0 && URI.startsWith("/ADMIN/"));
+		boolean specialURI = (URI != null && uri.length() > 0 && (URI.startsWith("/ADMIN/")||(URI.startsWith("/LANG"))));
 		if (specialURI || labPowerService.hasPower(uri)) {
 			return invocation.invoke();
 		} else {

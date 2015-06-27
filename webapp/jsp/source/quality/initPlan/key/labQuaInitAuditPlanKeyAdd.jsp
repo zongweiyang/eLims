@@ -58,7 +58,7 @@
 												<tr>
 										 			<td class="r" width="120"><label><s:text name="checmain"/>：</label></td>
 										 			<td>
-										 				<textarea cols="50" rows="4" valType="required" msg="检查重点不能为空" name="labQuaInitAuditPlanVo.name" id="name"></textarea>
+										 				<textarea cols="50" rows="4" valType="required" msg=<s:text name="chkimportnoetem"/> name="labQuaInitAuditPlanVo.name" id="name"></textarea>
 										 			</td>
 										 		</tr>
 											</table>

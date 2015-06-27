@@ -9,11 +9,13 @@
 <html>
 <head>
 <link rel="shortcut icon" href="favicon.ico"> 
-<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
-<title><s:text name="login.labossystem"/></title>
 
-<link  href="<%=basePath%>style/login_web.css" media="all" rel="stylesheet" type="text/css" />
-<link  href="<%=basePath%>style/global_web.css" media="all" rel="stylesheet" type="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title><s:text name="login.labossystem"/></title>
+ <link href="<%=basePath%>style/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="<%=basePath%>style/signin.css" rel="stylesheet">
 <script type="text/javascript" language="JavaScript" src="<%=basePath%>js/jquery/jquery-1.11.0.min.js"></script>
 <script>
 <s:set name="msg" value="actionErrors"/>
@@ -83,29 +85,41 @@ document.onkeydown = function(evt){
 </head>
 
 <body>
-<div class="wrapper">
-<div class="loginbox">
-<form action="<%=basePath%>admin/coreextend/extend/loginSystem.action" method="post" id="loginForm" name="loginForm">
-	<input type="hidden" id="token" name="labUserVo.token" value="" class="" /> 
-	<input type="text" id="loginname" name="labUserVo.loginName" value="${labUserVo.loginName }" class="usernameinput" /> 
-	<input type="password" id="password" name="labUserVo.pwd" value="${labUserVo.pwd}" class="userpasswordinput" /> 
-	<div class="baocunmima" style="">
-		<input type="checkbox" id="rememberPwdId"/>
-		<s:text name="login.savepassword" />
-	</div>
-	<input class="denglubtn" name="signIn" value="" type="button" onclick="submitForm();"  />
-	<input class="chongzhibtn" value="" id="resetX" type="buuton" />
-	<p class="errorinfo" id="errorInfo">${messageInfo}</p>
-</form>
+
+ <div class="container">
+      <h3 class="form-signin-heading"><s:text name="newlogintitle"></s:text></h3>
+      <form class="form-signin" role="form" action="<%=basePath%>admin/coreextend/extend/loginSystem.action" method="post" id="loginForm" name="loginForm">
+        <input type="hidden" id="token" name="labUserVo.token" value="" class="" /> 
+        <input type="text" id="loginname" name="labUserVo.loginName" value="${labUserVo.loginName }" class="form-control" placeholder='<s:property value="getText('newloginusername')"/>' required autofocus>
+        <input type="password" id="password" name="labUserVo.pwd" value="${labUserVo.pwd}" class="form-control" placeholder='<s:property value="getText('newloginpassword')"/>' required>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"  id="rememberPwdId"><s:text name="login.savepassword" />
+        </label>
+        <div class="row">
+        <div class="col-md-6">
+       	 		<button class="btn btn-lg btn-primary btn-block" name="signIn" value="" type="button" onclick="submitForm();" ><s:text name="newloginloginbtn"></s:text></button>
+        </div>
+  		<div class="col-md-6">
+       			<button class="btn btn-lg btn-primary btn-block" type="reset"><s:text name="newloginresetbtn"></s:text></button>
+  		</div>
+        </div>
+      </form>
+     <%--  <!--   <div class="row" style="padding:;">
+        <div class="col-md-6" style="text-align: right;"> -->
+					<a href="<%=basePath%>langAdmin.action?request_locale=zh_CN" onclick="window.top.location.reload();" >CN</a>    
+      <!--   </div>
+  		<div class="col-md-6" style="text-align: left;"> -->
+					<a href="<%=basePath%>langAdmin.action?request_locale=en_US" onclick="window.top.location.reload();">EN</a>     
+  		<!-- </div>
+        </div> --> --%>
+        <p class="errorinfo" id="errorInfo">${messageInfo}</p>
+    </div> <!-- /container -->
 <!-- 
 <div class="footer">
 	<span>版权所有：<a target="_blank" href="http://www.labsoft.cn">瑞铂软件</a></span>
 	<span>Tel：029-88440668</span>
 </div>
  -->
-</div>
-</div>
-
 <script>
 function getCookie(name) {
    var search = name + "="

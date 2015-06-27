@@ -125,7 +125,7 @@ html {
 														<td>
 															<input type="text" name="labConOutMainVo.receiptno"
 																valType="required,strLength" max="32"
-																strLength-msg="单据号长度不能超过32位" msg="单据号不能为空"
+																strLength-msg='<s:property value="getText('danjunotover32')"/>' msg='<s:property value="getText('danjuidnotem')"/>'
 																value="${labConOutMainVo.receiptno}" />
 															<input type="hidden" id="consumablesIds"
 																value="${consumablesIds}" />
@@ -138,7 +138,7 @@ html {
 														<td>
 															<input type="text" name="labConOutMainVo.outstorer"
 																valType="required,strLength" max="64"
-																strLength-msg="出库人长度不能超过64位" msg="出库人不能为空"
+																strLength-msg='<s:property value="getText('outboundnot64')"/>' msg='<s:property value="getText('outboudnnotemp')"/>'
 																value="${labConOutMainVo.outstorer}" />
 														</td>
 														<td>
@@ -218,7 +218,7 @@ html {
 																	onblur="panduan('${num}','${st.index}');return false;"
 																	name="labConOutMainVo.labConOutDetailVoList[${st.index}].amount"
 																	valType="required,strLength" max="16"
-																	strLength-msg="出库量长度不能超过16位" msg="出库量不能为空"
+																	strLength-msg='<s:property value="getText('oubputlennot16')"/>' msg='<s:property value="getText('outputnoatmeu')"/>'
 																	id="amount${st.index}" value="${amount}" />
 															</td>
 
@@ -226,7 +226,7 @@ html {
 																<input type="text"
 																	name="labConOutMainVo.labConOutDetailVoList[${st.index}].remark"
 																	style="width: 200px;" valType="strLength" max="512"
-																	strLength-msg="备注长度不能超过512位" value="${remark}" />
+																	strLength-msg='<s:property value="getText('remakrnot512')"/>' value="${remark}" />
 															</td>
 															<td class="c">
 

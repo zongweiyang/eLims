@@ -147,7 +147,7 @@
 												<tr>
 												<td class="r" width="150">
 													<label>
-														处理措施：
+														<s:text name="delatwithmethod"/>：
 													</label>
 												</td>
 												<td colspan="3">
@@ -157,7 +157,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														处理结果：
+														<s:text name="delaresult"/>：
 													</label>
 												</td>
 												<td colspan="3">

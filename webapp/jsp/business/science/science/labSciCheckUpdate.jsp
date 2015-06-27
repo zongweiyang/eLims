@@ -326,7 +326,7 @@
 															max="512" strLength-msg="计划完成情况不能超过512位">${labSciScienceVo.isPlan}</textarea>
 													</td>
 													<td class="r" width="150">
-														存在问题和改进措施：
+												<s:text name="existproblesm"/>和改进措施：
 													</td>
 													<td>
 														<textarea rows="2" cols="40"

@@ -132,7 +132,7 @@
 												</td>
 												<td>
 													<s:select headerKey="" headerValue="" list="labOrgList" theme="simple" listKey="id+'|'+name"  value="'${labQuaProficiencyPlanVo.unitOrgId}|${labQuaProficiencyPlanVo.unitOrgName}'" listValue="name" cssStyle="width:273px;" onchange="checkLab(this);"></s:select>
-													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaProficiencyPlanVo.unitOrgId" value="${labQuaProficiencyPlanVo.unitOrgId }"  />
+													<input size="40" type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaProficiencyPlanVo.unitOrgId" value="${labQuaProficiencyPlanVo.unitOrgId }"  />
 													<input size="40" type="hidden"  id="orgName" name="labQuaProficiencyPlanVo.unitOrgName"  value="${labQuaProficiencyPlanVo.unitOrgName }" />
 												</td>
 												<td class="r" width="150">
@@ -309,7 +309,7 @@
 														</td>
 														<td>
 															<input size="40" name="labQuaProficiencyPlanVo.sampRegisterTel"
-																id="sampRegisterTel" type="text"  valType="phone"  phone-msg="电话格式不准确"
+																id="sampRegisterTel" type="text"  valType="phone"  phone-msg='<s:property value="getText('phonefomatnot')"/>'
 																value="${labQuaProficiencyPlanVo.sampRegisterTel}" />
 														</td>
 													</tr>

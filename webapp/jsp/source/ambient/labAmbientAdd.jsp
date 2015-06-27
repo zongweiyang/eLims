@@ -57,7 +57,7 @@
 			  		var upValue=parseFloat($("#upValue").val());
 					var downValue=parseFloat($("#downValue").val());
 					if(downValue>=upValue){	
-						var message='下限值不能大于等于上限值';
+						var message='<s:property value="getText('lowervaluecantuper')"/>';
 						validate.tip(message,$("#upValue"))
 						return;
 					}
@@ -97,14 +97,14 @@
 										<table class="FormtableCon">
 											<tr>
 												<td class="c"><label><s:text name="param.name"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.name" id="name" valType="required" msg="参数名称不能为空" />
+												<td><input type="text" name="labAmbientVo.name" id="name" valType="required" msg='<s:property value="getText('paramnamecannotempty')"/>' />
 										
 												<td class="c"><label><s:text name="upper.value"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.upValue" valType="required,number" msg="请正确输入上限值" min="0" id="upValue" /></td>
+												<td><input type="text" name="labAmbientVo.upValue" valType="required,number" msg='<s:property value="getText('pleaseinputcor')"/>' min="0" id="upValue" /></td>
 											</tr>
 											<tr>
 												<td class="c"><label><s:text name="lower.value"/>：</label></td>
-												<td><input type="text" name="labAmbientVo.downValue" valType="required,number" msg="请正确输入下限值"  min="0" id="downValue" /></td>
+												<td><input type="text" name="labAmbientVo.downValue" valType="required,number" msg='<s:property value="getText('pleaseinputlow')"/>'  min="0" id="downValue" /></td>
 											
 												<td class="c"><label><s:text name="theme.depart"/></label></td>
 												<td>

@@ -191,7 +191,7 @@ html {
 													</td>
 													<td>
 														<input name="labReagentVo.safeDate" valType="strLength"
-															max="11" strLength-msg="有限期长度不能超过11位"
+															max="11" strLength-msg='<s:property value="getText('lennote11asfd')"/>'
 															value="${labReagentVo.safeDate}" id="safeDate" size="40"
 															type="text" disabled="true"/>
 													</td>
@@ -216,7 +216,7 @@ html {
 													<td colspan="">
 														<textarea rows="3" cols="36" name="labReagentVo.remark"
 															valType="strLength" max="128"
-															strLength-msg="备注长度不能超过128位" id="remark" disabled="true">${labReagentVo.remark}</textarea>
+															strLength-msg='<s:property value="getText('remarknot128')"/>' id="remark" disabled="true">${labReagentVo.remark}</textarea>
 													</td>
 													</tr>
 												<tr>

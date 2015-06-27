@@ -187,7 +187,7 @@ html {
 																<td class="c">
 																	<l:a href="#"
 																		uri="science/labScience/preUpdateLabScience.action?labSciScienceVo.id=${id}&messageInfo=6"
-																		onclick="getOne('${id}');" value="发起结项" />
+																		onclick="getOne('${id}');" value="lanchover" />
 																	<a
 																		href="<%=basePath%>science/labScience/showLabScience.action?labSciScienceVo.id=${id}"><s:text name="look.check"/></a>
 																</td>

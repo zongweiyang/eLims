@@ -125,7 +125,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input type="text" name="labReportVo.title" id="title" value="${labReportVo.title}" size="30" valType="required,strLength" max="32" msg="名称不能为空" strLength-msg="长度不能超过32位" />
+												<input type="text" name="labReportVo.title" id="title" value="${labReportVo.title}" size="30" valType="required,strLength" max="32" msg='<s:property value="getText('lab.msg.name')"/>' strLength-msg='<s:property value="getText('lab.strlength.msg')"/>' />
 											</td>
 											<td>
 												<label>
@@ -165,7 +165,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<input type="text" name="labReportVo.busType" id="busType" value="${labReportVo.busType}" size="30"  valType="strLength" max="32"  strLength-msg="长度不能超过32位"/>
+												<input type="text" name="labReportVo.busType" id="busType" value="${labReportVo.busType}" size="30"  valType="strLength" max="32"  strLength-msg='<s:property value="getText('lab.strlength.msg')"/>'/>
 											</td>
 											<td>
 												<label>

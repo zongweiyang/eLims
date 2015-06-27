@@ -41,7 +41,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		};	
 		function CreateOnePage(){
 			LODOP=getLodop(document.getElementById('LODOP'),document.getElementById('LODOP_EM'));  
-			LODOP.PRINT_INIT("打印控件功能演示_Lodop功能_设置预览窗口界面");
+			LODOP.PRINT_INIT('<s:property value="getText('printconrldemo')"/>');
 			LODOP.SET_PRINT_PAGESIZE(1,0,0,"A4");
 			LODOP.SET_SHOW_MODE("HIDE_PAPER_BOARD",1);
 			

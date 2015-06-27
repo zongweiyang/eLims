@@ -90,7 +90,7 @@
 												</td>
 												<td>
 													<s:select headerKey="" headerValue="" list="labOrgVoList" theme="simple" listKey="id+'|'+name" value="'${labQuaProficiencyVo.orgId}|${labQuaProficiencyVo.orgName}'" listValue="name" cssStyle="width:150px;" onchange="checkLab(this);"></s:select>
-													<input size="40" type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaProficiencyVo.orgId" value="${labQuaProficiencyVo.orgId }"  />
+													<input size="40" type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaProficiencyVo.orgId" value="${labQuaProficiencyVo.orgId }"  />
 													<input size="40" type="hidden"  id="orgName" name="labQuaProficiencyVo.orgName"  value="${labQuaProficiencyVo.orgName }" />
 												</td>
 												<td class="r" width="150">

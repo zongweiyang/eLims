@@ -602,6 +602,8 @@ a.zPushBtnDisabled:hover b {cursor: not-allowed;color: #999;font-size:12px;backg
 
 .ti_loginout {background:url(../images/topicon_tuichu_n.png) no-repeat left top;}
 .ti_loginout:hover {background:url(../images/topicon_tuichu_a.png) no-repeat left top;}
+.ti_lang {background:url(../images/lang_admin.png) no-repeat left top;}
+.ti_lang:hover {background:url(../images/lang_admin_a.png) no-repeat left top;}
 
 .FormtableCon_sform {width:100%;font-size:12px;border-collapse:collapse;}
 .FormtableCon_sform th {text-align:center;vertical-align:middle;font-weight:bold;padding:5px;height:24px;line-height:24px;background:#eee}

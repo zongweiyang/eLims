@@ -8,9 +8,12 @@ import javax.persistence.Transient;
 
 import cn.labsoft.labos.base.function.entity.LabFunction;
 import cn.labsoft.labos.framework.common.po.AbstractBasePo;
+import cn.labsoft.labos.i18n.annotation.Translator;
+import cn.labsoft.labos.i18n.annotation.TranslatorType;
 @Entity
 public class LabQuery extends AbstractBasePo {
 	private static final long serialVersionUID = 1L;
+	@Translator( type = TranslatorType.SQL)
 	private String name;//定义sql
 	private String funName;
 	private LabFunction function;

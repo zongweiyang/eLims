@@ -85,6 +85,7 @@
 		<property name="namingStrategy" ref="databaseNamingStrategy" />
 		<property name="hibernateProperties">
 			<props>
+				<!-- <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop> -->
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">false</prop>
 				<prop key="hibernate.format_sql">false</prop>
@@ -130,8 +131,8 @@
 			||(execution(public * cn.labsoft.labos..dao.impl.*DAOImpl.saveOrUpdate*(..)))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="txPointcut" />
 		<aop:advisor advice-ref="theAroundAdvice" pointcut-ref="txxPointcut" />
-
 	</aop:config>
+	
 	<!-- log拦截器类 -->
 	<bean id="exceptionLogger" class="cn.labsoft.labos.framework.common.log.LogThrowingAdvice"></bean>
 	<bean id="theAroundAdvice"

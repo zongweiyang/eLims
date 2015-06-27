@@ -101,7 +101,7 @@ html {
 											</label>
 										</td>
 										<td>
-											<input name="labRoleVo.sort" id="sort" valType="required,strLength" max="11" strLength-msg="序号不能超过11位" type="text" size="20" value="${labRoleVo.sort}" />
+											<input name="labRoleVo.sort" id="sort" valType="required,strLength" max="11" strLength-msg='<s:property value="getText('seqcannotover11')"/>' type="text" size="20" value="${labRoleVo.sort}" />
 										</td>
 										<td>
 											<label>
@@ -109,7 +109,7 @@ html {
 											</label>
 										</td>
 										<td>
-											<input name="labRoleVo.name" id="name" valType="required,strLength" max="32" strLength-msg="角色名称长度不能超过32位" msg='<s:property value="getText('rolenameempty')"/>' type="text" size="20" onblur="checkRolename()" />
+											<input name="labRoleVo.name" id="name" valType="required,strLength" max="32" strLength-msg='<s:property value="getText('rolenameconat32')"/>' msg='<s:property value="getText('rolenameempty')"/>' type="text" size="20" onblur="checkRolename()" />
 										</td>
 										<td>
 											<label>
@@ -128,7 +128,7 @@ html {
 											</label>
 										</td>
 										<td colspan="5">
-											<textarea name="labRoleVo.remark" valType="strLength" max="256" strLength-msg="备注长度不能超过256位" cols="60" rows="3" label="备注"></textarea>
+											<textarea name="labRoleVo.remark" valType="strLength" max="256" strLength-msg='<s:property value="getText('remark.toolong')"/>' cols="60" rows="3" label="备注"></textarea>
 										</td>
 									</tr>
 								</table>

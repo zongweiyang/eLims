@@ -45,7 +45,7 @@ html {
 				}     
 			}  
 			if(m<1){
-				validate.tip("请选择！",$('#functionId'));
+				validate.tip('<s:property value="getText('selected.pls')"/>',$('#functionId'));
 				return false;
 			}else{
 				return true;
@@ -278,8 +278,8 @@ html {
 																<td>
 																	<!--<l:a uri="consumables/labConsumables/preAddLabConsumables.action"
 																		onclick="ajaxVerification('exportLabConsumables.action');return false;"
-																		value="#export#耗材清单" />-->
-																	 <l:export params="labConsumablesVo,pageResult" type="excel" source="${labConsumablesVo.filePath}" target="${funName}-${now}.xls" value="#export#${funName}"/>
+																		value="导出耗材清单" />-->
+																	 <l:export params="labConsumablesVo,pageResult" type="excel" source="${labConsumablesVo.filePath}" target="${funName}-${now}.xls" value="导出${funName}"/>
 																</td>
 																<td>
 																	<l:a uri="consumables/labConsumables/preAddLabConsumables.action"

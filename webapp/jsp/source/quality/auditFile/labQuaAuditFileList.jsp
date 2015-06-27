@@ -84,7 +84,7 @@
 					                      				<table>
 															<tr>
 																<td>
-																	<label>被审<s:text name="msg.depart"/>：</label>
+																	<label><s:text name="auditdeparted"/>：</label>
 																</td>
 																<td>
 																	<s:select list="labOrgVoList" headerKey=""

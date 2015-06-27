@@ -58,7 +58,7 @@
 										<!-- 表单型表格（用于新增/修改页面） 开始 -->
 										<div class="Formtable">
 											<div class="Formtabletitle">
-												<span><s:text name="manageauditlist"/>表</span>
+												<span><s:text name="pingshenplantal"/></span>
 											</div>
 											<table class="FormtableCon">
 												   <tr>
@@ -89,7 +89,7 @@
 													</label>
 												</td>
 												<td>
-													<input valType="required" msg="评审地点不能为空" size="40" name="labQuaManageCheckPlanVo.address" id="address"
+													<input valType="required" msg='<s:property value="getText('auditaddnotem')"/>' size="40" name="labQuaManageCheckPlanVo.address" id="address"
 														type="text" value="${labQuaManageCheckPlanVo.address}"/>
 												</td>
 											    <td class="r" width="150">
@@ -98,7 +98,7 @@
 													</label>
 												</td>
 												<td>
-													<input valType="required" msg="评审主持人不能为空" size="40" name="labQuaManageCheckPlanVo.trackPeople" id="trackPeople" type="text"
+													<input valType="required" msg='<s:property value="getText('auditzhuchinotem')"/>' size="40" name="labQuaManageCheckPlanVo.trackPeople" id="trackPeople" type="text"
 														value="${labQuaManageCheckPlanVo.trackPeople}" />
 												</td>
 												
@@ -110,7 +110,7 @@
 													</label>
 												</td>
 												<td>
-													<input size="40" name="labQuaManageCheckPlanVo.recTime" id="recTime" type="text" valType="required" msg="评审时间不能为空"
+													<input size="40" name="labQuaManageCheckPlanVo.recTime" id="recTime" type="text" valType="required" msg='<s:property value="getText('audittimenotemep')"/>'
 														value="${labQuaManageCheckPlanVo.recTime}" class="Wdate"  onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true})" />
 												</td>
 												<td class="r" width="150">

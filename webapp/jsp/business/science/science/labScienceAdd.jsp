@@ -280,7 +280,7 @@ html {
 													<input size="40" type="text"
 														name="labSciScienceVo.masterName" maxlength="16"
 														value="${labSciScienceVo.masterName}" id="masterName"
-														readonly="true" valType="required" msg="申请人不能为空" />
+														readonly="true" valType="required" msg='<s:property value="getText('appnamenotempty')"/>' />
 													<input type="hidden" name="labSciScienceVo.masterId"
 														maxlength="16" value="${labSciScienceVo.masterId}"
 														id="masterId" />

@@ -91,7 +91,7 @@
 												<td>
 													${labQuaProficiencyVo.orgName }
 													<input type="hidden"  id="orgName" name="labQuaProficiencyVo.orgName"  value="${labQuaProficiencyVo.orgName }" />
-													<input type="hidden"  id="orgId" valType="required" msg="请选择单位" name="labQuaProficiencyVo.orgId" value="${labQuaProficiencyVo.orgId }"  />
+													<input type="hidden"  id="orgId" valType="required" msg='<s:property value="getText('slecltdepart')"/>' name="labQuaProficiencyVo.orgId" value="${labQuaProficiencyVo.orgId }"  />
 													<input type="hidden"  id="proficiencyPlanId" name="labQuaProficiencyVo.proficiencyPlanId"  value="${labQuaProficiencyVo.proficiencyPlanId }" />
 													<input type="hidden"  id="proficiencyPlanName" name="labQuaProficiencyVo.proficiencyPlanName" value="${labQuaProficiencyVo.proficiencyPlanName }"  />
 												</td>

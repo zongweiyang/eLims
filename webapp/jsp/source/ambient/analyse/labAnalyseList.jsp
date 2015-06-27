@@ -37,7 +37,7 @@
 		  		var startTime=$("#startTime").val();
 		  		var endTime=$("#endTime").val();
 		  		if(endTime<startTime){
-		  			validate.tip('结束时间不能小于起始时间',$("#endTime"))
+		  			validate.tip('<s:property value="getText('endtimecanstart')"/>',$("#endTime"))
 					return;
 		  		}
 		  	}

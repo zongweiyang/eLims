@@ -156,7 +156,7 @@ html {
 													</label>
 												</td>
 												<td style="border: 0">
-													<textarea cols="50" rows="4" valType="strLength"  max="512"  strLength-msg="备注长度不能超过512位" name="labDocVo.remark">${labDocVo.remark }</textarea>
+													<textarea cols="50" rows="4" valType="strLength"  max="512"  strLength-msg='<s:property value="getText('remakrnot512')"/>' name="labDocVo.remark">${labDocVo.remark }</textarea>
 												</td>
 											</tr>
 										</table>

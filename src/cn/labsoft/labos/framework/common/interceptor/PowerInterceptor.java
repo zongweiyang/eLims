@@ -47,7 +47,7 @@ public class PowerInterceptor extends BaseInterceptor {
 		}
 		String uri = (nameSpace + invocation.getProxy().getActionName() + ".action").trim();
 		String URI = uri.toUpperCase();
-		boolean specialURI = (URI != null && uri.length() > 0 && (URI.startsWith("/COREEXTEND/EXTEND") || URI.startsWith("/PORTLETS") || URI.startsWith("/MESSAGE") || URI.contains("LABUSER4CENTER")));
+		boolean specialURI = (URI != null && uri.length() > 0 && ( (URI.startsWith("/LANG")) || URI.startsWith("/COREEXTEND/EXTEND") || URI.startsWith("/PORTLETS") || URI.startsWith("/MESSAGE") || URI.contains("LABUSER4CENTER")));
 		if (specialURI || labPowerService.hasPower(uri)) {
 			return invocation.invoke();
 		} else {

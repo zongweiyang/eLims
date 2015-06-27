@@ -25,7 +25,7 @@ html {
 				var msg=true;
 				$('input[id*="num"]').each(function(){
 					if($(this).val().length==0){
-						validate.tip("数量不能为空！",$(this));
+						validate.tip('<s:property value="getText('numbernotempy')"/>',$(this));
 						msg=false;
 					}
 				});
@@ -55,7 +55,7 @@ html {
 				  //  var concentrationx = document.getElementById('concentration'+i).value;
 					
 					if (!strReg.test(num)) {
-					    validate.tip("请输入正确格式的的数据！<s:text name="ifed"/>：20",$('#functionId'));
+					    validate.tip('<s:property value="getText('inputcorddata')"/>',$('#functionId'));
 						$("#num"+i).focus();
 						return false;
 					}
@@ -98,7 +98,7 @@ html {
 			function checkTotal(obj,i){
 				if($(obj).val().length>0){
 					if(BASEisNotFloat($(obj).val())) {
-						validate.tip("请输入数字",$('#functionId'));
+						validate.tip('<s:property value="getText('theme.input.number')"/>',$('#functionId'));
 						$(obj).val("0");
 					}
 				}
@@ -180,7 +180,7 @@ html {
 														<td>
 															<input type="text" name="labConPurMainVo.receiptno"
 																valType="required,strLength" max="128"
-																strLength-msg="单据号长度不能超过128位" msg="单据号不能为空"
+																strLength-msg='<s:property value="getText('danju128')"/>' msg='<s:property value="getText('danjuidnotem')"/>'
 																value="${labConPurMainVo.receiptno}" />
 														</td>
 														<td>
@@ -191,7 +191,7 @@ html {
 														<td>
 															<input type="text" name="labConPurMainVo.applicant"
 																valType="required,strLength" max="32"
-																strLength-msg="申请人长度不能超过32位" msg="申请人不能为空"
+																strLength-msg='<s:property value="getText('appname32')"/>' msg='<s:property value="getText('appnamenotempty')"/>'
 																value="${labConPurMainVo.applicant}" />
 														</td>
 														<td>
@@ -202,7 +202,7 @@ html {
 														<td>
 															<input name="labConPurMainVo.createTime"
 																valType="required,strLength" max="64"
-																strLength-msg="申请时间长度不能超过64位" msg="申请时间不能为空"
+																strLength-msg='<s:property value="getText('apptimenot64')"/>' msg='<s:property value="getText('apptimenotrm')"/>'
 																value="${labConPurMainVo.createTime}" id="name"
 																class="Wdate" size="30"
 																onfocus="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true});" />
@@ -217,7 +217,7 @@ html {
 														<td rowspan="3" colspan="3">
 															<textarea name="labConPurMainVo.remark"
 																valType="strLength" max="512"
-																strLength-msg="备注长度不能超过512位"
+																strLength-msg='<s:property value="getText('remakrnot512')"/>'
 																value="${labConPurMainVo.remark}" size="20" rows="2"
 																cols="60"> </textarea>
 														</td>
@@ -283,14 +283,14 @@ html {
 															</td>
 															<td class="c">
 																<input type="text" valType="strLength" max="32"
-																	strLength-msg="采购数量长度不能超过16位"
+																	strLength-msg='<s:property value="getText('bugumberlen16')"/>'
 																	name="labConPurMainVo.labConPurDetailVoList[${st.index }].num"
 																	onblur="checkTotal(this,'${st.index+1}');"
 																	id="num${st.index }" } />
 															</td>
 															<td class="c">
 																<input type="text" valType="strLength" max="512"
-																	strLength-msg="备注长度不能超过32位"
+																	strLength-msg='<s:property value="getText('remmakrnot32')"/>'
 																	name="labConPurMainVo.labConPurDetailVoList[${st.index }].remark" />
 															</td>
 															<td class="c">

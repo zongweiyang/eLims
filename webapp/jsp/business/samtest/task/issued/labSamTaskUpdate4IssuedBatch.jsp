@@ -86,7 +86,7 @@ html {
 							$('form').submit();
 						}
 		  	 		}else{
-		  	 			validate.tip('请至少分配一个项目！');
+		  	 			validate.tip('<s:property value="getText('allpyoneitem')"/>');
 		  	 			return false;
 		  	 		}
 							

@@ -145,7 +145,7 @@
 		</body>
 		<script language="javascript" type="text/javascript">
 			function required() {
-				this.a1 = new Array("value", "请填写参数值!", new Function("varName"," return this[varName];"));
+				this.a1 = new Array("value", '<s:property value="getText('inputpavlaue')"/>', new Function("varName"," return this[varName];"));
 			}
 			function maxlength() {
 		

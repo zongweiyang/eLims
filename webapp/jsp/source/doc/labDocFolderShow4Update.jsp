@@ -102,7 +102,7 @@ html {
 													</label>
 												</td>
 												<td colspan="2">
-													<textarea rows="4" cols="55" name="labDocVo.remark" valType="strLength"  max="512"  strLength-msg="备注长度不能超过512位">${labDocVo.remark}</textarea>
+													<textarea rows="4" cols="55" name="labDocVo.remark" valType="strLength"  max="512"  strLength-msg='<s:property value="getText('remakrnot512')"/>'>${labDocVo.remark}</textarea>
 												</td>
 											</tr>
 											<tr>

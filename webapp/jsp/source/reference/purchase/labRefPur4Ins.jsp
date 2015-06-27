@@ -39,7 +39,7 @@ html {
 				  //  var concentrationx = document.getElementById('concentration'+i).value;
 					
 					if (!strReg.test(num)) {
-					    validate.tip("请输入正确格式的的数据！<s:text name="ifed"/>：20",$('#functionId'));
+					    validate.tip('<s:property value="getText('inputcorddata')"/>',$('#functionId'));
 						$("#num"+i).focus();
 						return false;
 					}
@@ -81,7 +81,7 @@ html {
 			function checkTotal(obj,i){
 				if($(obj).val().length>0){
 					if(BASEisNotFloat($(obj).val())) {
-						validate.tip("请输入数字",$('#functionId'));
+						validate.tip('<s:property value="getText('theme.input.number')"/>',$('#functionId'));
 						$(obj).val("0");
 					}
 				}

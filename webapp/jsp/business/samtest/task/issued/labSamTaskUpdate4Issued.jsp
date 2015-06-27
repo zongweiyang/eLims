@@ -86,7 +86,7 @@ html {
 							$('form').submit();
 						}
 		  	 		}else{
-		  	 			validate.tip('请选择检测科室！');
+		  	 			validate.tip('<s:property value="getText('selechkroom')"/>');
 		  	 			return false;
 		  	 		}
 				}

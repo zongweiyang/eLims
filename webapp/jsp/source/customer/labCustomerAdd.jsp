@@ -189,7 +189,7 @@ html {
 											<td>
 												<input type="text" name="labCustomerVo.email" id="email"
 													size="40" valType="required,strLength,email" max="30"
-													strLength-msg="客户邮箱长度不能超过30位" msg="客户邮箱不能为空" email-msg="邮箱不准确"/>
+													strLength-msg="客户邮箱长度不能超过30位" msg="客户邮箱不能为空" email-msg='<s:property value="getText('emialnotco')"/>'/>
 											</td>
 										</tr>
 										<tr>
@@ -201,7 +201,7 @@ html {
 											<td>
 												<input type="text" name="labCustomerVo.fox" id="fox"
 													size="40" valType="strLength,fax" max="30"
-													strLength-msg="客户传真长度不能超过30位" fax-msg="传真不准确"/>
+													strLength-msg="客户传真长度不能超过30位" fax-msg='<s:property value="getText('faxnotcor')"/>'/>
 											</td>
 											<td class="r">
 												<label>
@@ -211,7 +211,7 @@ html {
 											<td>
 												<input type="text" name="labCustomerVo.zipCode" id="zipCode"
 													size="40" valType="strLength,zipCode" max="30"
-													strLength-msg="客户邮编长度不能超过30位"  zipCode-msg="邮编不准确"/>
+													strLength-msg="客户邮编长度不能超过30位"  zipCode-msg='<s:property value="getText('postcodenotco')"/>'/>
 											</td>
 										</tr>
 										<tr>
@@ -223,7 +223,7 @@ html {
 											<td>
 												<input type="text" name="labCustomerVo.firPerson"
 													id="firPerson" size="40" valType="required,strLength"
-													max="30" strLength-msg="联系人长度不能超过30位" msg="联系人不能为空" />
+													max="30" strLength-msg="联系人长度不能超过30位" msg='<s:property value="getText('msgpeoplenotempty')"/>' />
 											</td>
 											<td class="r">
 												<label>

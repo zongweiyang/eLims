@@ -140,17 +140,6 @@
 				<tr>
 					<td class="left">
 						<%-- <img src="<%=basePath%>admin/adminlogo.png"  /> --%>
-						<div id="locales">
-							<ul >
-								<li >
-								 <a href="<%=basePath%>langAdmin.action?request_locale=zh_CN" onclick="window.top.location.reload();" style="font-family:微软雅黑;"> 简体中文</a>    
-								</li>
-								<li> 
-									 <a href="<%=basePath%>langAdmin.action?request_locale=en_US" onclick="window.top.location.reload();" style="font-weight:bold;" class="last"> English</a>     
-								</li>
-							</ul>
-							    <div class="clear"></div>
-						</div>
 					</td>
 					<td class="right">
 						<div class="headertool">

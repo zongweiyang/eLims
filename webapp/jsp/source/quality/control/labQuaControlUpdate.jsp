@@ -142,7 +142,7 @@
 												</td>
 												<td class="r" width="150">
 													<label>
-														实验室：
+														<s:text name="labroom"/>：
 													</label>
 												</td>
 												<td>

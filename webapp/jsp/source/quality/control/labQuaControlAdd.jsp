@@ -154,7 +154,7 @@
 											<tr>
 												<td class="r" width="150">
 													<label>
-														地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区：
+														<s:text name="areamap"/>：
 													</label>
 												</td>
 												<td>

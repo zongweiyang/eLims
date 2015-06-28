@@ -100,7 +100,7 @@
 																		name="labQuaControlVo.unitOrgSearch" id="unitOrgId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																 <td><label>实验室：</label></td>
+																 <td><label><s:text name="labroom"/>：</label></td>
 																<td>
 																	<s:select list="labOrgVoList" headerKey="" headerValue=""
 																		name="labQuaControlVo.labOrgSearch" id="labOrgId" theme="simple"
@@ -110,7 +110,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaControlVo.anaNoSearch" value="${labQuaControlVo.anaNoSearch}" />
 					                      						</td>
-																<td><label>仪器型号：</label></td>
+																<td><label><s:text name="app.style"></s:text>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaControlVo.appCodeSearch" value="${labQuaControlVo.appCodeSearch}" />
 					                      						</td>

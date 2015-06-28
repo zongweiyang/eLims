@@ -181,7 +181,7 @@
 											<tr>
 												<td class="r" width="150">
 												       <label>
-													   意见处理：
+													   <s:text name="yijianchuli"></s:text>：
 														</label>
 												</td>
 												<td colspan="3">

@@ -100,7 +100,7 @@
 																		name="labQuaCusVisitVo.unitOrgIdSearch" id="unitOrgId" theme="simple"
 																		listKey="id" listValue="name"></s:select>
 																</td>
-																 <td><label>实验室：</label></td>
+																 <td><label><s:text name="labroom"/>：</label></td>
 																<td>
 																	<s:select list="labOrgList" headerKey="" headerValue="" cssStyle="width:150px;"
 																		name="labQuaCusVisitVo.labOrgIdSearch" id="labOrgId" theme="simple"
@@ -110,7 +110,7 @@
 					                      						<td>
 					                      							<input type="text" name="labQuaCusVisitVo.cusUnitSearch" value="${labQuaCusVisitVo.cusUnitSearch}" />
 					                      						 </td>
-																<td><label>姓  名：</label></td>
+																<td><label><s:text name="nike.name"></s:text>：</label></td>
 					                      						<td>
 					                      							<input type="text" name="labQuaCusVisitVo.nameSearch" value="${labQuaCusVisitVo.nameSearch}" />
 					                      						</td>
@@ -170,7 +170,7 @@
 													<s:text name="custunit"/>
 												</th>
 												<th property="name">
-													姓  名
+													<s:text name="nike.name"></s:text>
 												</th>
 												<th property="phone">
 													<s:text name="custtel"/>

@@ -92,7 +92,7 @@ html {
 							optionStr+='<option value="'+datas[i].id+'">'+datas[i].name+'</option>';
 				  		}
 				  		if(optionStr==''){
-				  			optionStr+='<option value="">-请选择-</option>';
+				  			optionStr+='<option value="">'+'<s:property value="getText('selected.pls')"/>'+'</option>';
 				  		}
 				   	 	$('#method'+index).append(optionStr);
 				   	 },
@@ -116,7 +116,7 @@ html {
 							optionStr+='<option value="'+datas[i].id+'">'+datas[i].name+'</option>';
 				  		}
 				  		if(optionStr==''){
-				  			optionStr+='<option value="">-请选择-</option>';
+				  			optionStr+='<option value="">'+'<s:property value="getText('selected.pls')"/>'+'</option>';
 				  		}
 				   	 	$('#method'+index).append(optionStr);
 				   	 	onchangex(obj,index);

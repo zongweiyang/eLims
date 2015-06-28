@@ -1,4 +1,6 @@
 <%@ page language="java" import="java.util.*,cn.labsoft.labos.utils.tree.*" pageEncoding="UTF-8"%>
+
+<%@ taglib prefix="s" uri="/WEB-INF/tld/struts/struts-tags.tld"%>
 <%@page isELIgnored="false" %>
 <%
 String path = request.getContextPath();

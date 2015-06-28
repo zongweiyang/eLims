@@ -12,7 +12,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
     <link  href="<%=basePath%>style/global.css" media="all" rel="stylesheet" type="text/css" />
-    <link href="<%=basePath%>theme/${themeType}/skin/default/css/common.css" media="all" rel="stylesheet" type="text/css" id="theme"/>
+    <link href="<%=basePath%>css/common.css" media="all" rel="stylesheet" type="text/css" id="theme"/>
 </head>
 
 <body class="middleframebody">

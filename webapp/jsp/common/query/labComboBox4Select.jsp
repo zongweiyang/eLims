@@ -23,7 +23,7 @@
 						value+=$(this).val();
 						value+=',';
 					}); 
-					html+='<option value="">---请选择---</option>';
+					html+='<option value="">'+'<s:property value="getText('selected.pls')"/>'+'</option>';
 					if(value!=''&&value.length>2){
 						for(var i=0;i<value.split(',').length;i=i+2){
 							if(value.split(',')[i]!=''&&value.split(',')[i]!='undefined'){

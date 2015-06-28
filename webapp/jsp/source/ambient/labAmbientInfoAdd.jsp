@@ -100,7 +100,7 @@
 											<tr>
 												<td><label><s:text name="param.name"/>：</label></td>
 												<td>
-													<s:select list="#request.listLabAmbientVo" cssStyle="width:130px" onchange="check(this)"  headerValue="------请选择------" headerKey="0"   theme="simple" listValue="name" listKey="id+'|'+unit" ></s:select>
+													<s:select list="#request.listLabAmbientVo" cssStyle="width:130px" onchange="check(this)"  headerValue="" headerKey="0"   theme="simple" listValue="name" listKey="id+'|'+unit" ></s:select>
 												</td>
 											
 												<td><label><s:text name="param.unit"/>：</label></td>

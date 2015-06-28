@@ -213,7 +213,7 @@ html {
 											</td>
 											<td>
 												<s:select list="#request.listLabFormula" headerKey="0"
-													headerValue="---请选择公式---" theme="simple" listValue="name"
+													headerValue="" theme="simple" listValue="name"
 													listKey="id+'|'+editor" cssStyle="width:120px"
 													value="'${labFormulaApplyVo.labFormulaId}|${labFormulaApplyVo.labFormulaEditor}'"
 													onchange="checkName(this)"></s:select>

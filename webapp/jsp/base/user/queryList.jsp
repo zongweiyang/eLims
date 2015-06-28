@@ -8,6 +8,7 @@
 		<meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
 		<script language="JavaScript">
 			function submitvalue(actionstr){
+				actionstr = '<%=basePath%>' + actionstr;
 		      	$('form').attr('action',actionstr);
 				$('form').submit();
 		  	}

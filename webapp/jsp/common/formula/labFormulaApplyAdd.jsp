@@ -172,9 +172,9 @@
 										</div>
 										<table class="FormtableCon">
 											<tr>
-												<td><label>v公式内容：</label></td>
+												<td><label><s:text name="formula.content"></s:text>：</label></td>
 												<td>
-													<s:select list="#request.listLabFormula" headerKey="0" headerValue="---请选择公式---" theme="simple" listValue="name" listKey="id+'|'+editor" cssStyle="width:120px" onchange="checkName(this)"></s:select><font color="red">&nbsp;&nbsp;*</font>
+													<s:select list="#request.listLabFormula" headerKey="0" headerValue="" theme="simple" listValue="name" listKey="id+'|'+editor" cssStyle="width:120px" onchange="checkName(this)"></s:select><font color="red">&nbsp;&nbsp;*</font>
 													<span><a href="#" onclick="showFormula()"><s:text name="show.formula"/></a></span>
 													<input type="hidden" name="labFormulaApplyVo.labFormulaId" id="labFormulaId" valType="required"/>
 												</td>

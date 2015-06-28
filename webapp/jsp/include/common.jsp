@@ -60,7 +60,7 @@ function backList() {
 }
 
 function nextUrl(url) {
-	window.location.href= basePath+url;
+	window.location.href= url;
 }
 
 function down(filename,fileurl) {

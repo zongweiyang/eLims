@@ -125,7 +125,7 @@ html {
 																<td>
 																	<s:select theme="simple" list="#request.funStepList"
 																		listKey="stepId" listValue="stepName" headerKey=""
-																		headerValue='<s:property value="getText('alldata')"/>' name="labSamReportVo.status"
+																		headerValue='' name="labSamReportVo.status"
 																		id="status"
 																		onchange="submitvalue('samreport/labSamReport/listLabSamReport.action');">
 																	</s:select>

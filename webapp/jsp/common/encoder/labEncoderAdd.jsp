@@ -359,7 +359,7 @@ html {
 												</label>
 											</td>
 											<td>
-												<s:select list="#request.funcList" listKey="id" listValue="name" name="labEncoderVo.busId" id="busId" headerKey="" headerValue="请选择业务..." theme="simple" onchange="ajax4CheckBusId(this);"></s:select>
+												<s:select list="#request.funcList" listKey="id" listValue="name" name="labEncoderVo.busId" id="busId" headerKey="" headerValue="" theme="simple" onchange="ajax4CheckBusId(this);"></s:select>
 												<font color="red">*</font>
 											</td>
 											<td>

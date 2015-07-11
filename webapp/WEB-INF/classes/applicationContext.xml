@@ -89,6 +89,7 @@
 				<prop key="hibernate.hbm2ddl.auto">update</prop>
 				<prop key="hibernate.show_sql">false</prop>
 				<prop key="hibernate.format_sql">false</prop>
+			<!-- 	<prop key="hibernate.default_schema">dbo</prop> -->
 			</props>
 		</property>
 		<property name="entityInterceptor">

@@ -1,0 +1,3 @@
+(10:56) guoxiong.yuan: http://mq02-dev.datayes.com:15672/#/queues
+(10:56) guoxiong.yuan: http://news-mq01.stg.datayes.com:15672/
+(10:56) guoxiong.yuan: http://news-mq01.datayes.com:15672/#/exchanges

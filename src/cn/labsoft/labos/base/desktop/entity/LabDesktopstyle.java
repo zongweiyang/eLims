@@ -12,6 +12,7 @@ import javax.persistence.Transient;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.hibernate.annotations.GenericGenerator;
 
+import cn.labsoft.labos.framework.common.po.AbstractBasePo;
 import cn.labsoft.labos.i18n.annotation.Translator;
 
 /**
@@ -23,18 +24,18 @@ import cn.labsoft.labos.i18n.annotation.Translator;
 @SuppressWarnings("serial")
 @Entity
 @Table(name="lab_desktop_style")
-public class LabDesktopstyle{
+public class LabDesktopstyle extends AbstractBasePo{
 
 	// Fields
 
-	private String id;
+//	private String id;
 	private String code;
 	private String name;
-	@Translator
+	//@Translator
 	private String descc;
 	private String picurl;
 	private String isdefault;
-	private String isDel;
+//	private String isDel;
 
 	// Constructors
 
@@ -55,7 +56,7 @@ public class LabDesktopstyle{
 
 	// Property accessors
 
-	@Id
+/*	@Id
 	@Column(length = 32, nullable = true)
 	@GeneratedValue(generator = "uuid")
 	@GenericGenerator(name = "uuid", strategy = "uuid")
@@ -65,7 +66,7 @@ public class LabDesktopstyle{
 
 	public void setId(String id) {
 		this.id = id;
-	}
+	}*/
 
 	public String getCode() {
 		return this.code;
@@ -107,7 +108,7 @@ public class LabDesktopstyle{
 		this.isdefault = isdefault;
 	}
 
-	
+	/*
 	public String getIsDel() {
 		return isDel;
 	}
@@ -115,7 +116,7 @@ public class LabDesktopstyle{
 	public void setIsDel(String isDel) {
 		this.isDel = isDel;
 	}
-
+*/
 	@Transient
 	@Override
 	public String toString() {
@@ -129,16 +130,16 @@ public class LabDesktopstyle{
 		String str = builder.toString();
 		return str;
 	}
-//	@Transient
-//	@Override
-//	public String getModelName() {
-//		// TODO Auto-generated method stub
-//		return "系统管理";
-//	}
-//	@Transient
-//	@Override
-//	public String getTableName() {
-//		// TODO Auto-generated method stub
-//		return "用户桌面";
-//	}
+	@Transient
+	@Override
+	public String getModelName() {
+		// TODO Auto-generated method stub
+		return "系统管理";
+	}
+	@Transient
+	@Override
+	public String getTableName() {
+		// TODO Auto-generated method stub
+		return "用户桌面";
+	}
 }

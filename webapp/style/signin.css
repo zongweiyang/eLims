@@ -15,10 +15,11 @@ body {
 .form-signin-heading{
 	/* text-align: center; */
 	color: grey;
-	max-width: 350px;
-  	padding:80px 20px 0px 0px;
+	max-width: 550px;
+  	padding:80px 20px 0px 55px;
   	margin: 0 auto;
   	font-family: Microsoft YaHei,SimHei,SimSun;
+  	font-size:20px;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {

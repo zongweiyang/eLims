@@ -43,6 +43,22 @@
 		df.action = actionstr;
 		df.submit();
 	}
+	function deleteMsg(){
+		if(check('labMsgMainVo.ids')){
+			if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){
+				deleteMessage('deleteLabMsg4sender.action');
+				}
+			return false;
+		}
+	}
+	function deleteTheMsg(){
+		if(check('labMsgMainVo.ids')){
+			if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){
+				deleteMessage('realDeleteLabMsgSend.action');
+			}
+			return false;
+		}
+	}
 </script>
 
 	<style>
@@ -122,10 +138,10 @@ html {
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																	<l:a uri="message/messageMain/deleteLabMsg4sender" onclick="javascript:if(check('labMsgMainVo.ids')){if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){deleteMessage('deleteLabMsg4sender.action');}return false;}" value="lab.code.del" />
+																	<l:a uri="message/messageMain/deleteLabMsg4sender" onclick="deleteMsg();" value="lab.code.del" />
 																</td>
 																<td>
-																	<l:a uri="message/messageMain/delete" onclick="javascript:if(check('labMsgMainVo.ids')){if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){deleteMessage('realDeleteLabMsgSend.action');}return false;}" value="msg.forever.del" />
+																	<l:a uri="message/messageMain/delete" onclick="deleteTheMsg();" value="msg.forever.del" />
 																</td>
 																<td>
 																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick=window.location.reload();> <img height="20" width="20" src="<%=basePath%>img/shuaxin.gif"><b><s:text name="msg.refresh"/></b> </a>

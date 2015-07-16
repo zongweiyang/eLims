@@ -14,6 +14,25 @@
 	$(function(){
 		$('#left',parent.document).find("iframe").attr('src','<%=basePath%>coreextend/extend/leftframe.action');
 	});
+	function checkToDelete(){
+		
+		if(check('labMsgMainVo.ids'))
+		{
+			if(confirm('<s:property value="getText('lab.confirm.delete')"/>'))
+			{
+				deleteMessage('deleteLabMsg.action');
+			}
+			return false;
+		}
+	}
+	function checkTodeleteAll(){
+		if(check('labMsgMainVo.ids')){
+			if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){
+				deleteMessage('realDeleteLabMsgReceive.action');
+			}
+			return false;
+		}
+	}
 	function check(name){
 		var el = document.getElementsByTagName('input');     
 		var len = el.length; 
@@ -181,10 +200,10 @@ html {
 																	<l:a uri="message/messageMain/update" onclick="submitvalue('showLabMsgAll.action?labMsgMainVo.flag=0');" value="msg.mark.unread" />
 																</td>
 																<td>
-																	<l:a uri="message/messageMain/delete" onclick="javascript:if(check('labMsgMainVo.ids')){if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){deleteMessage('deleteLabMsg.action');}return false;}" value="lab.code.del" />
+																	<l:a uri="message/messageMain/delete" onclick="checkToDelete();" value="lab.code.del" />
 																</td>
 																<td>
-																	<l:a uri="message/messageMain/delete" onclick="javascript:if(check('labMsgMainVo.ids')){if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){deleteMessage('realDeleteLabMsgReceive.action');}return false;}" value="msg.forever.del" />
+																	<l:a uri="message/messageMain/delete" onclick="checkToDeleteALl();" value="msg.forever.del" />
 																</td>
 																<td>
 																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick=window.location.reload();returnfalse;><img height="20" width="20" src="<%=basePath%>img/shuaxin.gif" /><b><s:text name="msg.refresh"/></b> </a>

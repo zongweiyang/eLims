@@ -1,4 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/WEB-INF/tld/struts/struts-tags.tld"%>
 <html xmlns:v="urn:schemas-microsoft-com:vml"
 xmlns:o="urn:schemas-microsoft-com:office:office">
 <%
@@ -1113,7 +1114,7 @@ Node.prototype.setSelect=function()
 	
 	if($('text'+this.id)==null)
 	{
-		$('node_text_div'+this.id).innerHTML="<input  type='text' value='"+this.text+"' size=12 style='font-size:12px;height:12px' name='text"+this.id+"' class='node_text_input'  />";
+		$('node_text_div'+this.id).innerHTML="<input  type='text' value='"+this.text+"' size=12 style='font-size:12px;height:12px' id='text"+this.id+"' class='node_text_input'  />";
 		//alert();
 		$('text'+this.id).onblur=this.noSelect.bind(this);
 		$('text'+this.id).onchange=this.ontextdatachange.bind(this);
@@ -1465,7 +1466,7 @@ Link.prototype=
 		var div=document.createElement("DIV");
 		div.className="link_text_div";
         div.innerHTML='<div style="position:absolute;width:100%;height:20px;background:#fff;filter:alpha(opacity=0)"></div>';
-        div.innerHTML+="<input type='text' name='link_text"+this.id+"' size=10 class='link_text_off'  />";
+        div.innerHTML+="<input type='text' id='link_text"+this.id+"' size=10 class='link_text_off'  />";
         if(this.points.length==2)
 		{
 			var s=this.points[0];
@@ -2499,6 +2500,7 @@ ComponentMan.prototype= {
             var top = parseInt(node.getAttribute("TOP"));
             var type = node.getAttribute("TYPE");
             var n = Factory.createComponent(left, top, type, id);
+            debugger
             n.attObj.initattfromxml(node);
             if(type==NodeType.Node)
             {

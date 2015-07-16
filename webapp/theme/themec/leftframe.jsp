@@ -165,7 +165,7 @@
 	         <li>
 	         <a  href="<%=basePath %>message/messageMain/preAddLabMsg.action" target="workarea"><s:text name="theme.write.msg"></s:text></a>
 	         </li>
-	            <li><a href="<%=basePath %>message/messageMain/listLabMsg.action" target="workarea">
+	            <li><a href="<%=basePath %>message/messageMain/listLabMsg4Recive.action" target="workarea">
 	                     <s:text name="theme.receive.box"></s:text>(<span id="unreadmessage"><%=session.getAttribute("unreadcount")%></span>)</a>
 	            </li>
 	            <li><a href="<%=basePath%>message/messageMain/listLabMsg4CaoGao.action" target="workarea">

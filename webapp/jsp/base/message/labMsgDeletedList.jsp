@@ -44,6 +44,21 @@
 		df.action = actionstr;
 		df.submit();
 	}
+	function confirmToRecover(){
+		if(check('labMsgDetailVo.ids')){
+			if(confirm('<s:property value="getText('confirmtocover')"/>')){
+				deleteMessage('updateLabMsg2Send.action');
+				}
+			return false;
+		}
+	}
+	function confirmDeleted(){
+		
+		if(check('labMsgDetailVo.ids')){
+			if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){
+				deleteMessage('deleteLabMsg4Real.action');}return false;}
+	}
+	
 </script>
 
 
@@ -127,10 +142,10 @@ html {
 														<table cellspacing="0" cellpadding="0" border="0">
 															<tr>
 																<td>
-																	<l:a uri="message/messageMain/update" onclick="javascript:if(check('labMsgDetailVo.ids')){if(confirm('确定要恢复吗?')){deleteMessage('updateLabMsg2Send.action');}return false;}" value="msg.back.receivebox" />
+																	<l:a uri="message/messageMain/update" onclick="confirmToRecover();" value="msg.back.receivebox" />
 																</td>
 																<td>
-																	<l:a uri="message/messageMain/delete" onclick="javascript:if(check('labMsgDetailVo.ids')){if(confirm('<s:property value="getText('lab.confirm.delete')"/>')){deleteMessage('deleteLabMsg4Real.action');}return false;}" value="msg.forever.del" />
+																	<l:a uri="message/messageMain/delete" onclick="confirmDeleted();" value="msg.forever.del" />
 																</td>
 																<td>
 																	<a id="BtnPreview" class="zPushBtn" href="javascript:;" onclick=window.location.reload();returnfalse;> <img height="20" width="20" src="<%=basePath%>img/shuaxin.gif" /><b><s:text name="msg.refresh"></s:text></b> </a>

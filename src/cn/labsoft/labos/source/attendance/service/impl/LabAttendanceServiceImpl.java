@@ -455,6 +455,7 @@ public class LabAttendanceServiceImpl extends BaseService implements ILabAttenda
 		int count = 0;
 		LabAttendConfig cfg = labAttendConfigDAO.getLabAttendConfig4Month(month);
 		int totleDay = 0;
+		if(cfg==null)return 0;
 		if (DateUtils.getCurrDateStr().contains(month)) {
 			String standTime = DateUtils.getCurrDateStr() + " " + cfg.getStartTime() + ":00";
 			if (DateUtils.getIntevalMinutes(standTime, DateUtils.getCurrDateTimeStr()) > 0) {
@@ -490,7 +491,7 @@ public class LabAttendanceServiceImpl extends BaseService implements ILabAttenda
 			int monthx = Integer.parseInt(day.substring(5, 7));
 			int dayx = Integer.parseInt(day.substring(8, 10));
 			int num = DateUtils.getDayOfWeek(yearx, monthx, dayx);
-			if (cfg.getWorkDay().contains("" + num)) {
+			if (cfg!=null && cfg.getWorkDay().contains("" + num)) {
 				return true;
 			} else {
 				return false;

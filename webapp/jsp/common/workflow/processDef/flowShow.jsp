@@ -94,8 +94,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </script>
 <div id="toolbardiv"  style="width:0px;float:left;height:100%;background-color:#efeeee">
 	<div>
-		<input  id="tools" name="tools" nodetype='move' type="hidden" title='<s:property value="getText('moved')"/>' value="" /><br />
-	    <input id="tools" name="tools" nodetype='Link' type="hidden" title='<s:property value="getText('fun.transfer')"/>' /><br />
+		<input  id="tools" name="tools" nodetype='move' type="hidden" title='' value="" /><br />
+	    <input id="tools" name="tools" nodetype='Link' type="hidden" title='' /><br />
 		<input id="tools" name="tools" nodetype='Node' type="hidden" title="实例" /><br />
 	</div>
 </div>

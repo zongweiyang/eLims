@@ -37,19 +37,20 @@ function StatusMsg(mString){
 function Load(){
   //以下属性必须设置，实始化iWebOffice
   //WebUrl:系统服务器路径，与服务器文件交互操作，如保存、打开文档，重要文件
+  debugger
   webform.WebOffice.WebUrl="<%=mServerUrl%>";    //WebUrl:系统服务器路径，与服务器文件交互操作，如保存、打开文档，重要文件
   webform.WebOffice.ExtParam="file";             //saveType:打开以文件形式存储的文件
   webform.WebOffice.FileName="${labTemplateVo.path}";              //mFileUrl:文件虚拟路径
 
   //以下属性可以不要
   webform.WebOffice.ShowMenu="1";  //ShowMenu:1 显示菜单  0 隐藏菜单
-  webform.WebOffice.AppendMenu("1","打开本地文件(&L)");
+  /* webform.WebOffice.AppendMenu("1","打开本地文件(&L)");
   webform.WebOffice.AppendMenu("2","保存本地文件(&S)");
   webform.WebOffice.AppendMenu("3","-");
   webform.WebOffice.AppendMenu("4","保存并退出(&E)");
   webform.WebOffice.AppendMenu("5","-");
-  webform.WebOffice.AppendMenu("6","打印文档(&P)");
-  webform.WebOffice.DisableMenu("宏;选项;帮助");  //禁止菜单
+  webform.WebOffice.AppendMenu("6","打印文档(&P)"); */
+  /* webform.WebOffice.DisableMenu("宏;选项;帮助"); */  //禁止菜单
   webform.WebOffice.WebOpen(false);
   StatusMsg(webform.WebOffice.Status);
 }
